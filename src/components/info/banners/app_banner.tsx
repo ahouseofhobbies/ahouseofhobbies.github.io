@@ -5,7 +5,7 @@ const AppBanner = () => {
   const { isDark } = useTheme()
   const name = '2024-goodbye'
 
-  return (
+ /* return (
     <NotificationBanner
       displayOnce={false}
       enableLog={true}
@@ -18,7 +18,7 @@ const AppBanner = () => {
         actively maintained. <a href="/goodbye">Read more here</a>
       </span>
     </NotificationBanner>
-  )
+  ) */
 }
 
 // Sale Banner
