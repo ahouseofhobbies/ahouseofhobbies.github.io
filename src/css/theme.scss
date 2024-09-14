@@ -1,0 +1,31 @@
+/* Theme Colors */
+$themeDarkBluePrimary: #063647;
+$themeDarkBlueSecondary: #182633;
+$themeDarkBlueTertiary: #073647;
+$themeLightBlue: #1c7595;
+$themeLightPurple: #93a9fa;
+$themeRed: #a12f48;
+$themeRoyalBlue: #1237c7;
+$themeYellow: #e0d51f;
+$themeLightGray: #e9ecef;
+
+/* Override default Bootstrap variables */
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 1025px,
+    xl: 1200px,
+    xxl: 1900px,
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 992px,
+    xl: 1140px,
+    xxl: 1610px,
+);
+
+/* Import Bootstrap source */
+@import "~bootstrap/scss/bootstrap";

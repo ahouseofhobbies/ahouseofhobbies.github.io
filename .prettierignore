@@ -1,0 +1,10 @@
+package.json
+tsconfig.json
+node_modules/
+build/*
+src/tests/fixtures/**/*.json
+*.md
+*.sh
+*.log
+*.lock
+.vscode/
