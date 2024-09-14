@@ -76,7 +76,6 @@ typings/
 .fusebox/
 
 # Build
-build/
 .vscode/
 
 # .DS_Store
