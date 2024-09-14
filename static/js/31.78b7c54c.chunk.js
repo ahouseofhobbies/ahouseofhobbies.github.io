@@ -1,0 +1,2 @@
+(this["webpackJsonpaos-reminders"]=this["webpackJsonpaos-reminders"]||[]).push([[31],{573:function(e,s,t){"use strict";t.r(s);var c=t(92),a=t(154),n=t(45),r=t(332),b=t(153),i=t(9);s.default=()=>{const{isDark:e}=Object(n.b)(),{reloadArmy:s}=Object(a.b)(),{isTinyMobile:t}=Object(b.a)(),o="btn btn-outline-".concat(e?"light":"dark"," btn-block"),l="Reset".concat(t?"":" Changes");return Object(i.jsxs)(c.a,{className:o,onClick:s,children:[Object(i.jsx)(r.v,{className:"mr-2"}),l]})}}}]);
+//# sourceMappingURL=31.78b7c54c.chunk.js.map
