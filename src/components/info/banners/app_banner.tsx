@@ -2,8 +2,8 @@ import { NotificationBanner } from 'components/info/banners/notification_banner'
 import { useTheme } from 'context/useTheme'
 
 const AppBanner = () => {
-  const { isDark } = useTheme()
-  const name = '2024-goodbye'
+ // const { isDark } = useTheme()
+ // const name = '2024-goodbye'
 
  /* return (
     <NotificationBanner
