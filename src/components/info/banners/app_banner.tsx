@@ -2,10 +2,10 @@ import { NotificationBanner } from 'components/info/banners/notification_banner'
 import { useTheme } from 'context/useTheme'
 
 const AppBanner = () => {
- // const { isDark } = useTheme()
- // const name = '2024-goodbye'
+  const { isDark } = useTheme()
+  const name = '2024-goodbye'
 
- /* return (
+  return (
     <NotificationBanner
       displayOnce={false}
       enableLog={true}
@@ -14,11 +14,10 @@ const AppBanner = () => {
       variant={isDark ? `warning` : `warning`}
     >
       <span>
-        AoS Reminders will <strong>not</strong> be updated to AoS 4th Edition. This website is no longer
-        actively maintained. <a href="/goodbye">Read more here</a>
+        AoS Reminders has been updated to 4th but there may be errors. If you see any issues please email admin@ahouseofhobbies.com. Enjoy! 
       </span>
     </NotificationBanner>
-  ) */
+  ) 
 }
 
 // Sale Banner
