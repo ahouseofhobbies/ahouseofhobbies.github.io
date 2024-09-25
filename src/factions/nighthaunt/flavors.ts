@@ -27,8 +27,9 @@ const Flavors = {
   'Death Stalkers': {
     effects: [
       {
-        name: `There is No Escape - Passive`,
-        desc: `Effect: Friendly Nighthaunt units can use Charge abilities even if they used a Run or Retreat ability in the same turn. In addition, no mortal damage is inflicted on friendly Nighthaunt units by Retreat abilities.`,
+        name: `There is No Escape - Once Per Turn`,
+        desc: `Declare: Pick a friendly Nighthaunt unit to be the target.
+        Effect: For the rest of the turn, the target unit can use Charge abilities even if they used a Run or Retreat ability in the same turn. In addition, no mortal damage is inflicted on that unit by Retreat abilities.`,
         when: [MOVEMENT_PHASE],
       },
     ],

@@ -22,7 +22,7 @@ const BattleTraits = {
       {
         name: `Shining Company`,
         desc: `Effect: You can only use this ability if you have not used any Facet of War abilities this battle round. 
-        Subtract 1 from hit rolls for attacks that target friendly Vanari units for the rest of the battle round`,
+        For the rest of the battle round, subtract 1 from hit rolls for attacks that target friendly Vanari units that have not charged this turn and that have not been picked as the target of the "Power of Hysh" ability this battle round.`,
         when: [START_OF_ROUND],
       },
       {
@@ -61,13 +61,13 @@ const BattleTraits = {
       },
       {
         name: `Shrine Luminor (Faction Terrain) - Enter the Shrine`,
-        desc: `Declare: If this terrain feature does not have a Shrine Guardian, pick a friendly Lumineth Realm-lords Infantry Hero within 3" of it to be the target. 
+        desc: `Declare: If this terrain feature does not have a Shrine Guardian, pick a friendly Lumineth Realm-lords Infantry Hero within 3" of it and not in combat to be the target. 
         Effect: Place the target on this terrain feature. The target is now a Shrine Guardian (see Shrine Guardian).`,
         when: [HERO_PHASE],
       },
       {
         name: `Shrine Luminor (Faction Terrain) - Exit the Shrine`,
-        desc: `Effect: If this terrain feature has a Shrine Guardian, set up the Shrine Guardian on the battlefield wholly within 6" of this terrain feature and not in combat. That unit is no longer a Shrine Guardian.`,
+        desc: `Effect: If this terrain feature has a Shrine Guardian that was not placed on it this turn, set up the Shrine Guardian on the battlefield wholly within 6" of this terrain feature and not in combat. That unit is no longer a Shrine Guardian.`,
         when: [HERO_PHASE],
       },
       {

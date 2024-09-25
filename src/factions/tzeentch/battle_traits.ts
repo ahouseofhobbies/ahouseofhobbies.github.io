@@ -46,12 +46,12 @@ const BattleTraits = {
       },
       {
         name: `Burning Wyrdflame - Once Per Turn`,
-        desc: `Effect: Roll a D3 for each Burning enemy unit. On a 2-3, inflict an amount of mortal damage on that unit equal to the roll. On a 1, that unit no longer has the Burning keyword.`,
+        desc: `Effect: Inflict D3 mortal damage on each Burning enemy unit, Manifestation, and faction terrain feature.`,
         when: [END_OF_TURN],
       },
       {
         name: `Quenching the Flames - Passive`,
-        desc: `Effect: If a Burning enemy unit uses an ability that would heal or return slain models to it, instead of healing or returning slain models to it, that unit no longer has the Burning keyword.`,
+        desc: `Effect: If an ability would heal or return slain models to a Burning enemy unit, Manifestation, or terrain feature, that ability doesn not heal or return slain models to it. Instead that unit no longer has the Burning keyword.`,
         when: [DURING_GAME],
       },
       // Omitted Change Covens (you can pick 1 of the following subfactions)... not necessary

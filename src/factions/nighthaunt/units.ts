@@ -282,7 +282,7 @@ const Units = {
       },
     ],
   },
-  'Dreadblade Harrow': {
+  'Dreadblade Harrows': {
     effects: [
       {
         name: `Phantasmal Discorporation`,

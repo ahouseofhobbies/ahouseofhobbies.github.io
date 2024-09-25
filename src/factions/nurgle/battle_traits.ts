@@ -35,6 +35,11 @@ const BattleTraits = {
         when: [DURING_GAME],
       },
       {
+        name: `Burst Pustules - Passive`,
+        desc: `Effect: Each time a Diseased enemy unit would be destroyed, before the last model in the unit is removed from play, roll a dice. On a 3+, pick another enemy unit within 9" of that model to be Diseased.`,
+        when: [DURING_GAME],
+      },
+      {
         name: `Wracked with Disease - Once Per Turn`,
         desc: `Effect: Roll a D3 for each Diseased enemy unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.`,
         when: [END_OF_TURN],

@@ -320,7 +320,7 @@ const Units = {
       {
         name: `Miasma of Pestilence: Casting value of 6`,
         desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target, then make a casting roll of 2D6. 
-        Effect: Until the start of your next turn, each time you allocate any damage points that were inicted by another friendly ability to the target, roll a dice. On a 4+, allocate 1 additional damage point to the target.`,
+        Effect: Until the start of your next turn, each time a friendly ability is used that resulted in any damage points being allocated ot the target, roll a dice. On a 4+, allocate 1 additional damage point to the target (ward rolls cannot be made for that damage point).`,
         when: [HERO_PHASE],
       },
     ],

@@ -298,7 +298,7 @@ const Units = {
     effects: [
       {
         name: `Fusiliers, Fire! - Passive`,
-        desc: `Effect: Each time this unit uses a Shoot ability, if it is in a fortified position, use the Fortified Position weapon characteristics for all the attacks it makes with its Fusil-cannon. If it is not in a fortified position, use the Mobile weapon characteristics.`,
+        desc: `Effect: Each time this unit uses a Shoot ability, if it is in a fortified position, it can pick either of the ranged weapon profiles for all the attacks it makes with its Fusil-Cannon. If it is not in a fortified position, use the Mobile weapon characteristics.`,
         when: [SHOOTING_PHASE],
       },
       {

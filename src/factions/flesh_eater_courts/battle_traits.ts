@@ -58,13 +58,13 @@ const BattleTraits = {
       },
       {
         name: `Charnel Throne (Faction Terrian) - Reigning Champion`,
-        desc: `Declare: If this terrain feature does not have a Steward, pick a friendly Flesh-eater Courts Infantry Hero within 3" of it to be the target. 
+        desc: `Declare: If this terrain feature does not have a Steward, pick a friendly Flesh-eater Courts Infantry Hero within 3" of it and not to in combat to be the target. 
         Effect: Place the target on this terrain feature. The target is now the Steward (see Steward of the Realm).`,
         when: [HERO_PHASE],
       },
       {
         name: `Charnel Throne (Faction Terrian) - Duty Calls`,
-        desc: `Effect: If this terrain feature has a Steward, set up the Steward on the battlefield wholly within 6" of this terrain feature and not in combat. That unit is no longer the Steward.`,
+        desc: `Effect: If this terrain feature has a Steward that was not placed on it this turn, set up the Steward on the battlefield wholly within 6" of this terrain feature and not in combat. That unit is no longer the Steward.`,
         when: [MOVEMENT_PHASE],
       },
       {

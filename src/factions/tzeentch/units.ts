@@ -520,8 +520,7 @@ const Units = {
     effects: [
       {
         name: `A Twisted Fate`,
-        desc: `Declare: This unit must be deployed using this ability. 
-        Effect: Set up this unit in reserve as a potential fate. It has now been deployed.`,
+        desc: `Effect: Set up this unit in reserve as a potential fate. It has now been deployed.`,
         when: [DURING_SETUP],
       },
       {

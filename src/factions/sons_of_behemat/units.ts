@@ -122,7 +122,7 @@ const Units = {
       },
       {
         name: `The End of Empires - Passive`,
-        desc: `Effect: Add 1 to the number of dice rolled when making charge rolls for friendly Destruction units while they are wholly within 12" of this unit, to a maximum of 3.`,
+        desc: `Effect: For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for friendly Destruction units while they are wholly within 12" of this unit, to a maximum of 3.`,
         when: [CHARGE_PHASE],
       },
     ],
@@ -234,7 +234,7 @@ const Units = {
       {
         name: `Get Orf Me Land! - Once Per Turn`,
         desc: `Declare: Pick an objective within 1" of this unit to be the target. 
-        Effect: Roll a dice. On a 2+, move the target 2D6" to a new position on the battlefield more than 1" from all models, terrain features and other objectives.`,
+        Effect: Roll a dice. On a 2+, move the target 2D6" to a new position on the battlefield more than 1" from all models, terrain features and other objectives. That objective is treated as if it were in the same territories as it was when it was first set up on the battlefield for the purposes of the battleplan.`,
         when: [HERO_PHASE],
        // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
       },

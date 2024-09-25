@@ -464,7 +464,7 @@ const Units = {
       //GenericEffects.WizardOneSpellEffect,
       {
         name: `Trusted Lieutenant - Passive`,
-        desc: `Effect: This unit can use the Deathly Invocation ability even if a dierent friendly unit has already used it this turn.`,
+        desc: `Effect: This unit can use the Deathly Invocation ability even if a different friendly unit has already used it this turn, but units that have already been picked to be the targets of that ability this turn cannot be picked to be the targets.`,
         when: [HERO_PHASE],
       },
       {

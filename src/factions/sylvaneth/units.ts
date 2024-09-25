@@ -112,9 +112,9 @@ const Units = {
         when: [CHARGE_PHASE],
       },
       {
-        name: `Rite of Life`,
+        name: `Rite of Life - Once per Turn`,
         desc: `Declare: Pick a friendly Sylvaneth unit that has been destroyed to be the target. This unit can use this ability if it has been destroyed, but if it does, this unit must be the target. 
-        Effect: Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 9" of a friendly Awakened Wyldwood and more than 9" from all enemy units. If the target was a Monster, allocate 8 damage points to the replacement unit (ward rolls cannot be made for those damage points).`,
+        Effect: Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 9" of a friendly Awakened Wyldwood and more than 9" from all enemy units. If the target was a Monster, allocate 6 damage points to the replacement unit (ward rolls cannot be made for those damage points).`,
         when: [MOVEMENT_PHASE],
       },
     ],

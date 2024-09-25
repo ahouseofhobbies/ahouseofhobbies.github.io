@@ -150,19 +150,19 @@ const Spells = {
   'Lore of Ruin': {
     effects: [
       {
-        name: `Wither: Casting value of 6 (UNLIMITED)`,
+        name: `Wither: Casting value of 6`,
         desc: `Declare: Pick a friendly Skaven Wizard to cast this spell, pick a visible enemy unit within 13" of them to be the target, then make a casting roll of 2D6. 
         Effect: Inflict D3 mortal damage on the target.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Skitterleap: Casting value of 6`,
+        name: `Skitterleap: Casting value of 6 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Skaven Wizard to cast this spell, pick a visible friendly Skaven Hero wholly within 13" of them to be the target, then make a casting roll of 2D6. 
         Effect: Remove the target from the battlefield and set it up again on the battlefield more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Warpgale: Casting value of 7`,
+        name: `Warpgale: Casting value of 6`,
         desc: `Declare: Pick a friendly Skaven Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
         Effect: The target has Strike-last for the rest of the turn.`,
         when: [HERO_PHASE],

@@ -50,7 +50,9 @@ const BattleTraits = {
       },
       {
         name: `Awakened Wyldwood (Faction Terrain) - Growing Woods - Passive`,
-        desc: `Effect: Each time you set up an Awakened Wyldwood, you can place 1-3 scenery pieces (Terrain, 1.6). If you place more than 1 scenery piece, the tips at the end of each base must touch, forming a circle. Add 2 to the Health characteristic of this terrain feature for each additional scenery piece that is placed after the first.`,
+        desc: `Effect: Each time you set up an Awakened Wyldwood, you can place 1-3 scenery pieces (Terrain, 1.7). If you place more than 1 scenery piece, the tips at the end of each base must touch, forming a circle. For each additional scenery piece in this terrain feature that is placed after the first:
+        Add 2 to the Health characteristic of this terrain feature.
+        Increase the range of friendly abilities that require friendly models to be wholly within 6" of this feature by 3".`,
         when: [DURING_GAME],
       },
       {

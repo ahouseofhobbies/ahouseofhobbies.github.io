@@ -16,8 +16,8 @@ const IronjawzBattleTraits = {
   'Ironjawz Waaagh!': {
     effects: [
       {
-        name: `Ironjawz Waaagh! - Once Per Battle`,
-        desc: `Declare: Pick a friendly Ironjawz Hero to be the target. 
+        name: `Ironjawz Waaagh! - Once Per Turn`,
+        desc: `Declare: Pick a friendly Ironjawz Hero to be the target. You cannot pick the same Hero to be the target of this ability more than once per battle.
         Effect: For the rest of the turn, the following effects apply to friendly Ironjawz units while they are wholly within 18" of the target:  
         Add 1 to charge rolls for those units.  
         Add 1 to the Attacks characteristic of those units melee weapons.`,

@@ -177,6 +177,37 @@ const Units = {
       },
     ],
   },
+  'Vizzik Skour': {
+    effects: [
+      {
+        name: `The Death Frenzy: Chant value of 8`,
+        desc: `Declare: Pick a visible enemy unit within 13" of this unit or a visible friendly Skaven Infantry unit within 13" of this unit to be the target, then make a chanting roll of D6.
+        Effect: If the target is an enemy unit, subtract 1 from the attacks characteristic of the target's meelee weapons until the start of your next turn.
+        If the target is a friendly unit, it can use 2 Fight abilities this turn. After the first is used, however, the target has Strike-ast for the rest of the turn. 
+        If the chanting roll was 12+, you can pick 2 targets instead of 1.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Fissures in Reality`,
+        desc: `Declare: Pick each enemy unit in combat with this unit to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Prophet of the Horned Rat - Once Per Battle`,
+        desc: `Effect: You can re-roll chanting rolls for this unit until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Gaze of the Gnaw - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Roll a dice. On a 2+, for the rest of the turn:
+        If this unit is in combat with the target when the target is picked to use a Fight ability, all of the targets attacks must target this unit.
+        Subtract 1 from hit rolls and wound rolls for the target's combat attacks that target this unit.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   'Verminlord Warpseer': {
    /* mandatory: {
       spells: [keyPicker(spells, ['Dreaded Warpgale'])],
@@ -232,7 +263,23 @@ const Units = {
      // GenericEffects.WizardTwoSpellsEffect,
       {
         name: `Overseers of the Enginecovens - Passive`,
-        desc: `Effect: Each time a friendly Skryre unit wholly within 13" of this unit uses the Covering Fire command, do not subtract 1 from hit rolls for attacks made as part of that ability.`,
+        desc: `Effect: If a friendly Skryre unit wholly within 13" of this unit uses the Covering Fire command, no command points are spent.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'Warlock Galvaneer': {
+    effects: [
+      {
+        name: `Lightning Master - Once Per Battle`,
+        desc: `Declare: Pick a friendly Warpvolt Scourgers unit within this unit's combat range to be the target.
+        Effect: Roll a dice. On a 2+, set the Attacks characteristic of the target's Warpvolt Scourgers to 10 for the rest of the turn.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `More-More Warpvolt Doom!`,
+        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this unit's Warpvolt Obliterator to be the target.
+        Effect: Roll a D3 for each other enemy unit within the target's combat range. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
         when: [SHOOTING_PHASE],
       },
     ],
@@ -329,11 +376,20 @@ const Units = {
       },
     ],
   },
+  'Warplock Scourgers': {
+    effects: [
+      {
+        name: `Hidden Weapon Team - Passive`,
+        desc: `Effect: While this unit is within the combat range of a friendly Clanrats unit that has 5 or more models, and there are no other friendly Weapon Team units within that units combat range, this unit is not visible to enemy units more than 13" away.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   'Warplock Jezzails': {
     effects: [
       {
         name: `Warpstone Snipers`,
-        desc: `Effect: If this unit has not used a Move ability this turn and was not set up this turn, add 1 to hit rolls for this units shooting attacks for the rest of the turn.`,
+        desc: `Effect: If this unit has not used a Move ability this turn and was not set up this turn, add 6" to this units shooting attacks for the rest of the turn.`,
         when: [SHOOTING_PHASE],
       },
     ],
@@ -483,20 +539,22 @@ const Units = {
      // ...HiddenWeaponsTeamsEffects,
     ],
   },
- /* 'Warp-Grinder': {
+  'Warp-Grinder': {
     effects: [
       {
-        name: `Tunnel Skulkers`,
-        desc: `During deployment, instead of setting up this unit on the battlefield, you can place it to one side and say that it is set up tunnelling as a reserve unit. If you do so, when you would set up another friendly SKAVEN unit that is not a MONSTER or a War Machine during deployment, you can say that it will join this unit tunnelling as a reserve unit. 1 unit can join this unit in this way.`,
+        name: `Tunnel Skulkers - Once Per Battle`,
+        desc: `Declare: Pick this unit and up to 1 friendly non-Monster Skaven unit if those units have not been deployed.
+        Effect: Set up those units in reserve in the Tunnels below. They have now been deployed.`,
         when: [DURING_SETUP],
       },
       {
-        name: `Tunnel Skulkers`,
-        desc: `At the end of your movement phase, you can set up this unit on the battlefield more than 9" from all enemy units. Then, if a friendly SKAVEN unit joined this unit in reserve, set up that unit on the battlefield, wholly within 13" of this unit and more than 9" from all enemy units.`,
-        when: [END_OF_MOVEMENT_PHASE],
+        name: `Warp-Ambush`,
+        desc: `Declare: Pick this unit if it is in the tunnels below, then pick an enemy unit more than 6" from all other enemy units to be the tartget.
+        Effect: Roll a dice. Ona 4+, set up this unit within 3" of the target and more than 6" from all other enmey units. Then, set up the unit that was in the tunnels below with this unit within 3" of the target and movre than 6" from all other enemy units.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
-  }, */
+  }, 
   Plagueclaw: {
     effects: [
       {
@@ -644,6 +702,20 @@ const Units = {
       },
     ],
   },
+  'Brood Terror': {
+    effects: [
+      {
+        name: `Regenerating Terror`,
+        desc: `Effect: Heal (D6) this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Warpstone Fumes - Once Per Turn`,
+        desc: `Effect: Roll a dice. On a 2+, for the rest of the turn, subtract 1 from hit rolls for attacks made by enemy units while they are within 6" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   'Master Moulder': {
    /* mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Unleash More-more Beasts!'])],
@@ -659,7 +731,7 @@ const Units = {
       {
         name: `Tyrannical Packmaster`,
         desc: `Declare: Pick another friendly Moulder unit within this units combat range to be the target. 
-        Effect: Add 2 to charge rolls for the target for the rest of the turn.`,
+        Effect: Add 1 to charge rolls for the target for the rest of the turn.`,
         when: [CHARGE_PHASE],
       },
     ],
@@ -796,31 +868,40 @@ const Units = {
       prayers: [keyPicker(prayers, ['Befoul-befoul!'])],
     },
     effects: [FrenziedAssaultEffect, PoisonousFumesEffect],
-  },
-  "Skabbik's Plaguepack": {
+  }, */
+  "Plaguepack": {
     effects: [
       {
-        name: `Rabidius Skench`,
-        desc: `1 model in this unit is Rabidius Skench. That model is armed with a Plague Censer instead of Plaguepack Weapons.`,
+        name: `Enshrouding Fumes - Passive`,
+        desc: `Effect: Subtract 1 from hit rolls for shooting attacks that target this unit.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Plague Rat - Passive`,
+        desc: `Effect: This unit's Plague Rat is a token. If you make a chanting roll of 1 for this unit while its Plague Rat is on the battlefield, you can remove its Plague Rat from the battlefield and then re-roll that chanting roll.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  }, 
+  "Krittok Foulblade": {
+    effects: [
+      {
+        name: `Doomfang`,
+        desc: `Effect: This unit has Strike-first for the rest of the turn but it cannot use commands this phase.`,
         when: [COMBAT_PHASE],
       },
       {
-        name: `Skritter`,
-        desc: `1 model in this unit is Skritter. That model is armed with an Aura of Corruption instead of Plaguepack Weapons.`,
-        when: [COMBAT_PHASE],
+        name: `Command Ability - A Reputation for Cunning - Enemy Hero Phase`,
+        desc: `Effect: You can pick 2 different eligible units to use the Always Three Clawsteps Ahead ability this phase instead of 1, but at least 1 of those units must have the Verminus Keyword.`,
+        when: [HERO_PHASE],
       },
       {
-        name: `Aura of Corruption`,
-        desc: `Do not use the attack sequence for an attack made with an Aura of Corruption. Instead, roll a dice for each enemy unit that is within range. On a 4+, that unit suffers D3 mortal wounds.`,
-        when: [COMBAT_PHASE],
-      },
-      {
-        name: `Ruinous Supremacy`,
-        desc: `While this unit contests a befouled objective, enemy models cannot contest that objective (see Befoul-befoul! on the Skabbik Plagueseeker warscroll).`,
+        name: `Foster Competition - Passive`,
+        desc: `Effect: Add 1 to wound rolls for friendly Stormvermin units while they are wholly within 13" of this unit.`,
         when: [DURING_GAME],
       },
     ],
-  }, */
+  }, 
   'ROR: Brand`s Oathbound': {
     effects: [
       {

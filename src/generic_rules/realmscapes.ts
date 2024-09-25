@@ -255,7 +255,7 @@ const Realmscapes: TEntry[] = [
       {
         name: `Honour Guard - Priority Target`,
         desc: `Declare: Pick a friendly unit in your general's regiment that is not your gerneral to be the honour gurard. You can pick a unit in reserve. If you use this ability, you cannot use any other Honour Guard abilities.
-        Effect: Add 1 to hit rolls and wound rolls for attacks made by the honour guard that target any units in the enemy general's regiment.`,
+        Effect: Add 1 to hit rolls and wound rolls for attacks made by models in the honour guard unit that target the enemy general or the enemy honour guard if the target is within 12"`,
         when: [DURING_SETUP],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },

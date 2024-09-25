@@ -27,7 +27,7 @@ const Spells = {
       {
         name: `Treesong: Casting value of 6 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Sylvaneth Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: If there are fewer than 3 friendly Awakened Wyldwoods on the battlefield, you can set up an Awakened Wyldwood wholly within 18" of the caster and more than 3" from all enemy units, objectives and other terrain features. If there are already 3 friendly Awakened Wyldwoods on the battlefield, Heal (3) each friendly Awakened Wyldwood.`,
+        Effect: If there are fewer than 3 friendly Awakened Wyldwoods on the battlefield, you can set up an Awakened Wyldwood wholly within 24" of the caster, more than 3" from all objectives and more than 1" from all enemy units and other terrain features. If there are already 3 friendly Awakened Wyldwoods on the battlefield, Heal (3) each friendly Awakened Wyldwood.`,
         when: [HERO_PHASE],
       },
       {

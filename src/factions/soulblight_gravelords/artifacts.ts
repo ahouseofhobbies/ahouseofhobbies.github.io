@@ -20,7 +20,7 @@ const Artifacts = {
     effects: [
       {
         name: `Orb of Enchantment - Once Per Battle`,
-        desc: `Declare: Pick an enemy Hero in combat to be the target. 
+        desc: `Declare: Pick an enemy Hero in combat with this unit to be the target. 
         Effect: The target has Strike-last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },

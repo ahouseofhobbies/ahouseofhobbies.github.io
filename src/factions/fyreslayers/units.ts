@@ -174,7 +174,7 @@ const Units = {
       },
       {
         name: `Vying for Glory - Passive`,
-        desc: `Effect: Each time this unit destroys a Monster, add 1 to the Attacks characteristic of this units Ancestral Weapons for the rest of the battle.`,
+        desc: `Effect: Each time this unit destroys a Monster, add 1 to the Attacks characteristic of this units Ancestral Weapons for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative.`,
         when: [DURING_GAME],
       },
       {

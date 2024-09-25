@@ -37,7 +37,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Lauchon the Soulseeker - Traverse the Tides of Death`,
         desc: `Declare: Pick a friendly Infantry Wizard Hero within 3" of this Manifestation to be the target. 
-        Effect: This Manifestation can move a distance up to its Move characteristic. It can pass through models during that move. Then, remove the target from the battlefield and set them up again on the battlefield within 3" of this Manifestation and not in combat. Then, inflict 1 mortal damage on the target.`,
+        Effect: This Manifestation can move a distance up to its Move characteristic. It can pass through models during that move but it cannot end that move in combat. Then, remove the target from the battlefield and set them up again on the battlefield within 3" of this Manifestation and not in combat. Then, inflict 1 mortal damage on the target.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -111,7 +111,7 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Aethervoid Pendulum - Scything Blade`,
-        desc: `Effect: This Manifestation can move a distance up to its Move characteristic. It can pass through models during that move. Then, pick up to 3 enemy units that this Manifestation passed across during that move to be the targets. Roll a D6 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        desc: `Effect: This Manifestation can move a distance up to its Move characteristic in one direction (See The Pendulum Swings). It can pass through models during that move and can end that move in combat. Then, pick up to 3 enemy units that this Manifestation passed across during that move or that are within 1/2" of it to be the targets. Roll a D6 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [MOVEMENT_PHASE],
       },
     ],
@@ -158,11 +158,6 @@ const GenericManifestations: TEntry[] = [
         desc: `Declare: If this Manifestation charged this turn, pick an enemy unit within 1" of it to be the target. 
         Effect: Roll 10 dice. For each 5+, inflict 1 mortal damage on the target.`,
         when: [CHARGE_PHASE],
-      },
-      {
-        name: `Ravenak's Gnashing Jaws - Wild Form - Passive`,
-        desc: `Effect: Each time this Manifestation is targeted by the Banish Manifestation ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).`,
-        when: [HERO_PHASE],
       },
     ],
   },
@@ -228,7 +223,7 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Purple Sun of Shyish - End Given Form`,
-        desc: `Effect: This Manifestation can move a distance up to its Move characteristic. It can pass through models during that move. Then, pick up to 3 enemy units that this Manifestation passed across during that move to be the targets. Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        desc: `Effect: This Manifestation can move a distance up to its Move characteristic. It can pass through models during that move but it cannot end that move in combat. Then, pick up to 3 enemy units that this Manifestation passed across during that move to be the targets. Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -237,19 +232,14 @@ const GenericManifestations: TEntry[] = [
         when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
       {
-        name: `Purple Sun of Shyish - Wild Form - Passive`,
-        desc: `Effect: Each time this Manifestation is targeted by the Banish Manifestation ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).`,
-        when: [HERO_PHASE],
-      },
-      {
-        name: `Summon Suffocating Gravetide: Casting value of 7`,
+        name: `Summon Suffocating Gravetide: Casting value of 8`,
         desc: `Declare: If there is not a friendly Suffocating Gravetide on the battlefield, pick a friendly Wizard to cast this spell, then make a casting roll of 2D6. 
         Effect: Set up a Suffocating Gravetide wholly within 12" of the caster, visible to them and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
         name: `Suffocating Gravetide - Pulled to the Grave`,
-        desc: `Effect: This Manifestation can move a distance up to its Move characteristic. It can pass through models during that move. Then, you can pick an enemy unit that this Manifestation passed across during that move to be the target. Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.`,
+        desc: `Effect: This Manifestation can move a distance up to its Move characteristic. It can pass through models during that move but it cannot end that move in combat. Then, you can pick an enemy unit that this Manifestation passed across during that move to be the target. Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -265,7 +255,7 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Malevolent Maelstrom - Morbid Detonation`,
-        desc: `Declare: If this Manifestation has 6 maelstrom points, pick each unit (friendly and enemy) within 9" of it to be the targets. 
+        desc: `Declare: You must, and can only, use this ability if this unit has 6 maelstrom points. Pick each unit (friendly and enemy) within 9" of it to be the targets.
         Effect: Roll a dice for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Then, this Manifestation is destroyed.`,
         when: [END_OF_TURN],
       },
@@ -579,8 +569,13 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Vengeful Skullroot - Vengeful Terrors`,
         desc: `Declare: Pick an enemy unit within 3" of this Manifestation to be the target. 
-        Effect: Subtract an amount from the targets control score equal to the number of friendly units that have been destroyed this battle (not including Manifestations or Faction Terrain).`,
+        Effect: For the rest of the turn, Subtract an amount from the targets control score equal to the number of friendly units that have been destroyed this battle (not including Manifestations or Faction Terrain).`,
         when: [END_OF_TURN],
+      },
+      {
+        name: `Vengeful Skullroot - Creeping Willow - Passive`,
+        desc: `Effect: This Manifestation counts as an Awakened Wyldwood for the purposes of the 'Endless Growth', 'Walk the Hidden Paths', and 'Strike and Fade' abilities.`,
+        when: [DURING_GAME],
       },
     ],
   },
@@ -608,7 +603,7 @@ const GenericManifestations: TEntry[] = [
         name: `Wrath-Axe - Hatred's Edge`,
         desc: `Declare: Pick up to 3 enemy units that this Manifestation passed across this turn to be the targets. 
         Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
-        when: [MOVEMENT_PHASE],
+        when: [CHARGE_PHASE],
       },
       {
         name: `Summon Hexgorger Skulls: Chant value of 4`,
@@ -652,14 +647,14 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Burning SIgil of Tzeentch - Radiant Transmogrification`,
-        desc: `Declare: This Manifestation must use this ability in each movement phase. Pick each unit (friendly and enemy) within 9" of this Manifestation to be the targets. 
-        Effect: Roll 2 dice, pick either result, then apply the corresponding eect to all targets for the rest of the turn. 
-        1-2 No effect. 
-        3 Subtract 2" from the targets Move characteristic. 
-        4 Subtract 1 from hit rolls for the targets attacks. 
-        5 Subtract 1 from wound rolls for the targets attacks. 
-        6 Inflict D3 mortal damage on the target, then add 1 to the Attacks characteristic of the targets melee weapons.`,
-        when: [MOVEMENT_PHASE],
+        desc: `Declare: This Manifestation must use this ability in each hero phase. Pick each unit (friendly and enemy) within 9" of this Manifestation to be the targets. 
+        Effect: Roll 2 dice, pick either result, then apply the corresponding effect for the rest of the turn. 
+        1 No effect. 
+        2-3 Add 2" to the move chareacteristic of friendly Disciples of Tzeentch targets and subtract 2" from the  Move characteristic of enemy targets. 
+        4 Add 1 to hit rolls for friendly Disciples of Tzeentch targets and subtract 1 from hit rolls for enemy targets. 
+        5 Add 1 to wound rolls for friendly Disciples of Tzeentch targets and subtract 1 from wound rolls for enemy targets. 
+        6 Add 1 to the Attacks characteristic of melee weapons used by friendly Disciples of Tzeentch targets and inflict D3 mortal damage on each enemy target.`,
+        when: [HERO_PHASE],
       },
       {
         name: `Summon Daemonic Simulacrum: Casting value of 7`,

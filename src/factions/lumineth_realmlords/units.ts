@@ -209,8 +209,8 @@ const Units = {
         when: [HERO_PHASE],
       },
       {
-        name: `Voice of Tyrion - Reaction: You declared the All-out Attack command for a friendly Vanari unit`,
-        desc: `Effect: If this unit is wholly within 12" of the unit using the All-out Attack command, no command points are spent to use that command.`,
+        name: `Voice of Tyrion - Passive`,
+        desc: `Effect: Each time a friendly Lumineth-Realmlords unit wholly within 12" of the unit uses the All-out Attack command, no command points are spent to use that command.`,
         when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
     ],

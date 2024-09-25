@@ -18,7 +18,7 @@ const BattleTraits = {
         desc: `Declare: Pick up to 3 friendly Hedonites of Slaanesh units to be the targets. 
         Effect: The targets have the Euphoric keyword for the rest of the battle round. 
         In addition, for each friendly unit you pick, give your opponent 1 temptation dice. Your opponent can use 1 temptation dice to replace 1 wound roll, 1 save roll, 1 ward roll or 1 run roll for a unit in their army with a 6, or they can use 2 temptation dice to replace 2 of the dice in a charge roll for a unit in their army with two 6s. 
-        Each time your opponent uses a temptation dice, they must roll it. On a 1-2, inflict D3 mortal damage on the unit for which the roll was replaced immediately after the ability used by that unit has been resolved. 
+        Each time your opponent uses a temptation dice, they must roll it. On a 1-2, your opponent's roll is replaced by that value instead of a 6 and you must allocate D3 damage points to the unit for which the roll was replaced immediately after the ability used by that unit has been resolved (ward rolls cannot be made for those damage points). 
         At the end of the battle round, any temptation dice that have not been used are lost.`,
         when: [START_OF_ROUND],
       },

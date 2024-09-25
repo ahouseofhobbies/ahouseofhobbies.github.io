@@ -70,13 +70,13 @@ const BattleTraits = {
       },
       {
         name: `Mawpit (Faction Terrain) - Feed the Maw`,
-        desc: `Declare: If this terrain feature does not have a Head Butcher, pick a friendly Butcher or Slaughtermaster within 3" of it to be the target. 
+        desc: `Declare: If this terrain feature does not have a Head Butcher, pick a friendly Butcher or Slaughtermaster within 3" of it and not in combat to be the target. 
         Effect: Place the target on this terrain feature. The target is now a Head Butcher (see Altar of the Gulping God).`,
         when: [HERO_PHASE],
       },
       {
         name: `Mawpit (Faction Terrain) - Step Away from the Maw`,
-        desc: `Effect: If this terrain feature has a Head Butcher, set up the Head Butcher on the battlefield wholly within 3" of this terrain feature and not in combat. That unit is no longer a Head Butcher.`,
+        desc: `Effect: If this terrain feature has a Head Butcher that was not placed on it this turn, set up the Head Butcher on the battlefield wholly within 3" of this terrain feature and not in combat. That unit is no longer a Head Butcher.`,
         when: [MOVEMENT_PHASE],
       },
       {

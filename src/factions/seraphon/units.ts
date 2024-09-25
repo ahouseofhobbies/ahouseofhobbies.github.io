@@ -347,7 +347,7 @@ const Units = {
     effects: [
       {
         name: `Celestial Conduit - Reaction: You declared a Spell ability for a friendly Seraphon Wizard wholly within 12" of this unit`,
-        desc: `Effect: If that spell is successfully cast, add 3 to the control scores of friendly Seraphon units wholly within 12" of this unit for the rest of the turn.`,
+        desc: `Effect: If that spell is successfully cast, for the rest of the turn, add 3 to the control scores of friendly Seraphon units wholly within 12" of this unit for the rest of the turn.`,
         when: [HERO_PHASE],
       },
       {

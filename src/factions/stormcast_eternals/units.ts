@@ -1285,7 +1285,7 @@ const Units = {
     effects: [
       {
         name: `Soul-Bonded`,
-        desc: `Effect: Pick a friendly Stormcast Eternals Hero to be this units soul-bonded charge for the rest of the battle.`,
+        desc: `Effect: Pick a friendly Stormcast Eternals Hero to be this units soul-bonded charge for the rest of the battle. This unit can use this ability while it is in reserve.`,
         when: [DURING_SETUP],
       },
       {

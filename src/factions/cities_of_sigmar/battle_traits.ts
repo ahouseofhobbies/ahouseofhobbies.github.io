@@ -21,7 +21,7 @@ const BattleTraits = {
     effects: [
       {
         name: `Advance in Formation - Officar's Order`,
-        desc: `Declare: Pick a friendly Cities of Sigmar Hero that has not used an Officars Order ability this turn to use this ability, then pick a friendly Cities of Sigmar unit wholly within 12" of that Hero and not in combat to be the target. 
+        desc: `Declare: Pick a friendly Cities of Sigmar Hero that has not used an Officars Order ability this turn to use this ability, then pick a friendly Cities of Sigmar unit wholly within 12" of that Hero and not in combat to be the target. You cannot pick the same unit to be a target of this ability more than once per turn.
         If the target is Human, you can pick an additional Cities of Sigmar unit wholly within 12" of that Hero and not in combat to be a target. 
         Effect: Each target can move 3". Each target cannot move into combat during any part of that move.`,
         when: [MOVEMENT_PHASE],

@@ -36,7 +36,7 @@ const CommandTraits = {
     effects: [
       {
         name: `Terrifying Entity - Passive`,
-        desc: `Effect: This unit can use an Aura of Dread ability even if it has already used one this turn, but it cannot use more than two per turn.`,
+        desc: `Effect: This unit can use any of the Aura of Dread abilities, even if it doesn't have the required keywords for that ability.`,
         when: [CHARGE_PHASE],
       },
     ],

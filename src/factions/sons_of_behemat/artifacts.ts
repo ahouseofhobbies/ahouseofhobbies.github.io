@@ -61,9 +61,9 @@ const Artifacts = {
   'Glowy Lantern': {
     effects: [
       {
-        name: `Glowy Lantern - Once Per Battle`,
-        desc: `Effect: Pick 1 manifestation lore available to your faction. This unit can use Summon abilities from that manifestation lore as if it had Wizard (1).`,
-        when: [DURING_SETUP],
+        name: `Glowy Lantern - Passive`,
+        desc: `Effect: This unit can summon abilities from the manifestation lore you picked during army composition as if it had Wizard (1).`,
+        when: [HERO_PHASE],
       },
     ],
   },

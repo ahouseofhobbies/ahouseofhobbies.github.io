@@ -109,7 +109,7 @@ const CoreRules: TEntry[] = [
       },
       {
         name: `Banish Manifestation`,
-        desc: `Declare: Pick a friendly Wizard or Priest to use this ability, pick a manifestation within 30" of them to be the target, then make a banishment roll of 2D6. 
+        desc: `Declare: Pick a friendly Wizard or Priest to use this ability, pick a manifestation within 30" of them to be the target, then make a banishment roll of 2D6. Add 1 to the banishment roll for each additional enemy manifestation on the battlefield after the first.
         Effect: If the banishment roll equals or exceeds the banishment value listed on the manifestation’s warscroll, it is banished and removed from play. You cannot pick the same manifestation as the target of this ability more than once per turn.  `,
         when: [HERO_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
@@ -178,8 +178,8 @@ const CoreRules: TEntry[] = [
       },
       {
         name: `Command Ability - Covering Fire`,
-        desc: `Declare: Pick a friendly unit that is not in combat to use this ability. 
-        Effect: Resolve shooting attacks for that unit, but all of the attacks must target the nearest visible enemy unit and you must subtract 1 from the hit rolls for those attacks.`,
+        desc: `Declare: Pick a friendly unit that is not in combat to use this ability, then pick the closest enemy unit (to that unit) that can be picked as the target of shooting attacks to be the target.  
+        Effect: Resolve shooting attacks for the unit using this ability against the target. You must subtract 1 from the hit rolls for those attacks.`,
         when: [SHOOTING_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },

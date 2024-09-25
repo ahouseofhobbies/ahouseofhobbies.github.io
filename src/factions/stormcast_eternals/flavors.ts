@@ -35,7 +35,7 @@ const Flavors = {
     effects: [
       {
         name: `Peerless Manoeuvres - Once Per Turn`,
-        desc: `Declare: Pick a friendly Vanguard Chamber unit that is not in combat. 
+        desc: `Declare: Pick a friendly Vanguard Chamber unit that did not use a Move ability this turn and is not in combat. 
         Effect: Roll a dice. On a 3+, remove that unit from the battlefield and set it up again anywhere on the battlefield more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },

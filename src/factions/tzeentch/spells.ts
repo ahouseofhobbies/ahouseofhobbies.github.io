@@ -27,7 +27,7 @@ const Spells = {
       },
       {
         name: `Shield of Fate: Casting value of 7`,
-        desc: `Declare: Pick a friendly Disciples of Tzeentch Wizard to cast this spell, pick a visible friendly unit wholly within 18" of them to be the target, then make a casting roll of 2D6. 
+        desc: `Declare: Pick a friendly Disciples of Tzeentch Wizard to cast this spell, pick a visible friendly Disciples of Tzeentch unit wholly within 18" of them to be the target, then make a casting roll of 2D6. 
         Effect: The target has Ward (5+) until the start of your next turn. In addition, if you have 4 or more destiny dice left, subtract 1 from hit rolls for attacks that target that unit until the start of your next turn.`,
         when: [HERO_PHASE],
       },

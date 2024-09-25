@@ -24,7 +24,7 @@ const Flavors = {
   'Shadow Patrol': {
     effects: [
       {
-        name: `Shadowpaths`,
+        name: `Shadowpaths - Once Per Turn`,
         desc: `Declare: Pick a friendly Daughters of Khaine Infantry unit that is not in combat to use this ability. 
         Effect: Roll a dice. On a 3+, remove that unit from the battlefield and set it up again on the battlefield more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],

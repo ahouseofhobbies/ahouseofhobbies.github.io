@@ -175,7 +175,7 @@ const Units = {
       },
       {
         name: `The End of Empires - Passive`,
-        desc: `Effect: Add 1 to the number of dice rolled when making charge rolls for friendly Destruction units while they are wholly within 12" of this unit, to a maximum of 3.`,
+        desc: `Effect: For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for friendly Destruction units while they are wholly within 12" of this unit, to a maximum of 3.`,
         when: [CHARGE_PHASE],
       },
     ],

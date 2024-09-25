@@ -64,13 +64,13 @@ const BattleTraits = {
       },
       {
         name: `Skull Altar (Faction Terrain) - Ascend the Altar`,
-        desc: `Declare: If this terrain feature does not have an Invoker, pick a friendly Blades of Khorne Infantry Priest within 3" of it to be the target. 
+        desc: `Declare: If this terrain feature does not have an Invoker, pick a friendly Blades of Khorne Infantry Priest within 3" of it and not in combat to be the target. 
         Effect: Place the target on this terrain feature. The target is now an Invoker (see Words of Hate).`,
         when: [HERO_PHASE],
       },
       {
         name: `Skull Altar (Faction Terrain) - Descend the Altar`,
-        desc: `Effect: If this terrain feature has an Invoker, set up the Invoker on the battlefield wholly within 6" of this terrain feature and not in combat. That unit is no longer an Invoker.`,
+        desc: `Effect: If this terrain feature has an Invoker that was not placed on it this turn, set up the Invoker on the battlefield wholly within 6" of this terrain feature and not in combat. That unit is no longer an Invoker.`,
         when: [MOVEMENT_PHASE],
       },
       {
