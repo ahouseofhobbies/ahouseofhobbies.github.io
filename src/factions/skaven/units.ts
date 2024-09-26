@@ -376,7 +376,7 @@ const Units = {
       },
     ],
   },
-  'Warplock Scourgers': {
+  'Warpvolt Scourgers': {
     effects: [
       {
         name: `Hidden Weapon Team - Passive`,

@@ -930,6 +930,87 @@ const Units = {
       },
     ],
   },
+  'ROR: Vlot-Klaw`s Enginecoven': {
+    effects: [
+      {
+        name: `Warlock Galvaneer: Lightning Master - Once Per Battle`,
+        desc: `Declare: Pick a friendly Warpvolt Scourgers unit within this unit's combat range to be the target.
+        Effect: Roll a dice. On a 2+, set the Attacks characteristic of the target's Warpvolt Scourgers to 10 for the rest of the turn.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Warlock Galvaneer: More-More Warpvolt Doom!`,
+        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this unit's Warpvolt Obliterator to be the target.
+        Effect: Roll a D3 for each other enemy unit within the target's combat range. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Ratling Warpblaster: Overwhelming Fire - Passive`,
+        desc: `Effect: Add 1 to hit rolls for this units shooting attacks that target an enemy unit that has 10 or more models.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Behold my Genius! - Once Per Battle`,
+        desc: `Declare: Pick all friendly Volt-Klaw's Enginecoven units to be the targets.
+        Effect: Until the start of your next turn:
+        Add 1 to hit rolls for the targets' shooting attacks.
+        Add 3" to the Range characteristic of the targets' ranged weapons.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Hide-Shelter! - Passive`,
+        desc: `Effect: While a friendly Volt-Klaw's Enginecoven Infantry unit is witin the combat range of a friendly Volt-Klaw's Enginecoven Ratling Warpblaster, it is not visible to enemy units more than 13" away.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: Krittok`s Clawpack': {
+    effects: [
+      {
+        name: `Krittok Foulblade: Doomfang`,
+        desc: `Effect: This unit has Strike-first for the rest of the turn but it cannot use commands this phase.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Krittok Foulblade:: Command Ability - A Reputation for Cunning - Enemy Hero Phase`,
+        desc: `Effect: You can pick 2 different eligible units to use the Always Three Clawsteps Ahead ability this phase instead of 1, but at least 1 of those units must have the Verminus Keyword.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Krittok Foulblade: Foster Competition - Passive`,
+        desc: `Effect: Add 1 to wound rolls for friendly Stormvermin units while they are wholly within 13" of this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Stormvermin: Elite Bodyguard - Passive`,
+        desc: `Effect: Friendly Skaven Infantry Heroes have Ward (5+) while they are within this units combat range.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Doom-Flayer: Whirling Doom`,
+        desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Fickle Motives - Passive`,
+        desc: `Effect: Add 1 to the Attack characteristic of melee weapons used by friendly Krittok's Clawpack units while you have more victory points than your opponent.
+        Subtract 3 from the control scores of friendly Krittok's Clawpack units while you have fewer victory points than your opponent.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Always Three Clawsteps Ahead - Once Per Turn - Enemy Hero Phase`,
+        desc: `Declare: Picke a friendly Krittok's Clawpack unit that is not in combat to use this ability.
+        Effect: That unit can use the 'Normal Move' ability as if it were your Movement phase.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Skryre Payloads - Passive`,
+        desc: `Effect: Friendly Krittok's Clawpack Doom-Flayers units have Ward (5+) while they are in combat range of a friendly Krittok's Clawpack Stormvermin unit.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')
