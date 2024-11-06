@@ -26,7 +26,7 @@ const Flavors = {
     effects: [
       {
         name: `Synchronised Strikes - Passive`,
-        desc: `Effect: Add 1 to hit rolls for combat attacks made by friendly Warrior Chamber units while they are wholly within 12" of any friendly non-Hero Stormcast Eternals units that do not have the Warrior Chamber keyword.`,
+        desc: `Effect: Add 1 to hit rolls for combat attacks made by friendly Warrior Chamber units while they are wholly within 12" of any friendly non-Hero non-Beast Stormcast Eternals units that do not have the Warrior Chamber keyword.`,
         when: [COMBAT_PHASE],
       },
     ],

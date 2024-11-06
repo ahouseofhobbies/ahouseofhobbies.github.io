@@ -117,6 +117,12 @@ import {
           Effect: For the rest of the turn, add 1 to wound rolls for that units combat attacks and add 1 to save rolls for that unit.`,
           when: [HERO_PHASE],
         },
+        {
+          name: `Stormreach Portal (Faction Terrain) - Step into the Storm`,
+          desc: `Declare: Pick a friendly non-Monster Stormcast Eternals unit that is not in combat and is wholly within 6" of this terrain feature to be the target.  
+          Effect: Remove the target from the battlefield and set it up again on the batlefield more than 9" from all enemy units.`,
+          when: [HERO_PHASE],
+        },
       ],
     },
 } satisfies TItemDescriptions

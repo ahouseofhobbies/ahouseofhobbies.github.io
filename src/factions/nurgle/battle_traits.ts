@@ -31,7 +31,7 @@ const BattleTraits = {
       },
       {
         name: `Desperate Remedies - Passive`,
-        desc: `Effect: If a Diseased enemy unit uses an ability that would heal or return slain models to it, instead of healing or returning slain models to it, that unit no longer has the Diseased keyword.`,
+        desc: `Effect: If an ability would heal 1 or more damage points or return 1 or more slain models to a Diseased enemy unit, that ability does not heal any damage points or return any slain models to it. Instead, it no longer has the Diseased keyword.`,
         when: [DURING_GAME],
       },
       {

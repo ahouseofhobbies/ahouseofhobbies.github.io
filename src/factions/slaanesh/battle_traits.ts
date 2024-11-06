@@ -14,7 +14,7 @@ const BattleTraits = {
   [SLAANESH]: {
     effects: [
       {
-        name: `An Excess of Depravity`,
+        name: `An Excess of Depravity - Once Per Battle Round`,
         desc: `Declare: Pick up to 3 friendly Hedonites of Slaanesh units to be the targets. 
         Effect: The targets have the Euphoric keyword for the rest of the battle round. 
         In addition, for each friendly unit you pick, give your opponent 1 temptation dice. Your opponent can use 1 temptation dice to replace 1 wound roll, 1 save roll, 1 ward roll or 1 run roll for a unit in their army with a 6, or they can use 2 temptation dice to replace 2 of the dice in a charge roll for a unit in their army with two 6s. 

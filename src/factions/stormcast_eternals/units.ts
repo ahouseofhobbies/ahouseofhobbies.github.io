@@ -261,6 +261,31 @@ const Units = {
       },
     ],
   },
+  'Iridan the Witness': {
+    effects: [
+      {
+        name: `Prayer of the Witness: Chant value of 4`,
+        desc: `Declare: Make a chanting roll of D6.
+        Effect: For the rest of the turn, each time a friendly Ruination Chamber unit uses a Fight ability while it is wholly within 18" of this unit, after that ability has been resolved:
+        Heal (D3) that unit. If the chanting roll was 8+, Heal 3 that unit instead.
+        That unit has Ward (6+) for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Dark Flight - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.  
+        Effect: Roll a dice. If the roll exceeds the target's Health characteristic:
+        1 model in the target unit is slain
+        This unit can immediately use the Retreat ability without any mortal damage being inflicted upon it.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+        desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   /*'Aventis Firestrike': {
    /* mandatory: {
       spells: [keyPicker(spells, ['Pyroelectric Blast'])],
@@ -490,7 +515,7 @@ const Units = {
     effects: [
       {
         name: `Extremis Chamber - Passive`,
-        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit aer the Fight ability has been resolved.`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE]
       },
      // SigmariteThundershieldEffect,
@@ -521,7 +546,7 @@ const Units = {
       },
       {
         name: `Extremis Chamber - Passive`,
-        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit aer the Fight ability has been resolved.`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE]
       },
       {
@@ -652,15 +677,30 @@ const Units = {
       },
     ],
   },
- /* 'Knight-Azyros': {
+ 'Knight-Azyros': {
     effects: [
       {
+        name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+        desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
+        when: [DURING_GAME],
+      },
+      {
         name: `The Light of Sigmar`,
-        desc: `Once per turn, at the end of the charge phase, you can pick 1 enemy unit within 9" of this unit. Add 1 to hit rolls for attacks made by friendly STORMCAST ETERNALS units that target that enemy unit in the following combat phase.`,
-        when: [END_OF_CHARGE_PHASE],
+        desc: `Effect: Roll a dice. On a 3+, pick 1 of the following effects:
+        For the rest of the turn, subtract 1 from hit rolls for attacks made by enemy units while they are in combat with this unit.
+        Heal (D3) each friendly Stormcast Eternals unit within this unit's combat range.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Light in the Dark - Once Per Turn`,
+        desc: `Declare: Pick a friendly Prosecutors unit wholly within 12" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, pick 1 of the following effects:
+        If the target is in combat, the target can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.
+        If the target is not in combat, they can immediately use the Normal Move ability as if it were your movment phase.`,
+        when: [END_OF_TURN],
       },
     ],
-  }, */
+  }, 
   'Knight-Draconis': {
     effects: [
    //   ArcaneHeritageEffect,
@@ -678,7 +718,7 @@ const Units = {
       },
       {
         name: `Extremis Chamber - Passive`,
-        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit aer the Fight ability has been resolved.`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE]
       },
     // DraggedIntoTheTempestEffect,
@@ -818,7 +858,7 @@ const Units = {
     },
     {
       name: `Extremis Chamber - Passive`,
-      desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit aer the Fight ability has been resolved.`,
+      desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
       when: [COMBAT_PHASE]
     },
       {
@@ -955,6 +995,21 @@ const Units = {
      // SigmariteShieldEffect,
     ],
   },
+  'Stormcoven': {
+    effects: [
+      {
+        name: `Gather the Aether - Passive`,
+        desc: `Effect: Add 1 to this unit's power level while it is contesting an objective.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Aethershock: Casting value of 7`,
+        desc: `Declare: Pick a visible unit within 12" of the caster to be the target then make a casting roll of 2D6.
+        Effect: If this target is a friendly unit, it has Strike-First for the rest of the turn. If the target is an enemy unit, it has Strke-Last for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
  /* 'Judicators with Boltstorm Crossbows': {
     effects: [
       {
@@ -984,7 +1039,8 @@ const Units = {
       },
       {
         name: `Coordinated Strike - Passive`,
-        desc: `Effect: Add 1 to wound rolls for this units shooting attacks if the target is in combat with any friendly Vanguard Chamber units.`,
+        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this unit's Hurricane Crossbows to be the target.
+        Effect: Add 1 to wound rolls for combat attacks for friendly Vanguard Chamber units that target that enemy unit for the rest of the turn.`,
         when: [SHOOTING_PHASE],
       },
     ],
@@ -1338,6 +1394,17 @@ const Units = {
       //...AnnihilatorBaseEffects,
     ],
   },
+  'Stormstrike Palladors': {
+    effects: [
+      {
+        name: `Ride for Vengeance - Passive`,
+        desc: `Effect: If any friendly Warrior Chamber units have been destroyed this battle:
+        You can re-roll chagarge rolls for this unit. 
+        This unit has Strike-First if it charged in the samte turn.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
   'Stormstrike Chariot': {
     effects: [
       {
@@ -1410,7 +1477,7 @@ const Units = {
       //GenericEffects.Elite, StormBlastEffect, BlastToAshesEffect
       {
         name: `Extremis Chamber - Passive`,
-        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit aer the Fight ability has been resolved.`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE]
       },  
       {
@@ -1426,7 +1493,7 @@ const Units = {
       //GenericEffects.Elite, StormBlastEffect, CleavingBlowEffect
       {
         name: `Extremis Chamber - Passive`,
-        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit aer the Fight ability has been resolved.`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE]
       },  
       {
@@ -1441,13 +1508,13 @@ const Units = {
     //  GenericEffects.Elite, ImpalingStrikesEffect, StormBlastEffect
     {
       name: `Extremis Chamber - Passive`,
-      desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit aer the Fight ability has been resolved.`,
+      desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
       when: [COMBAT_PHASE]
     },  
     {
       name: `Impaling Strikes`,
       desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
-      Eect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+      Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
       when: [CHARGE_PHASE]
     },   
   ],
@@ -1458,7 +1525,7 @@ const Units = {
       //StormBlastEffect,
       {
         name: `Extremis Chamber - Passive`,
-        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit aer the Fight ability has been resolved.`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE]
       }, 
       {
@@ -1473,7 +1540,7 @@ const Units = {
     effects: [
       {
         name: `Extremis Chamber - Passive`,
-        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit aer the Fight ability has been resolved.`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE]
       }, 
       {
@@ -1582,10 +1649,7 @@ const Units = {
       },
     ],
   },
-  'Lord-Vigilant': {
-    /*  mandatory: {
-        prayers: [keyPicker(prayers, ['Lightning Tempest'])],
-      }, */
+  'Lord-Vigilant on Gryph-Stalker': {
       effects: [
         {
           name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
@@ -1597,7 +1661,29 @@ const Units = {
           desc: `Declare: Pick a friendly non-Hero Ruination Chamber unit wholly within 12" of this unit. 
           Effect: That unit can use 2 Fight abilities this phase. After the first is used, however, that unit has Strike-last for the rest of the turn.`,
           when: [COMBAT_PHASE],
-          rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
+        },
+      ],
+    },
+    'Lord-Vigilant on Morrgryph': {
+      effects: [
+        {
+          name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+          desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
+          when: [DURING_GAME],
+        },
+        {
+          name: `Direct the Assault - Once Per Turn`,
+          desc: `Declare: Pick a friendly non-Hero Ruination Chamber unit wholly within 12" of this unit to be the target. 
+          Effect: For the rest of the turn, while the target is wholly within 12" of this unit, add 5 to the target's control score.`,
+          when: [HERO_PHASE],
+        },
+        {
+          name: `Vice-Like Grip - Once Per Turn`,
+          desc: `Declare: Pick an enemy non-Monster Hero in combat with this unit to be the target.
+          Effect: Roll 2D6. If the result exceeds the target's Health characteristic, for the rest of the turn:
+          The target has Strike-Last.
+          The target cannot use commands.`,
+          when: [CHARGE_PHASE],
         },
       ],
     },
@@ -1637,13 +1723,34 @@ const Units = {
             },
             {
               name: `Memorian Descendants - Passive`,
-              desc: `Effect: This units Memorians are tokens. There are 2 Memorians for every 3 models in this unit. While any of this units Memorians are on the battlefield, add 1 to this units resistance rolls when using the Ruination Chamber ability. Each time you make an unmodified save roll of 1 for this unit, remove 1 of its Memorians from the battlefield aer the Attack ability has been resolved (the damage point is still inflicted).`,
+              desc: `Effect: This units Memorians are tokens. There are 2 Memorians for every 3 models in this unit. While any of this units Memorians are on the battlefield, add 1 to this units resistance rolls when using the Ruination Chamber ability. Each time you make an unmodified save roll of 1 for this unit, remove 1 of its Memorians from the battlefield after the Attack ability has been resolved (the damage point is still inflicted).`,
               when: [DURING_GAME],
               rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
             },
           ],
         },
-        'ROR: Fjori`s Flamebearers': {
+        'Tornus the Redeemed': {
+          effects: [
+            {
+              name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+              desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
+              when: [DURING_GAME],
+            },
+            {
+              name: `Herald of Redemption - Passive`,
+              desc: `Effect: If a friendly Ruination Chamber unit wholly within 12" of this unit uses the Rally command you receive 3 additional rally points.`,
+              when: [HERO_PHASE],
+            },
+            {
+              name: `The Light of Sigmar`,
+              desc: `Effect: Roll a dice. On a 3+, pick 1 of the following effects:
+              For the rest of the turn, subtract 1 from hit rolls for attacks made by enemy units while they are in combat with this unit.
+              Heal (D3) each friendly Stormcast Eternals unit within this unit's combat range.`,
+              when: [COMBAT_PHASE],
+            },
+          ],
+        },
+      'ROR: Fjori`s Flamebearers': {
     effects: [
       {
         name: `Grimhold Exile: Last of the Lodge-fire - Once Per Battle`,

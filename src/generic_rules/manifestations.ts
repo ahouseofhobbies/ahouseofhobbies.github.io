@@ -481,19 +481,20 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Dais Arcanum: Casting value of 6`,
         desc: `Declare: If there is not a friendly Dais Arcanum on the battlefield, pick a friendly Stormcast Eternals Wizard to cast this spell, pick a friendly Stormcast Eternals Infantry Hero that does not have Fly and is wholly within 12" of them to be the target, then make a casting roll of 2D6. 
-        Effect: Set up a Dais Arcanum within " of the target, visible to the caster and not in combat. Then, remove the target from the battlefield and place it on the platform of that Dais Arcanum.`,
+        Effect: Set up a Dais Arcanum within 1/2" of the target, visible to the caster and not in combat. Then, remove the target from the battlefield and place it on the platform of that Dais Arcanum.`,
         when: [HERO_PHASE],
       },
       {
         name: `Dais Arcanum - Arcane Enhancement - Passive`,
         desc: `Effect: While the unit that was picked to be the target of the Summon Dais Arcanum ability is on the platform of this Manifestation:  
-        That unit has Ward (5+).  
+        That unit has Ward (5+) and Fly.  
         If that unit is a Wizard, add 1 to that units power level.  
         That unit cannot use Move abilities and remains on this Manifestation each time it moves.  
-        Instead of measuring range or visibility to that unit, measure to this Manifestation instead.  
+        Instead of measuring range or visibility to that unit, measure to this Manifestation instead.
+        If that unit is picked to make a pile-in move, move this Manifestation instead.  
         This Manifestation cannot be picked to be the target of abilities other than Banish abilities. 
         If this Manifestation is banished, before removing it from the battlefield, set up the unit on its platform on the battlefield within 3" of it. That unit can only be set up in combat with units it was already in combat with when this Manifestation was banished. If it is not possible to set up that unit, it is destroyed. 
-        If the unit on the platform is destroyed, immediately remove this Manifestation from play.`,
+        If the unit on the platform is removed from the battlefield, immediately remove this Manifestation from play.`,
         when: [DURING_GAME],
       },
       {
@@ -508,7 +509,7 @@ const GenericManifestations: TEntry[] = [
         when: [SHOOTING_PHASE],
       },
       {
-        name: `Summon Everblaze Comet: Casting value of 7`,
+        name: `Summon Everblaze Comet: Casting value of 8`,
         desc: `Declare: If there is not a friendly Everblaze Comet on the battlefield, pick a friendly Stormcast Eternals Wizard to cast this spell, then make a casting roll of 2D6. 
         Effect: Set up an Everblaze Comet wholly within 18" of the caster.`,
         when: [HERO_PHASE],

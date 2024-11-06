@@ -711,7 +711,7 @@ const Units = {
       },
       {
         name: `Whispers of Doubt: Casting value of 7`,
-        desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target. 
+        desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target, then make a casting roll of 2D6. 
         Effect: Add 1 to hit rolls and wound rolls for combat attacks that target that enemy unit for the rest of the turn.`,
         when: [HERO_PHASE],
       },

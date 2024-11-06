@@ -28,7 +28,7 @@ const BattleTraits = {
       {
         name: `Move Like the Wind`,
         desc: `Declare: You can only use this ability if you have not used any Facet of War abilities this battle round. Pick up to 3 friendly Hurakan units that are not in combat to be the targets. 
-        Effect: Each target can move a distance up to its Move characteristic. It cannot move into combat during any part of that move, and it cannot use Shoot abilities for the rest of the turn.`,
+        Effect: Each target can move 2D6". It cannot move into combat during any part of that move, and it cannot use Shoot abilities for the rest of the turn.`,
         when: [SHOOTING_PHASE],
       },
       {

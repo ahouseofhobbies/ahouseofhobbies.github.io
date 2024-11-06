@@ -287,7 +287,7 @@ const Units = {
       },
       {
         name: `Impaling Talons - Once Per Turn`,
-        desc: `Declare: If this unit charged this phase, pick an enemy unit in combat with it to be the target. 
+        desc: `Declare: If this unit charged this turn, pick an enemy unit in combat with it to be the target. 
         Effect: Roll a dice. If the roll is equal to or less than the targets Health characteristic, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [COMBAT_PHASE],
       },
@@ -351,7 +351,7 @@ const Units = {
         name: `Under a Killing Moon: Casting value of 7`,
         desc: `Declare: Pick up to 3 visible friendly Dire Wolves units wholly within 18" of this unit to be the targets, then make a casting roll of 2D6. 
         Effect: For the rest of the turn:  
-        Add 1 to the Rend characteristic of the targets melee weapons.  
+        Add 1 to the Rend characteristic of the targets melee weapons (including Companion weapons).  
         The targets can ignore the effect of the Beast ability.`,
         when: [HERO_PHASE],
       },

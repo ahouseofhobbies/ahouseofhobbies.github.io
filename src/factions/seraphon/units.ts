@@ -205,7 +205,7 @@ const Units = {
       {
         name: `Arcane Vassal - Once Per Turn`,
         desc: `Declare: Pick a friendly Skink Wizard wholly within 18" of this unit to be the target. 
-        Effect: Measure the range and visibility of the next Spell ability used by this unit from the target instead of from this unit.`,
+        Effect: Measure the range and visibility of the next Spell ability used by this unit this phase from the target instead of from this unit. The target is treated as the caster for the purpose of other abilities or spell effects, such as Unbind or The Earth Trembles.`,
         when: [HERO_PHASE],
       },
       {
@@ -237,7 +237,7 @@ const Units = {
       {
         name: `Arcane Vassal - Once Per Turn`,
         desc: `Declare: Pick a friendly Skink Wizard wholly within 18" of this unit to be the target. 
-        Effect: Measure the range and visibility of the next Spell ability used by this unit from the target instead of from this unit.`,
+        Effect: Measure the range and visibility of the next Spell ability used by this unit this phase from the target instead of from this unit. The target is treated as the caster for the purpose of other abilities or spell effects, such as Unbind or The Earth Trembles.`,
         when: [HERO_PHASE],
       },
       {
@@ -1208,6 +1208,91 @@ const Units = {
         name: `Timberrr! - Passive`,
         desc: `Effect: When the Mega-Gargant in this regiment of renown is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3" of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3" of that point that has a lower Health characteristic than that model.`,
         when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: The Horizon Seekers': {
+    effects: [
+      {
+        name: `Lord-Aquilor: Vanguard Chamber - Passive`,
+        desc: `Effect: This unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
+        when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
+      },
+      {
+        name: `Lord-Aquilor: Ride the Winds Aetheric`,
+        desc: `Declare: If this unit is not in combat, you can pick up to 2 friendly Vanguard-Palladors units that are not in combat to be the targets. 
+        Effect: Remove this unit and the targets (if any) from the battlefield. Set this unit up again on the battlefield more than 9" from all enemy units. Then, set up each target wholly within 12" of this unit and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Vanguard-Hunters: Vanguard Chamber - Passive`,
+        desc: `Effect: This unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
+        when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
+      },
+      {
+        name: `Vanguard-Hunters: Astral Compass - Once Per Battle`,
+        desc: `Declare: Pick an enemy unit to be the target. 
+        Effect: The target has the Hunted keyword for the rest of the battle.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Vanguard-Hunters: Star-Marked - Passive`,
+        desc: `Effect: Add 2" to this units Move characteristic while a Hunted enemy unit is on the battlefield. In addition, add 1 to hit rolls for this units attacks that target a Hunted enemy unit.`,
+        when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
+      },
+      {
+        name: `Vanguard Palladors: Vanguard Chamber - Passive`,
+        desc: `Effect: This unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
+        when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
+      },
+      {
+        name: `Vanguard Palladors with Javelins: Charging Volley`,
+        desc: `Declare: If this unit charged this phase, pick an enemy unit in combat with it to be the target. 
+        Effect: This unit can immediately use a Shoot ability as if it were your shooting phase, but it must target that enemy unit. This units Starstrike Javelins have Shoot in Combat this phase.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Vanguard Palladors with Handaxes: Shocking Strikes - Passive`,
+        desc: `Effect: If any damage points are allocated to an enemy unit by attacks made with this units Shock Handaxes, subtract 1 from wound rolls for that enemy units combat attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Hunters' Cohesion - Passive`,
+        desc: `Effect: Each time this Regiment of Renown's Lord-Aquilor uses its Ride the Winds Aetheric ability, you can pick all units in this Regiment of Renown that are not in combat to be the targets. 
+        In addition, add 1 to hit rolls for attacks made by this Regiment of Renown's Lord-Aquilor and Vanguard-Palladors units that target a Hunted enemy unit.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: Valnirs Stormwing': {
+    effects: [
+      {
+        name: `Knight-Draconis: Wrath of the Draconith - Once Per Turn`,
+        desc: `Declare: Pick a friendly Stormdrake Guard unit within this units combat range to be the target. 
+        Effect: Roll a dice. On a 2+, add 1 to the Attacks characteristic of both this units and the targets Draconiths Fangs and Talons for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Knight-Draconis: Arcane Heritage - Reaction: Opponent declared a Spell ability`,
+        desc: `Effect: If this unit or a friendly Stormdrake Guard unit wholly within 12" of this unit was picked to be the target of that spell, roll a dice. On a 4+, ignore the effect of that spell on this unit or that friendly unit. This unit can use this ability more than once per phase but only once per Spell ability.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Knight-Draconis: Extremis Chamber - Passive`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
+        when: [COMBAT_PHASE]
+      },
+      {
+        name: `Stormdrake Guard: Extremis Chamber - Passive`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
+        when: [COMBAT_PHASE]
+      }, 
+      {
+        name: `Hour of Retribution - Once Per Battle`,
+        desc: `Effect: For the rest of the turn:
+        Add 1 to wound rolls for attacks made by units in this Regiment of Renown.
+        Add 1 to save rolls for units in this Regiment of Renwon.`,
+        when: [HERO_PHASE],
       },
     ],
   },

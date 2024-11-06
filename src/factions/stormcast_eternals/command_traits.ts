@@ -18,7 +18,8 @@ const CommandTraits = {
     effects: [
       {
         name: `Shock and Awe - Passive`,
-        desc: `Effect: Each time a friendly Stormcast Eternals unit is set up wholly within 12" of this unit using the Scions of the Storm ability, subtract 1 from hit rolls for attacks that target that unit for the rest of the battle round.`,
+        desc: `Effect: Each time a friendly Stormcast Eternals unit is set up wholly within 12" of this unit using the Scions of the Storm ability, subtract 1 from hit rolls for attacks that target that unit for the rest of the battle round.
+        In addition, each time a friendly Stromcast Etnernals unit is set up wholly within 12" of this unit using the Scions of the Storm ability, subtract 1 from hit rolls for attacks that target that unit for the rest of the battle round.`,
         when: [COMBAT_PHASE, SHOOTING_PHASE],
       },
     ],
@@ -27,7 +28,7 @@ const CommandTraits = {
     effects: [
       {
         name: `Staunch Defender - Passive`,
-        desc: `Effect: While this unit is contesting an objective in friendly territory, add 3 to the control scores of all friendly Stormcast Eternals units contesting that objective.`,
+        desc: `Effect: While this unit is contesting an objective in friendly territory, add 3 to the control scores of friendly Stormcast Eternals units contesting that objective.`,
         when: [END_OF_TURN],
       },
     ],
@@ -36,7 +37,7 @@ const CommandTraits = {
     effects: [
       {
         name: `Envoy of the Heavens`,
-        desc: `Declare: If a friendly unit was destroyed in the previous turn, pick a visible friendly Stormcast Eternals unit wholly within 12" of this unit to be the target. 
+        desc: `Declare: If a friendly Stormcast Eternals unit was destroyed in the previous turn, pick a visible friendly Stormcast Eternals unit wholly within 12" of this unit to be the target. 
         Effect: The target has Ward (5+) until the start of your next turn.`,
         when: [HERO_PHASE],
       },

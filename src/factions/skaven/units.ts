@@ -878,7 +878,7 @@ const Units = {
       },
       {
         name: `Plague Rat - Passive`,
-        desc: `Effect: This unit's Plague Rat is a token. If you make a chanting roll of 1 for this unit while its Plague Rat is on the battlefield, you can remove its Plague Rat from the battlefield and then re-roll that chanting roll.`,
+        desc: `Effect: This unit's Plague Rat is a token. If you make an unmodified chanting roll of 1 for this unit while its Plague Rat is on the battlefield, you can remove its Plague Rat from the battlefield and then re-roll that chanting roll.`,
         when: [HERO_PHASE],
       },
     ],
