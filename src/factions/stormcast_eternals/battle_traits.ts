@@ -121,7 +121,7 @@ import {
           name: `Stormreach Portal (Faction Terrain) - Step into the Storm`,
           desc: `Declare: Pick a friendly non-Monster Stormcast Eternals unit that is not in combat and is wholly within 6" of this terrain feature to be the target.  
           Effect: Remove the target from the battlefield and set it up again on the batlefield more than 9" from all enemy units.`,
-          when: [HERO_PHASE],
+          when: [MOVEMENT_PHASE],
         },
       ],
     },
