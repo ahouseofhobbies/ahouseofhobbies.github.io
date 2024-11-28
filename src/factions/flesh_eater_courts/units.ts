@@ -416,7 +416,7 @@ const Units = {
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
         Effect: Roll a dice. On a 3+, pick 1 of the following effects: 
         Attack the Apostate!: Friendly Flesh-eater Courts units in combat with the target have Strike-first for the rest of the turn. 
-        Welcome the Disciple!: The target has the Infected keyword for the rest of the battle. Each time your opponent declares a command, Spell ability or Prayer ability for an Infected unit, roll a dice. On a 5+:  
+        Welcome the Disciple!: The target has the Infected keyword for the rest of the battle. Each time your opponent declares a command, Spell ability or Prayer ability for an Infected unit, roll a dice as a reaction. On a 5+:  
         If they declared a command, that command has no effect. The command still counts as having been used and the command points spent to use the command are still lost.  
         If they declared a Spell or Prayer ability, that spell or prayer fails.`,
         when: [CHARGE_PHASE],

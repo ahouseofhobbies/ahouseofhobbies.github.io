@@ -432,7 +432,7 @@ const Units = {
      // chaosLanceEffect,
     ],
   },
-  'Chaos Lord on Manticore': {
+  /*'Chaos Lord on Manticore': {
     effects: [
     //  ChaosMarkAll,
     //  DaemonforgedWeaponEffect,
@@ -455,7 +455,7 @@ const Units = {
   'Chaos Sorcerer Lord on Manticore': {
   /*  mandatory: {
       spells: [keyPicker(Spells, ['Winds of Chaos'])],
-    }, */
+    }, 
     effects: [
       {
         name: `Oracular Visions - Once Per Turn`,
@@ -468,13 +468,13 @@ const Units = {
         desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
         Effect: Roll a dice. On a 3+, the target has Strike-last for the rest of the turn.`,
         when: [COMBAT_PHASE],
-      },
+      }, 
      // ChaosMarkSorcerer,
      // ...OracularVisionsEffects,
      // TerritorialPredatorEffect,
      // GenericEffects.WizardOneSpellEffect,
     ],
-  },
+  }, */
   'Chaos Lord on Karkadrak': {
     effects: [
     //  ChaosMarkAll,
@@ -563,10 +563,10 @@ const Units = {
       },
     ],
   },
-  'Chaos Warshrine': {
+  /*'Chaos Warshrine': {
    /* mandatory: {
       prayers: [keyPicker(Prayers, ['Favour of the Ruinous Powers'])],
-    }, */
+    }, 
     effects: [
    //   ChaosMarkAll,
       {
@@ -592,7 +592,7 @@ const Units = {
         when: [HERO_PHASE],
       },
     ],
-  },
+  }, */
   'Chaos Chariots': {
     effects: [
       {
@@ -796,7 +796,7 @@ const Units = {
       },
     ],
   },
-  'Soul Grinder': {
+  /*'Soul Grinder': {
     effects: [
     //  ChaosMarkAll,
     {
@@ -816,7 +816,7 @@ const Units = {
         when: [CHARGE_PHASE],
       },
     ],
-  },
+  }, */
   'Abraxia': {
     effects: [
     //  ChaosMarkAll,

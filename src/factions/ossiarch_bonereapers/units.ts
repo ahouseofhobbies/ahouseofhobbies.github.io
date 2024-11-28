@@ -317,7 +317,7 @@ const Units = {
       {
         name: `Voice of Nagash - Once Per Battle`,
         desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target. 
-        Effect: For the rest of the turn, non-Fight Core abilities cost 1 command point for the target to use.`,
+        Effect: For the rest of the turn, non-Fight Core abilities cost 1 command point for the target to use. Those abilities do not count as commands.`,
         when: [HERO_PHASE],
       },
       {

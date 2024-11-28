@@ -26,7 +26,7 @@ const BattleTraits = {
       },
       {
         name: `Colossal Slam - Once Per Turn`,
-        desc: `Declare: Pick a friendly Mega-Gargant that has not used a Rampage ability this turn to use this ability, then pick an enemy Monster or War Machine within 1" of it to be the target. 
+        desc: `Declare: Pick a friendly Mega-Gargant that has not used a Rampage ability this turn to use this ability, then pick an enemy Monster or War Machine that has a unit size of 1 and is within 1" of it to be the target. 
         Effect: Roll a dice. On a 3+, remove the target from the battlefield and set it up again within 1" of the unit using this ability. Then, inflict D3 mortal damage on the target.`,
         when: [COMBAT_PHASE],
       },

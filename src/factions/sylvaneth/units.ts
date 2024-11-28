@@ -362,7 +362,7 @@ const Units = {
       },
       {
         name: `Steady Aim`,
-        desc: `Effect: This unit can ignore the Guarded Hero ability (Core Rules, 25.0) for the rest of the turn.`,
+        desc: `Effect: For the rest of the turn, this unit can ignore the effects of Guarded Hero ability (Core Rules, 25.0) when picking targets for its shooting attacks.`,
         when: [SHOOTING_PHASE],
       },
     ],
@@ -525,7 +525,7 @@ const Units = {
       {
         name: `Kurnothi War-horn`,
         desc: `Declare: Pick up to 3 friendly Sylvaneth units to be the target. 
-        Effect: Each target can use Charge abilities even if they used a Run ability in the same turn.`,
+        Effect: For the rest of the turn, dach target can use Charge abilities even if they used a Run ability in the same turn.`,
         when: [CHARGE_PHASE],
       },
     ],
@@ -815,11 +815,6 @@ const Units = {
         desc: `Declare: If this unit charged this phase, pick an enemy unit in combat with it to be the target. 
         Effect: This unit can immediately use a Shoot ability as if it were your shooting phase, but it must target that enemy unit. This units Starstrike Javelins have Shoot in Combat this phase.`,
         when: [CHARGE_PHASE],
-      },
-      {
-        name: `Vanguard Palladors with Handaxes: Shocking Strikes - Passive`,
-        desc: `Effect: If any damage points are allocated to an enemy unit by attacks made with this units Shock Handaxes, subtract 1 from wound rolls for that enemy units combat attacks for the rest of the turn.`,
-        when: [COMBAT_PHASE],
       },
       {
         name: `Hunters' Cohesion - Passive`,

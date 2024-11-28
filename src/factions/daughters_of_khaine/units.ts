@@ -938,11 +938,6 @@ const Units = {
         when: [CHARGE_PHASE],
       },
       {
-        name: `Vanguard Palladors with Handaxes: Shocking Strikes - Passive`,
-        desc: `Effect: If any damage points are allocated to an enemy unit by attacks made with this units Shock Handaxes, subtract 1 from wound rolls for that enemy units combat attacks for the rest of the turn.`,
-        when: [COMBAT_PHASE],
-      },
-      {
         name: `Hunters' Cohesion - Passive`,
         desc: `Effect: Each time this Regiment of Renown's Lord-Aquilor uses its Ride the Winds Aetheric ability, you can pick all units in this Regiment of Renown that are not in combat to be the targets. 
         In addition, add 1 to hit rolls for attacks made by this Regiment of Renown's Lord-Aquilor and Vanguard-Palladors units that target a Hunted enemy unit.`,

@@ -285,7 +285,7 @@ const Units = {
       {
         name: `Biovoltaic Blast`,
         desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target, then roll a number of dice equal to the number of models in this unit. 
-        Effect: For each 4-5, inflict 1 mortal damage on the target. For each 6, inflict D3 mortal damage on the target. Add 1 to each roll if there are more models in the target unit than this unit.`,
+        Effect: For each 4-5, inflict 1 mortal damage on the target. For each 6+, inflict D3 mortal damage on the target. Add 1 to each roll if there are more models in the target unit than this unit.`,
         when: [CHARGE_PHASE],
       },
     ],
@@ -666,11 +666,6 @@ const Units = {
         desc: `Declare: If this unit charged this phase, pick an enemy unit in combat with it to be the target. 
         Effect: This unit can immediately use a Shoot ability as if it were your shooting phase, but it must target that enemy unit. This units Starstrike Javelins have Shoot in Combat this phase.`,
         when: [CHARGE_PHASE],
-      },
-      {
-        name: `Vanguard Palladors with Handaxes: Shocking Strikes - Passive`,
-        desc: `Effect: If any damage points are allocated to an enemy unit by attacks made with this units Shock Handaxes, subtract 1 from wound rolls for that enemy units combat attacks for the rest of the turn.`,
-        when: [COMBAT_PHASE],
       },
       {
         name: `Hunters' Cohesion - Passive`,

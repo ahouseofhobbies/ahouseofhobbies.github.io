@@ -60,8 +60,8 @@ const Flavors = {
   'Forge Brethren': {
     effects: [
       {
-        name: `Bulwark of Moletenstone - Passive`,
-        desc: `Effect: Add 1 to save rolls for friendly Infantry units while they are wholly within friendly territory.`,
+        name: `Bulwark of Molten Stone - Passive`,
+        desc: `Effect: Add 1 to save rolls for friendly Fyreslayers Infantry units while they are wholly within friendly territory.`,
         when: [DURING_GAME],
       },
     ],

@@ -226,7 +226,7 @@ const Units = {
       {
         name: `Attention Seekers`,
         desc: `Declare: If this unit is not in combat, pick the closest enemy unit to it to be the target. If 2 or more enemy units are tied to be the closest, you can pick which is the target. Then, make a charge roll of 2D6. 
-        Effect: This unit can move a distance up to the value of the charge roll. During that move, this unit can move into combat and can pass through models in the target unit, but it must end that move within 1" of the target. Then, inflict D3 mortal damage on the target.`,
+        Effect: This unit can move a distance up to the value of the charge roll. During that move, this unit can move into combat and can pass through models in the target unit, but it must end that move within 1" of the target. Then, inflict D3 mortal damage on the target. If it does so, this unit has charged.`,
         when: [CHARGE_PHASE],
       },
       {

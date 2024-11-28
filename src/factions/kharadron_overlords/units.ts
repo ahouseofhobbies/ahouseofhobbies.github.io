@@ -251,7 +251,7 @@ const Units = {
     effects: [
       {
         name: `The Admiral's Flagship - Once Per Battle`,
-        desc: `Declare: Pick an Arkanaut Ironclad or Arkanaut Frigate in this units regiment to be the target. 
+        desc: `Declare: This unit can use this ability even if it is in reserve. Pick an Arkanaut Ironclad or Arkanaut Frigate in this units regiment to be the target You can pick a unit that is in reserve. 
         Effect: For the rest of the battle, each time the target uses the All-out Attack command while this unit is wholly within 12" of it, no command points are spent.`,
         when: [DURING_SETUP, SHOOTING_PHASE, COMBAT_PHASE],
       },
@@ -423,7 +423,7 @@ const Units = {
       },
       {
         name: `Great Endrinworks`,
-        desc: `Effect: Pick 1 of the following effects to apply to this unit for the rest of the battle: 
+        desc: `Effect: Pick 1 of the following effects to apply to this unit for the rest of the battle. This unit can use this ability even if it is in reserve: 
         Magnicent Omniscope: Add 2" to this units Move characteristic. 
         Collapsible Compartments: Add 1 to the total number of units and 10 to the total number of models this unit can transport. 
         Aetheric Repulsion Field: This unit can use the Unbind ability as if it had Wizard (1).`,
@@ -445,7 +445,7 @@ const Units = {
     effects: [
       {
         name: `Captain of the Aelsling`,
-        desc: `Declare: Pick a friendly Arkanaut Frigate in this units regiment to be the target. 
+        desc: `Declare: This unit can use this ability even if it is in reserve. Pick a friendly Arkanaut Frigate in this units regiment to be the target. You can pick a unit that is in reserve.
         Effect: The target has the Aelsling keyword. Add 1 to the Damage characteristic of the targets melee weapons for the rest of the battle.`,
         when: [DURING_SETUP],
       },
@@ -774,11 +774,6 @@ const Units = {
         desc: `Declare: If this unit charged this phase, pick an enemy unit in combat with it to be the target. 
         Effect: This unit can immediately use a Shoot ability as if it were your shooting phase, but it must target that enemy unit. This units Starstrike Javelins have Shoot in Combat this phase.`,
         when: [CHARGE_PHASE],
-      },
-      {
-        name: `Vanguard Palladors with Handaxes: Shocking Strikes - Passive`,
-        desc: `Effect: If any damage points are allocated to an enemy unit by attacks made with this units Shock Handaxes, subtract 1 from wound rolls for that enemy units combat attacks for the rest of the turn.`,
-        when: [COMBAT_PHASE],
       },
       {
         name: `Hunters' Cohesion - Passive`,
