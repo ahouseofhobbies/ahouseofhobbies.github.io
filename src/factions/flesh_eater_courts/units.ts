@@ -822,6 +822,147 @@ const Units = {
       },
     ],
   },
+  'ROR: Enforcers of the Tithe': {
+    effects: [
+      {
+        name: `Mortisan Ossifector: Refined Creations - Once Per Turn`,
+        desc: `Declare: Pick a friendly Gothizzar Harvester, Morghast Archai or Morghast Harbingers unit wholly within 12" of this unit to be the target. 
+        Effect: Roll a dice. On a 3+, add 1 to the Rend characteristic of the targets melee weapons until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Mortek Guard: Shieldwall - Passive`,
+        desc: `Effect: Ignore all modiifers to save rolls for this unit (positive and negative) for the rest of the turn if this unit did not use a Move ability in the same turn.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Gothizzar Harvester: Bone Harvest - Passive`,
+        desc: `Effect: Each time an enemy model in combat with this unit is slain, give this unit 1 bone-tithe point. This unit can have a maximum of 6 bone-tithe points at once.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Gothizzar Harvester: Gruesome Surgery - Once Per Turn`,
+        desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. For each model slain by this ability, you can return 1 slain model to a friendly Mortek Guard unit wholly within 12" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Gothizzar Harvester: Repair Construct`,
+        desc: `Declare: Pick a friendly Ossiarch Bonereapers unit wholly within 12" of this unit to be the target. 
+        Effect: Return a number of slain models to the target with a combined Health characteristic equal to the number of bone-tithe points this unit has. Then, reset this units bone-tithe points to 0.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Collect the Tithe - Once Per Turn`,
+        desc: `Declare: Pick the Gothizzar Harvester in this Regiment of Renown to use this ability, then pick a non-Hero Infantry unit (friendly or enemy) to be the target. 
+        Effect: Roll a dice. If the roll equals or exceeds the targets Health characteristic, 1 model in the target unit is slain, then give the unit using this ability 1 bone-tithe point.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Soul Tax: Casting value of 7`,
+        desc: `Declare: Pick the Mortisan Ossifector in this Regiment of Renown to cast this spell, then: 
+        Pick a friendly unit, excluding units in this Regiment of Renown, to be the target. 
+        Pick a unit in this Regiment of Renown to be the recipient. 
+        The target and the recipient must be wholly within 12" of and visible to the caster. Then, make a casting roll of 2D6. 
+        Effect: Until the start of your next turn: 
+        The target has a maximum control score of 1. 
+        Add 1 to hit rolls and wound rolls for the recipients combat attacks.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Rebuild on the March`,
+        desc: `Declare: Pick the Gothizzar Harvester in this Regiment of Renown to use this ability if it has 6 bone-tithe points. Then, pick another unit in this Regiment of Renown that has been destroyed to be the target. 
+        Effect: Reset the Gothizzar Harvesters bone-tithe points to 0. Then, set up a replacement of the target unit with half the number of models (rounding up) wholly within 9" of the Gothizzar Harvester and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'ROR: The Lost-Long Spirits': {
+    effects: [
+      {
+        name: `Treelord: Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Sweeping Blows is 3.`,
+        when: [COMBAT_PHASE],
+        },
+        {
+          name: `Treelord: Lash and Tangle - Once Per Turn`,
+          desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+          Effect: Roll a dice. On a 3+, subtract 1 from wound rolls for the targets attacks for the rest of the turn.`,
+          when: [COMBAT_PHASE],
+        },
+        {
+          name: `Treelord: Entangling Grasp`,
+          desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this units Strangleroots to be the target. 
+          Effect: Roll a dice. On a 3+, the target cannot use Run or Retreat abilities until the start of your next turn.`,
+          when: [SHOOTING_PHASE],
+        },
+        {
+          name: `Spite-Revenants: Unbridled Malice`,
+          desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
+          Effect: Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.`,
+          when: [COMBAT_PHASE],
+        },
+      {
+        name: `Endless Wandering - Once Per Turn - Enemy Hero Phase`,
+        desc: `Declare: Pick a unit in this Regiment of Renown that is not in combat to use this ability. 
+        Effect: That unit can use the Normal Move ability as if it were your movement phase.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Ominous Fog - Passive`,
+        desc: `Effect: Units in this Regiment of Renown are not visible to enemy units more than 12" from them while they are wholly within 9" of the Treelord in this Regiment of Renown.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: Nurgles Gift': {
+    effects: [
+      {
+        name: `Nurglings: Endless Swarm - Passive`,
+        desc: `Effect: Heal (3) this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Incubation Period`,
+        desc: `Declare: This ability must be used to deploy this Regiment of Renown. 
+        Effect: Set up the units in this Regiment of Renown in reserve festering within. They have now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Bursting with Life - Passive`,
+        desc: `Effect: If a friendly non-Nurgles Gift unit would be destroyed, before the last model is removed from play, roll a dice. Add 1 to the roll for each other friendly non-Nurgles Gift unit that has been destroyed this battle. On a 5+, pick a friendly unit that is festering within and set it up wholly within 6" of that model. It can be set up in combat.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: Stumblefoot Gargant': {
+    effects: [
+      {
+        name: `Mancrusher Gargant: Stuff 'Em in Me Bag - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. If the roll is at least double the targets Health characteristic, 1 model in the target unit is slain.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Projectile Vomit - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick all other units (friendly and enemy) within 3" of that point to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Bellowing Mockery - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn, then pick an enemy unit within this units combat range to be the target. 
+        Effect: Roll a dice. On a 3+, subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Whatre You Lookin At? - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it charged this turn and has not used a Rampage ability this turn. Then, pick an enemy unit within 9" of this unit to be the target. 
+        Effect: Roll 2D6. This unit can move a number of inches equal to the roll. It can pass through enemy models and must end that move in combat with the target.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

@@ -26,7 +26,7 @@ const CommandTraits = {
     effects: [
       {
         name: `Favoured of the Pantheon`,
-        desc: `Effect: This unit can use the Eye of the Gods ability as if it were the end of the turn and it had destroyed an enemy unit this turn.`,
+        desc: `Effect: If this unit is picked as the target of the 'Eye of the Gods' abiliity, it gains 3 Dark Apotheosis points.`,
         when: [DURING_SETUP],
       },
     ],

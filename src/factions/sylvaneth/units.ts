@@ -856,6 +856,54 @@ const Units = {
       },
     ],
   },
+  'ROR: Nurgles Gift': {
+    effects: [
+      {
+        name: `Nurglings: Endless Swarm - Passive`,
+        desc: `Effect: Heal (3) this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Incubation Period`,
+        desc: `Declare: This ability must be used to deploy this Regiment of Renown. 
+        Effect: Set up the units in this Regiment of Renown in reserve festering within. They have now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Bursting with Life - Passive`,
+        desc: `Effect: If a friendly non-Nurgles Gift unit would be destroyed, before the last model is removed from play, roll a dice. Add 1 to the roll for each other friendly non-Nurgles Gift unit that has been destroyed this battle. On a 5+, pick a friendly unit that is festering within and set it up wholly within 6" of that model. It can be set up in combat.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: Stumblefoot Gargant': {
+    effects: [
+      {
+        name: `Mancrusher Gargant: Stuff 'Em in Me Bag - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. If the roll is at least double the targets Health characteristic, 1 model in the target unit is slain.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Projectile Vomit - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick all other units (friendly and enemy) within 3" of that point to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Bellowing Mockery - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn, then pick an enemy unit within this units combat range to be the target. 
+        Effect: Roll a dice. On a 3+, subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Whatre You Lookin At? - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it charged this turn and has not used a Rampage ability this turn. Then, pick an enemy unit within 9" of this unit to be the target. 
+        Effect: Roll 2D6. This unit can move a number of inches equal to the roll. It can pass through enemy models and must end that move in combat with the target.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

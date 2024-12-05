@@ -22,6 +22,7 @@ import {
   START_OF_HERO_PHASE,
   START_OF_ROUND,
   START_OF_SHOOTING_PHASE,
+  START_OF_TURN,
   TURN_ONE_START_OF_ROUND,
   WARDS_PHASE,
   WOUND_ALLOCATION_PHASE,
@@ -1139,6 +1140,187 @@ const Units = {
       {
         name: `Timberrr! - Passive`,
         desc: `Effect: When the Mega-Gargant in this regiment of renown is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3" of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3" of that point that has a lower Health characteristic than that model.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: Enforcers of the Tithe': {
+    effects: [
+      {
+        name: `Mortisan Ossifector: Refined Creations - Once Per Turn`,
+        desc: `Declare: Pick a friendly Gothizzar Harvester, Morghast Archai or Morghast Harbingers unit wholly within 12" of this unit to be the target. 
+        Effect: Roll a dice. On a 3+, add 1 to the Rend characteristic of the targets melee weapons until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Mortek Guard: Shieldwall - Passive`,
+        desc: `Effect: Ignore all modiifers to save rolls for this unit (positive and negative) for the rest of the turn if this unit did not use a Move ability in the same turn.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Gothizzar Harvester: Bone Harvest - Passive`,
+        desc: `Effect: Each time an enemy model in combat with this unit is slain, give this unit 1 bone-tithe point. This unit can have a maximum of 6 bone-tithe points at once.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Gothizzar Harvester: Gruesome Surgery - Once Per Turn`,
+        desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. For each model slain by this ability, you can return 1 slain model to a friendly Mortek Guard unit wholly within 12" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Gothizzar Harvester: Repair Construct`,
+        desc: `Declare: Pick a friendly Ossiarch Bonereapers unit wholly within 12" of this unit to be the target. 
+        Effect: Return a number of slain models to the target with a combined Health characteristic equal to the number of bone-tithe points this unit has. Then, reset this units bone-tithe points to 0.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Collect the Tithe - Once Per Turn`,
+        desc: `Declare: Pick the Gothizzar Harvester in this Regiment of Renown to use this ability, then pick a non-Hero Infantry unit (friendly or enemy) to be the target. 
+        Effect: Roll a dice. If the roll equals or exceeds the targets Health characteristic, 1 model in the target unit is slain, then give the unit using this ability 1 bone-tithe point.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Soul Tax: Casting value of 7`,
+        desc: `Declare: Pick the Mortisan Ossifector in this Regiment of Renown to cast this spell, then: 
+        Pick a friendly unit, excluding units in this Regiment of Renown, to be the target. 
+        Pick a unit in this Regiment of Renown to be the recipient. 
+        The target and the recipient must be wholly within 12" of and visible to the caster. Then, make a casting roll of 2D6. 
+        Effect: Until the start of your next turn: 
+        The target has a maximum control score of 1. 
+        Add 1 to hit rolls and wound rolls for the recipients combat attacks.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Rebuild on the March`,
+        desc: `Declare: Pick the Gothizzar Harvester in this Regiment of Renown to use this ability if it has 6 bone-tithe points. Then, pick another unit in this Regiment of Renown that has been destroyed to be the target. 
+        Effect: Reset the Gothizzar Harvesters bone-tithe points to 0. Then, set up a replacement of the target unit with half the number of models (rounding up) wholly within 9" of the Gothizzar Harvester and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'ROR: Exile Scavengers': {
+    effects: [
+      {
+        name: `Endrinmaster with Dirigible Suit: By Grungi, I Have My Eye On You! - Passive`,
+        desc: `Effect: Add 1 to field repairs rolls for friendly Endrinriggers units while they are wholly within 12" of this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Endrinmaster with Dirigible Suit: Endrinmaster`,
+        desc: `Declare: Pick a friendly Skyvessel within this units combat range to be the target. 
+        Effect: Roll a dice. On a 2+, Heal (3) the target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Skywardens: Timed Charges`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Grundstok Gunhauler: Light Bomb Racks`,
+        desc: `Declare: Pick an enemy unit that does not have Fly and that this unit passed across this phase to be the target. 
+        Effect: Roll 4 dice. For each 4+, inflict 1 mortal damage on the target.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `An Eye for Loot`,
+        desc: `Declare: This ability must be used to deploy this Regiment of Renown. 
+        Effect: Set up the units in this Regiment of Renown in reserve studying the battlefield. They have now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Swoop In`,
+        desc: `Declare: Pick the Grundstok Gunhauler in this Regiment of Renown to use this ability if it is studying the battlefield. 
+        Effect: Set up the Grundstok Gunhauler on the battlefield more than 6" from all enemy units that have an artefact of power and more than 9" from all other enemy units. Then, set up all other units in this Regiment of Renown wholly within 3" of the Grundstok Gunhauler and more than 6" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `What's Yours is Mine - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with a unit in this Regiment of Renown to be the target. Then, pick an artefact of power the target has. 
+        Effect: Roll a dice. Add 1 to the roll for each unit in this Regiment of Renown that is in combat with the target. On a 6+, the target no longer has that artefact of power.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'ROR: Nurgles Gift': {
+    effects: [
+      {
+        name: `Nurglings: Endless Swarm - Passive`,
+        desc: `Effect: Heal (3) this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Incubation Period`,
+        desc: `Declare: This ability must be used to deploy this Regiment of Renown. 
+        Effect: Set up the units in this Regiment of Renown in reserve festering within. They have now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Bursting with Life - Passive`,
+        desc: `Effect: If a friendly non-Nurgles Gift unit would be destroyed, before the last model is removed from play, roll a dice. Add 1 to the roll for each other friendly non-Nurgles Gift unit that has been destroyed this battle. On a 5+, pick a friendly unit that is festering within and set it up wholly within 6" of that model. It can be set up in combat.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: Stumblefoot Gargant': {
+    effects: [
+      {
+        name: `Mancrusher Gargant: Stuff 'Em in Me Bag - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. If the roll is at least double the targets Health characteristic, 1 model in the target unit is slain.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Projectile Vomit - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick all other units (friendly and enemy) within 3" of that point to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Bellowing Mockery - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn, then pick an enemy unit within this units combat range to be the target. 
+        Effect: Roll a dice. On a 3+, subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Whatre You Lookin At? - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it charged this turn and has not used a Rampage ability this turn. Then, pick an enemy unit within 9" of this unit to be the target. 
+        Effect: Roll 2D6. This unit can move a number of inches equal to the roll. It can pass through enemy models and must end that move in combat with the target.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'ROR: Snerks Trogg-Fer-Hire': {
+    effects: [
+      {
+        name: `Dankhold Troggoth: Greater Regeneration`,
+        desc: `Effect: Heal (D6) this unit.`,
+        when: [START_OF_TURN],
+      },
+      {
+        name: `Dankhold Troggoth: Magical Resistance - Reaction: Opponent declared a Spell ability`,
+        desc: `Effect: If this unit was picked to be the target of that spell, roll a dice. On a 4+, ignore the effect of that spell on this unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Dankhold Troggoth: Wade and Smash - Once Per Turn`,
+        desc: `Effect: If this unit is in combat, it can move 6" but must end that move in combat. Then, roll a D3 for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Go Dat Way!`,
+        desc: `Declare: Pick the Dankhold Troggoth in this Regiment of Renown to be the target if it is within 12" of the Loonboss in this Regiment of Renown. 
+        Effect: For the rest of the turn, the target can still use Charge abilities even if it used a Retreat ability in the same turn.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Taktikal Cowering - Passive`,
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
+        That Loonboss has Ward (4+).  
+        Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },
     ],

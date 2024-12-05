@@ -904,6 +904,72 @@ const Units = {
       },
     ],
   },
+  'ROR: The Lost-Long Spirits': {
+    effects: [
+      {
+        name: `Treelord: Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Sweeping Blows is 3.`,
+        when: [COMBAT_PHASE],
+        },
+        {
+          name: `Treelord: Lash and Tangle - Once Per Turn`,
+          desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+          Effect: Roll a dice. On a 3+, subtract 1 from wound rolls for the targets attacks for the rest of the turn.`,
+          when: [COMBAT_PHASE],
+        },
+        {
+          name: `Treelord: Entangling Grasp`,
+          desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this units Strangleroots to be the target. 
+          Effect: Roll a dice. On a 3+, the target cannot use Run or Retreat abilities until the start of your next turn.`,
+          when: [SHOOTING_PHASE],
+        },
+        {
+          name: `Spite-Revenants: Unbridled Malice`,
+          desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
+          Effect: Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.`,
+          when: [COMBAT_PHASE],
+        },
+      {
+        name: `Endless Wandering - Once Per Turn - Enemy Hero Phase`,
+        desc: `Declare: Pick a unit in this Regiment of Renown that is not in combat to use this ability. 
+        Effect: That unit can use the Normal Move ability as if it were your movement phase.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Ominous Fog - Passive`,
+        desc: `Effect: Units in this Regiment of Renown are not visible to enemy units more than 12" from them while they are wholly within 9" of the Treelord in this Regiment of Renown.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: Stumblefoot Gargant': {
+    effects: [
+      {
+        name: `Mancrusher Gargant: Stuff 'Em in Me Bag - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. If the roll is at least double the targets Health characteristic, 1 model in the target unit is slain.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Projectile Vomit - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick all other units (friendly and enemy) within 3" of that point to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Bellowing Mockery - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn, then pick an enemy unit within this units combat range to be the target. 
+        Effect: Roll a dice. On a 3+, subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Whatre You Lookin At? - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it charged this turn and has not used a Rampage ability this turn. Then, pick an enemy unit within 9" of this unit to be the target. 
+        Effect: Roll 2D6. This unit can move a number of inches equal to the roll. It can pass through enemy models and must end that move in combat with the target.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

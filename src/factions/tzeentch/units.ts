@@ -864,6 +864,162 @@ const Units = {
       },
     ],
   },
+  'ROR: Lord Skaldiors Chosen': {
+    effects: [
+      {
+        name: `Chaos Lord on Daemonic Mount: The Knights of Chaos - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly non-Hero Warriors of Chaos Cavalry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to wound rolls for the targets attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Chaos Knights: Impaling Charge - Passive`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Chaos Warriors: Bringers of Desolation - Passive`,
+        desc: `Effect: Add 1 to the Attacks characteristic of this units Rune-Etched Weapons while it is contesting an objective you control.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Ironclad Despoilers - Passive`,
+        desc: `Effect: Add 1 to save rolls for units in this Regiment of Renown while they are contesting an objective you control. 
+        Add 1 to wound rolls for units in this Regiment of Renown while they are contesting an objective you do not control.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: Godmarked Ascendant': {
+    effects: [
+      {
+        name: `Daemon Prince: Airborne Horror - Passive`,
+        desc: `Effect: If this unit has Wings, it has a Move characteristic of 10" and has Fly.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Daemon Prince: The Mounted Skulls of Fallen - Passive`,
+        desc: `Effect: If this unit has a Trophy Rack, its Hellforged Weapons also have Anti-Hero (+1 Rend).`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Daemon Prince: Immortal Champion`,
+        desc: `Effect: Roll a dice. On a 4+, this unit has Strike-First for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Godmarked Legion - Passive`,
+        desc: `Effect: The unit in this Regiment of Renown gains the 'Gifts of Chaos' ability and one of the following faction keywords that matches your army's faction.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Gifts of Chaos - Passive`,
+        desc: `Effect:
+        If this unit has the Blades of Khorne keyword, add 1 to the Attacks characteristic of its Hellforged Weapons.
+        If this unit has the Disciples of Tzeentch keyword, it has Wizard (1).
+        If this unit has the Maggotkin of Nurgle keyword, it has Ward (5+).
+        If this unit has the Hedonites of Slaanesh keyword, add 1 to run rolls and charge rolls for it.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: Squires of the Everchosen': {
+    effects: [
+      {
+        name: `Varghulf Courtier: Bounding Strides - Passive`,
+        desc: `Effect: This unit can pass across terrain features as if it had Fly.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Varghulf Courtier: Victory Feast`,
+        desc: `Effect: If any models were slain by this unit this turn:  
+        Heal (D6) this unit.  
+        This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Morbheg Knights: Shrieking Charge`,
+        desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of this unit to be the target. 
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Morbheg Knights: Predator's Pounce - Passive`,
+        desc: `Effect: This unit can use Charge abilities even if it used a Retreat ability in the same turn. In addition, no mortal damage is inflicted on this unit by Retreat abilities.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `A Deluded Quest - Once Per Battle`,
+        desc: `Declare: Pick an enemy unit to be the target. 
+        Effect: The target has the Enemy of the Everchosen keyword.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `A Quest Well Done - Once Per Battle`,
+        desc: `Effect: If the enemy Enemy of the Everchosen unit is destroyed by a unit in this Regiment of Renown, add 10 to the control score of each unit in this Regiment of Renown for the rest of the battle.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'ROR: Stumblefoot Gargant': {
+    effects: [
+      {
+        name: `Mancrusher Gargant: Stuff 'Em in Me Bag - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. If the roll is at least double the targets Health characteristic, 1 model in the target unit is slain.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Projectile Vomit - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick all other units (friendly and enemy) within 3" of that point to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Bellowing Mockery - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn, then pick an enemy unit within this units combat range to be the target. 
+        Effect: Roll a dice. On a 3+, subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Whatre You Lookin At? - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it charged this turn and has not used a Rampage ability this turn. Then, pick an enemy unit within 9" of this unit to be the target. 
+        Effect: Roll 2D6. This unit can move a number of inches equal to the roll. It can pass through enemy models and must end that move in combat with the target.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'ROR: Snerks Trogg-Fer-Hire': {
+    effects: [
+      {
+        name: `Dankhold Troggoth: Greater Regeneration`,
+        desc: `Effect: Heal (D6) this unit.`,
+        when: [START_OF_TURN],
+      },
+      {
+        name: `Dankhold Troggoth: Magical Resistance - Reaction: Opponent declared a Spell ability`,
+        desc: `Effect: If this unit was picked to be the target of that spell, roll a dice. On a 4+, ignore the effect of that spell on this unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Dankhold Troggoth: Wade and Smash - Once Per Turn`,
+        desc: `Effect: If this unit is in combat, it can move 6" but must end that move in combat. Then, roll a D3 for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Go Dat Way!`,
+        desc: `Declare: Pick the Dankhold Troggoth in this Regiment of Renown to be the target if it is within 12" of the Loonboss in this Regiment of Renown. 
+        Effect: For the rest of the turn, the target can still use Charge abilities even if it used a Retreat ability in the same turn.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Taktikal Cowering - Passive`,
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
+        That Loonboss has Ward (4+).  
+        Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

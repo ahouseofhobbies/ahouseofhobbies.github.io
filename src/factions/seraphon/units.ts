@@ -19,6 +19,7 @@ import {
   START_OF_COMBAT_PHASE,
   START_OF_HERO_PHASE,
   START_OF_MOVEMENT_PHASE,
+  START_OF_TURN,
   WARDS_PHASE,
   WOUND_ALLOCATION_PHASE,
 } from 'types/phases'
@@ -1288,6 +1289,112 @@ const Units = {
         Add 1 to wound rolls for attacks made by units in this Regiment of Renown.
         Add 1 to save rolls for units in this Regiment of Renwon.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'ROR: Exile Scavengers': {
+    effects: [
+      {
+        name: `Endrinmaster with Dirigible Suit: By Grungi, I Have My Eye On You! - Passive`,
+        desc: `Effect: Add 1 to field repairs rolls for friendly Endrinriggers units while they are wholly within 12" of this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Endrinmaster with Dirigible Suit: Endrinmaster`,
+        desc: `Declare: Pick a friendly Skyvessel within this units combat range to be the target. 
+        Effect: Roll a dice. On a 2+, Heal (3) the target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Skywardens: Timed Charges`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Grundstok Gunhauler: Light Bomb Racks`,
+        desc: `Declare: Pick an enemy unit that does not have Fly and that this unit passed across this phase to be the target. 
+        Effect: Roll 4 dice. For each 4+, inflict 1 mortal damage on the target.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `An Eye for Loot`,
+        desc: `Declare: This ability must be used to deploy this Regiment of Renown. 
+        Effect: Set up the units in this Regiment of Renown in reserve studying the battlefield. They have now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Swoop In`,
+        desc: `Declare: Pick the Grundstok Gunhauler in this Regiment of Renown to use this ability if it is studying the battlefield. 
+        Effect: Set up the Grundstok Gunhauler on the battlefield more than 6" from all enemy units that have an artefact of power and more than 9" from all other enemy units. Then, set up all other units in this Regiment of Renown wholly within 3" of the Grundstok Gunhauler and more than 6" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `What's Yours is Mine - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with a unit in this Regiment of Renown to be the target. Then, pick an artefact of power the target has. 
+        Effect: Roll a dice. Add 1 to the roll for each unit in this Regiment of Renown that is in combat with the target. On a 6+, the target no longer has that artefact of power.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'ROR: Stumblefoot Gargant': {
+    effects: [
+      {
+        name: `Mancrusher Gargant: Stuff 'Em in Me Bag - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. If the roll is at least double the targets Health characteristic, 1 model in the target unit is slain.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Projectile Vomit - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick all other units (friendly and enemy) within 3" of that point to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Bellowing Mockery - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn, then pick an enemy unit within this units combat range to be the target. 
+        Effect: Roll a dice. On a 3+, subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Whatre You Lookin At? - Once Per Turn`,
+        desc: `Declare: Pick this unit to use this ability if it charged this turn and has not used a Rampage ability this turn. Then, pick an enemy unit within 9" of this unit to be the target. 
+        Effect: Roll 2D6. This unit can move a number of inches equal to the roll. It can pass through enemy models and must end that move in combat with the target.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'ROR: Snerks Trogg-Fer-Hire': {
+    effects: [
+      {
+        name: `Dankhold Troggoth: Greater Regeneration`,
+        desc: `Effect: Heal (D6) this unit.`,
+        when: [START_OF_TURN],
+      },
+      {
+        name: `Dankhold Troggoth: Magical Resistance - Reaction: Opponent declared a Spell ability`,
+        desc: `Effect: If this unit was picked to be the target of that spell, roll a dice. On a 4+, ignore the effect of that spell on this unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Dankhold Troggoth: Wade and Smash - Once Per Turn`,
+        desc: `Effect: If this unit is in combat, it can move 6" but must end that move in combat. Then, roll a D3 for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Go Dat Way!`,
+        desc: `Declare: Pick the Dankhold Troggoth in this Regiment of Renown to be the target if it is within 12" of the Loonboss in this Regiment of Renown. 
+        Effect: For the rest of the turn, the target can still use Charge abilities even if it used a Retreat ability in the same turn.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Taktikal Cowering - Passive`,
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
+        That Loonboss has Ward (4+).  
+        Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
+        when: [DURING_GAME],
       },
     ],
   },

@@ -19,7 +19,7 @@ const GenericManifestations: TEntry[] = [
         when: [DURING_GAME],
       },
       {
-        name: `Shards of Valagharr - PHantasmal Translocation`,
+        name: `Shards of Valagharr - Phantasmal Translocation`,
         desc: `Effect: Pick a part of this Manifestation, remove it from the battlefield and set it up again on the battlefield wholly within 9" of the other part.`,
         when: [MOVEMENT_PHASE],
       },

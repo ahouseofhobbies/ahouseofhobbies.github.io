@@ -3,11 +3,13 @@ import {
   CHARGE_PHASE,
   COMBAT_PHASE,
   DURING_GAME,
+  DURING_SETUP,
   END_OF_COMBAT_PHASE,
   END_OF_HERO_PHASE,
   END_OF_TURN,
   HERO_PHASE,
   MOVEMENT_PHASE,
+  SHOOTING_PHASE,
   START_OF_HERO_PHASE,
   WOUND_ALLOCATION_PHASE,
 } from 'types/phases'
@@ -21,28 +23,53 @@ const BattleTraits = {
   [SLAVES_TO_DARKNESS]: {
     effects: [
       {
-        name: `Eye of the Gods - Once Per Turn`,
-        desc: `Declare: Each friendly Slaves to Darkness unit that destroyed an enemy unit this turn is a target. Friendly Beasts and non-Hero Monsters cannot be targeted by this ability. 
-        Effect: Make a reward roll of D6 for each target and apply the corresponding effect below. You can re-roll the reward roll for the target, but if you do so and you roll a 1, inflict D3 mortal damage on the target. 
-        1 Snubbed by the Gods: No effect. 
-        2 Mutative Regrowth: Heal (3) the target. 
-        3 Unnatural Grace: Add 1 to hit rolls for the targets combat attacks for the rest of the battle. 
-        4 Lurid Aura: The target has Ward (6+) for the rest of the battle. If the target already has Ward (6+), it has Ward (5+) instead. 
-        5 Slaughterers Might: Add 1 to the Rend characteristic of the targets melee weapons for the rest of the battle. 
-        6 Champion of Chaos: Pick any other effect. 
-        The same effect can be applied multiple times to a unit, and more than 1 effect can apply to a unit at the same time.`,
-        when: [END_OF_TURN],
+        name: `Eye of the Gods - Once Per Battle`,
+        desc: `Declare: Pick a friendly non-Unique Warriors of Chaos or Darkoath Hero to be the target. 
+        Effect: During the battle, the target gains Dark Apotheosis points as follows: 
+        Each time the target uses a Fight ability, it gains D3 Dark Apotheosis points.
+        At the end of each of your turns, if the target is contesting an objective that is wholly outside friendly territory, it gains D3 Dark Apotheosis points.`,
+        when: [DURING_SETUP],
       },
       {
-        name: `Marks of Chaos - Passive`,
-        desc: `Effect: Friendly Slaves to Darkness units have 1 of the following effects based on the Mark of Chaos keyword they have.  
-        Undivided: Add 1 to wound rolls for the units combat attacks that target a Hero or Monster.  
-        Khorne: Add 1 to the Attacks characteristic of the units melee weapons for the rest of the turn if the unit charged in the same turn.  
-        Tzeentch: The unit has Ward (4+) against mortal damage inflicted by Spell abilities and abilities used by Manifestations.  
-        Nurgle: Subtract 1 from wound rolls for combat attacks that target the unit.  
-        Slaanesh: Add 1 to run rolls and charge rolls for the unit. 
-        If a unit with a Mark of Chaos keyword is replaced, the replacement unit has the same Mark of Chaos keyword.`,
+        name: `Pledge to Chaos - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Unique Slaves to Darkness unit that does not already have one of the keywords below to be the target.
+        Effect: Pick 1 of the following Pledge to Chaos keywords:
+        Pledged to Khorne
+        Pledged to Tzeentch
+        Pledged to Nurgle
+        Pledged to Slaanesh
+        The target has that keyword for the rest of the battle.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Dark Apotheosis - Once Per Battle`,
+        desc: `Declare: Pick a friendly unit with 8 or more Dark Apotheosis points to be the target. 
+        Effect: Pick one of the following:
+        Aura of Chaos: Heal (X) the target, where X is the number of damage points allocated to the target. 
+        In addition, the target has Ward (5+) for the rest of the battle.
+        Daemonhood: Set up a Daemon Prince within 1" of the target. Then, Remove the target from the battlefield. If the target is your general the Daemon Prince becomes your general instead. If the target has any enhancements, the Daemon Prince has those enhancements instead. If the target has a Pledge to Chaos keyword, the Daemon Prince has the same keyword. Otherwise, pick 1 Pledge to Chaos keyword for the Daemon Prince to have for the rest of the battle.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Pledged to Tzeentch - Once Per Turn`,
+        desc: `Declare: Pick a friendly Pledged to Tzeentch unit to be the target.
+        Effect: Roll 2D6. Then pick a point within a number of inches of the target equal to the roll. Remove the target from the battlefield and set it up again on the battlefield wholly within 6" of that point and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Pledged to Khorne - Passive`,
+        desc: `Effect: Add 1 to the Attacks characteristic of melee weapons used by friendly Pledged to Khorne units.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Pledged to Nurgle - Passive`,
+        desc: `Effect: Friendly Pledged to Nurgle units have Ward (6+). If a unit already has Ward (6+), it has Ward (5+) instead.`,
         when: [DURING_GAME],
+      },
+      {
+        name: `Pledged to Slaanesh`,
+        desc: `Effect: For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for friendly Pledged to Slaanesh units, to a maximum of 3.`,
+        when: [CHARGE_PHASE],
       },
       {
         name: `Nexus Chaotica (Faction Terrain) - Draw Power`,
@@ -60,6 +87,35 @@ const BattleTraits = {
         desc: `Declare: If this terrain feature has 9 or more power points, pick an objective or terrain feature within 24" of this terrain feature to be the source. Then, pick any number of enemy units within 3" of the source to be the targets. 
         Effect: Remove 9 power points from this terrain feature, then roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [HERO_PHASE],
+      },
+      {
+        name: `The Dread Banner (Ensorcelled Banners) - Passive (CAN ONLY HAVE ONE)`,
+        desc: `Effect: While this unit includes any standard bearers, enemy units cannot use commands while they are in combat with this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `The Banner of Rage (Ensorcelled Banners) - Passive (CAN ONLY HAVE ONE)`,
+        desc: `Effect: This unit has the Pledged to Khorne keyword.
+        In addition, while this unit includes any standard bearers, add 1 to wound rolls for this unit's combat attacks.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `The Blasted Standard (Ensorcelled Banners) - Passive (CAN ONLY HAVE ONE)`,
+        desc: `Effect: This unit has the Pledged to Tzeentch keyword.
+        In addition, while this unit includes any standard bearers, this unit has Ward (4+) against damage inflicted by shooting attacks.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `The Eroding Icon (Ensorcelled Banners) - Passive (CAN ONLY HAVE ONE)`,
+        desc: `Effect: This unit has the Pledged to Nurgle keyword.
+        In addition, while this unit includes any standard bearers, attacks that target this unit cannot score critical hits (treat them as regular hits instead).`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `The Banner of Screaming Flesh (Ensorcelled Banners) - Passive (CAN ONLY HAVE ONE)`,
+        desc: `Effect: This unit has the Pledged to Slaanesh keyword.
+        In addition, If this unit charged this turn, for the rest of the turn, add 1 to the Attacks characteristic of this unit's melee weapons.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
