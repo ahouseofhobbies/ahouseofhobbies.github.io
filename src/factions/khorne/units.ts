@@ -516,7 +516,7 @@ const Units = {
     effects: [
       {
         name: `Furious Warleader - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly Blood Warriors unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to wound rolls for attacks made by this unit and the target for the rest of the turn.`,
+        desc: `Effect: Pick a friendly Blood Warriors unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. Add 1 to wound rolls for attacks made by this unit and the target for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],

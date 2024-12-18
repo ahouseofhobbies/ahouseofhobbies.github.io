@@ -126,7 +126,9 @@ const Spells = {
       {
         name: `Fleshy Abundance: Casting value of 7 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Maggotkin of Nurgle Wizard to cast this spell, pick a visible friendly Maggotkin of Nurgle unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
-        Effect: If the target unit is damaged, Heal (D3) the target. If the target is not damaged, subtract 1 from wound rolls for attacks that target that unit until the start of your next turn.`,
+        Effect: Pick 1 of the following effects:  
+        Heal (D3) the target.  
+        Subtract 1 from wound rolls for attacks that target that unit until the start of your next turn.`,
         when: [HERO_PHASE],
       },
       {

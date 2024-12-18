@@ -7,6 +7,7 @@ import {
   DURING_GAME,
   END_OF_MOVEMENT_PHASE,
   END_OF_SETUP,
+  HERO_PHASE,
   MOVEMENT_PHASE,
   SAVES_PHASE,
   SHOOTING_PHASE,
@@ -24,10 +25,10 @@ const BattleTraits = {
         when: [DURING_GAME],
       },
       {
-        name: `Command Ability: Discorporate - Reaction: Opponent declared an Attack ability`,
-        desc: `Used By: A friendly Nighthaunt unit targeted by that Attack ability. 
-        Effect: That unit has Ward (5+) for the rest of the phase.`,
-        when: [SHOOTING_PHASE, COMBAT_PHASE],
+        name: `Command Ability: Discorporate`,
+        desc: `Declare: Pick a friendly Nighthaunt unit to use this ability. 
+        Effect: That unit has Ward (5+) for the rest of the turn.`,
+        when: [HERO_PHASE],
       },
       {
         name: `Shriek - Once Per Turn`,

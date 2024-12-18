@@ -23,6 +23,12 @@ const BattleTraits = {
         when: [MOVEMENT_PHASE],
       },
       {
+        name: `Address Loyal Subtects - Once Per Turn`,
+        desc: `Declare: Pick a friendly Flesh-eater Courts Hero to use this ability. 
+        Effect: Roll a dice for each other friendly Flesh-eater Courts unit wholly within 12" of that Hero. For each 5+, give 1 noble deeds point to that Hero.`,
+        when: [HERO_PHASE],
+      },
+      {
         name: `Feeding Frenzy - Passive`,
         desc: `Effect: Add 1 to the Attacks characteristic of melee weapons, including Companion weapons, used by friendly Flesh-eater Courts units while they are wholly within 12" of any friendly Heroes that have 6 noble deeds points.`,
         when: [COMBAT_PHASE],

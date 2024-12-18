@@ -22,7 +22,7 @@ const BattleTraits = {
       {
         name: `Trampling Charge`,
         desc: `Declare: Pick a friendly Ogor or Rhinox unit that charged this turn to use this ability, then pick a visible enemy unit within 1" of it to be the target. 
-        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Add 2 to the roll if this unit is a Monster.`,
         when: [CHARGE_PHASE],
       },
       {

@@ -316,7 +316,7 @@ const IronjawzUnits = {
       },
       {
         name: `Unstoppable Momentum - Passive`,
-        desc: `Effect: Each time this unit uses a Charge ability, it gains 1 momentum point. Each time it uses a Run ability, it gains 2 momentum points. It can have a maximum of 3 momentum points at once. 
+        desc: `Effect: Each time this unit has charged as a result of using a Charge ability, it gains 1 momentum point. Each time it uses a Run ability, it gains 2 momentum points. It can have a maximum of 3 momentum points at once. 
         Add the number of momentum points this unit has to the Damage characteristic of its Maw-gruntas Tusks. At the end of each battle round, subtract 1 from its momentum points, to a minimum of 0`,
         when: [COMBAT_PHASE],
       },
@@ -329,7 +329,7 @@ const IronjawzUnits = {
     effects: [
       {
         name: `Unstoppable Momentum - Passive`,
-        desc: `Effect: Each time this unit uses a Charge ability, it gains 1 momentum point. Each time it uses a Run ability, it gains 2 momentum points. It can have a maximum of 3 momentum points at once. 
+        desc: `Effect: Each time this unit has charged as a result of using a Charge ability, it gains 1 momentum point. Each time it uses a Run ability, it gains 2 momentum points. It can have a maximum of 3 momentum points at once. 
         Add the number of momentum points this unit has to the Damage characteristic of its Maw-gruntas Tusks. At the end of each battle round, subtract 1 from its momentum points, to a minimum of 0`,
         when: [COMBAT_PHASE],
       },
@@ -349,7 +349,7 @@ const IronjawzUnits = {
     effects: [
       {
         name: `Unstoppable Momentum - Passive`,
-        desc: `Effect: Each time this unit uses a Charge ability, it gains 1 momentum point. Each time it uses a Run ability, it gains 2 momentum points. It can have a maximum of 3 momentum points at once. 
+        desc: `Effect: Each time this unit has charged as a result of using a Charge ability, it gains 1 momentum point. Each time it uses a Run ability, it gains 2 momentum points. It can have a maximum of 3 momentum points at once. 
         Add the number of momentum points this unit has to the Damage characteristic of its Maw-gruntas Tusks. At the end of each battle round, subtract 1 from its momentum points, to a minimum of 0`,
         when: [COMBAT_PHASE],
       },

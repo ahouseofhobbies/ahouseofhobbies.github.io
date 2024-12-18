@@ -22,7 +22,7 @@ const BattleTraits = {
     effects: [
       {
         name: `Endless Growth - Once Per Turn`,
-        desc: `Declare: Pick any number of friendly Sylvaneth units wholly within 6" of a friendly Awakened Wyldwood to be the targets. 
+        desc: `Declare: Pick any number of friendly Sylvaneth units wholly within 6" of any friendly Awakened Wyldwoods to be the targets. 
         Effect: Heal (D3) each target.`,
         when: [END_OF_TURN],
       },

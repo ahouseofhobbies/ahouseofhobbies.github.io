@@ -241,32 +241,52 @@ const Realmscapes: TEntry[] = [
     effects: [
       {
         name: `Honour Guard - Special Assignment`,
-        desc: `Declare: Pick a friendly unit in your general's regiment that is not your gerneral to be the honour gurard. You can pick a unit in reserve. If you use this ability, you cannot use any other Honour Guard abilities.
+        desc: `Declare: Pick a friendly unit in, but not leading, a regiment to be that regiments honour guard. You can pick a unit in reserve.
         Effect: Pick 1 of the following weapon abilities:
         • Anti-Infantry(+1 Rend)
         • Anti-Cavalry(+1 Rend)
         • Anti-Monster(+1 Rend)
         • Anti-War Machine(+1 Rend)
         • Anti-Beast(+1 Rend)
-        In any turn in which the honour guard charged, that unit's melee weapons have the weapons ability you picked. This has no effect on Companion weapons.`,
+        In any turn in which the honour guard charged, that unit's melee weapons have the weapons ability you picked.`,
         when: [DURING_SETUP],
-        rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
         name: `Honour Guard - Priority Target`,
-        desc: `Declare: Pick a friendly unit in your general's regiment that is not your gerneral to be the honour gurard. You can pick a unit in reserve. If you use this ability, you cannot use any other Honour Guard abilities.
-        Effect: Add 1 to hit rolls and wound rolls for attacks made by models in the honour guard unit that target the enemy general or the enemy honour guard if the target is within 12"`,
+        desc: `Declare: Pick a friendly unit in, but not leading, a regiment to be that regiments honour guard. You can pick a unit in reserve. 
+        Effect: Add 1 to hit rolls and wound rolls for attacks made by that honour guard unit that target the enemy general, or the enemy honour guard if it is in the enemy generals regiment, if the target of the attack is within 12".`,
         when: [DURING_SETUP],
-        rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
         name: `Honour Guard - Bodyguard`,
-        desc: `Declare: Pick a friendly unit in your general's regiment that is not your gerneral to be the honour gurard. You can pick a unit in reserve. If you use this ability, you cannot use any other Honour Guard abilities.
-        Effect: Subtract 1 from the Attacks characteristic of enemy units' melee weapons while they are in combat with your general if both of the following are true:
-        • The honour guard is wholly within 6" of your general.
-        • The honour guard did not charge this turn`,
+        desc: `Declare: Pick a friendly unit in, but not leading, a regiment to be that regiments honour guard. You can pick a unit in reserve. 
+        Effect: Subtract 1 from the Attacks characteristic of enemy units melee weapons while they are in combat with the unit leading that regiment if both of the following are true:
+        • That regiment's honour guard is wholly within 6" of the leader of that regiment.
+        • Neither that regiment's honour guard nor the regiment's leader charged this turn.`,
         when: [DURING_SETUP],
-        rule_sources: [meta_rule_sources.CORE_RULES_2021],
+      }, 
+      {
+        name: `Honour Guard - Field Sergeant`,
+        desc: `Declare: Pick a friendly non-Fly Infantry Hero in, but not leading, a regiment to be that regiments honour guard. You can pick a unit in reserve. 
+        Effect: Add 2" to the Move characteristic of friendly non-Fly Infantry units while they are wholly within 12" of the honour guard.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Honour Guard - Prized Beast`,
+        desc: `Declare: Pick a friendly non-Unique Monster in, but not leading, a regiment to be that regiments honour guard. You can pick a unit in reserve. 
+        Effect: That unit can ignore the effects of the Battle Damaged ability. In addition, add 1 to hit rolls for combat attacks made by the honour guard. This ability affects Companion weapons.`,
+        when: [DURING_SETUP],
+      }, 
+      {
+        name: `Seizing the Initiative`,
+        desc: `If the player who went second in the previous battle round wins the priority roll and chooses to go first, their opponent is the underdog until their opponent does the same. 
+        If a player is behind by 6 or more victory points, they do not suffer any penalty from taking two turns in a row; their opponent is not the underdog for the rest of the battle, and they can use the Tactical Gambit ability to pick a battle tactic.`,
+        when: [DURING_GAME],
+      }, 
+      {
+        name: `Regimented Forces`,
+        desc: `If a player has more regiments than their opponent, they can use a second, different Honour Guard ability, but they must pick a unit that is in a different regiment that is not led by the general to be the honour guard for that ability. You cannot pick units in a Regiment of Renown to be an honour guard.`,
+        when: [DURING_SETUP],
       }, 
 
       /* Command Traits

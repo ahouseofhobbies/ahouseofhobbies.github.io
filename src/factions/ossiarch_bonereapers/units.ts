@@ -161,7 +161,7 @@ const Units = {
     effects: [
       {
         name: `Bone Harvest - Passive`,
-        desc: `Effect: Each time an enemy model in combat with this unit is slain, give this unit 1 bone-tithe point. This unit can have a maximum of 6 bone-tithe points at once.`,
+        desc: `Effect: Each time an enemy model from a unit in combat with this unit is slain, give this unit 1 bone-tithe point. This unit can have a maximum of 6 bone-tithe points at once.`,
         when: [DURING_GAME],
       },
       {

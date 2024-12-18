@@ -31,7 +31,7 @@ const BattleTraits = {
       },
       {
         name: `Desperate Remedies - Passive`,
-        desc: `Effect: If an ability would heal 1 or more damage points or return 1 or more slain models to a Diseased enemy unit, that ability does not heal any damage points or return any slain models to it. Instead, it no longer has the Diseased keyword.`,
+        desc: `Effect: If an ability would heal 1 or more damage points or return 1 or more slain models to a Diseased enemy unit, that ability does not heal any damage points or return any slain models to it. Instead, it no longer has the Diseased keyword. Manifestations and faction terrain features cannot be given the Diseased keyword by any friendly abilities.`,
         when: [DURING_GAME],
       },
       {

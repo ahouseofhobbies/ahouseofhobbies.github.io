@@ -178,7 +178,7 @@ const CoreRules: TEntry[] = [
       },
       {
         name: `Command Ability - Covering Fire`,
-        desc: `Declare: Pick a friendly unit that is not in combat to use this ability, then pick the closest enemy unit (to that unit) that can be picked as the target of shooting attacks to be the target.  
+        desc: `Declare: Pick a friendly unit that did not use a Run ability this turn and that is not in combat to use this ability, then pick the closest enemy unit (to that unit) that can be picked as the target of shooting attacks to be the target. 
         Effect: Resolve shooting attacks for the unit using this ability against the target. You must subtract 1 from the hit rolls for those attacks.`,
         when: [SHOOTING_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],

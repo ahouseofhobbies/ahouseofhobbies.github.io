@@ -14,8 +14,8 @@ const BattleTraits = {
       },
       {
         name: `Gargant Charge`,
-        desc: `Declare: Pick a friendly Mega-Gargant or Gargant unit that charged this turn and has not used a Rampage ability this turn to use this ability, then pick a visible enemy unit within 1" of it to be the target. 
-        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        desc: `Declare: Pick any number of enemy units within 1" of a friendly Mega-Gargant or Gargant unit that charged this turn to be the targets. 
+        Effect: Inflict D3 mortal damage on each target.`,
         when: [CHARGE_PHASE],
       },
       {

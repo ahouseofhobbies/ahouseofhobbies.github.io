@@ -604,12 +604,12 @@ const Units = {
       },
       {
         name: `Corrupting Influence - Passive`,
-        desc: `Effect: Subtract 1 from ward rolls for enemy units while they are within 6" of this unit.`,
+        desc: `Effect: Subtract 1 from ward rolls for enemy units while they are within 13" of this unit.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Altar of the Great Corruptor - Passive`,
-        desc: `Effect: Friendly Pestilens units have Ward (6+) while they are wholly within 6" of this unit.`,
+        desc: `Effect: Friendly Pestilens units have Ward (6+) while they are wholly within 13" of this unit.`,
         when: [DURING_GAME],
       },
     //  PoisonousFumesEffect,
@@ -655,7 +655,7 @@ const Units = {
     },
       {
         name: `Altar of the Horned Rat - Passive`,
-        desc: `Effect: Friendly Skaven Infantry units have Ward (6+) while they are wholly within 6" of this unit.`,
+        desc: `Effect: Friendly Skaven Infantry units have Ward (6+) while they are wholly within 13" of this unit.`,
         when: [DURING_GAME],
       },
       {

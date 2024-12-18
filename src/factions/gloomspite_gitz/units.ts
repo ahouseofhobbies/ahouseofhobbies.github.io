@@ -227,7 +227,7 @@ const Units = {
       {
         name: `Bite Da Moon! - Once Per Battle`,
         desc: `Declare: Pick this unit and all friendly Squig units wholly within 12" of this unit to be the targets. 
-        Effect: Add 1 to wound rolls for the targets Fang-filled Gobs, Massive Fang-filled Gobs and Huge Fang-filled Gobs for the rest of the turn.`,
+        Effect: Add 1 to hit rolls for attacks made with the targets Fang-filled Gobs, Massive Fang-filled Gobs and Huge Fang-filled Gobs for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {

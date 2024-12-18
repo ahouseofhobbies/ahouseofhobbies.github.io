@@ -25,7 +25,7 @@ const BattleTraits = {
       {
         name: `Euphoric Killers - Passive`,
         desc: `Effect: While a friendly unit has the Euphoric keyword:  
-        That units weapons have Crit (2 Hits).  
+        That units weapons, including Companion weapons, have Crit (2 Hits).  
         That unit can use a Run ability and still use Shoot and/or Charge abilities later in the turn.`,
         when: [DURING_GAME],
       },

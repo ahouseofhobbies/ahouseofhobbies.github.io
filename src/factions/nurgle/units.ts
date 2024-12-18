@@ -220,6 +220,11 @@ const Units = {
         desc: `Effect: This unit can use Charge abilities even if it used a Retreat ability in the same turn. In addition, no mortal damage is inflicted on this unit by Retreat abilities.`,
         when: [MOVEMENT_PHASE],
       },
+      {
+        name: `Dispersed Formation - Passive`,
+        desc: `Effect: This unit has a coherency range of 2".`,
+        when: [DURING_GAME],
+      },
     ],
   },
   'Beasts of Nurgle': {
@@ -482,6 +487,11 @@ const Units = {
         name: `Relentless Attackers - Passive`,
         desc: `Effect: Add 1 to the Rend characteristic of this units Flyriders Arsenal for attacks that target units contesting an objective you do not control.`,
         when: [COMBAT_PHASE],
+      },
+      {
+        name: `Dispersed Formation - Passive`,
+        desc: `Effect: This unit has a coherency range of 2".`,
+        when: [DURING_GAME],
       },
      // RelentlessAttackersEffect,
     ],

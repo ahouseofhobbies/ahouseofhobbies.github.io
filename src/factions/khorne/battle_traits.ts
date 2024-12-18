@@ -19,13 +19,13 @@ const BattleTraits = {
     effects: [
       {
         name: `Spelleater Curse - Reaction: Opponent declared a Spell ability`,
-        desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this turn. Spend 2 blood tithe points. 
+        desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this phase. Spend 2 blood tithe points. 
         Effect: That spell is unbound.`,
         when: [HERO_PHASE],
       },
       {
         name: `Slaughter Triumphant`,
-        desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this turn. Spend 8 blood tithe points. 
+        desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this phase. Spend 8 blood tithe points. 
         Effect: Pick 1 of the following effects:  
         Add 1 to the Attacks characteristic of melee weapons used by friendly Blades of Khorne units for the rest of the battle.  
         Pick a friendly non-Unique Bloodthirster unit that has been destroyed. Set up an identical replacement unit on the battlefield more than 9" from all enemy units.`,
@@ -33,21 +33,21 @@ const BattleTraits = {
       },
       {
         name: `Murderlust`,
-        desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this turn. Spend 1 blood tithe point and pick a friendly Blades of Khorne unit that is not in combat to be the target. 
+        desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this phase. Spend 1 blood tithe point and pick a friendly Blades of Khorne unit that is not in combat to be the target. 
         Effect: The target can move 3". It can move into combat.`,
         when: [MOVEMENT_PHASE],
         rule_sources: [rule_sources.BATTLETOME_KHORNE, meta_rule_sources.BATTLESCROLL_NULLSTONE_CACHE],
       },
       {
         name: `Brass Skull Meteor`,
-        desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this turn. Spend 4 blood tithe points and pick an enemy unit that is visible to a friendly Blades of Khorne Hero to be the target. 
+        desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this phase. Spend 4 blood tithe points and pick an enemy unit that is visible to a friendly Blades of Khorne Hero to be the target. 
         Effect: Roll 8 dice. For each 3+, inflict 1 mortal damage on the target.`,
         when: [HERO_PHASE],
         rule_sources: [rule_sources.BATTLETOME_KHORNE, meta_rule_sources.BATTLESCROLL_NULLSTONE_CACHE],
       },
       {
         name: `Heads Must Roll`,
-        desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this turn. Spend 6 blood tithe points. 
+        desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this phase. Spend 6 blood tithe points. 
         Effect: For the rest of the turn, add 1 to the Rend characteristic of melee weapons used by friendly Blades of Khorne units.`,
         when: [COMBAT_PHASE],
         rule_sources: [rule_sources.BATTLETOME_KHORNE, meta_rule_sources.BATTLESCROLL_NULLSTONE_CACHE],

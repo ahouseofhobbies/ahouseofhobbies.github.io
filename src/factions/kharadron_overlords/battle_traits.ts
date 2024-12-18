@@ -40,7 +40,7 @@ const BattleTraits = {
       },
       {
         name: `Skyvessel Cover - Passive`,
-        desc: `Effect: Subtract 1 from hit rolls for shooting attacks that target friendly Kharadron Overlords Infantry units while they are wholly within 6" of a friendly Arkanaut Ironclad or Arkanaut Frigate.`,
+        desc: `Effect: Subtract 1 from hit rolls for attacks that target friendly Kharadron Overlords Infantry units while they are wholly within 6" of a friendly Arkanaut Ironclad or Arkanaut Frigate.`,
         when: [SHOOTING_PHASE],
         rule_sources: [
           meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_2,

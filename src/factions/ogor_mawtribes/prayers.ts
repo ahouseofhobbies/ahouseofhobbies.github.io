@@ -9,13 +9,13 @@ const Prayers = {
       {
         name: `Call of the Blizzard: Chant value of 4 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Ogor Mawtribes Priest to chant this prayer, pick a terrain feature within 18" of them to be the target, then make a chanting roll of D6. 
-        Effect: Place a blizzard token next to the target. Terrain features that have a blizzard token gain the Obscuring terrain ability. In addition, if the chanting roll was 10+, until the start of your next turn, friendly Beastclaw Raiders units have Ward (5+) while they are within 3" of any terrain features that have blizzard tokens.`,
+        Effect: Place a blizzard token next to the target. Terrain features that have a blizzard token gain the Obscuring terrain ability. In addition, if the chanting roll was 8+, until the start of your next turn, friendly Beastclaw Raiders units have Ward (5+) while they are within 3" of any terrain features that have blizzard tokens.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Pulverising Hailstorm: Chant value of 5`,
+        name: `Pulverising Hailstorm: Chant value of 4`,
         desc: `Declare: Pick a friendly Ogor Mawtribes Priest to chant this prayer, pick a point on the battlefield within 12" of them, then pick each visible enemy unit within 3" of that point to be the targets. Then, make a chanting roll of D6. 
-        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the chanting roll was 10+, double the amount of mortal damage inflicted.`,
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the chanting roll was 8+, double the amount of mortal damage inflicted.`,
         when: [HERO_PHASE],
       },
       {

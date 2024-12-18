@@ -721,7 +721,9 @@ const Units = {
       {
         name: `Lead From the Front - Once Per Battle`,
         desc: `Declare: If this unit is in combat, pick up to 3 other friendly Cities of Sigmar units wholly within 12" of this unit to be the targets. 
-        Effect: For each target, you can return a number of slain models to that unit with a combined Health characteristic of up to 3.`,
+        Effect: For each target:
+        Add 1 to wound rolls for combat attacks made by that unit for the rest of the turn.  
+        That unit has Ward (5+) for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -750,7 +752,7 @@ const Units = {
       {
         name: `Mark Targets`,
         desc: `Declare: Pick an enemy unit that was targeted by this units shooting attacks this turn to be the target. 
-        Effect: Add 1 to hit rolls for shooting attacks made by friendly Cities of Sigmar Human units that target that unit for the rest of the turn.`,
+        Effect: Add 1 to hit rolls for attacks made by friendly Cities of Sigmar Human units that target that unit for the rest of the turn.`,
         when: [SHOOTING_PHASE],
       },
       {

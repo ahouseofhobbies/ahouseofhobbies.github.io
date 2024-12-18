@@ -188,7 +188,7 @@ const Units = {
       {
         name: `Delusion of Justice Served - Once Per Turn`,
         desc: `Declare: Pick a visible enemy unit to be the target. 
-        Effect: Roll a dice. On a 3+, pick 1 of the following effects to apply to the target until the start of your next turn: 
+        Effect: Roll a dice. On a 3+, this unit gains 1 noble deeds point. Then, pick 1 of the following effects to apply to the target until the start of your next turn: 
         Petty Transgression: Add 1 to wound rolls for combat attacks that target that unit. 
         Dishonourable Conduct in Battle: Friendly non-Monster Flesh-eater Courts units can use Charge abilities even if they used a Run ability in the same turn, but if they do so, they must end the charge move within 1/2" of the target. 
         Grievous Insult to the Court: While the target is in combat with a friendly Abhorrant, add 1 to hit rolls for attacks made by friendly Flesh-eater Courts units that target that unit. 

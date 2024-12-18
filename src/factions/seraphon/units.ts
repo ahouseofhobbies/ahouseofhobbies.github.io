@@ -195,7 +195,7 @@ const Units = {
       //ArcaneVassalEffect,
       {
         name: `Supreme Master of Order - Passive`,
-        desc: `Effect: Add 2 to casting rolls for this unit. In addition, this unit can use an Unbind ability if an enemy Wizard anywhere on the battlefield uses a Spell ability instead of an enemy Wizard within 30" of this unit, and when using the Banish Manifestation ability, this unit can pick a manifestation anywhere on the battlefield instead of within 30" of it.`,
+        desc: `Effect: Add 2 to casting rolls, and add 1 to unbinding rolls and banishment rolls for this unit. In addition, this unit can use an Unbind ability if an enemy Wizard anywhere on the battlefield uses a Spell ability instead of an enemy Wizard within 30" of this unit, and when using the Banish Manifestation ability, this unit can pick a manifestation anywhere on the battlefield instead of within 30" of it.`,
         when: [HERO_PHASE],
       },
       {
@@ -211,8 +211,8 @@ const Units = {
       },
       {
         name: `Celestial Deliverance: Casting value of 7 (MULTIPLE)`,
-        desc: `Declare: This unit can cast this spell more than once per phase. Pick up to 3 dierent visible enemy units within 12" of this unit to be the targets, then make a casting roll of 2D6. 
-        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        desc: `Declare: This unit can cast this spell more than once per phase. Pick up to 3 dierent visible enemy units within 18" of this unit to be the targets, then make a casting roll of 2D6. 
+        Effect: Inflict D3 mortal damage on each target.`,
         when: [HERO_PHASE],
       },
     ],
@@ -529,6 +529,11 @@ const Units = {
         If any damage points are allocated by this ability and the target does not have Fly, the target cannot use Run abilities until the start of your next turn.`,
         when: [MOVEMENT_PHASE],
       },
+      {
+        name: `Dispersed Formation - Passive`,
+        desc: `Effect: This unit has a coherency range of 2".`,
+        when: [DURING_GAME],
+      },
     //  ...TerradonBaseEffects,
     ],
   },
@@ -565,6 +570,11 @@ const Units = {
         name: `Toad Rage - Passive`,
         desc: `Effect: Add 1 to the Attacks characteristic of this units Ripperdactyls Tearing Jaws while it is in combat with any units that have a Blot Toad.`,
         when: [COMBAT_PHASE],
+      },
+      {
+        name: `Dispersed Formation - Passive`,
+        desc: `Effect: This unit has a coherency range of 2".`,
+        when: [DURING_GAME],
       },
      // ...RipperdactylBaseEffects,
     ],
