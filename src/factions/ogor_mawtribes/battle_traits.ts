@@ -33,8 +33,8 @@ const BattleTraits = {
       {
         name: `Feast on Flesh - Once Per Battle`,
         desc: `Declare: Pick each friendly Ogor unit that is in combat or that used a Fight ability this turn to be the targets. 
-        Effect: Roll a D3 for each target. On a 2+:  
-        Heal (X) the target, where X is an amount equal to the roll.  
+        Effect: Roll a D3 for each target. On a 2+: 
+        Heal (X) the target, where X is an amount equal to the roll. 
         Pick an enemy unit in combat with the target. You cannot pick the same enemy unit more than once. Inflict an amount of mortal damage on that enemy unit equal to the roll.`,
         when: [END_OF_TURN],
       },
@@ -61,10 +61,10 @@ const BattleTraits = {
       },
       {
         name: `Mawpit (Faction Terrain) - Altar of the Gulping God - Passive`,
-        desc: `Effect: While this terrain feature has a Head Butcher:  
-        The Head Butcher cannot use Move abilities.  
-        Instead of measuring range or visibility to the Head Butcher, measure to this terrain feature instead.  
-        All attacks that would target the Head Butcher target this terrain feature instead.  
+        desc: `Effect: While this terrain feature has a Head Butcher: 
+        The Head Butcher cannot use Move abilities. 
+        Instead of measuring range or visibility to the Head Butcher, measure to this terrain feature instead. 
+        All attacks that would target the Head Butcher target this terrain feature instead. 
         If this terrain feature is destroyed, before removing it from the battlefield, inflict D3 mortal damage on the Head Butcher. Then, set up the Head Butcher on the battlefield wholly within 3" of this terrain feature and not in combat. That unit is no longer a Head Butcher. If it is not possible to set up the Head Butcher, it is slain.`,
         when: [DURING_GAME],
       },
@@ -88,7 +88,7 @@ const BattleTraits = {
     ],
   },
 
- /* 'Ravenous Brutes': {
+  /* 'Ravenous Brutes': {
     effects: [
       {
         name: `Ravenous Brutes`,
@@ -153,7 +153,6 @@ const BattleTraits = {
         rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
     ], */
-
 } satisfies TItemDescriptions
 
 export default tagAs(BattleTraits, 'battle_trait')

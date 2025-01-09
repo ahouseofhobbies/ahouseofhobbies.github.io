@@ -21,12 +21,12 @@ const Prayers = {
       {
         name: `Keening Gale: Chant value of 4`,
         desc: `Declare: Pick a friendly Ogor Mawtribes Priest to chant this prayer, pick a visible friendly Ogor Mawtribes Monster or Mournfang Pack unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
-        Effect: For the rest of the turn, the target can use a Run ability and still use Charge abilities later in the turn. In addition, if the chanting roll was 8+, you can re-roll run rolls and charge rolls for the target for the rest of the turn.`,
+        Effect: For the rest of the turn, the target can use a Run ability and still use Charge abilities later in the turn. In addition, if the chanting roll was 8+, you can reroll run rolls and charge rolls for the target for the rest of the turn.`,
         when: [HERO_PHASE],
       },
     ],
   },
- /* 'Keening Gale': {
+  /* 'Keening Gale': {
     effects: [
       {
         name: `Keening Gale`,

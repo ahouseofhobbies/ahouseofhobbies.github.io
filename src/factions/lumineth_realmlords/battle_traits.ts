@@ -51,11 +51,11 @@ const BattleTraits = {
       },
       {
         name: `Shrine Luminor (Faction Terrain) - Shrine Guardian - Passive`,
-        desc: `Effect: While this terrain feature has a Shrine Guardian:  
-        This terrain feature has a Move characteristic of 6" and can use Move abilities as if it were a unit.  
-        The Shrine Guardian cannot use Move abilities and remains on this terrain feature each time it moves.  
-        Instead of measuring range or visibility to the Shrine Guardian, measure to this terrain feature instead.  
-        All attacks that would target the Shrine Guardian target this terrain feature instead.  
+        desc: `Effect: While this terrain feature has a Shrine Guardian: 
+        This terrain feature has a Move characteristic of 6" and can use Move abilities as if it were a unit. 
+        The Shrine Guardian cannot use Move abilities and remains on this terrain feature each time it moves. 
+        Instead of measuring range or visibility to the Shrine Guardian, measure to this terrain feature instead. 
+        All attacks that would target the Shrine Guardian target this terrain feature instead. 
         If this terrain feature is destroyed, before removing it from the battlefield, inflict D3 mortal damage on the Shrine Guardian. Then, set up the Shrine Guardian on the battlefield wholly within 3" of this terrain feature and not in combat. That unit is no longer a Shrine Guardian. If it is not possible to set up the Shrine Guardian, it is slain.`,
         when: [DURING_GAME],
       },
@@ -72,7 +72,7 @@ const BattleTraits = {
       },
       {
         name: `Shrine Luminor (Faction Terrain) - Cleansing Rituals - Once Per Turn - Reaction: You declared a Spell ability for a unit wholly within 12" of this terrain feature`,
-        desc: `Effect: While this terrain feature has a Shrine Guardian, you can re-roll the casting roll for that spell.`,
+        desc: `Effect: While this terrain feature has a Shrine Guardian, you can reroll the casting roll for that spell.`,
         when: [HERO_PHASE],
       },
     ],

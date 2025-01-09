@@ -24,17 +24,17 @@ const BattleTraits = {
       },
       {
         name: `Euphoric Killers - Passive`,
-        desc: `Effect: While a friendly unit has the Euphoric keyword:  
-        That units weapons, including Companion weapons, have Crit (2 Hits).  
+        desc: `Effect: While a friendly unit has the Euphoric keyword: 
+        That units weapons, including Companion weapons, have Crit (2 Hits). 
         That unit can use a Run ability and still use Shoot and/or Charge abilities later in the turn.`,
         when: [DURING_GAME],
       },
       {
         name: `Fane of Slaanesh (Faction Terrain) - Damned Conduit`,
         desc: `Declare: Pick a friendly Hedonites of Slaanesh unit wholly within 12" of this terrain feature to be the target. 
-        Effect: Allocate D3 damage points to the target (ward rolls cannot be made for those damage points). Then, pick 1 of the following effects to apply until the start of your next turn:  
-        Add 1 to wound rolls for the targets combat attacks.  
-        Add 1 to run rolls and charge rolls for the target.  
+        Effect: Allocate D3 damage points to the target (ward rolls cannot be made for those damage points). Then, pick 1 of the following effects to apply until the start of your next turn: 
+        Add 1 to wound rolls for the targets combat attacks. 
+        Add 1 to run rolls and charge rolls for the target. 
         Add 1 to casting rolls and unbinding rolls for the target.`,
         when: [HERO_PHASE],
       },

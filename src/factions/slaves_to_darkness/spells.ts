@@ -16,7 +16,7 @@ const Spells = {
   'Lore of the Damned': {
     effects: [
       {
-        name: `Spite-Tongue Curse: Casting value of 5 (UNLIMITED) `,
+        name: `Spite-Tongue Curse: Casting value of 5 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Slaves to Darkness Wizard to cast this spell, pick a visible enemy unit within 12" of them to be the target, then make a casting roll of 2D6. If the casting attempt is unsuccessful or if the spell is unbound, inflict D3 mortal damage on the caster. 
         Effect: Inflict 3 mortal damage on the target.`,
         when: [HERO_PHASE],
@@ -35,7 +35,7 @@ const Spells = {
       },
     ],
   },
- /* 'Spite-tongue Curse': {
+  /* 'Spite-tongue Curse': {
     effects: [
       {
         name: `Spite-tongue Curse`,
@@ -117,7 +117,7 @@ const Spells = {
       },
     ],
   }, */
- /* 'Winds of Chaos': {
+  /* 'Winds of Chaos': {
     effects: [
       {
         name: `Winds of Chaos`,

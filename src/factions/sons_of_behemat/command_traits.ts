@@ -26,8 +26,8 @@ const CommandTraits = {
     effects: [
       {
         name: `Furious Temper - Once Per Battle`,
-        desc: `Effect: For the rest of the turn:  
-        Add 2 to the Attacks characteristic of this units melee weapons.  
+        desc: `Effect: For the rest of the turn: 
+        Add 2 to the Attacks characteristic of this units melee weapons. 
         Subtract 1 from save rolls for this unit.`,
         when: [COMBAT_PHASE],
       },
@@ -43,7 +43,7 @@ const CommandTraits = {
     ],
   },
   // Taker Tribe
- /* 'Extremely Intimidating (Taker Tribe)': {
+  /* 'Extremely Intimidating (Taker Tribe)': {
     effects: [
       {
         name: `Extremely Intimidating (Taker Tribe)`,

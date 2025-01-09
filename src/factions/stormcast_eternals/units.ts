@@ -274,7 +274,7 @@ const Units = {
       },
       {
         name: `Dark Flight - Once Per Turn`,
-        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.  
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
         Effect: Roll a dice. If the roll exceeds the target's Health characteristic:
         1 model in the target unit is slain
         This unit can immediately use the Retreat ability without any mortal damage being inflicted upon it.`,
@@ -301,7 +301,7 @@ const Units = {
       },
     ],
   }, */
- /*'Astreia Solbright': {
+  /*'Astreia Solbright': {
   /*  mandatory: {
       spells: [keyPicker(spells, ['Lightning Pulse'])],
     },
@@ -317,7 +317,7 @@ const Units = {
   }, */
   'Vandus Hammerhand': {
     effects: [
-     // StormBlastEffect,
+      // StormBlastEffect,
       {
         name: `Lord of the Hammerhands Passive`,
         desc: `Effect: Add 3 to the control scores of friendly Warrior Chamber units while they are wholly within 12" of this unit.`,
@@ -365,7 +365,7 @@ const Units = {
     ],
   },
   Lorai: {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Nebulous Sea-fog'])],
     }, */
     effects: [
@@ -384,7 +384,7 @@ const Units = {
       },
     ],
   },
-/* 'Gavriel Sureheart': {
+  /* 'Gavriel Sureheart': {
     effects: [
      // InescapableVengeanceEffect,
       {
@@ -419,7 +419,7 @@ const Units = {
       },
     ],
   },
- /* "Steelheart's Champions": {
+  /* "Steelheart's Champions": {
     effects: [
       {
         name: `Champion`,
@@ -453,7 +453,7 @@ const Units = {
       },
     ],
   }, */
- /* 'Lord-Arcanum': {
+  /* 'Lord-Arcanum': {
    /* mandatory: {
       spells: [keyPicker(spells, ['Thunderclap'])],
     }, 
@@ -517,24 +517,24 @@ const Units = {
       {
         name: `Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
-     // SigmariteThundershieldEffect,
-     // StormBlastEffect,
+      // SigmariteThundershieldEffect,
+      // StormBlastEffect,
       {
         name: `Righteous Avengers - Reaction: You declared a Fight ability for this unit`,
         desc: `Effect: Pick a friendly non-Hero Extremis Chamber Cavalry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
         when: [COMBAT_PHASE],
       },
-     // ImpalingStrikesEffect,
-     // BlastToAshesEffect,
-     // CleavingBlowEffect,
+      // ImpalingStrikesEffect,
+      // BlastToAshesEffect,
+      // CleavingBlowEffect,
     ],
   },
   'Lord-Celestant on Stardrake': {
     effects: [
-     // ...StardrakeBaseEffects,
-     // SigmariteThundershieldEffect,
+      // ...StardrakeBaseEffects,
+      // SigmariteThundershieldEffect,
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Stardrakes Cavernous Jaws is 4.`,
@@ -548,7 +548,7 @@ const Units = {
       {
         name: `Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
       {
         name: `Cavernous Jaws - Once Per Turn`,
@@ -560,7 +560,7 @@ const Units = {
   },
   'Lord-Celestant': {
     effects: [
-     // InescapableVengeanceEffect,
+      // InescapableVengeanceEffect,
       {
         name: `Furious Retribution - Reaction: You declared a Fight ability for this unit`,
         desc: `Effect: Pick a friendly non-Hero Warrior Chamber Infantry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to wound rolls for the targets attacks for the rest of the turn.`,
@@ -568,7 +568,7 @@ const Units = {
       },
     ],
   },
- /* 'Lord-Castellant': {
+  /* 'Lord-Castellant': {
     effects: [
       {
         name: `Warding Lantern`,
@@ -607,7 +607,7 @@ const Units = {
     ],
   },
   'Lord-Relictor': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(prayers, ['Healing Storm', 'Lightning Storm'])],
     }, */
     effects: [
@@ -618,7 +618,7 @@ const Units = {
       },
     ],
   },
- /* 'Lord-Exorcist': {
+  /* 'Lord-Exorcist': {
    /* mandatory: {
       spells: [keyPicker(spells, ['Purifying Blast'])],
     }, 
@@ -645,7 +645,7 @@ const Units = {
     ],
   }, */
   'Lord-Veritant': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(prayers, ['Sanction'])],
     },*/
     effects: [
@@ -667,7 +667,7 @@ const Units = {
     ],
   },
   'Knight-Arcanum': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(spells, ['Blaze of the Heavens'])],
     },*/
     effects: [
@@ -678,7 +678,7 @@ const Units = {
       },
     ],
   },
- 'Knight-Azyros': {
+  'Knight-Azyros': {
     effects: [
       {
         name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
@@ -701,11 +701,11 @@ const Units = {
         when: [END_OF_TURN],
       },
     ],
-  }, 
+  },
   'Knight-Draconis': {
     effects: [
-   //   ArcaneHeritageEffect,
-    //  DraconicFlamestreamEffect,
+      //   ArcaneHeritageEffect,
+      //  DraconicFlamestreamEffect,
       {
         name: `Wrath of the Draconith - Once Per Turn`,
         desc: `Declare: Pick a friendly Stormdrake Guard unit within this units combat range to be the target. 
@@ -720,12 +720,12 @@ const Units = {
       {
         name: `Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
-    // DraggedIntoTheTempestEffect,
+      // DraggedIntoTheTempestEffect,
     ],
   },
- /* 'Knight-Venator': {
+  /* 'Knight-Venator': {
     effects: [
       {
         name: `Star-fated Arrow`,
@@ -790,8 +790,8 @@ const Units = {
       },
       {
         name: `His Will Be Done - Passive`,
-        desc: `Effect: While this unit is contesting a questmarked objective:  
-        Add 3 to this units control score.  
+        desc: `Effect: While this unit is contesting a questmarked objective: 
+        Add 3 to this units control score. 
         This unit has Ward (5+).`,
         when: [DURING_GAME, END_OF_TURN],
       },
@@ -829,10 +829,10 @@ const Units = {
         Effect: Add 3 to each targets control score for the rest of the turn. In addition, Heal (D3) each target.`,
         when: [HERO_PHASE],
       },
-    //  SoulChargedIconEffect,
+      //  SoulChargedIconEffect,
     ],
   },
- /* 'Knight-Vexillor with Banner of Apotheosis': {
+  /* 'Knight-Vexillor with Banner of Apotheosis': {
     effects: [
       {
         name: `The Banner of the Reforged`,
@@ -851,26 +851,26 @@ const Units = {
   }, */
   'Drakesworn Templar': {
     effects: [
-     // ...StardrakeBaseEffects,
-     {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Stardrakes Cavernous Jaws is 4.`,
-      when: [COMBAT_PHASE],
-    },
-    {
-      name: `Extremis Chamber - Passive`,
-      desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-      when: [COMBAT_PHASE]
-    },
+      // ...StardrakeBaseEffects,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Stardrakes Cavernous Jaws is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Extremis Chamber - Passive`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Monsterous Challenge - Once Per Turn`,
         desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
-        Effect: Roll a dice. On a 2+, for the rest of the turn:  
-        Add 1 to the Damage characteristic of this units Stardrakes Cavernous Jaws for attacks that target that unit.  
+        Effect: Roll a dice. On a 2+, for the rest of the turn: 
+        Add 1 to the Damage characteristic of this units Stardrakes Cavernous Jaws for attacks that target that unit. 
         If the target is also a Hero, add 1 to the Damage characteristic of this units Templar Weapons for attacks that target that unit.`,
         when: [COMBAT_PHASE],
       },
-     // CelestialBlastEffect,
+      // CelestialBlastEffect,
     ],
   },
   // Fulminators: {
@@ -902,7 +902,7 @@ const Units = {
   //     },
   //   ],
   // },
- /* Tempestors: {
+  /* Tempestors: {
     effects: [
       //IntolerableDamageEffect,
      // SigmariteShieldEffect,
@@ -947,11 +947,11 @@ const Units = {
         desc: `Effect: Add 3 to this units control score while it is contesting an objective wholly within friendly territory.`,
         when: [END_OF_TURN],
       },
-     // LayLowTheTyrantsEffect,
-     // SigmariteShieldEffect,
+      // LayLowTheTyrantsEffect,
+      // SigmariteShieldEffect,
     ],
   },
- /* Retributors: {
+  /* Retributors: {
     effects: [
       {
         name: `Champion`,
@@ -974,7 +974,7 @@ const Units = {
      // SigmariteShieldEffect,
     ],
   }, */
-  'Prosecutors': {
+  Prosecutors: {
     effects: [
       {
         name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
@@ -991,12 +991,12 @@ const Units = {
         desc: `Effect: Add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.`,
         when: [CHARGE_PHASE],
       },
-     // DispersedFormationEffect,
-     // HeraldsOfRighteousnessEffect,
-     // SigmariteShieldEffect,
+      // DispersedFormationEffect,
+      // HeraldsOfRighteousnessEffect,
+      // SigmariteShieldEffect,
     ],
   },
-  'Stormcoven': {
+  Stormcoven: {
     effects: [
       {
         name: `Gather the Aether - Passive`,
@@ -1011,7 +1011,7 @@ const Units = {
       },
     ],
   },
- /* 'Judicators with Boltstorm Crossbows': {
+  /* 'Judicators with Boltstorm Crossbows': {
     effects: [
       {
         name: `Champion`,
@@ -1082,7 +1082,7 @@ const Units = {
         when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
         rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
-   //  AstralCompassEffect,
+      //  AstralCompassEffect,
     ],
   },
   'Vanguard-Palladors with Javelins': {
@@ -1100,7 +1100,7 @@ const Units = {
         when: [CHARGE_PHASE],
         rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
-    //  RideTheWindsAethericEffect,
+      //  RideTheWindsAethericEffect,
     ],
   },
   'Vanguard-Palladors with Handaxes': {
@@ -1117,7 +1117,7 @@ const Units = {
         when: [COMBAT_PHASE],
         rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
-    //  RideTheWindsAethericEffect,
+      //  RideTheWindsAethericEffect,
     ],
   },
   Aetherwings: {
@@ -1198,7 +1198,7 @@ const Units = {
       },
     ],
   },
-/*  Evocators: {
+  /*  Evocators: {
    /* mandatory: {
       spells: [keyPicker(spells, ['Empower'])],
     },
@@ -1246,7 +1246,7 @@ const Units = {
   //     PrimeElectridsEffect,
   //   ],
   // },
- /* 'Averon Stormsire': {
+  /* 'Averon Stormsire': {
    /* mandatory: {
       spells: [keyPicker(spells, ['Stormsire'])],
     }, 
@@ -1297,8 +1297,8 @@ const Units = {
       {
         name: `Saintly Assault - Once Per Battle`,
         desc: `Declare: Pick up to 3 visible friendly Stormcast Eternals Infantry units wholly within 6" of this unit to be the targets. 
-        Effect: For the rest of the turn:  
-        Add 1 to charge rolls for the targets.  
+        Effect: For the rest of the turn: 
+        Add 1 to charge rolls for the targets. 
         Add 1 to the Attacks characteristic of the targets melee weapons.`,
         when: [CHARGE_PHASE],
       },
@@ -1375,7 +1375,7 @@ const Units = {
         Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [MOVEMENT_PHASE],
       },
-     // ...AnnihilatorBaseEffects,
+      // ...AnnihilatorBaseEffects,
     ],
   },
   'Annihilators with Meteoric Grandhammers': {
@@ -1400,7 +1400,7 @@ const Units = {
       {
         name: `Ride for Vengeance - Passive`,
         desc: `Effect: If any friendly Warrior Chamber units have been destroyed this battle:
-        You can re-roll chagarge rolls for this unit. 
+        You can reroll chagarge rolls for this unit. 
         This unit has Strike-First if it charged in the samte turn.`,
         when: [CHARGE_PHASE],
       },
@@ -1439,13 +1439,13 @@ const Units = {
     ],
   },
   Krondys: {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Atavistic Tempest'])],
     }, */
     effects: [
       //BlazingTempestEffect,
-     // AncientMasterOfWarEffect,
-     // CalamitousTailEffect,
+      // AncientMasterOfWarEffect,
+      // CalamitousTailEffect,
       {
         name: `Regalia Fulmentarus - Passive`,
         desc: `Effect: Add 2 to casting rolls for this unit.`,
@@ -1479,13 +1479,13 @@ const Units = {
       {
         name: `Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      },  
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Thunderstruck - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
         Effect: Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
     ],
   },
@@ -1495,30 +1495,30 @@ const Units = {
       {
         name: `Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      },  
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Cleaving Blow - Passive`,
         desc: `Effect: Add 1 to the Damage characteristic of this units Thunderaxes if the target unit has 10 or more models.`,
-        when: [COMBAT_PHASE]
-      },  
+        when: [COMBAT_PHASE],
+      },
     ],
   },
   'Dracothian Guard Fulminators': {
     effects: [
-    //  GenericEffects.Elite, ImpalingStrikesEffect, StormBlastEffect
-    {
-      name: `Extremis Chamber - Passive`,
-      desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-      when: [COMBAT_PHASE]
-    },  
-    {
-      name: `Impaling Strikes`,
-      desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
+      //  GenericEffects.Elite, ImpalingStrikesEffect, StormBlastEffect
+      {
+        name: `Extremis Chamber - Passive`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Impaling Strikes`,
+        desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
       Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
-      when: [CHARGE_PHASE]
-    },   
-  ],
+        when: [CHARGE_PHASE],
+      },
+    ],
   },
   'Dracothian Guard Tempestors': {
     effects: [
@@ -1527,8 +1527,8 @@ const Units = {
       {
         name: `Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      }, 
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Overwhelming Volleystorm`,
         desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this units Volleystorm Crossbows to be the target. 
@@ -1542,20 +1542,20 @@ const Units = {
       {
         name: `Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      }, 
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Dispersed Formation - Passive`,
         desc: `Effect: This unit has a coherency range of 2".`,
         when: [DURING_GAME],
       },
-     // DispersedFormationEffect,
-     // ArcaneHeritageEffect,
-     // DraconicFlamestreamEffect,
-     // DraggedIntoTheTempestEffect,
+      // DispersedFormationEffect,
+      // ArcaneHeritageEffect,
+      // DraconicFlamestreamEffect,
+      // DraggedIntoTheTempestEffect,
       {
         name: `Draconic Onslaught - Once Per Turn`,
-        desc: `Effect: If this unit charged this turn, roll a dice. On a 3+, this unit can move 2D6". It can pass through the combat ranges of enemy units and can end that move in combat. Then, pick an enemy unit that this unit passed across during that move. Inflict D3 mortal damage on that enemy unit`,
+        desc: `Effect: If this unit charged this turn, roll a dice. On a 3+, this unit can move 2D6". It can pass through the combat ranges of enemy units and can end that move in combat. Then, pick an enemy unit that this unit passed across during that move. Inflict D3 mortal damage on that enemy unit.`,
         when: [COMBAT_PHASE],
         rule_sources: [
           rule_sources.BATTLETOME_STORMCAST_ETERNALS,
@@ -1575,7 +1575,7 @@ const Units = {
       },
     ],
   },
- /* "Xandire's Truthseekers": {
+  /* "Xandire's Truthseekers": {
     effects: [
       {
         name: `Blazing Arrows`,
@@ -1598,8 +1598,8 @@ const Units = {
     effects: [
       {
         name: `His Will Be Done - Passive`,
-        desc: `Effect: While this unit is contesting a questmarked objective:  
-        Add 3 to this units control score.  
+        desc: `Effect: While this unit is contesting a questmarked objective: 
+        Add 3 to this units control score. 
         This unit has Ward (5+).`,
         when: [DURING_GAME],
       },
@@ -1617,7 +1617,7 @@ const Units = {
     ],
   },
   'Ionus Cryptborn': {
-  /*  mandatory: {
+    /*  mandatory: {
       prayers: [keyPicker(prayers, ['Lightning Tempest'])],
     }, */
     effects: [
@@ -1651,107 +1651,107 @@ const Units = {
     ],
   },
   'Lord-Vigilant on Gryph-Stalker': {
-      effects: [
-        {
-          name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
-          desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
-          when: [DURING_GAME],
-        },
-        {
-          name: `Deliver Judgement - Once Per Battle`,
-          desc: `Declare: Pick a friendly non-Hero Ruination Chamber unit wholly within 12" of this unit. 
+    effects: [
+      {
+        name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+        desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Deliver Judgement - Once Per Battle`,
+        desc: `Declare: Pick a friendly non-Hero Ruination Chamber unit wholly within 12" of this unit. 
           Effect: That unit can use 2 Fight abilities this phase. After the first is used, however, that unit has Strike-last for the rest of the turn.`,
-          when: [COMBAT_PHASE],
-        },
-      ],
-    },
-    'Lord-Vigilant on Morrgryph': {
-      effects: [
-        {
-          name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
-          desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
-          when: [DURING_GAME],
-        },
-        {
-          name: `Direct the Assault - Once Per Turn`,
-          desc: `Declare: Pick a friendly non-Hero Ruination Chamber unit wholly within 12" of this unit to be the target. 
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Lord-Vigilant on Morrgryph': {
+    effects: [
+      {
+        name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+        desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Direct the Assault - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Hero Ruination Chamber unit wholly within 12" of this unit to be the target. 
           Effect: For the rest of the turn, while the target is wholly within 12" of this unit, add 5 to the target's control score.`,
-          when: [HERO_PHASE],
-        },
-        {
-          name: `Vice-Like Grip - Once Per Turn`,
-          desc: `Declare: Pick an enemy non-Monster Hero in combat with this unit to be the target.
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Vice-Like Grip - Once Per Turn`,
+        desc: `Declare: Pick an enemy non-Monster Hero in combat with this unit to be the target.
           Effect: Roll 2D6. If the result exceeds the target's Health characteristic, for the rest of the turn:
           The target has Strike-Last.
           The target cannot use commands.`,
-          when: [CHARGE_PHASE],
-        },
-      ],
-    },
-    'Lord-Terminos': {
-      /*  mandatory: {
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'Lord-Terminos': {
+    /*  mandatory: {
           prayers: [keyPicker(prayers, ['Lightning Tempest'])],
         }, */
-        effects: [
-          {
-            name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
-            desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
-            when: [DURING_GAME],
-          },
-          {
-            name: `Memorian - Passive`,
-            desc: `Effect: This units Memorian is a token. Add 3 to the control scores of friendly Ruination Chamber units wholly within 12" of this unit while its Memorian is on the battlefield. If you make an unmodified save roll of 1 for this unit, remove its Memorian from the battlefield after the Attack ability has been resolved (the damage point is still inflicted).`,
-            when: [END_OF_TURN],
-            rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
-          },
-          {
-            name: `Earn an Honourable Death - Reaction: You declared a Fight ability for this unit`,
-            desc: `Effect: Pick a friendly non-Hero Ruination Chamber Infantry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
-            when: [COMBAT_PHASE],
-            rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
-          },
-        ],
+    effects: [
+      {
+        name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+        desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
+        when: [DURING_GAME],
       },
-      'Reclusians': {
-        /*  mandatory: {
+      {
+        name: `Memorian - Passive`,
+        desc: `Effect: This units Memorian is a token. Add 3 to the control scores of friendly Ruination Chamber units wholly within 12" of this unit while its Memorian is on the battlefield. If you make an unmodified save roll of 1 for this unit, remove its Memorian from the battlefield after the Attack ability has been resolved (the damage point is still inflicted).`,
+        when: [END_OF_TURN],
+        rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
+      },
+      {
+        name: `Earn an Honourable Death - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly non-Hero Ruination Chamber Infantry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+        rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
+      },
+    ],
+  },
+  Reclusians: {
+    /*  mandatory: {
             prayers: [keyPicker(prayers, ['Lightning Tempest'])],
           }, */
-          effects: [
-            {
-              name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
-              desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
-              when: [DURING_GAME],
-            },
-            {
-              name: `Memorian Descendants - Passive`,
-              desc: `Effect: This units Memorians are tokens. There are 2 Memorians for every 3 models in this unit. While any of this units Memorians are on the battlefield, add 1 to this units resistance rolls when using the Ruination Chamber ability. Each time you make an unmodified save roll of 1 for this unit, remove 1 of its Memorians from the battlefield after the Attack ability has been resolved (the damage point is still inflicted).`,
-              when: [DURING_GAME],
-              rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
-            },
-          ],
-        },
-        'Tornus the Redeemed': {
-          effects: [
-            {
-              name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
-              desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
-              when: [DURING_GAME],
-            },
-            {
-              name: `Herald of Redemption - Passive`,
-              desc: `Effect: If a friendly Ruination Chamber unit wholly within 12" of this unit uses the Rally command you receive 3 additional rally points.`,
-              when: [HERO_PHASE],
-            },
-            {
-              name: `The Light of Sigmar`,
-              desc: `Effect: Roll a dice. On a 3+, pick 1 of the following effects:
+    effects: [
+      {
+        name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+        desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Memorian Descendants - Passive`,
+        desc: `Effect: This units Memorians are tokens. There are 2 Memorians for every 3 models in this unit. While any of this units Memorians are on the battlefield, add 1 to this units resistance rolls when using the Ruination Chamber ability. Each time you make an unmodified save roll of 1 for this unit, remove 1 of its Memorians from the battlefield after the Attack ability has been resolved (the damage point is still inflicted).`,
+        when: [DURING_GAME],
+        rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
+      },
+    ],
+  },
+  'Tornus the Redeemed': {
+    effects: [
+      {
+        name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+        desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Herald of Redemption - Passive`,
+        desc: `Effect: If a friendly Ruination Chamber unit wholly within 12" of this unit uses the Rally command you receive 3 additional rally points.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `The Light of Sigmar`,
+        desc: `Effect: Roll a dice. On a 3+, pick 1 of the following effects:
               For the rest of the turn, subtract 1 from hit rolls for attacks made by enemy units while they are in combat with this unit.
               Heal (D3) each friendly Stormcast Eternals unit within this unit's combat range.`,
-              when: [COMBAT_PHASE],
-            },
-          ],
-        },
-      'ROR: Fjori`s Flamebearers': {
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'ROR: Fjori`s Flamebearers': {
     effects: [
       {
         name: `Grimhold Exile: Last of the Lodge-fire - Once Per Battle`,
@@ -1762,7 +1762,7 @@ const Units = {
       {
         name: `Grimhold Exile: Honour to Grimnir! - Once Per Battle`,
         desc: `Declare: Pick up to 3 friendly Fyreslayers Infantry units wholly within 12" of this unit to be the targets. 
-        Effect: You can re-roll charge rolls for the targets for the rest of the turn`,
+        Effect: You can reroll charge rolls for the targets for the rest of the turn`,
         when: [HERO_PHASE],
       },
       {
@@ -1830,29 +1830,29 @@ const Units = {
         desc: `Declare: Pick this unit and a friendly Callis and Toll unit in the same regiment as this unit if those units have not been deployed. 
         Effect: Set up those units in reserve in the shadows. Those units have now been deployed.`,
         when: [DURING_SETUP],
-       },
-       {
+      },
+      {
         name: `Toll's Companions: Saviours of Cinderfall - Passive`,
         desc: `Effect: While a friendly Callis and Toll unit is wholly within this units combat range, both this unit and that Callis and Toll unit have Ward (5+).`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Toll's Companions: Emerge from the Shadows`,
-         desc: `Declare: Pick this unit if it is in the shadows. 
+      },
+      {
+        name: `Toll's Companions: Emerge from the Shadows`,
+        desc: `Declare: Pick this unit if it is in the shadows. 
          Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units. Then, set up the Callis and Toll unit that was set up in the shadows with this unit wholly within 6" of it and more than 9" from all enemy units.`,
-         when: [MOVEMENT_PHASE],
-       },
-       {
+        when: [MOVEMENT_PHASE],
+      },
+      {
         name: `Duty Bound - Passive`,
         desc: `Effect: While every model in the same unit in the Regiment of Renown is contesting the same objective, add 1 to save rolls and ward rolls for that unit.`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Sigmar's Justice - Once Per Turn`,
-         desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
+      },
+      {
+        name: `Sigmar's Justice - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
          Effect: For the rest of the battle, add 1 to wound rolls for combat attacks made by units in this Regiment of Renown that target a unit that is marked for justice.`,
-         when: [DURING_SETUP],
-       },
+        when: [DURING_SETUP],
+      },
     ],
   },
   'ROR: Norgrimm`s Rune Throng': {
@@ -1879,17 +1879,17 @@ const Units = {
         desc: `Effect: Add 2 to the control scores of friendly Cities of Sigmar Duardin units, excluding Longbeards units, while they are wholly within 12" of this unit.`,
         when: [END_OF_TURN],
       },
-       {
+      {
         name: `Rune of Restored Hearth - Once Per Battle`,
         desc: `Effect: If the Runelord in the Regiment of Renown is contesting an objective, for the rest of the battle, units in this Regiment of Renown have Ward (5+) while they are contesting that objective.`,
         when: [HERO_PHASE],
-       },
-       {
-         name: `Wrath and Ruin: Chant value of 4`,
-         desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
+      },
+      {
+        name: `Wrath and Ruin: Chant value of 4`,
+        desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
          Effect: Roll 6 dice. If the chanting roll was 8+, roll 9 dice instead. For each 5+, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target as a result of those dice rolls, ignore positive modifiers to save rolls for the target until the start of your next turn.`,
-         when: [HERO_PHASE],
-       },
+        when: [HERO_PHASE],
+      },
     ],
   },
   'ROR: Elthwin`s Thorns': {
@@ -1911,17 +1911,17 @@ const Units = {
         desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot move into combat during any part of that move.`,
         when: [SHOOTING_PHASE],
       },
-       {
+      {
         name: `Gossamid Champion`,
         desc: `Declare: Pick the Arch-Revenant in this Regiment of Renown to use this ability, the pick a visible enemy unit within 12" of them to be the target. 
         Effect: Until the start of your next turn, subtract X from charge rolls for the target, where X is the number of damage points allocated to the target this phase by shooting attacks made by the Gossamid Archers unit in the Regiment of Renown, to a maximum of 6.`,
         when: [SHOOTING_PHASE],
-       },
-       {
-         name: `Flight of the Zephyrspites - Once Per Turn`,
-         desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
-         when: [SHOOTING_PHASE],
-       },
+      },
+      {
+        name: `Flight of the Zephyrspites - Once Per Turn`,
+        desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   'ROR: Gotrek Gurnisson': {
@@ -2032,8 +2032,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

@@ -8,7 +8,7 @@ const Spells = {
   'Lore of the Deeps': {
     effects: [
       {
-        name: `Steed of Tides: Casting value of 6 (UNLIMITED) `,
+        name: `Steed of Tides: Casting value of 6 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Idoneth Deepkin Wizard to cast this spell, pick a visible friendly Idoneth Deepkin unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
         Effect: Remove the target from the battlefield and set it up again on the battlefield more than 9" from all enemy units.`,
         when: [HERO_PHASE],
@@ -27,7 +27,7 @@ const Spells = {
       },
     ],
   },
- /* 'Counter-current': {
+  /* 'Counter-current': {
     effects: [
       {
         name: `Counter-current`,

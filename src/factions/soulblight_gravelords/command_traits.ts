@@ -41,13 +41,13 @@ const CommandTraits = {
     effects: [
       {
         name: `Unhinged Rampager - Passive`,
-        desc: `Effect: You can re-roll charge rolls for this unit in your charge phase.`,
+        desc: `Effect: You can reroll charge rolls for this unit in your charge phase.`,
         when: [CHARGE_PHASE],
       },
     ],
   },
 
- /* 'Above Suspicion': {
+  /* 'Above Suspicion': {
     effects: [
       {
         name: `Above Suspicion`,

@@ -121,11 +121,11 @@ const ExcessOfBladesEffect = {
 // Unit Names
 const Units = {
   'Keeper of Secrets': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Cacophonic Choir'])],
     }, */
     effects: [
-     /* DarkTemptationsEffect,
+      /* DarkTemptationsEffect,
       DelicatePrecisionEffect,
       LivingWhipEffect,
       ShiningAegisEffect,
@@ -150,9 +150,9 @@ const Units = {
       {
         name: `Dark Temptations - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Pick 1 of the following effects:  
-        Add 1 to hit rolls for the targets attacks for the rest of the turn.  
-        Add 1 to save rolls for the target for the rest of the turn.  
+        Effect: Pick 1 of the following effects: 
+        Add 1 to hit rolls for the targets attacks for the rest of the turn. 
+        Add 1 to save rolls for the target for the rest of the turn. 
         If the target is damaged, Heal (D3) the target. 
         Then, add 1 to the Damage characteristic of this units Elegant Greatblade for attacks that target that enemy unit for the rest of the turn.`,
         when: [COMBAT_PHASE],
@@ -166,19 +166,19 @@ const Units = {
     ],
   },
   "Syll'Esske, the Vengeful Allegiance": {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Subvert'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
-     // WarmasterEffect,
+      // GenericEffects.WizardOneSpellEffect,
+      // WarmasterEffect,
       {
         name: `Deadly Symbiosis`,
         desc: `Declare: Pick a friendly non-Hero Sybarite unit and a friendly non-Hero Hedonites of Slaanesh Daemon unit to be the targets. Both units must be wholly within 12" of this unit. 
         Effect: For the rest of the turn, if either target uses the All-out Attack or All-out Defence command, the other target can also use the same command in the same phase and no command points are spent to use the command a second time.`,
         when: [COMBAT_PHASE],
       },
-     // LitheAndSwiftEffect,
+      // LitheAndSwiftEffect,
       {
         name: `The Vengeful Allegiance - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
@@ -193,7 +193,7 @@ const Units = {
     ],
   },
   'Shalaxi Helbane': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Refine Senses'])],
     }, */
     effects: [
@@ -207,17 +207,17 @@ const Units = {
         desc: `Effect: Subtract 1 from hit rolls for combat attacks that target this unit.`,
         when: [COMBAT_PHASE],
       },
-    //  DelicatePrecisionEffect,
+      //  DelicatePrecisionEffect,
       {
         name: `Refine Senses: Casting value of 4`,
         desc: `Declare: Make a casting roll of 2D6. 
-        Effect: For the rest of the turn:  
-        Add 1 to wound rolls for this units attacks that target enemy Heroes.  
+        Effect: For the rest of the turn: 
+        Add 1 to wound rolls for this units attacks that target enemy Heroes. 
         Add 1 to save rolls for attacks made by enemy Heroes that target this unit.`,
         when: [HERO_PHASE],
       },
-     // LivingWhipEffect,
-     // ShiningAegisEffect,
+      // LivingWhipEffect,
+      // ShiningAegisEffect,
       {
         name: `Paramount Hunter - Once Per Turn - Reaction: Opponent declared a Charge ability for a Hero within 9" of this unit`,
         desc: `Effect: If this unit is not in combat, it can immediately move 2D6". It can pass through the combat ranges of enemy units but it must end that move within 1/2" of that Hero. If it does so, this unit has charged, and that Heros Charge ability has no effect.`,
@@ -229,11 +229,11 @@ const Units = {
         Effect: The target can use 2 Fight abilities this turn. After the first is used, however, the target has Strike-last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-     // GenericEffects.WizardTwoSpellsEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
     ],
   },
   'The Contorted Epitome': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Overwhelming Acquiescence'])],
     }, */
     effects: [
@@ -247,14 +247,14 @@ const Units = {
         desc: `Effect: Inflict D3 mortal damage on that enemy unit.`,
         when: [DURING_GAME],
       },
-     // GenericEffects.WizardTwoSpellsEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
     ],
   },
   'Infernal Enrapturess, Herald of Slaanesh': {
     effects: [
       {
         name: `Discordant Disruption - Once Per Turn - Reaction: Opponent declared a Spell ability for a Wizard within 18" of this unit`,
-        desc: `Effect: The casting roll for that spell must be re-rolled. If 2 or more dice in the re-rolled casting roll have the same value or if 1 of the dice is a 6, inflict D3 mortal damage on that Wizard after the effect of that spell has been resolved.`,
+        desc: `Effect: The casting roll for that spell must be rerolled. If 2 or more dice in the rerolled casting roll have the same value or if 1 of the dice is a 6, inflict D3 mortal damage on that Wizard after the effect of that spell has been resolved.`,
         when: [HERO_PHASE],
       },
     ],
@@ -263,8 +263,8 @@ const Units = {
     effects: [
       {
         name: `Staff of Masks`,
-        desc: `Effect: Pick 1 of the following effects:  
-        Add 3 to the Attacks characteristic of this units Razor-edged Claws for the rest of the turn.  
+        desc: `Effect: Pick 1 of the following effects: 
+        Add 3 to the Attacks characteristic of this units Razor-edged Claws for the rest of the turn. 
         Heal (3) this unit.`,
         when: [HERO_PHASE],
       },
@@ -273,10 +273,10 @@ const Units = {
         desc: `Effect: Remove this unit from the battlefield and set it up again on the battlefield more than 3" from all enemy units.`,
         when: [DURING_SETUP],
       },
-     // LitheAndSwiftEffect,
+      // LitheAndSwiftEffect,
     ],
   },
- /* 'Viceleader, Herald of Slaanesh': {
+  /* 'Viceleader, Herald of Slaanesh': {
    /* mandatory: {
       spells: [keyPicker(Spells, ['Acquiescence'])],
     }, 
@@ -295,7 +295,7 @@ const Units = {
       },
     ], 
   }, */
- /* 'Bladebringer, Herald on Hellflayer': {
+  /* 'Bladebringer, Herald on Hellflayer': {
    /* mandatory: {
       spells: [keyPicker(Spells, ['Acquiescence'])],
     }, 
@@ -310,7 +310,7 @@ const Units = {
      // GenericEffects.WizardOneSpellEffect,
     ],
   }, */
- /* 'Bladebringer, Herald on Seeker Chariot': {
+  /* 'Bladebringer, Herald on Seeker Chariot': {
    /* mandatory: {
       spells: [keyPicker(Spells, ['Acquiescence'])],
     }, 
@@ -331,24 +331,23 @@ const Units = {
   }, */
   Hellflayer: {
     effects: [
-    //  SoulscentEffect
-    {
-      name: `Soulscent`,
-      desc: `Declare: Pick up to 3 enemy units that this unit passed across this phase to be the targets. 
+      //  SoulscentEffect
+      {
+        name: `Soulscent`,
+        desc: `Declare: Pick up to 3 enemy units that this unit passed across this phase to be the targets. 
       Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If any models are slain by this ability, this unit has Ward (5+) for the rest of the turn.`,
-      when: [MOVEMENT_PHASE],
-    },
-    {
-      name: `Threshing Doom - Passive`,
-      desc: `Effect: When this unit moves, it can pass through models in enemy Infantry units and can pass through the combat ranges of enemy Infantry units, but it cannot end a move in combat unless specified in the ability used.`,
-      when: [MOVEMENT_PHASE],
-    },
-    
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Threshing Doom - Passive`,
+        desc: `Effect: When this unit moves, it can pass through models in enemy Infantry units and can pass through the combat ranges of enemy Infantry units, but it cannot end a move in combat unless specified in the ability used.`,
+        when: [MOVEMENT_PHASE],
+      },
     ],
   },
   'Seeker Chariots': {
     effects: [
-     // ImpossiblySwiftEffect,
+      // ImpossiblySwiftEffect,
       {
         name: `Mutilating Blades`,
         desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
@@ -358,11 +357,11 @@ const Units = {
     ],
   },
   'Bladebringer, Herald on Exalted Chariot': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Acquiescence'])],
     },*/
     effects: [
-    //  ExcessOfBladesEffect,
+      //  ExcessOfBladesEffect,
       {
         name: `Soulgorgers - Once Per Turn`,
         desc: `Declare: Pick up to 3 friendly non-Unique Hedonites of Slaanesh War Machines wholly within 12" of this unit to be the targets. 
@@ -375,7 +374,7 @@ const Units = {
         Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [CHARGE_PHASE],
       },
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
     ],
   },
   /*'Exalted Chariot': {
@@ -412,13 +411,13 @@ const Units = {
     effects: [
       {
         name: `Lithe and Swift - Passive`,
-        desc: `Effect: Add 1 to the Attacks characteristic of this units Piercing Claws for the rest of the turn if this unit charged in the same turn`,
+        desc: `Effect: Add 1 to the Attacks characteristic of this units Piercing Claws for the rest of the turn if this unit charged in the same turn.`,
         when: [COMBAT_PHASE],
       },
-    //  BannerBearerEffect,
-    //  IconBearerEffect,
-    //  HornBlowerEffect,
-    //  LitheAndSwiftEffect,
+      //  BannerBearerEffect,
+      //  IconBearerEffect,
+      //  HornBlowerEffect,
+      //  LitheAndSwiftEffect,
     ],
   },
   Seekers: {
@@ -430,11 +429,11 @@ const Units = {
       },
     ],
   },
-  'Hellstriders': {
+  Hellstriders: {
     effects: [
-     // BannerBearerEffect,
-     // IconBearerEffect,
-    //  HornBlowerEffect,
+      // BannerBearerEffect,
+      // IconBearerEffect,
+      //  HornBlowerEffect,
       {
         name: `Maiming Charge - Passive`,
         desc: `Effect: If this unit charged this turn, subtract 3 from the control scores of enemy Infantry units while they are in combat with this unit.`,
@@ -475,7 +474,7 @@ const Units = {
       },
     ],
   },
- /* 'The Dread Pageant': {
+  /* 'The Dread Pageant': {
     effects: [
       {
         name: `Art of the Myrmidesh`,
@@ -490,7 +489,7 @@ const Units = {
     ],
   }, */
   'Glutos Orscollion, Lord of Gluttony': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Crippling Famishment'])],
     }, */
     effects: [
@@ -522,8 +521,8 @@ const Units = {
       {
         name: `Crippling Punishment: Casting value of 7`,
         desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target, then make a casting roll of 2D6. 
-        Effect: Until the start of your next turn:  
-        Halve the targets Move characteristic.  
+        Effect: Until the start of your next turn: 
+        Halve the targets Move characteristic. 
         Halve run rolls and charge rolls for the target.`,
         when: [HERO_PHASE],
       },
@@ -538,7 +537,7 @@ const Units = {
         Effect: Heal (6) the target.`,
         when: [END_OF_TURN],
       },
-     // GenericEffects.WizardTwoSpellsEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
 
       // Companion abilities
       // {
@@ -578,11 +577,11 @@ const Units = {
     ],
   },
   'Shardspeaker of Slaanesh': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(Spells, ['Reflection Eternal'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Mist Lurkers - Passive`,
         desc: `Effect: If this unit successfully casts a spell, until the start of your next turn, it can attack with its Shadow- cloaked Claws.`,
@@ -598,7 +597,7 @@ const Units = {
   },
   'Blissbarb Archers': {
     effects: [
-     // HighTempterEffect,
+      // HighTempterEffect,
       {
         name: `Blissbarb Homonculus - Passive`,
         desc: `Effect: This units Blissbrew Homonculus is a token. There is 1 Blissbrew Homonculus for every 10 models in this unit. 
@@ -609,7 +608,7 @@ const Units = {
   },
   'Blissbarb Seekers': {
     effects: [
-    //  HighTempterEffect,
+      //  HighTempterEffect,
       {
         name: `Glory Shots - Passive`,
         desc: `Effect: Add 1 to the Rend characteristic of this units ranged weapons for attacks that target units contesting an objective you do not control.`,
@@ -621,7 +620,7 @@ const Units = {
     effects: [
       {
         name: `Unrivalled Velocity - Passive`,
-        desc: `Effect: You can re-roll charge rolls for this unit.`,
+        desc: `Effect: You can reroll charge rolls for this unit.`,
         when: [CHARGE_PHASE],
       },
     ],
@@ -671,7 +670,7 @@ const Units = {
         Add 1 to the Attacks characteristic of this units Impaling Talons for each battle fury token it has until the end of the next turn.`,
         when: [END_OF_TURN],
       },
-     // MesmerisingLepidopteraEffect,
+      // MesmerisingLepidopteraEffect,
       {
         name: `Scion of Slaanesh - Passive`,
         desc: `Effect: While a friendly Synessa is on the battlefield, subtract 1 from hit rolls for attacks that target this unit.`,
@@ -686,11 +685,11 @@ const Units = {
     ],
   },
   'Synessa, The Voice of Slaanesh': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Whispers of Doubt'])],
     }, */
     effects: [
-    /*  GenericEffects.WizardOneSpellEffect,
+      /*  GenericEffects.WizardOneSpellEffect,
       WarmasterEffect,
       MesmerisingLepidopteraEffect, */
       {
@@ -725,7 +724,7 @@ const Units = {
         desc: `Declare: This unit can only use this ability if it is in combat with an enemy Hero. 
         Effect: This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn. This unit can only use the second Fight ability if it is in combat with an enemy Hero, and if it does so, it must pick an enemy Hero to be the target of all of its attacks.`,
         when: [COMBAT_PHASE],
-      },  
+      },
       {
         name: `Gunnar Brand: Oath of Bloodshed - Once Per Battle`,
         desc: `Declare: This unit can only use this ability if any enemy Heroes were slain by this units combat attacks this turn. 
@@ -736,7 +735,7 @@ const Units = {
         name: `Singri Brand: Swift as the Wind - Passive`,
         desc: `Effect: Only critical hits score successful hits for shooting attacks that target this unit.`,
         when: [SHOOTING_PHASE],
-      },  
+      },
       {
         name: `Singri Brand: Uncanny Shot - Passive`,
         desc: `Effect: Add 1 to the Rend characteristic of this units Singris Warbow for attacks that target enemy units that are within 6" of a friendly Gunnar Brand.`,
@@ -747,7 +746,7 @@ const Units = {
         desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target, then make a casting roll of 2D6. 
         Effect: Inflict 1 mortal damage on the target and subtract 1 from the Attacks characteristic of the targets melee weapons until the start of your next turn.`,
         when: [HERO_PHASE],
-      },  
+      },
       {
         name: `Oathsworn Kin: Broken Nadja - Passive`,
         desc: `Effect: While this units Broken Nadja is on the battlefield, it has Wizard (1).`,
@@ -755,8 +754,8 @@ const Units = {
       },
       {
         name: `Favour of the Gods - Once Per Turn`,
-        desc: `Effect: If any enemy Heroes were slain this turn by the Gunnar Brand in this Regiment of Renown:  
-        Heal (5) each unit in this Regiment of Renown.  
+        desc: `Effect: If any enemy Heroes were slain this turn by the Gunnar Brand in this Regiment of Renown: 
+        Heal (5) each unit in this Regiment of Renown. 
         Add 1 to the Attacks characteristic of melee weapons used by units in this Regiment of Renown for the rest of the battle.`,
         when: [END_OF_TURN],
       },
@@ -786,15 +785,15 @@ const Units = {
         desc: `Used By: The unit using that Fight ability. 
         Effect: Pick a unit in this Regiment of Renown that has not used a Fight ability this turn to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
         when: [COMBAT_PHASE],
-      },  
+      },
     ],
   },
   'ROR: The Coven of Thryx': {
     effects: [
       {
         name: `Magister: Magic-Touched`,
-        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn:  
-        Add 1 to this units power level.  
+        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn: 
+        Add 1 to this units power level. 
         If 2 or more dice in a casting roll for this unit have the same value, the spell fails, its effect is not resolved and D6 mortal damage is inflicted on this unit.`,
         when: [HERO_PHASE],
       },
@@ -809,7 +808,7 @@ const Units = {
         name: `Tome of Eyes: Transfixed by Countless Eyes - Reaction: You declared a Spell ability for a Wizard within this Manifestations combat range`,
         desc: `Effect: You can add 1 or 2 to the casting roll for that spell. Roll a number of dice equal to the amount added. For each 1-2, allocate 1 damage point to the caster. If the caster is destroyed by this ability, the spell has no effect.`,
         when: [HERO_PHASE],
-      }, 
+      },
       {
         name: `Burning SIgil of Tzeentch: Radiant Transmogrification`,
         desc: `Declare: This Manifestation must use this ability in each movement phase. Pick each unit (friendly and enemy) within 9" of this Manifestation to be the targets. 
@@ -823,7 +822,7 @@ const Units = {
       },
       {
         name: `Sparks of Profane Potential - Once Per Battle`,
-        desc: `Effect: If the Magister in the Regiment of Renown has been deployed, set up one of the following Manifestations within 1" of them:  
+        desc: `Effect: If the Magister in the Regiment of Renown has been deployed, set up one of the following Manifestations within 1" of them: 
         1 Burning Sigil of Tzeentch  
         1 Tome of Eyes  
         1 Daemonic Simulacrum.`,
@@ -831,7 +830,7 @@ const Units = {
       },
       {
         name: `Skilled Summoner: Casting value of 6`,
-        desc: `Declare: Pick the Magister in this Regiment of Renown to cast this spell, pick 1 of the Manifestations from the list below that is not on the battlefield, then make a casting roll of 2D6:  
+        desc: `Declare: Pick the Magister in this Regiment of Renown to cast this spell, pick 1 of the Manifestations from the list below that is not on the battlefield, then make a casting roll of 2D6: 
         1 Burning Sigil of Tzeentch  
         1 Tome of Eyes  
         1 Daemonic Simulacrum 
@@ -919,8 +918,8 @@ const Units = {
       {
         name: `Shake the Earth - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted. 
         Subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -1021,7 +1020,7 @@ const Units = {
       },
       {
         name: `Chaos Knights: Impaling Charge - Passive`,
-        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -1079,8 +1078,8 @@ const Units = {
       },
       {
         name: `Varghulf Courtier: Victory Feast`,
-        desc: `Effect: If any models were slain by this unit this turn:  
-        Heal (D6) this unit.  
+        desc: `Effect: If any models were slain by this unit this turn: 
+        Heal (D6) this unit. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1161,8 +1160,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

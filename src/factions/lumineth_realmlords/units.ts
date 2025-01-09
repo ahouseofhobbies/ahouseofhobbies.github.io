@@ -30,95 +30,95 @@ import meta_rule_sources from 'meta/rule_sources'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const getSunmetalWeaponsEffect = (weapon: string) => ({
- /* name: `Sunmetal Weapons`,
+  /* name: `Sunmetal Weapons`,
   desc: `If the unmodified hit roll for an attack made with a ${weapon} is 6, that attack inflicts 1 mortal wound on the target and the attack sequence ends (do not make a wound or save roll).`,
   when: [COMBAT_PHASE],
   shared: true, */
 })
 
 const getVanariWizardsEffect = (minimumModelCountToBeWizard: number, modelToBeWizard: string) => ({
- /* name: `Magic`,
+  /* name: `Magic`,
   desc: `The ${modelToBeWizard} is a WIZARD while this unit has ${minimumModelCountToBeWizard} or more models. That model can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase.`,
   when: [HERO_PHASE],
   shared: true, */
 })
 
 const StandardBearerEffect = {
- /* name: `Standard Bearer`,
+  /* name: `Standard Bearer`,
   desc: `You can reroll battleshock tests for units that include any Standard Bearers.`,
   when: [BATTLESHOCK_PHASE],
   shared: true, */
 }
 
 const AllButImmovableEffect = {
-/*  name: `All but Immovable`,
+  /*  name: `All but Immovable`,
   desc: `If this model doesnt not make a charge move in your charge phase, add 1 to the Attacks characteristic of this model's melee weapons until your next movement phase.`,
   when: [CHARGE_PHASE, COMBAT_PHASE],
   shared: true, */
 }
 
 const StonemageSymbiosisEffect = {
-/* name: `Stonemage Symbiosis`,
+  /* name: `Stonemage Symbiosis`,
   desc: `If this unit is within 12" of a friendly Stonemage, use the top row on this unit's damage table, regardless of how many wounds it has suffered.`,
   when: [DURING_GAME],
   shared: true, */
 }
 
 const CrushingBlowEffect = {
-/*  name: `Crushing Blow`,
+  /*  name: `Crushing Blow`,
   desc: `If the unmodified hit roll for an attack made with a melee weapon by this unit is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.`,
   when: [COMBAT_PHASE],
   shared: true, */
 }
 const DeepThinkersEffect = {
-/*  name: `Deep Thinkers`,
+  /*  name: `Deep Thinkers`,
   desc: `Once per battle, in your hero phase, when this unit attempts to cast its first spell in that phase, it is automatically cast with a casting roll of 9 (do not roll 2d6), but it can be unbound.`,
   when: [HERO_PHASE],
   rule_sources: [meta_rule_sources.BATTLESCROLL_ANDTOR_SEPTEMBER_2023],
   shared: true, */
 }
 const PurestAetherquartzHitRollEffect = {
- /* name: `Purest Aetherquartz`,
+  /* name: `Purest Aetherquartz`,
   desc: `Subtract 1 for hit rolls that target this unit. If this unit uses its last Aetherquartz, it can no longer use this ability.`,
   when: [COMBAT_PHASE, SHOOTING_PHASE],
   shared: true, */
 }
 const PurestAetherquartzCastingEffect = {
- /* name: `Purest Aetherquartz`,
+  /* name: `Purest Aetherquartz`,
   desc: `Add 1 to the casting roll when attempting to cast Greater Power of Hysh. If this unit uses its last Aetherquartz, it can no longer use this ability.`,
   when: [COMBAT_PHASE, SHOOTING_PHASE],
   shared: true, */
 }
 
 const IntoTheGaleOverSaveEffect = {
- /* name: `Into the Gale`,
+  /* name: `Into the Gale`,
   desc: `This unit has a ward of 5+.`,
   when: [WARDS_PHASE],
   shared: true, */
 }
 const LivingCycloneEffect = {
- /* name: `Living Cyclone`,
+  /* name: `Living Cyclone`,
   desc: `Roll a dice for each enemy unit that is within 3" of this unit after this unit makes a charge move. On a 3+, that unit suffers 1 mortal wound, and subtract 1 from hit rolls for that unit until the end of the next combat phase. The same unit cannot be affected by this ability more than once per phase.`,
   when: [CHARGE_PHASE, COMBAT_PHASE],
   shared: true, */
 }
 
 const MoveLikeTheWindEffect = {
- /* name: `Move like the wind`,
+  /* name: `Move like the wind`,
   desc: `When you make a pile-in move with this unit, it does not have to finish the move no further from the nearest enemy unit than it was at the start of the move. In addition, when you make a pile-in move with this unit, if it made a charge move in the same turn, it can move an extra 3" when it piles in.`,
   when: [CHARGE_PHASE, COMBAT_PHASE],
   shared: true, */
 }
 
 const SpiritOfTheWindEffect = {
- /* name: `Spirit of the Wind`,
+  /* name: `Spirit of the Wind`,
   desc: `At the end of your shooting phase, this model can make a normal move or a retreat of 12" (it cannot run). In addition, this unit can retreat and still charge later in the turn.`,
   when: [END_OF_SHOOTING_PHASE],
   shared: true, */
 }
 
 const EnduringAsRockEffect = {
- /* name: `Enduring as Rock`,
+  /* name: `Enduring as Rock`,
   desc: `When this unit is targeted by an attack, worsen the Rend characteristic of that attack by 1, to a minimum of 0.`,
   when: [COMBAT_PHASE, SHOOTING_PHASE],
   rule_sources: [meta_rule_sources.BATTLESCROLL_ANDTOR_SEPTEMBER_2023],
@@ -126,21 +126,21 @@ const EnduringAsRockEffect = {
 }
 
 const ShiningCompanyEffect = {
- /* name: `Shining Company`,
+  /* name: `Shining Company`,
   desc: `Subtract 1 from hit rolls for attacks that target this unit if this base of each model in this unit is touching the bases of 2 or more other models in the same unit.`,
   when: [COMBAT_PHASE, SHOOTING_PHASE],
   shared: true, */
 }
 
 const SunmetalWeaponEffect = {
- /* name: `Sunmetal Weapons`,
+  /* name: `Sunmetal Weapons`,
   desc: `If the unmodified hit roll for an attack made by this unit is 6, that attack causes 1 mortal wound to the target and the attack sequence ends (do not make a wound roll or save roll). This ability has no effect made by this unti's mounts.`,
   when: [COMBAT_PHASE],
   shared: true, */
 }
 const Units = {
   'Archmage Teclis': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Protection of Teclis', 'Storm of Searing White Light'])],
     }, */
     effects: [
@@ -196,12 +196,12 @@ const Units = {
     ],
   },
   'Lyrior Uthralle, Warden of Ymetrica': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Greater Power of Hysh'])],
     }, */
     effects: [
-    //  PurestAetherquartzHitRollEffect,
-     // PurestAetherquartzCastingEffect,
+      //  PurestAetherquartzHitRollEffect,
+      // PurestAetherquartzCastingEffect,
       //getSunmetalWeaponsEffect(`Regent's Sword`),
       {
         name: `Solar Flare: Casting value of 7`,
@@ -217,29 +217,29 @@ const Units = {
     ],
   },
   'Vanari Lord Regent': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(spells, ['Greater Power of Hysh'])],
     }, */
     effects: [
-     // getSunmetalWeaponsEffect(`Regent's Sword`),
-     // PurestAetherquartzCastingEffect,
-     // PurestAetherquartzHitRollEffect,
-     {
-      name: `Purest Aetherquartz - Once Per Battle`,
-      desc: `Effect: For the rest of the turn, add 1 to casting rolls for this unit and subtract 1 from hit rolls for attacks that target this unit.`,
-      when: [HERO_PHASE],
-    },
-    {
-      name: `Charge of the Lumineth - Once Per Battle`,
-      desc: `Declare: Pick this unit and up to 2 friendly Vanari Dawnriders units within this units combat range to be the targets. 
-      Effect: You can re-roll charge rolls for the targets for the rest of the turn. In addition, if a target charges this phase, add 1 to the Attacks characteristic of that targets weapons for the rest of the turn.`,
-      when: [CHARGE_PHASE],
-    },
+      // getSunmetalWeaponsEffect(`Regent's Sword`),
+      // PurestAetherquartzCastingEffect,
+      // PurestAetherquartzHitRollEffect,
+      {
+        name: `Purest Aetherquartz - Once Per Battle`,
+        desc: `Effect: For the rest of the turn, add 1 to casting rolls for this unit and subtract 1 from hit rolls for attacks that target this unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Charge of the Lumineth - Once Per Battle`,
+        desc: `Declare: Pick this unit and up to 2 friendly Vanari Dawnriders units within this units combat range to be the targets. 
+      Effect: You can reroll charge rolls for the targets for the rest of the turn. In addition, if a target charges this phase, add 1 to the Attacks characteristic of that targets weapons for the rest of the turn.`,
+        when: [CHARGE_PHASE],
+      },
     ],
   },
   'Vanari Bannerblade': {
     effects: [
-     // SunmetalWeaponEffect,
+      // SunmetalWeaponEffect,
       {
         name: `World Banner - Passive`,
         desc: `Effect: Add 3 to the control scores of other friendly Lumineth Realm-lords units while they are wholly within 18" of this unit.`,
@@ -248,36 +248,36 @@ const Units = {
     ],
   },
   'Vanari Auralan Sentinels': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(spells, ['Power of Hysh'])],
     }, */
     effects: [
-    //  getVanariWizardsEffect(5, `High Sentinel`),
+      //  getVanariWizardsEffect(5, `High Sentinel`),
       {
         name: `Lofted Shots`,
         desc: `Effect: For the rest of the turn, add 6" to the Range characteristic of this units Auralan Bows but subtract 1 from hit rolls for this units shooting attacks.`,
         when: [SHOOTING_PHASE],
       },
-    //  SunmetalWeaponEffect,
+      //  SunmetalWeaponEffect,
     ],
   },
   'Vanari Auralan Wardens': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(spells, ['Power of Hysh'])],
     }, */
     effects: [
-     // SunmetalWeaponEffect,
-     // getVanariWizardsEffect(5, `High Warden`),
+      // SunmetalWeaponEffect,
+      // getVanariWizardsEffect(5, `High Warden`),
       {
         name: `Wall of Blades`,
         desc: `Effect: If this unit did not charge this turn and is in combat with an enemy unit that charged this turn, roll a dice. Add 1 to the roll if that enemy unit is Cavalry. On a 4+, this unit has Strike-first for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-     // ShiningCompanyEffect,
+      // ShiningCompanyEffect,
     ],
   },
   'Vanari Dawnriders': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Power of Hysh'])],
     }, */
     effects: [
@@ -287,10 +287,10 @@ const Units = {
         Effect: Roll a dice for each model in this unit. For each 3+, inflict 1 mortal damage on the target.`,
         when: [CHARGE_PHASE],
       },
-     // SunmetalWeaponEffect,
-     // getVanariWizardsEffect(3, `Steedmaster`),
-     // StandardBearerEffect,
-    //  ShiningCompanyEffect,
+      // SunmetalWeaponEffect,
+      // getVanariWizardsEffect(3, `Steedmaster`),
+      // StandardBearerEffect,
+      //  ShiningCompanyEffect,
     ],
   },
   'Vanari Starshard Ballistas': {
@@ -320,16 +320,16 @@ const Units = {
         In addition, do not use the attack sequence for an attack made with Perfect Strike. Instead, roll a dice. On a 2+, inflict 1 mortal damage on the target.`,
         when: [COMBAT_PHASE],
       },
-     // SunmetalWeaponEffect,
-     // ShiningCompanyEffect,
+      // SunmetalWeaponEffect,
+      // ShiningCompanyEffect,
     ],
   },
   'Scinari Cathallar': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(spells, ['Darkness of the Soul'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Absorb Despair - Passive`,
         desc: `Effect: Ignore negative modifiers to the control scores of friendly Lumineth Realm-lords units while they are wholly within 12" of this unit.`,
@@ -344,12 +344,12 @@ const Units = {
     ],
   },
   'Scinari Enlightener': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(spells, ['Twinned Tether'])],
     }, */
     effects: [
-     // GenericEffects.WizardTwoSpellsEffect,
-     // DeepThinkersEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
+      // DeepThinkersEffect,
       {
         name: `Rune of Enthlai - Once Per Turn - Reaction: You declared the Speed of Hysh, Overwhelming Heat or Ethereal Blessings spell for this unit`,
         desc: `Effect: If that spell is successfully cast, roll a dice. On a 3+, after resolving the effect of that spell, this unit can immediately cast that spell a second time using the same casting roll. Do not count the second spell towards the number of Spell abilities this unit can use this turn.`,
@@ -364,12 +364,12 @@ const Units = {
     ],
   },
   'Scinari Calligrave': {
-  /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Erasure'])],
     }, */
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
-    //  DeepThinkersEffect,
+      //  GenericEffects.WizardOneSpellEffect,
+      //  DeepThinkersEffect,
       {
         name: `Realmscribe - Once Per Turn - Reaction: You declared a Summon Spell ability for this unit`,
         desc: `Effect: Change the casting roll for that spell to a value of 8 that cannot be modified.`,
@@ -379,7 +379,7 @@ const Units = {
   },
   'Scinari Loreseeker': {
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Lone Agent - Passive`,
         desc: `Effect: Add 5 to this units control score while it is more than 9" from all other friendly units.`,
@@ -393,12 +393,12 @@ const Units = {
     ],
   },
   'Alarith Spirit of the Mountain': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Faith of the Mountains'])],
     }, */
     effects: [
-    //  StonemageSymbiosisEffect,
-     // AllButImmovableEffect,
+      //  StonemageSymbiosisEffect,
+      // AllButImmovableEffect,
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Stoneheart Worldhammer is 3.`,
@@ -419,9 +419,9 @@ const Units = {
   },
   'Alarith Stoneguard': {
     effects: [
-    //  StandardBearerEffect,
-     // CrushingBlowEffect,
-     // EnduringAsRockEffect,
+      //  StandardBearerEffect,
+      // CrushingBlowEffect,
+      // EnduringAsRockEffect,
       {
         name: `Fortitude of the Earth - Passive`,
         desc: `Effect: This unit has Ward (5+) while all of its models are contesting an objective you control.`,
@@ -430,12 +430,12 @@ const Units = {
     ],
   },
   'Alarith Stonemage': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Gravitic Redirection'])],
     }, */
-     effects: [
-     // EnduringAsRockEffect,
-     // GenericEffects.WizardOneSpellEffect,
+    effects: [
+      // EnduringAsRockEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Stonemage stance`,
         desc: `Declare: Pick a friendly Alarith Aelf unit wholly within 12" of this unit to be the target. 
@@ -451,24 +451,24 @@ const Units = {
     ],
   },
   'Avalenor, the Stoneheart King': {
-  /*  mandatory: {
+    /*  mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Unshakeable Faith of the Mountains'])],
     }, */
     effects: [
-    //  StonemageSymbiosisEffect,
-    //  AllButImmovableEffect,
-     // EnduringAsRockEffect,
-     {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Firestealer Hammers is 4.`,
-      when: [COMBAT_PHASE],
-     }, 
-     {
-      name: `Stonemage Symbiosis - Passive`,
-      desc: `Effect: The Battle Damaged ability has no effect on this unit while it is wholly within 12" of a friendly Alarith Stonemage.`,
-      when: [DURING_GAME],
-    },
-     {
+      //  StonemageSymbiosisEffect,
+      //  AllButImmovableEffect,
+      // EnduringAsRockEffect,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Firestealer Hammers is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Stonemage Symbiosis - Passive`,
+        desc: `Effect: The Battle Damaged ability has no effect on this unit while it is wholly within 12" of a friendly Alarith Stonemage.`,
+        when: [DURING_GAME],
+      },
+      {
         name: `Command Ability - Unshakeable Faith of the Mountains`,
         desc: `Declare: Pick up to 3 dierent friendly Alarith Aelf units wholly within 12" of this unit to be the targets. 
         Effect: Add 1 to the Attacks characteristic of the targets melee weapons for the rest of the turn.`,
@@ -483,7 +483,7 @@ const Units = {
     ],
   },
   'Ellania and Ellathor, Eclipsian Warsages': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Salvation of Hysh'])],
     }, */
     effects: [
@@ -508,12 +508,12 @@ const Units = {
     ],
   },
   'Hurakan Windmage': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Windblast Vortex'])],
     }, */
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
-     // MoveLikeTheWindEffect,
+      //  GenericEffects.WizardOneSpellEffect,
+      // MoveLikeTheWindEffect,
       {
         name: `Transporting Vortex: Casting value of 7`,
         desc: `Declare: Pick a visible friendly Lumineth Realm-lords unit wholly within 12" of this unit and not in combat to be the target, then make a casting roll of 2D6. 
@@ -530,26 +530,26 @@ const Units = {
   },
   'Hurakan Windchargers': {
     effects: [
-    //  StandardBearerEffect,
-    //  MoveLikeTheWindEffect,
+      //  StandardBearerEffect,
+      //  MoveLikeTheWindEffect,
       {
         name: `Windcharger Arrows - Passive`,
-        desc: `Effect: Ward rolls cannot be made for damage points inflicted by this units shooting attacks`,
+        desc: `Effect: Ward rolls cannot be made for damage points inflicted by this units shooting attacks.`,
         when: [SHOOTING_PHASE],
       },
     ],
   },
   'Sevireth, Lord of the Seventh Wind': {
     effects: [
-     // IntoTheGaleOverSaveEffect,
-    //  LivingCycloneEffect,
-     // MoveLikeTheWindEffect,
-     // SpiritOfTheWindEffect,
-     {
-      name: `The Living Gale - Passive`,
-      desc: `Effect: This unit cannot be targeted by shooting attacks made by enemy units that are more than 9" from this unit.`,
-      when: [SHOOTING_PHASE],
-    },
+      // IntoTheGaleOverSaveEffect,
+      //  LivingCycloneEffect,
+      // MoveLikeTheWindEffect,
+      // SpiritOfTheWindEffect,
+      {
+        name: `The Living Gale - Passive`,
+        desc: `Effect: This unit cannot be targeted by shooting attacks made by enemy units that are more than 9" from this unit.`,
+        when: [SHOOTING_PHASE],
+      },
       {
         name: `Spirit of the Wind - Passive`,
         desc: `Effect: While friendly Hurakan units are wholly within 12" of this unit, they can use Shoot and/or Charge abilities even if they used a Run or Retreat ability in the same turn and no mortal damage is inflicted on them by Retreat abilities.`,
@@ -582,7 +582,7 @@ const Units = {
         Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll, then this unit can move 6", but it must end that move in combat.`,
         when: [COMBAT_PHASE],
       },
-      ],
+    ],
   },
   'Ydrilan Riverblades': {
     effects: [
@@ -597,7 +597,7 @@ const Units = {
         desc: `Effect: Remove this unit from the battlefield and set it up again on the battlefield wholly within 6" of a battlefield edge and more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
-      ],
+    ],
   },
   /*'Myari Lightcaller': {
     mandatory: {
@@ -643,7 +643,7 @@ const Units = {
       {
         name: `Grimhold Exile: Honour to Grimnir! - Once Per Battle`,
         desc: `Declare: Pick up to 3 friendly Fyreslayers Infantry units wholly within 12" of this unit to be the targets. 
-        Effect: You can re-roll charge rolls for the targets for the rest of the turn`,
+        Effect: You can reroll charge rolls for the targets for the rest of the turn`,
         when: [HERO_PHASE],
       },
       {
@@ -711,29 +711,29 @@ const Units = {
         desc: `Declare: Pick this unit and a friendly Callis and Toll unit in the same regiment as this unit if those units have not been deployed. 
         Effect: Set up those units in reserve in the shadows. Those units have now been deployed.`,
         when: [DURING_SETUP],
-       },
-       {
+      },
+      {
         name: `Toll's Companions: Saviours of Cinderfall - Passive`,
         desc: `Effect: While a friendly Callis and Toll unit is wholly within this units combat range, both this unit and that Callis and Toll unit have Ward (5+).`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Toll's Companions: Emerge from the Shadows`,
-         desc: `Declare: Pick this unit if it is in the shadows. 
+      },
+      {
+        name: `Toll's Companions: Emerge from the Shadows`,
+        desc: `Declare: Pick this unit if it is in the shadows. 
          Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units. Then, set up the Callis and Toll unit that was set up in the shadows with this unit wholly within 6" of it and more than 9" from all enemy units.`,
-         when: [MOVEMENT_PHASE],
-       },
-       {
+        when: [MOVEMENT_PHASE],
+      },
+      {
         name: `Duty Bound - Passive`,
         desc: `Effect: While every model in the same unit in the Regiment of Renown is contesting the same objective, add 1 to save rolls and ward rolls for that unit.`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Sigmar's Justice - Once Per Turn`,
-         desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
+      },
+      {
+        name: `Sigmar's Justice - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
          Effect: For the rest of the battle, add 1 to wound rolls for combat attacks made by units in this Regiment of Renown that target a unit that is marked for justice.`,
-         when: [DURING_SETUP],
-       },
+        when: [DURING_SETUP],
+      },
     ],
   },
   'ROR: Norgrimm`s Rune Throng': {
@@ -760,17 +760,17 @@ const Units = {
         desc: `Effect: Add 2 to the control scores of friendly Cities of Sigmar Duardin units, excluding Longbeards units, while they are wholly within 12" of this unit.`,
         when: [END_OF_TURN],
       },
-       {
+      {
         name: `Rune of Restored Hearth - Once Per Battle`,
         desc: `Effect: If the Runelord in the Regiment of Renown is contesting an objective, for the rest of the battle, units in this Regiment of Renown have Ward (5+) while they are contesting that objective.`,
         when: [HERO_PHASE],
-       },
-       {
-         name: `Wrath and Ruin: Chant value of 4`,
-         desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
+      },
+      {
+        name: `Wrath and Ruin: Chant value of 4`,
+        desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
          Effect: Roll 6 dice. If the chanting roll was 8+, roll 9 dice instead. For each 5+, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target as a result of those dice rolls, ignore positive modifiers to save rolls for the target until the start of your next turn.`,
-         when: [HERO_PHASE],
-       },
+        when: [HERO_PHASE],
+      },
     ],
   },
   'ROR: Elthwin`s Thorns': {
@@ -792,17 +792,17 @@ const Units = {
         desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot move into combat during any part of that move.`,
         when: [SHOOTING_PHASE],
       },
-       {
+      {
         name: `Gossamid Champion`,
         desc: `Declare: Pick the Arch-Revenant in this Regiment of Renown to use this ability, the pick a visible enemy unit within 12" of them to be the target. 
         Effect: Until the start of your next turn, subtract X from charge rolls for the target, where X is the number of damage points allocated to the target this phase by shooting attacks made by the Gossamid Archers unit in the Regiment of Renown, to a maximum of 6.`,
         when: [SHOOTING_PHASE],
-       },
-       {
-         name: `Flight of the Zephyrspites - Once Per Turn`,
-         desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
-         when: [SHOOTING_PHASE],
-       },
+      },
+      {
+        name: `Flight of the Zephyrspites - Once Per Turn`,
+        desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   'ROR: Gotrek Gurnisson': {
@@ -965,13 +965,13 @@ const Units = {
       {
         name: `Knight-Draconis: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
       {
         name: `Stormdrake Guard: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      }, 
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Hour of Retribution - Once Per Battle`,
         desc: `Effect: For the rest of the turn:
@@ -997,7 +997,7 @@ const Units = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1100,8 +1100,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

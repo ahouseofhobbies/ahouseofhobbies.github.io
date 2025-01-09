@@ -141,21 +141,21 @@ const DanceOfDeathEffect = {
 }
 
 const baseHagQueen = {
- /* mandatory: {
+  /* mandatory: {
     prayers: [keyPicker(Prayers, ['Touch of Death'])],
   },
   effects: [WitchbrewEffect], */
-} 
+}
 
 const baseSlaughterQueen = {
- /* mandatory: {
+  /* mandatory: {
     prayers: [keyPicker(Prayers, ['Dance of Doom'])],
     command_abilities: [keyPicker(CommandAbilities, ['Orgy of Slaughter'])],
   }, */
 }
 
 const baseBloodwrack = {
-/*  mandatory: {
+  /*  mandatory: {
     spells: [keyPicker(Spells, ['Enfeebling Foe'])],
   }, */
   effects: [
@@ -181,15 +181,15 @@ const baseBloodwrack = {
 }
 
 const ShadowLeapEffect = {
- /* name: `Shadow Leap`,
+  /* name: `Shadow Leap`,
   desc: `In your movement phase, instead of making a normal move or retreat with this unit, you can say that it will shadow leap. If you do so, remove this unit from the battlefield and set it up again anywhere on the battlefield more than 9" from all enemy units.`,
   when: [MOVEMENT_PHASE],
   shared: true, */
-} 
+}
 
 const Morathi = {
   'Morathi-Khaine': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Black Horror of Ulgu'])],
       command_abilities: [keyPicker(CommandAbilities, ['Worship Through Bloodshed'])],
     }, */
@@ -210,7 +210,7 @@ const Morathi = {
         desc: `Effect: Add 1 to casting rolls for this unit.`,
         when: [HERO_PHASE],
       },
-     // MorathiEffect,
+      // MorathiEffect,
     ],
   },
   'The Shadow Queen': {
@@ -221,7 +221,7 @@ const Morathi = {
         Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If any models are slain by this ability, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly Khinerai and Melusai units while they are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
       },
-     // MorathiEffect,
+      // MorathiEffect,
       {
         name: `Iron Heart of Khaine - Passive`,
         desc: `Effect: You cannot allocate more than 3 damage points to this unit each turn. Once 3 points have been allocated to this unit in a turn, any further damage points that would be allocated to it are ignored. 
@@ -244,7 +244,7 @@ const Units = {
   },
   'The Shadow Queen': {
     ...Morathi['The Shadow Queen'],
-   /* mandatory: {
+    /* mandatory: {
       units: [keyPicker(Morathi, ['Morathi-Khaine'])],
     },*/
   },
@@ -257,8 +257,8 @@ const Units = {
         Effect: Roll a dice. On a 3+, the target has Ward (5+) for the rest of the turn..`,
         when: [HERO_PHASE],
       },
-    ], 
-  }, 
+    ],
+  },
   'Hag Queen on Cauldron of Blood': {
     /*mandatory: {
       prayers: [...baseHagQueen.mandatory.prayers],
@@ -283,7 +283,7 @@ const Units = {
         when: [HERO_PHASE],
       },
     ],
-  }, 
+  },
   'High Gladiatrix': {
     effects: [
       //DanceOfDeathEffect,
@@ -302,7 +302,7 @@ const Units = {
     ],
   },
   'Slaughter Queen': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [...baseSlaughterQueen.mandatory.command_abilities],
       prayers: [...baseSlaughterQueen.mandatory.prayers],
     }, */
@@ -313,8 +313,8 @@ const Units = {
         Effect: Roll a dice. On a 3+, add 1 to the Attacks characteristic of the targets melee weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-    ], 
-  }, 
+    ],
+  },
   'Avatar of Khaine': {
     effects: [
       // AltarOfKhaineEffect,
@@ -361,7 +361,7 @@ const Units = {
       //DanceOfDeathEffect,
     ],
   },
-    'Sisters of Slaughter with Bladed Bucklers': {
+  'Sisters of Slaughter with Bladed Bucklers': {
     effects: [
       {
         name: `Dance of Diversion - Passive`,
@@ -376,12 +376,12 @@ const Units = {
     ],
   },
   'Slaughter Queen on Cauldron of Blood': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [...baseSlaughterQueen.mandatory.prayers],
       command_abilities: [...baseSlaughterQueen.mandatory.command_abilities],
     }, */
     effects: [
-    /*  AltarOfKhaineEffect,
+      /*  AltarOfKhaineEffect,
       BladedImpactEffect,
       BloodshieldEffect, */
       {
@@ -405,12 +405,12 @@ const Units = {
     ],
   },
   'Bloodwrack Shrine': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [...baseBloodwrack.mandatory.spells],
     }, */
     effects: [
-     // ...baseBloodwrack.effects,
-     // BladedImpactEffect,
+      // ...baseBloodwrack.effects,
+      // BladedImpactEffect,
       {
         name: `Aura of Agony`,
         desc: `Declare: Pick up to 3 different enemy units within 9" of this unit to be the targets. 
@@ -438,7 +438,7 @@ const Units = {
         Effect: Roll a dice. If the roll exceeds the targets Health characteristic, the target has Strike-last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-    //  TurnedToCrystalEffect,
+      //  TurnedToCrystalEffect,
     ],
   },
   'Blood Stalkers': {
@@ -448,29 +448,29 @@ const Units = {
         desc: `Effect: If this unit has not used a Move ability this turn and was not set up this turn, this units shooting attacks score critical hits on unmodified hit rolls of 5+ for the rest of the turn.`,
         when: [SHOOTING_PHASE],
       },
-     // HeartseekersEffect,
+      // HeartseekersEffect,
     ],
   },
   'Bloodwrack Medusa': {
- //   ...baseBloodwrack,
- effects: [
-  {
-    name: `Bloodwrack Stare - Passive`,
-    desc: `Effect: Each time this unit attacks with its Bloodwrack Stare, if the attack scores a hit, roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on that unit. You cannot pick the same enemy unit to be targeted by attacks made with a Bloodwrack Stare more than once per phase.`,
-    when: [SHOOTING_PHASE],
-  },
- // GenericEffects.WizardOneSpellEffect,
-  {
-    name: `Melusai Kin - Reaction: You declared a Fight ability for this unit`,
-    desc: `Effect: Pick a friendly non-Hero Melusai unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately aer the Fight ability used by this unit has been resolved.`,
-    when: [COMBAT_PHASE],
-  },
-],
+    //   ...baseBloodwrack,
+    effects: [
+      {
+        name: `Bloodwrack Stare - Passive`,
+        desc: `Effect: Each time this unit attacks with its Bloodwrack Stare, if the attack scores a hit, roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on that unit. You cannot pick the same enemy unit to be targeted by attacks made with a Bloodwrack Stare more than once per phase.`,
+        when: [SHOOTING_PHASE],
+      },
+      // GenericEffects.WizardOneSpellEffect,
+      {
+        name: `Melusai Kin - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly non-Hero Melusai unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately aer the Fight ability used by this unit has been resolved.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
   },
   'Doomfire Warlocks': {
-   // mandatory: { spells: [keyPicker(Spells, ['Doomfire'])] },
+    // mandatory: { spells: [keyPicker(Spells, ['Doomfire'])] },
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
+      //  GenericEffects.WizardOneSpellEffect,
       {
         name: `Outmanoeuvre - Passive`,
         desc: `Effect: When this unit uses the Redeploy command, if you roll a 1-3 when determining the distance this unit can move, you can use a value of 4 instead.`,
@@ -520,8 +520,8 @@ const Units = {
         desc: `Effect: After resolving the effect of that Fight ability, this unit can immediately move D6". It cannot end that move in combat with any units that it was not already in combat with at the start of the move.`,
         when: [COMBAT_PHASE],
       },
-     // ...DescendToBattleEffects,
-     // FightAndFlightEffect,
+      // ...DescendToBattleEffects,
+      // FightAndFlightEffect,
     ],
   },
   /*'Morgwaeth the Bloodied': {
@@ -554,11 +554,11 @@ const Units = {
     ],
   },
   'Melusai Ironscale': {
-   // mandatory: { command_abilities: [keyPicker(CommandAbilities, ['Wrath of the Scathborn'])] },
+    // mandatory: { command_abilities: [keyPicker(CommandAbilities, ['Wrath of the Scathborn'])] },
     effects: [
       {
         name: `Wrath of the Scathborn - Passive`,
-        desc: `Effect: You can re-roll charge rolls for friendly Melusai units while they are wholly within 12" of this unit.`,
+        desc: `Effect: You can reroll charge rolls for friendly Melusai units while they are wholly within 12" of this unit.`,
         when: [CHARGE_PHASE],
       },
       {
@@ -566,10 +566,10 @@ const Units = {
         desc: `Effect: Pick a friendly non-Hero Melusai unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to the Attacks characteristic of the targets melee weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-     // TurnedToCrystalEffect,
+      // TurnedToCrystalEffect,
     ],
   },
- /* 'Slythael Shadestalker': {
+  /* 'Slythael Shadestalker': {
     effects: [
      // ShadowLeapEffect,
       {
@@ -584,12 +584,12 @@ const Units = {
       },
     ], 
   }, */
- /* 'The Shadeborn': {
+  /* 'The Shadeborn': {
     effects: [
     //  ShadowLeapEffect
     ],
   }, */
- /* "Gryselle's Arenai": {
+  /* "Gryselle's Arenai": {
     effects: [
       {
         name: `Champion`,
@@ -605,7 +605,7 @@ const Units = {
     ],
   }, */
   'Krethusa The Croneseer': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(prayers, ['Murder of Crows'])],
     }, */
     effects: [
@@ -640,7 +640,7 @@ const Units = {
       {
         name: `Grimhold Exile: Honour to Grimnir! - Once Per Battle`,
         desc: `Declare: Pick up to 3 friendly Fyreslayers Infantry units wholly within 12" of this unit to be the targets. 
-        Effect: You can re-roll charge rolls for the targets for the rest of the turn`,
+        Effect: You can reroll charge rolls for the targets for the rest of the turn`,
         when: [HERO_PHASE],
       },
       {
@@ -708,29 +708,29 @@ const Units = {
         desc: `Declare: Pick this unit and a friendly Callis and Toll unit in the same regiment as this unit if those units have not been deployed. 
         Effect: Set up those units in reserve in the shadows. Those units have now been deployed.`,
         when: [DURING_SETUP],
-       },
-       {
+      },
+      {
         name: `Toll's Companions: Saviours of Cinderfall - Passive`,
         desc: `Effect: While a friendly Callis and Toll unit is wholly within this units combat range, both this unit and that Callis and Toll unit have Ward (5+).`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Toll's Companions: Emerge from the Shadows`,
-         desc: `Declare: Pick this unit if it is in the shadows. 
+      },
+      {
+        name: `Toll's Companions: Emerge from the Shadows`,
+        desc: `Declare: Pick this unit if it is in the shadows. 
          Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units. Then, set up the Callis and Toll unit that was set up in the shadows with this unit wholly within 6" of it and more than 9" from all enemy units.`,
-         when: [MOVEMENT_PHASE],
-       },
-       {
+        when: [MOVEMENT_PHASE],
+      },
+      {
         name: `Duty Bound - Passive`,
         desc: `Effect: While every model in the same unit in the Regiment of Renown is contesting the same objective, add 1 to save rolls and ward rolls for that unit.`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Sigmar's Justice - Once Per Turn`,
-         desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
+      },
+      {
+        name: `Sigmar's Justice - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
          Effect: For the rest of the battle, add 1 to wound rolls for combat attacks made by units in this Regiment of Renown that target a unit that is marked for justice.`,
-         when: [DURING_SETUP],
-       },
+        when: [DURING_SETUP],
+      },
     ],
   },
   'ROR: Norgrimm`s Rune Throng': {
@@ -757,17 +757,17 @@ const Units = {
         desc: `Effect: Add 2 to the control scores of friendly Cities of Sigmar Duardin units, excluding Longbeards units, while they are wholly within 12" of this unit.`,
         when: [END_OF_TURN],
       },
-       {
+      {
         name: `Rune of Restored Hearth - Once Per Battle`,
         desc: `Effect: If the Runelord in the Regiment of Renown is contesting an objective, for the rest of the battle, units in this Regiment of Renown have Ward (5+) while they are contesting that objective.`,
         when: [HERO_PHASE],
-       },
-       {
-         name: `Wrath and Ruin: Chant value of 4`,
-         desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
+      },
+      {
+        name: `Wrath and Ruin: Chant value of 4`,
+        desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
          Effect: Roll 6 dice. If the chanting roll was 8+, roll 9 dice instead. For each 5+, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target as a result of those dice rolls, ignore positive modifiers to save rolls for the target until the start of your next turn.`,
-         when: [HERO_PHASE],
-       },
+        when: [HERO_PHASE],
+      },
     ],
   },
   'ROR: Elthwin`s Thorns': {
@@ -789,17 +789,17 @@ const Units = {
         desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot move into combat during any part of that move.`,
         when: [SHOOTING_PHASE],
       },
-       {
+      {
         name: `Gossamid Champion`,
         desc: `Declare: Pick the Arch-Revenant in this Regiment of Renown to use this ability, the pick a visible enemy unit within 12" of them to be the target. 
         Effect: Until the start of your next turn, subtract X from charge rolls for the target, where X is the number of damage points allocated to the target this phase by shooting attacks made by the Gossamid Archers unit in the Regiment of Renown, to a maximum of 6.`,
         when: [SHOOTING_PHASE],
-       },
-       {
-         name: `Flight of the Zephyrspites - Once Per Turn`,
-         desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
-         when: [SHOOTING_PHASE],
-       },
+      },
+      {
+        name: `Flight of the Zephyrspites - Once Per Turn`,
+        desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   'ROR: Gotrek Gurnisson': {
@@ -962,13 +962,13 @@ const Units = {
       {
         name: `Knight-Draconis: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
       {
         name: `Stormdrake Guard: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      }, 
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Hour of Retribution - Once Per Battle`,
         desc: `Effect: For the rest of the turn:
@@ -1049,7 +1049,7 @@ const Units = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1152,8 +1152,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

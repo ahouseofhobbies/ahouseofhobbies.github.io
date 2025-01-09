@@ -96,7 +96,7 @@ const BaseGargantEffects = [
 ] */
 
 const Units = {
-  'Kragnos': {
+  Kragnos: {
     effects: [
       {
         name: `Battle Damaged - Passive`,
@@ -115,8 +115,8 @@ const Units = {
       },
       {
         name: `Rampaging Destruction - Once Per Turn`,
-        desc: `Effect: If this unit charged this phase, pick 1 of the following effects:  
-        Roll a dice for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.  
+        desc: `Effect: If this unit charged this phase, pick 1 of the following effects: 
+        Roll a dice for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. 
         Pick an enemy Monster in combat with this unit and roll 2D6. On a 7, this ability has no effect. Otherwise, inflict an amount of mortal damage on that unit equal to the results on the dice used for the 2D6 roll multiplied together. For example, a 2D6 roll of 2 and 6 would inflict 12 mortal damage (2x6).`,
         when: [CHARGE_PHASE],
       },
@@ -129,7 +129,7 @@ const Units = {
   },
   'King Brodd': {
     effects: [
-     // ...BaseMegaGargantEffects,
+      // ...BaseMegaGargantEffects,
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 15 or more damage points, the Attacks characteristic of its Obelisk of Tor Crania is 4 and this unit has a Control characteristic of 10.`,
@@ -163,19 +163,19 @@ const Units = {
   },
   'Beast-Smasher': {
     effects: [
-     // ...BaseMegaGargantEffects,
+      // ...BaseMegaGargantEffects,
       {
         name: `Beast-Breaking Strike`,
         desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
         Effect: This unit can make a pile-in move. Then, roll a dice. On a 4+, inflict 5D6 mortal damage on the target.`,
         when: [COMBAT_PHASE],
-      //  shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
+        //  shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
       },
       {
         name: `Behemoth Brawler - Passive`,
         desc: `Effect: Subtract 1 from the Attacks characteristic of enemy Monsters while they are in combat with this unit.`,
         when: [COMBAT_PHASE],
-       // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
+        // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
       },
       {
         name: `Son of Behemat - Passive`,
@@ -196,20 +196,20 @@ const Units = {
   },
   Gatebreaker: {
     effects: [
-     // ...BaseMegaGargantEffects,
+      // ...BaseMegaGargantEffects,
       {
         name: `Pulverising Strike`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
         Effect: This unit can make a pile-in move. Then, roll a dice. On a 4+, inflict 4D6 mortal damage on the target.`,
         when: [COMBAT_PHASE],
-       // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
+        // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
       },
       {
         name: `Smash Down - Once Per Turn`,
         desc: `Declare: Pick a terrain feature within 3" of this unit to be the target. 
         Effect: If the target is Faction Terrain, inflict D3+3 mortal damage on it. Then, roll a D3 for each non-Monster unit (friendly and enemy) within 3" of the target. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.`,
         when: [COMBAT_PHASE],
-       // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
+        // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
       },
       {
         name: `Son of Behemat - Passive`,
@@ -230,20 +230,20 @@ const Units = {
   },
   'Kraken-Eater': {
     effects: [
-    //  ...BaseMegaGargantEffects,
+      //  ...BaseMegaGargantEffects,
       {
         name: `Get Orf Me Land! - Once Per Turn`,
         desc: `Declare: Pick an objective within 1" of this unit to be the target. 
         Effect: Roll a dice. On a 2+, move the target 2D6" to a new position on the battlefield more than 1" from all models, terrain features and other objectives. That objective is treated as if it were in the same territories as it was when it was first set up on the battlefield for the purposes of the battleplan.`,
         when: [HERO_PHASE],
-       // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
+        // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
       },
       {
         name: `Stuff 'Em In Me Net - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
         Effect: Roll 3 dice. For each roll that is at least double the targets Health characteristic, 1 model in the target unit is slain.`,
         when: [COMBAT_PHASE],
-       // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
+        // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
       },
       {
         name: `Son of Behemat - Passive`,
@@ -264,19 +264,19 @@ const Units = {
   },
   Warstomper: {
     effects: [
-    //  ...BaseMegaGargantEffects,
+      //  ...BaseMegaGargantEffects,
       {
         name: `Hurled Body`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
         Effect: Roll a dice. If the roll is at least double the targets Health characteristic, 1 model in that unit is slain and you can pick a visible enemy unit within 12" of this unit. Inflict an amount of mortal damage on that unit equal to the targets Health characteristic.`,
         when: [COMBAT_PHASE],
-      //  shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
+        //  shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
       },
       {
         name: `Titanic Boulderclub - Passive`,
         desc: `Effect: If all of the attacks made with this units Titanic Boulderclub target the same enemy unit, for every 5 models in the target unit, add 2 to its Attacks characteristic for the rest of the phase.`,
         when: [COMBAT_PHASE],
-       // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
+        // shared: true, // it's not normally correct to set this directly on units, but this unit gets extended for the merc version
       },
       {
         name: `Son of Behemat - Passive`,
@@ -308,23 +308,23 @@ const Units = {
         Effect: Roll a dice. If the roll is at least double the targets Health characteristic, 1 model in the target unit is slain.`,
         when: [COMBAT_PHASE],
       },
-    //  ...BaseGargantEffects
+      //  ...BaseGargantEffects
     ],
   },
   'Mancrusher Mob': {
     effects: [
-     // ...BaseGargantEffects,
-     {
-      name: `Keep Up! - Passive`,
-      desc: `Effect: While this unit is wholly within 12" of a friendly Mega-Gargant, this unit can use Charge abilities even if it used a Run ability in the same turn.`,
-      when: [CHARGE_PHASE],
-    },
-    {
-      name: `Stuff 'Em in Me Bag - Once Per Turn`,
-      desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+      // ...BaseGargantEffects,
+      {
+        name: `Keep Up! - Passive`,
+        desc: `Effect: While this unit is wholly within 12" of a friendly Mega-Gargant, this unit can use Charge abilities even if it used a Run ability in the same turn.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Stuff 'Em in Me Bag - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
       Effect: Roll a dice. If the roll is at least double the targets Health characteristic, 1 model in the target unit is slain.`,
-      when: [COMBAT_PHASE],
-    },
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Oo's Under the Heel Now! - Passive`,
         desc: `Effect: Each time this unit uses the Gargant Charge ability, add 1 to the amount of mortal damage inflicted, if any, for each model in this unit.`,
@@ -332,7 +332,7 @@ const Units = {
       },
     ],
   },
- /* 'Bonegrinder Mega-Gargant': {
+  /* 'Bonegrinder Mega-Gargant': {
     effects: [
      // SonOfBehematEffect,
     //  GenericEffects.Terror,
@@ -520,7 +520,7 @@ const Units = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },

@@ -11,7 +11,7 @@ import {
 } from 'types/phases'
 
 const Flavors = {
-  "Eternal Starhost": {
+  'Eternal Starhost': {
     effects: [
       {
         name: `Celestial Translocation - Once Per Turn`,
@@ -33,13 +33,13 @@ const Flavors = {
     ],
   },
 
-  "Sunclaw Starhost": {
+  'Sunclaw Starhost': {
     effects: [
       {
         name: `Vengeance of Azyr - Once Per Turn`,
         desc: `Declare: Pick up to 3 friendly Saurus or Kroxigor units that are in combat to be the targets. 
-        Effect: For each target:  
-        Make a pile-in move.  
+        Effect: For each target: 
+        Make a pile-in move. 
         Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
         when: [END_OF_TURN],
       },

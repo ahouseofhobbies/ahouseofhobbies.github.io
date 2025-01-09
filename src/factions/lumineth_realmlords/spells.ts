@@ -12,10 +12,10 @@ import {
 
 const Spells = {
   //Lore of Hysh
- 'Lore of Hysh': {
+  'Lore of Hysh': {
     effects: [
       {
-        name: `Speed of Hysh: Casting value of 5 (UNLIMITED) `,
+        name: `Speed of Hysh: Casting value of 5 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Lumineth Realm-lords Wizard to cast this spell, pick a visible friendly Lumineth Realm-lords unit wholly within 18" of them to be the target, then make a casting roll of 2D6. 
         Effect: Add 4" to the targets Move characteristic until the start of your next turn.`,
         when: [HERO_PHASE],

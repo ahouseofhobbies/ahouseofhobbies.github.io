@@ -55,10 +55,10 @@ const BattleTraits = {
       },
       {
         name: `Charnel Throne (Faction Terrain) - Steward of the Realm - Passive`,
-        desc: `Effect: While this terrain feature has a Steward:  
-        The Steward cannot use Move abilities.  
-        Instead of measuring range or visibility to the Steward, measure to this terrain feature instead.  
-        All attacks that would target the Steward target this terrain feature instead.  
+        desc: `Effect: While this terrain feature has a Steward: 
+        The Steward cannot use Move abilities. 
+        Instead of measuring range or visibility to the Steward, measure to this terrain feature instead. 
+        All attacks that would target the Steward target this terrain feature instead. 
         If this terrain feature is destroyed, before removing it from the battlefield, inflict D3 mortal damage on the Steward. Then, set up the Steward on the battlefield within 3" of this terrain feature and not in combat. That unit is no longer the Steward. If it is not possible to set up the Steward, it is slain.`,
         when: [DURING_GAME],
       },

@@ -19,7 +19,7 @@ import {
   CHARGE_PHASE,
   COMBAT_PHASE,
   END_OF_TURN,
-  WARDS_PHASE
+  WARDS_PHASE,
 } from 'types/phases'
 
 export const OneDropDeploymentEffect = {
@@ -86,8 +86,8 @@ const CoreRules: TEntry[] = [
         name: `Activate Place of Power`,
         desc: `Declare: Pick a friendly Hero within 3" of any Places of Power to use this ability. 
         Effect: Roll a dice. On a 1, inflict D3 mortal damage on that Hero. On a 2+: 
-        • If that Hero is a Wizard or Priest, add 1 to casting rolls or chanting rolls for that Hero this turn. 
-        • If that Hero is not a Wizard or Priest, they can use the ‘Unbind’ or ‘Banish Manifestation’ ability this turn as if they had Wizard (1). `,
+         If that Hero is a Wizard or Priest, add 1 to casting rolls or chanting rolls for that Hero this turn. 
+         If that Hero is not a Wizard or Priest, they can use the 'Unbind' or 'Banish Manifestation' ability this turn as if they had Wizard (1). `,
         when: [START_OF_TURN],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
@@ -95,22 +95,22 @@ const CoreRules: TEntry[] = [
         name: `Command Ability - Rally`,
         desc: `Declare: Pick a friendly unit that is not in combat to use this ability. 
         Effect: Make 6 rally rolls of D6. For each 4+, you receive 1 rally point. Rally points can be spent in the following ways: 
-        • For each rally point spent, Heal (1) that unit. 
-        • You can spend a number of rally points equal to the Health characteristic of that unit to return a slain model to that unit. 
+         For each rally point spent, Heal (1) that unit. 
+         You can spend a number of rally points equal to the Health characteristic of that unit to return a slain model to that unit. 
         You can spend the rally points in any combination of the above. Unspent rally points are then lost. `,
         when: [HERO_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
         name: `Musician - Passive`,
-        desc: `Effect: While this unit contains any musicians, if it uses the ‘Rally’ command, you can make one additional rally roll of D6. `,
+        desc: `Effect: While this unit contains any musicians, if it uses the 'Rally' command, you can make one additional rally roll of D6.`,
         when: [HERO_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
         name: `Banish Manifestation`,
         desc: `Declare: Pick a friendly Wizard or Priest to use this ability, pick a manifestation within 30" of them to be the target, then make a banishment roll of 2D6. Add 1 to the banishment roll for each additional enemy manifestation on the battlefield after the first.
-        Effect: If the banishment roll equals or exceeds the banishment value listed on the manifestation’s warscroll, it is banished and removed from play. You cannot pick the same manifestation as the target of this ability more than once per turn.  `,
+        Effect: If the banishment roll equals or exceeds the banishment value listed on the manifestation's warscroll, it is banished and removed from play. You cannot pick the same manifestation as the target of this ability more than once per turn. `,
         when: [HERO_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
@@ -145,14 +145,14 @@ const CoreRules: TEntry[] = [
       {
         name: `Retreat`,
         desc: `Declare: Pick a friendly unit that is in combat to use this ability. 
-        Effect: Inflict D3 mortal damage on that unit. That unit can move a distance up to its Move characteristic. That unit can move through the combat ranges of any enemy units but cannot end that move within an enemy unit’s combat range.`,
+        Effect: Inflict D3 mortal damage on that unit. That unit can move a distance up to its Move characteristic. That unit can move through the combat ranges of any enemy units but cannot end that move within an enemy unit's combat range.`,
         when: [MOVEMENT_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
         name: `Command Ability - At the Double - Reaction: You declared a Run ability`,
         desc: `Used By: The unit using that Run ability. 
-        Effect: Do not make a run roll as part of that Run ability. Instead, add 6" to that unit’s Move characteristic to determine the distance each model in that unit can move as part of that Run ability.`,
+        Effect: Do not make a run roll as part of that Run ability. Instead, add 6" to that unit's Move characteristic to determine the distance each model in that unit can move as part of that Run ability.`,
         when: [MOVEMENT_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
@@ -171,7 +171,7 @@ const CoreRules: TEntry[] = [
       },
       {
         name: `Shoot`,
-        desc: `Declare: Pick a friendly unit that has not used a Run or Retreat ability this turn to use this ability. Then, pick one or more enemy units as the target(s) of that unit’s attacks (see 16.0). 
+        desc: `Declare: Pick a friendly unit that has not used a Run or Retreat ability this turn to use this ability. Then, pick one or more enemy units as the target(s) of that unit's attacks (see 16.0). 
         Effect: Resolve shooting attacks against the target unit(s).`,
         when: [SHOOTING_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
@@ -186,14 +186,14 @@ const CoreRules: TEntry[] = [
       {
         name: `Charge`,
         desc: `Declare: Pick a friendly unit that is not in combat and has not used a Run or Retreat ability this turn to use this ability. Then, make a charge roll of 2D6. 
-        Effect: That unit can move a distance up to the value of the charge roll. That unit can move through the combat ranges of any enemy units and must end that move within ½" of a visible enemy unit. If it does so, the unit using this ability has charged.`,
+        Effect: That unit can move a distance up to the value of the charge roll. That unit can move through the combat ranges of any enemy units and must end that move within 1/2" of a visible enemy unit. If it does so, the unit using this ability has charged.`,
         when: [CHARGE_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
         name: `Command Ability - Forward to Victory - You declared a Charge ability`,
         desc: `Used By: The unit using that Charge ability. 
-        Effect: You can re-roll the charge roll.`,
+        Effect: You can reroll the charge roll.`,
         when: [CHARGE_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
@@ -219,7 +219,7 @@ const CoreRules: TEntry[] = [
       },
       {
         name: `Standard Bearer - Passive`,
-        desc: `Effect: While this unit contains any standard bearers, add 1 to this unit’s control score.`,
+        desc: `Effect: While this unit contains any standard bearers, add 1 to this unit's control score.`,
         when: [END_OF_TURN],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
@@ -246,30 +246,30 @@ const CoreRules: TEntry[] = [
       },
       {
         name: `Ward Save - Passive`,
-        desc: `Effect: In step 1 of the damage sequence (see 18.0), make a ward roll of D6 for each damage point in this unit’s damage pool. If the roll equals or exceeds this unit’s ward value, remove that damage point from the damage pool.`,
+        desc: `Effect: In step 1 of the damage sequence (see 18.0), make a ward roll of D6 for each damage point in this unit's damage pool. If the roll equals or exceeds this unit's ward value, remove that damage point from the damage pool.`,
         when: [WARDS_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
         name: `Guarded Hero - Passive`,
-        desc: `Effect: If this Hero is within the combat range of a friendly unit that is not a Hero: • Subtract 1 from hit rolls for shooting attacks that target this Hero. • If this Hero is Infantry, they cannot be picked as the target of shooting attacks made by units more than 12" from them.`,
+        desc: `Effect: If this Hero is within the combat range of a friendly unit that is not a Hero: Subtract 1 from hit rolls for shooting attacks that target this Hero. If this Hero is Infantry, they cannot be picked as the target of shooting attacks made by units more than 12" from them.`,
         when: [SHOOTING_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
     ],
   },
   /* {
-    name: 'General’s Handbook 24’',
+    name: 'General's Handbook 24'',
     effects: [
       {
         name: `Honour Guard - Special Assignment`,
         desc: `Declare: Pick a friendly unit in your general's regiment that is not your gerneral to be the honour gurard. You can pick a unit in reserve. If you use this ability, you cannot use any other Honour Guard abilities.
         Effect: Pick 1 of the following weapon abilities:
-        • Anti-Infantry(+1 Rend)
-        • Anti-Cavalry(+1 Rend)
-        • Anti-Monster(+1 Rend)
-        • Anti-War Machine(+1 Rend)
-        • Anti-Beast(+1 Rend)
+         Anti-Infantry(+1 Rend)
+         Anti-Cavalry(+1 Rend)
+         Anti-Monster(+1 Rend)
+         Anti-War Machine(+1 Rend)
+         Anti-Beast(+1 Rend)
         In any turn in which the honour guard charged, that unit's melee weapons have the weapons ability you picked. This has no effect on Companion weapons.`,
         when: [DURING_SETUP],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
@@ -285,8 +285,8 @@ const CoreRules: TEntry[] = [
         name: `Honour Guard - Bodyguard`,
         desc: `Declare: Pick a friendly unit in your general's regiment that is not your gerneral to be the honour gurard. You can pick a unit in reserve. If you use this ability, you cannot use any other Honour Guard abilities.
         Effect: Subtract 1 from the Attacks characteristic of enemy units' melee weapons while they are in combat with your general if both of the following are true:
-        • The honour guard is wholly within 6" of your general.
-        • The honour guard did not charge this turn`,
+         The honour guard is wholly within 6" of your general.
+         The honour guard did not charge this turn`,
         when: [DURING_SETUP],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       }, 

@@ -23,7 +23,7 @@ const CommandTraits = {
       },
     ],
   },
-/*  Gastromancer: {
+  /*  Gastromancer: {
     effects: [
       {
         name: `Gastromancer`,
@@ -54,7 +54,7 @@ const CommandTraits = {
     effects: [
       {
         name: `Touched by the Everwinter - Passive`,
-        desc: `Effect: If this unit is not a Priest, it has Priest (1). If this unit is already a Priest, you can re-roll chanting rolls of 1 for it instead. If this unit is a Wizard, it cannot use Spell abilities and Prayer abilities in the same phase.`,
+        desc: `Effect: If this unit is not a Priest, it has Priest (1). If this unit is already a Priest, you can reroll chanting rolls of 1 for it instead. If this unit is a Wizard, it cannot use Spell abilities and Prayer abilities in the same phase.`,
         when: [HERO_PHASE],
       },
     ],

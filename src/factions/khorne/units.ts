@@ -153,8 +153,8 @@ const Units = {
       {
         name: `Ensnaring Lash - Once Per Turn`,
         desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
-        Effect: If the target is in combat with this unit when the target is picked to use a Fight ability:  
-        It must pick this unit to be the target of the pile-in move (Core Rules, 15.3).  
+        Effect: If the target is in combat with this unit when the target is picked to use a Fight ability: 
+        It must pick this unit to be the target of the pile-in move (Core Rules, 15.3). 
         Subtract 1 from hit rolls and wound rolls for attacks made as part of that Fight ability against this unit.`,
         when: [COMBAT_PHASE],
       },
@@ -223,7 +223,7 @@ const Units = {
         desc: `Effect: While this unit is wholly within 12" of a friendly Flesh Hounds unit, add 2 to charge rolls for this unit. In addition, while any friendly Flesh Hounds units are wholly within 12" of this unit, they can ignore the effect of the Beast ability.`,
         when: [CHARGE_PHASE, END_OF_TURN],
       },
-    //  UnflaggingHunterEffect,
+      //  UnflaggingHunterEffect,
       {
         name: `Stalk the Prey - Enemy Movement Phase`,
         desc: `Effect: If this units quarry moved this phase, this unit can move up to 8". It cannot move into combat during any part of that move and must end that move closer to its quarry.`,
@@ -258,7 +258,7 @@ const Units = {
         Effect: Make a crushing charge roll of D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [CHARGE_PHASE],
       },
-    //  SlaughterousChargeEffect,
+      //  SlaughterousChargeEffect,
       {
         name: `Herald of Trampling Death - Once Per Battle`,
         desc: `Declare: Pick a friendly Bloodcrushers unit within this units combat range to be the target. 
@@ -268,7 +268,7 @@ const Units = {
     ],
   },
   'Bloodmaster, Herald of Khorne': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(Prayers, ['Bloodmark'])],
     }, */
     effects: [
@@ -286,7 +286,7 @@ const Units = {
         desc: `Effect: If this unit is in combat, you can return D3 slain models to this unit.`,
         when: [END_OF_TURN],
       },
-     // ChargeMusicianEffect,
+      // ChargeMusicianEffect,
     ],
   },
   Bloodcrushers: {
@@ -297,11 +297,11 @@ const Units = {
         Effect: Make a crushing charge roll of D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [CHARGE_PHASE],
       },
-     // MurderousChargeEffect,
+      // MurderousChargeEffect,
     ],
   },
   'Herald of Khorne on Blood Throne': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(Prayers, ['Blood Call'])],
     }, */
     effects: [
@@ -401,7 +401,7 @@ const Units = {
       },
     ],
   },
- /* 'Valkia the Bloody': {
+  /* 'Valkia the Bloody': {
     effects: [
       {
         name: `The Red Angel of Slaughter`,
@@ -426,7 +426,7 @@ const Units = {
     ],
   }, */
   'Mighty Lord of Khorne': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(CommandAbilities, ["'Bring Me Their Skull!'"])],
     }, */
     effects: [
@@ -459,7 +459,7 @@ const Units = {
   },
   'Lord of Khorne on Juggernaut': {
     effects: [
-     // BrassCladShieldEffect,
+      // BrassCladShieldEffect,
       // SlaughterousChargeEffect,
       {
         name: `Slaughterous Charge`,
@@ -469,15 +469,15 @@ const Units = {
       },
       {
         name: `Lord of the Brass Stampede - Passive`,
-        desc: `Effect: If this unit charged this turn, for the rest of the turn, the following effects apply to friendly Blades of Khorne Cavalry units while they are wholly within 18" of this unit:  
-        Add 1 to charge rolls for those units.  
-        You can re-roll crushing charge rolls for those units.`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, the following effects apply to friendly Blades of Khorne Cavalry units while they are wholly within 18" of this unit: 
+        Add 1 to charge rolls for those units. 
+        You can reroll crushing charge rolls for those units.`,
         when: [CHARGE_PHASE],
       },
     ],
   },
   Slaughterpriest: {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(Prayers, ['Blood Boil'])],
     }, */
     effects: [
@@ -485,8 +485,8 @@ const Units = {
       {
         name: `Blood Sacrifice - Once Per Turn`,
         desc: `Declare: Pick a friendly unit within this units combat range to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. 
         Gain 1 blood tithe point.`,
         when: [HERO_PHASE],
       },
@@ -547,8 +547,8 @@ const Units = {
   },
   'Blood Warriors': {
     effects: [
-    //  ...WarriorEffects,
-     // BraveryStandardBearerEffect,
+      //  ...WarriorEffects,
+      // BraveryStandardBearerEffect,
       {
         name: `No Respite - Passive`,
         desc: `Effect: Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll 2 dice. For each 5+, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
@@ -563,11 +563,11 @@ const Units = {
         desc: `Effect: Add 1 to the Rend characteristic of this units melee weapons for the rest of the turn if this unit charged in the same turn.`,
         when: [COMBAT_PHASE],
       },
-     // BraveryStandardBearerEffect,
-     // ChargeMusicianEffect,
+      // BraveryStandardBearerEffect,
+      // ChargeMusicianEffect,
     ],
   },
-/*  "Garrek's Reavers": {
+  /*  "Garrek's Reavers": {
     effects: [
       {
         name: `Champion`,
@@ -617,8 +617,8 @@ const Units = {
         Effect: Make a crushing charge roll of D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [CHARGE_PHASE],
       },
-    //  BrassCladShieldEffect,
-    //  MurderousChargeEffect,
+      //  BrassCladShieldEffect,
+      //  MurderousChargeEffect,
     ],
   },
   Skullreapers: {
@@ -630,7 +630,7 @@ const Units = {
       },
     ],
   },
- /* 'Scyla Anfingrimm': {
+  /* 'Scyla Anfingrimm': {
     effects: [
       {
         name: `Brass Collar of Khorne`,
@@ -659,7 +659,7 @@ const Units = {
       },
     ],
   },
- /* 'Vorgaroth the Scarred on Skalok the Skull Host of Khorne': {
+  /* 'Vorgaroth the Scarred on Skalok the Skull Host of Khorne': {
     effects: [
       {
         name: `Monstrous Trophies`,
@@ -753,7 +753,7 @@ const Units = {
     ],
   }, */
   'Realmgore Ritualist': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(Prayers, ['Bloodhex'])],
     }, */
     effects: [
@@ -786,7 +786,7 @@ const Units = {
         desc: `Declare: This unit can only use this ability if it is in combat with an enemy Hero. 
         Effect: This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn. This unit can only use the second Fight ability if it is in combat with an enemy Hero, and if it does so, it must pick an enemy Hero to be the target of all of its attacks.`,
         when: [COMBAT_PHASE],
-      },  
+      },
       {
         name: `Gunnar Brand: Oath of Bloodshed - Once Per Battle`,
         desc: `Declare: This unit can only use this ability if any enemy Heroes were slain by this units combat attacks this turn. 
@@ -797,7 +797,7 @@ const Units = {
         name: `Singri Brand: Swift as the Wind - Passive`,
         desc: `Effect: Only critical hits score successful hits for shooting attacks that target this unit.`,
         when: [SHOOTING_PHASE],
-      },  
+      },
       {
         name: `Singri Brand: Uncanny Shot - Passive`,
         desc: `Effect: Add 1 to the Rend characteristic of this units Singris Warbow for attacks that target enemy units that are within 6" of a friendly Gunnar Brand.`,
@@ -808,7 +808,7 @@ const Units = {
         desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target, then make a casting roll of 2D6. 
         Effect: Inflict 1 mortal damage on the target and subtract 1 from the Attacks characteristic of the targets melee weapons until the start of your next turn.`,
         when: [HERO_PHASE],
-      },  
+      },
       {
         name: `Oathsworn Kin: Broken Nadja - Passive`,
         desc: `Effect: While this units Broken Nadja is on the battlefield, it has Wizard (1).`,
@@ -816,8 +816,8 @@ const Units = {
       },
       {
         name: `Favour of the Gods - Once Per Turn`,
-        desc: `Effect: If any enemy Heroes were slain this turn by the Gunnar Brand in this Regiment of Renown:  
-        Heal (5) each unit in this Regiment of Renown.  
+        desc: `Effect: If any enemy Heroes were slain this turn by the Gunnar Brand in this Regiment of Renown: 
+        Heal (5) each unit in this Regiment of Renown. 
         Add 1 to the Attacks characteristic of melee weapons used by units in this Regiment of Renown for the rest of the battle.`,
         when: [END_OF_TURN],
       },
@@ -847,7 +847,7 @@ const Units = {
         desc: `Used By: The unit using that Fight ability. 
         Effect: Pick a unit in this Regiment of Renown that has not used a Fight ability this turn to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
         when: [COMBAT_PHASE],
-      },  
+      },
     ],
   },
   'ROR: Phulgoth`s Shudderhood': {
@@ -917,8 +917,8 @@ const Units = {
       {
         name: `Shake the Earth - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted. 
         Subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -1019,7 +1019,7 @@ const Units = {
       },
       {
         name: `Chaos Knights: Impaling Charge - Passive`,
-        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -1077,8 +1077,8 @@ const Units = {
       },
       {
         name: `Varghulf Courtier: Victory Feast`,
-        desc: `Effect: If any models were slain by this unit this turn:  
-        Heal (D6) this unit.  
+        desc: `Effect: If any models were slain by this unit this turn: 
+        Heal (D6) this unit. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1159,8 +1159,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

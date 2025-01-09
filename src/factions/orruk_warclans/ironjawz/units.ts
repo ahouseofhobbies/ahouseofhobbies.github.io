@@ -104,7 +104,7 @@ const BerserkersEffect = {
 } */
 
 const IronjawzUnits = {
-  'Kragnos': {
+  Kragnos: {
     effects: [
       {
         name: `Battle Damaged - Passive`,
@@ -123,8 +123,8 @@ const IronjawzUnits = {
       },
       {
         name: `Rampaging Destruction - Once Per Turn`,
-        desc: `Effect: If this unit charged this phase, pick 1 of the following effects:  
-        Roll a dice for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.  
+        desc: `Effect: If this unit charged this phase, pick 1 of the following effects: 
+        Roll a dice for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. 
         Pick an enemy Monster in combat with this unit and roll 2D6. On a 7, this ability has no effect. Otherwise, inflict an amount of mortal damage on that unit equal to the results on the dice used for the 2D6 roll multiplied together. For example, a 2D6 roll of 2 and 6 would inflict 12 mortal damage (2x6).`,
         when: [CHARGE_PHASE],
       },
@@ -137,12 +137,12 @@ const IronjawzUnits = {
   },
   'Gordrakk the Fist of Gork': {
     effects: [
-     // DestructiveBulkEffect,
-     // StrengthFromVictoryEffect,
+      // DestructiveBulkEffect,
+      // StrengthFromVictoryEffect,
       {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Bigteefs Fists and Tail is 6.`,
-      when: [COMBAT_PHASE],
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Bigteefs Fists and Tail is 6.`,
+        when: [COMBAT_PHASE],
       },
       {
         name: `Monster Grapple - Once Per Turn`,
@@ -165,12 +165,12 @@ const IronjawzUnits = {
   },
   'Megaboss on Maw-Krusha': {
     effects: [
-    //  StrengthFromVictoryEffect,
-    //  DestructiveBulkEffect,
+      //  StrengthFromVictoryEffect,
+      //  DestructiveBulkEffect,
       {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Maw-krushas Fists and Tail is 5.`,
-      when: [COMBAT_PHASE],
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Maw-krushas Fists and Tail is 5.`,
+        when: [COMBAT_PHASE],
       },
       {
         name: `Strength from Victory`,
@@ -193,7 +193,7 @@ const IronjawzUnits = {
   },
   'Orruk Megaboss': {
     effects: [
-    //  StrengthFromVictoryEffect,
+      //  StrengthFromVictoryEffect,
       {
         name: `Get Stuck in Ladz!`,
         desc: `Declare: Pick a friendly Brute unit wholly within 12" of this unit to be the target. 
@@ -223,7 +223,7 @@ const IronjawzUnits = {
     ],
   },
   'Orruk Weirdnob Shaman': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Green Puke'])],
     }, */
     effects: [
@@ -260,7 +260,7 @@ const IronjawzUnits = {
   },
   'Orruk Brutes': {
     effects: [
-     // DuffUpdaBigThingEffect,
+      // DuffUpdaBigThingEffect,
       {
         name: `You Messin'?`,
         desc: `Effect: Enemy models with a Health characteristic of 1 or 2 cannot contest objectives while they are in combat with this unit.`,
@@ -278,7 +278,7 @@ const IronjawzUnits = {
       },
     ],
   },
- /* "Ironskull's Boyz": {
+  /* "Ironskull's Boyz": {
     effects: [
       {
         name: `Dead 'Ard`,
@@ -298,15 +298,15 @@ const IronjawzUnits = {
     ],
   }, */
   'Tuskboss On Maw-Grunta': {
-  /*  mandatory: {
+    /*  mandatory: {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Carve a Path'])],
     }, */
     effects: [
-     // ...MawGruntaSharedEffects,
-     {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Maw-gruntas Tusks is 3.`,
-      when: [COMBAT_PHASE],
+      // ...MawGruntaSharedEffects,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Maw-gruntas Tusks is 3.`,
+        when: [COMBAT_PHASE],
       },
       {
         name: `Head of the Stampede - Once Per Turn`,
@@ -323,7 +323,7 @@ const IronjawzUnits = {
     ],
   },
   "Maw-Grunta with Hakkin' Krew": {
-   /* mandatory: {
+    /* mandatory: {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Carve a Path'])],
     }, */
     effects: [
@@ -339,7 +339,7 @@ const IronjawzUnits = {
         Then, pick each enemy unit that this unit passed across during that move to be the targets. Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Then, this unit gains 2 momentum points.`,
         when: [MOVEMENT_PHASE],
       },
-     // ...MawGruntaSharedEffects
+      // ...MawGruntaSharedEffects
     ],
   },
   'Maw-Grunta Gougers': {
@@ -359,14 +359,14 @@ const IronjawzUnits = {
         Effect: Roll a dice and add the number of momentum points this unit has to the roll. On a 5+, the target has Strike-last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-    //  ...MawGruntaSharedEffects
+      //  ...MawGruntaSharedEffects
     ],
   },
   'Zoggrok Anvilsmasha': {
     effects: [
       {
         name: `Klonk - Passive`,
-        desc: `Effect: Klonk is a token. You can re-roll forgin rolls for this unit while this units Klonk is on the battlefield. If you make an unmodified save roll of 1 for this unit, remove this units Klonk from the battlefield after the Attack ability has been resolved (the damage point is still inflicted).`,
+        desc: `Effect: Klonk is a token. You can reroll forgin rolls for this unit while this units Klonk is on the battlefield. If you make an unmodified save roll of 1 for this unit, remove this units Klonk from the battlefield after the Attack ability has been resolved (the damage point is still inflicted).`,
         when: [DURING_GAME],
       },
       {
@@ -384,8 +384,8 @@ const IronjawzUnits = {
   },
   'Brute Ragerz': {
     effects: [
-    //  GenericEffects.Elite,
-     // BerserkersEffect,
+      //  GenericEffects.Elite,
+      // BerserkersEffect,
       {
         name: `Berserkers - Passive`,
         desc: `Effect: This unit can use a Run ability and still use Charge abilities later in the turn.`,
@@ -400,12 +400,12 @@ const IronjawzUnits = {
   },
   'Weirdbrute Wrekkaz': {
     effects: [
-    //  GenericEffects.Elite,
-    //  BerserkersEffect,
+      //  GenericEffects.Elite,
+      //  BerserkersEffect,
       {
-      name: `Berserkers - Passive`,
-      desc: `Effect: This unit can use a Run ability and still use Charge abilities later in the turn.`,
-      when: [MOVEMENT_PHASE],
+        name: `Berserkers - Passive`,
+        desc: `Effect: This unit can use a Run ability and still use Charge abilities later in the turn.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },
@@ -501,7 +501,7 @@ const IronjawzUnits = {
         when: [SHOOTING_PHASE],
       },
     ],
-  },  
+  },
   'ROR: Odo Godswallow': {
     effects: [
       {
@@ -657,8 +657,8 @@ const IronjawzUnits = {
       {
         name: `Shake the Earth - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted. 
         Subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -685,7 +685,7 @@ const IronjawzUnits = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -788,8 +788,8 @@ const IronjawzUnits = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

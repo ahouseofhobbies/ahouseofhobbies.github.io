@@ -90,41 +90,41 @@ import {
     ],
   }, */
 
-  const BattleTraits = {
-    [STORMCAST_ETERNALS]: {
-      effects: [
-        {
-          name: `The Celestial Realm`,
-          desc: `Declare: If there are more friendly Stormcast Eternals units on the battlefield than there are set up in reserve, pick a friendly Stormcast Eternals unit that has not been deployed. 
+const BattleTraits = {
+  [STORMCAST_ETERNALS]: {
+    effects: [
+      {
+        name: `The Celestial Realm`,
+        desc: `Declare: If there are more friendly Stormcast Eternals units on the battlefield than there are set up in reserve, pick a friendly Stormcast Eternals unit that has not been deployed. 
           Effect: Set up that unit in reserve in the Celestial Realm. It has now been deployed.`,
-          when: [DURING_SETUP],
-        },
-        {
-          name: `Scions of the Storm`,
-          desc: `Declare: Pick a friendly Stormcast Eternals unit that is in the Celestial Realm. 
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Scions of the Storm`,
+        desc: `Declare: Pick a friendly Stormcast Eternals unit that is in the Celestial Realm. 
           Effect: Set up that unit anywhere on the battlefield more than 9" from all enemy units.`,
-          when: [MOVEMENT_PHASE],
-        },
-        {
-          name: `Command Ability - Heavens-Sent - Once Per Battle`,
-          desc: `Declare: Pick a friendly non-Unique Stormcast Eternals Infantry or Cavalry unit that started the battle with 2 or more models and that has been destroyed to be the target. 
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Command Ability - Heavens-Sent - Once Per Battle`,
+        desc: `Declare: Pick a friendly non-Unique Stormcast Eternals Infantry or Cavalry unit that started the battle with 2 or more models and that has been destroyed to be the target. 
           Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) more than 9" from all enemy units.`,
-          when: [MOVEMENT_PHASE],
-        },
-        {
-          name: `Their Finest Hour - Once Per Turn`,
-          desc: `Declare: Pick a friendly Stormcast Eternals unit that has not used this ability this battle to use this ability. 
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Their Finest Hour - Once Per Turn`,
+        desc: `Declare: Pick a friendly Stormcast Eternals unit that has not used this ability this battle to use this ability. 
           Effect: For the rest of the turn, add 1 to wound rolls for that units combat attacks and add 1 to save rolls for that unit.`,
-          when: [HERO_PHASE],
-        },
-        {
-          name: `Stormreach Portal (Faction Terrain) - Step into the Storm`,
-          desc: `Declare: Pick a friendly non-Monster Stormcast Eternals unit that is not in combat and is wholly within 6" of this terrain feature to be the target.  
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Stormreach Portal (Faction Terrain) - Step into the Storm`,
+        desc: `Declare: Pick a friendly non-Monster Stormcast Eternals unit that is not in combat and is wholly within 6" of this terrain feature to be the target. 
           Effect: Remove the target from the battlefield and set it up again on the batlefield more than 9" from all enemy units.`,
-          when: [MOVEMENT_PHASE],
-        },
-      ],
-    },
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(BattleTraits, 'battle_trait')

@@ -1,6 +1,14 @@
 // Manifestations go here
 import { TEntry } from 'types/data'
-import { CHARGE_PHASE, COMBAT_PHASE, DURING_GAME, END_OF_TURN, HERO_PHASE, MOVEMENT_PHASE, SHOOTING_PHASE } from 'types/phases'
+import {
+  CHARGE_PHASE,
+  COMBAT_PHASE,
+  DURING_GAME,
+  END_OF_TURN,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
+  SHOOTING_PHASE,
+} from 'types/phases'
 
 const GenericManifestations: TEntry[] = [
   // Core Manifestations
@@ -83,7 +91,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Chronomantic Cogs - Mechanisms of Time - Once Per Turn`,
         desc: `Effect: If there are any friendly Wizards within 3" of this Manifestation, pick 1 of the following effects: 
-        Increase Time Flow: Until the start of your next turn, you can re-roll charge rolls for friendly units while they are wholly within 12" of this Manifestation. 
+        Increase Time Flow: Until the start of your next turn, you can reroll charge rolls for friendly units while they are wholly within 12" of this Manifestation. 
         Decrease Time Flow: Until the start of your next turn, subtract 1 from hit rolls for attacks that target friendly Wizards while they are wholly within 12" of this Manifestation.`,
         when: [HERO_PHASE, SHOOTING_PHASE, COMBAT_PHASE],
       },
@@ -250,7 +258,7 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Malevolent Maelstrom - Necrotic Vortex - Passive`,
-        desc: `Effect: Give this Manifestation 1 maelstrom point:  Each time this Manifestation is set up.  Each time a unit successfully casts a spell while it is within 12" of this Manifestation.  Each time a model is slain within 12" of this Manifestation. This Manifestation can have a maximum of 6 maelstrom points at once.`,
+        desc: `Effect: Give this Manifestation 1 maelstrom point: Each time this Manifestation is set up. Each time a unit successfully casts a spell while it is within 12" of this Manifestation. Each time a model is slain within 12" of this Manifestation. This Manifestation can have a maximum of 6 maelstrom points at once.`,
         when: [DURING_GAME],
       },
       {
@@ -273,7 +281,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Soulsnare Shackles - Bound for the Great Oubliette`,
         desc: `Declare: For each part of this Manifestation, you can pick an enemy unit within 3" of that part to be the targets. You cannot pick the same unit to be the target of this ability more than once per turn. 
-        Effect: Roll a D3 for each target. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3 for each target. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         Subtract a number of inches equal to the roll from the targets Move characteristic for the rest of the turn.`,
         when: [HERO_PHASE],
       },
@@ -357,7 +365,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Runic Fyrewall - Roaring Rune-Fire - Enemy Movement Phase`,
         desc: `Declare: Pick up to 3 enemy units within 6" of this Manifestation to be the targets. 
-        Effect: Roll a D3 for each target. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  Subtract 3 from the targets control score for the rest of the turn.`,
+        Effect: Roll a D3 for each target. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. Subtract 3 from the targets control score for the rest of the turn.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -396,11 +404,11 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Sanctum of Amyntok - Sigil of Yngra - Passive`,
-        desc: `Effect: While the unit that was picked to be the target of the Summon Sanctum of Amyntok ability is inside the ring formed by this Manifestation:  
-        That unit has Ward (4+).  
-        If that unit is a Wizard, add 1 to that units power level.  
-        Instead of measuring range or visibility to that unit, measure to this Manifestation instead.  
-        This Manifestation cannot be picked to be the target of abilities other than Banish abilities.  
+        desc: `Effect: While the unit that was picked to be the target of the Summon Sanctum of Amyntok ability is inside the ring formed by this Manifestation: 
+        That unit has Ward (4+). 
+        If that unit is a Wizard, add 1 to that units power level. 
+        Instead of measuring range or visibility to that unit, measure to this Manifestation instead. 
+        This Manifestation cannot be picked to be the target of abilities other than Banish abilities. 
         If that unit uses a Move ability, makes a pile-in move or is removed from the battlefield, this Manifestation is removed from play.`,
         when: [DURING_GAME],
       },
@@ -486,12 +494,12 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Dais Arcanum - Arcane Enhancement - Passive`,
-        desc: `Effect: While the unit that was picked to be the target of the Summon Dais Arcanum ability is on the platform of this Manifestation:  
-        That unit has Ward (5+) and Fly.  
-        If that unit is a Wizard, add 1 to that units power level.  
-        That unit cannot use Move abilities and remains on this Manifestation each time it moves.  
+        desc: `Effect: While the unit that was picked to be the target of the Summon Dais Arcanum ability is on the platform of this Manifestation: 
+        That unit has Ward (5+) and Fly. 
+        If that unit is a Wizard, add 1 to that units power level. 
+        That unit cannot use Move abilities and remains on this Manifestation each time it moves. 
         Instead of measuring range or visibility to that unit, measure to this Manifestation instead.
-        If that unit is picked to make a pile-in move, move this Manifestation instead.  
+        If that unit is picked to make a pile-in move, move this Manifestation instead. 
         This Manifestation cannot be picked to be the target of abilities other than Banish abilities. 
         If this Manifestation is banished, before removing it from the battlefield, set up the unit on its platform on the battlefield within 3" of it. That unit can only be set up in combat with units it was already in combat with when this Manifestation was banished. If it is not possible to set up that unit, it is destroyed. 
         If the unit on the platform is removed from the battlefield, immediately remove this Manifestation from play.`,
@@ -818,8 +826,8 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Mortalis Terminexus - Keeper of Mortality`,
         desc: `Declare: Pick a visible friendly Nighthaunt unit within 3" of this Manifestation to be the target. 
-        Effect: Roll a dice. On a 2+, pick 1 of the following effects:  
-        Add 1 to run rolls and charge rolls for target for the rest of the turn.  
+        Effect: Roll a dice. On a 2+, pick 1 of the following effects: 
+        Add 1 to run rolls and charge rolls for target for the rest of the turn. 
         Heal (3) the target.`,
         when: [HERO_PHASE],
       },

@@ -1,6 +1,13 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
-import { CHARGE_PHASE, COMBAT_PHASE, HERO_PHASE, SHOOTING_PHASE, START_OF_COMBAT_PHASE, START_OF_SHOOTING_PHASE } from 'types/phases'
+import {
+  CHARGE_PHASE,
+  COMBAT_PHASE,
+  HERO_PHASE,
+  SHOOTING_PHASE,
+  START_OF_COMBAT_PHASE,
+  START_OF_SHOOTING_PHASE,
+} from 'types/phases'
 
 const KruleboyzArtifacts = {
   'Eye-Biter Ash': {
@@ -16,7 +23,7 @@ const KruleboyzArtifacts = {
   "Mork's Eye Pebble": {
     effects: [
       {
-        name: `Mork's Eye Pebble - Once Per Battle - Reaction: Opponent declared an Attack ability `,
+        name: `Mork's Eye Pebble - Once Per Battle - Reaction: Opponent declared an Attack ability`,
         desc: `Effect: For the rest of the turn, friendly Kruleboyz units have Ward (5+) while they are wholly within 12" of this unit.`,
         when: [SHOOTING_PHASE, COMBAT_PHASE],
       },

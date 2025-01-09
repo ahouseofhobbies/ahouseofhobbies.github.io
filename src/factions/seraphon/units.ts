@@ -188,7 +188,7 @@ const StarVenomEffect = {
 
 const Units = {
   'Lord Kroak': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Celestial Deliverance'])],
     }, */
     effects: [
@@ -218,7 +218,7 @@ const Units = {
     ],
   },
   'Slann Starmaster': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Celestial Equilibrium', 'Shield of the Old Ones'])],
       command_abilities: [keyPicker(CommandAbilities, ['Gift from the Heavens'])],
     }, */
@@ -228,7 +228,7 @@ const Units = {
         desc: `Effect: Add 1 to casting rolls for this unit. In addition, this unit can use an Unbind ability if an enemy Wizard anywhere on the battlefield uses a Spell ability instead of an enemy Wizard within 30" of this unit, and when using the Banish Manifestation ability, this unit can pick a manifestation anywhere on the battlefield instead of within 30" of it.`,
         when: [HERO_PHASE],
       },
-     // ArcaneVassalEffect,
+      // ArcaneVassalEffect,
       {
         name: `Celestial Equilibrium: Casting value of 6`,
         desc: `Declare: Make a casting roll of 2D6. 
@@ -251,7 +251,7 @@ const Units = {
   },
   'Saurus Oldblood on Carnosaur': {
     effects: [
-    //  ...CarnosaurBaseEffects,
+      //  ...CarnosaurBaseEffects,
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Carnosaurs Massive Jaws is 2.`,
@@ -286,7 +286,7 @@ const Units = {
         desc: `Effect: For the rest of the turn, add 1 to wound rolls for combat attacks made by friendly Saurus Infantry units while they are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
       },
-     // MightySaurusJawsEffect,
+      // MightySaurusJawsEffect,
     ],
   },
   'Saurus Scar-Veteran on Aggradon': {
@@ -325,12 +325,12 @@ const Units = {
   // },
   'Saurus Scar-Veteran on Carnosaur': {
     effects: [
-     // ...CarnosaurBaseEffects,
-     {
-      name: `Terror - Passive`,
-      desc: `Effect: Subtract 2 from the control scores of enemy units while they are in combat with this unit.`,
-      when: [END_OF_TURN],
-    },
+      // ...CarnosaurBaseEffects,
+      {
+        name: `Terror - Passive`,
+        desc: `Effect: Subtract 2 from the control scores of enemy units while they are in combat with this unit.`,
+        when: [END_OF_TURN],
+      },
       {
         name: `Maim and Tear - Once Per Turn`,
         desc: `Declare: Pick an enemy Hero in combat with this unit to be the target. 
@@ -356,7 +356,7 @@ const Units = {
         desc: `Effect: Friendly Seraphon Infantry units have Ward (6+) while they are wholly within 12" of this unit. If a unit already has Ward (6+), it has Ward (5+) instead.`,
         when: [DURING_GAME],
       },
-     // MightySaurusJawsEffect,
+      // MightySaurusJawsEffect,
     ],
   },
   // 'Skink Priest': {
@@ -382,11 +382,11 @@ const Units = {
   //   ],
   // },
   'Skink Starseer': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Celestial Doom'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Scry the Stars - Once Per Battle`,
         desc: `Effect: Roll a number of dice equal to the current battle round number. For each 3+, pick a friendly Seraphon unit wholly within 18" of this unit. That unit has Ward (5+) until the start of your next turn.`,
@@ -401,11 +401,11 @@ const Units = {
     ],
   },
   'Skink Starpriest': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Blazing Starlight'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Serpent Staff`,
         desc: `Declare: Pick a visible friendly Seraphon unit wholly within 18" of this unit to be the target. 
@@ -416,7 +416,7 @@ const Units = {
   },
   'Engine of the Gods': {
     effects: [
-    //  ...StegadonBaseEffects,
+      //  ...StegadonBaseEffects,
       {
         name: `Cosmic Engine`,
         desc: `Declare: Pick if this unit will harness or reserve the power of its cosmic engine. 
@@ -435,7 +435,7 @@ const Units = {
       {
         name: `Crest of Horns - Once Per Turn`,
         desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll.  Add 1 to save rolls for attacks made by that enemy unit that target this unit for the rest of the turn.`,
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. Add 1 to save rolls for attacks made by that enemy unit that target this unit for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -447,8 +447,8 @@ const Units = {
         desc: `Effect: Add 1 to save rolls for this unit while each model in this unit is contesting an objective you control.`,
         when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
-    //  IconBearersEffect,
-     // WardrummersEffect,
+      //  IconBearersEffect,
+      // WardrummersEffect,
     ],
   },
   'Saurus Guard': {
@@ -458,9 +458,9 @@ const Units = {
         desc: `Effect: While any friendly Slann units are within this units combat range, both this unit and those Slann units have Ward (5+).`,
         when: [DURING_GAME],
       },
-     // IconBearersEffect,
-     // WardrummersEffect,
-     // SelflessProtectorsEffect,
+      // IconBearersEffect,
+      // WardrummersEffect,
+      // SelflessProtectorsEffect,
     ],
   },
   // 'Saurus Knights': {
@@ -482,7 +482,7 @@ const Units = {
         desc: `Effect: When this unit uses the Redeploy command, when determining the distance this unit can move, you can roll 2 dice instead of 1 and pick either result.`,
         when: [MOVEMENT_PHASE],
       },
-     // StarbucklersEffect,
+      // StarbucklersEffect,
     ],
   },
   // 'Chameleon Skinks': {
@@ -498,12 +498,12 @@ const Units = {
   // },
   'Terradon Chief': {
     effects: [
-     // ...TerradonBaseEffects,
+      // ...TerradonBaseEffects,
       {
         name: `Chief's Deadly Cargo`,
         desc: `Declare: Pick an enemy unit that this unit passed across this phase to be the target. 
-        Effect: Roll a dice and add 2 to the roll if this unit is within the combat ranges of any friendly Terradon Riders units. On a 5+:  
-        Inflict D3 mortal damage on the target.  
+        Effect: Roll a dice and add 2 to the roll if this unit is within the combat ranges of any friendly Terradon Riders units. On a 5+: 
+        Inflict D3 mortal damage on the target. 
         If any damage points are allocated by this ability and the target does not have Fly, the target cannot use Run abilities until the start of your next turn.`,
         when: [MOVEMENT_PHASE],
       },
@@ -524,8 +524,8 @@ const Units = {
       {
         name: `Deadly Cargo`,
         desc: `Declare: Pick an enemy unit that this unit passed across this phase to be the target. 
-        Effect: Roll a dice and add 2 to the roll if this unit is within the combat ranges of any friendly Terradon Chief units. On a 5+:  
-        Inflict 1 mortal damage on the target.  
+        Effect: Roll a dice and add 2 to the roll if this unit is within the combat ranges of any friendly Terradon Chief units. On a 5+: 
+        Inflict 1 mortal damage on the target. 
         If any damage points are allocated by this ability and the target does not have Fly, the target cannot use Run abilities until the start of your next turn.`,
         when: [MOVEMENT_PHASE],
       },
@@ -534,12 +534,12 @@ const Units = {
         desc: `Effect: This unit has a coherency range of 2".`,
         when: [DURING_GAME],
       },
-    //  ...TerradonBaseEffects,
+      //  ...TerradonBaseEffects,
     ],
   },
   'Ripperdactyl Chief': {
     effects: [
-    //  ...RipperdactylBaseEffects,
+      //  ...RipperdactylBaseEffects,
       {
         name: `Ripperdactyl Assault - Once Per Battle`,
         desc: `Effect: Add 1 to the Attacks characteristic of Moonstone Warspears used by friendly Ripperdactyl Riders units wholly within 12" of this unit for the rest of the turn.`,
@@ -576,7 +576,7 @@ const Units = {
         desc: `Effect: This unit has a coherency range of 2".`,
         when: [DURING_GAME],
       },
-     // ...RipperdactylBaseEffects,
+      // ...RipperdactylBaseEffects,
     ],
   },
   // 'Salamander Hunting Pack': {
@@ -604,7 +604,7 @@ const Units = {
   // },
   Kroxigor: {
     effects: [
-     // ...KroxigorBaseEffects,
+      // ...KroxigorBaseEffects,
       {
         name: `Brutal Blows`,
         desc: `Effect: Add 1 to the Damage characteristic of this units melee weapons for attacks that target an enemy unit that has 10 or more models.`,
@@ -614,7 +614,7 @@ const Units = {
   },
   'Kroxigor Warspawned': {
     effects: [
-     // ...KroxigorBaseEffects,
+      // ...KroxigorBaseEffects,
       {
         name: `Heavy-scaled Skin - Passive`,
         desc: `Effect: Subtract 1 from the Rend characteristic of ranged weapons used for shooting attacks that target this unit.`,
@@ -630,7 +630,7 @@ const Units = {
   'Stegadon Chief': {
     effects: [
       //...StegadonBaseEffects,
-     // SunfireThrowersEffect,
+      // SunfireThrowersEffect,
       {
         name: `Crushing Stomps - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
@@ -641,7 +641,7 @@ const Units = {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Stegadons Horns and Jaws is 4.`,
         when: [COMBAT_PHASE],
-      }, 
+      },
       {
         name: `Skink Coordination - Passive`,
         desc: `Effect: If a friendly non-Monster Skink unit uses the Redeploy command while it is wholly within 18" of this unit, no command points are spent.`,
@@ -651,25 +651,25 @@ const Units = {
   },
   Stegadon: {
     effects: [
-     // ...StegadonBaseEffects,
-    //  SunfireThrowersEffect,
-    {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Stegadons Horns and Jaws is 4.`,
-      when: [COMBAT_PHASE],
-    }, 
-    {
-      name: `Unstoppable Stampede - Once Per Turn`,
-      desc: `Declare: If this unit charged this phase, pick an enemy Infantry unit in combat with it to be the target. 
+      // ...StegadonBaseEffects,
+      //  SunfireThrowersEffect,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Stegadons Horns and Jaws is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Unstoppable Stampede - Once Per Turn`,
+        desc: `Declare: If this unit charged this phase, pick an enemy Infantry unit in combat with it to be the target. 
       Effect: Inflict D3 mortal damage on the target. Then, this unit can move 2D6". This unit can pass through models in the target unit but must end that move in combat.`,
-      when: [CHARGE_PHASE],
-    }, 
+        when: [CHARGE_PHASE],
+      },
     ],
   },
   'Bastiladon Ark of Sotek': {
     effects: [
       //...StegadonBaseEffects,
-     // SunfireThrowersEffect,
+      // SunfireThrowersEffect,
       {
         name: `Ark of Sotek - Once Per Turn`,
         desc: `Declare: Pick up to 3 dierent enemy units within 9" of this unit to be the targets. 
@@ -681,7 +681,7 @@ const Units = {
   'Bastiladon Solar Engine': {
     effects: [
       //...StegadonBaseEffects,
-     // SunfireThrowersEffect,
+      // SunfireThrowersEffect,
       {
         name: `Tail Swipe - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
@@ -690,7 +690,7 @@ const Units = {
       },
     ],
   },
- /* Bastiladon: {
+  /* Bastiladon: {
     effects: [
       {
         name: `Tide of Snakes`,
@@ -700,7 +700,7 @@ const Units = {
     ],
   }, */
   'Skink Oracle on Troglodon': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Primordial Mire'])],
     }, */
     effects: [
@@ -725,10 +725,10 @@ const Units = {
         desc: `Effect: Heal (D3) this unit.`,
         when: [END_OF_TURN],
       },
-    //  GenericEffects.Terror,
+      //  GenericEffects.Terror,
     ],
   },
- /* 'Dread Saurian': {
+  /* 'Dread Saurian': {
     effects: [
       {
         name: `Arcane Glyphs`,
@@ -805,7 +805,7 @@ const Units = {
   // },
   'Hunters of Huanchi with Dartpipes': {
     effects: [
-     // ...HuntersOfHuanchiBaseEffects,
+      // ...HuntersOfHuanchiBaseEffects,
       {
         name: `Hidden Hunters`,
         desc: `Declare: Pick this unit if it has not been deployed. 
@@ -824,24 +824,24 @@ const Units = {
         Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
-     // StarVenomEffect,
+      // StarVenomEffect,
     ],
   },
   'Hunters of Huanchi with Starstone Bolas': {
     effects: [
-     // ...HuntersOfHuanchiBaseEffects,
-     {
-      name: `Hidden Hunters`,
-      desc: `Declare: Pick this unit if it has not been deployed. 
+      // ...HuntersOfHuanchiBaseEffects,
+      {
+        name: `Hidden Hunters`,
+        desc: `Declare: Pick this unit if it has not been deployed. 
       Effect: Set up this unit in reserve in ambush. It has now been deployed.`,
-      when: [DURING_SETUP],
-    }, 
-    {
-      name: `Chameleon Ambush`,
-      desc: `Declare: Pick this unit if it is in ambush. 
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Chameleon Ambush`,
+        desc: `Declare: Pick this unit if it is in ambush. 
       Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units.`,
-      when: [MOVEMENT_PHASE],
-    },
+        when: [MOVEMENT_PHASE],
+      },
       {
         name: `Starstone Bolas`,
         desc: `Declare: Pick an enemy unit that was targeted by this units Starstone Bolas this turn to be the target. 
@@ -865,7 +865,7 @@ const Units = {
       },
     ],
   },
- /* 'The Starblood Stalkers': {
+  /* 'The Starblood Stalkers': {
     effects: [
       {
         name: `Sacred Duty`,
@@ -875,7 +875,7 @@ const Units = {
    //   StarVenomEffect,
     ],
   }, */
- /* 'Kixi-Taka, the Diviner': {
+  /* 'Kixi-Taka, the Diviner': {
     effects: [
       {
         name: `Servant of the Starmasters`,
@@ -886,8 +886,8 @@ const Units = {
   }, */
   'Aggradon Lancers': {
     effects: [
-    //  IconBearersEffect,
-     // WardrummersEffect,
+      //  IconBearersEffect,
+      // WardrummersEffect,
       {
         name: `Primal Rage`,
         desc: `Effect: This unit must use this ability each turn. 
@@ -897,7 +897,7 @@ const Units = {
       },
     ],
   },
-/*  'Klaq-Trok': {
+  /*  'Klaq-Trok': {
     effects: [
       {
         name: `Savage Protector`,
@@ -919,21 +919,20 @@ const Units = {
         desc: `Effect: Add 1 to hit rolls for this units combat attacks if they target an enemy unit that was targeted by shooting attacks made by a friendly Raptadon Hunters unit in the same turn.`,
         when: [COMBAT_PHASE],
       },
-     // IconBearersEffect,
-    //  HornblowersEffect,
+      // IconBearersEffect,
+      //  HornblowersEffect,
     ],
   },
   'Raptadon Hunters': {
     effects: [
-
-     // IconBearersEffect,
-     // HornblowersEffect,
-     {
-      name: `Deadly Cohesion`,
-      desc: `Declare: If this unit is not in combat, pick a friendly Raptadon Chargers unit that charged this turn and is within 12" of this unit to be the target. 
+      // IconBearersEffect,
+      // HornblowersEffect,
+      {
+        name: `Deadly Cohesion`,
+        desc: `Declare: If this unit is not in combat, pick a friendly Raptadon Chargers unit that charged this turn and is within 12" of this unit to be the target. 
       Effect: This unit can use a Shoot ability as if it were your shooting phase. It must target a visible enemy unit in combat with the target.`,
-      when: [CHARGE_PHASE],
-    },
+        when: [CHARGE_PHASE],
+      },
     ],
   },
   'Spawn of Chotec': {
@@ -964,7 +963,7 @@ const Units = {
       {
         name: `Grimhold Exile: Honour to Grimnir! - Once Per Battle`,
         desc: `Declare: Pick up to 3 friendly Fyreslayers Infantry units wholly within 12" of this unit to be the targets. 
-        Effect: You can re-roll charge rolls for the targets for the rest of the turn`,
+        Effect: You can reroll charge rolls for the targets for the rest of the turn`,
         when: [HERO_PHASE],
       },
       {
@@ -1032,29 +1031,29 @@ const Units = {
         desc: `Declare: Pick this unit and a friendly Callis and Toll unit in the same regiment as this unit if those units have not been deployed. 
         Effect: Set up those units in reserve in the shadows. Those units have now been deployed.`,
         when: [DURING_SETUP],
-       },
-       {
+      },
+      {
         name: `Toll's Companions: Saviours of Cinderfall - Passive`,
         desc: `Effect: While a friendly Callis and Toll unit is wholly within this units combat range, both this unit and that Callis and Toll unit have Ward (5+).`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Toll's Companions: Emerge from the Shadows`,
-         desc: `Declare: Pick this unit if it is in the shadows. 
+      },
+      {
+        name: `Toll's Companions: Emerge from the Shadows`,
+        desc: `Declare: Pick this unit if it is in the shadows. 
          Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units. Then, set up the Callis and Toll unit that was set up in the shadows with this unit wholly within 6" of it and more than 9" from all enemy units.`,
-         when: [MOVEMENT_PHASE],
-       },
-       {
+        when: [MOVEMENT_PHASE],
+      },
+      {
         name: `Duty Bound - Passive`,
         desc: `Effect: While every model in the same unit in the Regiment of Renown is contesting the same objective, add 1 to save rolls and ward rolls for that unit.`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Sigmar's Justice - Once Per Turn`,
-         desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
+      },
+      {
+        name: `Sigmar's Justice - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
          Effect: For the rest of the battle, add 1 to wound rolls for combat attacks made by units in this Regiment of Renown that target a unit that is marked for justice.`,
-         when: [DURING_SETUP],
-       },
+        when: [DURING_SETUP],
+      },
     ],
   },
   'ROR: Norgrimm`s Rune Throng': {
@@ -1081,17 +1080,17 @@ const Units = {
         desc: `Effect: Add 2 to the control scores of friendly Cities of Sigmar Duardin units, excluding Longbeards units, while they are wholly within 12" of this unit.`,
         when: [END_OF_TURN],
       },
-       {
+      {
         name: `Rune of Restored Hearth - Once Per Battle`,
         desc: `Effect: If the Runelord in the Regiment of Renown is contesting an objective, for the rest of the battle, units in this Regiment of Renown have Ward (5+) while they are contesting that objective.`,
         when: [HERO_PHASE],
-       },
-       {
-         name: `Wrath and Ruin: Chant value of 4`,
-         desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
+      },
+      {
+        name: `Wrath and Ruin: Chant value of 4`,
+        desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
          Effect: Roll 6 dice. If the chanting roll was 8+, roll 9 dice instead. For each 5+, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target as a result of those dice rolls, ignore positive modifiers to save rolls for the target until the start of your next turn.`,
-         when: [HERO_PHASE],
-       },
+        when: [HERO_PHASE],
+      },
     ],
   },
   'ROR: Elthwin`s Thorns': {
@@ -1113,17 +1112,17 @@ const Units = {
         desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot move into combat during any part of that move.`,
         when: [SHOOTING_PHASE],
       },
-       {
+      {
         name: `Gossamid Champion`,
         desc: `Declare: Pick the Arch-Revenant in this Regiment of Renown to use this ability, the pick a visible enemy unit within 12" of them to be the target. 
         Effect: Until the start of your next turn, subtract X from charge rolls for the target, where X is the number of damage points allocated to the target this phase by shooting attacks made by the Gossamid Archers unit in the Regiment of Renown, to a maximum of 6.`,
         when: [SHOOTING_PHASE],
-       },
-       {
-         name: `Flight of the Zephyrspites - Once Per Turn`,
-         desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
-         when: [SHOOTING_PHASE],
-       },
+      },
+      {
+        name: `Flight of the Zephyrspites - Once Per Turn`,
+        desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   'ROR: Gotrek Gurnisson': {
@@ -1286,13 +1285,13 @@ const Units = {
       {
         name: `Knight-Draconis: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
       {
         name: `Stormdrake Guard: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      }, 
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Hour of Retribution - Once Per Battle`,
         desc: `Effect: For the rest of the turn:
@@ -1318,7 +1317,7 @@ const Units = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1401,8 +1400,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

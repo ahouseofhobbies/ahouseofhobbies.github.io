@@ -38,14 +38,14 @@ const CommandTraits = {
     effects: [
       {
         name: `Skilled Manipulator - Passive`,
-        desc: `Effect: While this unit is within the combat range of a friendly non-Hero Skaven Infantry unit:  
-        This unit has Ward (4+).  
+        desc: `Effect: While this unit is within the combat range of a friendly non-Hero Skaven Infantry unit: 
+        This unit has Ward (4+). 
         Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly non-Hero Skaven Infantry unit within this units combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_TURN],
       },
     ],
   },
- /* 'Master of Magic': {
+  /* 'Master of Magic': {
     effects: [
       {
         name: `Master of Magic`,

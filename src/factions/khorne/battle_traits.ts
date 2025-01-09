@@ -26,8 +26,8 @@ const BattleTraits = {
       {
         name: `Slaughter Triumphant`,
         desc: `Declare: You can only use this ability if you have not used any Blood Tithe abilities this phase. Spend 8 blood tithe points. 
-        Effect: Pick 1 of the following effects:  
-        Add 1 to the Attacks characteristic of melee weapons used by friendly Blades of Khorne units for the rest of the battle.  
+        Effect: Pick 1 of the following effects: 
+        Add 1 to the Attacks characteristic of melee weapons used by friendly Blades of Khorne units for the rest of the battle. 
         Pick a friendly non-Unique Bloodthirster unit that has been destroyed. Set up an identical replacement unit on the battlefield more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
@@ -54,11 +54,11 @@ const BattleTraits = {
       },
       {
         name: `Skull Altar (Faction Terrain) - Words of Hate - Passive`,
-        desc: `Effect: While this terrain feature has an Invoker:  
-        Add 1 to chanting rolls for the Invoker.  
-        The Invoker cannot use Move abilities.  
-        Instead of measuring range or visibility to the Invoker, measure to this terrain feature instead.  
-        All attacks that would target the Invoker target this terrain feature instead.  
+        desc: `Effect: While this terrain feature has an Invoker: 
+        Add 1 to chanting rolls for the Invoker. 
+        The Invoker cannot use Move abilities. 
+        Instead of measuring range or visibility to the Invoker, measure to this terrain feature instead. 
+        All attacks that would target the Invoker target this terrain feature instead. 
         If this terrain feature is destroyed, before removing it from the battlefield, inflict D3 mortal damage on the Invoker. Then, set up the Invoker on the battlefield wholly within 3" of this terrain feature and not in combat. That unit is no longer an Invoker. If it is not possible to set up the Invoker, it is slain.`,
         when: [DURING_GAME],
       },
@@ -75,8 +75,8 @@ const BattleTraits = {
       },
       {
         name: `Skull Altar (Faction Terrain) - Hatred of Sorcery - Reaction: A friendly unit within 18" of this terrain feature was picked to be the target of an enemy spell`,
-        desc: `Effect: Roll a dice. On a 5+:  
-        If this terrain feature has an Invoker, gain 1 blood tithe point.  
+        desc: `Effect: Roll a dice. On a 5+: 
+        If this terrain feature has an Invoker, gain 1 blood tithe point. 
         Ignore the effect of that spell on that friendly unit. 
         This terrain feature can use this ability more than once per phase but you can only roll once for each friendly unit per spell cast.`,
         when: [MOVEMENT_PHASE],
@@ -92,7 +92,6 @@ const BattleTraits = {
       },
     ],
   },
-  
 } satisfies TItemDescriptions
 
 export default tagAs(BattleTraits, 'battle_trait')

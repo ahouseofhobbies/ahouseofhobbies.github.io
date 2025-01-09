@@ -3,7 +3,7 @@ import { tagAs } from 'factions/metatagger'
 import { HERO_PHASE } from 'types/phases'
 
 const Spells = {
- /* 'Stream of Corruption': {
+  /* 'Stream of Corruption': {
     effects: [
       {
         name: `Stream of Corruption`,
@@ -126,8 +126,8 @@ const Spells = {
       {
         name: `Fleshy Abundance: Casting value of 7 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Maggotkin of Nurgle Wizard to cast this spell, pick a visible friendly Maggotkin of Nurgle unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
-        Effect: Pick 1 of the following effects:  
-        Heal (D3) the target.  
+        Effect: Pick 1 of the following effects: 
+        Heal (D3) the target. 
         Subtract 1 from wound rolls for attacks that target that unit until the start of your next turn.`,
         when: [HERO_PHASE],
       },
@@ -139,7 +139,7 @@ const Spells = {
       },
     ],
   },
-/* 'Fleshy Abundance': {
+  /* 'Fleshy Abundance': {
     effects: [
       {
         name: `Fleshy Abundance`,

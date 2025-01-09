@@ -27,13 +27,13 @@ import rule_sources from './rule_sources'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const EmbarkingDeployEffect = {
- /* name: `Embarking (Deployment)`,
+  /* name: `Embarking (Deployment)`,
   desc: `During deployment, instead of setting up a SKYFARER unit on the battlefield, you can say that it is embarked in a friendly TRANSPORT VESSEL that is already on the battlefield.`,
   when: [DURING_SETUP],
   shared: true, */
-} 
+}
 const EmbarkingEffect = {
-/*  name: `Embarking`,
+  /*  name: `Embarking`,
   desc: `In the movement phase, if a friendly SKYFARER unit finishes a move wholly within 3" of a friendly TRANSPORT VESSEL and both of those units are more than 3" from all enemy units, you can say that the TRANSPORT VESSEL will embark that SKYFARER unit.`,
   when: [MOVEMENT_PHASE],
   shared: true, */
@@ -53,13 +53,13 @@ const EmbarkedEffect = {
   shared: true, */
 }
 const DisembarkEffect = {
- /* name: `Disembarking`,
+  /* name: `Disembarking`,
   desc: `In your movement phase, if a friendly SKYFARER unit is embarked in a TRANSPORT VESSEL that has not yet moved in that phase, you can say that the SKYFARER unit will disembark. If you do so, set up that SKYFARER unit wholly within 3" of that TRANSPORT VESSEL and more than 3" from all enemy units. A unit disembarks in this way can still move in the same turn.`,
   when: [MOVEMENT_PHASE],
   shared: true,*/
 }
 const DisembarkFromDestroyedVessel = {
- /* name: `Disembarking from a Destroyed Vessel`,
+  /* name: `Disembarking from a Destroyed Vessel`,
   desc: `If a friendly TRANSPORT VESSEL is destroyed, before removing it from play, roll a number of dice equal to the number of models embarked in it. For each roll of 1, 1 embarked model is slain (you choose which models are slain). Then, all units embarked in that TRANSPORT VESSEL must immediately disembark before it is removed from play.
 
   When a unit disembarks, if a model cannot be set up wholly within 3" of the TRANSPORT VESSEL in which it is embared and more than 3" from all enemy units, it is slain.`,
@@ -67,19 +67,19 @@ const DisembarkFromDestroyedVessel = {
   shared: true, */
 }
 const FlyingTransportEffect = {
- /* name: `Flying Transport`,
+  /* name: `Flying Transport`,
   desc: `This model can fly. In addition, up to 12 (22 for Ironclad) SKYFARER models can be embarked in it. If this unit is part of an army that is not a Kharadron Overlords army, it can still use the Sky-fleets battle trait (Embark/Disembark rules).`,
   when: [DURING_GAME],
   shared: true, */
 }
 const SkyCannonEffect = {
- /* name: `Sky Cannon`,
+  /* name: `Sky Cannon`,
   desc: `Before attacking with a Sky Cannon, choose either the Shrapnel or Shell missile weapon characteristics for that shooting attack.`,
   when: [SHOOTING_PHASE],
   shared: true, */
 }
 const AetherKhemistEffects = [
- /* {
+  /* {
     name: `Aetheric Augmentation`,
     desc: `At the start of your shooting phase, if this unit is not embarked, you can pick 1 friendly SKYFARERS unit that is not embarked and is wholly within 12" of this unit. Improve the Rend characteristic of that unit's missile weapons by 1 until the end of that phase. That same unit cannot be affects by this ability more than once per phase.`,
     when: [SHOOTING_PHASE],
@@ -92,43 +92,43 @@ const AetherKhemistEffects = [
   }, */
 ]
 const SkyhookEffect = {
-/*  name: `Skyhook`,
+  /*  name: `Skyhook`,
   desc: `The Damage characteristic of this unit's Skyhook or Light Skyhook is 3 if the target of the attack is a MONSTER.`,
   when: [SHOOTING_PHASE],
   shared: true,*/
 }
 const ShipSkyhookEffect = {
-/*  name: `Skyvessel Skyhook`,
+  /*  name: `Skyvessel Skyhook`,
   desc: `The Damage characters of this unit's Great Skyhook or Heavy Skyhook is 6 if that target is a MONSTER. In addition, if an attack is made with this unit's Great/Heavy Skyhook scores a hit on a MONSTER, if that MONSTER is not slain, after that attack has been resovled, roll a dice. On a 4+, that MONSTER is snagged until the end of the turn. While a MONSTER is snagged, it cannot carry out monstrous rampages. A MONSTER cannot be snagged more than once in the same turn.`,
   when: [SHOOTING_PHASE],
   shared: true,*/
 }
 const GrapnelLauncherEffect = {
- /* name: `Grapnel Launcher`,
+  /* name: `Grapnel Launcher`,
   desc: `While this unit includes any models armed with a grapnel launcher, once per battle, at the end of your movement phase, you can say this unit will reel itself twoards an object. If you do so, pick a point on the battlefield within 15" of this unit and on a terrain feature. Then, remove this unit from the battlefield and set it up again wholly within 3" of that point and more than 9" from all enemy units.`,
   when: [END_OF_MOVEMENT_PHASE],
   shared: true,*/
 }
 const BulwarksOfIron = {
-/*  name: `Bulwarks of Iron`,
+  /*  name: `Bulwarks of Iron`,
   desc: `This unit counts as 5 models for the purposes of contesting objectives.`,
   when: [DURING_GAME],
   shared: true,*/
 }
 const BombRacksEffect = {
- /* name: `Bomb Racks`,
+  /* name: `Bomb Racks`,
   desc: `After this unit finishes a normal move or a run, you can pick 1 enemy unit that this unit passed across and roll a number of dice equal to the Bomb Racks value shown on this unit's damage table. For each 4+, that enemy unit suffers 1 mortal wound. This ability has no effect on units that can fly.`,
   when: [MOVEMENT_PHASE],
   shared: true,*/
 }
 const EndrinmasterHealEffect = (val: '3' | 'D3') => ({
- /* name: `Endrinmaster`,
+  /* name: `Endrinmaster`,
   desc: `At the start of your hero phase, you can pick 1 friendly SKYVESSEL within 1" of this model. Heal up to ${val} wounds allocated to that SKYVESSEL.`,
   when: [START_OF_HERO_PHASE],
   shared: true,*/
 })
 const DrillEffect = (nVal: 'Cannon' | 'Launcher', rVal: '5+' | '6') => ({
- /* name: `Drill ${nVal}`,
+  /* name: `Drill ${nVal}`,
   desc: `If the unmodified hit roll for an attack made with a Drill ${nVal} is ${rVal}, that attack causes 3 mortal wounds to the target and the attack sequence ends.`,
   when: [SHOOTING_PHASE],
   shared: true, */
@@ -161,7 +161,7 @@ const Units = {
         Effect: Roll a dice. On a 2+, Heal (3) the target.`,
         when: [HERO_PHASE],
       },
-    //  EndrinmasterHealEffect('3'),
+      //  EndrinmasterHealEffect('3'),
     ],
   },
   'Endrinmaster with Endrinharness': {
@@ -169,8 +169,8 @@ const Units = {
       {
         name: `'Aye Aye, Captain! - Once Per Turn`,
         desc: `Declare: Pick a friendly Skyvessel within this units combat range to be the target. 
-        Effect: Roll a dice. On a 2+, for the rest of the turn:  
-        The target can use a Retreat or Run ability and still use Shoot abilities later in the turn.  
+        Effect: Roll a dice. On a 2+, for the rest of the turn: 
+        The target can use a Retreat or Run ability and still use Shoot abilities later in the turn. 
         No mortal damage is inflicted on the target by Retreat abilities.`,
         when: [HERO_PHASE],
       },
@@ -180,7 +180,7 @@ const Units = {
         Effect: Roll a dice. On a 2+, Heal (3) the target.`,
         when: [HERO_PHASE],
       },
-     // EndrinmasterHealEffect('3'),
+      // EndrinmasterHealEffect('3'),
     ],
   },
   'Aether-Khemist': {
@@ -199,8 +199,8 @@ const Units = {
         when: [COMBAT_PHASE],
       },
     ],
-    },
- /* 'Bjorgen Thundrik': {
+  },
+  /* 'Bjorgen Thundrik': {
     effects: [
       {
         name: `Toxic Gases`,
@@ -245,7 +245,7 @@ const Units = {
     ],
   },
   'Arkanaut Admiral': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Bring Every Gun to Bear', 'Command the Skies'])],
     }, */
     effects: [
@@ -279,7 +279,7 @@ const Units = {
     ],
   },
   'Brokk Grungsson, Lord-Magnate of Barak-Nar': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Command the Fleet'])],
     }, */
     effects: [
@@ -308,12 +308,12 @@ const Units = {
       {
         name: `Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
-    //  SkyhookEffect,
-     // GrapnelLauncherEffect,
+      //  SkyhookEffect,
+      // GrapnelLauncherEffect,
     ],
   },
   Endrinriggers: {
@@ -324,9 +324,9 @@ const Units = {
         Effect: Make a field repairs roll of D6 for each model in this unit. For each 4-5, Heal (1) the target. For each 6, Heal (2) the target.`,
         when: [END_OF_TURN],
       },
-     // DrillEffect('Launcher', '6'),
-    //  SkyhookEffect,
-     // GrapnelLauncherEffect,
+      // DrillEffect('Launcher', '6'),
+      //  SkyhookEffect,
+      // GrapnelLauncherEffect,
     ],
   },
   'Arkanaut Company': {
@@ -336,7 +336,7 @@ const Units = {
         desc: `Effect: Add 1 to hit rolls for this units attacks that target an enemy unit contesting an objective.`,
         when: [COMBAT_PHASE],
       },
-     // SkyhookEffect,
+      // SkyhookEffect,
     ],
   },
   'Grundstok Gunhauler': {
@@ -357,7 +357,7 @@ const Units = {
         Effect: Roll 4 dice. For each 4+, inflict 1 mortal damage on the target.`,
         when: [MOVEMENT_PHASE],
       },
-     /* BombRacksEffect,
+      /* BombRacksEffect,
       EmbarkedEffect,
       EmbarkingDeployEffect,
       EmbarkingEffect,
@@ -391,7 +391,7 @@ const Units = {
         Effect: Roll 6 dice. For each 4+, inflict 1 mortal damage on the target.`,
         when: [MOVEMENT_PHASE],
       },
-    /*  BulwarksOfIron,
+      /*  BulwarksOfIron,
       BombRacksEffect,
       FlyingTransportEffect,
       EmbarkedEffect,
@@ -429,7 +429,7 @@ const Units = {
         Aetheric Repulsion Field: This unit can use the Unbind ability as if it had Wizard (1).`,
         when: [DURING_SETUP],
       },
-     /* BulwarksOfIron,
+      /* BulwarksOfIron,
       BombRacksEffect,
       FlyingTransportEffect,
       EmbarkedEffect,
@@ -451,7 +451,7 @@ const Units = {
       },
       {
         name: `She Can Handle It! - Passive`,
-        desc: `Effect: You can re-roll run rolls and charge rolls for the Aelsling while this unit is within its combat range.`,
+        desc: `Effect: You can reroll run rolls and charge rolls for the Aelsling while this unit is within its combat range.`,
         when: [MOVEMENT_PHASE, CHARGE_PHASE],
       },
 
@@ -477,7 +477,7 @@ const Units = {
       {
         name: `Grimhold Exile: Honour to Grimnir! - Once Per Battle`,
         desc: `Declare: Pick up to 3 friendly Fyreslayers Infantry units wholly within 12" of this unit to be the targets. 
-        Effect: You can re-roll charge rolls for the targets for the rest of the turn`,
+        Effect: You can reroll charge rolls for the targets for the rest of the turn`,
         when: [HERO_PHASE],
       },
       {
@@ -545,29 +545,29 @@ const Units = {
         desc: `Declare: Pick this unit and a friendly Callis and Toll unit in the same regiment as this unit if those units have not been deployed. 
         Effect: Set up those units in reserve in the shadows. Those units have now been deployed.`,
         when: [DURING_SETUP],
-       },
-       {
+      },
+      {
         name: `Toll's Companions: Saviours of Cinderfall - Passive`,
         desc: `Effect: While a friendly Callis and Toll unit is wholly within this units combat range, both this unit and that Callis and Toll unit have Ward (5+).`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Toll's Companions: Emerge from the Shadows`,
-         desc: `Declare: Pick this unit if it is in the shadows. 
+      },
+      {
+        name: `Toll's Companions: Emerge from the Shadows`,
+        desc: `Declare: Pick this unit if it is in the shadows. 
          Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units. Then, set up the Callis and Toll unit that was set up in the shadows with this unit wholly within 6" of it and more than 9" from all enemy units.`,
-         when: [MOVEMENT_PHASE],
-       },
-       {
+        when: [MOVEMENT_PHASE],
+      },
+      {
         name: `Duty Bound - Passive`,
         desc: `Effect: While every model in the same unit in the Regiment of Renown is contesting the same objective, add 1 to save rolls and ward rolls for that unit.`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Sigmar's Justice - Once Per Turn`,
-         desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
+      },
+      {
+        name: `Sigmar's Justice - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
          Effect: For the rest of the battle, add 1 to wound rolls for combat attacks made by units in this Regiment of Renown that target a unit that is marked for justice.`,
-         when: [DURING_SETUP],
-       },
+        when: [DURING_SETUP],
+      },
     ],
   },
   'ROR: Norgrimm`s Rune Throng': {
@@ -594,17 +594,17 @@ const Units = {
         desc: `Effect: Add 2 to the control scores of friendly Cities of Sigmar Duardin units, excluding Longbeards units, while they are wholly within 12" of this unit.`,
         when: [END_OF_TURN],
       },
-       {
+      {
         name: `Rune of Restored Hearth - Once Per Battle`,
         desc: `Effect: If the Runelord in the Regiment of Renown is contesting an objective, for the rest of the battle, units in this Regiment of Renown have Ward (5+) while they are contesting that objective.`,
         when: [HERO_PHASE],
-       },
-       {
-         name: `Wrath and Ruin: Chant value of 4`,
-         desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
+      },
+      {
+        name: `Wrath and Ruin: Chant value of 4`,
+        desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
          Effect: Roll 6 dice. If the chanting roll was 8+, roll 9 dice instead. For each 5+, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target as a result of those dice rolls, ignore positive modifiers to save rolls for the target until the start of your next turn.`,
-         when: [HERO_PHASE],
-       },
+        when: [HERO_PHASE],
+      },
     ],
   },
   'ROR: Elthwin`s Thorns': {
@@ -626,17 +626,17 @@ const Units = {
         desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot move into combat during any part of that move.`,
         when: [SHOOTING_PHASE],
       },
-       {
+      {
         name: `Gossamid Champion`,
         desc: `Declare: Pick the Arch-Revenant in this Regiment of Renown to use this ability, the pick a visible enemy unit within 12" of them to be the target. 
         Effect: Until the start of your next turn, subtract X from charge rolls for the target, where X is the number of damage points allocated to the target this phase by shooting attacks made by the Gossamid Archers unit in the Regiment of Renown, to a maximum of 6.`,
         when: [SHOOTING_PHASE],
-       },
-       {
-         name: `Flight of the Zephyrspites - Once Per Turn`,
-         desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
-         when: [SHOOTING_PHASE],
-       },
+      },
+      {
+        name: `Flight of the Zephyrspites - Once Per Turn`,
+        desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   'ROR: Gotrek Gurnisson': {
@@ -799,13 +799,13 @@ const Units = {
       {
         name: `Knight-Draconis: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
       {
         name: `Stormdrake Guard: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      }, 
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Hour of Retribution - Once Per Battle`,
         desc: `Effect: For the rest of the turn:

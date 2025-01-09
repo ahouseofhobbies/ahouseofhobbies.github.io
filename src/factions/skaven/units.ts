@@ -106,11 +106,11 @@ const CrackTheWhipEffect = {
 
 const Units = {
   'Thanquol on Boneripper': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Madness'])],
     }, */
     effects: [
-     // GenericEffects.WizardTwoSpellsEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
       //ProtectionOfTheHornedRatEffect,
       {
         name: `Battle Damaged - Passive`,
@@ -142,13 +142,13 @@ const Units = {
     ],
   },
   'Lord Skreech Verminking': {
-  /*  mandatory: {
+    /*  mandatory: {
       command_abilities: [keyPicker(command_abilities, ['The Rat King'])],
       spells: [keyPicker(spells, ['The Dreaded Thirteenth Spell'])],
     }, */
     effects: [
-     // GenericEffects.WizardTwoSpellsEffect,
-     // ProtectionOfTheHornedRatEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
+      // ProtectionOfTheHornedRatEffect,
       {
         name: `The Thirteen-Headed One`,
         desc: `Effect: Pick 1 of the following effects to apply until the start of your next turn. You cannot pick the same effect more than once per battle. 
@@ -163,16 +163,16 @@ const Units = {
       {
         name: `The Dreaded Thirteenth Spell: Casting value of 7`,
         desc: `Declare: Pick a visible enemy unit within 13" to be the target, then make a casting roll of 2D6. 
-        Effect: Roll 13 dice. For each 5+:  
-        Inflict 1 mortal damage on the target.  
+        Effect: Roll 13 dice. For each 5+: 
+        Inflict 1 mortal damage on the target. 
         You can return 1 slain model to a friendly Clanrats unit wholly within 13" of this unit.`,
         when: [HERO_PHASE],
       },
       {
         name: `Terrifying Monstrosity - Once Per Turn`,
         desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
-        Effect: Roll a dice. On a 3+:  
-        The target cannot use commands for the rest of the turn.  
+        Effect: Roll a dice. On a 3+: 
+        The target cannot use commands for the rest of the turn. 
         Subtract an amount equal to the roll from the targets control score until the start of your next turn.`,
         when: [COMBAT_PHASE],
       },
@@ -196,7 +196,7 @@ const Units = {
       },
       {
         name: `Prophet of the Horned Rat - Once Per Battle`,
-        desc: `Effect: You can re-roll chanting rolls for this unit until the start of your next turn.`,
+        desc: `Effect: You can reroll chanting rolls for this unit until the start of your next turn.`,
         when: [HERO_PHASE],
       },
       {
@@ -210,12 +210,12 @@ const Units = {
     ],
   },
   'Verminlord Warpseer': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Dreaded Warpgale'])],
     }, */
     effects: [
-    //  GenericEffects.WizardTwoSpellsEffect,
-     // ProtectionOfTheHornedRatEffect,
+      //  GenericEffects.WizardTwoSpellsEffect,
+      // ProtectionOfTheHornedRatEffect,
       {
         name: `Divine the Future - Passive`,
         desc: `Effect: While this unit is on the battlefield, add 2" to the distance friendly units can move when using the Always Three Clawsteps Ahead ability.`,
@@ -242,14 +242,14 @@ const Units = {
     ],
   },
   'Grey Seer': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(spells, ['Wither'])],
     }, */
     effects: [
-    //  GenericEffects.WizardTwoSpellsEffect,
+      //  GenericEffects.WizardTwoSpellsEffect,
       {
         name: `Warpstone Shards`,
-        desc: `Effect: The next time you make a casting roll for this unit this phase, roll 3D6 instead of 2D6. This roll cannot be re-rolled or modified. 
+        desc: `Effect: The next time you make a casting roll for this unit this phase, roll 3D6 instead of 2D6. This roll cannot be rerolled or modified. 
         If the casting roll is 13, the spell is successfully cast and cannot be unbound. After the effect of that spell has been resolved, inflict D3 mortal damage on this unit. 
         If the casting roll is not 13, remove 1 dice of your choice from the casting roll and use the remaining 2D6 as the casting roll.`,
         when: [HERO_PHASE],
@@ -257,11 +257,11 @@ const Units = {
     ],
   },
   'Arch-Warlock': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Warp Lightning Storm'])],
     }, */
     effects: [
-     // GenericEffects.WizardTwoSpellsEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
       {
         name: `Overseers of the Enginecovens - Passive`,
         desc: `Effect: If a friendly Skryre unit wholly within 13" of this unit uses the Covering Fire command, no command points are spent.`,
@@ -286,11 +286,11 @@ const Units = {
     ],
   },
   'Warlock Engineer': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Warp Lightning'])],
     }, */
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
+      //  GenericEffects.WizardOneSpellEffect,
       {
         name: `More-More Warp Energy! - Reaction: You declared a Shoot ability for this unit, it was not set up this turn, and it has not used a Move ability turn`,
         desc: `Effect: Roll a dice. On a 2+, set the Damage characteristic of this units Warplock Musket to 3 for the rest of the turn. On a 1, inflict D3 mortal damage on this unit.`,
@@ -305,11 +305,11 @@ const Units = {
     ],
   },
   'Warlock Bombardier': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(spells, ['Warp Lightning'])],
     }, */
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
+      //  GenericEffects.WizardOneSpellEffect,
       {
         name: `More-More Doom! - Reaction: You declared a Shoot ability for this unit, it was not set up this turn, and it has not used a Move ability turn`,
         desc: `Effect: Roll a dice. On a 2+, set the Damage characteristic of its Doomrocket to D3+3 for the rest of the turn. On a 1, inflict D3 mortal damage on this unit.`,
@@ -324,7 +324,7 @@ const Units = {
   },
   Stormfiends: {
     effects: [
-     // GenericEffects.Elite,
+      // GenericEffects.Elite,
       {
         name: `Grinderfist Tunnellers`,
         desc: `Declare: Pick this unit if it is in the tunnels below and includes any models armed with Grindersts. 
@@ -366,7 +366,7 @@ const Units = {
         when: [SHOOTING_PHASE],
       },
     ],
-  }, 
+  },
   Doomwheel: {
     effects: [
       {
@@ -413,7 +413,7 @@ const Units = {
       },
     ],
   },
-/*  "Spiteclaw's Swarm": {
+  /*  "Spiteclaw's Swarm": {
     effects: [
       {
         name: `Aversion to Death`,
@@ -433,13 +433,13 @@ const Units = {
     ],
   }, */
   'Verminlord Warbringer': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Tyrant of Battle'])],
       spells: [keyPicker(spells, ['Dreaded Death Frenzy'])],
     }, */
     effects: [
-   //   GenericEffects.WizardTwoSpellsEffect,
-    //  ProtectionOfTheHornedRatEffect,
+      //   GenericEffects.WizardTwoSpellsEffect,
+      //  ProtectionOfTheHornedRatEffect,
       {
         name: `Tyrant of Battle - Once Per Turn`,
         desc: `Declare: Pick up to 2 friendly Verminus Infantry units wholly within 13" of this unit to be the targets. 
@@ -455,7 +455,7 @@ const Units = {
     ],
   },
   Clawlord: {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Gnash-gnaw on their Bones!'])],
     }, */
     effects: [
@@ -471,7 +471,7 @@ const Units = {
       },
     ],
   },
- /* 'Skritch Spiteclaw': {
+  /* 'Skritch Spiteclaw': {
    /* mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Gnash-gnaw on their Bones!'])],
     }, 
@@ -527,7 +527,7 @@ const Units = {
         desc: `Effect: While this unit is within the combat range of a friendly Clanrats unit that has 5 or more models, and there are no other friendly Weapon Team units within that units combat range, this unit is not visible to enemy units more than 13" away.`,
         when: [DURING_GAME],
       },
-     // ...HiddenWeaponsTeamsEffects,
+      // ...HiddenWeaponsTeamsEffects,
     ],
   },
   'Warpfire Thrower': {
@@ -537,7 +537,7 @@ const Units = {
         desc: `Effect: While this unit is within the combat range of a friendly Clanrats unit that has 5 or more models, and there are no other friendly Weapon Team units within that units combat range, this unit is not visible to enemy units more than 13" away.`,
         when: [DURING_GAME],
       },
-     // ...HiddenWeaponsTeamsEffects,
+      // ...HiddenWeaponsTeamsEffects,
     ],
   },
   'Warp-Grinder': {
@@ -555,7 +555,7 @@ const Units = {
         when: [MOVEMENT_PHASE],
       },
     ],
-  }, 
+  },
   Plagueclaw: {
     effects: [
       {
@@ -574,7 +574,7 @@ const Units = {
       },
     ],
   },
- /* 'Plague Censer Bearers': {
+  /* 'Plague Censer Bearers': {
     effects: [
     //  FrenziedAssaultEffect,
       {
@@ -592,11 +592,11 @@ const Units = {
     effects: [FrenziedAssaultEffect, PoisonousFumesEffect],
   }, */
   'Plague Priest on Plague Furnace': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(prayers, ['Pestilence-pestilence!'])],
     }, */
     effects: [
-     // ...AltarOfTheHornedRatEffects,
+      // ...AltarOfTheHornedRatEffects,
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Great Plague Censer is 2.`,
@@ -612,47 +612,47 @@ const Units = {
         desc: `Effect: Friendly Pestilens units have Ward (6+) while they are wholly within 13" of this unit.`,
         when: [DURING_GAME],
       },
-    //  PoisonousFumesEffect,
+      //  PoisonousFumesEffect,
     ],
   },
   'Verminlord Corruptor': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Lord of Pestilence'])],
       spells: [keyPicker(spells, ['Dreaded Plague'])],
     }, */
     effects: [
-     // GenericEffects.WizardTwoSpellsEffect,
-    //  ProtectionOfTheHornedRatEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
+      //  ProtectionOfTheHornedRatEffect,
       {
         name: `Lord of Great Plagues - Once Per Turn`,
         desc: `Effect: If the unmodified chanting roll for a friendly Pestilens Priest this phase was 6, pick 1 of the following effects to apply: 
         Crimsonweal Curse: Pick an enemy unit within 13" of this unit to be the target. For the rest of the battle, each time the target uses a Move ability, inflict D3 mortal damage on it after the Move ability has been resolved. 
-        The Neverplague: For the rest of the battle, you can re-roll chanting rolls for friendly Pestilens Priests. 
+        The Neverplague: For the rest of the battle, you can reroll chanting rolls for friendly Pestilens Priests. 
         Undulant Scourge: Pick a visible enemy unit within 13" of this unit to be the target. Inflict 2D3 mortal damage on the target.`,
         when: [HERO_PHASE],
       },
       {
         name: `Plaguemaster - Once Per Turn`,
         desc: `Declare: Pick up to 3 enemy units in combat with this unit to be the targets. 
-        Effect: Roll a D3 for each target. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3 for each target. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. 
         Give this unit 1 ritual point.`,
         when: [COMBAT_PHASE],
       },
     ],
   },
   'Grey Seer on Screaming Bell': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Cracks Call'])],
     }, */
     effects: [
-     // GenericEffects.WizardTwoSpellsEffect,
-     // ...AltarOfTheHornedRatEffects,
-     {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Crushing Bulk is 4.`,
-      when: [COMBAT_PHASE],
-    },
+      // GenericEffects.WizardTwoSpellsEffect,
+      // ...AltarOfTheHornedRatEffects,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Crushing Bulk is 4.`,
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Altar of the Horned Rat - Passive`,
         desc: `Effect: Friendly Skaven Infantry units have Ward (6+) while they are wholly within 13" of this unit.`,
@@ -687,7 +687,7 @@ const Units = {
         Effect: Roll a dice. On a 3+, roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.`,
         when: [COMBAT_PHASE],
       },
-     // RegeneratingMonstrosityEffect,
+      // RegeneratingMonstrosityEffect,
       {
         name: `Regenerating Monstrosity`,
         desc: `Effect: Heal (D6) this unit.`,
@@ -718,11 +718,11 @@ const Units = {
     ],
   },
   'Master Moulder': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Unleash More-more Beasts!'])],
     }, */
     effects: [
-     // CrackTheWhipEffect,
+      // CrackTheWhipEffect,
       {
         name: `Lord of Flesh-Grafting`,
         desc: `Declare: Pick another friendly Moulder unit wholly within 13" of this unit to be the target. 
@@ -737,7 +737,7 @@ const Units = {
       },
     ],
   },
-/*  'Giant Rats': {
+  /*  'Giant Rats': {
     effects: [
       {
         name: `Wave of Rats`,
@@ -764,17 +764,17 @@ const Units = {
       },
     ],
   },
- /* Packmasters: {
+  /* Packmasters: {
     effects: [CrackTheWhipEffect],
   }, */
   'Verminlord Deceiver': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(command_abilities, ['Lord of Assassins'])],
       spells: [keyPicker(spells, ['Dreaded Skitterleap'])],
     }, */
     effects: [
-    //  GenericEffects.WizardTwoSpellsEffect,
-     // ProtectionOfTheHornedRatEffect,
+      //  GenericEffects.WizardTwoSpellsEffect,
+      // ProtectionOfTheHornedRatEffect,
       {
         name: `Lord of Assassins - Reaction: You declared the Redeploy command for a friendly Eshin Infantry unit wholly within 13" of this unit`,
         desc: `Effect: If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.`,
@@ -799,8 +799,8 @@ const Units = {
         desc: `Effect: While friendly Eshin units are wholly within 13" of this unit, they can use Shoot and/or Charge abilities even if they used a Run ability in the same turn.`,
         when: [MOVEMENT_PHASE],
       },
-     // EshinToxinsEffect,
-     // RunningDeathEffect,
+      // EshinToxinsEffect,
+      // RunningDeathEffect,
     ],
   },
   'Night Runners': {
@@ -810,7 +810,7 @@ const Units = {
         desc: `Effect: While each model in this unit is within 1" of any terrain features, this unit cannot be targeted by shooting attacks unless the attacking model is within 9" of it.`,
         when: [DURING_GAME],
       },
-     // RunningDeathEffect,
+      // RunningDeathEffect,
       {
         name: `Slinking Advance`,
         desc: `Effect: This unit can use the Normal Move ability as if it were your movement phase.`,
@@ -826,7 +826,7 @@ const Units = {
         desc: `Effect: Add 1 to hit rolls for this units shooting attacks that target an enemy unit that has 10 or more models.`,
         when: [SHOOTING_PHASE],
       },
-     // RunningDeathEffect,
+      // RunningDeathEffect,
       {
         name: `More-More Warpstone Bullets - Once Per Turn`,
         desc: `Effect: If this unit is within the combat range of a friendly Skryre Hero, this units Hail of Warpstone Bullets has an Attacks characteristic of 6D6+3 instead of 3D6+3 for the rest of the turn. However, for each unmodified hit roll of 1 for an attack made with this units Hail of Warpstone Bullets, inflict 1 mortal damage on this unit after the Shoot ability has been resolved.`,
@@ -842,7 +842,7 @@ const Units = {
         desc: `Effect: While each model in this unit is within 1" of any terrain features, this unit cannot be targeted by shooting attacks unless the attacking model is within 9" of it.`,
         when: [COMBAT_PHASE],
       },
-     // RunningDeathEffect,
+      // RunningDeathEffect,
       {
         name: `Cruel Commander`,
         desc: `Declare: Pick a friendly non-Hero Verminus Infantry unit wholly within 13" of this unit to be the target. 
@@ -852,7 +852,7 @@ const Units = {
       //EshinToxinsEffect,
     ],
   },
- /* 'Gutter Runners': {
+  /* 'Gutter Runners': {
     effects: [
     //  GenericEffects.Elite,
     // RunningDeathEffect,
@@ -864,13 +864,13 @@ const Units = {
      // EshinToxinsEffect,
     ],
   }, */
- /* 'Skabbik Plagueseeker': {
+  /* 'Skabbik Plagueseeker': {
     mandatory: {
       prayers: [keyPicker(prayers, ['Befoul-befoul!'])],
     },
     effects: [FrenziedAssaultEffect, PoisonousFumesEffect],
   }, */
-  "Plaguepack": {
+  Plaguepack: {
     effects: [
       {
         name: `Enshrouding Fumes - Passive`,
@@ -879,12 +879,12 @@ const Units = {
       },
       {
         name: `Plague Rat - Passive`,
-        desc: `Effect: This unit's Plague Rat is a token. If you make an unmodified chanting roll of 1 for this unit while its Plague Rat is on the battlefield, you can remove its Plague Rat from the battlefield and then re-roll that chanting roll.`,
+        desc: `Effect: This unit's Plague Rat is a token. If you make an unmodified chanting roll of 1 for this unit while its Plague Rat is on the battlefield, you can remove its Plague Rat from the battlefield and then reroll that chanting roll.`,
         when: [HERO_PHASE],
       },
     ],
-  }, 
-  "Krittok Foulblade": {
+  },
+  'Krittok Foulblade': {
     effects: [
       {
         name: `Doomfang`,
@@ -902,7 +902,7 @@ const Units = {
         when: [DURING_GAME],
       },
     ],
-  }, 
+  },
   'ROR: Brand`s Oathbound': {
     effects: [
       {
@@ -910,7 +910,7 @@ const Units = {
         desc: `Declare: This unit can only use this ability if it is in combat with an enemy Hero. 
         Effect: This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn. This unit can only use the second Fight ability if it is in combat with an enemy Hero, and if it does so, it must pick an enemy Hero to be the target of all of its attacks.`,
         when: [COMBAT_PHASE],
-      },  
+      },
       {
         name: `Gunnar Brand: Oath of Bloodshed - Once Per Battle`,
         desc: `Declare: This unit can only use this ability if any enemy Heroes were slain by this units combat attacks this turn. 
@@ -921,7 +921,7 @@ const Units = {
         name: `Singri Brand: Swift as the Wind - Passive`,
         desc: `Effect: Only critical hits score successful hits for shooting attacks that target this unit.`,
         when: [SHOOTING_PHASE],
-      },  
+      },
       {
         name: `Singri Brand: Uncanny Shot - Passive`,
         desc: `Effect: Add 1 to the Rend characteristic of this units Singris Warbow for attacks that target enemy units that are within 6" of a friendly Gunnar Brand.`,
@@ -932,7 +932,7 @@ const Units = {
         desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target, then make a casting roll of 2D6. 
         Effect: Inflict 1 mortal damage on the target and subtract 1 from the Attacks characteristic of the targets melee weapons until the start of your next turn.`,
         when: [HERO_PHASE],
-      },  
+      },
       {
         name: `Oathsworn Kin: Broken Nadja - Passive`,
         desc: `Effect: While this units Broken Nadja is on the battlefield, it has Wizard (1).`,
@@ -940,8 +940,8 @@ const Units = {
       },
       {
         name: `Favour of the Gods - Once Per Turn`,
-        desc: `Effect: If any enemy Heroes were slain this turn by the Gunnar Brand in this Regiment of Renown:  
-        Heal (5) each unit in this Regiment of Renown.  
+        desc: `Effect: If any enemy Heroes were slain this turn by the Gunnar Brand in this Regiment of Renown: 
+        Heal (5) each unit in this Regiment of Renown. 
         Add 1 to the Attacks characteristic of melee weapons used by units in this Regiment of Renown for the rest of the battle.`,
         when: [END_OF_TURN],
       },
@@ -971,15 +971,15 @@ const Units = {
         desc: `Used By: The unit using that Fight ability. 
         Effect: Pick a unit in this Regiment of Renown that has not used a Fight ability this turn to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
         when: [COMBAT_PHASE],
-      },  
+      },
     ],
   },
   'ROR: The Coven of Thryx': {
     effects: [
       {
         name: `Magister: Magic-Touched`,
-        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn:  
-        Add 1 to this units power level.  
+        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn: 
+        Add 1 to this units power level. 
         If 2 or more dice in a casting roll for this unit have the same value, the spell fails, its effect is not resolved and D6 mortal damage is inflicted on this unit.`,
         when: [HERO_PHASE],
       },
@@ -994,7 +994,7 @@ const Units = {
         name: `Tome of Eyes: Transfixed by Countless Eyes - Reaction: You declared a Spell ability for a Wizard within this Manifestations combat range`,
         desc: `Effect: You can add 1 or 2 to the casting roll for that spell. Roll a number of dice equal to the amount added. For each 1-2, allocate 1 damage point to the caster. If the caster is destroyed by this ability, the spell has no effect.`,
         when: [HERO_PHASE],
-      }, 
+      },
       {
         name: `Burning SIgil of Tzeentch: Radiant Transmogrification`,
         desc: `Declare: This Manifestation must use this ability in each movement phase. Pick each unit (friendly and enemy) within 9" of this Manifestation to be the targets. 
@@ -1008,7 +1008,7 @@ const Units = {
       },
       {
         name: `Sparks of Profane Potential - Once Per Battle`,
-        desc: `Effect: If the Magister in the Regiment of Renown has been deployed, set up one of the following Manifestations within 1" of them:  
+        desc: `Effect: If the Magister in the Regiment of Renown has been deployed, set up one of the following Manifestations within 1" of them: 
         1 Burning Sigil of Tzeentch  
         1 Tome of Eyes  
         1 Daemonic Simulacrum.`,
@@ -1016,7 +1016,7 @@ const Units = {
       },
       {
         name: `Skilled Summoner: Casting value of 6`,
-        desc: `Declare: Pick the Magister in this Regiment of Renown to cast this spell, pick 1 of the Manifestations from the list below that is not on the battlefield, then make a casting roll of 2D6:  
+        desc: `Declare: Pick the Magister in this Regiment of Renown to cast this spell, pick 1 of the Manifestations from the list below that is not on the battlefield, then make a casting roll of 2D6: 
         1 Burning Sigil of Tzeentch  
         1 Tome of Eyes  
         1 Daemonic Simulacrum 
@@ -1104,8 +1104,8 @@ const Units = {
       {
         name: `Shake the Earth - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted. 
         Subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -1125,7 +1125,7 @@ const Units = {
       },
       {
         name: `Chaos Knights: Impaling Charge - Passive`,
-        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -1269,8 +1269,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

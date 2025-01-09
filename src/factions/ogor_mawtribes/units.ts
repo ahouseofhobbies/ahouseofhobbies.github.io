@@ -150,7 +150,7 @@ const ChampionEffect = {
 } */
 
 const Units = {
-  'Kragnos': {
+  Kragnos: {
     effects: [
       {
         name: `Battle Damaged - Passive`,
@@ -169,8 +169,8 @@ const Units = {
       },
       {
         name: `Rampaging Destruction - Once Per Turn`,
-        desc: `Effect: If this unit charged this phase, pick 1 of the following effects:  
-        Roll a dice for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.  
+        desc: `Effect: If this unit charged this phase, pick 1 of the following effects: 
+        Roll a dice for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. 
         Pick an enemy Monster in combat with this unit and roll 2D6. On a 7, this ability has no effect. Otherwise, inflict an amount of mortal damage on that unit equal to the results on the dice used for the 2D6 roll multiplied together. For example, a 2D6 roll of 2 and 6 would inflict 12 mortal damage (2x6).`,
         when: [CHARGE_PHASE],
       },
@@ -182,7 +182,7 @@ const Units = {
     ],
   },
   Butcher: {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Voracious Maw'])],
     }, */
     effects: [
@@ -191,7 +191,7 @@ const Units = {
         desc: `Effect: While they are wholly within 12" of this unit, friendly Gutbusters units can use Charge abilities even if they used a Run ability in the same turn.`,
         when: [CHARGE_PHASE],
       },
-     // BloodgruelEffect, GenericEffects.WizardOneSpellEffect
+      // BloodgruelEffect, GenericEffects.WizardOneSpellEffect
     ],
   },
   Firebelly: {
@@ -245,7 +245,7 @@ const Units = {
         desc: `Effect: Ignore the first damage point that would be allocated to this unit in each phase.`,
         when: [DURING_GAME],
       },
-    //  ...StonehornEffects, ...FrostlordEffects
+      //  ...StonehornEffects, ...FrostlordEffects
     ],
   },
   'Frostlord on Thundertusk': {
@@ -270,11 +270,11 @@ const Units = {
         Effect: Each target can add 1 to the D3 roll made if that unit uses the Trampling Charge ability this turn.`,
         when: [CHARGE_PHASE],
       },
-    //  ...ThundertuskEffects, ...FrostlordEffects
+      //  ...ThundertuskEffects, ...FrostlordEffects
     ],
   },
   'Huskard on Stonehorn': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(prayers, ["Winter's Endurance", "Winter's Strength"])],
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Unstoppable Charge'])],
     }, */
@@ -287,8 +287,8 @@ const Units = {
       {
         name: `Everwinter's Goad - Once Per Turn`,
         desc: `Declare: Pick each friendly and enemy Monster within this units combat range to be the targets. 
-        Effect: Roll a dice for each target. On a 3+:  
-        If the target is a friendly Ogor Mawtribes unit, its Companion weapons have Crit (2 Hits) for the rest of the turn.  
+        Effect: Roll a dice for each target. On a 3+: 
+        If the target is a friendly Ogor Mawtribes unit, its Companion weapons have Crit (2 Hits) for the rest of the turn. 
         If the target is an enemy unit, subtract 1 from hit rolls for attacks made with its Companion weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -297,11 +297,11 @@ const Units = {
         desc: `Effect: Ignore the first damage point that would be allocated to this unit in each phase.`,
         when: [DURING_GAME],
       },
-    //  ...StonehornEffects, BloodVultureEffect, ...ReelEmInEffects
+      //  ...StonehornEffects, BloodVultureEffect, ...ReelEmInEffects
     ],
   },
   'Huskard on Thundertusk': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(prayers, ["Winter's Endurance", "Winter's Strength"])],
     }, */
     effects: [
@@ -316,7 +316,7 @@ const Units = {
         Effect: Roll a dice. Add 1 to the roll if the target had Strike-last as a result of this ability in the previous turn. On a 4+, the target has Strike-last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-    //  ...ThundertuskEffects, BloodVultureEffect, ...ReelEmInEffects
+      //  ...ThundertuskEffects, BloodVultureEffect, ...ReelEmInEffects
     ],
   },
   'Stonehorn Beastriders': {
@@ -339,7 +339,7 @@ const Units = {
         desc: `Effect: Ignore the first damage point that would be allocated to this unit in each phase.`,
         when: [DURING_GAME],
       },
-    //  ...StonehornEffects, BloodVultureEffect, ...ReelEmInEffects
+      //  ...StonehornEffects, BloodVultureEffect, ...ReelEmInEffects
     ],
   },
   'Thundertusk Beastriders': {
@@ -355,12 +355,12 @@ const Units = {
       {
         name: `Everwinter's Assault - Once Per Turn`,
         desc: `Declare: If this unit charged this turn, pick an enemy unit in combat with it to be the target. 
-        Eect: Roll a dice. On a 3+, for the rest of the turn:  
-        If the target is a Monster, subtract 3 from its control score.  
+        Eect: Roll a dice. On a 3+, for the rest of the turn: 
+        If the target is a Monster, subtract 3 from its control score. 
         If the target is a non-Monster unit, subtract 5 from its control score.`,
         when: [END_OF_TURN],
       },
-    //  ...ThundertuskEffects, BloodVultureEffect, ...ReelEmInEffects
+      //  ...ThundertuskEffects, BloodVultureEffect, ...ReelEmInEffects
     ],
   },
   'Gnoblar Scraplauncher': {
@@ -381,7 +381,7 @@ const Units = {
   },
   Gnoblars: {
     effects: [
-     // ChampionEffect,
+      // ChampionEffect,
       {
         name: `Nasty Traps and Tricks`,
         desc: `Declare: Pick an enemy unit within 6" of this unit and that used a Move ability this turn to be the target. You cannot pick the same unit to be the target of this ability more than once per turn. 
@@ -407,9 +407,9 @@ const Units = {
     ],
   },
   Maneaters: {
-   /* mandatory: { command_abilities: [keyPicker(command_abilities, ['A Barrel of Meat and the Jobs Done'])] }, */
+    /* mandatory: { command_abilities: [keyPicker(command_abilities, ['A Barrel of Meat and the Jobs Done'])] }, */
     effects: [
-     // GenericEffects.Elite,
+      // GenericEffects.Elite,
       {
         name: `Been There, Done That - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
         desc: `Effect: Roll a dice. On a 4+, that ability has no effect on this unit.`,
@@ -456,7 +456,7 @@ const Units = {
         desc: `Effect: The Charge (+1 Damage) weapon ability has no effect on attacks that target this unit.`,
         when: [DURING_GAME],
       },
-     // IronfistEffect,
+      // IronfistEffect,
     ],
   },
   Ironblaster: {
@@ -466,7 +466,7 @@ const Units = {
         desc: `Effect: Each time this unit uses a Shoot ability, pick either the Big Shot or Hail Shot weapon characteristics for all the attacks it makes with its Ironblaster Cannon.`,
         when: [SHOOTING_PHASE],
       },
-   //   RhinoxChargeEffect,
+      //   RhinoxChargeEffect,
     ],
   },
   Leadbelchers: {
@@ -478,7 +478,7 @@ const Units = {
       },
       {
         name: `Powder Gnoblars - Passive`,
-        desc: `Effect: This unit has up to 2 Powder Gnoblar tokens. Each time this unit uses a Shoot ability, for each of this units Powder Gnoblars that are on the battlefield, you can re-roll 1 random characteristic roll for this units Attacks characteristic. If a random characteristic roll re-rolled in this manner is 1, remove 1 of this units Powder Gnoblars from the battlefield.`,
+        desc: `Effect: This unit has up to 2 Powder Gnoblar tokens. Each time this unit uses a Shoot ability, for each of this units Powder Gnoblars that are on the battlefield, you can reroll 1 random characteristic roll for this units Attacks characteristic. If a random characteristic roll rerolled in this manner is 1, remove 1 of this units Powder Gnoblars from the battlefield.`,
         when: [SHOOTING_PHASE],
       },
     ],
@@ -504,14 +504,14 @@ const Units = {
         desc: `Effect: If you have used the Feast on Flesh ability this battle, add 1 to the control score of this unit for each model in this unit.`,
         when: [END_OF_TURN],
       },
-     // IronfistEffect,
+      // IronfistEffect,
     ],
   },
   Slaughtermaster: {
     /*mandatory: { spells: [keyPicker(spells, ['Rockchomper'])] }, */
     effects: [
-     // BloodgruelEffect,
-     // GenericEffects.WizardOneSpellEffect,
+      // BloodgruelEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Great Cauldron`,
         desc: `Effect: You can spend 1 or more of this units grisly remains points. For each point spent, pick a friendly Gutbusters unit wholly within 12" of this unit to be the target, then pick 1 of the following effects: 
@@ -541,7 +541,7 @@ const Units = {
       },
     ],
   },
-/*  "Hrothgorn's Mantrappers": {
+  /*  "Hrothgorn's Mantrappers": {
     effects: [
       {
         name: `Hidden Trap`,
@@ -627,7 +627,7 @@ const Units = {
       },
     ],
   },
- /* 'Gorger Mawpack': {
+  /* 'Gorger Mawpack': {
     effects: [
       {
         name: `Clawback`,
@@ -909,8 +909,8 @@ const Units = {
       {
         name: `Shake the Earth - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted. 
         Subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -992,7 +992,7 @@ const Units = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1095,8 +1095,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

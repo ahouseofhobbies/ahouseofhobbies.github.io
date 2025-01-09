@@ -16,7 +16,7 @@ import {
 } from 'types/phases'
 
 const BattleTraits = {
- /* 'The Bad Moon': {
+  /* 'The Bad Moon': {
     effects: [
       {
         name: `The Bad Moon Setup`,
@@ -44,7 +44,7 @@ const BattleTraits = {
         While the Bad Moons location is the centre of the battlefield, all Gloomspite Gitz units (friendly and enemy) on the battlefield are under the light of the Bad Moon. 
         While a friendly Gloomspite Gitz unit is under the light of the Bad Moon, the appropriate effect below applies to it: 
         Frothing Zealots: If the unit is a non-Squig Moonclan unit, add 3 to its control score. 
-        Lunar Squigs: If the unit is a Squig unit, you can re-roll the random characteristic roll for its Move characteristic. 
+        Lunar Squigs: If the unit is a Squig unit, you can reroll the random characteristic roll for its Move characteristic. 
         Moonlit Hide: If the unit is a Troggoth unit, add 1 to save rolls for it. 
         Spiderfang Venom: If the unit is a Spiderfang unit, its combat attacks score critical hits on unmodified hit rolls of 5+. This ability also affects Companion weapons.`,
         when: [DURING_GAME],
@@ -73,7 +73,7 @@ const BattleTraits = {
     ],
   },
 
- /* "Trugg's Troggherd": {
+  /* "Trugg's Troggherd": {
     effects: [
       {
         name: `Moonlit Hide`,

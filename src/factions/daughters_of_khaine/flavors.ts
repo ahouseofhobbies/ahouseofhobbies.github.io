@@ -12,7 +12,7 @@ import rule_sources from './rule_sources'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const Flavors = {
-  'Scathcoven': {
+  Scathcoven: {
     effects: [
       {
         name: `Speed of the Scathborn - Passive`,
@@ -36,14 +36,14 @@ const Flavors = {
       {
         name: `Frenzied Devotees - Once Per Turn`,
         desc: `Declare: Pick up to 3 friendly Daughters of Khaine Infantry or War Machine units that are in combat to be the targets. 
-        Effect: For each target:  
-        Make a pile-in move.  
+        Effect: For each target: 
+        Make a pile-in move. 
         Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
         when: [END_OF_TURN],
       },
     ],
   },
- /* Khailebron: {
+  /* Khailebron: {
     mandatory: {
       command_abilities: [keyPicker(CommandAbilities, ['Masters of the Shadowpaths'])],
     }, 

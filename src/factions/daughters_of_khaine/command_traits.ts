@@ -29,7 +29,7 @@ const CommandTraits = {
       },
     ],
   },
- /* 'Sacrificial Overseer': {
+  /* 'Sacrificial Overseer': {
     effects: [
       {
         name: `Sacrificial Overseer`,
@@ -43,8 +43,8 @@ const CommandTraits = {
       {
         name: `Master of Poisons`,
         desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by this units combat attacks to be the target. 
-        Effect: For the rest of the battle:  
-        The target cannot be healed.  
+        Effect: For the rest of the battle: 
+        The target cannot be healed. 
         Slain models cannot be returned to the target unit.`,
         when: [END_OF_TURN],
       },

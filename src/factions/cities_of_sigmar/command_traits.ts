@@ -34,7 +34,7 @@ const CommandTraits = {
     effects: [
       {
         name: `Fiery Temper`,
-        desc: `Effect: If this unit charged this turn, you can re-roll charge rolls for friendly Cities of Sigmar units while they are wholly within 18" of this unit.`,
+        desc: `Effect: If this unit charged this turn, you can reroll charge rolls for friendly Cities of Sigmar units while they are wholly within 18" of this unit.`,
         when: [CHARGE_PHASE],
       },
     ],

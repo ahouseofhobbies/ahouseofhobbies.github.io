@@ -12,7 +12,7 @@ import {
 } from 'types/phases'
 
 const Artifacts = {
- /* 'Master Rune of Unbreakable Resolve': {
+  /* 'Master Rune of Unbreakable Resolve': {
     effects: [
       {
         name: `Master Rune of Unbreakable Resolve`,
@@ -48,7 +48,7 @@ const Artifacts = {
       },
     ],
   },
- /* 'The Axe of Grimnir': {
+  /* 'The Axe of Grimnir': {
     effects: [
       {
         name: `The Axe of Grimnir`,
@@ -66,7 +66,7 @@ const Artifacts = {
       },
     ],
   },
- /* 'Volatile Brazier': {
+  /* 'Volatile Brazier': {
     effects: [
       {
         name: `Volatile Brazier`,
@@ -79,12 +79,12 @@ const Artifacts = {
     effects: [
       {
         name: `Droth-helm - Passive`,
-        desc: `Effect: Add 1 to hit rolls for Companion weapons used by friendly Fyreslayers units while they are wholly within 12" of this unit..`,
+        desc: `Effect: Add 1 to hit rolls for Companion weapons used by friendly Fyreslayers units while they are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
       },
     ],
   },
-/*  'The Daemon Slayer': {
+  /*  'The Daemon Slayer': {
     effects: [
       {
         name: `The Daemon Slayer`,

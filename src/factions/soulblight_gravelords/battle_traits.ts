@@ -44,8 +44,8 @@ const BattleTraits = {
       {
         name: `Deathly Invocation - Once Per Turn`,
         desc: `Declare: Pick a friendly Soulblight Gravelords Hero to use this ability, then pick up to 3 friendly Deathrattle or Deadwalkers units wholly within 12" of that Hero to be the targets. 
-        Effect: For each target:  
-        If the target is damaged, Heal (3) the target.  
+        Effect: For each target: 
+        If the target is damaged, Heal (3) the target. 
         If the target is not damaged, return a number of slain models to it with a combined Health characteristic of up to 3.`,
         when: [HERO_PHASE],
       },

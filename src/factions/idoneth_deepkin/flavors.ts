@@ -1,11 +1,20 @@
 import { keyPicker } from 'factions/metatagger'
 import meta_rule_sources from 'meta/rule_sources'
-import { CHARGE_PHASE, COMBAT_PHASE, DURING_SETUP, END_OF_TURN, HERO_PHASE, MOVEMENT_PHASE, SHOOTING_PHASE, START_OF_HERO_PHASE } from 'types/phases'
+import {
+  CHARGE_PHASE,
+  COMBAT_PHASE,
+  DURING_SETUP,
+  END_OF_TURN,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
+  SHOOTING_PHASE,
+  START_OF_HERO_PHASE,
+} from 'types/phases'
 import monstrous_rampages from './monstrous_rampages'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const Flavors = {
- /* Ionrach: {
+  /* Ionrach: {
     effects: [
       {
         name: `Legacy of Glory`,
@@ -15,17 +24,16 @@ const Flavors = {
     ],
   }, */
 
-  
   'Namarti Corps': {
     effects: [
       {
         name: `Surge Forward - Passive`,
-        desc: `Effect: You can re-roll run rolls and charge rolls for friendly Namarti units while they are wholly within 12" of a friendly Akhelian unit.`,
+        desc: `Effect: You can reroll run rolls and charge rolls for friendly Namarti units while they are wholly within 12" of a friendly Akhelian unit.`,
         when: [MOVEMENT_PHASE, CHARGE_PHASE],
       },
     ],
   },
-'Akhelian Beastmasters': {
+  'Akhelian Beastmasters': {
     effects: [
       {
         name: `Ferocious Predators - Passive`,
@@ -43,7 +51,7 @@ const Flavors = {
       },
     ],
   },
- /* Fuethan: {
+  /* Fuethan: {
     effects: [
       {
         name: `Bloodthirsty Shiver`,
@@ -57,7 +65,7 @@ const Flavors = {
     ],
   }, */
 
-  "Soul-Raid Ambushers": {
+  'Soul-Raid Ambushers': {
     effects: [
       {
         name: `Fade Like Mist - Once Per Turn`,
@@ -68,7 +76,7 @@ const Flavors = {
     ],
   },
 
- /* Nautilar: {
+  /* Nautilar: {
     mandatory: {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Crushing Assault'])],
     },

@@ -2,7 +2,7 @@ import { TItemDescriptions } from 'factions/factionTypes'
 import { COMBAT_PHASE, DURING_SETUP, END_OF_TURN, HERO_PHASE } from 'types/phases'
 
 const Flavors = {
-  'Squigalanche': {
+  Squigalanche: {
     effects: [
       {
         name: `Bouncing Fury - Passive`,
@@ -12,7 +12,7 @@ const Flavors = {
     ],
   },
 
-  "Troggherd": {
+  Troggherd: {
     effects: [
       {
         name: `Herd Healing - Passive`,
@@ -21,19 +21,19 @@ const Flavors = {
       },
     ],
   },
-  "Moonclan Skrap": {
+  'Moonclan Skrap': {
     effects: [
       {
         name: `Spreading Loonacy - Once Per Turn`,
         desc: `Declare: Pick up to 3 friendly non-Squig Moonclan units in combat to be the targets. 
-        Effect: For each target:  
-        Make a pile-in move with the target.  
+        Effect: For each target: 
+        Make a pile-in move with the target. 
         Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
         when: [END_OF_TURN],
       },
     ],
   },
-  "Spiderfang Stalktribe": {
+  'Spiderfang Stalktribe': {
     effects: [
       {
         name: `Realmweb Ambush - Passive`,
@@ -44,7 +44,7 @@ const Flavors = {
     ],
   },
 
-/*  Grimscuttle: {
+  /*  Grimscuttle: {
     effects: [
       {
         name: `Through the Cracks they Creep`,

@@ -22,7 +22,7 @@ import meta_rule_sources from 'meta/rule_sources'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const MagmadrothEffects = [
- /* {
+  /* {
     name: `Roaring Fyrestream`,
     desc: `The Attacks characteristic of a Roaring Fyrestream is equal to the number of models in the target unit (to a maximum Attacks characteristic of 10).`,
     when: [SHOOTING_PHASE],
@@ -48,55 +48,55 @@ const MagmadrothEffects = [
   }, */
 ]
 const WhirlwindOfDestructionEffect = {
-/*  name: `Whirlwind of Destruction`,
+  /*  name: `Whirlwind of Destruction`,
   desc: `Add 1 to the Attacks characteristic of this unit's melee weapons if this unit made a charge move in the same turn.`,
   when: [COMBAT_PHASE],
   shared: true, */
-} 
+}
 const BerserkFuryEffect = {
- /* name: `Berserk Fury`,
+  /* name: `Berserk Fury`,
   desc: `Once per battle, at the start of the combat phase, you can say that this unit will unleash its berserk fury. If you do so, until the end of that phase, if a model in this unit is slain, that model can fight before it is removed from play.`,
   when: [START_OF_COMBAT_PHASE],
   shared: true, */
 }
 const LordOfTheLodgeEffect = {
- /* name: `Lord of the Lodge`,
+  /* name: `Lord of the Lodge`,
   desc: `Once per battle, at the start of your combat phase, you can pick 1 friendly unit on the battlefield with this ability to unleash the wrath of Grimnir. If you do so, until the end of that phase, add 1 to the Attacks characteristic of melee weapons used by friendly FYRESLAYERS units while they are wholly within 12" of that unit.`,
   when: [START_OF_COMBAT_PHASE],
   shared: true, */
 }
 const AuricRetinueEffect = {
- /* name: `Retinue`,
+  /* name: `Retinue`,
   desc: `At the start of the first battle round, before determining who has the first turn, you can pick 1 friendly AURIC HEARTHGUARD or HEARTHGUARD BERZERKERS unit on the battlefield that is not another unit's retinue to be this unit's retinue.`,
   when: [TURN_ONE_START_OF_ROUND],
   shared: true, */
 }
 const RoyalRetinueEffect = {
- /* name: `Royal Retinue`,
+  /* name: `Royal Retinue`,
   desc: `Before you allocate a wound or mortal wound to this unit, or instead of making a ward roll for a wound or mortal wound that would be allocated to this unit, if this unit is within 3" of its retinue, you can roll a dice. On a 1-2, that wound or mortal wound is allocated to this unit as normal. On a 3+, that wound or mortal wound is allocated to this unit's retinue instead. If the retinue has a ward, you can make a ward roll before allocating that wound or mortal wound to it.`,
   when: [WOUND_ALLOCATION_PHASE],
   shared: true, */
 }
 const DauntlessAssaultEffect = {
- /* name: `Dauntless Assault`,
+  /* name: `Dauntless Assault`,
   desc: `After this unit has fought in the combat phase for the first time, if its retinue has not yet fought in that combat phase, is within 3" of an enemy unit and is wholly within 12" of this unit, this unit's retinue can fight immediately.`,
   when: [COMBAT_PHASE],
   shared: true, */
 }
 const VyingForGloryEffect = {
- /* name: `Vying for Glory`,
+  /* name: `Vying for Glory`,
   desc: `If the unmodified hit roll for an attack made by this unit that targets a MONSTER is 6, that attack causes a number of mortal wounds to the target equal to the weapon's Damage characteristic and the attack sequence ends.`,
   when: [COMBAT_PHASE, SHOOTING_PHASE],
   shared: true, */
 }
 const ChampionEffect = {
- /* name: `Champion`,
+  /* name: `Champion`,
   desc: `1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model's melee weapons.`,
   when: [COMBAT_PHASE],
   shared: true, */
 }
 const VulkiteBezerkersBaseEffects = [
- /* ChampionEffect,
+  /* ChampionEffect,
   {
     name: `Musician`,
     desc: `1 in every 5 models in this unit can be a Hornblower of Grimnir. Add 1 to charge rolls for this unit if it includes any Hornblowers of Grimnir.`,
@@ -146,7 +146,7 @@ const Units = {
         name: `Volcanic Blood - Passive`,
         desc: `Effect: If you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE],
-      },  
+      },
     ],
   },
   'Auric Runeson': {
@@ -161,7 +161,7 @@ const Units = {
         name: `Fearless Charge - Passive`,
         desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to charge rolls for friendly Fyreslayers Infantry units while they are wholly within 18" of this unit.`,
         when: [CHARGE_PHASE],
-      }, 
+      },
     ],
   },
   'Auric Runeson on Magmadroth': {
@@ -187,11 +187,11 @@ const Units = {
         name: `Volcanic Blood - Passive`,
         desc: `Effect: If you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE],
-      }, 
+      },
     ],
   },
   'Auric Runesmiter': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(Prayers, ['Runic Empowerment'])],
     }, */
     effects: [
@@ -210,7 +210,7 @@ const Units = {
     ],
   },
   'Auric Runesmiter on Magmadroth': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(Prayers, ['Runic Empowerment'])],
     }, */
     effects: [
@@ -236,9 +236,9 @@ const Units = {
         name: `Volcanic Blood - Passive`,
         desc: `Effect: If you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE],
-      }, 
+      },
     ],
-  }, 
+  },
   'Auric Flamekeeper': {
     effects: [
       {
@@ -252,18 +252,16 @@ const Units = {
       },
     ],
   },
- /* 'Fjul-Grimnir': {
+  'Fjul-Grimnir': {
     effects: [
       {
         name: `Retinue`,
         desc: `This unit's retinue is the The Chosen Axes unit in your army.`,
         when: [DURING_GAME],
       },
-      DauntlessAssaultEffect,
-      RoyalRetinueEffect, 
-    ], 
-  }, */
- /* 'The Chosen Axes': {
+    ],
+  },
+  /* 'The Chosen Axes': {
     effects: [
       {
         name: `Champion`,
@@ -289,7 +287,7 @@ const Units = {
     ],
   },
   'Auric Runemaster': {
-   /* mandatory: {
+    /* mandatory: {
       prayers: [keyPicker(Prayers, ["Volcano's Call"])],
     }, */
     effects: [
@@ -340,7 +338,7 @@ const Units = {
       {
         name: `Grimwrath Oaths`,
         desc: `Effect: Pick 1 of the following oaths for this unit to swear: 
-        I will guard them with my life!: While this unit is wholly within 6" of another friendly Fyreslayers Hero:  Add 1 to hit rolls for this units attacks.  Add 1 to ward rolls for this unit. If a friendly Fyreslayers Hero wholly within 6" of this unit is destroyed, this effect no longer applies. 
+        I will guard them with my life!: While this unit is wholly within 6" of another friendly Fyreslayers Hero: Add 1 to hit rolls for this units attacks. Add 1 to ward rolls for this unit. If a friendly Fyreslayers Hero wholly within 6" of this unit is destroyed, this effect no longer applies. 
         I will not be stopped!: Add 1 to charge rolls for this unit, and add 1 to save rolls for this unit while it is in combat. If this unit uses the Retreat or Rally abilities, this effect no longer applies.`,
         when: [DURING_SETUP],
       },
@@ -363,7 +361,7 @@ const Units = {
   },
   'Vulkite Berzerkers with Bladed Slingshields': {
     effects: [
-     // ...VulkiteBezerkersBaseEffects,
+      // ...VulkiteBezerkersBaseEffects,
       {
         name: `Berserk Fury - Passive`,
         desc: `Effect: Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. On a 5+, inflict 1 mortal damage on the attacking unit aer the Fight ability has been resolved.`,
@@ -392,7 +390,7 @@ const Units = {
   },
   'Hearthguard Berzerkers with Flamestrike Poleaxes': {
     effects: [
-     // ChampionEffect,
+      // ChampionEffect,
       {
         name: `Duty Unto Death - Passive`,
         desc: `Effect: While any friendly Fyreslayers Infantry Heroes are wholly within this units combat range, both this unit and those friendly units have Ward (5+).`,
@@ -406,21 +404,21 @@ const Units = {
       },
     ],
   },
-'Hearthguard Berzerkers with Bezerker Broadaxes': {
-  effects: [
-   // ChampionEffect,
-    {
-      name: `Duty Unto Death - Passive`,
-      desc: `Effect: While any friendly Fyreslayers Infantry Heroes are wholly within this units combat range, both this unit and those friendly units have Ward (5+).`,
-      when: [DURING_GAME],
-    },
-    {
-      name: `Fires of Vengeance - Passive`,
-      desc: `Effect: While this unit is within the combat ranges of any damaged friendly Fyreslayers Heroes, add 1 to the Attacks characteristic of this unit's melee weapons.`,
-      when: [COMBAT_PHASE],
-    },
-  ],
-},
+  'Hearthguard Berzerkers with Bezerker Broadaxes': {
+    effects: [
+      // ChampionEffect,
+      {
+        name: `Duty Unto Death - Passive`,
+        desc: `Effect: While any friendly Fyreslayers Infantry Heroes are wholly within this units combat range, both this unit and those friendly units have Ward (5+).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Fires of Vengeance - Passive`,
+        desc: `Effect: While this unit is within the combat ranges of any damaged friendly Fyreslayers Heroes, add 1 to the Attacks characteristic of this unit's melee weapons.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   'Vulkyn Flameseekers': {
     effects: [
       {
@@ -443,7 +441,7 @@ const Units = {
       {
         name: `Honour to Grimnir! - Once Per Battle`,
         desc: `Declare: Pick up to 3 friendly Fyreslayers Infantry units wholly within 12" of this unit to be the targets. 
-        Effect: You can re-roll charge rolls for the targets for the rest of the turn`,
+        Effect: You can reroll charge rolls for the targets for the rest of the turn`,
         when: [HERO_PHASE],
         rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_1],
       },
@@ -471,29 +469,29 @@ const Units = {
         desc: `Declare: Pick this unit and a friendly Callis and Toll unit in the same regiment as this unit if those units have not been deployed. 
         Effect: Set up those units in reserve in the shadows. Those units have now been deployed.`,
         when: [DURING_SETUP],
-       },
-       {
+      },
+      {
         name: `Toll's Companions: Saviours of Cinderfall - Passive`,
         desc: `Effect: While a friendly Callis and Toll unit is wholly within this units combat range, both this unit and that Callis and Toll unit have Ward (5+).`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Toll's Companions: Emerge from the Shadows`,
-         desc: `Declare: Pick this unit if it is in the shadows. 
+      },
+      {
+        name: `Toll's Companions: Emerge from the Shadows`,
+        desc: `Declare: Pick this unit if it is in the shadows. 
          Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units. Then, set up the Callis and Toll unit that was set up in the shadows with this unit wholly within 6" of it and more than 9" from all enemy units.`,
-         when: [MOVEMENT_PHASE],
-       },
-       {
+        when: [MOVEMENT_PHASE],
+      },
+      {
         name: `Duty Bound - Passive`,
         desc: `Effect: While every model in the same unit in the Regiment of Renown is contesting the same objective, add 1 to save rolls and ward rolls for that unit.`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Sigmar's Justice - Once Per Turn`,
-         desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
+      },
+      {
+        name: `Sigmar's Justice - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
          Effect: For the rest of the battle, add 1 to wound rolls for combat attacks made by units in this Regiment of Renown that target a unit that is marked for justice.`,
-         when: [DURING_SETUP],
-       },
+        when: [DURING_SETUP],
+      },
     ],
   },
   'ROR: Norgrimm`s Rune Throng': {
@@ -520,17 +518,17 @@ const Units = {
         desc: `Effect: Add 2 to the control scores of friendly Cities of Sigmar Duardin units, excluding Longbeards units, while they are wholly within 12" of this unit.`,
         when: [END_OF_TURN],
       },
-       {
+      {
         name: `Rune of Restored Hearth - Once Per Battle`,
         desc: `Effect: If the Runelord in the Regiment of Renown is contesting an objective, for the rest of the battle, units in this Regiment of Renown have Ward (5+) while they are contesting that objective.`,
         when: [HERO_PHASE],
-       },
-       {
-         name: `Wrath and Ruin: Chant value of 4`,
-         desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
+      },
+      {
+        name: `Wrath and Ruin: Chant value of 4`,
+        desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
          Effect: Roll 6 dice. If the chanting roll was 8+, roll 9 dice instead. For each 5+, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target as a result of those dice rolls, ignore positive modifiers to save rolls for the target until the start of your next turn.`,
-         when: [HERO_PHASE],
-       },
+        when: [HERO_PHASE],
+      },
     ],
   },
   'ROR: Elthwin`s Thorns': {
@@ -552,17 +550,17 @@ const Units = {
         desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot move into combat during any part of that move.`,
         when: [SHOOTING_PHASE],
       },
-       {
+      {
         name: `Gossamid Champion`,
         desc: `Declare: Pick the Arch-Revenant in this Regiment of Renown to use this ability, the pick a visible enemy unit within 12" of them to be the target. 
         Effect: Until the start of your next turn, subtract X from charge rolls for the target, where X is the number of damage points allocated to the target this phase by shooting attacks made by the Gossamid Archers unit in the Regiment of Renown, to a maximum of 6.`,
         when: [SHOOTING_PHASE],
-       },
-       {
-         name: `Flight of the Zephyrspites - Once Per Turn`,
-         desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
-         when: [SHOOTING_PHASE],
-       },
+      },
+      {
+        name: `Flight of the Zephyrspites - Once Per Turn`,
+        desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   'ROR: Gotrek Gurnisson': {
@@ -725,13 +723,13 @@ const Units = {
       {
         name: `Knight-Draconis: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
       {
         name: `Stormdrake Guard: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      }, 
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Hour of Retribution - Once Per Battle`,
         desc: `Effect: For the rest of the turn:
@@ -812,7 +810,7 @@ const Units = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },

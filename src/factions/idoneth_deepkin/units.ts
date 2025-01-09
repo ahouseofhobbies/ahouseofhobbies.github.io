@@ -25,37 +25,37 @@ import Spells from './spells'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const DeepmareHornEffect = {
- /* name: `Deepmare Horn`,
+  /* name: `Deepmare Horn`,
   desc: `After this unit makes a charge move, you can pick 1 enemy unit within 1" of this unit and roll a dice. On a 2+, that enemy unit suffers D3 mortal wounds.`,
   when: [CHARGE_PHASE],
   shared: true, */
 }
 const StormshoalEffect = {
- /* name: `Stormshoal`,
+  /* name: `Stormshoal`,
   desc: `This unit has a ward of 5+.`,
   when: [WARDS_PHASE],
   shared: true, */
 }
 const GiftsOfTheDepthsEffect = {
- /* name: `Gifts of the Depths`,
+  /* name: `Gifts of the Depths`,
   desc: `This unit has a ward of 5+.`,
   when: [WARDS_PHASE],
   shared: true, */
 }
 const WarmasterEffect = {
- /* name: `Warmaster`,
+  /* name: `Warmaster`,
   desc: `If this unit is included in an IDONETH DEEPKIN army, it is treated as a general even if it is not the model picked to be the army's general.`,
   when: [DURING_GAME],
   shared: true, */
 }
 const IconBearerChampionEffect = {
- /* name: `Champion`,
+  /* name: `Champion`,
   desc: `1 model in this unit can be an Icon Bearer. Add 1 to the Attacks characteristic of that model's melee weapons.`,
   when: [COMBAT_PHASE],
   shared: true, */
 }
 const AkhelianGuardStandardBearerAndMusicianEffects = [
- /* {
+  /* {
     name: `Standard Bearer`,
     desc: `1 in every 3 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic of this unit if it includes any Standard Bearers.`,
     when: [BATTLESHOCK_PHASE],
@@ -92,11 +92,11 @@ const Units = {
     ],
   },
   'Eidolon of Mathlann, Aspect of the Sea': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Cloying Seas Mists', 'Tsunami of Terror'])],
     }, */
     effects: [
-    /*  GenericEffects.WizardTwoSpellsEffect,
+      /*  GenericEffects.WizardTwoSpellsEffect,
       StormshoalEffect, */
       {
         name: `Dormant Energies - Passive`,
@@ -124,7 +124,7 @@ const Units = {
   },
   'Volturnos, High King of the Deep': {
     effects: [
-     // WarmasterEffect,
+      // WarmasterEffect,
       {
         name: `Cealith, the High King's Shield`,
         desc: `Effect: This unit has Ward (3+) against mortal damage inflicted by Spell abilities, Prayer abilities or abilities used by Manifestations.`,
@@ -135,7 +135,7 @@ const Units = {
         desc: `Effect: Add 1 to hit rolls for combat attacks made by other friendly Akhelian units while they are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
       },
-     // DeepmareHornEffect,
+      // DeepmareHornEffect,
       {
         name: `Supreme Lord of Tides - Once Per Battle`,
         desc: `Declare: Pick up to 3 other friendly Idoneth Deepkin units wholly within 12" of this unit to be the targets. 
@@ -162,24 +162,24 @@ const Units = {
   },
   'Akhelian King': {
     effects: [
-     // DeepmareHornEffect,
+      // DeepmareHornEffect,
       {
         name: `Akhelian Paragon - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly non-Hero Akhelian Cavalry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved`,
+        desc: `Effect: Pick a friendly non-Hero Akhelian Cavalry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Wave Rider`,
         desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. 
         Add 1 to the Rend characteristic of this units Akhelian Royal Weapons for attacks that target that enemy unit for the rest of the turn.`,
         when: [CHARGE_PHASE],
       },
     ],
   },
   'Isharann Tidecaster': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Riptide'])],
     }, */
     effects: [
@@ -193,7 +193,7 @@ const Units = {
         Spiteful Riptide: Each time an enemy unit uses a Retreat ability, after the effect of that ability has been resolved, inflict D3 mortal damage on that unit.`,
         when: [HERO_PHASE],
       },
-     // GiftsOfTheDepthsEffect,
+      // GiftsOfTheDepthsEffect,
     ],
   },
   'Isharann Soulscryer': {
@@ -210,7 +210,7 @@ const Units = {
         Effect: Roll a dice. On a 3+, add 1 to wound rolls for combat attacks made by friendly Idoneth Deepkin units that target that unit for the rest of the turn.`,
         when: [HERO_PHASE],
       },
-     // GiftsOfTheDepthsEffect,
+      // GiftsOfTheDepthsEffect,
     ],
   },
   'Isharann Soulrender': {
@@ -227,7 +227,7 @@ const Units = {
         Effect: Roll 2D6. If the roll exceeds the targets Health characteristic, it is automatically destroyed.`,
         when: [COMBAT_PHASE],
       },
-     // GiftsOfTheDepthsEffect,
+      // GiftsOfTheDepthsEffect,
     ],
   },
   'Akhelian Allopexes': {
@@ -252,7 +252,7 @@ const Units = {
         desc: `Effect: Add 3 to the control scores of friendly Idoneth Deepkin units while they are wholly within 12" of this unit.`,
         when: [END_OF_TURN],
       },
-     // GiftsOfTheDepthsEffect,
+      // GiftsOfTheDepthsEffect,
       {
         name: `Fount of Willpower - Passive`,
         desc: `Effect: Add 1 to casting rolls for friendly Isharann units while they are wholly within 12" of this unit.`,
@@ -282,7 +282,7 @@ const Units = {
   },
   'Akhelian Morrsarr Guard': {
     effects: [
-     // ...AkhelianGuardStandardBearerAndMusicianEffects,
+      // ...AkhelianGuardStandardBearerAndMusicianEffects,
       {
         name: `Biovoltaic Blast`,
         desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target, then roll a number of dice equal to the number of models in this unit. 
@@ -309,7 +309,7 @@ const Units = {
   },
   'Namarti Thralls': {
     effects: [
-     // IconBearerChampionEffect,
+      // IconBearerChampionEffect,
       {
         name: `Sweeping Blows - Passive`,
         desc: `Effect: Add 1 to the Damage characteristic of this units Lanmari for attacks that target enemy Monsters.`,
@@ -370,7 +370,7 @@ const Units = {
       {
         name: `Grimhold Exile: Honour to Grimnir! - Once Per Battle`,
         desc: `Declare: Pick up to 3 friendly Fyreslayers Infantry units wholly within 12" of this unit to be the targets. 
-        Effect: You can re-roll charge rolls for the targets for the rest of the turn`,
+        Effect: You can reroll charge rolls for the targets for the rest of the turn`,
         when: [HERO_PHASE],
       },
       {
@@ -438,29 +438,29 @@ const Units = {
         desc: `Declare: Pick this unit and a friendly Callis and Toll unit in the same regiment as this unit if those units have not been deployed. 
         Effect: Set up those units in reserve in the shadows. Those units have now been deployed.`,
         when: [DURING_SETUP],
-       },
-       {
+      },
+      {
         name: `Toll's Companions: Saviours of Cinderfall - Passive`,
         desc: `Effect: While a friendly Callis and Toll unit is wholly within this units combat range, both this unit and that Callis and Toll unit have Ward (5+).`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Toll's Companions: Emerge from the Shadows`,
-         desc: `Declare: Pick this unit if it is in the shadows. 
+      },
+      {
+        name: `Toll's Companions: Emerge from the Shadows`,
+        desc: `Declare: Pick this unit if it is in the shadows. 
          Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units. Then, set up the Callis and Toll unit that was set up in the shadows with this unit wholly within 6" of it and more than 9" from all enemy units.`,
-         when: [MOVEMENT_PHASE],
-       },
-       {
+        when: [MOVEMENT_PHASE],
+      },
+      {
         name: `Duty Bound - Passive`,
         desc: `Effect: While every model in the same unit in the Regiment of Renown is contesting the same objective, add 1 to save rolls and ward rolls for that unit.`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Sigmar's Justice - Once Per Turn`,
-         desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
+      },
+      {
+        name: `Sigmar's Justice - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
          Effect: For the rest of the battle, add 1 to wound rolls for combat attacks made by units in this Regiment of Renown that target a unit that is marked for justice.`,
-         when: [DURING_SETUP],
-       },
+        when: [DURING_SETUP],
+      },
     ],
   },
   'ROR: Norgrimm`s Rune Throng': {
@@ -487,17 +487,17 @@ const Units = {
         desc: `Effect: Add 2 to the control scores of friendly Cities of Sigmar Duardin units, excluding Longbeards units, while they are wholly within 12" of this unit.`,
         when: [END_OF_TURN],
       },
-       {
+      {
         name: `Rune of Restored Hearth - Once Per Battle`,
         desc: `Effect: If the Runelord in the Regiment of Renown is contesting an objective, for the rest of the battle, units in this Regiment of Renown have Ward (5+) while they are contesting that objective.`,
         when: [HERO_PHASE],
-       },
-       {
-         name: `Wrath and Ruin: Chant value of 4`,
-         desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
+      },
+      {
+        name: `Wrath and Ruin: Chant value of 4`,
+        desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
          Effect: Roll 6 dice. If the chanting roll was 8+, roll 9 dice instead. For each 5+, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target as a result of those dice rolls, ignore positive modifiers to save rolls for the target until the start of your next turn.`,
-         when: [HERO_PHASE],
-       },
+        when: [HERO_PHASE],
+      },
     ],
   },
   'ROR: Elthwin`s Thorns': {
@@ -519,17 +519,17 @@ const Units = {
         desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot move into combat during any part of that move.`,
         when: [SHOOTING_PHASE],
       },
-       {
+      {
         name: `Gossamid Champion`,
         desc: `Declare: Pick the Arch-Revenant in this Regiment of Renown to use this ability, the pick a visible enemy unit within 12" of them to be the target. 
         Effect: Until the start of your next turn, subtract X from charge rolls for the target, where X is the number of damage points allocated to the target this phase by shooting attacks made by the Gossamid Archers unit in the Regiment of Renown, to a maximum of 6.`,
         when: [SHOOTING_PHASE],
-       },
-       {
-         name: `Flight of the Zephyrspites - Once Per Turn`,
-         desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
-         when: [SHOOTING_PHASE],
-       },
+      },
+      {
+        name: `Flight of the Zephyrspites - Once Per Turn`,
+        desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   'ROR: Gotrek Gurnisson': {
@@ -692,13 +692,13 @@ const Units = {
       {
         name: `Knight-Draconis: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
       {
         name: `Stormdrake Guard: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      }, 
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Hour of Retribution - Once Per Battle`,
         desc: `Effect: For the rest of the turn:
@@ -714,25 +714,25 @@ const Units = {
         name: `Treelord: Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Sweeping Blows is 3.`,
         when: [COMBAT_PHASE],
-        },
-        {
-          name: `Treelord: Lash and Tangle - Once Per Turn`,
-          desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+      },
+      {
+        name: `Treelord: Lash and Tangle - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
           Effect: Roll a dice. On a 3+, subtract 1 from wound rolls for the targets attacks for the rest of the turn.`,
-          when: [COMBAT_PHASE],
-        },
-        {
-          name: `Treelord: Entangling Grasp`,
-          desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this units Strangleroots to be the target. 
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Treelord: Entangling Grasp`,
+        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this units Strangleroots to be the target. 
           Effect: Roll a dice. On a 3+, the target cannot use Run or Retreat abilities until the start of your next turn.`,
-          when: [SHOOTING_PHASE],
-        },
-        {
-          name: `Spite-Revenants: Unbridled Malice`,
-          desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Spite-Revenants: Unbridled Malice`,
+        desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
           Effect: Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.`,
-          when: [COMBAT_PHASE],
-        },
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Endless Wandering - Once Per Turn - Enemy Hero Phase`,
         desc: `Declare: Pick a unit in this Regiment of Renown that is not in combat to use this ability. 
@@ -799,8 +799,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

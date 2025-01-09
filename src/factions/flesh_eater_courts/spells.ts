@@ -8,7 +8,7 @@ const Spells = {
       {
         name: `Deranged Transformation: Casting value of 6 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Flesh-eater Courts Wizard to cast this spell, pick a visible friendly Flesh-eater Courts Infantry or Cavalry unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
-        Effect: Until the start of your next turn:  Add 2" to the targets Move characteristic.  Add 1 to wound rolls for the targets combat attacks.`,
+        Effect: Until the start of your next turn: Add 2" to the targets Move characteristic. Add 1 to wound rolls for the targets combat attacks.`,
         when: [HERO_PHASE],
       },
       {
@@ -28,7 +28,7 @@ const Spells = {
       },
     ],
   },
- /* 'Deranged Transformation': {
+  /* 'Deranged Transformation': {
     effects: [
       {
         name: `Deranged Transformation`,

@@ -46,8 +46,8 @@ const Flavors = {
       {
         name: `Corrupted Earth - Once Per Turn`,
         desc: `Declare: Pick up to 3 friendly Pestilens units that are in combat to be the targets. 
-        Effect: For each target:  
-        Make a pile-in move.  
+        Effect: For each target: 
+        Make a pile-in move. 
         Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
         when: [END_OF_TURN],
       },
@@ -63,7 +63,7 @@ const Flavors = {
       },
     ],
   },
- /* Masterclan: {
+  /* Masterclan: {
     effects: [
       {
         name: `Skilled Manipulators`,

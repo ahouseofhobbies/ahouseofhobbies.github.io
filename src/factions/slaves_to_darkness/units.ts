@@ -234,13 +234,13 @@ const ChaosMarkTzeentch = {
 
 const Units = {
   'Archaon the Everchosen': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(CommandAbilities, ['By My Will'])],
     }, */
     effects: [
-    //  ChaosMarkAll,
-    //  WarmasterEffect,
-     // GenericEffects.WizardTwoSpellsEffect,
+      //  ChaosMarkAll,
+      //  WarmasterEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Dorghars Claws and Tails is 4.`,
@@ -268,7 +268,7 @@ const Units = {
   },
   'Daemon Prince': {
     effects: [
-     // ChaosMarkAll,
+      // ChaosMarkAll,
       {
         name: `Airborne Horror - Passive`,
         desc: `Effect: If this unit has Wings, it has a Move characteristic of 10" and has Fly.`,
@@ -288,9 +288,9 @@ const Units = {
   },
   Varanguard: {
     effects: [
-     // GenericEffects.Elite,
-     // ChaosMarkAll,
-     // DaemonforgedWeaponEffect,
+      // GenericEffects.Elite,
+      // ChaosMarkAll,
+      // DaemonforgedWeaponEffect,
       {
         name: `Relentless Killers - Once Per Battle`,
         desc: `Effect: This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn.`,
@@ -299,9 +299,9 @@ const Units = {
     ],
   },
   "Be'Lakor": {
-   // mandatory: {
+    // mandatory: {
     //  spells: [keyPicker(Spells, ['Enfeeble Foe'])],
-   // },
+    // },
     effects: [
       {
         name: `Shadow Form - Passive`,
@@ -328,17 +328,17 @@ const Units = {
       {
         name: `Enfeeble Foe: Casting value of 6`,
         desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target, then make a casting roll of 2D6. 
-        Effect: Until the start of your next turn:  
-        Subtract 1 from hit rolls from the targets combat attacks.  
+        Effect: Until the start of your next turn: 
+        Subtract 1 from hit rolls from the targets combat attacks. 
         The targets combat attacks cannot score critical hits (treat them as regular hits instead).`,
         when: [HERO_PHASE],
       },
-    //  GenericEffects.WizardTwoSpellsEffect,
+      //  GenericEffects.WizardTwoSpellsEffect,
     ],
   },
   Eternus: {
     effects: [
-    //  strikeFirstOnChargeEffect,
+      //  strikeFirstOnChargeEffect,
       {
         name: `Network of Spies - Reaction: Opponent declared a command for a unit within 12" of this unit`,
         desc: `Effect: Roll a dice. Add 1 to the roll if the enemy unit is in combat with a friendly Chaos Legionnaires or Chaos Furies unit. On a 5+, that command has no effect. The command still counts as having been used and the command points spent to use the command are still lost.`,
@@ -353,7 +353,7 @@ const Units = {
     ],
   },
   'Gaunt Summoner on Disc of Tzeentch': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(Spells, ['Infernal Flames'])],
     }, */
     effects: [
@@ -375,16 +375,15 @@ const Units = {
         Effect: If the unmodified casting roll exceeds the targets Health characteristic, it is automatically destroyed. For the rest of the battle, that unit cannot be picked to be the target of an ability that allows a replacement unit to be set up.`,
         when: [HERO_PHASE],
       },
-     // ChaosMarkTzeentch,
-     // SilveredPortalEffect,
+      // ChaosMarkTzeentch,
+      // SilveredPortalEffect,
       //BookOfProfaneSecretsEffect,
       //LordsOfTheSilverTowerEffect,
-     // GenericEffects.WizardTwoSpellsEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
     ],
   },
   'Gaunt Summoner': {
-    
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Infernal Flames'])],
     }, */
     effects: [
@@ -406,11 +405,11 @@ const Units = {
         Effect: Units set up this turn using this units Book of Profane Secrets ability can be set up wholly within 18" of this unit and more than 7" from all enemy units instead of the distances in the ability.`,
         when: [HERO_PHASE],
       },
-    //  ChaosMarkTzeentch,
-     // SilveredPortalEffect,
-     // BookOfProfaneSecretsEffect,
-     // LordsOfTheSilverTowerEffect,
-     // GenericEffects.WizardTwoSpellsEffect,
+      //  ChaosMarkTzeentch,
+      // SilveredPortalEffect,
+      // BookOfProfaneSecretsEffect,
+      // LordsOfTheSilverTowerEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
     ],
   },
   'Chaos Lord on Daemonic Mount': {
@@ -420,11 +419,11 @@ const Units = {
         desc: `Effect: Pick a friendly non-Hero Warriors of Chaos Cavalry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to wound rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-    //  ChaosMarkAll,
-     // ChaosRuneshieldPlatingEffect,
-    //  strikeFirstOnChargeEffect,
-     // knightsOfChaosEffect,
-     // chaosLanceEffect,
+      //  ChaosMarkAll,
+      // ChaosRuneshieldPlatingEffect,
+      //  strikeFirstOnChargeEffect,
+      // knightsOfChaosEffect,
+      // chaosLanceEffect,
     ],
   },
   /*'Chaos Lord on Manticore': {
@@ -472,11 +471,11 @@ const Units = {
   }, */
   'Chaos Lord on Karkadrak': {
     effects: [
-    //  ChaosMarkAll,
-    //  knightsOfChaosEffect,
-     // strikeFirstOnChargeEffect,
-     // ChaosRuneshieldPlatingEffect,
-     // DaemonforgedWeaponEffect,
+      //  ChaosMarkAll,
+      //  knightsOfChaosEffect,
+      // strikeFirstOnChargeEffect,
+      // ChaosRuneshieldPlatingEffect,
+      // DaemonforgedWeaponEffect,
       {
         name: `Brutish Rampage`,
         desc: `Declare: If this unit charged this phase, pick up to 3 enemy units within 1" of it to be the targets. 
@@ -493,8 +492,8 @@ const Units = {
   },
   'Chaos Lord': {
     effects: [
-    //  ChaosMarkAll,
-     // DaemonforgedWeaponEffect,
+      //  ChaosMarkAll,
+      // DaemonforgedWeaponEffect,
       {
         name: `Glory in Battle - Reaction: You declared a Fight ability for this unit`,
         desc: `Effect: Pick a friendly non-Hero Warriors of Chaos Infantry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to wound rolls for the targets attacks for the rest of the turn.`,
@@ -503,7 +502,7 @@ const Units = {
     ],
   },
   'Chaos Sorcerer Lord': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Daemonic Power'])],
     }, */
     effects: [
@@ -513,7 +512,7 @@ const Units = {
         Effect: On a 3+, the target has Ward (5+) until the start of your next turn.`,
         when: [HERO_PHASE],
       },
-    //  ChaosMarkSorcerer, ...OracularVisionsEffects, GenericEffects.WizardOneSpellEffect
+      //  ChaosMarkSorcerer, ...OracularVisionsEffects, GenericEffects.WizardOneSpellEffect
     ],
   },
   'Exalted Hero of Chaos': {
@@ -521,7 +520,7 @@ const Units = {
       //ChaosMarkAll,
       //ChaosRuneshieldPlatingEffect,
       //DarkBlessingsEffect,
-     // ChaosRuneshieldSaveEffect,
+      // ChaosRuneshieldSaveEffect,
       {
         name: `Glory-Seeker - Passive`,
         desc: `Effect: Add 1 to the Damage characteristic of this units melee weapons for attacks that target Heroes or Monsters.`,
@@ -541,16 +540,16 @@ const Units = {
         desc: `Effect: While this unit is damaged, add 2 to the Attacks characteristic of its melee weapons.`,
         when: [COMBAT_PHASE],
       },
-    //  BerserkRageEffect, ArcaneFuryEffect
+      //  BerserkRageEffect, ArcaneFuryEffect
     ],
   },
   'Ogroid Theridons': {
     effects: [
       //UnitLeaderEffect,
       //StandardBearersEffect,
-     // BerserkRageEffect,
-     // MusiciansEffect,
-     // ArcaneFuryEffect,
+      // BerserkRageEffect,
+      // MusiciansEffect,
+      // ArcaneFuryEffect,
       {
         name: `Unleashed Savagery - Once Per Battle`,
         desc: `Effect: Add 1 to the Damage characteristic of this units melee weapons for the rest of the turn.`,
@@ -577,11 +576,11 @@ const Units = {
       {
         name: `Favour of Chaos: Chant value of 4`,
         desc: `Declare: Pick a visible friendly Slaves to Darkness unit wholly within 12" of this unit that shares a Mark of Chaos keyword with this unit to be the target. Then, make a chanting roll of D6. 
-        Effect: Apply 1 of the following effects to the target for the rest of the turn depending on which Mark of Chaos keyword this unit has:  
-        Undivided: When the target uses the Rally command, you can make 3 additional rally rolls of D6.  
-        Khorne: Add 1 to hit rolls for the targets attacks.  
-        Tzeentch: The target has Ward (5+).  
-        Nurgle: Add 1 to wound rolls for the targets attacks.  
+        Effect: Apply 1 of the following effects to the target for the rest of the turn depending on which Mark of Chaos keyword this unit has: 
+        Undivided: When the target uses the Rally command, you can make 3 additional rally rolls of D6. 
+        Khorne: Add 1 to hit rolls for the targets attacks. 
+        Tzeentch: The target has Ward (5+). 
+        Nurgle: Add 1 to wound rolls for the targets attacks. 
         Slaanesh: Add 1 to the number of dice rolled when making charge rolls for the target, to a maximum of 3. 
         If the chanting roll was 8+, you can pick up to 2 eligible units to be the targets instead of 1.`,
         when: [HERO_PHASE],
@@ -596,7 +595,7 @@ const Units = {
         Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [CHARGE_PHASE],
       },
-    //  ChaosMarkAll, ExaltedCharioteerEffect, ...ChaosChariotEffects
+      //  ChaosMarkAll, ExaltedCharioteerEffect, ...ChaosChariotEffects
     ],
   },
   'Gorebeast Chariots': {
@@ -610,7 +609,7 @@ const Units = {
       },
     ],
   },
- /* 'Theddra Skull-Scryer': {
+  /* 'Theddra Skull-Scryer': {
    /* mandatory: {
       spells: [keyPicker(Spells, ['Enfeeblement'])],
     }, 
@@ -639,7 +638,7 @@ const Units = {
   }, */
   'Darkoath Warqueen': {
     effects: [
-    //  TribalWarleaderEffect,
+      //  TribalWarleaderEffect,
       {
         name: `Ruin-Blessed Conqueror - Once Per Turn`,
         desc: `Declare: Pick an objective that this unit is contesting. 
@@ -655,7 +654,7 @@ const Units = {
   },
   'Darkoath Chieftain': {
     effects: [
-    //  TribalWarleaderEffect,
+      //  TribalWarleaderEffect,
       {
         name: `Tribal Warleader - Reaction: You declared a Fight abililty for this unit`,
         desc: `Unmodified hit rolls of 6 inflict 1 mortal wound in addition to any normal damage.`,
@@ -670,12 +669,12 @@ const Units = {
   },
   'Chaos Chosen': {
     effects: [
-   //   ChaosMarkAll,
-   //   UnitLeaderEffect,
-   //   IconBearersEffect,
-   //   MusiciansEffect,
-   //   DaemonforgedWeaponEffect,
-   //   DarkBlessingsEffect,
+      //   ChaosMarkAll,
+      //   UnitLeaderEffect,
+      //   IconBearersEffect,
+      //   MusiciansEffect,
+      //   DaemonforgedWeaponEffect,
+      //   DarkBlessingsEffect,
       {
         name: `Heralds of Ruination - Once Per Battle`,
         desc: `Effect: This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn.`,
@@ -685,7 +684,7 @@ const Units = {
   },
   'Chaos Spawn': {
     effects: [
-    //  ChaosMarkAll,
+      //  ChaosMarkAll,
       {
         name: `Beast - Passive`,
         desc: `Effect: This unit has a maximum control score of 1.`,
@@ -693,18 +692,18 @@ const Units = {
       },
       {
         name: `Drawn to Power - Passive`,
-        desc: `Effect: While this unit is wholly within 12" of a friendly Daemon Prince that shares a Mark of Chaos keyword with it, you can re-roll the random characteristic rolls for this units Move and Attacks characteristics.`,
+        desc: `Effect: While this unit is wholly within 12" of a friendly Daemon Prince that shares a Mark of Chaos keyword with it, you can reroll the random characteristic rolls for this units Move and Attacks characteristics.`,
         when: [MOVEMENT_PHASE, COMBAT_PHASE],
       },
     ],
   },
   'Chaos Warriors': {
     effects: [
-    //  ChaosMarkAll,
-    //  UnitLeaderEffect,
-    //  StandardBearersEffect,
-   //   MusiciansEffect,
-    //  ChaosRuneshieldPlatingEffect,
+      //  ChaosMarkAll,
+      //  UnitLeaderEffect,
+      //  StandardBearersEffect,
+      //   MusiciansEffect,
+      //  ChaosRuneshieldPlatingEffect,
       {
         name: `Bringers of Desolation - Passive`,
         desc: `Effect: Add 1 to the Attacks characteristic of this units Rune-Etched Weapons while it is contesting an objective you control.`,
@@ -715,24 +714,24 @@ const Units = {
   },
   'Chaos Knights': {
     effects: [
-    //  ChaosMarkAll,
-    //  UnitLeaderEffect,
-    //  StandardBearersEffect,
-   //   ChaosRuneshieldPlatingEffect,
+      //  ChaosMarkAll,
+      //  UnitLeaderEffect,
+      //  StandardBearersEffect,
+      //   ChaosRuneshieldPlatingEffect,
       {
         name: `Impaling Charge - Passive`,
-        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances.`,
         when: [COMBAT_PHASE],
       },
     ],
   },
   'Darkoath Fellriders': {
     effects: [
-    //  ChaosMarkAll,
-     // UnitLeaderEffect,
-     // StandardBearersEffect,
-   //   MusiciansEffect,
-    //  DarkwoodShieldEffect,
+      //  ChaosMarkAll,
+      // UnitLeaderEffect,
+      // StandardBearersEffect,
+      //   MusiciansEffect,
+      //  DarkwoodShieldEffect,
       {
         name: `Swift Attackers - Passive`,
         desc: `Effect: Subtract 1 from hit rolls for shooting attacks that target this unit.`,
@@ -747,11 +746,11 @@ const Units = {
   },
   'Darkoath Marauders': {
     effects: [
-    //  ChaosMarkAll,
-   //   UnitLeaderEffect,
-    //  StandardBearersEffect,
-    //  MusiciansEffect,
-    //  DarkwoodShieldEffect,
+      //  ChaosMarkAll,
+      //   UnitLeaderEffect,
+      //  StandardBearersEffect,
+      //  MusiciansEffect,
+      //  DarkwoodShieldEffect,
       {
         name: `Glorious Death - Passive`,
         desc: `Effect: While this unit is wholly within 12" of any friendly Darkoath Heroes, each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. On a 5+, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
@@ -766,7 +765,7 @@ const Units = {
   },
   'Mutalith Vortex Beast': {
     effects: [
-    //  ChaosMarkTzeentch,
+      //  ChaosMarkTzeentch,
       {
         name: `Mutant Regeneration`,
         desc: `Effect: Heal (D3) this unit.`,
@@ -798,7 +797,7 @@ const Units = {
       name: `Battle Damaged - Passive`,
       desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Piston-driven Legs and Daemonic Blade or Claw is 6.`,
       when: [COMBAT_PHASE],
-    },  
+    }, 
     {
         name: `Piston-Driven Carnage - Once Per Turn`,
         desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
@@ -812,15 +811,15 @@ const Units = {
       },
     ],
   }, */
-  'Abraxia': {
+  Abraxia: {
     effects: [
-    //  ChaosMarkAll,
-    {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Thanatorg's Claws and Fangs is 4.`,
-      when: [COMBAT_PHASE],
-    },  
-    {
+      //  ChaosMarkAll,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Thanatorg's Claws and Fangs is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
         name: `Warlord of the First Circle - Passive`,
         desc: `Effect: If a friendly Varanguard unit uses the Relentless Killers ability while it is wholly within 12" of this unit, that unit does not have Strike-last as a result of that ability.`,
         when: [COMBAT_PHASE],
@@ -849,14 +848,14 @@ const Units = {
   },
   'Gunnar Brand': {
     effects: [
-    //  ChaosMarkAll,
-    {
-      name: `Carve a Path to Glory`,
-      desc: `Declare: This unit can only use this ability if it is in combat with an enemy Hero. 
+      //  ChaosMarkAll,
+      {
+        name: `Carve a Path to Glory`,
+        desc: `Declare: This unit can only use this ability if it is in combat with an enemy Hero. 
       Effect: This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn. This unit can only use the second Fight ability if it is in combat with an enemy Hero, and if it does so, it must pick an enemy Hero to be the target of all of its attacks.`,
-      when: [COMBAT_PHASE],
-    },  
-    {
+        when: [COMBAT_PHASE],
+      },
+      {
         name: `Oath of Bloodshed - Once Per Battle`,
         desc: `Declare: This unit can only use this ability if any enemy Heroes were slain by this units combat attacks this turn. 
         Effect: Friendly Gunnars Oathsworn units have Ward (4+) for the rest of the battle.`,
@@ -866,13 +865,13 @@ const Units = {
   },
   'Singri Brand': {
     effects: [
-    //  ChaosMarkAll,
-    {
-      name: `Swift as the Wind - Passive`,
-      desc: `Effect: Only critical hits score successful hits for shooting attacks that target this unit.`,
-      when: [SHOOTING_PHASE],
-    },  
-    {
+      //  ChaosMarkAll,
+      {
+        name: `Swift as the Wind - Passive`,
+        desc: `Effect: Only critical hits score successful hits for shooting attacks that target this unit.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
         name: `Uncanny Shot - Passive`,
         desc: `Effect: Add 1 to the Rend characteristic of this units Singris Warbow for attacks that target enemy units that are within 6" of a friendly Gunnar Brand.`,
         when: [SHOOTING_PHASE],
@@ -881,14 +880,14 @@ const Units = {
   },
   'The Oathsworn Kin': {
     effects: [
-    //  ChaosMarkAll,
-    {
-      name: `Withering Death: Casting value of 5`,
-      desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target, then make a casting roll of 2D6. 
+      //  ChaosMarkAll,
+      {
+        name: `Withering Death: Casting value of 5`,
+        desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target, then make a casting roll of 2D6. 
       Effect: Inflict 1 mortal damage on the target and subtract 1 from the Attacks characteristic of the targets melee weapons until the start of your next turn.`,
-      when: [HERO_PHASE],
-    },  
-    {
+        when: [HERO_PHASE],
+      },
+      {
         name: `Broken Nadja - Passive`,
         desc: `Effect: While this units Broken Nadja is on the battlefield, it has Wizard (1).`,
         when: [HERO_PHASE],
@@ -897,7 +896,7 @@ const Units = {
   },
   Slaughterbrute: {
     effects: [
-     // ChaosMarkKhorne,
+      // ChaosMarkKhorne,
       {
         name: `Sigils of Domination`,
         desc: `Declare: Pick a friendly Slaves to Darkness Hero within this units combat range to be this units master. 
@@ -908,7 +907,7 @@ const Units = {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Razor-tipped Claws is 5.`,
         when: [COMBAT_PHASE],
-      }, 
+      },
       {
         name: `Rampaging Charge - Once Per Turn`,
         desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
@@ -936,7 +935,7 @@ const Units = {
       },
     ],
   },
- /* 'Horns of Hashut': {
+  /* 'Horns of Hashut': {
     effects: [
       {
         name: `Ruinator Alpha`,
@@ -1281,7 +1280,7 @@ const Units = {
     effects: [
       {
         name: `Cavalry Warleader - Passive`,
-        desc: `Effect: You can re-roll charge rolls for friendly Darkoath Cavalry units while they are wholly within 12" of this unit.`,
+        desc: `Effect: You can reroll charge rolls for friendly Darkoath Cavalry units while they are wholly within 12" of this unit.`,
         when: [CHARGE_PHASE],
       },
       {
@@ -1291,7 +1290,7 @@ const Units = {
       },
     ],
   },
- /* 'Zarshia Bittersoul': {
+  /* 'Zarshia Bittersoul': {
   /*  mandatory: {
       spells: [keyPicker(Spells, ['Mask of Darkness'])],
     }, 
@@ -1313,8 +1312,8 @@ const Units = {
     effects: [
       {
         name: `Magister: Magic-Touched`,
-        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn:  
-        Add 1 to this units power level.  
+        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn: 
+        Add 1 to this units power level. 
         If 2 or more dice in a casting roll for this unit have the same value, the spell fails, its effect is not resolved and D6 mortal damage is inflicted on this unit.`,
         when: [HERO_PHASE],
       },
@@ -1329,7 +1328,7 @@ const Units = {
         name: `Tome of Eyes: Transfixed by Countless Eyes - Reaction: You declared a Spell ability for a Wizard within this Manifestations combat range`,
         desc: `Effect: You can add 1 or 2 to the casting roll for that spell. Roll a number of dice equal to the amount added. For each 1-2, allocate 1 damage point to the caster. If the caster is destroyed by this ability, the spell has no effect.`,
         when: [HERO_PHASE],
-      }, 
+      },
       {
         name: `Burning SIgil of Tzeentch: Radiant Transmogrification`,
         desc: `Declare: This Manifestation must use this ability in each movement phase. Pick each unit (friendly and enemy) within 9" of this Manifestation to be the targets. 
@@ -1343,7 +1342,7 @@ const Units = {
       },
       {
         name: `Sparks of Profane Potential - Once Per Battle`,
-        desc: `Effect: If the Magister in the Regiment of Renown has been deployed, set up one of the following Manifestations within 1" of them:  
+        desc: `Effect: If the Magister in the Regiment of Renown has been deployed, set up one of the following Manifestations within 1" of them: 
         1 Burning Sigil of Tzeentch  
         1 Tome of Eyes  
         1 Daemonic Simulacrum.`,
@@ -1351,7 +1350,7 @@ const Units = {
       },
       {
         name: `Skilled Summoner: Casting value of 6`,
-        desc: `Declare: Pick the Magister in this Regiment of Renown to cast this spell, pick 1 of the Manifestations from the list below that is not on the battlefield, then make a casting roll of 2D6:  
+        desc: `Declare: Pick the Magister in this Regiment of Renown to cast this spell, pick 1 of the Manifestations from the list below that is not on the battlefield, then make a casting roll of 2D6: 
         1 Burning Sigil of Tzeentch  
         1 Tome of Eyes  
         1 Daemonic Simulacrum 
@@ -1439,8 +1438,8 @@ const Units = {
       {
         name: `Shake the Earth - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted. 
         Subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -1548,7 +1547,7 @@ const Units = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1587,8 +1586,8 @@ const Units = {
       },
       {
         name: `Varghulf Courtier: Victory Feast`,
-        desc: `Effect: If any models were slain by this unit this turn:  
-        Heal (D6) this unit.  
+        desc: `Effect: If any models were slain by this unit this turn: 
+        Heal (D6) this unit. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1689,8 +1688,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

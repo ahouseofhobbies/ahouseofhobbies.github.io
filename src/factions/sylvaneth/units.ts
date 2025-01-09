@@ -83,7 +83,7 @@ const WarmasterEffect = {
 
 const Units = {
   'Alarielle The Everqueen': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Metamorphosis'])],
     }, */
     effects: [
@@ -94,13 +94,13 @@ const Units = {
       },
       {
         name: `Lifebloom`,
-        desc: `Effect: Pick 1 of the following effects:  
-        Add 1 to casting rolls for this unit for the rest of the turn.  
+        desc: `Effect: Pick 1 of the following effects: 
+        Add 1 to casting rolls for this unit for the rest of the turn. 
         Heal (2D3) this unit.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Metamorphosis: Casting value of 7  `,
+        name: `Metamorphosis: Casting value of 7`,
         desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target, then make a casting roll of 2D6. 
         Effect: Inflict 2D3 mortal damage on the target. If the target is destroyed by this spell, you can immediately resolve the effect of the Treesong spell as if this unit had successfully cast it.`,
         when: [HERO_PHASE],
@@ -120,9 +120,9 @@ const Units = {
     ],
   },
   'Drycha Hamadreth': {
-   /* mandatory: { spells: [keyPicker(spells, ['Primal Terror'])] }, */
+    /* mandatory: { spells: [keyPicker(spells, ['Primal Terror'])] }, */
     effects: [
-     // WarmasterEffect,
+      // WarmasterEffect,
       {
         name: `Primal Terror - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
@@ -144,20 +144,20 @@ const Units = {
         In addition, add 1 to wound rolls for combat attacks made by friendly Spite-Revenants or The Twistweald units that target that enemy unit.`,
         when: [HERO_PHASE],
       },
-    //  GenericEffects.WizardOneSpellEffect,
+      //  GenericEffects.WizardOneSpellEffect,
     ],
   },
   'Spirit of Durthu': {
-  /*  mandatory: {
+    /*  mandatory: {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Groundshaker'])],
     }, */
     effects: [
-     // ...TreeLordBaseEffects,
+      // ...TreeLordBaseEffects,
       {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Guardian Sword is 3.`,
-      when: [COMBAT_PHASE],
-     },
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Guardian Sword is 3.`,
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Titanic Duel - Once Per Turn`,
         desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
@@ -172,17 +172,17 @@ const Units = {
     ],
   },
   'Treelord Ancient': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Awakening the Wood'])],
       scenery: [keyPicker(scenery, ['Awakened Wyldwood'])],
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Groundshaker'])],
     }, */
     effects: [
-     // ...TreeLordBaseEffects,
+      // ...TreeLordBaseEffects,
       {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Sweeping Blows is 3.`,
-      when: [COMBAT_PHASE],
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Sweeping Blows is 3.`,
+        when: [COMBAT_PHASE],
       },
       {
         name: `Groundshaker - Once Per Turn`,
@@ -196,7 +196,7 @@ const Units = {
         Effect: Roll a D3. On a 2+, inflict an amount of mortal damage equal to the roll on each enemy unit within the targets combat range.`,
         when: [HERO_PHASE],
       },
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
     ],
   },
   Treelord: {
@@ -204,11 +204,11 @@ const Units = {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Groundshaker'])],
     },*/
     effects: [
-     // ...TreeLordBaseEffects,
+      // ...TreeLordBaseEffects,
       {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Sweeping Blows is 3.`,
-      when: [COMBAT_PHASE],
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Sweeping Blows is 3.`,
+        when: [COMBAT_PHASE],
       },
       {
         name: `Lash and Tangle - Once Per Turn`,
@@ -225,7 +225,7 @@ const Units = {
     ],
   },
   'Arch-Revenant': {
-   /* mandatory: { command_abilities: [keyPicker(command_abilities, ['Call to Battle'])] }, */
+    /* mandatory: { command_abilities: [keyPicker(command_abilities, ['Call to Battle'])] }, */
     effects: [
       {
         name: `Crescent Shield`,
@@ -242,9 +242,9 @@ const Units = {
     ],
   },
   'The Lady of Vines': {
-   /* mandatory: { spells: [keyPicker(spells, ['Aspect of the Everqueen'])] }, */
+    /* mandatory: { spells: [keyPicker(spells, ['Aspect of the Everqueen'])] }, */
     effects: [
-     // WarmasterEffect,
+      // WarmasterEffect,
       {
         name: `Writhing Vines - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
@@ -264,7 +264,7 @@ const Units = {
         desc: `Effect: This unit counts as an Awakened Wyldwood for the purposes of the Endless Growth, Walk the Hidden Paths and Strike and Fade abilities.`,
         when: [DURING_GAME],
       },
-     // GenericEffects.WizardTwoSpellsEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
     ],
   },
   Branchwych: {
@@ -276,10 +276,10 @@ const Units = {
         Effect: Roll a dice. On a 3+, the target has Strike-first for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
     ],
   },
- /* Ylthari: {
+  /* Ylthari: {
    /* mandatory: { spells: [keyPicker(spells, ['The Reaping'])] }, 
     effects: [
       {
@@ -374,10 +374,10 @@ const Units = {
         desc: `Effect: Subtract 1 from hit rolls and wound rolls for attacks that target this unit while it is wholly within 6" of any friendly Awakened Wyldwoods.`,
         when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
-     // BlessingsOfTheForestEffect,
+      // BlessingsOfTheForestEffect,
     ],
   },
- /* "Skaeth's Wild Hunt": {
+  /* "Skaeth's Wild Hunt": {
    /* mandatory: { spells: [keyPicker(spells, ['Might of Kurnoth'])] }, 
     effects: [
       {
@@ -417,7 +417,7 @@ const Units = {
     ],
   }, */
   'Warsong Revenant': {
-   /* mandatory: { spells: [keyPicker(spells, ['Unleash Swarm of Spites'])] }, */
+    /* mandatory: { spells: [keyPicker(spells, ['Unleash Swarm of Spites'])] }, */
     effects: [
       {
         name: `Alarielle's Song - Passive`,
@@ -439,13 +439,13 @@ const Units = {
   },
   'Spiterider Lancers': {
     effects: [
-     // ...BugRiderEffects,
-     {
-      name: `Forest Fighters - Passive`,
-      desc: `Effect: This unit has a coherency range of 2".`,
-      when: [DURING_GAME],
-    }, 
-     {
+      // ...BugRiderEffects,
+      {
+        name: `Forest Fighters - Passive`,
+        desc: `Effect: This unit has a coherency range of 2".`,
+        when: [DURING_GAME],
+      },
+      {
         name: `Descent of the Spiteriders`,
         desc: `Effect: If this unit charged this turn, roll a dice. On a 3+, this unit has Strike-first for the rest of the turn.`,
         when: [COMBAT_PHASE],
@@ -459,13 +459,13 @@ const Units = {
   },
   'Revenant Seekers': {
     effects: [
-     // ...BugRiderEffects,
-     {
-      name: `Forest Fighters - Passive`,
-      desc: `Effect: This unit has a coherency range of 2".`,
-      when: [DURING_GAME],
-    }, 
-     {
+      // ...BugRiderEffects,
+      {
+        name: `Forest Fighters - Passive`,
+        desc: `Effect: This unit has a coherency range of 2".`,
+        when: [DURING_GAME],
+      },
+      {
         name: `Harvesters of the Lamentiri - Passive`,
         desc: `Effect: Each time a friendly unit wholly within 12" of any friendly Revenant Seekers units uses the Rally command, you can make 3 additional rally rolls of D6.`,
         when: [HERO_PHASE],
@@ -479,7 +479,7 @@ const Units = {
   },
   'The Twistweald': {
     effects: [
-     // ...BugRiderEffects,
+      // ...BugRiderEffects,
       {
         name: `Eruption of Thorned Vines`,
         desc: `Declare: If this unit is more than 6" from all other friendly Sylvaneth units, pick an enemy unit within 12" of this unit to be the target. 
@@ -503,13 +503,13 @@ const Units = {
     ],
   },
   Belthanos: {
-   /* mandatory: { command_abilities: [keyPicker(command_abilities, ['The Unending Hunt'])] }, */
+    /* mandatory: { command_abilities: [keyPicker(command_abilities, ['The Unending Hunt'])] }, */
     effects: [
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Carnelian Greatspites Razor-like Mandibles is 3.`,
         when: [COMBAT_PHASE],
-        },
+      },
       {
         name: `Nature Aetheric - Once Per Battle`,
         desc: `Declare: Pick a terrain feature within 6" of this unit to be the target. 
@@ -544,7 +544,7 @@ const Units = {
       {
         name: `Grimhold Exile: Honour to Grimnir! - Once Per Battle`,
         desc: `Declare: Pick up to 3 friendly Fyreslayers Infantry units wholly within 12" of this unit to be the targets. 
-        Effect: You can re-roll charge rolls for the targets for the rest of the turn`,
+        Effect: You can reroll charge rolls for the targets for the rest of the turn`,
         when: [HERO_PHASE],
       },
       {
@@ -615,29 +615,29 @@ const Units = {
         desc: `Declare: Pick this unit and a friendly Callis and Toll unit in the same regiment as this unit if those units have not been deployed. 
         Effect: Set up those units in reserve in the shadows. Those units have now been deployed.`,
         when: [DURING_SETUP],
-       },
-       {
+      },
+      {
         name: `Toll's Companions: Saviours of Cinderfall - Passive`,
         desc: `Effect: While a friendly Callis and Toll unit is wholly within this units combat range, both this unit and that Callis and Toll unit have Ward (5+).`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Toll's Companions: Emerge from the Shadows`,
-         desc: `Declare: Pick this unit if it is in the shadows. 
+      },
+      {
+        name: `Toll's Companions: Emerge from the Shadows`,
+        desc: `Declare: Pick this unit if it is in the shadows. 
          Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units. Then, set up the Callis and Toll unit that was set up in the shadows with this unit wholly within 6" of it and more than 9" from all enemy units.`,
-         when: [MOVEMENT_PHASE],
-       },
-       {
+        when: [MOVEMENT_PHASE],
+      },
+      {
         name: `Duty Bound - Passive`,
         desc: `Effect: While every model in the same unit in the Regiment of Renown is contesting the same objective, add 1 to save rolls and ward rolls for that unit.`,
         when: [DURING_GAME],
-       },
-       {
-         name: `Sigmar's Justice - Once Per Turn`,
-         desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
+      },
+      {
+        name: `Sigmar's Justice - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit to be marked for justice. You can pick a unit that is in reserve. 
          Effect: For the rest of the battle, add 1 to wound rolls for combat attacks made by units in this Regiment of Renown that target a unit that is marked for justice.`,
-         when: [DURING_SETUP],
-       },
+        when: [DURING_SETUP],
+      },
     ],
   },
   'ROR: Norgrimm`s Rune Throng': {
@@ -667,17 +667,17 @@ const Units = {
         desc: `Effect: Add 2 to the control scores of friendly Cities of Sigmar Duardin units, excluding Longbeards units, while they are wholly within 12" of this unit.`,
         when: [END_OF_TURN],
       },
-       {
+      {
         name: `Rune of Restored Hearth - Once Per Battle`,
         desc: `Effect: If the Runelord in the Regiment of Renown is contesting an objective, for the rest of the battle, units in this Regiment of Renown have Ward (5+) while they are contesting that objective.`,
         when: [HERO_PHASE],
-       },
-       {
-         name: `Wrath and Ruin: Chant value of 4`,
-         desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
+      },
+      {
+        name: `Wrath and Ruin: Chant value of 4`,
+        desc: `Declare: Pick the Runelord in this Regiment of Renown to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
          Effect: Roll 6 dice. If the chanting roll was 8+, roll 9 dice instead. For each 5+, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target as a result of those dice rolls, ignore positive modifiers to save rolls for the target until the start of your next turn.`,
-         when: [HERO_PHASE],
-       },
+        when: [HERO_PHASE],
+      },
     ],
   },
   'ROR: Gotrek Gurnisson': {
@@ -840,13 +840,13 @@ const Units = {
       {
         name: `Knight-Draconis: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
       {
         name: `Stormdrake Guard: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      }, 
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Hour of Retribution - Once Per Battle`,
         desc: `Effect: For the rest of the turn:

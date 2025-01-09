@@ -12,7 +12,7 @@ import {
 } from 'types/phases'
 
 const Flavors = {
-  "Legion of Shyish": {
+  'Legion of Shyish': {
     effects: [
       {
         name: `Horror Unending - Passive`,
@@ -32,20 +32,20 @@ const Flavors = {
     ],
   },
 
-  "Deathstench Drove": {
+  'Deathstench Drove': {
     effects: [
       {
         name: `Dragged Down and Torn Apart - Once Per Turn`,
         desc: `Declare: Pick up to 3 friendly Deadwalkers units in combat to be the targets. 
-        Effect: For each target:  
-        Make a pile-in move.  
+        Effect: For each target: 
+        Make a pile-in move. 
         Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
         when: [END_OF_TURN],
       },
     ],
   },
 
-  'Deathmarch': {
+  Deathmarch: {
     effects: [
       {
         name: `Tides of Bones and Blades - Passive`,

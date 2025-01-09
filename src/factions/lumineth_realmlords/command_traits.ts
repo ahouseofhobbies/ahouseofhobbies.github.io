@@ -37,13 +37,13 @@ const CommandTraits = {
     effects: [
       {
         name: `Paragon of Hysh - Once Per Battle - Reaction: You declared the Charge ability or a Spell ability for this unit`,
-        desc: `Effect: You can re-roll the charge roll or casting roll for that ability.`,
+        desc: `Effect: You can reroll the charge roll or casting roll for that ability.`,
         when: [HERO_PHASE, CHARGE_PHASE],
       },
     ],
   },
   //Scinari
- /* Spellmaster: {
+  /* Spellmaster: {
     effects: [
       {
         name: `Spellmaster`,

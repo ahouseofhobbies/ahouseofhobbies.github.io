@@ -68,9 +68,9 @@ const Units = {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Mountain of Loathsome Flesh'])],
     }, */
     effects: [
-   //   WarmasterEffect,
-    //  GenericEffects.WizardTwoSpellsEffect,
-    //  BloatedWithCorruptionEffect,
+      //   WarmasterEffect,
+      //  GenericEffects.WizardTwoSpellsEffect,
+      //  BloatedWithCorruptionEffect,
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Gnarlrod is 3.`,
@@ -79,8 +79,8 @@ const Units = {
       {
         name: `Deluge of Nurgle: Casting value of 8`,
         desc: `Declare: Pick each Diseased enemy unit on the battlefield and each friendly Maggotkin of Nurgle unit in combat with any Diseased enemy units to be the targets. Then, make a casting roll of 2D6. 
-        Effect: Roll a D3 for each target. On a 2+:  
-        Inflict an amount of mortal damage on each enemy target equal to the roll.  
+        Effect: Roll a D3 for each target. On a 2+: 
+        Inflict an amount of mortal damage on each enemy target equal to the roll. 
         Heal (X) each friendly target, where X is an amount equal to the roll.`,
         when: [HERO_PHASE],
       },
@@ -98,13 +98,13 @@ const Units = {
     ],
   },
   'Great Unclean One': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(Spells, ['Plague Wind'])],
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Mountain of Loathsome Flesh'])],
     }, */
     effects: [
-    //  GenericEffects.WizardTwoSpellsEffect,
-    //  BloatedWithCorruptionEffect,
+      //  GenericEffects.WizardTwoSpellsEffect,
+      //  BloatedWithCorruptionEffect,
       {
         name: `Locus of Nurgle - Once Per Turn`,
         desc: `Declare: Pick a friendly Maggotkin of Nurgle Daemon unit that started the battle with 3 or more models and that has been destroyed to be the target. 
@@ -131,11 +131,11 @@ const Units = {
     ],
   },
   'Poxbringer, Herald of Nurgle': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Eruptive Infestation'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Captain of the Plague Legions - Reaction: You declared a Fight ability for this unit`,
         desc: `Effect: Pick a friendly Plaguebearers unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
@@ -143,7 +143,7 @@ const Units = {
       },
     ],
   },
- /* 'Epidemius, Tallyman of Nurgle': {
+  /* 'Epidemius, Tallyman of Nurgle': {
     effects: [
       {
         name: `Tallyman of Nurgle`,
@@ -201,7 +201,6 @@ const Units = {
         when: [MOVEMENT_PHASE],
         rule_sources: [rule_sources.BATTLETOME_NURGLE, rule_sources.ERRATA_JANUARY_2022],
       },
-   
     ],
   },
   Plaguebearers: {
@@ -252,14 +251,14 @@ const Units = {
     ],
   },
   'The Glottkin': {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(CommandAbilities, ['Blightkrieg'])],
       spells: [keyPicker(Spells, ['Abundance of Flesh'])],
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Mountain of Loathsome Flesh'])],
     }, */
     effects: [
-     // WarmasterEffect,
-     // GenericEffects.WizardTwoSpellsEffect,
+      // WarmasterEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
       {
         name: `Horrific Opponent - Passive`,
         desc: `Effect: Subtract 3 from the control scores of enemy units while they are in combat with this unit.`,
@@ -285,13 +284,13 @@ const Units = {
   },
   'Orghotts Daemonspew': {
     effects: [
-     // WarmasterEffect,
-     {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Whippermaws Claws and Maws is 3.`,
-      when: [COMBAT_PHASE],
-    }, 
-     {
+      // WarmasterEffect,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Whippermaws Claws and Maws is 3.`,
+        when: [COMBAT_PHASE],
+      },
+      {
         name: `Acid Ichor - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE],
@@ -305,21 +304,21 @@ const Units = {
     ],
   },
   'Bloab Rotspawned': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Miasma of Pestilence'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
-     {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Bilespurters Claws and Maw is 3.`,
-      when: [COMBAT_PHASE],
-    }, 
-     {
+      // GenericEffects.WizardOneSpellEffect,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Bilespurters Claws and Maw is 3.`,
+        when: [COMBAT_PHASE],
+      },
+      {
         name: `Daemon Flies - Once Per Turn`,
         desc: `Declare: Pick each enemy unit within 7" of this unit to be the targets. 
-        Effect: Roll a dice for each target. On a 4+:  
-        Inflict 1 mortal damage on the target.  
+        Effect: Roll a dice for each target. On a 4+: 
+        Inflict 1 mortal damage on the target. 
         Subtract 1 from hit rolls for the targets combat attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -345,8 +344,8 @@ const Units = {
       },
       {
         name: `Lord of Nurglings - Passive`,
-        desc: `Effect: While any friendly Nurglings units are wholly within 12" of this unit:  
-        Ignore the first damage point that would be allocated to each of those units each phase.  
+        desc: `Effect: While any friendly Nurglings units are wholly within 12" of this unit: 
+        Ignore the first damage point that would be allocated to each of those units each phase. 
         Add 3 to those units control scores.`,
         when: [DURING_GAME, END_OF_TURN],
       },
@@ -374,7 +373,7 @@ const Units = {
       },
     ],
   },
- /* 'Festus the Leechlord': {
+  /* 'Festus the Leechlord': {
     mandatory: {
       spells: [keyPicker(Spells, ["The Leechlord's Curse"])],
     },
@@ -404,7 +403,7 @@ const Units = {
     ],
   },
   'Rotbringer Sorcerer': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Stream of Corruption'])],
     }, */
     effects: [
@@ -414,7 +413,7 @@ const Units = {
         desc: `Declare: Pick an enemy unit that was picked to be the target of a spell that was successfully cast by this unit this phase to be the target. 
         Effect: Roll a dice. On a 2+, subtract 1 from ward rolls for the target for the rest of the turn.`,
         when: [HERO_PHASE],
-      },  
+      },
     ],
   },
   'Lord of Blights': {
@@ -430,7 +429,7 @@ const Units = {
         desc: `Effect: The Blighted Weapons used by friendly Putrid Blightkings units have Anti-charge (+1 Rend) while those units are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
       },
-    //  LordOfTheBlightkingsEffect,
+      //  LordOfTheBlightkingsEffect,
     ],
   },
   'Gutrot Spume': {
@@ -468,7 +467,7 @@ const Units = {
         Effect: Roll a dice. On a 2+, add 1 to the Attacks characteristic of the targets Blighted Weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-    // LordOfTheBlightkingsEffect,
+      // LordOfTheBlightkingsEffect,
     ],
   },
   'Putrid Blightkings': {
@@ -478,7 +477,7 @@ const Units = {
         desc: `Effect: Add 3 to this units control score while each model in this unit is contesting an objective you control.`,
         when: [END_OF_TURN],
       },
-     // RelentlessAttackersEffect,
+      // RelentlessAttackersEffect,
     ],
   },
   'Pusgoyle Blightlords': {
@@ -493,10 +492,10 @@ const Units = {
         desc: `Effect: This unit has a coherency range of 2".`,
         when: [DURING_GAME],
       },
-     // RelentlessAttackersEffect,
+      // RelentlessAttackersEffect,
     ],
   },
- /* 'Fecula Flyblown': {
+  /* 'Fecula Flyblown': {
   /*  mandatory: {
       spells: [keyPicker(Spells, ['Stream of Corruption'])],
     }, 
@@ -549,7 +548,7 @@ const Units = {
         desc: `Declare: This unit can only use this ability if it is in combat with an enemy Hero. 
         Effect: This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn. This unit can only use the second Fight ability if it is in combat with an enemy Hero, and if it does so, it must pick an enemy Hero to be the target of all of its attacks.`,
         when: [COMBAT_PHASE],
-      },  
+      },
       {
         name: `Gunnar Brand: Oath of Bloodshed - Once Per Battle`,
         desc: `Declare: This unit can only use this ability if any enemy Heroes were slain by this units combat attacks this turn. 
@@ -560,7 +559,7 @@ const Units = {
         name: `Singri Brand: Swift as the Wind - Passive`,
         desc: `Effect: Only critical hits score successful hits for shooting attacks that target this unit.`,
         when: [SHOOTING_PHASE],
-      },  
+      },
       {
         name: `Singri Brand: Uncanny Shot - Passive`,
         desc: `Effect: Add 1 to the Rend characteristic of this units Singris Warbow for attacks that target enemy units that are within 6" of a friendly Gunnar Brand.`,
@@ -571,7 +570,7 @@ const Units = {
         desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target, then make a casting roll of 2D6. 
         Effect: Inflict 1 mortal damage on the target and subtract 1 from the Attacks characteristic of the targets melee weapons until the start of your next turn.`,
         when: [HERO_PHASE],
-      },  
+      },
       {
         name: `Oathsworn Kin: Broken Nadja - Passive`,
         desc: `Effect: While this units Broken Nadja is on the battlefield, it has Wizard (1).`,
@@ -579,8 +578,8 @@ const Units = {
       },
       {
         name: `Favour of the Gods - Once Per Turn`,
-        desc: `Effect: If any enemy Heroes were slain this turn by the Gunnar Brand in this Regiment of Renown:  
-        Heal (5) each unit in this Regiment of Renown.  
+        desc: `Effect: If any enemy Heroes were slain this turn by the Gunnar Brand in this Regiment of Renown: 
+        Heal (5) each unit in this Regiment of Renown. 
         Add 1 to the Attacks characteristic of melee weapons used by units in this Regiment of Renown for the rest of the battle.`,
         when: [END_OF_TURN],
       },
@@ -610,15 +609,15 @@ const Units = {
         desc: `Used By: The unit using that Fight ability. 
         Effect: Pick a unit in this Regiment of Renown that has not used a Fight ability this turn to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
         when: [COMBAT_PHASE],
-      },  
+      },
     ],
   },
   'ROR: The Coven of Thryx': {
     effects: [
       {
         name: `Magister: Magic-Touched`,
-        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn:  
-        Add 1 to this units power level.  
+        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn: 
+        Add 1 to this units power level. 
         If 2 or more dice in a casting roll for this unit have the same value, the spell fails, its effect is not resolved and D6 mortal damage is inflicted on this unit.`,
         when: [HERO_PHASE],
       },
@@ -633,7 +632,7 @@ const Units = {
         name: `Tome of Eyes: Transfixed by Countless Eyes - Reaction: You declared a Spell ability for a Wizard within this Manifestations combat range`,
         desc: `Effect: You can add 1 or 2 to the casting roll for that spell. Roll a number of dice equal to the amount added. For each 1-2, allocate 1 damage point to the caster. If the caster is destroyed by this ability, the spell has no effect.`,
         when: [HERO_PHASE],
-      }, 
+      },
       {
         name: `Burning SIgil of Tzeentch: Radiant Transmogrification`,
         desc: `Declare: This Manifestation must use this ability in each movement phase. Pick each unit (friendly and enemy) within 9" of this Manifestation to be the targets. 
@@ -647,7 +646,7 @@ const Units = {
       },
       {
         name: `Sparks of Profane Potential - Once Per Battle`,
-        desc: `Effect: If the Magister in the Regiment of Renown has been deployed, set up one of the following Manifestations within 1" of them:  
+        desc: `Effect: If the Magister in the Regiment of Renown has been deployed, set up one of the following Manifestations within 1" of them: 
         1 Burning Sigil of Tzeentch  
         1 Tome of Eyes  
         1 Daemonic Simulacrum.`,
@@ -655,7 +654,7 @@ const Units = {
       },
       {
         name: `Skilled Summoner: Casting value of 6`,
-        desc: `Declare: Pick the Magister in this Regiment of Renown to cast this spell, pick 1 of the Manifestations from the list below that is not on the battlefield, then make a casting roll of 2D6:  
+        desc: `Declare: Pick the Magister in this Regiment of Renown to cast this spell, pick 1 of the Manifestations from the list below that is not on the battlefield, then make a casting roll of 2D6: 
         1 Burning Sigil of Tzeentch  
         1 Tome of Eyes  
         1 Daemonic Simulacrum 
@@ -707,8 +706,8 @@ const Units = {
       {
         name: `Shake the Earth - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted. 
         Subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -809,7 +808,7 @@ const Units = {
       },
       {
         name: `Chaos Knights: Impaling Charge - Passive`,
-        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -867,8 +866,8 @@ const Units = {
       },
       {
         name: `Varghulf Courtier: Victory Feast`,
-        desc: `Effect: If any models were slain by this unit this turn:  
-        Heal (D6) this unit.  
+        desc: `Effect: If any models were slain by this unit this turn: 
+        Heal (D6) this unit. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -949,8 +948,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

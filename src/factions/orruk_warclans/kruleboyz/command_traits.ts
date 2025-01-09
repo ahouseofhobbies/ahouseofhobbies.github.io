@@ -1,6 +1,12 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
-import { COMBAT_PHASE, DURING_GAME, END_OF_TURN, TURN_ONE_START_OF_ROUND, WOUND_ALLOCATION_PHASE } from 'types/phases'
+import {
+  COMBAT_PHASE,
+  DURING_GAME,
+  END_OF_TURN,
+  TURN_ONE_START_OF_ROUND,
+  WOUND_ALLOCATION_PHASE,
+} from 'types/phases'
 
 const KruleboyzCommandTraits = {
   'Slippery Skumbag': {
@@ -13,7 +19,7 @@ const KruleboyzCommandTraits = {
     ],
   },
 
-  'Backstabba': {
+  Backstabba: {
     effects: [
       {
         name: `Backstabba`,
@@ -28,8 +34,8 @@ const KruleboyzCommandTraits = {
     effects: [
       {
         name: `Egomaniak - Passive`,
-        desc: `Effect: While this unit is within the combat range of a friendly non-Hero Kruleboyz Infantry unit:  
-        This unit has Ward (4+).  
+        desc: `Effect: While this unit is within the combat range of a friendly non-Hero Kruleboyz Infantry unit: 
+        This unit has Ward (4+). 
         Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly non-Hero Kruleboyz Infantry unit within this units combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

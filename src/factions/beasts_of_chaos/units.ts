@@ -256,7 +256,7 @@ const Units = {
     ],
   },
   Doombull: {
- /*   mandatory: {
+    /*   mandatory: {
       command_abilities: [keyPicker(CommandAbilities, ["Slaughterer's Call"])],
     }, */
     effects: [
@@ -300,7 +300,7 @@ const Units = {
     ],
   },
   Ghorgon: {
-   /* mandatory: {
+    /* mandatory: {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Feast on Flesh'])],
     }, */
     effects: [
@@ -312,7 +312,7 @@ const Units = {
     ],
   },
   Cygor: {
-   /* mandatory: {
+    /* mandatory: {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Consume Endless Spell'])],
     }, */
     effects: [
@@ -368,7 +368,7 @@ const Units = {
     ],
   },
   Jabberslythe: {
-   /* mandatory: {
+    /* mandatory: {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Aura of Madness'])],
     }, */
     effects: [
@@ -400,7 +400,7 @@ const Units = {
     ],
   },
   Chimera: {
-   /* mandatory: {
+    /* mandatory: {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Thricefold Savagery'])],
     }, */
     effects: [
@@ -553,15 +553,15 @@ const Units = {
         desc: `Used By: The unit using that Fight ability. 
         Effect: Pick a unit in this Regiment of Renown that has not used a Fight ability this turn to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
         when: [COMBAT_PHASE],
-      },  
+      },
     ],
   },
   'ROR: The Coven of Thryx': {
     effects: [
       {
         name: `Magister: Magic-Touched`,
-        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn:  
-        Add 1 to this units power level.  
+        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn: 
+        Add 1 to this units power level. 
         If 2 or more dice in a casting roll for this unit have the same value, the spell fails, its effect is not resolved and D6 mortal damage is inflicted on this unit.`,
         when: [HERO_PHASE],
       },
@@ -576,7 +576,7 @@ const Units = {
         name: `Tome of Eyes: Transfixed by Countless Eyes - Reaction: You declared a Spell ability for a Wizard within this Manifestations combat range`,
         desc: `Effect: You can add 1 or 2 to the casting roll for that spell. Roll a number of dice equal to the amount added. For each 1-2, allocate 1 damage point to the caster. If the caster is destroyed by this ability, the spell has no effect.`,
         when: [HERO_PHASE],
-      }, 
+      },
       {
         name: `Burning SIgil of Tzeentch: Radiant Transmogrification`,
         desc: `Declare: This Manifestation must use this ability in each movement phase. Pick each unit (friendly and enemy) within 9" of this Manifestation to be the targets. 
@@ -590,7 +590,7 @@ const Units = {
       },
       {
         name: `Sparks of Profane Potential - Once Per Battle`,
-        desc: `Effect: If the Magister in the Regiment of Renown has been deployed, set up one of the following Manifestations within 1" of them:  
+        desc: `Effect: If the Magister in the Regiment of Renown has been deployed, set up one of the following Manifestations within 1" of them: 
         1 Burning Sigil of Tzeentch  
         1 Tome of Eyes  
         1 Daemonic Simulacrum.`,
@@ -598,7 +598,7 @@ const Units = {
       },
       {
         name: `Skilled Summoner: Casting value of 6`,
-        desc: `Declare: Pick the Magister in this Regiment of Renown to cast this spell, pick 1 of the Manifestations from the list below that is not on the battlefield, then make a casting roll of 2D6:  
+        desc: `Declare: Pick the Magister in this Regiment of Renown to cast this spell, pick 1 of the Manifestations from the list below that is not on the battlefield, then make a casting roll of 2D6: 
         1 Burning Sigil of Tzeentch  
         1 Tome of Eyes  
         1 Daemonic Simulacrum 

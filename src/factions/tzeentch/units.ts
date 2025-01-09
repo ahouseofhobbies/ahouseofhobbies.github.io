@@ -95,7 +95,7 @@ const WakeofFireEffect = {
 const Units = {
   // Daemons
   'Lord of Change': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Infernal Gateway'])],
     }, */
     effects: [
@@ -122,14 +122,14 @@ const Units = {
         Effect: Roll 9 dice. For each 6, inflict D3 mortal damage on the target.`,
         when: [HERO_PHASE],
       },
-      ],
+    ],
   },
   'Kairos Fateweaver': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Infernal Gateway'])],
     }, */
     effects: [
-     // MasteryOfMagicEffect,
+      // MasteryOfMagicEffect,
       //BeaconOfSorcery,
       //SpellThiefEffect,
       {
@@ -166,13 +166,13 @@ const Units = {
     ],
   },
   'Gaunt Summoner': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(Spells, ['Infernal Flames'])],
     }, */
     effects: [
       //BookOfProfaneSecretsEffect,
       //LordsOfTheSilverTowerEffect,
-     // SilveredPortalEffect,
+      // SilveredPortalEffect,
       //GenericEffects.WizardTwoSpellsEffect,
       {
         name: `Minions of the Silver Tower`,
@@ -195,55 +195,55 @@ const Units = {
     ],
   },
   'Gaunt Summoner on Disc of Tzeentch': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Infernal Flames'])],
     }, */
     effects: [
-     // BookOfProfaneSecretsEffect,
-     // LordsOfTheSilverTowerEffect,
-    //  SilveredPortalEffect,
-    //  GenericEffects.WizardTwoSpellsEffect,
-    {
-      name: `Minions of the Silver Tower`,
-      desc: `Declare: Pick a friendly unit that has not been deployed to be the target. 
+      // BookOfProfaneSecretsEffect,
+      // LordsOfTheSilverTowerEffect,
+      //  SilveredPortalEffect,
+      //  GenericEffects.WizardTwoSpellsEffect,
+      {
+        name: `Minions of the Silver Tower`,
+        desc: `Declare: Pick a friendly unit that has not been deployed to be the target. 
       Effect: The target is set up in reserve in a Silver Tower. It has now been deployed.`,
-      when: [DURING_SETUP],
-    },
-    {
-      name: `Book of Profane Secrets`,
-      desc: `Declare: Pick a friendly unit in a Silver Tower to be the target. 
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Book of Profane Secrets`,
+        desc: `Declare: Pick a friendly unit in a Silver Tower to be the target. 
       Effect: Set up the target on the battlefield wholly within 12" of this unit and more than 9" from all enemy units.`,
-      when: [MOVEMENT_PHASE],
-    },
-    {
-      name: `Arcane Imprisonment: Casting value of 7`,
-      desc: `Declare: Pick an enemy Hero in combat with this unit to be the target, then make a casting roll of 2D6. 
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Arcane Imprisonment: Casting value of 7`,
+        desc: `Declare: Pick an enemy Hero in combat with this unit to be the target, then make a casting roll of 2D6. 
       Effect: If the unmodified casting roll exceeds the targets Health characteristic, it is automatically destroyed. For the rest of the battle, that unit cannot be picked to be the target of an ability that allows a replacement unit to be set up.`,
-      when: [HERO_PHASE],
-    },  
-  ],
+        when: [HERO_PHASE],
+      },
+    ],
   },
   'Fateskimmer, Herald of Tzeentch on Burning Chariot': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Red Fire of Tzeentch'])],
     }, */
     effects: [
-    //  ArcaneTomeEffect, WakeofFireEffect, GenericEffects.WizardOneSpellEffect
-    {
-      name: `Wake of Fire`,
-      desc: `Declare: Pick an enemy unit that this unit passed across this phase to be the target. 
+      //  ArcaneTomeEffect, WakeofFireEffect, GenericEffects.WizardOneSpellEffect
+      {
+        name: `Wake of Fire`,
+        desc: `Declare: Pick an enemy unit that this unit passed across this phase to be the target. 
       Effect: Roll a dice. On a 3+, the target has the Burning keyword.`,
-      when: [MOVEMENT_PHASE],
-    },
-    {
-      name: `Fueling the Inferno`,
-      desc: `Declare: Pick up to 3 Burning enemy units within 12" of this unit to be the targets. 
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Fueling the Inferno`,
+        desc: `Declare: Pick up to 3 Burning enemy units within 12" of this unit to be the targets. 
       Effect: Inflict 1 mortal damage on each target.`,
-      when: [END_OF_TURN],
-    },
-  ],
+        when: [END_OF_TURN],
+      },
+    ],
   },
- /* 'Fluxmaster, Herald of Tzeentch on Disc': {
+  /* 'Fluxmaster, Herald of Tzeentch on Disc': {
    /* mandatory: {
       spells: [keyPicker(Spells, ['Blue Fire of Tzeentch'])],
     }, 
@@ -271,26 +271,26 @@ const Units = {
         Effect: Roll a dice. On a 3+, halve the targets Move characteristic for the rest of the turn.`,
         when: [HERO_PHASE],
       },
-    //  GenericEffects.WizardTwoSpellsEffect,
+      //  GenericEffects.WizardTwoSpellsEffect,
     ],
   },
   'Changecaster, Herald of Tzeentch': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Pink Fire of Tzeentch'])],
     }, */
     effects: [
-    //  ArcaneTomeEffect, GenericEffects.WizardOneSpellEffect
-    {
-      name: `Lurid Flames - Passive`,
-      desc: `Effect: Add 1 to hit rolls for combat attacks made by friendly units that target a Burning enemy unit within 12" of this unit.`,
-      when: [COMBAT_PHASE],
-    },
-    {
-      name: `Daemonic Locus - Passive`,
-      desc: `Effect: Each time a friendly Disciples of Tzeentch Daemon unit wholly within 12" of this unit uses the Rally command, you can make 3 additional rally rolls of D6.`,
-      when: [HERO_PHASE],
-    },  
-  ],
+      //  ArcaneTomeEffect, GenericEffects.WizardOneSpellEffect
+      {
+        name: `Lurid Flames - Passive`,
+        desc: `Effect: Add 1 to hit rolls for combat attacks made by friendly units that target a Burning enemy unit within 12" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Daemonic Locus - Passive`,
+        desc: `Effect: Each time a friendly Disciples of Tzeentch Daemon unit wholly within 12" of this unit uses the Rally command, you can make 3 additional rally rolls of D6.`,
+        when: [HERO_PHASE],
+      },
+    ],
   },
   /* 'The Blue Scribes': {
     mandatory: {
@@ -327,30 +327,30 @@ const Units = {
   },
   'Burning Chariots of Tzeentch': {
     effects: [
-     // CapriciousWarpflameEffect, WakeofFireEffect, GenericEffects.Elite
-     {
-      name: `Wake of Fire`,
-      desc: `Declare: Pick an enemy unit that this unit passed across this phase to be the target. 
+      // CapriciousWarpflameEffect, WakeofFireEffect, GenericEffects.Elite
+      {
+        name: `Wake of Fire`,
+        desc: `Declare: Pick an enemy unit that this unit passed across this phase to be the target. 
       Effect: Roll a dice. On a 3+, the target has the Burning keyword.`,
-      when: [MOVEMENT_PHASE],
-    },
+        when: [MOVEMENT_PHASE],
+      },
     ],
   },
   'Exalted Flamers of Tzeentch': {
     effects: [
-    //  CapriciousWarpflameEffect, GenericEffects.Elite
-    {
-      name: `Capricious Wyrdflame`,
-      desc: `Effect: Add 1 to wound rolls for this units shooting attacks that target a Burning enemy unit.`,
-      when: [SHOOTING_PHASE],
-    },  
-    {
-      name: `Transmogrifying Beacon - Once Per Turn`,
-      desc: `Declare: Pick another friendly Exalted Flamer of Tzeentch or Flamers of Tzeentch unit within this units combat range to be the target. 
+      //  CapriciousWarpflameEffect, GenericEffects.Elite
+      {
+        name: `Capricious Wyrdflame`,
+        desc: `Effect: Add 1 to wound rolls for this units shooting attacks that target a Burning enemy unit.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Transmogrifying Beacon - Once Per Turn`,
+        desc: `Declare: Pick another friendly Exalted Flamer of Tzeentch or Flamers of Tzeentch unit within this units combat range to be the target. 
       Effect: Roll a dice. On a 3+, the targets ranged weapons have Crit (2 Hits) for the rest of the turn.`,
-      when: [SHOOTING_PHASE],
-    },
-  ],
+        when: [SHOOTING_PHASE],
+      },
+    ],
   },
   'Flamers of Tzeentch': {
     effects: [
@@ -359,7 +359,7 @@ const Units = {
         name: `Capricious Wyrdflame`,
         desc: `Effect: Add 1 to wound rolls for this units shooting attacks that target a Burning enemy unit.`,
         when: [SHOOTING_PHASE],
-      }, 
+      },
     ],
   },
   'Pink Horrors': {
@@ -384,48 +384,48 @@ const Units = {
   },
   // Mortals
   'Magister on Disc of Tzeentch': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Bolt of Change'])],
     },*/
     effects: [
-    //  MagicTouchedEffect, GenericEffects.WizardOneSpellEffect
-    {
-      name: `Magic-Touched`,
-      desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn:  
-      Add 1 to this units power level.  
+      //  MagicTouchedEffect, GenericEffects.WizardOneSpellEffect
+      {
+        name: `Magic-Touched`,
+        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn: 
+      Add 1 to this units power level. 
       If 2 or more dice in a casting roll for this unit have the same value, the spell fails, its effect is not resolved and D6 mortal damage is inflicted on this unit.`,
-      when: [HERO_PHASE],
-    },
-    {
-      name: `Master of the Blazing Skies - Passive`,
-      desc: `Effect: While they are within this units combat range, friendly Disc of Tzeentch units can use Charge abilities even if they used a Run ability in the same turn..`,
-      when: [CHARGE_PHASE],
-    }, 
-  ],
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Master of the Blazing Skies - Passive`,
+        desc: `Effect: While they are within this units combat range, friendly Disc of Tzeentch units can use Charge abilities even if they used a Run ability in the same turn.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
   },
   Magister: {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Bolt of Change'])],
     }, */
     effects: [
-    //  MagicTouchedEffect, GenericEffects.WizardOneSpellEffect
-    {
-      name: `Magic-Touched`,
-      desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn:  
-      Add 1 to this units power level.  
+      //  MagicTouchedEffect, GenericEffects.WizardOneSpellEffect
+      {
+        name: `Magic-Touched`,
+        desc: `Effect: If this unit successfully cast a spell this phase, for the rest of the turn: 
+      Add 1 to this units power level. 
       If 2 or more dice in a casting roll for this unit have the same value, the spell fails, its effect is not resolved and D6 mortal damage is inflicted on this unit.`,
-      when: [HERO_PHASE],
-    },
-    {
-      name: `Web of Intrigue`,
-      desc: `Declare: Pick an enemy unit within 12" of this unit to be the target. 
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Web of Intrigue`,
+        desc: `Declare: Pick an enemy unit within 12" of this unit to be the target. 
       Effect: Until the start of your next turn, each time your opponent declares a Move ability for the target, before reactions are used, you can pick a friendly Arcanite unit that is not in combat and is within 12" of the target. That friendly unit can move 3", but it cannot move into combat during any part of that move.`,
-      when: [HERO_PHASE],
-    },  
-  ],
+        when: [HERO_PHASE],
+      },
+    ],
   },
   'Curseling, Eye of Tzeentch': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Glean Magic'])],
     }, */
     effects: [
@@ -440,10 +440,10 @@ const Units = {
         desc: `Effect: Each time this unit unbinds a spell, roll a dice. On a 4+, subtract 1 from the power level of the enemy Wizard that used that Spell ability, to a minimum of 0, until the start of your next turn.`,
         when: [HERO_PHASE],
       },
-    //  GenericEffects.WizardTwoSpellsEffect,
+      //  GenericEffects.WizardTwoSpellsEffect,
     ],
   },
-/*  'The Eyes of the Nine': {
+  /*  'The Eyes of the Nine': {
     effects: [
       {
         name: `Arcanite Shield`,
@@ -480,7 +480,7 @@ const Units = {
     ],
   }, */
   'Ogroid Thaumaturge': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Choking Tendrils'])],
     }, */
     effects: [
@@ -495,15 +495,15 @@ const Units = {
         Effect: The target has the Burning keyword.`,
         when: [COMBAT_PHASE],
       },
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
     ],
   },
   'Kairic Acolytes': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(Spells, ['Gestalt Sorcery'])],
     }, */
     effects: [
-     // GenericEffects.ArcaniteShieldEffect,
+      // GenericEffects.ArcaniteShieldEffect,
       {
         name: `Vulcharc - Passive`,
         desc: `Effect: While this unit includes any models accompanied by Vulcharcs, subtract 1 from casting rolls for enemy Wizards within 12" of this unit.`,
@@ -537,11 +537,11 @@ const Units = {
   },
   // Tzaangors
   'Tzaangor Shaman': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(Spells, ['Boon of Mutation'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Rite of Haste`,
         desc: `Declare: Pick a friendly Warflock unit that does not have Fly and is wholly within 12" of this unit to be the target. 
@@ -551,7 +551,7 @@ const Units = {
       {
         name: `Mutagenic Sorcery`,
         desc: `Declare: Pick an enemy unit within 12" of this unit to be the enemy target. Then, pick a friendly Tzaangors unit in combat with that enemy unit to be the friendly target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the enemy target equal to the roll.  Return a number of slain models to the friendly target equal to the roll.`,
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the enemy target equal to the roll. Return a number of slain models to the friendly target equal to the roll.`,
         when: [END_OF_TURN],
       },
     ],
@@ -573,24 +573,24 @@ const Units = {
   },
   'Tzaangor Enlightened': {
     effects: [
-     // TzaangorChampionEffect, BabblingStreamOfSecretsEffect, GuidedByThePastEffect
-     {
-      name: `Babbling Stream of Secrets`,
-      desc: `Declare: If this unit charged this phase, pick an enemy unit in combat with it to be the target. 
+      // TzaangorChampionEffect, BabblingStreamOfSecretsEffect, GuidedByThePastEffect
+      {
+        name: `Babbling Stream of Secrets`,
+        desc: `Declare: If this unit charged this phase, pick an enemy unit in combat with it to be the target. 
       Effect: Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.`,
-      when: [CHARGE_PHASE],
-    },
+        when: [CHARGE_PHASE],
+      },
     ],
   },
   'Tzaangor Enlightened on Discs of Tzeentch': {
     effects: [
-    //  TzaangorChampionEffect, BabblingStreamOfSecretsEffect, GuidedByThePastEffect
-    {
-      name: `Guided by the Past - Passive`,
-      desc: `Effect: This units Tzeentchian Spears and Vicious Beaks have Charge (+1 Damage) if you are the underdog or it was determined at the start of the battle round that you would take the second turn.`,
-      when: [COMBAT_PHASE],
-    },  
-  ],
+      //  TzaangorChampionEffect, BabblingStreamOfSecretsEffect, GuidedByThePastEffect
+      {
+        name: `Guided by the Past - Passive`,
+        desc: `Effect: This units Tzeentchian Spears and Vicious Beaks have Charge (+1 Damage) if you are the underdog or it was determined at the start of the battle round that you would take the second turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
   },
   Tzaangors: {
     effects: [
@@ -603,20 +603,20 @@ const Units = {
   },
   'Jade Obelisk': {
     effects: [
-    //  TzaangorChampionEffect, BabblingStreamOfSecretsEffect, GuidedByThePastEffect
-    {
-      name: `Stone-Cursed Resolve - Passive`,
-      desc: `Effect: Ignore all modifiers to save rolls for this unit (positive and negative).`,
-      when: [DURING_GAME],
-    },  
-    {
-      name: `Cast Down the Idol - Passive`,
-      desc: `Effect: Add 1 to the Damage characteristic of this units melee weapons for attacks that target Faction Terrain.`,
-      when: [COMBAT_PHASE],
-    }, 
-  ],
+      //  TzaangorChampionEffect, BabblingStreamOfSecretsEffect, GuidedByThePastEffect
+      {
+        name: `Stone-Cursed Resolve - Passive`,
+        desc: `Effect: Ignore all modifiers to save rolls for this unit (positive and negative).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Cast Down the Idol - Passive`,
+        desc: `Effect: Add 1 to the Damage characteristic of this units melee weapons for attacks that target Faction Terrain.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
   },
- /* 'Exalted Greater Demon of Tzeentch': {
+  /* 'Exalted Greater Demon of Tzeentch': {
     mandatory: {
       spells: [keyPicker(Spells, ['Infernal Gateway'])],
     },
@@ -640,7 +640,7 @@ const Units = {
         desc: `Declare: This unit can only use this ability if it is in combat with an enemy Hero. 
         Effect: This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn. This unit can only use the second Fight ability if it is in combat with an enemy Hero, and if it does so, it must pick an enemy Hero to be the target of all of its attacks.`,
         when: [COMBAT_PHASE],
-      },  
+      },
       {
         name: `Gunnar Brand: Oath of Bloodshed - Once Per Battle`,
         desc: `Declare: This unit can only use this ability if any enemy Heroes were slain by this units combat attacks this turn. 
@@ -651,7 +651,7 @@ const Units = {
         name: `Singri Brand: Swift as the Wind - Passive`,
         desc: `Effect: Only critical hits score successful hits for shooting attacks that target this unit.`,
         when: [SHOOTING_PHASE],
-      },  
+      },
       {
         name: `Singri Brand: Uncanny Shot - Passive`,
         desc: `Effect: Add 1 to the Rend characteristic of this units Singris Warbow for attacks that target enemy units that are within 6" of a friendly Gunnar Brand.`,
@@ -662,7 +662,7 @@ const Units = {
         desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target, then make a casting roll of 2D6. 
         Effect: Inflict 1 mortal damage on the target and subtract 1 from the Attacks characteristic of the targets melee weapons until the start of your next turn.`,
         when: [HERO_PHASE],
-      },  
+      },
       {
         name: `Oathsworn Kin: Broken Nadja - Passive`,
         desc: `Effect: While this units Broken Nadja is on the battlefield, it has Wizard (1).`,
@@ -670,8 +670,8 @@ const Units = {
       },
       {
         name: `Favour of the Gods - Once Per Turn`,
-        desc: `Effect: If any enemy Heroes were slain this turn by the Gunnar Brand in this Regiment of Renown:  
-        Heal (5) each unit in this Regiment of Renown.  
+        desc: `Effect: If any enemy Heroes were slain this turn by the Gunnar Brand in this Regiment of Renown: 
+        Heal (5) each unit in this Regiment of Renown. 
         Add 1 to the Attacks characteristic of melee weapons used by units in this Regiment of Renown for the rest of the battle.`,
         when: [END_OF_TURN],
       },
@@ -701,7 +701,7 @@ const Units = {
         desc: `Used By: The unit using that Fight ability. 
         Effect: Pick a unit in this Regiment of Renown that has not used a Fight ability this turn to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
         when: [COMBAT_PHASE],
-      },  
+      },
     ],
   },
   'ROR: Phulgoth`s Shudderhood': {
@@ -771,8 +771,8 @@ const Units = {
       {
         name: `Shake the Earth - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted. 
         Subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -873,7 +873,7 @@ const Units = {
       },
       {
         name: `Chaos Knights: Impaling Charge - Passive`,
-        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Rend characteristic of its Cursed Lances.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -931,8 +931,8 @@ const Units = {
       },
       {
         name: `Varghulf Courtier: Victory Feast`,
-        desc: `Effect: If any models were slain by this unit this turn:  
-        Heal (D6) this unit.  
+        desc: `Effect: If any models were slain by this unit this turn: 
+        Heal (D6) this unit. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1013,8 +1013,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

@@ -98,47 +98,47 @@ const DeathlyChargeEffect = {
 } */
 
 const Units = {
- // ...Nagash,
- 'Nagash, Supreme Lord of the Undead': {
-  effects: [
-    {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, subtract 3 from its power level.`,
-      when: [HERO_PHASE],
-    },
-    {
-      name: `The Staff of Power - Passive`,
-      desc: `Effect: Add 2 to casting rolls for this unit while it has not miscast any spells this turn. If this unit miscasts a spell, ignore the restriction that would stop this unit from casting any more spells this turn.`,
-      when: [HERO_PHASE],
-    },
-    {
-      name: `Hand of Dust - Once Per Turn`,
-      desc: `Declare: Pick a visible enemy Hero or Monster in combat with this unit to be the target. 
+  // ...Nagash,
+  'Nagash, Supreme Lord of the Undead': {
+    effects: [
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, subtract 3 from its power level.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `The Staff of Power - Passive`,
+        desc: `Effect: Add 2 to casting rolls for this unit while it has not miscast any spells this turn. If this unit miscasts a spell, ignore the restriction that would stop this unit from casting any more spells this turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Hand of Dust - Once Per Turn`,
+        desc: `Declare: Pick a visible enemy Hero or Monster in combat with this unit to be the target. 
       Effect: Hide a dice in one of your hands or under one of two appropriate containers. Your opponent must pick one of your hands or containers. If they pick the one hiding the dice, this ability has no effect. If they pick the empty one, the target is automatically destroyed.`,
-      when: [END_OF_TURN],
-    },
-    {
-      name: `Supreme Lord of the Undead - Once Per Battle`,
-      desc: `Declare: Pick a friendly non-Hero non-Unique Death unit that has been destroyed to be the target. 
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Supreme Lord of the Undead - Once Per Battle`,
+        desc: `Declare: Pick a friendly non-Hero non-Unique Death unit that has been destroyed to be the target. 
       Effect: Set up a replacement unit identical to the target wholly within 12" of this unit and more than 9" from all enemy units.`,
-      when: [HERO_PHASE],
-    },
-    {
-      name: `Invocation of Nagash: Casting value of 7`,
-      desc: `Declare: This unit can cast this spell more than once per phase. Pick a visible unit wholly within 18" of this unit that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6. 
-      Effect: If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly Death unit, pick 1 of the following effects:  
-      Return a number of slain models to the target unit with a combined Health characteristic of up to 3.  The target has Ward (5+) until the start of your next turn.`,
-      when: [HERO_PHASE],
-    },
-  ],
-},
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Invocation of Nagash: Casting value of 7`,
+        desc: `Declare: This unit can cast this spell more than once per phase. Pick a visible unit wholly within 18" of this unit that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6. 
+      Effect: If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly Death unit, pick 1 of the following effects: 
+      Return a number of slain models to the target unit with a combined Health characteristic of up to 3. The target has Ward (5+) until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
   'Mannfred von Carstein': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Wind of Death'])],
     }, */
     effects: [
-     // GenericEffects.WizardTwoSpellsEffect,
-     // TheHungerEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
+      // TheHungerEffect,
       {
         name: `Wind of Death: Casting value of 7`,
         desc: `Declare: Pick a point on the battlefield within 18" of the caster, pick up to 3 visible enemy units within 6" of that point to be the targets, then make a casting roll of 2D6. 
@@ -169,16 +169,16 @@ const Units = {
   },
 
   Neferata: {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Dark Mist'])],
     }, */
     effects: [
-     // GenericEffects.WizardTwoSpellsEffect,
-     {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Nagadrons Claws is 3.`,
-      when: [COMBAT_PHASE],
-    },
+      // GenericEffects.WizardTwoSpellsEffect,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Nagadrons Claws is 3.`,
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Twilight's Allure - Passive`,
         desc: `Effect: Subtract 1 from hit rolls for combat attacks that target friendly Soulblight Gravelords units while they are wholly within 6" of this unit.`,
@@ -202,29 +202,29 @@ const Units = {
         Effect: Ignore modifiers to save rolls for the target (positive and negative) until the start of your next turn.`,
         when: [HERO_PHASE],
       },
-    //  TheHungerEffect,
+      //  TheHungerEffect,
     ],
   },
 
   'Prince Vhordrai': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Quickblood'])],
     }, */
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
-     // TheHungerEffect,
-     {
-      name: `Battle Damaged - Passive`,
-      desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Shordemaires Claws is 5.`,
-      when: [COMBAT_PHASE],
-    },
-    // TerrorEffect,
+      //  GenericEffects.WizardOneSpellEffect,
+      // TheHungerEffect,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Shordemaires Claws is 5.`,
+        when: [COMBAT_PHASE],
+      },
+      // TerrorEffect,
       {
         name: `Saint of Slaughter`,
         desc: `Declare: Pick a friendly non-Monster Vampire unit that destroyed a unit this turn using a Fight ability and is wholly within 12" of this unit to be the target. 
-        Effect: Pick 1 of the following effects to apply for the rest of the battle:  
-        Add 2" to the targets Move characteristic.  
-        Add 1 to the Attacks characteristic of the targets melee weapons.  
+        Effect: Pick 1 of the following effects to apply for the rest of the battle: 
+        Add 2" to the targets Move characteristic. 
+        Add 1 to the Attacks characteristic of the targets melee weapons. 
         Add 1 to the Damage characteristic of the targets melee weapons. 
         More than 1 effect can apply to a unit at the same time; however, each effect can only be applied to a unit once`,
         when: [END_OF_TURN],
@@ -262,7 +262,7 @@ const Units = {
     ],
   }, */
 
- /* 'The Crimson Court': {
+  /* 'The Crimson Court': {
     effects: [
     //  TheHungerEffect,
       {
@@ -275,12 +275,12 @@ const Units = {
   }, */
 
   'Lauka Vai': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ["The Queen's Dictat"])],
     }, */
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
-    //  TheHungerEffect,
+      //  GenericEffects.WizardOneSpellEffect,
+      //  TheHungerEffect,
       {
         name: `Nightmare Miasma - Passive`,
         desc: `Effect: Subtract 1 from the Rend characteristic of melee weapons used by enemy units while they are in combat with this unit.`,
@@ -298,7 +298,7 @@ const Units = {
         Effect: Pick 1 of the targets Companion melee weapons. Add D3 to the Attacks characteristic of that weapon for the rest of the turn.`,
         when: [HERO_PHASE],
       },
-   //   NightmaresMiasmaEffect,
+      //   NightmaresMiasmaEffect,
     ],
   },
 
@@ -307,9 +307,9 @@ const Units = {
       spells: [keyPicker(spells, ['Cursed Reflection'])],
     }, */
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
-    //  NightmaresMiasmaEffect,
-    //  TheHungerEffect,
+      //  GenericEffects.WizardOneSpellEffect,
+      //  NightmaresMiasmaEffect,
+      //  TheHungerEffect,
       {
         name: `Festering Feast`,
         desc: `Declare: Pick a visible friendly non-Hero Soulblight Gravelords Monster that destroyed an enemy unit this turn and that is wholly within 12" of this unit to be the target. 
@@ -331,15 +331,15 @@ const Units = {
   },
 
   'Belladamma Volga': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Under a Killing Moon', 'Lycancurse'])],
     }, */
     effects: [
-     // TheHungerEffect,
+      // TheHungerEffect,
       {
         name: `Wolfguard - Passive`,
-        desc: `Effect: While this unit is within the combat range of a friendly Dire Wolves unit:  
-        This unit has Ward (4+).  
+        desc: `Effect: While this unit is within the combat range of a friendly Dire Wolves unit: 
+        This unit has Ward (4+). 
         Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly Dire Wolves unit within this units combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },
@@ -351,8 +351,8 @@ const Units = {
       {
         name: `Under a Killing Moon: Casting value of 7`,
         desc: `Declare: Pick up to 3 visible friendly Dire Wolves units wholly within 18" of this unit to be the targets, then make a casting roll of 2D6. 
-        Effect: For the rest of the turn:  
-        Add 1 to the Rend characteristic of the targets melee weapons (including Companion weapons).  
+        Effect: For the rest of the turn: 
+        Add 1 to the Rend characteristic of the targets melee weapons (including Companion weapons). 
         The targets can ignore the effect of the Beast ability.`,
         when: [HERO_PHASE],
       },
@@ -361,7 +361,7 @@ const Units = {
 
   'Lady Annika': {
     effects: [
-     // TheHungerEffect,
+      // TheHungerEffect,
       {
         name: `Supernatural Speed`,
         desc: `Declare: Pick this unit if it has not been deployed. 
@@ -385,7 +385,7 @@ const Units = {
 
   Kritza: {
     effects: [
-    //  TheHungerEffect,
+      //  TheHungerEffect,
       {
         name: `Scurrying Retreat`,
         desc: `Effect: If this unit is in combat, roll a dice. On a 2+, this unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
@@ -402,9 +402,9 @@ const Units = {
 
   'Radukar the Wolf': {
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
-    //  TheHungerEffect,
-     // CallToTheHuntEffect,
+      //  GenericEffects.WizardOneSpellEffect,
+      //  TheHungerEffect,
+      // CallToTheHuntEffect,
       {
         name: `Call to the Hunt - Passive`,
         desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to wound rolls for combat attacks made by friendly Deathrattle, Deadwalkers and Vyrkos Blood-born units while they are wholly within 12" of this unit.`,
@@ -413,7 +413,7 @@ const Units = {
       {
         name: `Master of the Pack: Casting value of 6`,
         desc: `Declare: Make a casting roll of 2D6. 
-        Effect: Until the start of your next turn, you can re-roll charge rolls for friendly Soulblight Gravelords Infantry units while they are wholly within 12" of this unit.`,
+        Effect: Until the start of your next turn, you can reroll charge rolls for friendly Soulblight Gravelords Infantry units while they are wholly within 12" of this unit.`,
         when: [HERO_PHASE],
       },
     ],
@@ -421,13 +421,13 @@ const Units = {
 
   'Radukar the Beast': {
     effects: [
-    //  TheHungerEffect,
-    {
-      name: `Call to the Hunt - Passive`,
-      desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to wound rolls for combat attacks made by friendly Deathrattle, Deadwalkers and Vyrkos Blood-born units while they are wholly within 12" of this unit.`,
-      when: [COMBAT_PHASE],
-    },
-     // CallToTheHuntEffect,
+      //  TheHungerEffect,
+      {
+        name: `Call to the Hunt - Passive`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to wound rolls for combat attacks made by friendly Deathrattle, Deadwalkers and Vyrkos Blood-born units while they are wholly within 12" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+      // CallToTheHuntEffect,
       {
         name: `Armour of the Night: Casting value of 6`,
         desc: `Declare: Make a casting roll of 2D6. 
@@ -446,8 +446,8 @@ const Units = {
     effects: [
       {
         name: `Keeper of the Corpse-Gardens - Passive`,
-        desc: `Effect: While this unit is within the combat range of a friendly Deadwalker Zombies unit:  
-        This unit has Ward (4+).  
+        desc: `Effect: While this unit is within the combat range of a friendly Deadwalker Zombies unit: 
+        This unit has Ward (4+). 
         Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly Deadwalker Zombies unit within this units combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },
@@ -489,8 +489,8 @@ const Units = {
         desc: `Effect: While each model in this unit is within 1" of any terrain features, this unit cannot be targeted by shooting attacks unless the attacking model is within 9" of it.`,
         when: [SHOOTING_PHASE],
       },
-    //  VampiricAgilityEffect,
-    //  TheHungerEffect,
+      //  VampiricAgilityEffect,
+      //  TheHungerEffect,
     ],
   },
 
@@ -521,7 +521,7 @@ const Units = {
         desc: `Effect: This unit has a maximum control score of 1.`,
         when: [END_OF_TURN],
       },
-     // TheHungerEffect,
+      // TheHungerEffect,
     ],
   },
 
@@ -536,12 +536,12 @@ const Units = {
   },
 
   'Vampire Lord on Zombie Dragon': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Curse of Exsanguination'])],
     }, */
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
-     // TheHungerEffect,
+      //  GenericEffects.WizardOneSpellEffect,
+      // TheHungerEffect,
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Draconic Claws is 5.`,
@@ -558,14 +558,14 @@ const Units = {
         Effect: Roll a number of dice equal to the targets Health characteristic. For each 6, inflict 1 mortal damage on the target.`,
         when: [END_OF_TURN],
       },
-     // TerrorEffect,
+      // TerrorEffect,
     ],
   },
 
   'Blood Knights': {
     effects: [
-     // TheHungerEffect,
-     // StandardBearerEffect,
+      // TheHungerEffect,
+      // StandardBearerEffect,
       {
         name: `Riders of Ruin - Passive`,
         desc: `Effect: When this unit moves, it can pass through models in enemy Infantry units and can pass through the combat ranges of enemy Infantry units, but it cannot end a move in combat unless specified in the ability used.`,
@@ -582,7 +582,7 @@ const Units = {
 
   Vargheists: {
     effects: [
-     // TheHungerEffect,
+      // TheHungerEffect,
       {
         name: `Death's Descent - Once Per Turn`,
         desc: `Effect: If this unit is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9" from all enemy units.`,
@@ -593,8 +593,8 @@ const Units = {
 
   'Vampire Lord': {
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
-     // TheHungerEffect,
+      // GenericEffects.WizardOneSpellEffect,
+      // TheHungerEffect,
       {
         name: `Sanguine Blur - Once Per Turn`,
         desc: `Effect: Roll a dice. On a 3+, remove this unit from the battlefield and set it up again on the battlefield more than 9" from all enemy non-Hero units and more than 3" from all enemy Heroes.`,
@@ -604,11 +604,11 @@ const Units = {
   },
 
   'Bloodseeker Palanquin': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Blood Siphon'])],
     }, */
     effects: [
-     // TheHungerEffect,
+      // TheHungerEffect,
       {
         name: `A Promising Concoction - Once Per Battle`,
         desc: `Declare: Pick up to 3 friendly Vampire units wholly within 12" of this unit to be the targets. 
@@ -620,14 +620,14 @@ const Units = {
         desc: `Effect: Subtract 3 from the control scores of enemy units while they are within 12" of this unit.`,
         when: [END_OF_TURN],
       },
-     // WailOfTheDamnedEffect,
-     // GenericEffects.WizardOneSpellEffect,
+      // WailOfTheDamnedEffect,
+      // GenericEffects.WizardOneSpellEffect,
     ],
   },
 
   'Mortis Engine': {
     effects: [
-    //  WailOfTheDamnedEffect,
+      //  WailOfTheDamnedEffect,
       {
         name: `The Reliquary - Passive`,
         desc: `Effect: When this unit is set up for the first time, place a stored energy dice beside it with the 1 facing up. Each time a friendly Soulblight Gravelords Wizard successfully casts a spell while it is within 12" of this unit, increase the value of the stored energy dice beside this unit by 1 (to a maximum of 6).`,
@@ -648,12 +648,12 @@ const Units = {
   },
 
   'Coven Throne': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Undying Servitude'])],
     }, */
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
-    //  TheHungerEffect,
+      //  GenericEffects.WizardOneSpellEffect,
+      //  TheHungerEffect,
       {
         name: `Tactical Insight - Passive`,
         desc: `Effect: Friendly Deathrattle and Deadwalkers units have Ward (5+) while they are wholly within 6" of this unit.`,
@@ -668,15 +668,15 @@ const Units = {
   },
 
   Necromancer: {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(spells, ["Vanhel's Danse Macabre"])],
     }, */
     effects: [
-    //  GenericEffects.WizardOneSpellEffect,
+      //  GenericEffects.WizardOneSpellEffect,
       {
         name: `Undead Minions - Passive`,
-        desc: `Effect: While this unit is within the combat range of a friendly Deathrattle or Deadwalkers unit:  
-        This unit has Ward (4+).  
+        desc: `Effect: While this unit is within the combat range of a friendly Deathrattle or Deadwalkers unit: 
+        This unit has Ward (4+). 
         Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly Deathrattle or Deadwalkers unit within this units combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },
@@ -706,7 +706,7 @@ const Units = {
         desc: `Effect: Melee weapons used by other friendly Deadwalkers units have Crit (Auto-wound) while they are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
       },
-     // LocusOfUndeathEffect,
+      // LocusOfUndeathEffect,
     ],
   },
 
@@ -741,7 +741,7 @@ const Units = {
 
   Terrorgheist: {
     effects: [
-     // ...GenericEffects.Terrorgheist
+      // ...GenericEffects.Terrorgheist
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Skeletal Talons is 4.`,
@@ -765,7 +765,7 @@ const Units = {
 
   'Wight King': {
     effects: [
-    //  BeheadingStrikeEffect,
+      //  BeheadingStrikeEffect,
       {
         name: `Ancient Strategies - Reaction: You declared a Fight ability for this unit`,
         desc: `Effect: Pick a friendly non-Hero Deathrattle Infantry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
@@ -791,8 +791,8 @@ const Units = {
 
   'Black Knights': {
     effects: [
-    //  DeathlyChargeEffect,
-     // StandardBearerEffect,
+      //  DeathlyChargeEffect,
+      // StandardBearerEffect,
       {
         name: `The Deathly Charge - Passive`,
         desc: `Effect: If this unit charged this turn, its Barrow Lances have Crit (Mortal) for the rest of the turn.`,
@@ -821,7 +821,7 @@ const Units = {
     ],
   },
 
- /* 'The Sepulchral Guard': {
+  /* 'The Sepulchral Guard': {
     effects: [
       {
         name: `The Sepulchral Warden`,
@@ -868,12 +868,12 @@ const Units = {
 
   'Fell Bats': {
     effects: [
-    //  TheHungerEffect,
-    {
-      name: `Beast - Passive`,
-      desc: `Effect: This unit has a maximum control score of 1.`,
-      when: [END_OF_TURN],
-    },
+      //  TheHungerEffect,
+      {
+        name: `Beast - Passive`,
+        desc: `Effect: This unit has a maximum control score of 1.`,
+        when: [END_OF_TURN],
+      },
       {
         name: `Fleet and Fell - Passive`,
         desc: `Effect: This unit can use Charge abilities even if it used a Retreat ability in the same turn. In addition, no mortal damage is inflicted on this unit by Retreat abilities.`,
@@ -883,17 +883,17 @@ const Units = {
   },
 
   'Cado Ezechiar': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(spells, ['Retribution or Salvation'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
-     // TheHungerEffect,
+      // GenericEffects.WizardOneSpellEffect,
+      // TheHungerEffect,
       {
         name: `The Court of the Lost`,
-        desc: `Effect: Roll a dice. On a 2+, pick 1 of the following effects to apply until the start of your next turn.  
-        This unit has a Move characteristic of 12".  
-        Add 1 to casting rolls, unbinding rolls and banishment rolls for this unit.  
+        desc: `Effect: Roll a dice. On a 2+, pick 1 of the following effects to apply until the start of your next turn. 
+        This unit has a Move characteristic of 12". 
+        Add 1 to casting rolls, unbinding rolls and banishment rolls for this unit. 
         This units melee weapons have Crit (Mortal).`,
         when: [HERO_PHASE],
       },
@@ -907,7 +907,7 @@ const Units = {
     ],
   },
 
- /* 'Deintalos the Exile': {
+  /* 'Deintalos the Exile': {
    /* mandatory: {
       spells: [keyPicker(spells, ['Channelled Dynamism'])],
     }, 
@@ -929,7 +929,7 @@ const Units = {
 
   'Ivya Volga': {
     effects: [
-     // TheHungerEffect,
+      // TheHungerEffect,
       {
         name: `Shrieking Swarm - Passive`,
         desc: `Effect: Subtract 1 from hit rolls for attacks that target this unit.`,
@@ -949,7 +949,7 @@ const Units = {
     ],
   },
 
- /* 'King Morlak Velmorn': {
+  /* 'King Morlak Velmorn': {
     effects: [
     //  BeheadingStrikeEffect,
       {
@@ -982,7 +982,7 @@ const Units = {
     ],
   },
 
- /* 'The Exiled Dead': {
+  /* 'The Exiled Dead': {
     effects: [
       {
         name: `Champion`,
@@ -1002,7 +1002,7 @@ const Units = {
     ],
   }, */
 
- /* 'The Sons of Velmorn': {
+  /* 'The Sons of Velmorn': {
     effects: [
       {
         name: `Sir Jedran Falseborn`,
@@ -1049,68 +1049,68 @@ const Units = {
         name: `Ushoran: Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Monstrous Talons is 6.`,
         when: [COMBAT_PHASE],
-        },
-        {
-          name: `Ushoran: Epicentre of Delusion`,
-          desc: `Effect: Pick 1 of the following effects to apply until the start of your next turn: 
+      },
+      {
+        name: `Ushoran: Epicentre of Delusion`,
+        desc: `Effect: Pick 1 of the following effects to apply until the start of your next turn: 
           The Royal Hunt: Add 1 to wound rolls for attacks made by friendly Flesh-eater Courts units that target a Monster. 
           Crusading Army: Add 1 to run rolls and charge rolls for friendly Flesh-eater Courts units. 
           Defenders of the Realm: Add 1 to save rolls for friendly Flesh-eater Courts units while they are contesting an objective you control. 
           The Grand Tournament: Add 1 to hit rolls for attacks made by other friendly Flesh-eater Courts Heroes if they charged in the same turn.`,
-          when: [HERO_PHASE],
-        },
-        {
-          name: `Ushoran: Shroudcage Fragment - Once Per Turn`,
-          desc: `Declare: Pick up to 3 enemy units in combat with this unit to be the targets. 
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Ushoran: Shroudcage Fragment - Once Per Turn`,
+        desc: `Declare: Pick up to 3 enemy units in combat with this unit to be the targets. 
           Effect: Roll a dice for each target. If the roll exceeds the targets Control characteristic, the target has Strike-last for the rest of the turn.`,
-          when: [COMBAT_PHASE],
-        },
-        {
-          name: `Ushoran: Glimpse of Delusion: Casting value of 7`,
-          desc: `Declare: Pick a visible enemy model within 18" of this unit to be the target, pick another enemy unit within the targets combat range to be the victim, then make a casting roll of 2D6. 
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Ushoran: Glimpse of Delusion: Casting value of 7`,
+        desc: `Declare: Pick a visible enemy model within 18" of this unit to be the target, pick another enemy unit within the targets combat range to be the victim, then make a casting roll of 2D6. 
           Effect: Pick 1 of the targets melee weapons. Immediately resolve combat attacks made with that weapon against the victim.`,
-          when: [HERO_PHASE],
-        },
-        {
-          name: `Crypt Guard: Armoury of Madness - Reaction: You declared a Fight ability for this unit`,
-          desc: `Effect: If any damage points inflicted by attacks made as part of that Fight ability are allocated to any enemy units, those enemy units cannot use commands until the start of your next turn.`,
-          when: [COMBAT_PHASE],
-        },
-        {
-          name: `Crypt Guard: Royal Bodyguard - Passive`,
-          desc: `Effect: While any friendly Flesh-eater Courts Heroes are wholly within this units combat range, both this unit and those Heroes have Ward (5+).`,
-          when: [DURING_GAME],
-        },
-        {
-          name: `Morbheg Kinghts: Shrieking Charge`,
-          desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of this unit to be the target. 
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Crypt Guard: Armoury of Madness - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: If any damage points inflicted by attacks made as part of that Fight ability are allocated to any enemy units, those enemy units cannot use commands until the start of your next turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Crypt Guard: Royal Bodyguard - Passive`,
+        desc: `Effect: While any friendly Flesh-eater Courts Heroes are wholly within this units combat range, both this unit and those Heroes have Ward (5+).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Morbheg Kinghts: Shrieking Charge`,
+        desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of this unit to be the target. 
           Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
-          when: [CHARGE_PHASE],
-        },
-        {
-          name: `Morbheg Knights: Predator's Pounce - Passive`,
-          desc: `Effect: This unit can use Charge abilities even if it used a Retreat ability in the same turn. In addition, no mortal damage is inflicted on this unit by Retreat abilities.`,
-          when: [MOVEMENT_PHASE],
-        },
-        {
-          name: `Deranged Transformation: Casting value of 7 (UNLIMITED)`,
-          desc: `Declare: Pick the Ushoran in this Regiment of Renown to cast this spell, pick another visible unit in this Regiment of Renown wholly within 12" of them to be the target, then make a casting roll of 2D6. 
-          Effect: Until the start of your next turn:  
-          Add 2" to the targets Move characteristic.  
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Morbheg Knights: Predator's Pounce - Passive`,
+        desc: `Effect: This unit can use Charge abilities even if it used a Retreat ability in the same turn. In addition, no mortal damage is inflicted on this unit by Retreat abilities.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Deranged Transformation: Casting value of 7 (UNLIMITED)`,
+        desc: `Declare: Pick the Ushoran in this Regiment of Renown to cast this spell, pick another visible unit in this Regiment of Renown wholly within 12" of them to be the target, then make a casting roll of 2D6. 
+          Effect: Until the start of your next turn: 
+          Add 2" to the targets Move characteristic. 
           Add 1 to wound rolls for the targets combat attacks.`,
-          when: [HERO_PHASE],
-        },
-        {
-          name: `Maddening Radiance - Passive`,
-          desc: `Effect: Add 1 to the Attacks characteristic of melee weapons used by units in this Regiment of Renown while they are wholly within 12" of the Ushoran in this Regiment of Renown.`,
-          when: [COMBAT_PHASE],
-        },
-        {
-          name: `Summon Deluded Throngs - Once Per Battle`,
-          desc: `Declare: Pick the Ushoran in this Regiment of Renown to use this ability, then pick another unit in this Regiment of Renown that has been destroyed to be the target. 
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Maddening Radiance - Passive`,
+        desc: `Effect: Add 1 to the Attacks characteristic of melee weapons used by units in this Regiment of Renown while they are wholly within 12" of the Ushoran in this Regiment of Renown.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Summon Deluded Throngs - Once Per Battle`,
+        desc: `Declare: Pick the Ushoran in this Regiment of Renown to use this ability, then pick another unit in this Regiment of Renown that has been destroyed to be the target. 
           Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6" of a battlefield edge and more than 9" from all enemy units. The replacement unit is part of this Regiment of Renown.`,
-          when: [MOVEMENT_PHASE],
-        },
+        when: [MOVEMENT_PHASE],
+      },
     ],
   },
   'ROR: Jerrion`s Delegation': {
@@ -1120,8 +1120,8 @@ const Units = {
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
         Effect: Roll a dice. On a 3+, pick 1 of the following effects: 
         Attack the Apostate!: Friendly Flesh-eater Courts units in combat with the target have Strike-first for the rest of the turn. 
-        Welcome the Disciple!: The target has the Infected keyword for the rest of the battle. Each time your opponent declares a command, Spell ability or Prayer ability for an Infected unit, roll a dice. On a 5+:  
-        If they declared a command, that command has no effect. The command still counts as having been used and the command points spent to use the command are still lost.  
+        Welcome the Disciple!: The target has the Infected keyword for the rest of the battle. Each time your opponent declares a command, Spell ability or Prayer ability for an Infected unit, roll a dice. On a 5+: 
+        If they declared a command, that command has no effect. The command still counts as having been used and the command points spent to use the command are still lost. 
         If they declared a Spell or Prayer ability, that spell or prayer fails.`,
         when: [CHARGE_PHASE],
       },
@@ -1166,7 +1166,7 @@ const Units = {
         Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the target is a Hero, double the amount of mortal damage inflicted.`,
         when: [COMBAT_PHASE],
       },
-    //  FeasterOfSoulsEffect,
+      //  FeasterOfSoulsEffect,
       {
         name: `Arkhan: Staff of Spirits - Passive`,
         desc: `Effect: Add 1 to casting rolls for this unit. Each time this unit successfully casts a spell, Heal (1) this unit.`,
@@ -1175,15 +1175,15 @@ const Units = {
       {
         name: `Arkhan: Curse of Years: Casting value of 6`,
         desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target, then make a casting roll of 2D6. 
-        Effect: Roll 10 dice. For each 6:  
-        Inflict 1 mortal damage on the target.  
+        Effect: Roll 10 dice. For each 6: 
+        Inflict 1 mortal damage on the target. 
         Roll an extra dice. 
         For each 5+ on those extra dice, repeat the above bullet points. Then, do the same for each 4+, then each 3+, then each 2+.`,
         when: [HERO_PHASE],
       },
       {
         name: `Arkhan: Mortarch of Sacrament - Reaction: Opponent declared a Spell ability`,
-        desc: `Effect: If a friendly Ossiarch Bonereapers unit wholly within 18" of this unit was picked to be the target of that spell, roll a dice. On a 4+, ignore the effect of that spell on that unit. This unit can use this ability more than once per phase but only once per Spell ability`,
+        desc: `Effect: If a friendly Ossiarch Bonereapers unit wholly within 18" of this unit was picked to be the target of that spell, roll a dice. On a 4+, ignore the effect of that spell on that unit. This unit can use this ability more than once per phase but only once per Spell ability.`,
         when: [HERO_PHASE],
       },
       {
@@ -1417,7 +1417,7 @@ const Units = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1453,25 +1453,25 @@ const Units = {
         name: `Treelord: Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Sweeping Blows is 3.`,
         when: [COMBAT_PHASE],
-        },
-        {
-          name: `Treelord: Lash and Tangle - Once Per Turn`,
-          desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+      },
+      {
+        name: `Treelord: Lash and Tangle - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
           Effect: Roll a dice. On a 3+, subtract 1 from wound rolls for the targets attacks for the rest of the turn.`,
-          when: [COMBAT_PHASE],
-        },
-        {
-          name: `Treelord: Entangling Grasp`,
-          desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this units Strangleroots to be the target. 
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Treelord: Entangling Grasp`,
+        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this units Strangleroots to be the target. 
           Effect: Roll a dice. On a 3+, the target cannot use Run or Retreat abilities until the start of your next turn.`,
-          when: [SHOOTING_PHASE],
-        },
-        {
-          name: `Spite-Revenants: Unbridled Malice`,
-          desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Spite-Revenants: Unbridled Malice`,
+        desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
           Effect: Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.`,
-          when: [COMBAT_PHASE],
-        },
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Endless Wandering - Once Per Turn - Enemy Hero Phase`,
         desc: `Declare: Pick a unit in this Regiment of Renown that is not in combat to use this ability. 
@@ -1538,8 +1538,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

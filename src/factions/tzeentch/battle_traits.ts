@@ -22,12 +22,11 @@ import {
 const BattleTraits = {
   // Tzeentch Allegiance
   [TZEENTCH]: {
- 
     effects: [
-        {
-          name: `Masters of Destiny`,
-          desc: `Effect: Roll 9 dice and place them to one side. These are your destiny dice. Destiny dice can be spent during the battle to change certain dice rolls. You can never have more than 9 destiny dice at once. 
-          During the battle, instead of making a roll from the list below for a friendly Disciples of Tzeentch unit, you can spend your destiny dice. The roll you would have made is replaced with the roll on the destiny dice you spend. If you want to replace a 2D6 roll, 3D6 roll, etc. you must spend a number of destiny dice equal to the number before D6. Any rolls that have been replaced count as unmodified rolls, and they cannot be re-rolled, they cannot be changed and they cannot be modified by other friendly abilities except for those that apply negative modifiers. You cannot spend destiny dice to replace re-rolls. Destiny dice can be spent in place of the following dice rolls:  
+      {
+        name: `Masters of Destiny`,
+        desc: `Effect: Roll 9 dice and place them to one side. These are your destiny dice. Destiny dice can be spent during the battle to change certain dice rolls. You can never have more than 9 destiny dice at once. 
+          During the battle, instead of making a roll from the list below for a friendly Disciples of Tzeentch unit, you can spend your destiny dice. The roll you would have made is replaced with the roll on the destiny dice you spend. If you want to replace a 2D6 roll, 3D6 roll, etc. you must spend a number of destiny dice equal to the number before D6. Any rolls that have been replaced count as unmodified rolls, and they cannot be rerolled, they cannot be changed and they cannot be modified by other friendly abilities except for those that apply negative modifiers. You cannot spend destiny dice to replace rerolls. Destiny dice can be spent in place of the following dice rolls: 
           - Casting rolls  
           - Unbinding rolls  
           - Banishment rolls  
@@ -36,8 +35,8 @@ const BattleTraits = {
           - Hit rolls  
           - Wound rolls  
           - Save rolls`,
-          when: [DURING_SETUP],
-        },
+        when: [DURING_SETUP],
+      },
       {
         name: `Conflagration of Tzeentch - Once Per Turn`,
         desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by Wyrdflame Spell abilities or shooting attacks made with weapons that have the Wyrdame weapon ability to be the target. 
@@ -56,15 +55,15 @@ const BattleTraits = {
       },
       // Omitted Change Covens (you can pick 1 of the following subfactions)... not necessary
     ],
-  }, 
+  },
 
   // Eternal Conflagration Flavor
- /* 'Masters of Destiny': {
+  /* 'Masters of Destiny': {
     effects: [
       {
         name: `Masters of Destiny`,
         desc: `Effect: Roll 9 dice and place them to one side. These are your destiny dice. Destiny dice can be spent during the battle to change certain dice rolls. You can never have more than 9 destiny dice at once. 
-        During the battle, instead of making a roll from the list below for a friendly Disciples of Tzeentch unit, you can spend your destiny dice. The roll you would have made is replaced with the roll on the destiny dice you spend. If you want to replace a 2D6 roll, 3D6 roll, etc. you must spend a number of destiny dice equal to the number before D6. Any rolls that have been replaced count as unmodified rolls, and they cannot be re-rolled, they cannot be changed and they cannot be modified by other friendly abilities (but they can be modied by enemy abilities). You cannot spend destiny dice to replace re-rolls. Destiny dice can be spent in place of the following dice rolls:  
+        During the battle, instead of making a roll from the list below for a friendly Disciples of Tzeentch unit, you can spend your destiny dice. The roll you would have made is replaced with the roll on the destiny dice you spend. If you want to replace a 2D6 roll, 3D6 roll, etc. you must spend a number of destiny dice equal to the number before D6. Any rolls that have been replaced count as unmodified rolls, and they cannot be rerolled, they cannot be changed and they cannot be modified by other friendly abilities (but they can be modied by enemy abilities). You cannot spend destiny dice to replace rerolls. Destiny dice can be spent in place of the following dice rolls: 
         Casting rolls  
         Unbinding rolls  
         Banishment rolls  

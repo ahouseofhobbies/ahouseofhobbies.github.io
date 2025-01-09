@@ -39,7 +39,7 @@ const PickEmOffEffect = {
 } */
 
 const KruleboyzUnits = {
-  'Kragnos': {
+  Kragnos: {
     effects: [
       {
         name: `Battle Damaged - Passive`,
@@ -58,8 +58,8 @@ const KruleboyzUnits = {
       },
       {
         name: `Rampaging Destruction - Once Per Turn`,
-        desc: `Effect: If this unit charged this phase, pick 1 of the following effects:  
-        Roll a dice for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.  
+        desc: `Effect: If this unit charged this phase, pick 1 of the following effects: 
+        Roll a dice for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. 
         Pick an enemy Monster in combat with this unit and roll 2D6. On a 7, this ability has no effect. Otherwise, inflict an amount of mortal damage on that unit equal to the results on the dice used for the 2D6 roll multiplied together. For example, a 2D6 roll of 2 and 6 would inflict 12 mortal damage (2x6).`,
         when: [CHARGE_PHASE],
       },
@@ -72,17 +72,17 @@ const KruleboyzUnits = {
   },
   'Man-Skewer Boltboyz': {
     effects: [
-    //  PickEmOffEffect
-    {
-      name: `Man-Skewer Crossbows - Passive`,
-      desc: `Effect: Each time this unit uses a Shoot ability, pick either the Hasty Shot or Aimed Shot weapon characteristics for all the attacks it makes with its Man-skewer Crossbows.`,
-      when: [SHOOTING_PHASE],
-    },
-    {
-      name: `Pick 'Em Off`,
-      desc: `Effect: If this unit has not used a Move ability this turn and was not set up this turn, add 1 to hit rolls for this units shooting attacks for the rest of the turn.`,
-      when: [SHOOTING_PHASE],
-    },
+      //  PickEmOffEffect
+      {
+        name: `Man-Skewer Crossbows - Passive`,
+        desc: `Effect: Each time this unit uses a Shoot ability, pick either the Hasty Shot or Aimed Shot weapon characteristics for all the attacks it makes with its Man-skewer Crossbows.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Pick 'Em Off`,
+        desc: `Effect: If this unit has not used a Move ability this turn and was not set up this turn, add 1 to hit rolls for this units shooting attacks for the rest of the turn.`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   'Hobgrot Slittaz': {
@@ -90,8 +90,8 @@ const KruleboyzUnits = {
       {
         name: `Scrap-Bang`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a dice. On a 3+:  
-        Inflict 1 mortal damage on the target.  
+        Effect: Roll a dice. On a 3+: 
+        Inflict 1 mortal damage on the target. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -122,7 +122,7 @@ const KruleboyzUnits = {
     ],
   },
   'Swampcalla Shaman and Pot-grot': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(spells, ['Summon Boggy Mist'])],
     }, */
     effects: [
@@ -141,7 +141,7 @@ const KruleboyzUnits = {
   },
   'Killaboss on Great Gnashtoof': {
     effects: [
-     // AllPartOfDaPlanEffect,
+      // AllPartOfDaPlanEffect,
       {
         name: `That's Ours, Ya Gitz! - Passive`,
         desc: `Effect: While this unit is contesting an objective you do not control, add 1 to hit rolls for combat attacks made by friendly Kruleboyz Infantry units wholly within 12" of this unit.`,
@@ -157,7 +157,7 @@ const KruleboyzUnits = {
   },
   'Killaboss on Corpse-Rippa Vulcha': {
     effects: [
-    //  AllPartOfDaPlanEffect,
+      //  AllPartOfDaPlanEffect,
       {
         name: `Commanding View - Reaction: You declared the Redeploy command for a friendly Gutrippaz unit wholly within 12" of this unit`,
         desc: `Effect: If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.`,
@@ -178,7 +178,7 @@ const KruleboyzUnits = {
   },
   'Killaboss with Stab-grot': {
     effects: [
-    //  AllPartOfDaPlanEffect,
+      //  AllPartOfDaPlanEffect,
       {
         name: `Stab-Grot - Passive`,
         desc: `Effect: This units Stab-grot is a token. If this units Stab-grot has been removed, it can no longer attack with its Stab-grots Shiv and it cannot use the Unleash the Stab-grot! ability.`,
@@ -186,8 +186,8 @@ const KruleboyzUnits = {
       },
       {
         name: `Unleash the Stab-Grot! - Once Per Battle`,
-        desc: `Effect: Pick 1 of the following effects:  
-        Pick an enemy unit in combat with this unit to be the target. Inflict D3 mortal damage on the target.  
+        desc: `Effect: Pick 1 of the following effects: 
+        Pick an enemy unit in combat with this unit to be the target. Inflict D3 mortal damage on the target. 
         This unit has Ward (5+) for the rest of the turn. 
         After resolving either effect, remove this units Stab-Grot from the battlefield.`,
         when: [COMBAT_PHASE],
@@ -201,7 +201,7 @@ const KruleboyzUnits = {
   },
   'Beast-Skewer Killbow': {
     effects: [
-     // PickEmOffEffect,
+      // PickEmOffEffect,
       {
         name: `Skewering Bolts - Once Per Turn`,
         desc: `Effect: For the rest of the turn, the Damage characteristic of this units Beast-Skewer Bolts is 6 if the target is a Monster.`,
@@ -235,7 +235,7 @@ const KruleboyzUnits = {
     ],
   },
   Gobsprakk: {
-   /* mandatory: {
+    /* mandatory: {
       spells: [
         keyPicker(spells, [
           'Choking Mist',
@@ -292,8 +292,8 @@ const KruleboyzUnits = {
       {
         name: `Festering Wounds - Once Per Turn`,
         desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by this units combat attacks to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. 
         Subtract 1 from wound rolls for attacks made by the target until the start of your next turn.`,
         when: [END_OF_TURN],
       },
@@ -340,7 +340,7 @@ const KruleboyzUnits = {
       },
     ],
   },
-/*  "Mannok Da Kunnin'": {
+  /*  "Mannok Da Kunnin'": {
     effects: [
       {
         name: `Kunnin' Tricks`,
@@ -618,8 +618,8 @@ const KruleboyzUnits = {
       {
         name: `Shake the Earth - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted. 
         Subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -701,7 +701,7 @@ const KruleboyzUnits = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -804,8 +804,8 @@ const KruleboyzUnits = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },
@@ -853,7 +853,7 @@ const KruleboyzUnits = {
       },
     ],
   },
- // ...keyPicker(DestructionUnits, ['Rogue Idol']),
+  // ...keyPicker(DestructionUnits, ['Rogue Idol']),
 } satisfies TItemDescriptions
 
 export default tagAs(KruleboyzUnits, 'unit')

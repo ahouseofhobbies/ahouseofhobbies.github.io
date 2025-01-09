@@ -156,11 +156,11 @@ const Units = {
         Effect: Make a number of D3 rolls equal to the current battle round number. For each 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [SHOOTING_PHASE],
       },
-    ]
+    ],
   },
 
   'Celestial Hurricanum': {
-   // [...CelestialHurricanumEffects], // updated 2024
+    // [...CelestialHurricanumEffects], // updated 2024
     effects: [
       {
         name: `Portents of Battle - Once Per Turn`,
@@ -174,7 +174,7 @@ const Units = {
         Effect: Make a number of D3 rolls equal to the current battle round number. For each 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [SHOOTING_PHASE],
       },
-    ]
+    ],
   },
   'Battlemage on Luminark of Hysh': {
     /*  mandatory: {
@@ -184,7 +184,7 @@ const Units = {
     effects: [
       {
         name: `Aura of Protection - Passive`,
-        desc: `Effect: Friendly Cities of Sigmar units have Ward (6+) while they are wholly within 12" of this unit`,
+        desc: `Effect: Friendly Cities of Sigmar units have Ward (6+) while they are wholly within 12" of this unit.`,
         when: [DURING_GAME],
       },
       {
@@ -192,14 +192,14 @@ const Units = {
         desc: `Effect: Each time this unit attacks with its Searing Beam of Light, pick a point on the battlefield within range to be the target. If the attack scores a hit, draw a straight line between that point and the closest point on this units base. Inflict D3 mortal damage on each visible unit (friendly and enemy) that the line passes across.`,
         when: [SHOOTING_PHASE],
       },
-    ]
+    ],
   },
   'Luminark of Hysh': {
-   // [...LuminarkEffects],
+    // [...LuminarkEffects],
     effects: [
       {
         name: `Aura of Protection - Passive`,
-        desc: `Effect: Friendly Cities of Sigmar units have Ward (6+) while they are wholly within 12" of this unit`,
+        desc: `Effect: Friendly Cities of Sigmar units have Ward (6+) while they are wholly within 12" of this unit.`,
         when: [DURING_GAME],
       },
       {
@@ -207,7 +207,7 @@ const Units = {
         desc: `Effect: Each time this unit attacks with its Searing Beam of Light, pick a point on the battlefield within range to be the target. If the attack scores a hit, draw a straight line between that point and the closest point on this units base. Inflict D3 mortal damage on each visible unit (friendly and enemy) that the line passes across.`,
         when: [SHOOTING_PHASE],
       },
-    ]
+    ],
   },
   Flagellants: {
     effects: [
@@ -236,7 +236,7 @@ const Units = {
         when: [COMBAT_PHASE],
       },
       {
-        name: `Tactical Acumen - Reaction: You declared the ‘Redeploy’ command for a friendly Cities of Sigmar Human unit wholly within 12" of this unit`,
+        name: `Tactical Acumen - Reaction: You declared the 'Redeploy' command for a friendly Cities of Sigmar Human unit wholly within 12" of this unit`,
         desc: `Effect: If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.`,
         when: [MOVEMENT_PHASE],
       },
@@ -309,7 +309,7 @@ const Units = {
       },
       {
         name: `Blackpowder Squire - Passive`,
-        desc: `Effect: This unit has a Blackpowder Squire token. Each time this unit uses a Shoot ability, if this units Blackpowder Squire is on the battlefield, you can re-roll 1 hit roll. If a hit roll re-rolled in this manner is 1, remove this units Blackpowder Squire from the battlefield.`,
+        desc: `Effect: This unit has a Blackpowder Squire token. Each time this unit uses a Shoot ability, if this units Blackpowder Squire is on the battlefield, you can reroll 1 hit roll. If a hit roll rerolled in this manner is 1, remove this units Blackpowder Squire from the battlefield.`,
         when: [SHOOTING_PHASE],
       },
     ],
@@ -372,7 +372,7 @@ const Units = {
   },
   Ironbreakers: {
     effects: [
-     // CinderblastBombEffect,
+      // CinderblastBombEffect,
       {
         name: `Gromril Shieldwall - Passive`,
         desc: `Effect: While this unit is aected by the Hold the Line Officars Order ability, it has Ward (4+) instead of Ward (5+).`,
@@ -413,20 +413,20 @@ const Units = {
   },
   'Steam Tank Commander': {
     effects: [
-     // ...SteamTankEffects,
-     {
-      name: `More Pressure!`,
-      desc: `Effect: Roll 2D6. If the roll is less than the number of damage points this unit has, inflict D3 mortal damage on this unit. Otherwise, pick 1 of the following effects to apply to this unit until the start of your next turn: 
+      // ...SteamTankEffects,
+      {
+        name: `More Pressure!`,
+        desc: `Effect: Roll 2D6. If the roll is less than the number of damage points this unit has, inflict D3 mortal damage on this unit. Otherwise, pick 1 of the following effects to apply to this unit until the start of your next turn: 
       Power the Wheels: This unit can use a Run ability and still use Shoot and/or Charge abilities later in the turn.
       Power the Guns: Add 3 to the Attacks characteristic of this units Steam Gun.`,
-      when: [HERO_PHASE],
-    },
-    {
-      name: `Division Commander - Once Per Battle`,
-      desc: `Declare: Pick up to 2 friendly Steam Tank units to be the targets. 
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Division Commander - Once Per Battle`,
+        desc: `Declare: Pick up to 2 friendly Steam Tank units to be the targets. 
       Effect: For the rest of the turn, add 1 to hit rolls for shooting attacks made by this unit and by each target.`,
-      when: [SHOOTING_PHASE],
-    },
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   Cogsmith: {
@@ -439,7 +439,7 @@ const Units = {
       },
     ],
   },
- /* Steamtank: {
+  /* Steamtank: {
     effects: [...SteamTankEffects], // updated 2024
   }, */
   Gyrobomber: {
@@ -467,7 +467,7 @@ const Units = {
   Sorceress: {
     /*  mandatory: {
         spells: [keyPicker(spells, ['Word of Pain'])],
-      },  [GenericEffects.WizardOneSpellEffect, BloodSacrificeEffect], */ 
+      }, [GenericEffects.WizardOneSpellEffect, BloodSacrificeEffect], */
     effects: [
       {
         name: `Cruel Sacrifice - Once Per Turn`,
@@ -481,7 +481,7 @@ const Units = {
         Effect: Roll a dice. On a 3+, subtract 1 from hit rolls and wound rolls for the targets attacks until the start of your next turn.`,
         when: [COMBAT_PHASE],
       },
-    ]
+    ],
   },
   'Sorceress on Black Dragon': {
     /* mandatory: {
@@ -633,7 +633,7 @@ const Units = {
       {
         name: `Sow Havoc`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a dice. On a 3+:  
+        Effect: Roll a dice. On a 3+: 
         Inflict D3 mortal damage on the target.
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
@@ -680,16 +680,16 @@ const Units = {
   'Doralia Ven Denst': {
     // [GrimResolveEffect, WeaponsOfBanishmentEffect],
     effects: [
-    {
-      name: `Weapeans of Banishment - Passive`,
-      desc: `Effect: Double the Damage characteristic of this units weapons for attacks that target Wizards, Priests and Manifestations.`,
-      when: [SHOOTING_PHASE, COMBAT_PHASE],
-    },
-  ]
+      {
+        name: `Weapeans of Banishment - Passive`,
+        desc: `Effect: Double the Damage characteristic of this units weapons for attacks that target Wizards, Priests and Manifestations.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+    ],
   },
   'Galen Ven Denst': {
     effects: [
-     // GrimResolveEffect,
+      // GrimResolveEffect,
       {
         name: `Guardian and Mentor - Passive`,
         desc: `Effect: While a friendly Doralia ven Denst is wholly within this units combat range, this unit has Strike-first and both this unit and that Doralia ven Denst have Ward (5+).`,
@@ -700,7 +700,7 @@ const Units = {
         desc: `Effect: Double the Damage characteristic of this units weapons for attacks that target Wizards, Priests and Manifestations.`,
         when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
-     // WeaponsOfBanishmentEffect,
+      // WeaponsOfBanishmentEffect,
     ],
   },
   'Tahlia Vedra, Lioness of the Parch': {
@@ -722,7 +722,7 @@ const Units = {
         name: `Lead From the Front - Once Per Battle`,
         desc: `Declare: If this unit is in combat, pick up to 3 other friendly Cities of Sigmar units wholly within 12" of this unit to be the targets. 
         Effect: For each target:
-        Add 1 to wound rolls for combat attacks made by that unit for the rest of the turn.  
+        Add 1 to wound rolls for combat attacks made by that unit for the rest of the turn. 
         That unit has Ward (5+) for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -739,7 +739,7 @@ const Units = {
        spells: [keyPicker(spells, ['Blazing Weapons'])],
      }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Runic Crucible`,
         desc: `Effect: Pick a friendly Cities of Sigmar Human unit wholly within 12" of this unit and roll a dice. On a 3+, add 1 to save rolls for that unit until the start of your next turn.`,
@@ -822,43 +822,43 @@ const Units = {
   },
   'Callis and Toll': {
     effects: [
-     {
-       name: `Right Tools for the Job - Passive`,
-       desc: `Effect: Double the Damage characteristic of this units weapons for attacks that target Wizards, Priests and Manifestations.`,
-       when: [SHOOTING_PHASE, COMBAT_PHASE],
-     },
-     {
-       name: `Wily to the Last - Passive`,
-       desc: `Effect: If this unit has 2 models and would be automatically destroyed, it is not automatically destroyed. Instead, 1 model in this unit is slain.`,
-       when: [DURING_GAME],
-     },
-     {
-       name: `Get it Done - Reaction: You declared a Fight ability for this unit`,
-       desc: `Effect: Pick a friendly Tolls Companions unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
-       when: [COMBAT_PHASE],
-     },
-   ],
+      {
+        name: `Right Tools for the Job - Passive`,
+        desc: `Effect: Double the Damage characteristic of this units weapons for attacks that target Wizards, Priests and Manifestations.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+      {
+        name: `Wily to the Last - Passive`,
+        desc: `Effect: If this unit has 2 models and would be automatically destroyed, it is not automatically destroyed. Instead, 1 model in this unit is slain.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Get it Done - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly Tolls Companions unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
   },
-'Toll\'s Companions': {
+  "Toll's Companions": {
     effects: [
-     {
-      name: `Hidden Agents`,
-      desc: `Declare: Pick this unit and a friendly Callis and Toll unit in the same regiment as this unit if those units have not been deployed. 
+      {
+        name: `Hidden Agents`,
+        desc: `Declare: Pick this unit and a friendly Callis and Toll unit in the same regiment as this unit if those units have not been deployed. 
       Effect: Set up those units in reserve in the shadows. Those units have now been deployed.`,
-      when: [DURING_SETUP],
-     },
-     {
-      name: `Saviours of Cinderfall - Passive`,
-      desc: `Effect: While a friendly Callis and Toll unit is wholly within this units combat range, both this unit and that Callis and Toll unit have Ward (5+).`,
-      when: [DURING_GAME],
-     },
-     {
-       name: `Emerge from the Shadows`,
-       desc: `Declare: Pick this unit if it is in the shadows. 
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Saviours of Cinderfall - Passive`,
+        desc: `Effect: While a friendly Callis and Toll unit is wholly within this units combat range, both this unit and that Callis and Toll unit have Ward (5+).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Emerge from the Shadows`,
+        desc: `Declare: Pick this unit if it is in the shadows. 
        Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units. Then, set up the Callis and Toll unit that was set up in the shadows with this unit wholly within 6" of it and more than 9" from all enemy units.`,
-       when: [MOVEMENT_PHASE],
-     },
-   ],
+        when: [MOVEMENT_PHASE],
+      },
+    ],
   },
   'Pontifex Zenestra, Matriarch of the Great Wheel': {
     /* mandatory: {
@@ -892,7 +892,7 @@ const Units = {
       {
         name: `Grimhold Exile: Honour to Grimnir! - Once Per Battle`,
         desc: `Declare: Pick up to 3 friendly Fyreslayers Infantry units wholly within 12" of this unit to be the targets. 
-        Effect: You can re-roll charge rolls for the targets for the rest of the turn`,
+        Effect: You can reroll charge rolls for the targets for the rest of the turn`,
         when: [HERO_PHASE],
       },
       {
@@ -957,17 +957,17 @@ const Units = {
         desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot move into combat during any part of that move.`,
         when: [SHOOTING_PHASE],
       },
-       {
+      {
         name: `Gossamid Champion`,
         desc: `Declare: Pick the Arch-Revenant in this Regiment of Renown to use this ability, the pick a visible enemy unit within 12" of them to be the target. 
         Effect: Until the start of your next turn, subtract X from charge rolls for the target, where X is the number of damage points allocated to the target this phase by shooting attacks made by the Gossamid Archers unit in the Regiment of Renown, to a maximum of 6.`,
         when: [SHOOTING_PHASE],
-       },
-       {
-         name: `Flight of the Zephyrspites - Once Per Turn`,
-         desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
-         when: [SHOOTING_PHASE],
-       },
+      },
+      {
+        name: `Flight of the Zephyrspites - Once Per Turn`,
+        desc: `Effect: If both units in this Regiment of Renown are within each others combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each others combat range, wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   'ROR: Gotrek Gurnisson': {
@@ -1089,13 +1089,13 @@ const Units = {
       {
         name: `Knight-Draconis: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
+        when: [COMBAT_PHASE],
       },
       {
         name: `Stormdrake Guard: Extremis Chamber - Passive`,
         desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE]
-      }, 
+        when: [COMBAT_PHASE],
+      },
       {
         name: `Hour of Retribution - Once Per Battle`,
         desc: `Effect: For the rest of the turn:
@@ -1217,7 +1217,7 @@ const Units = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -1320,8 +1320,8 @@ const Units = {
       },
       {
         name: `Taktikal Cowering - Passive`,
-        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown:  
-        That Loonboss has Ward (4+).  
+        desc: `Effect: While the Loonboss in this Regiment of Renown is within the combat range of the Dankhold Troggoth in this Regiment of Renown: 
+        That Loonboss has Ward (4+). 
         Each time you make a successful ward roll for that Loonboss, allocate 1 damage point to that Dankhold Troggoth after the damage sequence for that Loonboss has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
       },

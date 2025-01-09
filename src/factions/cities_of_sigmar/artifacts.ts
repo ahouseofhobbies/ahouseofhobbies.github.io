@@ -15,7 +15,7 @@ import {
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const Artifacts = {
-  "Sacred Tome": {
+  'Sacred Tome': {
     effects: [
       {
         name: `Sacred Tome`,
@@ -24,16 +24,16 @@ const Artifacts = {
       },
     ],
   },
-  'Glimmering': {
+  Glimmering: {
     effects: [
       {
         name: `Glimmering`,
-        desc: `Effect: Each phase, you can re-roll 1 hit roll, or 1 wound roll, or 1 save roll for this unit.`,
+        desc: `Effect: Each phase, you can reroll 1 hit roll, or 1 wound roll, or 1 save roll for this unit.`,
         when: [DURING_GAME],
       },
     ],
   },
-/*  Glimmering: {
+  /*  Glimmering: {
     effects: [
       {
         name: `Glimmering`,
@@ -52,7 +52,7 @@ const Artifacts = {
       },
     ],
   },
- /* "Shemtek's Grimoire": {
+  /* "Shemtek's Grimoire": {
     effects: [
       {
         name: `Shemtek's Grimoire`,

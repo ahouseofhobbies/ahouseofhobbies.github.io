@@ -145,7 +145,7 @@ const WarmasterEffect = {
 // TODO: Make sure we have Kragnos available
 
 const Units = {
-  'Kragnos': {
+  Kragnos: {
     effects: [
       {
         name: `Battle Damaged - Passive`,
@@ -164,8 +164,8 @@ const Units = {
       },
       {
         name: `Rampaging Destruction - Once Per Turn`,
-        desc: `Effect: If this unit charged this phase, pick 1 of the following effects:  
-        Roll a dice for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.  
+        desc: `Effect: If this unit charged this phase, pick 1 of the following effects: 
+        Roll a dice for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. 
         Pick an enemy Monster in combat with this unit and roll 2D6. On a 7, this ability has no effect. Otherwise, inflict an amount of mortal damage on that unit equal to the results on the dice used for the 2D6 roll multiplied together. For example, a 2D6 roll of 2 and 6 would inflict 12 mortal damage (2x6).`,
         when: [CHARGE_PHASE],
       },
@@ -177,12 +177,12 @@ const Units = {
     ],
   },
   'Skragrott, The Loonking': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Fangz of da Bad Moon'])],
     }, */
     effects: [
-     // GenericEffects.WizardTwoSpellsEffect,
-     // WarmasterEffect,
+      // GenericEffects.WizardTwoSpellsEffect,
+      // WarmasterEffect,
       {
         name: `Fangz of Da Bad Moon: Casting value of 7`,
         desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target, then make a casting roll of 2D6. 
@@ -202,7 +202,7 @@ const Units = {
     ],
   },
   Loonboss: {
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(CommandAbilities, ["I'm Da Boss, Now Stab 'Em Good!"])],
     }, */
     effects: [
@@ -219,7 +219,7 @@ const Units = {
         Stab Em Good!: Add 1 to wound rolls for the targets attacks until the start of your next turn.`,
         when: [HERO_PHASE],
       },
-    //  DeadTricksyEffect
+      //  DeadTricksyEffect
     ],
   },
   'Loonboss on Mangler Squigs': {
@@ -246,8 +246,8 @@ const Units = {
         Effect: Roll a dice for each model in the target unit, to a maximum of 10. For each 4+, inflict 1 mortal damage on the target.`,
         when: [CHARGE_PHASE],
       },
-    //  WatchOutEffect,
-    //  KersplatEffect,
+      //  WatchOutEffect,
+      //  KersplatEffect,
     ],
   },
   'Loonboss on Giant Cave Squig': {
@@ -259,7 +259,7 @@ const Units = {
       },
     ],
   },
-/*  'Loonboss with Giant Cave Squig': {
+  /*  'Loonboss with Giant Cave Squig': {
     effects: [
      // DeadTricksyEffect,
       {
@@ -274,7 +274,7 @@ const Units = {
       },
     ],
   }, */
- /* 'Madcap Shaman': {
+  /* 'Madcap Shaman': {
    /* mandatory: {
       spells: [keyPicker(Spells, ['Night Shroud'])],
     }, 
@@ -288,11 +288,11 @@ const Units = {
     ],
   }, */
   'Fungoid Cave-Shaman': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Spore Maws'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Deffcap Mushroom - Once Per Battle`,
         desc: `Effect: Add 1 to this units power level for the rest of the turn.`,
@@ -300,7 +300,7 @@ const Units = {
       },
     ],
   },
- /* Zarbag: {
+  /* Zarbag: {
     mandatory: {
       spells: [keyPicker(Spells, ['Face of Da Bad Moon', 'Jealous Hex'])],
     },
@@ -335,7 +335,7 @@ const Units = {
   }, */
   'Moonclan Stabbas': {
     effects: [
-     // ...GrotBaseEffects,
+      // ...GrotBaseEffects,
       {
         name: `Netters`,
         desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
@@ -346,13 +346,13 @@ const Units = {
   },
   'Moonclan Shootas': {
     effects: [
-     // ...GrotBaseEffects,
-     {
-      name: `Netters`,
-      desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
+      // ...GrotBaseEffects,
+      {
+        name: `Netters`,
+        desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
       Effect: Roll a dice. On a 3+, subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
-      when: [COMBAT_PHASE],
-    },
+        when: [COMBAT_PHASE],
+      },
     ],
   },
   'Loonsmasha Fanatics': {
@@ -374,7 +374,7 @@ const Units = {
         desc: `Effect: This unit has Strike-first.`,
         when: [COMBAT_PHASE],
       },
-    //  WhirlingDeathEffect,
+      //  WhirlingDeathEffect,
     ],
   },
   'Sporesplatta Fanatics': {
@@ -433,7 +433,7 @@ const Units = {
         desc: `Effect: Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. On a 5+, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE],
       },
-     // SquigsGoneWildEffect,
+      // SquigsGoneWildEffect,
       {
         name: `Herding Squigs`,
         desc: `Effect: Roll a dice for each Squig Herder in this unit. For each 2+, you can return D3 slain Cave Squigs to this unit. For each 1, 1 Squig Herder in this unit is slain.`,
@@ -452,16 +452,16 @@ const Units = {
         name: `Watch Out! - Passive`,
         desc: `Effect: If this unit is destroyed, before removing it from play, roll a dice for each enemy unit within this units combat range. On a 4+, infict D3 mortal damage on that unit.`,
         when: [COMBAT_PHASE],
-      }, 
+      },
       {
         name: `Giant Boing! - Once Per Turn`,
         desc: `Effect: If this unit charged this turn, roll a dice. On a 3+, this unit can move 3D6" but must end that move in combat.`,
         when: [CHARGE_PHASE],
       },
-    //  KersplatEffect, WatchOutEffect
+      //  KersplatEffect, WatchOutEffect
     ],
   },
- /* 'Colossal Squig': {
+  /* 'Colossal Squig': {
     effects: [
       {
         name: `Crazed Charge`,
@@ -495,7 +495,7 @@ const Units = {
     ],
   }, */
   'Webspinner Shaman on Arachnarok Spider': {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Venom of the Spider God'])],
     }, */
     effects: [
@@ -515,8 +515,8 @@ const Units = {
         Effect: Roll a dice. On a 3+, the target has Strike-last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-    //  ArachnarokSpiderVenomEffect,
-    //  WallCrawlerEffect,
+      //  ArachnarokSpiderVenomEffect,
+      //  WallCrawlerEffect,
       {
         name: `Catchweb Spidershrine - Passive`,
         desc: `Effect: Add 1 to casting rolls for friendly Spiderfang Wizards while they are wholly within 12" of this unit.`,
@@ -524,7 +524,7 @@ const Units = {
       },
     ],
   },
- /* 'Scuttleboss on Gigantic Spider': {
+  /* 'Scuttleboss on Gigantic Spider': {
     effects: [
       {
         name: `Spider Venom`,
@@ -540,11 +540,11 @@ const Units = {
     ],
   }, */
   'Webspinner Shaman': {
-  /*  mandatory: {
+    /*  mandatory: {
       spells: [keyPicker(Spells, ['Speed of the Spider God'])],
     }, */
     effects: [
-     // GenericEffects.WizardOneSpellEffect,
+      // GenericEffects.WizardOneSpellEffect,
       {
         name: `Speed of the Spider God: Casting value of 6`,
         desc: `Declare: Pick a visible friendly Spiderfang unit wholly within 12" of this unit to be the target, then make a casting roll of 2D6. 
@@ -566,7 +566,7 @@ const Units = {
         desc: `Effect: This unit can pass across terrain features as if it had Fly.`,
         when: [MOVEMENT_PHASE],
       },
-    //  WallCrawlerEffect,
+      //  WallCrawlerEffect,
     ],
   },
   'Arachnarok Spider with Flinger': {
@@ -592,13 +592,13 @@ const Units = {
         desc: `Effect: This unit can pass across terrain features as if it had Fly.`,
         when: [MOVEMENT_PHASE],
       },
-    //  WallCrawlerEffect,
+      //  WallCrawlerEffect,
     ],
   },
   'Arachnarok Spider with Spiderfang Warparty': {
     effects: [
-     // ArachnarokSpiderVenomEffect,
-     // WallCrawlerEffect,
+      // ArachnarokSpiderVenomEffect,
+      // WallCrawlerEffect,
       {
         name: `Voracious Predator - Once Per Turn`,
         desc: `Declare: Pick up to 3 enemy units within 1" of this unit to be the targets. 
@@ -635,7 +635,7 @@ const Units = {
         Effect: Set up this unit in reserve skittering through tunnels in reality. It has now been deployed.`,
         when: [DURING_SETUP],
       },
-     // WallCrawlerEffect,
+      // WallCrawlerEffect,
       {
         name: `Ambush From Beyond`,
         desc: `Declare: Pick this unit if it is skittering through tunnels in reality. 
@@ -650,7 +650,7 @@ const Units = {
       },
     ],
   },
- /* 'Troggoth Hag': {
+  /* 'Troggoth Hag': {
     mandatory: {
       spells: [keyPicker(Spells, ['Hag Curse'])],
     }, 
@@ -675,14 +675,14 @@ const Units = {
   }, */
   'Dankhold Troggboss': {
     effects: [
-     // CrushingGripEffect,
+      // CrushingGripEffect,
       {
         name: `Greater Regeneration`,
         desc: `Effect: Heal (D6) this unit.`,
         when: [START_OF_TURN],
       },
-    //  MagicalResistanceEffect,
-     // SquigglyBeastFollowersEffect,
+      //  MagicalResistanceEffect,
+      // SquigglyBeastFollowersEffect,
       {
         name: `Shepherd of Destruction - Once Per Turn`,
         desc: `Effect: If this unit is in combat, roll a dice. On a 3+, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly Troggoth units while they are within this units combat range.`,
@@ -695,7 +695,7 @@ const Units = {
       },
     ],
   },
- /* Mollog: {
+  /* Mollog: {
     effects: [
       {
         name: `Companions`,
@@ -722,7 +722,7 @@ const Units = {
   }, */
   'Fellwater Troggoths': {
     effects: [
-    //  RegenerationEffect,
+      //  RegenerationEffect,
       {
         name: `Regeneration`,
         desc: `Effect: Heal (D3) this unit.`,
@@ -730,14 +730,14 @@ const Units = {
       },
       {
         name: `Noxious Vomit - Passive`,
-        desc: `Effect: If any damage points are allocated to an enemy unit by attacks made with this units Noxious Vomit, that unit is drenched in vomit until the start of your next turn. While a unit is drenched in vomit:  
-        Subtract 1 from save rolls for that unit.  
+        desc: `Effect: If any damage points are allocated to an enemy unit by attacks made with this units Noxious Vomit, that unit is drenched in vomit until the start of your next turn. While a unit is drenched in vomit: 
+        Subtract 1 from save rolls for that unit. 
         Ignore positive modifiers to save rolls for that unit.`,
         when: [SHOOTING_PHASE],
       },
     ],
   },
- /* 'Sourbreath Troggoths': {
+  /* 'Sourbreath Troggoths': {
     effects: [
       {
         name: `Regeneration`,
@@ -753,12 +753,12 @@ const Units = {
   }, */
   'Rockgut Troggoths': {
     effects: [
-   //   RegenerationEffect,
-   {
-    name: `Regeneration`,
-    desc: `Effect: Heal (D3) this unit.`,
-    when: [START_OF_TURN],
-  },
+      //   RegenerationEffect,
+      {
+        name: `Regeneration`,
+        desc: `Effect: Heal (D3) this unit.`,
+        when: [START_OF_TURN],
+      },
     ],
   },
   'Dankhold Troggoth': {
@@ -778,10 +778,10 @@ const Units = {
         desc: `Effect: If this unit is in combat, it can move 6" but must end that move in combat. Then, roll a D3 for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.`,
         when: [COMBAT_PHASE],
       },
-    //  CrushingGripEffect, MagicalResistanceEffect, RegenerationEffect, SquigglyBeastFollowersEffect
+      //  CrushingGripEffect, MagicalResistanceEffect, RegenerationEffect, SquigglyBeastFollowersEffect
     ],
   },
-/*  'Aleguzzler Gargant': {
+  /*  'Aleguzzler Gargant': {
     effects: [
       {
         name: `Drunken Stagger`,
@@ -816,7 +816,7 @@ const Units = {
     ],
   },
   Gobbapalooza: {
-   /* mandatory: {
+    /* mandatory: {
       spells: [keyPicker(Spells, ['Mesmerise', 'Fungoid Cloud'])],
     }, */
     effects: [
@@ -825,7 +825,7 @@ const Units = {
         desc: `Effect: In the first battle round, this unit has Ward (4+). In the second battle round, this unit has Ward (5+). In the third and subsequent battle rounds, this unit has Ward (6+).`,
         when: [DURING_GAME],
       },
-     // HallucinogenicFungusBrewsEffect,
+      // HallucinogenicFungusBrewsEffect,
       {
         name: `Gobbapalooza Know-Wotz`,
         desc: `Effect: Roll a dice. On a 3+, pick 1 of the following effects: 
@@ -836,7 +836,7 @@ const Units = {
       },
     ],
   },
- /* 'Grinkrak the Great': {
+  /* 'Grinkrak the Great': {
     effects: [
       DeadTricksyEffect,
       {
@@ -880,7 +880,7 @@ const Units = {
 
   'Trugg the Troggoth King': {
     effects: [
-    //  WarmasterEffect,
+      //  WarmasterEffect,
       {
         name: `Malfunctioning Leystone`,
         desc: `Effect: Roll 3 dice. You must pick 1 of those dice and apply the effect that corresponds to its value. Effects 2-6 persist until the start of your next turn. 
@@ -933,7 +933,7 @@ const Units = {
       },
     ],
   },
-/*  'Grotmas Gitz': {
+  /*  'Grotmas Gitz': {
     effects: [
       {
         name: `Bludgeoning Cheer`,
@@ -1140,8 +1140,8 @@ const Units = {
       {
         name: `Shake the Earth - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  
-        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted.  
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the amount of mortal damage inflicted. 
         Subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -1223,7 +1223,7 @@ const Units = {
       {
         name: `Skywardens: Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+:  Inflict an amount of mortal damage on the target equal to the roll.  
+        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
