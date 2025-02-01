@@ -1223,7 +1223,7 @@ const Units = {
     effects: [
       {
         name: `Crazed Flock - Passive`,
-        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Attacks characteristic of its melee weapons.`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to the Attacks characteristic of its melee weapons. This ability also affects Companion weapons.`,
         when: [COMBAT_PHASE],
       },
       {

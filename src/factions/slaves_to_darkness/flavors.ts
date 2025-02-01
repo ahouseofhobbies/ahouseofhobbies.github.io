@@ -30,12 +30,12 @@ const Flavors = {
       {
         name: `Ironclad Onslaught - Once Per Turn`,
         desc: `Declare: Pick an objective that is contested by any friendly units to be the target. 
-        Effect: Place a defiled token next to the target objective. Then, roll a D3 for each enemy unit contesting an objective that has a defiled token. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
+        Effect: Place a defiled token next to the target objective. Then, roll a D3 for each enemy unit contesting an objective that has a friendly defiled token. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
         when: [END_OF_TURN],
       },
     ],
   },
-  'Despoilers': {
+  Despoilers: {
     effects: [
       {
         name: `Feral Ruin - Once Per Turn - Reaction: You declared a Fight ability for a friendly Daemon Prince unit`,

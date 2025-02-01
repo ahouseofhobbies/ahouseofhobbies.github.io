@@ -13,7 +13,7 @@ import {
 
 const CommandTraits = {
   // Shared Command Traits
-  'Deathmonger': {
+  Deathmonger: {
     effects: [
       {
         name: `Deathmonger - Once Per Battle`,
@@ -25,7 +25,7 @@ const CommandTraits = {
   'Favoured of the Pantheon': {
     effects: [
       {
-        name: `Favoured of the Pantheon`,
+        name: `Favoured of the Pantheon - Passive`,
         desc: `Effect: If this unit is picked as the target of the 'Eye of the Gods' abiliity, it gains 3 Dark Apotheosis points.`,
         when: [DURING_SETUP],
       },
@@ -41,7 +41,7 @@ const CommandTraits = {
       },
     ],
   },
- /* 'Idolater Lord': {
+  /* 'Idolater Lord': {
     effects: [
       {
         name: `Idolater Lord`,

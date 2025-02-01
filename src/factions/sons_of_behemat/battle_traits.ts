@@ -13,7 +13,7 @@ const BattleTraits = {
         when: [DURING_GAME],
       },
       {
-        name: `Gargant Charge`,
+        name: `Gargant Charge - Once Per Turn`,
         desc: `Declare: Pick any number of enemy units within 1" of a friendly Mega-Gargant or Gargant unit that charged this turn to be the targets. 
         Effect: Inflict D3 mortal damage on each target.`,
         when: [CHARGE_PHASE],
@@ -39,7 +39,7 @@ const BattleTraits = {
     ],
   },
 
- /* "King Brodd's Stomp": {
+  /* "King Brodd's Stomp": {
     effects: [
       {
         name: `These Realms Is Ours`,

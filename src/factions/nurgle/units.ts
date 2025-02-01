@@ -80,8 +80,8 @@ const Units = {
         name: `Deluge of Nurgle: Casting value of 8`,
         desc: `Declare: Pick each Diseased enemy unit on the battlefield and each friendly Maggotkin of Nurgle unit in combat with any Diseased enemy units to be the targets. Then, make a casting roll of 2D6. 
         Effect: Roll a D3 for each target. On a 2+: 
-        Inflict an amount of mortal damage on each enemy target equal to the roll. 
-        Heal (X) each friendly target, where X is an amount equal to the roll.`,
+        If the target is an enemy unit, inflict an amount of mortal damage on the target equal to the roll.
+        If the target is a friendly unit, Heal (X) the target, where X is an amount equal to the roll.`,
         when: [HERO_PHASE],
       },
       {

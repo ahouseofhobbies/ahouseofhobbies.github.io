@@ -252,7 +252,7 @@ const Units = {
       },
     ],
   },
-  'Fjul-Grimnir': {
+  /*'Fjul-Grimnir': {
     effects: [
       {
         name: `Retinue`,

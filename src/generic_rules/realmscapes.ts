@@ -280,7 +280,7 @@ const Realmscapes: TEntry[] = [
       },
       {
         name: `Honour Guard - Prized Beast`,
-        desc: `Declare: Pick a friendly non-Unique Monster in, but not leading, a regiment to be that regiments honour guard. You can pick a unit in reserve. 
+        desc: `Declare: Pick a friendly non-Unique Monster that is not reinforced and that is in, but not leading, a regiment to be that regiments honour guard. You can pick a unit in reserve. 
         Effect: That unit can ignore the effects of the Battle Damaged ability. In addition, add 1 to hit rolls for combat attacks made by the honour guard. This ability affects Companion weapons.`,
         when: [DURING_SETUP],
       },

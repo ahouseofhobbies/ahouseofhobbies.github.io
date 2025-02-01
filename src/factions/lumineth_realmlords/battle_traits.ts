@@ -52,7 +52,7 @@ const BattleTraits = {
       {
         name: `Shrine Luminor (Faction Terrain) - Shrine Guardian - Passive`,
         desc: `Effect: While this terrain feature has a Shrine Guardian: 
-        This terrain feature has a Move characteristic of 6" and can use Move abilities as if it were a unit. 
+        This terrain feature has a Move characteristic of 6" and can use non-command non-Charge Move abilities as if it were a unit. 
         The Shrine Guardian cannot use Move abilities and remains on this terrain feature each time it moves. 
         Instead of measuring range or visibility to the Shrine Guardian, measure to this terrain feature instead. 
         All attacks that would target the Shrine Guardian target this terrain feature instead. 

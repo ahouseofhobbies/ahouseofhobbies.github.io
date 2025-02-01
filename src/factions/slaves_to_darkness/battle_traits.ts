@@ -47,7 +47,7 @@ const BattleTraits = {
         Effect: Pick one of the following:
         Aura of Chaos: Heal (X) the target, where X is the number of damage points allocated to the target. 
         In addition, the target has Ward (5+) for the rest of the battle.
-        Daemonhood: Set up a Daemon Prince within 1" of the target. Then, Remove the target from the battlefield. If the target is your general the Daemon Prince becomes your general instead. If the target has any enhancements, the Daemon Prince has those enhancements instead. If the target has a Pledge to Chaos keyword, the Daemon Prince has the same keyword. Otherwise, pick 1 Pledge to Chaos keyword for the Daemon Prince to have for the rest of the battle.`,
+        Daemonhood: Set up a Daemon Prince within 1" of the target. Then, Remove the target from the battlefield. If the target is your general, the Daemon Prince becomes your general instead and is added to your general's regiment. If the target has any enhancements, the Daemon Prince has those enhancements instead. If the target has a Pledge to Chaos keyword, the Daemon Prince has the same keyword. Otherwise, pick 1 Pledge to Chaos keyword for the Daemon Prince to have for the rest of the battle.`,
         when: [HERO_PHASE],
       },
       {
@@ -114,14 +114,14 @@ const BattleTraits = {
       {
         name: `The Banner of Screaming Flesh (Ensorcelled Banners) - Passive (CAN ONLY HAVE ONE)`,
         desc: `Effect: This unit has the Pledged to Slaanesh keyword.
-        In addition, If this unit charged this turn, for the rest of the turn, add 1 to the Attacks characteristic of this unit's melee weapons.`,
+        In addition, while thi sunit includes any standard bearers, if this unit charged this turn, add 1 to the Attacks characteristic of this unit's melee weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],
   },
 
   // ENSORCELLED BANNERS
- /* 'Ensorcelled Banners: Icons of Chaos': {
+  /* 'Ensorcelled Banners: Icons of Chaos': {
     effects: [
       {
         name: `The Blasphemous Icon`,
