@@ -134,7 +134,7 @@ const KruleboyzUnits = {
       {
         name: `Foul Elixers - Once Per Turn`,
         desc: `Declare: Pick a friendly Kruleboyz Infantry unit wholly within 12" of this unit to be the target. 
-        Effect: Roll a dice. On a 3+, add 1 to save rolls for the target for the rest of the turn. On a 1-2, allocate D3 damage points to the target (ward rolls cannot be made for those damage points).`,
+        Effect: Roll a dice. On a 2+, add 1 to save rolls for the target for the rest of the turn. On a 1, allocate D3 damage points to the target (ward rolls cannot be made for those damage points).`,
         when: [HERO_PHASE],
       },
     ],
@@ -218,7 +218,7 @@ const KruleboyzUnits = {
     effects: [
       {
         name: `Breaka-Harness`,
-        desc: `Effect: Allocate D3 damage points to this unit (ward rolls cannot be made for those damage points). For each damage point allocated to this unit by this ability, add 2 to the Attacks characteristic of this units Mirebrutes Clubs for the rest of the turn.`,
+        desc: `Effect: Inflict D3 mortal damage on this unit. For each damage point allocated to this unit by this ability, add 2 to the Attacks characteristic of this units Mirebrutes Clubs for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -285,16 +285,16 @@ const KruleboyzUnits = {
       },
       {
         name: `Sludgeraker Venom`,
-        desc: `Declare: Pick a friendly non-Hero Kruleboyz unit wholly within 12" of this unit to be the target. 
-        Effect: Roll a dice. On a 2+, for the rest of the turn, add 1 to the Damage characteristic of the targets weapons that have Crit (Mortal). On a 1, inflict D3 mortal damage on the target.`,
+        desc: `Declare: Pick a friendly Kruleboyz unit wholly within 12" of this unit to be the target. 
+        Effect: That unit has the Sludgeraker Venom keyword for ther rest of the turn.`,
         when: [HERO_PHASE],
       },
       {
         name: `Festering Wounds - Once Per Turn`,
-        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by this units combat attacks to be the target. 
-        Effect: Roll a D3. On a 2+: 
+        desc: `Declare: Pick up to 3 enemy units that had any damage points allocated to them by combat attacks made by this unit or a friendly unit with the Sludgeraker Venom keyword to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+: 
         Inflict an amount of mortal damage on the target equal to the roll. 
-        Subtract 1 from wound rolls for attacks made by the target until the start of your next turn.`,
+        Subtract 1 from wound rolls for attacks made by the target until the end of the next turn.`,
         when: [END_OF_TURN],
       },
     ],
@@ -396,6 +396,21 @@ const KruleboyzUnits = {
         name: `Bait and Trap`,
         desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
         Effect: Roll a dice. Add 1 to the roll if the target is damaged. On a 3+, the target has Strike-last for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Hobgrot Slittaboss': {
+    effects: [
+      {
+        name: `Kompany Taktikz - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly Hobgrot Slittaz unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to wound rolls for the target's attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Toxic Stash - Once per Battle`,
+        desc: `Declare: Pick an enemy Infantry Hero in combat with this unit to be the target.
+        Effect: Roll 2D6. If the roll exceeds the target's Health characteristic, it is automatically destroyed.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -850,6 +865,45 @@ const KruleboyzUnits = {
         desc: `Declare: Pick the Ogroid Thaumaturge in this Regiment of Renown to cast this spell, pick a visible enemy unit within 12" of them to be the target, then make a casting roll of 2D6. 
         Effect: The target has Strike-last until the start of your next turn. In addition, while the target has the Burning keyword, subtract 1 from hit rolls for the target until the start of your next turn.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'ROR: Da Hurtlin Hogz': {
+    effects: [
+      {
+        name: `Tuskboss on Maw-Grunta: Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Maw-gruntas Tusks is 3.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Tuskboss on Maw-Grunta: Head of the Stampede - Once Per Turn`,
+        desc: `Declare: If this unit charged this phase, pick up to 3 friendly Maw-grunta units wholly within 12" of this unit that charged this turn to be the targets. 
+        Effect: Add 1 momentum point to each target.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Tuskboss on Maw-Grunta, Maw-Grunta Gougers: Unstoppable Momentum - Passive`,
+        desc: `Effect: Each time this unit has charged as a result of using a Charge ability, it gains 1 momentum point. Each time it uses a Run ability, it gains 2 momentum points. It can have a maximum of 3 momentum points at once. 
+        Add the number of momentum points this unit has to the Damage characteristic of its Maw-gruntas Tusks. At the end of each battle round, subtract 1 from its momentum points, to a minimum of 0`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Maw-Grunta Gougers: Flattened Into the Mud - Once Per Turn`,
+        desc: `Declare: If this unit charged this turn, pick an enemy unit within 1" of it to be the target. 
+        Effect: Roll a dice and add the number of momentum points this unit has to the roll. On a 5+, the target has Strike-last for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Grunta Waaagh! - Once Per Battle`,
+        desc: `Declare: You can use this ability if this Regiment of Renown's Tuskboss on Maw-Grunta is on the battlefield. 
+        Effect: For the rest of the phase, each time a friendly unit in this Regiment of Renown finsihes a charge move, roll a D3 for each enemy unit within 1" of that unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. If that enemy unit is Infantry, add 1 to the mortal damage inflicted (if any).`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Pullin Ahead - Once Per Turn`,
+        desc: `Declare: Pick a friendly unit in this Regiment of Renown that charged this turn and has not used any Rampage abilities this turn to be the target. 
+        Effect: The target can move D6". It must end that move in combat. Then, add 1 to the target's momentum points. After this abilty has been resolved, the target cannot use any other Rampage abilities for the rest of the turn.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

@@ -955,6 +955,60 @@ const GenericManifestations: TEntry[] = [
       },
     ],
   },
+  {
+    name: `Ironjawz/Kruleboyz`,
+    effects: [
+      {
+        name: `Summon Foot of Gork: Casting value of 7`,
+        desc: `Declare: If there is not a friendly Foot of Gork on the battlefield, pick a friendly Ironjawz/Kruleboyz Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up a Foot of Gork wholly within 12" of the caster, visible to them and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Foot of Gork - Multiple Parts - Passive`,
+        desc: `Effect: When a number of damage points equal to this Manifestations Health characteristic are allocated to it, this Manifestation is destroyed and all its parts are removed from play.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Foot of Gork - Wandering Destruction - Once Per Turn`,
+        desc: `Declare: Pick a part of this Manifestation to be the target.
+        Effect: Remove the target from the battlefield and set it up again on the battlefield wholly within 9" of the other part of this Manifestation.
+        Then, roll a D3 for each enemy unit within 3" of the target. On a 2+:
+        Inflict an amount of mortal damage on that unit equal to the roll.
+        That unit has the Stomped keyword until the start of your next turn.
+        Subtract 1 from the number of dice rolled when making charge rolls for Stomped units, to a minimum of 1.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Summon Morkspit Marsh: Casting value of 5`,
+        desc: `Declare: If there is not a friendly Morks Morkspit Marsh on the battlefield, pick a friendly Ironjawz/Kruleboyz Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up a Morkspit Marsh wholly within 18" of the caster and visible to them.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Morkspit Marsh - Tricksy Footing - Passive`,
+        desc: `Effect: Subtract 3 from the control scores of enemy units while they are within 6" of this Manifestation.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Morkspit Marsh - Grasping Gunge - Passive`,
+        desc: `Effect: Enemy units cannot use Run abilities while they are within 6" of this Manifestation.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Summon Gork-Roara: Casting value of 5`,
+        desc: `Declare: If there is not a friendly Gork-Roara on the battlefield, pick a friendly Ironjawz/Kruleboyz Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up a Gork-Roara wholly within 12" of the caster, visible to them and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Gork-Roara - Bellowing Waaagh!-Cries`,
+        desc: `Declare: Pick a friendly Ironjawz or Kruleboyz Wizard or Priest within 3" of this Manifestation to be the target.
+        Effect: Pick either 1 or 2 to add to casting rolls or chanting rolls for the target until the start of your next turn. Then, roll a number of dice equal to the number picked. For each 1-2, allocate 1 damage point to the target (ward rolls cannot be made for those damage points). For each 5+, until the start of your next turn, add 1 to charge rolls for friendly Kruleboyz or Ironjawz units while they are wholly within 12" of this Manifestation.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
 ]
 
 export default GenericManifestations

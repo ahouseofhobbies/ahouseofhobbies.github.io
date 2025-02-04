@@ -180,13 +180,7 @@ const IronjawzUnits = {
       },
       {
         name: `Destructive Bulk - Once Per Turn`,
-        desc: `Declare: If this unit charged this phase, pick a visible enemy unit within 1" of it to be the target. 
-        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the target is Infantry, double the mortal damage inflicted.`,
-        when: [CHARGE_PHASE],
-      },
-      {
-        name: `Smash Through - Passive`,
-        desc: `Effect: When this unit makes a pile-in move, if it charged in the same turn, it can move 2D6" instead of 3".`,
+        desc: `Effect: If this unit charged this turn, roll a D3. On a 2+, this unit can move 2D6". It can pass through the combat ranges of enemy units and can end that move in combat. Then, pick an enemy unit that this unit passed across during the move. inflict an amount of mortal damage on the target equal to the D3 roll. If that enemy unit is Infantry, double the mortal damage inflicted.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -195,14 +189,8 @@ const IronjawzUnits = {
     effects: [
       //  StrengthFromVictoryEffect,
       {
-        name: `Get Stuck in Ladz!`,
-        desc: `Declare: Pick a friendly Brute unit wholly within 12" of this unit to be the target. 
-        Effect: Roll a dice. On a 2+, add 1 to the Attacks characteristic of the targets melee weapons until the start of your next turn.`,
-        when: [HERO_PHASE],
-      },
-      {
         name: `Lead Da Brutes - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Roll a dice. On a 3+, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly Brute units while they are within this units combat range.`,
+        desc: `Effect: Pick a friendly Brute unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit been resovled. If it is picked to do so, add 1 to the attacks characteristic of the targets melee weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -252,7 +240,7 @@ const IronjawzUnits = {
     effects: [
       {
         name: `Shield Bash`,
-        desc: `Declare: Pick an enemy unit in combat with this unit and that charged this turn to be the target. 
+        desc: `Declare: Pick an enemy unit within 1" of this unit to be the target. 
         Effect: Make a shield bash roll of D6 for each model in this unit. For each 6+, inflict 1 mortal damage on the target.`,
         when: [COMBAT_PHASE],
       },
@@ -833,6 +821,52 @@ const IronjawzUnits = {
         name: `Bellow of Gorkamorka: Casting value of 7`,
         desc: `Declare: Pick the Ogroid Thaumaturge in this Regiment of Renown to cast this spell, pick a visible enemy unit within 12" of them to be the target, then make a casting roll of 2D6. 
         Effect: The target has Strike-last until the start of your next turn. In addition, while the target has the Burning keyword, subtract 1 from hit rolls for the target until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'ROR: Da Kountin Krew': {
+    effects: [
+      {
+        name: `Swampboss Skumdrekk: Bet-Master`,
+        desc: `Declare: Pick an enemy unit on the battlefield to be the bet. 
+        Effect: Add 1 to wound rolls for attacks made by this unit and friendly Hobgrot Slittaz units that target the bet.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Swampboss Skumdrekk: Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Sloppklaws Talons is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Swampboss Skumdrekk: Kountin' Krew`,
+        desc: `Declare: Pick a friendly Hobgrot Slittaz unit within this units combat range to be the target. 
+        Effect: For the rest of the battle, the targets Slitta-knives have Crit (Mortal) while they are wholly within 12" of this unit.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Swampboss Skumdrekk: Aggravate Wounds - Once Per Turn`,
+        desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
+        Effect: Roll a number of dice equal to the number of damage points the target has. For each 5+, inflict 1 mortal damage on the target.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Hobgrot Slittaz: Scrap-Bang`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. On a 3+: 
+        Inflict 1 mortal damage on the target. 
+        This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Bombz Away, Ladz! - Passive`,
+        desc: `Effect: Friendly units in this Regiment of Renown can use Run abilities and still use Shoot abiliites later in the turn while they are wholly within 12" of this Regiment of Renown's Swampboss Skumdrekk.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Snatch 'Em Up! - Once Per Phase (Enemy Hero Phase)`,
+        desc: `Declare: Pick an enemy model in combat with this Regiment of Renown's  Swampboss Skumdrekk to be the target. 
+        Effect: Roll a dice. If the roll is at least double the target's Health characteristic, it is slain.`,
         when: [HERO_PHASE],
       },
     ],

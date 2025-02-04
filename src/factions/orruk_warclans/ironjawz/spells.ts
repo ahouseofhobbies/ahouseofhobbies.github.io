@@ -19,13 +19,13 @@ const IronjawzSpells = {
       },
       {
         name: `Da Great Big Green Hand of Gork: Casting value of 7`,
-        desc: `Declare: Pick a friendly Ironjawz Wizard to cast this spell, pick a visible friendly unit wholly within 9" of them and not in combat to be the target, then make a casting roll of 2D6. 
+        desc: `Declare: Pick a friendly Ironjawz Wizard to cast this spell, pick a visible friendly unit wholly within 12" of them and not in combat to be the target, then make a casting roll of 2D6. 
         Effect: Remove the target from the battlefield and set it up again wholly within 24" of the caster and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
     ],
   },
- /* 'Brain-bursta': {
+  /* 'Brain-bursta': {
     effects: [
       {
         name: `Brain-bursta`,

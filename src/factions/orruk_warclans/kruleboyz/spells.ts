@@ -14,7 +14,7 @@ const KruleboyzSpells = {
       },
       {
         name: `Choking Mist: Casting value of 7`,
-        desc: `Declare: Pick a friendly Kruleboyz Wizard to cast this spell, pick a visible enemy unit wholly within 18" of them to be the target, then make a casting roll of 2D6. 
+        desc: `Declare: Pick a friendly Kruleboyz Wizard to cast this spell, pick a visible enemy unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
         Effect: Subtract 1 from the Attacks characteristic of the targets weapons until the start of your next turn.`,
         when: [HERO_PHASE],
       },
@@ -26,7 +26,7 @@ const KruleboyzSpells = {
       },
     ],
   },
- /* 'Da Black Pit': {
+  /* 'Da Black Pit': {
     effects: [
       {
         name: `Da Black Pit`,

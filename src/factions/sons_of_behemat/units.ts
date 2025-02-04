@@ -612,6 +612,91 @@ const Units = {
       },
     ],
   },
+  'ROR: Da Hurtlin Hogz': {
+    effects: [
+      {
+        name: `Tuskboss on Maw-Grunta: Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Maw-gruntas Tusks is 3.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Tuskboss on Maw-Grunta: Head of the Stampede - Once Per Turn`,
+        desc: `Declare: If this unit charged this phase, pick up to 3 friendly Maw-grunta units wholly within 12" of this unit that charged this turn to be the targets. 
+        Effect: Add 1 momentum point to each target.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Tuskboss on Maw-Grunta, Maw-Grunta Gougers: Unstoppable Momentum - Passive`,
+        desc: `Effect: Each time this unit has charged as a result of using a Charge ability, it gains 1 momentum point. Each time it uses a Run ability, it gains 2 momentum points. It can have a maximum of 3 momentum points at once. 
+        Add the number of momentum points this unit has to the Damage characteristic of its Maw-gruntas Tusks. At the end of each battle round, subtract 1 from its momentum points, to a minimum of 0`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Maw-Grunta Gougers: Flattened Into the Mud - Once Per Turn`,
+        desc: `Declare: If this unit charged this turn, pick an enemy unit within 1" of it to be the target. 
+        Effect: Roll a dice and add the number of momentum points this unit has to the roll. On a 5+, the target has Strike-last for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Grunta Waaagh! - Once Per Battle`,
+        desc: `Declare: You can use this ability if this Regiment of Renown's Tuskboss on Maw-Grunta is on the battlefield. 
+        Effect: For the rest of the phase, each time a friendly unit in this Regiment of Renown finsihes a charge move, roll a D3 for each enemy unit within 1" of that unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. If that enemy unit is Infantry, add 1 to the mortal damage inflicted (if any).`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Pullin Ahead - Once Per Turn`,
+        desc: `Declare: Pick a friendly unit in this Regiment of Renown that charged this turn and has not used any Rampage abilities this turn to be the target. 
+        Effect: The target can move D6". It must end that move in combat. Then, add 1 to the target's momentum points. After this abilty has been resolved, the target cannot use any other Rampage abilities for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'ROR: Da Kountin Krew': {
+    effects: [
+      {
+        name: `Swampboss Skumdrekk: Bet-Master`,
+        desc: `Declare: Pick an enemy unit on the battlefield to be the bet. 
+        Effect: Add 1 to wound rolls for attacks made by this unit and friendly Hobgrot Slittaz units that target the bet.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Swampboss Skumdrekk: Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Sloppklaws Talons is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Swampboss Skumdrekk: Kountin' Krew`,
+        desc: `Declare: Pick a friendly Hobgrot Slittaz unit within this units combat range to be the target. 
+        Effect: For the rest of the battle, the targets Slitta-knives have Crit (Mortal) while they are wholly within 12" of this unit.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Swampboss Skumdrekk: Aggravate Wounds - Once Per Turn`,
+        desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
+        Effect: Roll a number of dice equal to the number of damage points the target has. For each 5+, inflict 1 mortal damage on the target.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Hobgrot Slittaz: Scrap-Bang`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. On a 3+: 
+        Inflict 1 mortal damage on the target. 
+        This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Bombz Away, Ladz! - Passive`,
+        desc: `Effect: Friendly units in this Regiment of Renown can use Run abilities and still use Shoot abiliites later in the turn while they are wholly within 12" of this Regiment of Renown's Swampboss Skumdrekk.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Snatch 'Em Up! - Once Per Phase (Enemy Hero Phase)`,
+        desc: `Declare: Pick an enemy model in combat with this Regiment of Renown's  Swampboss Skumdrekk to be the target. 
+        Effect: Roll a dice. If the roll is at least double the target's Health characteristic, it is slain.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')
