@@ -90,15 +90,15 @@ const subFactions = {
   }, */
 
   Ironjawz: {
-    effects: pickEffects(IronjawzBattleTraits, ['Mighty Destroyers', 'Ironjawz Waaagh!']),
+    effects: pickEffects(IronjawzBattleTraits, ['Mighty Destroyers', 'Ironjawz Waaagh!', 'Bossrokk Tower']),
     available: {
       artifacts: [IronjawzArtifacts],
-     // battalions: [keyPicker(OrrukWarclansBattalions, ['Ironjawz Fist'])],
+      // battalions: [keyPicker(OrrukWarclansBattalions, ['Ironjawz Fist'])],
       battle_tactics: [OrrukWarclansBattleTactics, IronjawzBattleTactics],
       command_abilities: [IronjawzCommandAbilities],
       command_traits: [IronjawzCommandTraits],
       flavors: [IronjawzFlavors],
-     /* grand_strategies: [
+      /* grand_strategies: [
         keyPicker(OrrukWarclansGrandStrategies, ["Show 'Em Who's Boss!", 'Waaagh!', "Krump 'Em All!"]),
       ], */
       mount_traits: [OrrukWarclansMountTraits],
@@ -107,7 +107,7 @@ const subFactions = {
       units: [IronjawzUnits],
       prayers: [IronjawzPrayers],
     },
-   /* mandatory: {
+    /* mandatory: {
       command_abilities: [keyPicker(IronjawzCommandAbilities, ['Mighty Destroyers'])],
     }, */
   },
@@ -119,14 +119,15 @@ const subFactions = {
       'Sneaky Sneakin`',
       'Lethal Surprise',
       'Noisy Racket',
+      'Skaregob Totem',
     ]),
     available: {
       artifacts: [KruleboyzArtifacts],
-     // battalions: [keyPicker(OrrukWarclansBattalions, ['Kruleboyz Finga'])],
+      // battalions: [keyPicker(OrrukWarclansBattalions, ['Kruleboyz Finga'])],
       battle_tactics: [OrrukWarclansBattleTactics, KruleboyzBattleTactics],
       command_traits: [KruleboyzCommandTraits],
       flavors: [KruleboyzFlavors],
-    /*  grand_strategies: [
+      /*  grand_strategies: [
         keyPicker(OrrukWarclansGrandStrategies, ['In and Out, Ladz', 'Waaagh!', "Krump 'Em All!"]),
       ], */
       mount_traits: [OrrukWarclansMountTraits],
@@ -135,7 +136,7 @@ const subFactions = {
     },
   },
 
- /* 'Grunta Stampede': {
+  /* 'Grunta Stampede': {
     effects: pickEffects(GruntaStampedeBattleTraits, ['Grunta Waaagh!', 'Hogs of War', "'Ere We Come!"]),
     available: {
       units: [GreenskinzUnits, IronjawzUnits, BonesplitterzUnits, KruleboyzUnits],
