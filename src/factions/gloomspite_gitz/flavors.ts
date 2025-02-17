@@ -1,5 +1,5 @@
 import { TItemDescriptions } from 'factions/factionTypes'
-import { COMBAT_PHASE, DURING_SETUP, END_OF_TURN, HERO_PHASE } from 'types/phases'
+import { COMBAT_PHASE, DURING_SETUP, END_OF_TURN, HERO_PHASE, MOVEMENT_PHASE } from 'types/phases'
 
 const Flavors = {
   Squigalanche: {
@@ -21,11 +21,11 @@ const Flavors = {
       },
     ],
   },
-  'Moonclan Skrap': {
+  'Gloomspite Horde': {
     effects: [
       {
         name: `Spreading Loonacy - Once Per Turn`,
-        desc: `Declare: Pick up to 3 friendly non-Squig Moonclan units in combat to be the targets. 
+        desc: `Declare: Pick up to 3 friendly non-Squig Moonclan or Spiderfang units in combat to be the targets. 
         Effect: For each target: 
         Make a pile-in move with the target. 
         Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
@@ -33,13 +33,13 @@ const Flavors = {
       },
     ],
   },
-  'Spiderfang Stalktribe': {
+  'Gitmob Pack': {
     effects: [
       {
-        name: `Realmweb Ambush - Passive`,
-        desc: `Effect: Each time a friendly Skitterstrand Arachnarok uses the Realmweb Lurker ability, you can pick another friendly Spiderfang unit to also use that ability. 
-        In addition, each time a friendly Skitterstrand Arachnarok uses the Ambush from Beyond ability, you can pick another friendly Spiderfang unit that is skittering through tunnels in reality to also use that ability. That unit must be set up wholly within 12" of the Skitterstrand Arachnarok using the ability.`,
-        when: [DURING_SETUP],
+        name: `Git and Run`,
+        desc: `Declare: Pick a friendly Gitmob unit that is in combat to use this ability. Thin, you can pick an enemy unit in combat with that Gitmob unit to be the target. The same enemy unit cannot be picked to be the target of this ability more than once per phase.
+        Effect: If you picked a target, roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Then, the unit using this ability can move a distance up to its Move characteristic. It can move through the combat ranges of enemy units but cannot end that move in combat.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },

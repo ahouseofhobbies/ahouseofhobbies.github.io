@@ -938,7 +938,7 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Malevolent Moon - Lurid Light - Passive`,
-        desc: `Effect: Friendly Gloomspite Gitz units are under the light of the Bad Moon while they are wholly within 12" of this Manifestation.`,
+        desc: `Effect: While friendly Gloomspite Gitz units are wholly within 12" of this Manifestation they are affected by all four faces of the Bad Moon (Grinnin', Scowlin', Sulkin' and Cacklin').`,
         when: [DURING_GAME],
       },
       {

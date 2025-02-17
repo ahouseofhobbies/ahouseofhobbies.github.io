@@ -30,6 +30,7 @@ import Spells from './spells'
 import meta_rule_sources from 'meta/rule_sources'
 import rule_sources from './rule_sources'
 import { TItemDescriptions } from 'factions/factionTypes'
+import { Duration } from 'luxon'
 
 /*const ArachnarokSpiderVenomEffect = {
   name: `Spider Venom`,
@@ -191,12 +192,12 @@ const Units = {
       },
       {
         name: `Babbling Wand - Reaction: You declared the Redeploy command for a friendly Moonclan unit wholly within 12" of this unit`,
-        desc: `Effect: If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.`,
+        desc: `Effect: If the unit using the command is wholly within 12" of this unit, no command points are spent.`,
         when: [MOVEMENT_PHASE],
       },
       {
-        name: `The Loonking's Entreaty - Once Per Battle - Reaction: You declared The Bad Moon's Orbit ability`,
-        desc: `Effect: You can choose whether the Bad Moon moves to the next location or stays in its current location instead of rolling the dice.`,
+        name: `The Loonking's Entreaty - Once Per Battle - Reaction: You declared The Faces of the Bad Moon ability`,
+        desc: `Effect: The face of the Bad Moon stays in its current position this battle round instead of moving to the next face in the sequence.`,
         when: [START_OF_ROUND],
       },
     ],
@@ -254,7 +255,7 @@ const Units = {
     effects: [
       {
         name: `Let's Get Bouncin'! - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly non-Hero Squig Cavalry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
+        desc: `Effect: Pick a friendly non-Hero Moonclan Cavalry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -406,7 +407,7 @@ const Units = {
       {
         name: `Boing! Smash!`,
         desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
-        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        Effect: Roll a dice for each model in this unit. For each 4+, inflict 1 mortal damage on the target.`,
         when: [CHARGE_PHASE],
       },
     ],
@@ -416,7 +417,7 @@ const Units = {
       {
         name: `Looncap Mushrooms - Once Per Turn`,
         desc: `Declare: If this unit is not in combat, pick a visible friendly Moonclan unit wholly within 12" of it to be the target. 
-        Effect: Roll a dice. Add 1 to the roll if this unit is under the light of the Bad Moon. On a 3+, the target has Ward (5+) until the start of your next turn. On a 6+, also add 1 to the Attacks characteristic of the targets melee weapons until the start of your next turn.`,
+        Effect: Roll a dice. Add 1 to the roll if the face of the Bad Moon is Cacklin' this turn.. On a 3+, the target has Ward (5+) until the start of your next turn. On a 6+, also add 1 to the Attacks characteristic of the targets melee weapons until the start of your next turn.`,
         when: [HERO_PHASE],
       },
     ],
@@ -620,11 +621,6 @@ const Units = {
   'Skitterstrand Arachnarok': {
     effects: [
       {
-        name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Chitinous Legs is 6.`,
-        when: [COMBAT_PHASE],
-      },
-      {
         name: `Wall Crawler - Passive`,
         desc: `Effect: This unit can pass across terrain features as if it had Fly.`,
         when: [MOVEMENT_PHASE],
@@ -685,7 +681,7 @@ const Units = {
       // SquigglyBeastFollowersEffect,
       {
         name: `Shepherd of Destruction - Once Per Turn`,
-        desc: `Effect: If this unit is in combat, roll a dice. On a 3+, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly Troggoth units while they are within this units combat range.`,
+        desc: `Effect: Roll a dice. On a 4+, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly Troggoth uuits while thay are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -764,8 +760,8 @@ const Units = {
   'Dankhold Troggoth': {
     effects: [
       {
-        name: `Greater Regeneration`,
-        desc: `Effect: Heal (D6) this unit.`,
+        name: `Regeneration`,
+        desc: `Effect: Heal (D3) this unit.`,
         when: [START_OF_TURN],
       },
       {
@@ -775,7 +771,7 @@ const Units = {
       },
       {
         name: `Wade and Smash - Once Per Turn`,
-        desc: `Effect: If this unit is in combat, it can move 6" but must end that move in combat. Then, roll a D3 for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.`,
+        desc: `Effect: This unit can move 6" but must end that move in combat. Then, roll a D3 for each enemy unit within 1" of this unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.`,
         when: [COMBAT_PHASE],
       },
       //  CrushingGripEffect, MagicalResistanceEffect, RegenerationEffect, SquigglyBeastFollowersEffect
@@ -930,6 +926,119 @@ const Units = {
         Effect: For the rest of the turn, the target can use Charge abilities even if it used a Run ability in the same turn, but each time it uses a Move ability, it must end the move closer to this unit. 
         In addition, for the rest of the turn, the first time the target ends a move within this units combat range, inflict D6 mortal damage on this unit.`,
         when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Droggz Da Sunchompa': {
+    effects: [
+      {
+        name: `Da Frazzlefangz - Passive`,
+        desc: `Effect: While an enemy unit is within 6" of this unit:
+        Subtract 1 from the hit roll for that enemy unit's attacks.
+        That enemy unit cannot use the All-out Attack command.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Time to Scarper - Once Per Battle - Reaction: Opponent declared a Fight ability`,
+        desc: `Effect: Roll a dice. On a 4+, you can pick a friendly unit wholly within 9" of this unit that was targeted by that Fight ability. That unit can move 2D6". It can move through the combat ranges of any enemy units but cannot end that move in combat.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Rip 'Em Ta Bits - Once Per Turn - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly Gitmob unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the FIght ability used by this unit has been resolved.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Frazzlegit Shaman on War-Wheela': {
+    effects: [
+      {
+        name: `Gimme All Da Light - Passive`,
+        desc: `Effect: Friendly Gitmob units that are not Frazzlegit Shamans on War-Wheelas cannot be targeted by shooting attacks while thay are wholly within 6" of this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Frazzlemist - Once Per Turn`,
+        desc: `Declare: Pick up to 3 visible enemy units within 9" of this unit to be the targets.
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'Snarlboss on War-Wheela': {
+    effects: [
+      {
+        name: `Keepin' Up Wiv Da Boss - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly non-Hero Sunsteala Wheelas unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Da Glare of Frazzlegit - Once Per Battle`,
+        desc: `Effect: For the rest of the turn:
+        Subtract 1 from hit rolls for attacks made by enemy units while they are in combat with any friendly Sunsteala Wheelas.
+        Add 6" to the move characteristic of this unit and friendly Sunsteala Wheelas.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Frazzlegit's Flame Stream`,
+        desc: `Effect: This unit can move a distance up to its Move characteristic. It can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat. Then, pick up to 1 enemy Infantry unit that this unit passed across during that move to be the target. Inflict D6 mortal damage on the target.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  Snarlboss: {
+    effects: [
+      {
+        name: `Boss Snarlfang - Passive`,
+        desc: `Effect: Add 2 to charge rolls for friendly Gitmob Cavalry units while they are wholly within 12" of this unit.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Vicious Snarls and Great Howls - Once Per Turn`,
+        desc: `Declare: If this unit charged this turn, pick this unit and up to 2 friendly Gitmob Cavalry units within this unit's combat range to be the targets.
+        Effect: For the rest of the turn, add 1 to the Attacks characteristic of the targets' Companion melee weapons.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Wolfgit Retinue': {
+    effects: [
+      {
+        name: `I Got Dis, Boss - Passive`,
+        desc: `Effect: While a friendly Snarlboss is within this unit's combat range, both this unit and that Snarlboss have Ward (5+).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Sunsteala Wheelas': {
+    effects: [
+      {
+        name: `Careening Destruction - Once Per Turn`,
+        desc: `Effect: This unit can move a distance up to its Move characteristic. It can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat. Then, pick up to 1 enemy Infantry unit that this unit passed across during that move to be the target. Inflict D3 mortal damage on the target. Add 1 to the amount of mortal damage inflicted for each model in this unit.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Doom Diver Catapult': {
+    effects: [
+      {
+        name: `Shoddy Wing-Like Gizmos - Once Per Turn`,
+        desc: `Effect: You can reroll hit rolls for this unit's shooting attacks this turn, but for each hit roll that is rerolled, subtract 1 from the Rend characteristic of this unit's Doom Diver for the rest of the turn.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'Snarlpack Cavalry': {
+    effects: [
+      {
+        name: `Markin' Territory - Passive`,
+        desc: `Effect: If this unit charged this turn, add 5 to its control score for the rest of the turn.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Frazzleburned Scrap - Once Per Turn`,
+        desc: `Effect: If this unit charged this turn, it has Strike-First for the rest of the turn.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

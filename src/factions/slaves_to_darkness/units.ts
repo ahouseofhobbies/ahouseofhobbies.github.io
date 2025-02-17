@@ -692,7 +692,7 @@ const Units = {
       },
       {
         name: `Drawn to Power - Passive`,
-        desc: `Effect: While this unit is wholly within 12" of a friendly Daemon Prince that shares a Mark of Chaos keyword with it, you can reroll the random characteristic rolls for this units Move and Attacks characteristics.`,
+        desc: `Effect: While this unit is wholly within 12" of a friendly Daemon Prince, you can reroll the random characteristic rolls for this units Move and Attacks characteristics.`,
         when: [MOVEMENT_PHASE, COMBAT_PHASE],
       },
     ],

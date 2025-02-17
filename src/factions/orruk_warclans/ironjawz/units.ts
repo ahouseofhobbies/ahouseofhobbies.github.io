@@ -871,6 +871,98 @@ const IronjawzUnits = {
       },
     ],
   },
+  'ROR: The Shinestealaz': {
+    effects: [
+      {
+        name: `Snarlboss: Boss Snarlfang - Passive`,
+        desc: `Effect: Add 2 to charge rolls for friendly Gitmob Cavalry units while they are wholly within 12" of this unit.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Snarlboss: Vicious Snarls and Great Howls - Once Per Turn`,
+        desc: `Declare: If this unit charged this turn, pick this unit and up to 2 friendly Gitmob Cavalry units within this unit's combat range to be the targets.
+        Effect: For the rest of the turn, add 1 to the Attacks characteristic of the targets' Companion melee weapons.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Wolfgit Retinue: I Got Dis, Boss - Passive`,
+        desc: `Effect: While a friendly Snarlboss is within this unit's combat range, both this unit and that Snarlboss have Ward (5+).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Snarlpack Cavalry: Markin' Territory - Passive`,
+        desc: `Effect: If this unit charged this turn, add 5 to its control score for the rest of the turn.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Snarlpack Cavalry: Frazzleburned Scrap - Once Per Turn`,
+        desc: `Effect: If this unit charged this turn, it has Strike-First for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Sunsteala Wheelas: Careening Destruction - Once Per Turn`,
+        desc: `Effect: This unit can move a distance up to its Move characteristic. It can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat. Then, pick up to 1 enemy Infantry unit that this unit passed across during that move to be the target. Inflict D3 mortal damage on the target. Add 1 to the amount of mortal damage inflicted for each model in this unit.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Sneaky Prowlin'`,
+        desc: `Declare: Pick all units in this Regiment of Renown if none of them have been deployed.
+        Effect: Set up these units in reserve prowlin' around. They have been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Ambush Time! - Once Per Battle`,
+        desc: `Declare: Pick all units in this Regiment of Renown if they are prowlin' around.
+        Effect: Set up those units anywhere on the battlefield more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'ROR: Skulkriks Loonladz': {
+    effects: [
+      {
+        name: `Loonboss: Let's Get Stabbin'! - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly non-Hero Moonclan Infantry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Loonboss: I'm Da Boss`,
+        desc: `Declare: Pick a visible friendly Moonclan Stabbas unit wholly within 12" of this unit to be the target. 
+        Effect: Roll a dice. On a 2+, pick one of the following effects: 
+        Get Back Ere!: If the target is not in combat, you can return D6 slain models to it. 
+        Stab Em Good!: Add 1 to wound rolls for the targets attacks until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Moonclan Stabbas: Netters`,
+        desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
+        Effect: Roll a dice. On a 3+, subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Loonsmasha Fanatics: Release the Fanatics!`,
+        desc: `Declare: Pick this unit if it is hidden among the mobs. Then, pick a friendly Moonclan Shootas or Moonclan Stabbas unit that has 10 or more models to be the target. 
+        Effect: Set up this unit anywhere on the battlefield wholly within 6" of the target and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Loonsmasha Fanatics: Hidden Loons`,
+        desc: `Declare: Pick this unit if it has not been deployed. 
+        Effect: Set up this unit in reserve hidden among the mobs. It has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Loonsmasha Fanatics: Whirling Death - Passive`,
+        desc: `Effect: This unit has Strike-first.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `On Da Moons Trail - Passive`,
+        desc: `Effect: The melee weapons of units in this Regiment of Renown have Anti-Charge (+1 Rend) while they are contesting an objective you control.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(IronjawzUnits, 'unit')

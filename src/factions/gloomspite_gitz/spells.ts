@@ -6,9 +6,9 @@ const Spells = {
   'Lore of the Clammy Dank': {
     effects: [
       {
-        name: `Sneaky Distraction: Casting value of 7 (UNLIMITED)`,
+        name: `Bad Portents: Casting value of 6 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Gloomspite Gitz Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Until the start of your next turn, subtract 1 from hit rolls for attacks made by enemy units while they are wholly within 12" of the caster.`,
+        Effect: Roll a dice. On 1-2, nothing happens. 3-5, the face of the Bad Moon moves to the next face. On a 6, pick a new face of the Bad Moon for this battle round.`,
         when: [HERO_PHASE],
       },
       {
@@ -25,7 +25,7 @@ const Spells = {
       },
     ],
   },
- /* 'The Hand of Gork': {
+  /* 'The Hand of Gork': {
     effects: [
       {
         name: `The Hand of Gork`,

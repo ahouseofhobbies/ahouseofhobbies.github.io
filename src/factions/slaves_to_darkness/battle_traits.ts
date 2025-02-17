@@ -28,7 +28,7 @@ const BattleTraits = {
         Effect: During the battle, the target gains Dark Apotheosis points as follows: 
         Each time the target uses a Fight ability, it gains D3 Dark Apotheosis points.
         At the end of each of your turns, if the target is contesting an objective that is wholly outside friendly territory, it gains D3 Dark Apotheosis points.`,
-        when: [DURING_SETUP],
+        when: [DURING_SETUP, END_OF_TURN],
       },
       {
         name: `Pledge to Chaos - Once Per Turn`,
