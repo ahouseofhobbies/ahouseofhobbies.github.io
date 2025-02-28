@@ -14,8 +14,8 @@ const BattleTraits = {
       },
       {
         name: `Gargant Charge - Once Per Turn`,
-        desc: `Declare: Pick any number of enemy units within 1" of a friendly Mega-Gargant or Gargant unit that charged this turn to be the targets. 
-        Effect: Inflict D3 mortal damage on each target.`,
+        desc: `Declare: Pick a friendly Mega-Gargant or Gargant unit that charged this turn to use this ability, then pick an enemy unit that has not been picked as the target of this ability this turn and that is in combat with that unit to be the target. 
+        Effect: Inflict D3 mortal damage on the target.`,
         when: [CHARGE_PHASE],
       },
       {

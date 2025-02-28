@@ -442,7 +442,7 @@ const Units = {
       },
       {
         name: `Master of the Slime Fleet`,
-        desc: `Declare: Pick a regiment led by this unit to be the target if it has not been deployed. 
+        desc: `Declare: Pick a regiment led by this unit to be the target if no units from that regiment have been deployed. 
         Effect: Each unit in the target regiment is set up in reserve aboard the Slime Fleet. Those units have now been deployed.`,
         when: [DURING_SETUP],
       },

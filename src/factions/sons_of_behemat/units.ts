@@ -690,9 +690,9 @@ const Units = {
         when: [SHOOTING_PHASE],
       },
       {
-        name: `Snatch 'Em Up! - Once Per Phase (Enemy Hero Phase)`,
-        desc: `Declare: Pick an enemy model in combat with this Regiment of Renown's  Swampboss Skumdrekk to be the target. 
-        Effect: Roll a dice. If the roll is at least double the target's Health characteristic, it is slain.`,
+        name: `Snatch 'Em Up! - Once Per Turn (Enemy Hero Phase)`,
+        desc: `Declare: Pick an enemy unit in combat with this Regiment of Renown's Swampboss Skumdrekk to be the target. 
+        Effect: Roll a dice. If the roll is at least double the target's Health characteristic, 1 model in the target unit is slain.`,
         when: [HERO_PHASE],
       },
     ],

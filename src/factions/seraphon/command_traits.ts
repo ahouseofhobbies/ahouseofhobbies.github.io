@@ -2,6 +2,7 @@ import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
 import {
   COMBAT_PHASE,
+  DURING_GAME,
   DURING_SETUP,
   HERO_PHASE,
   MOVEMENT_PHASE,
@@ -18,7 +19,7 @@ const CommandTraits = {
       {
         name: `Being of the Stars - Passive`,
         desc: `Effect: Ignore modiifiers to save rolls for this unit (positive and negative).`,
-        when: [HERO_PHASE],
+        when: [DURING_GAME],
       },
     ],
   },
@@ -33,7 +34,7 @@ const CommandTraits = {
     ],
   },
 
-  'Beastmaster': {
+  Beastmaster: {
     effects: [
       {
         name: `Beastmaster - Passive`,
@@ -43,7 +44,7 @@ const CommandTraits = {
     ],
   },
 
- /* 'Vast Intellect': {
+  /* 'Vast Intellect': {
     effects: [
       {
         name: `Vast Intellect`,

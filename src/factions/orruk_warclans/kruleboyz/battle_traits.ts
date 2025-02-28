@@ -39,7 +39,7 @@ const KruleboyzBattleTraits = {
         name: `Sneaky Sneakin' - Once Per Turn`,
         desc: `Declare: Pick a friendly Kruleboyz Infantry unit that has 10 or fewer models and is not in combat to be the target, then make a dirty trick roll. 
         Effect: Remove the target from the battlefield and set it up again wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
-        when: [HERO_PHASE],
+        when: [MOVEMENT_PHASE],
       },
     ],
   },

@@ -291,7 +291,7 @@ const KruleboyzUnits = {
       },
       {
         name: `Festering Wounds - Once Per Turn`,
-        desc: `Declare: Pick up to 3 enemy units that had any damage points allocated to them by combat attacks made by this unit or a friendly unit with the Sludgeraker Venom keyword to be the targets. 
+        desc: `Declare: Pick up to 3 enemy units that had any damage points allocated to them this turn by attacks made by this unit or a friendly unit with the Sludgeraker Venom keyword to be the targets. 
         Effect: Roll a D3 for each target. On a 2+: 
         Inflict an amount of mortal damage on the target equal to the roll. 
         Subtract 1 from wound rolls for attacks made by the target until the end of the next turn.`,

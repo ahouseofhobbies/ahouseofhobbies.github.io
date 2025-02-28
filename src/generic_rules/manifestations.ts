@@ -1004,7 +1004,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Gork-Roara - Bellowing Waaagh!-Cries`,
         desc: `Declare: Pick a friendly Ironjawz or Kruleboyz Wizard or Priest within 3" of this Manifestation to be the target.
-        Effect: Pick either 1 or 2 to add to casting rolls or chanting rolls for the target until the start of your next turn. Then, roll a number of dice equal to the number picked. For each 1-2, allocate 1 damage point to the target (ward rolls cannot be made for those damage points). For each 5+, until the start of your next turn, add 1 to charge rolls for friendly Kruleboyz or Ironjawz units while they are wholly within 12" of this Manifestation.`,
+        Effect: Pick either 1 or 2 to add to casting rolls or chanting rolls for the target until the start of your next turn. Then, roll a number of dice equal to the number picked. For each 1-2, allocate 1 damage point to the target (ward rolls cannot be made for those damage points). For each 5+, until the start of your next turn, add 1 to charge rolls for friendly Kruleboyz or Ironjawz units while they are wholly within 12" of this Manifestation. Friendly units can be affected by this ability multiple times and the effects are cumulative.`,
         when: [HERO_PHASE],
       },
     ],

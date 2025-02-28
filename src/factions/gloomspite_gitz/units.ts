@@ -171,7 +171,7 @@ const Units = {
         when: [CHARGE_PHASE],
       },
       {
-        name: `The End of Empires - Passive`,
+        name: `The End of Empires`,
         desc: `Effect: For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for friendly Destruction units while they are wholly within 12" of this unit, to a maximum of 3.`,
         when: [CHARGE_PHASE],
       },
@@ -939,8 +939,8 @@ const Units = {
         when: [DURING_GAME],
       },
       {
-        name: `Time to Scarper - Once Per Battle - Reaction: Opponent declared a Fight ability`,
-        desc: `Effect: Roll a dice. On a 4+, you can pick a friendly unit wholly within 9" of this unit that was targeted by that Fight ability. That unit can move 2D6". It can move through the combat ranges of any enemy units but cannot end that move in combat.`,
+        name: `Time to Scarper - Once Per Turn - Reaction: You declared a Fight ability for a unit wholly within 9" of this unit`,
+        desc: `Effect: Roll a dice. On a 4+, the unit using that Fight ability can move 2D6" after the Fight ability has been resolved. It can move through the combat ranges of any enemy units but cannot end that move in combat.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -1530,9 +1530,9 @@ const Units = {
         when: [SHOOTING_PHASE],
       },
       {
-        name: `Snatch 'Em Up! - Once Per Phase (Enemy Hero Phase)`,
-        desc: `Declare: Pick an enemy model in combat with this Regiment of Renown's  Swampboss Skumdrekk to be the target. 
-        Effect: Roll a dice. If the roll is at least double the target's Health characteristic, it is slain.`,
+        name: `Snatch 'Em Up! - Once Per Turn (Enemy Hero Phase)`,
+        desc: `Declare: Pick an enemy unit in combat with this Regiment of Renown's Swampboss Skumdrekk to be the target. 
+        Effect: Roll a dice. If the roll is at least double the target's Health characteristic, 1 model in the target unit is slain.`,
         when: [HERO_PHASE],
       },
     ],
