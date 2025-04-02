@@ -900,7 +900,9 @@ const Units = {
       {
         name: `Sigils of Domination`,
         desc: `Declare: Pick a friendly Slaves to Darkness Hero within this units combat range to be this units master. 
-        Effect: For the rest of the battle, while this unit is within its masters combat range, add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.`,
+        Effect: For the rest of the battle, while this unit is within its masters combat range: 
+        Add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.
+        This unit can ignore the effects of the Companion weapon ability on its weapons.`,
         when: [DURING_SETUP],
       },
       {

@@ -339,10 +339,9 @@ const Units = {
         rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
       {
-        name: `Vanguard Chamber - Passive`,
-        desc: `Effect: This unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
+        name: `Vanguard Chamber - Once Per Turn`,
+        desc: `Effect: For the rest of the turn, this unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
         when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
-        rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
       {
         name: `Windrider`,
@@ -500,8 +499,8 @@ const Units = {
     effects: [
       //RideTheWindsAethericEffect,
       {
-        name: `Vanguard Chamber - Passive`,
-        desc: `Effect: This unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
+        name: `Vanguard Chamber - Once Per Turn`,
+        desc: `Effect: For the rest of the turn, this unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
         when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
       },
       {
@@ -1033,10 +1032,9 @@ const Units = {
   'Vanguard-Raptors with Hurricane Crossbows': {
     effects: [
       {
-        name: `Vanguard Chamber - Passive`,
-        desc: `Effect: This unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
+        name: `Vanguard Chamber - Once Per Turn`,
+        desc: `Effect: For the rest of the turn, this unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
         when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
-        rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
       {
         name: `Coordinated Strike - Passive`,
@@ -1049,10 +1047,9 @@ const Units = {
   'Vanguard-Raptors with Longstrike Crossbows': {
     effects: [
       {
-        name: `Vanguard Chamber - Passive`,
-        desc: `Effect: This unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
+        name: `Vanguard Chamber - Once Per Turn`,
+        desc: `Effect: For the rest of the turn, this unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
         when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
-        rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
       {
         name: `Headshot`,
@@ -1064,10 +1061,9 @@ const Units = {
   'Vanguard-Hunters': {
     effects: [
       {
-        name: `Vanguard Chamber - Passive`,
-        desc: `Effect: This unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
+        name: `Vanguard Chamber - Once Per Turn`,
+        desc: `Effect: For the rest of the turn, this unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
         when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
-        rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
       {
         name: `Astral Compass - Once Per Battle`,
@@ -1088,10 +1084,9 @@ const Units = {
   'Vanguard-Palladors with Javelins': {
     effects: [
       {
-        name: `Vanguard Chamber - Passive`,
-        desc: `Effect: This unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
+        name: `Vanguard Chamber - Once Per Turn`,
+        desc: `Effect: For the rest of the turn, this unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
         when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
-        rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
       {
         name: `Charging Volley`,
@@ -1106,10 +1101,9 @@ const Units = {
   'Vanguard-Palladors with Handaxes': {
     effects: [
       {
-        name: `Vanguard Chamber - Passive`,
-        desc: `Effect: This unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
+        name: `Vanguard Chamber - Once Per Turn`,
+        desc: `Effect: For the rest of the turn, this unit can use Shoot and/or Charge abilities even if it used a Run or Retreat ability in the same turn.`,
         when: [MOVEMENT_PHASE, SHOOTING_PHASE, CHARGE_PHASE],
-        rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
       },
       {
         name: `Shocking Strikes - Passive`,
@@ -1627,6 +1621,11 @@ const Units = {
         Effect: The target has the Soulburned keyword for the rest of the battle.`,
         when: [SHOOTING_PHASE],
         rule_sources: [meta_rule_sources.BOOK_DAWNBRINGERS_BOOK_3],
+      },
+      {
+        name: `Ruination Chamber - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+        desc: `Effect: Make a resistance roll of D6. On a 4+, that ability has no effect on this unit.`,
+        when: [DURING_GAME],
       },
       {
         name: `Battle Damaged - Passive`,

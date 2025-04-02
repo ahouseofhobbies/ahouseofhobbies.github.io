@@ -92,9 +92,8 @@ const KruleboyzBattleTraits = {
         when: [MOVEMENT_PHASE],
       },
       {
-        name: `Sinister Stare - Once Per Turn`,
-        desc: `Declare: Pick a visible enemy unit or a friendly Kruleboyz unit wholly within 12" of this terrain feature to be the target. If this terrain feature has a Shouty Boss, you can pick an eligible unit wholly within 18" instead.
-        Effect: Until the start of your next turn, if the target is picked to be the target of a Dirty Trick ability while it is wholly within 12" of this terrain feature, add 1 to the Dirty Trick roll for that ability. if this terrain feature has a Shouty Boss, this ability applies to the targets picked to be the target of the Dirty Trick ability while they are wholly within 18" of this terrain feature instead of 12".`,
+        name: `Sinister Stare - Passive`,
+        desc: `Effect: Add 1 to dirty trick rolls for friendly Kruleboyz units wholly within 12" of this terrain feature. If this terrain feature has a Shouty Boss, add 1 to dirty trick rolls for friendly Kruleboyz units wholly wihtin 18" of this terrain feature instead of wholly within 12".`,
         when: [HERO_PHASE],
       },
     ],

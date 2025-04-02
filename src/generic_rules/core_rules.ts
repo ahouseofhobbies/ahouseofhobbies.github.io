@@ -178,7 +178,7 @@ const CoreRules: TEntry[] = [
       },
       {
         name: `Command Ability - Covering Fire`,
-        desc: `Declare: Pick a friendly unit that did not use a Run ability this turn and that is not in combat to use this ability, then pick the closest enemy unit (to that unit) that can be picked as the target of shooting attacks to be the target. 
+        desc: `Declare: Pick a friendly unit that did not use a Run ability this turn and that is not in combat to use this ability, then pick the closest enemy unit (to that unit) that can be picked as the target of shooting attacks to be the target. You cannot pick Manifestations or faction terrain features as the target of this ability.
         Effect: Resolve shooting attacks for the unit using this ability against the target. You must subtract 1 from the hit rolls for those attacks.`,
         when: [SHOOTING_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
@@ -252,7 +252,7 @@ const CoreRules: TEntry[] = [
       },
       {
         name: `Guarded Hero - Passive`,
-        desc: `Effect: If this Hero is within the combat range of a friendly unit that is not a Hero: Subtract 1 from hit rolls for shooting attacks that target this Hero. If this Hero is Infantry, they cannot be picked as the target of shooting attacks made by units more than 12" from them.`,
+        desc: `Effect: If this Hero is within the combat range of a friendly unit that is not a Hero: Subtract 1 from hit rolls for shooting attacks that target this Hero. If this Hero is Infantry, they cannot be picked as the target of shooting attacks made by models more than 12" from them.`,
         when: [SHOOTING_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },

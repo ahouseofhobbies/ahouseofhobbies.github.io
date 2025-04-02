@@ -191,8 +191,8 @@ const Units = {
         when: [HERO_PHASE],
       },
       {
-        name: `Babbling Wand - Reaction: You declared the Redeploy command for a friendly Moonclan unit wholly within 12" of this unit`,
-        desc: `Effect: If the unit using the command is wholly within 12" of this unit, no command points are spent.`,
+        name: `Babbling Wand - Passive`,
+        desc: `Effect: Each time a friendly Moonclan unit wholly within 12" of this unit uses the Redeploy command, no command points are spent.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -969,7 +969,7 @@ const Units = {
     effects: [
       {
         name: `Keepin' Up Wiv Da Boss - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly non-Hero Sunsteala Wheelas unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
+        desc: `Effect: Pick a friendly Sunsteala Wheelas unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
         when: [COMBAT_PHASE],
       },
       {

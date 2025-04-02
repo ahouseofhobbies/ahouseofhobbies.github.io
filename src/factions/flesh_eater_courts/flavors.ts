@@ -15,7 +15,7 @@ const Flavors = {
     effects: [
       {
         name: `Raise the Banners - Passive`,
-        desc: `Effect: Each time a friendly unit uses an ability that returns any slain models to a friendly Serfs or Knights unit, add 1 to the number of slain models returned to that unit.`,
+        desc: `Effect: Each time an ability returns at least 1 slain model to a friendly unit that is not in combat, after that ability has benn resolved, if that unit is a Serfs unit, you can return 1 additional slain model to it, and if it is a Knights unit, roll a dice. On a 4+, you can return 1 additional slain model to it.`,
         when: [DURING_GAME],
       },
     ],
@@ -39,7 +39,7 @@ const Flavors = {
       },
     ],
   },
- /*  Morgaunt: {
+  /*  Morgaunt: {
     effects: [
       {
         name: `Morgaunt Kingdoms`,

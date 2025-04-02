@@ -497,7 +497,7 @@ const Units = {
       },
       {
         name: `Zephyrspites - Once Per Turn`,
-        desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot move into combat during any part of that move.`,
+        desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot end that move in combat.`,
         when: [SHOOTING_PHASE],
       },
     ],

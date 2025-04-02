@@ -326,7 +326,7 @@ const Units = {
     effects: [
       // GenericEffects.Elite,
       {
-        name: `Grinderfist Tunnellers`,
+        name: `Grinderfist Tunnellers - Once Per Turn`,
         desc: `Declare: Pick this unit if it is in the tunnels below and includes any models armed with Grindersts. 
         Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],

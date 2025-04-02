@@ -68,7 +68,7 @@ const BattleTraits = {
       },
       {
         name: `Pledged to Slaanesh`,
-        desc: `Effect: For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for friendly Pledged to Slaanesh units, to a maximum of 3.`,
+        desc: `Effect: For the rest of the turn, when making charge rolls for friendly Pledged to Slaanesh units, you can roll 1 additional dice (to a maximum of 3), but if you do, you must discard 1 dice of your choice.`,
         when: [CHARGE_PHASE],
       },
       {

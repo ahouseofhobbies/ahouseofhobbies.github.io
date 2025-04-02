@@ -1,7 +1,15 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
 import { SKAVEN } from 'meta/factions'
-import { COMBAT_PHASE, DURING_GAME, DURING_SETUP, END_OF_TURN, HERO_PHASE, MOVEMENT_PHASE, START_OF_ROUND } from 'types/phases'
+import {
+  COMBAT_PHASE,
+  DURING_GAME,
+  DURING_SETUP,
+  END_OF_TURN,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
+  START_OF_ROUND,
+} from 'types/phases'
 
 const BattleTraits = {
   [SKAVEN]: {
@@ -15,7 +23,7 @@ const BattleTraits = {
       {
         name: `Splinters of the Vermindoom - Once Per Battle Round`,
         desc: `Declare: You can use this ability if there are fewer than 3 friendly Gnawholes on the battlefield. 
-        Effect: Set up a Gnawhole on the battlefield more than 9" from all enemy units, more than 1" from all friendly units and more than 3" from all objectives and other terrain features.`,
+        Effect: Set up a Gnawhole on the battlefield more than 9" from all enemy units, more than 3" from all objectives and more than 1" from all other terrain features.`,
         when: [START_OF_ROUND],
       },
       {
