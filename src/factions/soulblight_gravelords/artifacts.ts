@@ -16,13 +16,12 @@ import {
 } from 'types/phases'
 
 const Artifacts = {
-  'Orb of Enchantment': {
+  'Terminus Clock': {
     effects: [
       {
-        name: `Orb of Enchantment - Once Per Battle`,
-        desc: `Declare: Pick an enemy Hero in combat with this unit to be the target. 
-        Effect: The target has Strike-last for the rest of the turn.`,
-        when: [COMBAT_PHASE],
+        name: `Terminus Clock`,
+        desc: `Effect: Roll a dice. On a 3+, until the start of your next turn, subtract 1 from casting rolls for enemy Wizards while they are within 18" of this unit.`,
+        when: [HERO_PHASE],
       },
     ],
   },
@@ -36,17 +35,17 @@ const Artifacts = {
     ],
   },
 
-  'Amulet of Screams': {
+  'Amulet of Graves': {
     effects: [
       {
-        name: `Amulet of Screams - Reaction: Opponent declared a Spell ability for a Wizard within 18" of this unit`,
-        desc: `Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the caster equal to the roll. If the target is destroyed by this ability, do not resolve the effect of that Spell ability.`,
+        name: `Amulet of Graves - Once Per Battle`,
+        desc: `Effect: If there are fewer than 3 friendly Cursed Sepulchres on the battlefield, set up a Cursed Sepulchre on the battlefield more than 9" from all enemy units, more than 1" from all friendly units and more than 3" from all objectives and other terrain features.`,
         when: [HERO_PHASE],
       },
     ],
   },
 
- /* 'Shard of Night': {
+  /* 'Shard of Night': {
     effects: [
       {
         name: `Shard of Night`,

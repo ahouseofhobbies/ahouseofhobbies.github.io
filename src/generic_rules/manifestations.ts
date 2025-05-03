@@ -700,7 +700,7 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Warp Lightning Vortex - Warp Vortex - Passive`,
-        desc: `Effect: Subtract 2 from run rolls and charge rolls for enemy units while they are within 6" of this Manifestation. In addition, if an enemy unit passes across this Manifestation, inflict D3 mortal damage on that enemy unit after the Move ability has been resolved.`,
+        desc: `Effect: Subtract 2 from run rolls and charge rolls for enemy units while they are within 6" of this Manifestation. In addition, if an enemy unit passes across this Manifestation and/or the round-cornered traingle formed by drawing a line around all of the bases of the Manifestation's parts, inflict D3 mortal damage on that enemy unit after the Move ability has been resolved.`,
         when: [MOVEMENT_PHASE, CHARGE_PHASE],
       },
       {
@@ -1006,6 +1006,63 @@ const GenericManifestations: TEntry[] = [
         desc: `Declare: Pick a friendly Ironjawz or Kruleboyz Wizard or Priest within 3" of this Manifestation to be the target.
         Effect: Pick either 1 or 2 to add to casting rolls or chanting rolls for the target until the start of your next turn. Then, roll a number of dice equal to the number picked. For each 1-2, allocate 1 damage point to the target (ward rolls cannot be made for those damage points). For each 5+, until the start of your next turn, add 1 to charge rolls for friendly Kruleboyz or Ironjawz units while they are wholly within 12" of this Manifestation. Friendly units can be affected by this ability multiple times and the effects are cumulative.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  {
+    name: `Soulblight Gravelords`,
+    effects: [
+      {
+        name: `Summon Hand of Nagash: Casting value of 7`,
+        desc: `Declare: If there is not a friendly Hand of Nagash on the battlefield, pick a friendly Soulblight Gravelords Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up a Hand of Nagash wholly within 18" of the caster, visible to them and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Hand of Nagash - Chill Grasp`,
+        desc: `Declare: Pick an enemy unit in combat with this Manifestation to be the target.
+        Effect: Roll a dice. On a 4+, the following effects apply until the start of your next turn:
+        While the target is within 3" of this Manifestation, the target has a maximum control score of 1 that cannot be modified.
+        While the target is within 3" of this Manifestation, the target cannot use Move abilities.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Hand of Nagash - Inescapable Reach`,
+        desc: `Declare: This Manifestation can only use this ability if it has not been set up this turn.
+        Effect: Remove this Manifestation from the battlefield and set it up anywhere on the battlefield more than 9" from all enemy units. Then, roll a D3. On a 2+, this Manifestation can move a number of inches equal to the roll.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Summon Unholy Reliquary: Casting value of 6`,
+        desc: `Declare: If there is not a friendly Unholy Reliquary on the battlefield, pick a friendly Soulblight Gravelords Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up an Unholy Reliquary wholly within 18" of the caster.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Unholy Reliquary - Draw on Power`,
+        desc: `Declare: Pick a friendly Soulblight Gravelords Hero wholly within 12" of this Manifestation to be the target.
+        Effect: Pick one of the following:
+        Heal D3 the target.
+        Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn and banish this Manifestation.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Summon Sanguine Swarm: Casting value of 6`,
+        desc: `Declare: If there is not a friendly Sanguine Swarm on the battlefield, pick a friendly Soulblight Gravelords Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up a Sanguine Swarm wholly within 18" of the caster and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Sanguine Swarm - Multiple Parts - Passive`,
+        desc: `Effect: When a number of damage points equal to this Manifestations Health characteristic are allocated to it, this Manifestation is destroyed and both of its parts are removed from play.
+        Each time this Manifestation moves, both its parts must end within 9" of each other.
+        Each part of this Manifestation is armed with Leeching Bites.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Sanguine Swarm - Leeching Bites - Passive`,
+        desc: `Effect: Each time an attack made by this Manifestation scores a critical hit, Heal 1 this Manifestation.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

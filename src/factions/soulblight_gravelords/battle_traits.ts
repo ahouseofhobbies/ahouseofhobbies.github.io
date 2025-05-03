@@ -3,6 +3,7 @@ import { tagAs } from 'factions/metatagger'
 import { SOULBLIGHT_GRAVELORDS } from 'meta/factions'
 import meta_rule_sources from 'meta/rule_sources'
 import {
+  DURING_GAME,
   DURING_SETUP,
   END_OF_MOVEMENT_PHASE,
   END_OF_SHOOTING_PHASE,
@@ -26,7 +27,7 @@ const BattleTraits = {
       {
         name: `The Rising Dead`,
         desc: `Declare: Pick a friendly unit that is in the grave. 
-        Effect: Set up that unit wholly within 6" of a terrain feature and more than 9" from all enemy units.`,
+        Effect: Set up that unit wholly within 6" of a friendly Cursed Sepulchre and more than 9" from all enemy units, or wholly within 6" of the edge of the battlefield wholly within friendly territory and more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -36,9 +37,9 @@ const BattleTraits = {
         when: [END_OF_TURN],
       },
       {
-        name: `Command Ability - Endless Legions - Once Per Turn`,
+        name: `Endless Legions - Once Per Battle Round`,
         desc: `Declare: Pick a friendly non-Unique Deathrattle or Deadwalkers unit that started the battle with 2 or more models and that has been destroyed to be the target.
-        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of a friendly Soulblight Gravelords Hero or wholly within 6" of a terrain feature. It must be set up more than 9" from all enemy units. If it is your movement phase, you can set up the replacement unit more than 3" from all enemy units instead of more than 9", but if you set it up within 9" of any enemy units, it cannot use Charge abilities this turn.`,
+        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of a friendly Soulblight Gravelords Hero or wholly within 6" of a friendly Cursed Sepulchre. It must be set up more than 9" from all enemy units. If it is your movement phase, you can set up the replacement unit more than 3" from all enemy units instead of more than 9", but if you set it up within 9" of any enemy units, it cannot use Charge abilities this turn.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -48,6 +49,21 @@ const BattleTraits = {
         If the target is damaged, Heal (3) the target. 
         If the target is not damaged, return a number of slain models to it with a combined Health characteristic of up to 3.`,
         when: [HERO_PHASE],
+      },
+      {
+        name: `Ancient Burial Sites - Once Per Battle`,
+        desc: `Effect: If there is a friendly Cursed Sepulchre on the battlefield, you can set up to 2 additional Cursed Sepulchres on the battlefield. The first must be set up more than 3" from all units, objectives and other terrain features. The second must be set up wholly outside enemy territory and more than 3" from all units, objectives and other terrain features.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Cursed Sepulchre (Faction Terrain) -  Locus of Shyish - Passive`,
+        desc: `Effect: Each time a friendly Soulblight Gravelords Wizard casts a Summon Spell from the Manifestations of the Grave lore, you can measure the range and visibility from this terrain feature instead.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Cursed Sepulchre (Faction Terrain) -  Leeching Soil - Passive`,
+        desc: `Effect: Each time a model (friendly or enemy) is slain while it is within 9" of this terrain feature, Heal 1 this terrain feature.`,
+        when: [DURING_GAME],
       },
     ],
   },

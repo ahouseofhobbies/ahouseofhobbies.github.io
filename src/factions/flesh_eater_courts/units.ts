@@ -963,6 +963,72 @@ const Units = {
       },
     ],
   },
+  'ROR: The Beast of Castle Sternieste': {
+    effects: [
+      {
+        name: `Revenant Draconith: Battle Damaged - Passive`,
+        desc: `Eect: While this unit has 10 or more damage points, the Attacks characteristic of its Draconic Claws is 5.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Revenant Draconith: Death on Tattered Wings`,
+        desc: `Declare: Pick this unit if it has not been deployed. 
+        Effect: Set up this unit in reserve high above the battlefield. It has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Revenant Draconith: Loathsome Descent`,
+        desc: `Declare: Pick this unit if it is high above the battlefield. 
+        Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Revenant Draconith: Red Ruin - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a D3. On a 2+, resolve the following effects:
+        Inflict an amount of mortal damage on the target equal to the roll.
+        Heal(X) this unit where X ia amount equal to the roll.
+        This unit can be removed from the battlefield and set up in reserve high above the battlefield.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Deathless Monstrosity - Once Per Turn`,
+        desc: `Effect: Heal (3) this unit.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'ROR: Blades of the Hollow King': {
+    effects: [
+      {
+        name: `Aurelias`,
+        desc: `Declare: This unit can use this ability while its Aurelias is on the battlefield. 
+        Effect: Pick 1 of the following to apply for the rest of the turn:
+        Add 1 to the unit's power level.
+        Each time a casting roll is made for this unit, you can reroll 1 of the dice.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Solia, the Tutor`,
+        desc: `Declare: This unit can use this ability while its Cado Ezechiar is on the battlefield.
+        Effect: Pick 1 of the following to apply for the rest of the turn:
+        This unit has Ward(5+).
+        This unit's Ezechiarian Greatsword has Crit(Mortal).`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Retribution or Salvation: Casting value of 7`,
+        desc: `Declare: This unit can cast this spell while its Cado Ezechiar is on the battlefield. Pick a visible unit within 12" of this unit to be the target, then make a casting roll of 2D6. 
+        Effect: If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly Deathrattle or Deadwalkers unit, subtract 1 from wound rolls of combat attacks that target that unit for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `The Hunger - Once Per Turn`,
+        desc: `Effect: If this unit used a Fight ability this turn, Heal (D3) this unit. Heal (2D3) this unit instead if it destroyed an enemy unit this turn using a Fight ability.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

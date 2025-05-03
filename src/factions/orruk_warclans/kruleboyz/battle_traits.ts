@@ -93,7 +93,7 @@ const KruleboyzBattleTraits = {
       },
       {
         name: `Sinister Stare - Passive`,
-        desc: `Effect: Add 1 to dirty trick rolls for friendly Kruleboyz units wholly within 12" of this terrain feature. If this terrain feature has a Shouty Boss, add 1 to dirty trick rolls for friendly Kruleboyz units wholly wihtin 18" of this terrain feature instead of wholly within 12".`,
+        desc: `Effect: Add 1 to dirty trick rolls you make for abilities that target friendly or enemy units wholly within 12" of this terrain feature. If this terrain feature has a Shouty Boss, add 1 to dirty trick rolls you make for abilities that target friendly or enemy units wholly wihtin 18" of this terrain feature instead of wholly within 12".`,
         when: [HERO_PHASE],
       },
     ],

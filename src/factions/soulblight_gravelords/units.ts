@@ -127,7 +127,8 @@ const Units = {
         name: `Invocation of Nagash: Casting value of 7`,
         desc: `Declare: This unit can cast this spell more than once per phase. Pick a visible unit wholly within 18" of this unit that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6. 
       Effect: If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly Death unit, pick 1 of the following effects: 
-      Return a number of slain models to the target unit with a combined Health characteristic of up to 3. The target has Ward (5+) until the start of your next turn.`,
+      Return a number of slain models to the target unit with a combined Health characteristic of up to 3. 
+      The target has Ward (5+) until the start of your next turn.`,
         when: [HERO_PHASE],
       },
     ],
@@ -236,8 +237,8 @@ const Units = {
         when: [HERO_PHASE],
       },
       {
-        name: `Snapping Jaws - Once Per Turn`,
-        desc: `Declare: If this unit charged this turn, pick an enemy unit in combat with it to be the target. 
+        name: `Trail of Crimson - Once Per Turn`,
+        desc: `Declare: This unit can make a pile-in move. Then, pick an enemy unit in combat with it to be the target. 
         Effect: Roll a dice. On a 4+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [COMBAT_PHASE],
       },
@@ -312,8 +313,7 @@ const Units = {
       //  TheHungerEffect,
       {
         name: `Festering Feast`,
-        desc: `Declare: Pick a visible friendly non-Hero Soulblight Gravelords Monster that destroyed an enemy unit this turn and that is wholly within 12" of this unit to be the target. 
-        Effect: Heal (6) the target.`,
+        desc: `Effect: If any damage points were allocated to enemy units by this unit's attacks this turn. Heal (D3) this unit and each other friendly Soulblight Gravelords Monster unit wholly within 12" of this unit.`,
         when: [END_OF_TURN],
       },
       {
@@ -345,7 +345,7 @@ const Units = {
       },
       {
         name: `First of the Vyrkos - Passive`,
-        desc: `Effect: Add 3 to the control scores of friendly Radukar the Wolf, Radukar the Beast, Ivya Volga, Lady Annika, Kritza, Vyrkos Blood-born and Vargskyr units while they are wholly within 18" of this unit.`,
+        desc: `Effect: Add 3 to the control scores of friendly Radukar the Wolf, Radukar the Beast, Ivya Volga, Lady Annika, and Kritza units while they are wholly within 18" of this unit.`,
         when: [END_OF_TURN],
       },
       {
@@ -388,7 +388,7 @@ const Units = {
       //  TheHungerEffect,
       {
         name: `Scurrying Retreat`,
-        desc: `Effect: If this unit is in combat, roll a dice. On a 2+, this unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
+        desc: `Effect: If this unit is in combat, roll a dice. On a 3+, this unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -407,7 +407,7 @@ const Units = {
       // CallToTheHuntEffect,
       {
         name: `Call to the Hunt - Passive`,
-        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to wound rolls for combat attacks made by friendly Deathrattle, Deadwalkers and Vyrkos Blood-born units while they are wholly within 12" of this unit.`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to wound rolls for combat attacks made by friendly Deathrattle and Deadwalkers units while they are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -424,7 +424,7 @@ const Units = {
       //  TheHungerEffect,
       {
         name: `Call to the Hunt - Passive`,
-        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to wound rolls for combat attacks made by friendly Deathrattle, Deadwalkers and Vyrkos Blood-born units while they are wholly within 12" of this unit.`,
+        desc: `Effect: If this unit charged this turn, for the rest of the turn, add 1 to wound rolls for combat attacks made by friendly Deathrattle and Deadwalkers units while they are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
       },
       // CallToTheHuntEffect,
@@ -598,7 +598,25 @@ const Units = {
       {
         name: `Sanguine Blur - Once Per Turn`,
         desc: `Effect: Roll a dice. On a 3+, remove this unit from the battlefield and set it up again on the battlefield more than 9" from all enemy non-Hero units and more than 3" from all enemy Heroes.`,
-        when: [MOVEMENT_PHASE],
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+
+  'Vampire Lord on Nightmare Steed': {
+    effects: [
+      // GenericEffects.WizardOneSpellEffect,
+      // TheHungerEffect,
+      {
+        name: `For Glory! For Blood! - Reaction: You declared a Charge ability for this unit`,
+        desc: `Effect: You can reroll the charge roll for that Charge ability. Then, before the charge move is made, you can pick a friendly Blood Knights unit that is not in combat, is wholly within 12" of this unit and has not used a Charge ability this turn to be the target. If this unit charges, then, immediately after the Charge ability used by this unit has been resolved, the target can immediately use the Charge ability even if it is not your charge phase. In addition, you can reroll charge rolls for the target this phase.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Strike at the Heart`,
+        desc: `Declare: Pick a friendly Blood Knights unit that charged this turn and is wholly within 12" of this unit to be the target.
+        Effect: Add 1 to the Rend characteristic of that unit's Templar Weapons for the rest of the turn.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
@@ -664,6 +682,12 @@ const Units = {
         desc: `Effect: If a friendly Soulblight Gravelords unit wholly within 12" of this unit uses the Redeploy command, you can pick another friendly Soulblight Gravelords unit wholly within 12" of this unit that has not used a command this phase to use the Redeploy command immediately after the first has been resolved (this is an exception to Commands, 1.2). No command point is spent the second time that command is used.`,
         when: [MOVEMENT_PHASE],
       },
+      {
+        name: `A Promising Concoction - Once Per Battle`,
+        desc: `Declare: Pick up to 3 friendly Vampire units wholly within !2" of this unit to be the targets.
+        Effect: Add 1 to the Attacks characteristic of the targets melee weapons for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
     ],
   },
 
@@ -681,7 +705,7 @@ const Units = {
         when: [DURING_GAME],
       },
       {
-        name: `Vanhel's Danse Macabre - Once Per Turn`,
+        name: `Command Ability: Vanhel's Danse Macabre - Once Per Turn`,
         desc: `Declare: Pick a friendly Deathrattle or Deadwalkers unit wholly within 12" of this unit to be the target. 
         Effect: Roll a dice. On a 3+, the target can use 2 Fight abilities this phase. After the first is used, however, the target has Strike-last for the rest of the turn.`,
         when: [COMBAT_PHASE],
@@ -710,7 +734,7 @@ const Units = {
     ],
   },
 
-  'Zombie Dragon': {
+  'Revenant Draconith': {
     effects: [
       //...GenericEffects.ZombieDragon
       {
@@ -731,10 +755,13 @@ const Units = {
         when: [MOVEMENT_PHASE],
       },
       {
-        name: `Armour Crunch - Once Per turn`,
-        desc: `Declare: If this unit charged this turn, pick an enemy Cavalry or Monster unit in combat with it to be the target. 
-        Effect: Roll a dice. If the roll is equal to or exceeds the targets Save characteristic, inflict 3 mortal damage on the target.`,
-        when: [COMBAT_PHASE],
+        name: `Red Ruin - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a D3. On a 2+, resolve the following effects:
+        Inflict an amount of mortal damage on the target equal to the roll.
+        Heal(X) this unit where X ia amount equal to the roll.
+        This unit can be removed from the battlefield and set up in reserve high above the battlefield.`,
+        when: [END_OF_TURN],
       },
     ],
   },
@@ -771,37 +798,65 @@ const Units = {
         desc: `Effect: Pick a friendly non-Hero Deathrattle Infantry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
+      {
+        name: `King of Shambling Bones - Once Per Turn`,
+        desc: `Declare: Pick a friendly Deathrattle unit within this unit's combat range to be the target.
+        Effect: Roll a dice. On a 3+, the target's melee weapons have Crit(2 Hits) for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+
+  'Wight Lord on Skeletal Steed': {
+    effects: [
+      //  BeheadingStrikeEffect,
+      {
+        name: `Lord of Trampling Bones - Passive`,
+        desc: `Effect: Add 1 to charge rolls for friendly Deathrattle Cavalary units while the are wholly within 12" of this unit.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Royal Companions - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly unit non-Hero Deathrattle Cavalary unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight abhility used by this unit has been resovled.`,
+        when: [HERO_PHASE],
+      },
     ],
   },
 
   'Wight King on Skeletal Steed': {
     effects: [
       {
-        name: `Royal Companions - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly non-Hero Deathrattle Cavalry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
+        name: `Ancient Barrow Curse - Passive`,
+        desc: `Effect: If an attack made with this unit's King's Relic Weapon scores a critical hit, the target unit becomes cursed for the rest of the battle. Subtract 1 from save rolls for cursed units.`,
         when: [COMBAT_PHASE],
       },
       {
-        name: `Lord of Trampling Bones - Passive`,
-        desc: `Effect: Add 1 to charge rolls for friendly Deathrattle Cavalry units while they are wholly within 12" of this unit.`,
-        when: [CHARGE_PHASE],
+        name: `Immortal Conqueror`,
+        desc: `Declare: Pick an objective or terrain feature withtin enemy territory.
+        Effect: For the rest of the turn, add 1 to hit rolls for attacks made by friendly Deathrattle units while they are wholly within 6" of that objective or terrain feature.`,
+        when: [HERO_PHASE],
       },
     ],
   },
 
-  'Black Knights': {
+  'Barrow Knights': {
     effects: [
       //  DeathlyChargeEffect,
       // StandardBearerEffect,
       {
-        name: `The Deathly Charge - Passive`,
-        desc: `Effect: If this unit charged this turn, its Barrow Lances have Crit (Mortal) for the rest of the turn.`,
-        when: [COMBAT_PHASE],
+        name: `Knights of the King - Passive`,
+        desc: `Effect: While any friendly Deathrattle Cavalary Heroes are within this unit's combat range, both this unit and those friendly units have Ward(5+).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Cursed to Rise Once More`,
+        desc: `Effect: You can return 1 slain model to this unit.`,
+        when: [END_OF_TURN],
       },
     ],
   },
 
-  'Grave Guard': {
+  'Barrow Guard': {
     effects: [
       {
         name: `Guardians of the King - Passive`,
@@ -861,7 +916,7 @@ const Units = {
       {
         name: `On the Hunt - Passive`,
         desc: `Effect: This unit can use a Run ability and still use Charge abilities later in the turn.`,
-        when: [MOVEMENT_PHASE],
+        when: [CHARGE_PHASE],
       },
     ],
   },
@@ -1039,6 +1094,32 @@ const Units = {
         name: `Death's Construction: Casting value of 7`,
         desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target, then make a casting roll of 2D6. 
         Effect: Until the start of your next turn, this unit, and any friendly Soulblight Gravelords units while they are wholly within 6" of this unit, cannot be picked to be the target of abilities used by the target other than Fight abilities.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Blades of the Hollow King': {
+    effects: [
+      {
+        name: `Aurelias`,
+        desc: `Declare: This unit can use this ability while its Aurelias is on the battlefield. 
+        Effect: Pick 1 of the following to apply for the rest of the turn:
+        Add 1 to the unit's power level.
+        Each time a casting roll is made for this unit, you can reroll 1 of the dice.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Solia, the Tutor`,
+        desc: `Declare: This unit can use this ability while its Cado Ezechiar is on the battlefield.
+        Effect: Pick 1 of the following to apply for the rest of the turn:
+        This unit has Ward(5+).
+        This unit's Ezechiarian Greatsword has Crit(Mortal).`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Retribution or Salvation: Casting value of 7`,
+        desc: `Declare: This unit can cast this spell while its Cado Ezechiar is on the battlefield. Pick a visible unit within 12" of this unit to be the target, then make a casting roll of 2D6. 
+        Effect: If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly Deathrattle or Deadwalkers unit, subtract 1 from wound rolls of combat attacks that target that unit for the rest of the turn.`,
         when: [HERO_PHASE],
       },
     ],

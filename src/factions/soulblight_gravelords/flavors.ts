@@ -25,7 +25,7 @@ const Flavors = {
   'Bacchanal of Blood': {
     effects: [
       {
-        name: `Aristocracy - Passive`,
+        name: `Aristocracy of the Night - Passive`,
         desc: `Effect: Add 1 to casting rolls for friendly Vampire units that are not in combat and add 1 to wound rolls for combat attacks made by friendly Vampire units that charged in the same turn.`,
         when: [DURING_GAME],
       },

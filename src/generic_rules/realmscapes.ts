@@ -292,7 +292,7 @@ const Realmscapes: TEntry[] = [
       },
       {
         name: `Regimented Forces`,
-        desc: `If a player has more regiments than their opponent, they can use a second, different Honour Guard ability, but they must pick a unit that is in a different regiment that is not led by the general to be the honour guard for that ability. You cannot pick units in a Regiment of Renown to be an honour guard.`,
+        desc: `If a player has more regiments than their opponent, they can use a second, different Honour Guard ability, but they must pick a unit that is in a different regiment that is not led by the general to be the honour guard for that ability. You cannot pick units in a Regiment of Renown to be an honour guard. If you chose not to pick an honour guard unit in your general's regiment, you can still pick an honour guard unit for a different regiment as described above.`,
         when: [DURING_SETUP],
       },
 

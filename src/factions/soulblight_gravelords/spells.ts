@@ -8,7 +8,7 @@ const Spells = {
     effects: [
       {
         name: `Vile Transference: Casting value of 7 (UNLIMITED)`,
-        desc: `Declare: Pick a friendly Soulblight Gravelords Wizard to cast this spell, pick a visible enemy unit within 18" of them that has not been picked to be the target of this ability this turn to be the target, then make a casting roll of 2D6. 
+        desc: `Declare: Pick a friendly Soulblight Gravelords Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
         Effect: Roll a number of dice equal to the number of models in the target unit. For each 6, inflict 1 mortal damage on that unit. If any enemy models were slain by this spell, Heal (D3) the caster.`,
         when: [HERO_PHASE],
       },
@@ -26,7 +26,7 @@ const Spells = {
       },
     ],
   },
- /* Soulpike: {
+  /* Soulpike: {
     effects: [
       {
         name: `Soulpike`,

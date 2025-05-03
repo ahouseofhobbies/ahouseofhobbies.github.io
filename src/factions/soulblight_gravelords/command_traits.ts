@@ -22,7 +22,7 @@ const CommandTraits = {
       {
         name: `Lash of the Sire - Once Per Turn`,
         desc: `Declare: Pick another friendly Soulblight Gravelords unit within this units combat range to be the target. 
-        Effect: Roll a dice. On a 2+, if the target is not in combat, it can move D6". If the target is in combat, it can make a pile-in move.`,
+        Effect: Roll a dice. On a 2+, if the target is not in combat, it can move D6" but cannot move into combat during any part of that move. If the target is in combat, it can make a pile-in move.`,
         when: [HERO_PHASE],
       },
     ],
