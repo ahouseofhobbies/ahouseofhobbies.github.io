@@ -133,6 +133,25 @@ const Units = {
       },
     ],
   },
+  'Abhorrant Ghoul King (SoG)': {
+    /*mandatory: {
+      spells: [keyPicker(spells, ['Unnatural Speed'])],
+    }, */
+    effects: [
+      // GenericEffects.WizardOneSpellEffect,
+      // RoyalBloodEffect,
+      {
+        name: `The King's Court - Passive`,
+        desc: `Effect: Add 1 to the Attacks characteristic of melee weapons used by other friendly non-Monster Flesh-eater Courts Heroes while they are wholly within 12" of this unit. In addition, add 1 to the Attacks characteristic of this units melee weapons for each other friendly non-Monster Flesh-eater Courts Hero wholly within 12" of this unit, to a maximum of +3.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Long Live the King - Passive`,
+        desc: `Effect: If this unit would be destroyed, before removing it from play, friendly non-Unique Flesh-eater Courts units wholly within 12" of this unit become enraged until the start of your next turn. Melee weapons used by friendly enraged units have Crit (Auto-wound) and score critical hits on unmodified hit rolls of 5+.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   'Abhorrant Ghoul King on Royal Terrorgheist': {
     /* mandatory: {
       spells: [keyPicker(spells, ['Ferocious Hunger'])],
@@ -295,6 +314,28 @@ const Units = {
         desc: `Declare: If this unit is not in combat, you can pick up to 2 friendly Crypt Flayers or Morbheg Knights units that are not in combat and are wholly within 12" of this unit to be the targets. 
         Effect: Remove this unit and the targets (if any) from the battlefield. Set up this unit again on the battlefield more than 9" from all enemy units. Then, set up each target wholly within 12" of this unit and more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+
+  'Abhorrant Gorewarden (SoG)': {
+    /* mandatory: {
+      spells: [keyPicker(spells, ['Winds of Shyish'])],
+    }, */
+    effects: [
+      //  GenericEffects.WizardOneSpellEffect,
+      // RoyalBloodEffect,
+      {
+        name: `Glorious Charge - Passive`,
+        desc: `Effect: While this unit is within the combat range of a friendly Knights unit and has charged this turn, this unit has Ward (5+) and its Gory Talons and Fangs have Charge (+1 Damage).`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Swooping Descent - Once Per Turn - End of Enemy Turn`,
+        desc: `Effect: Remove this unit from the battlefield, then set it up again more than 9" from all enemy units and either: 
+        Wholly within 6" of the edge of the battlefield, or  
+        Within 3" of an objective you do not control.`,
+        when: [END_OF_TURN],
       },
     ],
   },

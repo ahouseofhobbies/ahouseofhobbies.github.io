@@ -25,6 +25,30 @@ const Spells = {
       },
     ],
   },
+  'Lore of Frazzlegit': {
+    effects: [
+      {
+        name: `Bright Fright: Casting value of 6 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Gloomspite Gitz Wizard to cast this spell, pick up to 3 friendly visible Gloomspite Gitz units wholly within 12" of them to be the targets, then make a casting roll of 2D6. 
+        Effect: Each target can immediately use a Retreat ability as if it was your movement phase. No mortal damage is inflicted by those Retreat abilities.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Gitspeed: Casting value of 6`,
+        desc: `Declare: Pick a friendly Gloomspite Gitz Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Until the start of your next turn, add 2" to the Move characteristic of friendly non-Troggoth Gloomspite Gitz units while they are wholly within 12" of this unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Gaze of Glareface: Casting value of 6`,
+        desc: `Declare: Pick a friendly Gloomspite Gitz Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
+        Effect: Until the start of your next turn: 
+        The target cannot use Run abilities. 
+        Halve the Range characteristic of the targets ranged weapons.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
   /* 'The Hand of Gork': {
     effects: [
       {

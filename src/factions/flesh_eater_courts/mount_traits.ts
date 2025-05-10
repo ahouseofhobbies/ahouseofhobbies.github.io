@@ -4,6 +4,7 @@ import {
   CHARGE_PHASE,
   COMBAT_PHASE,
   DURING_SETUP,
+  END_OF_TURN,
   HERO_PHASE,
   MOVEMENT_PHASE,
   SHOOTING_PHASE,
@@ -11,7 +12,7 @@ import {
 } from 'types/phases'
 
 const MountTraits = {
- /* 'Gruesome Bite': {
+  /* 'Gruesome Bite': {
     effects: [
       {
         name: `Gruesome Bite`,
@@ -29,18 +30,36 @@ const MountTraits = {
         when: [SHOOTING_PHASE],
       },
     ],
-  },
+  }, */
   'Horribly Resilient': {
     effects: [
       {
         name: `Horribly Resilient`,
-        desc: `This unit's Royal Blood ability heals up to 2D3 wounds instead of up to D3 wounds.`,
-        when: [HERO_PHASE],
+        desc: `Effect: Heal (D3) this unit. If this unit is not a Hero, Heal (2D3) this unit instead.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Revered Monstrosity': {
+    effects: [
+      {
+        name: `Revered Monstrosity = Passive`,
+        desc: `Effect: Add 1 to hit rolls for combat attacks made with Companion weapons by other friendly non-Unique Flesh-eater Courts Monsters while they are wholly within 12" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Savage Abomination': {
+    effects: [
+      {
+        name: `Savage Abomination - Passive`,
+        desc: `Effect: Add 1 to the Attacks characteristic of this units Companion melee weapons.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
 
-  'Death From The Skies': {
+  /*'Death From The Skies': {
     effects: [
       {
         name: `Death From The Skies`,

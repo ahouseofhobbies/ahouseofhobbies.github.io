@@ -43,6 +43,26 @@ const Flavors = {
       },
     ],
   },
+  'Sunbiter Pack': {
+    effects: [
+      {
+        name: `Extra Snappy - Once Per Turn`,
+        desc: `Declare: Pick up to 3 friendly Gitmob units that charged this turn to be the targets. 
+        Effect: Add 1 to the Rend characteristic of Companion weapons used by the targets for the rest of turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Gittish Tide': {
+    effects: [
+      {
+        name: `Grots Upon Grots - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Squig Moonclan unit that is contesting an objective to be the target. 
+        Effect: Add 1 to the control score of the target unit for each model in that unit that is not contesting any objectives.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
 
   /*  Grimscuttle: {
     effects: [

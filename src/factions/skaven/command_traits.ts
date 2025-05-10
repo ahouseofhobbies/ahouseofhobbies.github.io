@@ -5,6 +5,7 @@ import {
   CHARGE_PHASE,
   COMBAT_PHASE,
   DURING_GAME,
+  DURING_SETUP,
   DURING_TURN,
   END_OF_COMBAT_PHASE,
   HERO_PHASE,
@@ -42,6 +43,37 @@ const CommandTraits = {
         This unit has Ward (4+). 
         Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly non-Hero Skaven Infantry unit within this units combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).`,
         when: [DURING_TURN],
+      },
+    ],
+  },
+  'Devious Underling': {
+    effects: [
+      {
+        name: `Devious Underling`,
+        desc: `Declare: Pick a friendly Skaven Hero on the battlefield with a Health characteristic that equals or exceeds this units Health characteristic to be the target. 
+        Effect: For the rest of the battle: 
+        While the target has not been slain, friendly Skaven Infantry units have Ward (6+) while they are wholly within 13" of this unit. 
+        Once the target has been slain, add 2 to charge rolls for friendly Skaven Infantry units while they are wholly within 13" of this unit.`,
+        when: [DURING_SETUP],
+      },
+    ],
+  },
+  Fleshmeddler: {
+    effects: [
+      {
+        name: `Fleshmeddler`,
+        desc: `Declare: Pick a friendly Moulder unit wholly within 13" of this unit to be the target. 
+        Effect: Pick 1 of the targets melee weapons. Add 1 to the Rend characteristic of that weapon for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Pit Tinkerer': {
+    effects: [
+      {
+        name: `Pit Tinkerer - Passive`,
+        desc: `Effect: You can reroll the random characteristic rolls for the Move characteristic of friendly Skryre War Machines while they are wholly within 13" of this unit. In addition, each time a friendly Skryre War Machine wholly within 18" of this unit uses the Rolling Doom or Whirling Doom ability, add 1 to the amount of mortal damage inflicted, if any.`,
+        when: [MOVEMENT_PHASE, CHARGE_PHASE],
       },
     ],
   },

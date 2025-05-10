@@ -5,6 +5,7 @@ import {
   DURING_GAME,
   END_OF_CHARGE_PHASE,
   END_OF_TURN,
+  HERO_PHASE,
   SAVES_PHASE,
   SHOOTING_PHASE,
   START_OF_ANY_PHASE,
@@ -33,7 +34,7 @@ const Artifacts = {
       },
     ],
   },
-  'Mirrorshield': {
+  Mirrorshield: {
     effects: [
       {
         name: `Mirrorshield - Passive`,
@@ -42,7 +43,36 @@ const Artifacts = {
       },
     ],
   },
-/*  'Hammer of Might': {
+  'Banner of Sigmar': {
+    effects: [
+      {
+        name: `Banner of Sigmar - Once Per Battle`,
+        desc: `Declare: Pick an objective within 18" of this unit to be the target. 
+        Effect: Until the start of your next turn, your opponent cannot control the target objective while they have no units contesting it.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Sigil of Morrda': {
+    effects: [
+      {
+        name: `Sigil of Morrda - Once Per Turn - Reaction: Opponent declared a command or a Rampage ability for a unit in combat with this unit`,
+        desc: `Effect: Roll a dice. On a 3+, that command or Rampage ability has no effect, it still counts as having been used and any command points spent to use that ability are still lost.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Beacon of Azyr': {
+    effects: [
+      {
+        name: `Beacon of Azyr - Once Per Battle`,
+        desc: `Declare: Pick a visible friendly Stormcast Eternals Wizard or Priest wholly within 12" of this unit to be the target. 
+        Effect: The next time this turn that the target uses a Prayer or Spell ability, instead of making a casting roll or chanting roll for them, you can use a value of 7 for the roll that cannot be modified. After that ability is resolved, if the target has any ritual points, reset their ritual points total to 0.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /*  'Hammer of Might': {
     effects: [
       {
         name: `Hammer of Might`,
@@ -62,7 +92,7 @@ const Artifacts = {
   }, */
 
   // Heavens-wrought Armour
- /* 'Drakescale Armour': {
+  /* 'Drakescale Armour': {
     effects: [
       {
         name: `Drakescale Armour`,

@@ -39,6 +39,25 @@ const Flavors = {
       },
     ],
   },
+  'Impassioned Serfs': {
+    effects: [
+      {
+        name: `Command Ability: Overwhelming Hordes`,
+        desc: `Declare: Pick a friendly Serfs unit that did not charge this turn and is in combat to use this ability, then pick an enemy unit in combat with that Serfs unit to be the target. 
+        Effect: The target cannot make pile-in moves for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Questing Courtiers': {
+    effects: [
+      {
+        name: `The Blessing of the Chalice - Passive`,
+        desc: `Effect: Friendly Flesh-eater Courts Heroes have Ward (5+) if they have destroyed a unit this battle.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   /*  Morgaunt: {
     effects: [
       {

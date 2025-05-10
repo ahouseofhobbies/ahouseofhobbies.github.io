@@ -1,6 +1,7 @@
 import {
   CHARGE_PHASE,
   COMBAT_PHASE,
+  DURING_GAME,
   END_OF_TURN,
   HERO_PHASE,
   MOVEMENT_PHASE,
@@ -60,6 +61,26 @@ const Flavors = {
         desc: `Declare: Pick up to 3 friendly Verminus units that charged this turn to be the targets. 
         Effect: Add 1 to the Rend characteristic of the targets melee weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Envoys of the Deepengnaw': {
+    effects: [
+      {
+        name: `Will of the Horned Rat - Passive`,
+        desc: `Effect: While a friendly Skaven Daemon is within the combat range of a friendly non-Hero Skaven Infantry unit: 
+        That Skaven Daemon has Ward (4+). 
+        Each time you make a successful ward roll for that Skaven Daemon, inflict 1 mortal damage on a friendly non-Hero Skaven Infantry unit within that units combat range after the damage sequence for that unit has been resolved.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Gathering of the Clans': {
+    effects: [
+      {
+        name: `Backstabbing Allies - Once Per Turn - Reaction: You declared the Redeploy command for a friendly Skaven unit`,
+        desc: `Effect: Pick up to 2 other friendly Skaven units that are not in combat and are wholly within 13" of the unit using the Redeploy command to be the targets. Each target must have at least one of the following keywords: Verminus, Skryre, Moulder, Pestilens, Eshin. After that Redeploy command has been resolved, each of the targets can immediately use the Redeploy command in an order of your choice without any command points being spent.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },

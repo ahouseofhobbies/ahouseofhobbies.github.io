@@ -674,6 +674,37 @@ const Units = {
       },
     ],
   },
+  'Grey Seer on Screaming Bell (SoG)': {
+    /* mandatory: {
+      spells: [keyPicker(spells, ['Cracks Call'])],
+    }, */
+    effects: [
+      // GenericEffects.WizardTwoSpellsEffect,
+      // ...AltarOfTheHornedRatEffects,
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Crushing Bulk is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `The Bell Tolls - Passive`,
+        desc: `Effect: If the current battle round number is odd, add 2" to the Move characteristic of friendly Skaven units while they are wholly within 13" of this unit. If the current battle round number is even, subtract 1 from hit rolls for attacks made by enemy units that target a friendly Skaven unit while it is wholly within 13" of this unit.`,
+        when: [DURING_GAME, MOVEMENT_PHASE, SHOOTING_PHASE, COMBAT_PHASE],
+      },
+      {
+        name: `Gnaw Through Reality: Casting value of 6`,
+        desc: `Declare: Make a casting roll of 2D6. 
+        Effect: Until the start of your next turn, this unit counts as a friendly Gnawhole for the purposes of the Gnawhole Ambush, Tunnels Through Reality and The Endless Vermintide abilities.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Echoes of the Vermindoom - Once Per Turn`,
+        desc: `Declare: Pick each friendly Skaven unit wholly within 13" of this unit to be the targets. 
+        Effect: Heal (D3) each target.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
   'Hell Pit Abomination': {
     effects: [
       {
@@ -713,6 +744,21 @@ const Units = {
       {
         name: `Warpstone Fumes - Once Per Turn`,
         desc: `Effect: Roll a dice. On a 2+, for the rest of the turn, subtract 1 from hit rolls for attacks made by enemy units while they are within 6" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Brood Terror (SoG)': {
+    effects: [
+      {
+        name: `Regenerating Terror`,
+        desc: `Effect: Heal (D6) this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Lend A Claw - Once Per Turn`,
+        desc: `Declare: Pick up to 4 other friendly non-Skryre Moulder units wholly within 12" of this unit to be the targets. 
+        Effect: Subtract 1 from the Attacks characteristic of this units Loosely Attached Bladed Limbs for the rest of the phase for each target picked. Add 1 to hit rolls for the targets attacks for the rest of the phase.`,
         when: [COMBAT_PHASE],
       },
     ],

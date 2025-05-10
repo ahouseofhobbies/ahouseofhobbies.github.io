@@ -287,6 +287,34 @@ const Units = {
       },
     ],
   },
+  'Iridan the Witness (SoG)': {
+    effects: [
+      {
+        name: `Demands of the Witness: Chant value of 3`,
+        desc: `Declare: Pick a visible friendly Ruination Chamber unit wholly within 12" of this unit to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, add 1 to the Rend characteristic of the targets melee weapons. If the chanting roll was 7+, you can pick another eligible unit to be a second target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `On Wings of Death - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. On a 3+: 
+        You can remove this unit from the battlefield and set it up again on the battlefield within 1" of the target. 
+        If the target charged this turn, subtract 1 from hit rolls for the targets attacks for the rest of the turn`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Guardian of the Final Threshold - Once Per Turn - Reaction: This unit was picked as the target of a Non-Core ability`,
+        desc: `Effect: Make a resistance roll of D6. On a 3+, that ability has no effect on this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `The Flames of Hope - Passive`,
+        desc: `Effect: You can reroll resistance rolls for friendly Ruination Chamber units while they are wholly within 12" of this unit.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   /*'Aventis Firestrike': {
    /* mandatory: {
       spells: [keyPicker(spells, ['Pyroelectric Blast'])],

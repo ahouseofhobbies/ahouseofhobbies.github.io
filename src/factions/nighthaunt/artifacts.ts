@@ -1,6 +1,12 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
-import { COMBAT_PHASE, END_OF_COMBAT_PHASE, END_OF_TURN, HERO_PHASE, START_OF_COMBAT_PHASE } from 'types/phases'
+import {
+  COMBAT_PHASE,
+  END_OF_COMBAT_PHASE,
+  END_OF_TURN,
+  HERO_PHASE,
+  START_OF_COMBAT_PHASE,
+} from 'types/phases'
 
 // Add individual artifacts here, and access them in other files!
 const Artifacts = {
@@ -100,6 +106,34 @@ const Artifacts = {
         name: `Soulfire Ring`,
         desc: `Effect: If any enemy models were slain by this units combat attacks this turn, Heal (D6) this unit.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Stave of Suffering': {
+    effects: [
+      {
+        name: `Stave of Suffering - Passive`,
+        desc: `Effect: While this unit is within 12" of any damaged enemy units or enemy units that have had any models slain, add 1 to casting rolls for friendly Nighthaunt units while they are wholly within 12" of this unit.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Tombstone of the Penitent': {
+    effects: [
+      {
+        name: `Tombstone of the Penitent - Passive`,
+        desc: `Effect: Add 1 to the Attacks characteristic of this units melee weapons for each non-Faction Terrain terrain feature that is being contested by friendly units, to a maximum of 8.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Amulet of Waking Nightmares': {
+    effects: [
+      {
+        name: `Amulet of Waking Nightmares`,
+        desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target. 
+        Effect: Roll a dice. On a 3+, for the rest of the turn, the target cannot be affected by the Guarded Hero ability or the Obscuring terrain ability.`,
+        when: [HERO_PHASE],
       },
     ],
   },

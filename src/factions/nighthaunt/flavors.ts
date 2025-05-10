@@ -1,7 +1,7 @@
 import { pickEffects } from 'factions/metatagger'
 import BattleTraits from './battle_traits'
 import { TItemDescriptions } from 'factions/factionTypes'
-import { DURING_GAME, END_OF_TURN, MOVEMENT_PHASE } from 'types/phases'
+import { DURING_GAME, END_OF_TURN, HERO_PHASE, MOVEMENT_PHASE } from 'types/phases'
 
 const Flavors = {
   'Vanishing Phantasms': {
@@ -43,7 +43,27 @@ const Flavors = {
       },
     ],
   },
- /* 'The Emerald Host': {
+  'Hungry Nexus': {
+    effects: [
+      {
+        name: `Greedy for Souls - Once Per Turn - End of Enemy Turn`,
+        desc: `Declare: Pick a friendly Nexus of Grief to be the target. 
+        Effect: For the rest of the turn, the target has a Move characteristic of 3". It can immediately move up to 3" and can move into combat but cannot end that move on a terrain feature or within 3" of an objective.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Deathrust Gheists': {
+    effects: [
+      {
+        name: `Blades of Eternal Rust - Once Per Turn - Enemy Hero Phase`,
+        desc: `Declare: Pick an enemy unit that is in combat with any friendly Nighthaunt units to be the target. 
+        Effect: Subtract 1 from save rolls for the target for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /* 'The Emerald Host': {
     effects: pickEffects(BattleTraits, ['The Emerald Host']),
   },
 

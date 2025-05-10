@@ -2,6 +2,7 @@ import { tagAs } from 'factions/metatagger'
 import {
   CHARGE_PHASE,
   COMBAT_PHASE,
+  DURING_GAME,
   END_OF_MOVEMENT_PHASE,
   END_OF_TURN,
   HERO_PHASE,
@@ -43,8 +44,36 @@ const CommandTraits = {
       },
     ],
   },
+  'Legendary Tenacity': {
+    effects: [
+      {
+        name: `Legendary Tenacity - Passive`,
+        desc: `Effect: The first time this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, Heal (D3) this unit.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Hours of Glory': {
+    effects: [
+      {
+        name: `Hours of Glory - Passive`,
+        desc: `Effect: This unit can be picked to use the Their Finest Hour ability even if it has already used it this battle. In addition, when this unit is picked to use the Their Finest Hour ability, add 5 to its control score for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Intense Piety': {
+    effects: [
+      {
+        name: `Intense Piety`,
+        desc: `Declare: Pick a visible enemy Priest or Wizard within 18" of this unit to be the target. 
+        Effect: Roll a dice. On a 3+, subtract 1 from casting rolls and chanting rolls for the target until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
 
- /* 'Master of the Celestial Menagerie': {
+  /* 'Master of the Celestial Menagerie': {
     effects: [
       {
         name: `Master of the Celestial Menagerie`,

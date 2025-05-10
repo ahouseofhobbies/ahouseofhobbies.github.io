@@ -378,6 +378,23 @@ const Units = {
       //  WhirlingDeathEffect,
     ],
   },
+  'Loonsmasha Fanatics (SoG)': {
+    effects: [
+      {
+        name: `Lost in the Horde`,
+        desc: `Declare: Pick this unit if it has not been deployed. 
+        Effect: Set up this unit in reserve lost in the horde. This unit has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Whirling Destruction - Once Per Turn`,
+        desc: `Declare: Pick this unit if it is lost in the horde. 
+        Effect: Set up this unit anywhere on the battlefield wholly within 3" of a friendly Moonclan Stabbas or Moonclan Shootas unit. Then, this unit can move 2D6". It can pass through enemy models and their combat ranges and can end that move in combat. Then, roll a dice for each enemy unit in combat with this unit or that this unit passed across as part of that move. Inflict an amount of mortal damage on that unit equal to the roll.`,
+        when: [CHARGE_PHASE],
+      },
+      //  WhirlingDeathEffect,
+    ],
+  },
   'Sporesplatta Fanatics': {
     effects: [
       {
@@ -389,6 +406,20 @@ const Units = {
         name: `A Prod in the Right Direction`,
         desc: `Effect: This unit can use the Normal Move ability as if it were your movement phase.`,
         when: [DURING_SETUP],
+      },
+    ],
+  },
+  'Sporesplatta Fanatics (SoG)': {
+    effects: [
+      {
+        name: `Choking Spore-Clouds - Passive`,
+        desc: `Effect: Add 1 to the Attacks characteristic of melee weapons used by other friendly Moonclan units while they are wholly within 12" of this unit. Subtract 1 from the Attacks characteristic of weapons used by enemy units while they are in combat with this unit.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+      {
+        name: `Spinning Loons - Once Per Turn`,
+        desc: `Effect: This unit can move 2D6". It can move through the combat ranges of enemy units and can finish that move in combat.`,
+        when: [END_OF_TURN],
       },
     ],
   },

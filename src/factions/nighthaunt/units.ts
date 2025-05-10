@@ -167,6 +167,24 @@ const Units = {
       },
     ],
   },
+  'Kurdoss Valentian, the Craven King (SoG)': {
+    effects: [
+      {
+        name: `Inescapable Mockery - Passive`,
+        desc: `Effect: Add 1 to hit rolls and wound rolls for this units combat attacks that target an enemy unit that has a lower Control characteristic than this unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `A Traitor's Legacy`,
+        desc: `Declare: If this unit is in combat, pick a visible friendly Nighthaunt unit wholly within 12" of this unit to be the target. 
+        Effect: Pick 1 of the following to apply for the rest of the turn: 
+        Regicide and Kinslaying: The targets melee weapons have AntiHero (+1 Rend). 
+        Usurpation and Larceny: Add 5 to the targets control score. 
+        Sedition and Betrayal: Enemy units cannot use commands while they are in combat with the target.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   'Reikenor the Grimhailer': {
     /* mandatory: {
       spells: [keyPicker(spells, ['Wraithstorm'])],
@@ -438,6 +456,29 @@ const Units = {
         name: `Runaway Coach`,
         desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
         Effect: Roll a D3. On a 2+, inflict an amount of mortal damage equal on the target equal to the roll.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'Black Coach (SoG)': {
+    effects: [
+      {
+        name: `Spectral Attendants - Once Per Turn`,
+        desc: `Effect: Pick 1 of the following to apply for the rest of the turn: 
+        Noble Blade: This units melee weapons, including Companion weapons, have Crit (Mortal) instead of Crit (Auto-wound). 
+        Unholy Grail: Pick a friendly Nighthaunt unit wholly within 12" of this unit. Each time that unit uses the Rally command, you receive 3 additional rally points. 
+        Tome of Undead Lore: This unit has Wizard (1).`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `One Stop, No Return - Once Per Turn`,
+        desc: `Declare: Pick an objective you do not control to be the target. 
+        Effect: For the rest of the turn, while enemy units are contesting the target objective, they cannot score critical hits while this unit is also contesting it (hit rolls that would be critical hits score hits instead).`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Spectral Charge`,
+        desc: `Effect: For the rest of the phase, add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.`,
         when: [CHARGE_PHASE],
       },
     ],
