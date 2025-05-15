@@ -8,10 +8,12 @@ import {
   START_OF_SETUP,
   WARDS_PHASE,
   COMBAT_PHASE,
+  DURING_GAME,
+  MOVEMENT_PHASE,
 } from 'types/phases'
 
 const Artifacts = {
- /* 'Masterwrought Armour': {
+  /* 'Masterwrought Armour': {
     effects: [
       {
         name: `Masterwrought Armour`,
@@ -40,7 +42,35 @@ const Artifacts = {
       },
     ],
   },
- /* 'Spell in a Bottle': {
+  'Spell in a Bottle': {
+    effects: [
+      {
+        name: `Spell in a Bottle - Once Per Battle`,
+        desc: `Effect: This unit can use a Summon ability from the manifestation lore you picked during army composition as if it had Wizard (1). Instead of making a casting roll for that Summon ability, the casting roll is 7 and cannot be modified. That Summon ability cannot be unbound.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Karst-Bana Aetherpowered Combat Rig': {
+    effects: [
+      {
+        name: `Karst-Bana Aetherpowered Combat Rig - Passive`,
+        desc: `Effect: This unit has Ward (5+). In addition, add 1 to the Attacks characteristic of this units melee weapons.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Emberstone Flare': {
+    effects: [
+      {
+        name: `Emberstone Flare = Once Per Battle`,
+        desc: `Declare: Pick a friendly Kharadron Overlords unit that has Fly and is not in combat to be the target. 
+        Effect: Remove the target from the battlefield and set it up again wholly within 9" of this unit and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  /* 'Spell in a Bottle': {
     effects: [
       {
         name: `Spell in a Bottle`,
@@ -73,7 +103,7 @@ const Artifacts = {
     ],
   },
   // Grundstok Expeditionary Force
- /* 'Aetheric Nullifier': {
+  /* 'Aetheric Nullifier': {
     effects: [
       {
         name: `Aetheric Nullifier`,

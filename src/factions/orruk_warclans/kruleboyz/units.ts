@@ -155,6 +155,22 @@ const KruleboyzUnits = {
       },
     ],
   },
+  'Killaboss on Great Gnashtoof (SoG)': {
+    effects: [
+      // AllPartOfDaPlanEffect,
+      {
+        name: `Prowling the Flanks - Once Per Turn`,
+        desc: `Effect: If this unit is wholly within 6" of the battlefield edge, remove this unit from the battlefield and set it up again wholly within 6" of the battlefield edge and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Drag 'Em Out - Once Per Turn`,
+        desc: `Declare: Pick an enemy Infantry Hero in combat with this unit to be the target. 
+        Effect: Roll 2D6. This unit can move a distance in inches up to the value of the roll. Then, if possible, your opponent must remove the target from the battlefield and set it up again within 1" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   'Killaboss on Corpse-Rippa Vulcha': {
     effects: [
       //  AllPartOfDaPlanEffect,
@@ -323,6 +339,27 @@ const KruleboyzUnits = {
         desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
         Effect: Roll a number of dice equal to the number of damage points the target has. For each 5+, inflict 1 mortal damage on the target.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Swampboss Skumdrekk (SoG)': {
+    effects: [
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Sloppklaws Bite and Talons is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Rigged Odds - Passive`,
+        desc: `Effect: The first time you fail a dirty trick roll each turn, give this unit 1 betting chip. 
+        Each time you make a dirty trick roll for an ability that targets a unit wholly within 12" of this unit, you can spend any number of betting chips. For each betting chip you spend, add 1 to that dirty trick roll.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Thrashing Tail - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. If the roll is less than or equal to the number of models in the target unit, for the rest of the turn, each time this unit uses an Attack ability, if all of the attacks target that enemy unit, those attacks score critical hits on unmodified hit rolls of 5+. This ability also affects Companion weapons.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

@@ -39,6 +39,39 @@ const CommandTraits = {
       },
     ],
   },
+  'Draw Steel!': {
+    effects: [
+      {
+        name: `Draw Steel!`,
+        desc: `Declare: If this unit charged this turn, pick a friendly Cities of Sigmar Human unit that charged this turn and is wholly within 12" of this unit to be the target. 
+        Effect: Add 1 to the Attacks characteristic of the targets melee weapons for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Astute Tactician': {
+    effects: [
+      {
+        name: `Astute Tactician`,
+        desc: `Declare: Pick a friendly Cities of Sigmar unit wholly within 12" of this unit to be the target. 
+        Effect: For the rest of the turn, add 1 to charge rolls for the target and add 2 to run rolls for the target.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Cosmopolitan Leader': {
+    effects: [
+      {
+        name: `Cosmopolitan Leader`,
+        desc: `Declare: Pick a friendly Cities of Sigmar Infantry or Cavalry unit wholly within 12" of this unit to be the target. If this unit is Human, pick up to 3 eligible units to be the targets instead. 
+        Effect: Roll a dice. On a 3+, until the start of your next turn: 
+        If the target is Human, add 1 to wound rolls for the targets combat attacks. 
+        If the target is Duardin, add 1 to charge rolls for the target. 
+        If the target is Aelf, add 3 to the targets control score.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
   /*'Fiery Temper': {
     effects: [
       {

@@ -5,8 +5,10 @@ import {
   CHARGE_PHASE,
   COMBAT_PHASE,
   DURING_GAME,
+  DURING_SETUP,
   END_OF_MOVEMENT_PHASE,
   END_OF_SETUP,
+  END_OF_TURN,
   HERO_PHASE,
   MOVEMENT_PHASE,
   SAVES_PHASE,
@@ -53,11 +55,34 @@ const BattleTraits = {
         desc: `Effect: Friendly Nighthaunt units that are in combat can use Charge abilities this phase. However, if a unit that is in combat uses a Charge ability and the charge roll is 3 or less, that unit does not count as having charged that turn.`,
         when: [CHARGE_PHASE],
       },
+      {
+        name: `Sepulchral Apparations - Once Per Battle`,
+        desc: `Effect: If there is a friendly Nexus of Grief on the battlefield, you can set up up to 2 additional Nexuses of Grief on the battlefield. Each must be set up wholly outside enemy territory, more than 3" from all objectives and other terrain features, and more than 12" from all other friendly Nexuses of Grief.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Nexus of Grief (Faction Terrain) -  Hungry Crypts - Once Per Turn`,
+        desc: `Effect: Remove this terrain feature from the battlefield and set it up again on the battlefield within 3" of a friendly Nighthaunt unit, more than 3" from all objectives and enemy units, and more than 12" from all other friendly Nexuses of Grief.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Nexus of Grief (Faction Terrain) -  Screams of the Penitent - Passive`,
+        desc: `Effect: Enemy units cannot use commands while they are within 3" of this terrain feature.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Nexus of Grief (Faction Terrain) -  Awful Refashioning - Once Per Turn`,
+        desc: `Declare: Pick a friendly Nexus of Grief, then pick up to 3 friendly Nighthaunt units wholly within 12" of it to be the targets. You cannot pick the same unit to be a target of this ability more than once per phase. 
+        Effect: For each target: 
+        If the target is damaged, Heal (D3) the target. 
+        If the target is not damaged, return a number of slain models to it with a combined Health characteristic of up to D3.`,
+        when: [END_OF_TURN],
+      },
     ],
   },
 
   // The Emerald Host
-/*  'The Emerald Host': {
+  /*  'The Emerald Host': {
     effects: [
       {
         name: `The Emerald Curse`,

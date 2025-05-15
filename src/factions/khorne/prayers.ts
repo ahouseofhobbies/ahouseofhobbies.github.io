@@ -3,7 +3,7 @@ import { tagAs } from 'factions/metatagger'
 import { HERO_PHASE } from 'types/phases'
 
 const Prayers = {
- 'Blood Blessings of Khorne': {
+  'Blood Blessings of Khorne': {
     effects: [
       {
         name: `Unholy Flames: Chant value of 5 (UNLIMITED)`,
@@ -21,6 +21,28 @@ const Prayers = {
         name: `Blood Boil: Chant value of 4`,
         desc: `Declare: Pick a friendly Blades of Khorne Priest to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
         Effect: Roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on the target. In addition, if the chanting roll was 8+, subtract 1 from wound rolls for the target until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Gifts of the Blood God': {
+    effects: [
+      {
+        name: `Goreflesh: Chant value of 3 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Blades of Khorne Priest to chant this prayer, pick a visible friendly Blades of Khorne unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, ignore the first damage point allocated to the target in each phase. If the chanting roll was 8+, you can pick another eligible unit to be a second target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Runes of Loathing: Chant value of 3`,
+        desc: `Declare: Pick a friendly Blades of Khorne Priest to chant this prayer, pick a friendly Blades of Khorne unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, the target has Ward (3+) against damage inflicted by Spell abilities, Prayer abilities and abilities used by Manifestations (including Fight abilities). If the chanting roll was 8+, you can pick another eligible unit to be a second target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Gift of Apoplexy: Chant value of 3`,
+        desc: `Declare: Pick a friendly Blades of Khorne Priest to chant this prayer, pick a visible enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, each time the target uses an ability that is not a Move, Charge or Fight ability, after that ability is resolved, inflict D3 mortal damage on the target. If the chanting roll was 8+, inflict 3 mortal damage instead of D3.`,
         when: [HERO_PHASE],
       },
     ],

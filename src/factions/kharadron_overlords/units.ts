@@ -148,6 +148,23 @@ const Units = {
       },
     ],
   },
+  'Codewright (SoG)': {
+    effects: [
+      {
+        name: `I'm Watching You`,
+        desc: `Effect: Give this unit D3 vexed points.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Alright, Listen Up - Once Per Turn`,
+        desc: `Declare: If this unit is wholly within 12" of a friendly non-Hero Kharadron Overlords unit, pick a visible enemy unit within 18" of this unit to be the target. Then, choose to spend either 3 or 6 vexed points. 
+        Effect: Pick 1 of the following effects to apply to the target for the rest of the turn: 
+        Do you see how fast they are going?!: If you spent 3 vexed points, subtract D3 from the targets Move characteristic. If you spent 6 vexed points, halve the targets Move characteristic. 
+        Those weapons are against regulation!: If you spent 3 vexed points, subtract 1 from wound rolls for the targets combat attacks. If you spent 6 vexed points, subtract 1 from the Rend characteristic of the targets melee weapons and subtract 1 from wound rolls for the targets combat attacks.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
   'Endrinmaster with Dirigible Suit': {
     effects: [
       {
@@ -365,6 +382,25 @@ const Units = {
       DisembarkFromDestroyedVessel,
       DrillEffect('Cannon', '5+'),
       SkyCannonEffect, */
+    ],
+  },
+  'Grundstok Gunhauler (SoG)': {
+    effects: [
+      {
+        name: `Transport Capacity - Passive`,
+        desc: `Effect: This unit cannot transport any friendly units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Attack Squadron - Passive`,
+        desc: `Effect: While this unit is wholly within 12" of any other friendly Grundstok Gunhaulers, it can use Shoot abilities even if it used the Run ability in the same turn.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Fighter Vessels`,
+        desc: `Effect: If this unit used a Shoot ability this phase, this unit can move D6". It cannot end that move in combat.`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   'Arkanaut Frigate': {

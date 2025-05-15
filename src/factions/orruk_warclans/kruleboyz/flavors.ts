@@ -1,10 +1,16 @@
-import { COMBAT_PHASE, DURING_GAME, MOVEMENT_PHASE, SHOOTING_PHASE, TURN_ONE_SHOOTING_PHASE } from 'types/phases'
+import {
+  COMBAT_PHASE,
+  DURING_GAME,
+  MOVEMENT_PHASE,
+  SHOOTING_PHASE,
+  TURN_ONE_SHOOTING_PHASE,
+} from 'types/phases'
 import rule_sources from '../rule_sources'
 import meta_rule_sources from 'meta/rule_sources'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const KruleboyzFlavors = {
-  "Kruleboyz Klaw": {
+  'Kruleboyz Klaw': {
     effects: [
       {
         name: `Swamp Shroud - Passive`,
@@ -41,7 +47,27 @@ const KruleboyzFlavors = {
       },
     ],
   },
-/*  Skulbugz: {
+  'Swamphorde Bullies': {
+    effects: [
+      {
+        name: `Gangin' Up - Once Per Turn`,
+        desc: `Declare: Pick a friendly Kruleboyz unit to be the target. That unit must be in combat with an enemy unit that is in combat with another friendly Kruleboyz unit. Kragnos cannot be picked to be the target. 
+        Effect: For the rest of the turn, add 1 to the Attacks characteristic of the targets melee weapons.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Badmouthing Baiterz': {
+    effects: [
+      {
+        name: `Krule Mockery - Once Per Turn`,
+        desc: `Declare: Pick a friendly Kruleboyz unit to be the Insult Hurla, pick a visible enemy unit within 18" of it to be the target, then make a dirty trick roll. 
+        Effect: Until the start of your next turn, each time the target uses a Move ability and does not end that move closer to the Insult Hurla than it was at the start of that move, inflict D6 mortal damage on the target after that Move ability has been resolved.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  /*  Skulbugz: {
     effects: [
       {
         name: `Crawly Swarm`,

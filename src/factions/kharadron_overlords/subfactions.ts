@@ -29,7 +29,7 @@ import { IItemDescription, TItemDescriptions } from 'factions/factionTypes'
 
 const subFactions = {
   [KHARADRON_OVERLORDS]: {
-  //  ...baseSubfaction,
+    //  ...baseSubfaction,
     effects: pickEffects(BattleTraits, [KHARADRON_OVERLORDS]),
 
     available: {
@@ -39,14 +39,15 @@ const subFactions = {
       command_abilities: [CommandAbilities],
       command_traits: [CommandTraits],
       //endless_spells: [EndlessSpells],
+      mount_traits: [MountTraits],
       flavors: [Flavors],
       grand_strategies: [GrandStrategies],
       //prayers: [Prayers],
       //spells: [Spells],
       units: [Units],
     },
-  }, 
-/* 'Grundstok Expeditionary Force': {
+  },
+  /* 'Grundstok Expeditionary Force': {
     ...baseSubfaction,
     effects: pickEffects(BattleTraits, ['Grundstok Expeditionary Force']),
   }, */

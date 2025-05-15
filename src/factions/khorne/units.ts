@@ -300,6 +300,20 @@ const Units = {
       // MurderousChargeEffect,
     ],
   },
+  'Bloodcrushers (SoG)': {
+    /* mandatory: {
+      prayers: [keyPicker(Prayers, ['Blood Call'])],
+    }, */
+    effects: [
+      {
+        name: `Brass Stampede - Once Per Turn`,
+        desc: `Declare: If this unit charged this turn, pick an enemy unit in combat with it to be the target. 
+        Effect: Roll a dice. On a 3+, this unit can move 2D6". It can pass through models in the target unit and must end that move in combat.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+
   'Herald of Khorne on Blood Throne': {
     /* mandatory: {
       prayers: [keyPicker(Prayers, ['Blood Call'])],
@@ -440,6 +454,25 @@ const Units = {
         desc: `Declare: Pick a friendly Gorechosen unit wholly within 12" of this unit to be the target. 
         Effect: The target has Strike-first for the rest of the turn.`,
         when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Mighty Lord of Khorne (SoG)': {
+    /* mandatory: {
+      command_abilities: [keyPicker(CommandAbilities, ["'Bring Me Their Skull!'"])],
+    }, */
+    effects: [
+      {
+        name: `Command Ability: Howl of Blood-Curdling Savagery - Once Per Battle`,
+        desc: `Declare: If this unit is in combat, pick a visible friendly Bloodbound unit that is wholly within 12" of this unit and not in combat to be the target. Then, make a charge roll of 2D6. 
+        Effect: The target can move a distance up to the value of the charge roll. That unit can move through the combat ranges of any enemy units and must end that move within 12" of a visible enemy unit. If it does so, the target has charged.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Reality-Splitting Axe - Once Per Turn`,
+        desc: `Declare: This unit can use this ability even if it has been destroyed. Pick an enemy Hero that was allocated any damage points by this units Axe of Khorne this turn to be the target. 
+        Effect: Roll a dice. On a 5+, the target is automatically destroyed and cannot be replaced for the rest of the battle.`,
+        when: [END_OF_TURN],
       },
     ],
   },

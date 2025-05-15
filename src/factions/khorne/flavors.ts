@@ -4,6 +4,7 @@ import {
   COMBAT_PHASE,
   DURING_GAME,
   HERO_PHASE,
+  MOVEMENT_PHASE,
   WARDS_PHASE,
   WOUND_ALLOCATION_PHASE,
 } from 'types/phases'
@@ -20,7 +21,7 @@ const Flavors = {
     ],
   },
 
- /* Bloodlords: {
+  /* Bloodlords: {
     effects: [
       {
         name: `The First to Draw Blood`,
@@ -66,6 +67,26 @@ const Flavors = {
         name: `Tireless Conquerors - Passive`,
         desc: `Effect: Add 1 to hit rolls for combat attacks made by friendly Bloodbound units that target an enemy unit that is contesting an objective you do not control.`,
         when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Tournament of Skulls': {
+    effects: [
+      {
+        name: `Bloody Competitiors - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Hero Bloodbound unit and a friendly non-Hero Blades of Khorne Daemon unit to be the targets. 
+        Effect: Until the start of your next turn, while the targets are wholly within 12" of each other, add 1 to wound rolls for the targets combat attacks.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The Goretide': {
+    effects: [
+      {
+        name: `Tide of Savagery - Once Per Turn`,
+        desc: `Declare: Pick a friendly Bloodbound Hero and up to 2 other friendly Bloodbound units that are wholly within 12" of that Hero to be the targets. 
+        Effect: Add 2" to the targets Move characteristic for the rest of the turn.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },

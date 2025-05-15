@@ -1,5 +1,13 @@
 import { TItemDescriptions } from 'factions/factionTypes'
-import { CHARGE_PHASE, COMBAT_PHASE, DURING_SETUP, HERO_PHASE, MOVEMENT_PHASE, SHOOTING_PHASE, WOUND_ALLOCATION_PHASE } from 'types/phases'
+import {
+  CHARGE_PHASE,
+  COMBAT_PHASE,
+  DURING_SETUP,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
+  SHOOTING_PHASE,
+  WOUND_ALLOCATION_PHASE,
+} from 'types/phases'
 import rule_sources from './rule_sources'
 import meta_rule_sources from 'meta/rule_sources'
 
@@ -43,7 +51,33 @@ const Flavors = {
       },
     ],
   },
- /* 'Null Myriad': {
+  'Tithe Guards': {
+    effects: [
+      {
+        name: `Plentiful Bone - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Unique Ossiarch Bonereapers Wizard to use this ability, then pick up to 3 visible friendly non-Fly Ossiarch Bonereapers units wholly within 12" of that Wizard to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+: 
+        If the target is damaged, Heal (X) the target where X is an amount equal to the roll. 
+        If the target is not damaged, return a number of slain models to it with a combined Health characteristic equal to or less than the roll.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Hekatos Drillmasters': {
+    effects: [
+      {
+        name: `Disciplined Hekatoi - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Hero non-Fly Ossiarch Bonereapers Infantry unit to be the target. 
+        Effect: Pick 1 of the following effects to apply until the start of your next turn: 
+        The target has Ward (5+). 
+        Add 1 to charge rolls for the target. 
+        Add 1 to wound rolls for the targets attacks. 
+        The targets melee weapons have Anti-charge (+1 Rend).`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /* 'Null Myriad': {
     effects: [
       {
         name: `Eldritch Nulls`,

@@ -204,6 +204,19 @@ const Units = {
       //  NecrophorosEffect,
     ],
   },
+  'Mortek Guard (SoG)': {
+    /* mandatory: {
+      command_abilities: [keyPicker(CommandAbilities, ['Shieldwall'])],
+    }, */
+    effects: [
+      {
+        name: `Shields of the Legion - Once Per Phase - Reaction: A friendly Ossiarch Boneshapers War Machine, Monster, or Mortisan unit within this unit's combat range was targeted by an Attack ability`,
+        desc: `Effect: For the rest of the phase, subtract 1 from the Rend characteristic of weapons used for attacks that target that friendly unit.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+      //  NecrophorosEffect,
+    ],
+  },
   'Kavalos Deathriders': {
     /* mandatory: {
       command_abilities: [keyPicker(CommandAbilities, ['Deathrider Wedge'])],
@@ -365,6 +378,25 @@ const Units = {
         Effect: Roll a dice. On a 3+: 
         If the target is damaged, Heal (3) the target. 
         If the target is not damaged, return a number of slain models to the target unit with a combined Health characteristic of up to 3.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Mortisan Boneshaper (SoG)': {
+    /* mandatory: {
+      spells: [keyPicker(Spells, ['Shard-storm'])],
+    }, */
+    effects: [
+      //   GenericEffects.WizardOneSpellEffect,
+      {
+        name: `Legion Quartermaster - Passive`,
+        desc: `Effect: Each time a friendly non-Hero Ossiarch Bonereapers unit wholly within 12" of this unit uses the Rally command, you can make 3 additional rally rolls of D6.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Command Ability: Boneshaper`,
+        desc: `Declare: If this unit is not in combat, pick a friendly Mortek Guard unit that has been destroyed to be the target. 
+        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
     ],

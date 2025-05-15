@@ -295,6 +295,16 @@ const Units = {
       },
     ],
   },
+  'Freeguild Cavaliers (SoG)': {
+    effects: [
+      {
+        name: `The Red Work`,
+        desc: `Declare: If this unit is in combat and has not charged this turn, pick this unit and up to 1 friendly Freeguild Cavalier-Marshal or Freeguild Marshal on Griffon within this units combat range to be the targets. 
+        Effect: Roll a dice. Add 1 to the roll if there are fewer models in this unit than the total number of enemy models in units that are in combat with this unit. On a 4+, for the rest of the turn, the targets count as having charged.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
   'Freeguild Fusiliers': {
     effects: [
       {
@@ -877,6 +887,25 @@ const Units = {
       {
         name: `Voice of the God-King - Passive`,
         desc: `Effect: This unit can use the Unbind ability as if it had Wizard (1).`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Pontifex Zenestra (SoG)': {
+    effects: [
+      {
+        name: `Sigmar's Will: Chant value of 4`,
+        desc: `Declare: Make a chanting roll of D6. If the roll is an unmodified 1, you can reroll the dice. 
+        Effect: Pick 1 of the following effects to apply until the start of your next turn. Pick up to 2 different effects instead if the chanting roll was 10+. 
+        Hallowed Ground: Enemy units using the Normal Move ability cannot end that move within 5" of a friendly Cities of Sigmar Human unit that is wholly within 12" of this unit. 
+        Fervent Prayers: Each time a friendly Cities of Sigmar Human model that is wholly within 12" of this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. On a 6, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved. 
+        Salvation: Pick up to 3 friendly Cities of Sigmar Human units to be the targets. Remove those units from the battlefield and set them up again wholly within 12" of this unit and not in combat. Those units cannot use Charge abilities for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Word of the God-King`,
+        desc: `Declare: Pick an enemy Wizard, Priest or Manifestation within 18" of this unit to be the target. 
+        Effect: Roll a dice. On a 3+, if the target is a Manifestation, it is banished. Otherwise, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [HERO_PHASE],
       },
     ],

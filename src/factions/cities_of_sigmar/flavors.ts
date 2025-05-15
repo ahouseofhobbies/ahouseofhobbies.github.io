@@ -52,7 +52,27 @@ const Flavors = {
       },
     ],
   },
- /* Hallowheart: {
+  'Veteran Cannoneers': {
+    effects: [
+      {
+        name: `Canny Crews - Once Per Turn`,
+        desc: `Declare: Pick up to 3 friendly Ironweld Great Cannon units to be the targets. 
+        Effect: For the rest of the turn, each time the target uses a Shoot ability, you can reroll 1 hit roll, or 1 wound roll, or 1 random characteristic roll for the Damage characteristic.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'Fearless Exemplars': {
+    effects: [
+      {
+        name: `Front-Line Leader - Once Per Turn`,
+        desc: `Declare: Pick a friendly Cities of Sigmar Human Infantry Hero to use this ability. Then, you can pick up to 1 friendly non-Hero Human Infantry unit and up to 1 friendly Human War Machine unit that are wholly within 12" of that Hero to be the targets. 
+        Effect: While the targets are wholly within 12" of that Hero, add 1 to the Rend characteristic of the target Infantry units melee weapons and the target War Machine units ranged weapons until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /* Hallowheart: {
     effects: [
       {
         name: `Wild Magic`,

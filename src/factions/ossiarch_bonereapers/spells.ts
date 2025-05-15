@@ -25,7 +25,31 @@ const Spells = {
       },
     ],
   },
- /* 'Protection of Nagash': {
+  'Lore of Necrotheurgy': {
+    effects: [
+      {
+        name: `Bolster Creation: Casting value of 5 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Ossiarch Bonereapers Wizard to cast this spell, pick a visible friendly Ossiarch Bonereapers unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
+        Effect: Until the start of your next turn, ignore the first damage point allocated to the target in each phase.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Invigorate the Ranks: Casting value of 5`,
+        desc: `Declare: Pick a friendly Ossiarch Bonereapers Wizard to cast this spell, pick a visible friendly Ossiarch Bonereapers unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
+        Effect: Add 1 to the Attacks characteristic of the targets melee weapons until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Soul-Claim: Casting value of 5`,
+        desc: `Declare: Pick a friendly Ossiarch Bonereapers Wizard to cast this spell, then pick a visible enemy unit within 18" of them to be the enemy target. Then, you can pick a visible friendly Ossiarch Bonereapers unit wholly within 12" of that Wizard to be a friendly target. Then, make a casting roll of 2D6. 
+        Effect: Inflict D3 mortal damage on the enemy target. If any models are slain by this ability, pick 1 of the following: 
+        Heal (3) the friendly target. 
+        Return a number of slain models to the friendly target with a combined Health characteristic of up to 3.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /* 'Protection of Nagash': {
     effects: [
       {
         name: `Protection of Nagash`,

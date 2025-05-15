@@ -1,22 +1,29 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
-import { COMBAT_PHASE, DURING_GAME, END_OF_CHARGE_PHASE, HERO_PHASE, WARDS_PHASE } from 'types/phases'
+import {
+  COMBAT_PHASE,
+  DURING_GAME,
+  END_OF_CHARGE_PHASE,
+  HERO_PHASE,
+  SHOOTING_PHASE,
+  WARDS_PHASE,
+} from 'types/phases'
 
 const OrrukWarclanMountTraits = {
- /* "Tough 'Un": {
+  "Tough 'Un": {
     effects: [
       {
-        name: `Tough 'Un`,
-        desc: `MONSTER only. Unless this model has a number of wounds allocated to it that exceeds half its Wounds characteristic, use the top row on its damage table, regardless of how many wounds it has suffered.`,
-        when: [DURING_GAME],
+        name: `Tough 'Un - Passive`,
+        desc: `Effect: Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
     ],
   },
-  "Fast 'Un": {
+  "Sneaky 'Un": {
     effects: [
       {
-        name: `Fast 'Un`,
-        desc: `Once per battle, in your hero phase, this model can make a normal move.`,
+        name: `Sneaky 'Un - Once Per Battle - Enemy Hero Phase`,
+        desc: `Effect: This unit can use the Normal Move or Retreat ability as if it were your movement phase. In addition, no mortal damage is inflicted on this unit by Retreat abilities this phase.`,
         when: [HERO_PHASE],
       },
     ],
@@ -24,13 +31,13 @@ const OrrukWarclanMountTraits = {
   "Mean 'Un": {
     effects: [
       {
-        name: `Mean 'Un`,
-        desc: `MONSTER only. When you carry out the Stomp monstrous rampage with this model, the enemy unit you pick suffers D6 mortal wounds on a 2+ instead of D3.`,
-        when: [END_OF_CHARGE_PHASE],
+        name: `Mean 'Un - Passive`,
+        desc: `Effect: Add 1 to hit rolls for attacks made with this units Companion weapons.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
-  "Loud 'Un": {
+  /* "Loud 'Un": {
     effects: [
       {
         name: `Loud 'Un`,
