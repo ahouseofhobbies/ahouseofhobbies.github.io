@@ -190,6 +190,32 @@ const Units = {
       },
     ],
   },
+  'Auric Runeson on Magmadroth (SoG)': {
+    effects: [
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Magmadroths Claws and Horns is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Fire, Blood and Vengeance - Once Per Battle`,
+        desc: `Declare: Pick a friendly Auric Runefather on Magmadroth on the battlefield to be the target. 
+        Effect: Add 1 to the Damage characteristic of this units melee weapons, including Companion weapons, while the target is in combat, damaged or destroyed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Calamitous Crash - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. On a 3+, roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Volcanic Blood - Passive`,
+        desc: `Effect: If you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   'Auric Runesmiter': {
     /* mandatory: {
       prayers: [keyPicker(Prayers, ['Runic Empowerment'])],

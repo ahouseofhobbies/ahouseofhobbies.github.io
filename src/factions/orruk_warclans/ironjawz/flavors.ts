@@ -1,10 +1,17 @@
 import { keyPicker } from 'factions/metatagger'
-import { CHARGE_PHASE, COMBAT_PHASE, DURING_GAME, END_OF_COMBAT_PHASE, HERO_PHASE, MOVEMENT_PHASE } from 'types/phases'
+import {
+  CHARGE_PHASE,
+  COMBAT_PHASE,
+  DURING_GAME,
+  END_OF_COMBAT_PHASE,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
+} from 'types/phases'
 import command_abilities from './command_abilities'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const IronjawzFlavors = {
- /* Ironsunz: {
+  /* Ironsunz: {
     mandatory: {
       command_abilities: [keyPicker(command_abilities, ["Alright, Get 'Em!"])],
     },
@@ -37,7 +44,7 @@ const IronjawzFlavors = {
       },
     ],
   },
-  'Ironfist': {
+  Ironfist: {
     effects: [
       {
         name: `Smashin' and Bashin' - Passive`,
@@ -46,12 +53,32 @@ const IronjawzFlavors = {
       },
     ],
   },
-  'Weirdfist': {
+  Weirdfist: {
     effects: [
       {
         name: `Spirit of Gork - Passive`,
         desc: `Effect: Friendly Ironjawz Infantry units have Ward (6+) while they are wholly within 12" of any friendly Ironjawz Wizards or Priests.`,
         when: [DURING_GAME],
+      },
+    ],
+  },
+  Brutefist: {
+    effects: [
+      {
+        name: `Mightiest Destroyers - Once Per Battle`,
+        desc: `Effect: If there are any friendly Megabosses on the battlefield, for the rest of the turn, you can pick another eligible unit to be a second target when using the Mighty Destroyers ability. 
+        If there are no friendly Megabosses on the battlefield, roll a dice. On a 3+, for the rest of the turn, you can pick another eligible unit to be a second target when using the Mighty Destroyers ability.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  Bigsnikkaz: {
+    effects: [
+      {
+        name: `Duff Up Da Big Thing - Once Per Turn`,
+        desc: `Declare: Pick a friendly Ironjawz unit to be the target. 
+        Effect: For the rest of the turn, add 1 to wound rolls for the targets combat attacks that target an enemy unit that has a Health characteristic greater than its own.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

@@ -9,7 +9,7 @@ import {
 } from 'types/phases'
 
 const Prayers = {
- /* 'Catechism of Murder': {
+  /* 'Catechism of Murder': {
     effects: [
       {
         name: `Catechism of Murder`,
@@ -134,6 +134,28 @@ const Prayers = {
         name: `Covenant of the Iron Heart: Chant value of 4`,
         desc: `Declare: Pick a friendly Daughters of Khaine Priest to chant this prayer, pick a visible friendly Daughters of Khaine unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
         Effect: Ignore negative modifiers to the targets control score until the start of your next turn. In addition, if the chanting roll was 8+, add 5 to the targets control score until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Bloodshadow Rites': {
+    effects: [
+      {
+        name: `Shadowstep: Chant value of 3 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Daughters of Khaine Priest to chant this prayer, pick a visible friendly Daughters of Khaine Aelf Infantry unit wholly within 12" of them and that has not been picked to be the target of this prayer this turn to be the target, then make a chanting roll of D6. 
+        Effect: The target can move up to 6". It can move through the combat ranges of enemy units but cannot end that move in combat. If the chanting roll was 8+, you can pick another eligible unit to be a second target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Scathscale: Chant value of 3`,
+        desc: `Declare: Pick a friendly Daughters of Khaine Priest to chant this prayer, pick a friendly Daughters of Khaine Aelf Infantry unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, subtract 1 from wound rolls for combat attacks that target that friendly unit. If the chanting roll was 8+, until the start of your next turn, subtract 1 from wound rolls for combat attacks that target friendly Daughters of Khaine Aelf Infantry units while they are wholly within 12" of the target of this ability instead.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Exultation of Murder: Chant value of 4`,
+        desc: `Declare: Pick a friendly Daughters of Khaine Priest to chant this prayer, pick a friendly Daughters of Khaine Aelf Infantry unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, add 1 to wound rolls for the targets combat attacks. In addition, if the chanting roll was 9+, until the start of your next turn, add 1 to the Attacks characteristic of the targets melee weapons.`,
         when: [HERO_PHASE],
       },
     ],

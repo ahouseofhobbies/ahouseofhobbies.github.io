@@ -274,6 +274,30 @@ const Units = {
       },
     ],
   },
+  'Saurus Oldblood on Carnosaur (SoG)': {
+    effects: [
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Carnosaurs Massive Jaws is 2.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Frenzied by Blood - Passive`,
+        desc: `Effect: Add 1 to the Damage characteristic of this units Companion weapons while it is within 6" of any damaged enemy units or while it is within 6" of any enemy units that had any models slain in the same turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Alpha Predator - Passive`,
+        desc: `Effect: Friendly Aggradon Lancers do not lose rage tokens at the end of the turn while they are wholly within 12" of this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Thunderous Roar - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. Effect: Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   'Saurus Oldblood': {
     effects: [
       {

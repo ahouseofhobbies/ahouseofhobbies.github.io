@@ -51,6 +51,27 @@ const Flavors = {
       },
     ],
   },
+  'Deep-Sea Stalkers': {
+    effects: [
+      {
+        name: `Outflank the Enemy - Passive`,
+        desc: `Effect: While a friendly Idoneth Deepkin unit is wholly within 9" of a battlefield edge: 
+        Subtract 1 from hit rolls for attacks that target that unit if it has not charged this turn. 
+        Add 2" to the Move characteristic of that unit.`,
+        when: [MOVEMENT_PHASE, SHOOTING_PHASE, COMBAT_PHASE],
+      },
+    ],
+  },
+  'Ethersea Predators': {
+    effects: [
+      {
+        name: `Command Ability: Blood in the Water`,
+        desc: `Declare: If any friendly or enemy units were destroyed this turn, pick a friendly Akhelian Allopex unit that has been destroyed to be the target. 
+        Effect: Set up a replacement unit identical to the target wholly within 9" of a battlefield edge and more than 9" from all enemy units.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
   /* Fuethan: {
     effects: [
       {

@@ -9,6 +9,7 @@ import {
   SAVES_PHASE,
   START_OF_COMBAT_PHASE,
   START_OF_HERO_PHASE,
+  START_OF_ROUND,
 } from 'types/phases'
 import rule_sources from './rule_sources'
 import meta_rule_sources from 'meta/rule_sources'
@@ -40,6 +41,36 @@ const CommandTraits = {
         name: `Beastmaster - Passive`,
         desc: `Effect: Add 2" to the Move characteristic of friendly Seraphon Cavalry and Seraphon Monster units for the rest of the phase if they are wholly within 12" of this unit at the start of the move.`,
         when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Keeper of the Old Ways': {
+    effects: [
+      {
+        name: `Keeper of the Old Ways - Once Per Turn - Reaction: You declared the Further the Great Plan Ability`,
+        desc: `Effect: You can pick 2 different Asterism abilities instead of 1. They are both used in addition to the one you picked in the deployment phase.`,
+        when: [START_OF_ROUND],
+      },
+    ],
+  },
+
+  'Child of the Stars': {
+    effects: [
+      {
+        name: `Child of the Stars - Passive`,
+        desc: `Effect: If this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, Heal (D3) this unit. This unit cannot use this ability again for the rest of the battle.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+
+  'Chosen of Quetzl': {
+    effects: [
+      {
+        name: `Chosen of Quetzl`,
+        desc: `Declare: Pick a visible friendly non-Monster Skink unit that is in combat and is wholly within 12" of this unit to be the target. 
+        Effect: Roll a dice. On a 3+, the target can move up to 8". It can move through the combat ranges of enemy units but cannot end that move in combat.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

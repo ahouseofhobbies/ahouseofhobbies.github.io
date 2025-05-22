@@ -50,7 +50,26 @@ const Flavors = {
       },
     ],
   },
-/*  'The Eternal Conflagration': {
+  'Masters of Fate': {
+    effects: [
+      {
+        name: `Symbiotic Madness - Passive`,
+        desc: `Effect: Friendly Arcanite units melee weapons have Crit (2 Hits) while they are wholly within 12" of a friendly Disciples of Tzeentch Daemon unit.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Spellweaver Coven': {
+    effects: [
+      {
+        name: `Sorcerers of War - Once Per Turn`,
+        desc: `Declare: Pick a friendly Disciples of Tzeentch Wizard that is in combat to be the target. 
+        Effect: The target can use a non-Summon Spell ability as if it were your hero phase, but only the caster or enemy units in combat with the caster can be picked to be the targets of that Spell ability.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  /*  'The Eternal Conflagration': {
     effects: [...pickEffects(BattleTraits, ['Twisters of Materiality'])],
   },
 

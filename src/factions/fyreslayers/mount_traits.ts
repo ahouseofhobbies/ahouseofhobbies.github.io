@@ -1,36 +1,38 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
-import { COMBAT_PHASE, END_OF_CHARGE_PHASE, MOVEMENT_PHASE, SHOOTING_PHASE } from 'types/phases'
+import { COMBAT_PHASE, DURING_GAME, END_OF_CHARGE_PHASE, MOVEMENT_PHASE, SHOOTING_PHASE } from 'types/phases'
 
 const MountTraits = {
- /* 'Flame-scale Youngblood': {
+  'Incandescent Blaze': {
     effects: [
       {
-        name: `Flame-scale Youngblood`,
-        desc: `If you carry out a Stomp monstrous rampage (core rules, 21.1) with this unit and the enemy unit you picked suffers any mortal wounds, that enemy unit suffers 3 additional mortal wounds.`,
-        when: [END_OF_CHARGE_PHASE],
-      },
-    ],
-  },
-  'Lava-Tongue Adult': {
-    effects: [
-      {
-        name: `Lava-Tongue Adult`,
-        desc: `When determining the Attacks characteristic of this unit's Roaring Fyrestream, an Attacks characteristic of less than 5 is treated as being 5.`,
+        name: `Incandescent Blaze - Once Per Battle`,
+        desc: `Effect: For the rest of the turn: 
+        Double the Attacks characteristic of this units Roaring Fyrestream. 
+        This units Roaring Fyrestream has a Damage characteristic of 3.`,
         when: [SHOOTING_PHASE],
       },
     ],
   },
-  'Coal-heart Ancient': {
+  'Thickened Scales': {
     effects: [
       {
-        name: `Coal-heart Ancient`,
-        desc: `If this unit is the target of an attack made with a melee weapon, subtract 1 from the Damage characteristic of that weapon for that attack (to a minimum of 1).`,
-        when: [COMBAT_PHASE],
+        name: `Thickened Scales - Passive`,
+        desc: `Effect: Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
     ],
   },
-  Packdroth: {
+  'Peerless Lineage': {
+    effects: [
+      {
+        name: `Peerless Lineage - Reaction: You declared a Rampage ability for this unit`,
+        desc: `Effect: You can pick another eligible unit to be a second target of that Rampage ability. If the ability requires a roll, you must roll for each target.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  /* Packdroth: {
     effects: [
       {
         name: `Packdroth`,

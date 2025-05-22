@@ -14,7 +14,7 @@ import rule_sources from './rule_sources'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const CommandTraits = {
- /* 'Merciless Raider': {
+  /* 'Merciless Raider': {
     effects: [
       {
         name: `Merciless Raider`,
@@ -32,7 +32,7 @@ const CommandTraits = {
       },
     ],
   },
-/*  'Unstoppable Fury': {
+  /*  'Unstoppable Fury': {
     effects: [
       {
         name: `Unstoppable Fury`,
@@ -88,7 +88,35 @@ const CommandTraits = {
       },
     ],
   },
- /* 'Endless Sea Storm': {
+  'Merciless Raider': {
+    effects: [
+      {
+        name: `Merciless Raider`,
+        desc: `Effect: If this unit is within 6" of a damaged enemy unit, this unit can move 6". It can pass through the combat ranges of enemy units but must end that move in combat with a damaged enemy unit.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Lord of Storm and Sea': {
+    effects: [
+      {
+        name: `Lord of Storm and Sea - Passive`,
+        desc: `Effect: Each time an ability returns at least 1 slain model to a friendly unit wholly within 12" of this unit, after that ability has been resolved, you can return 1 additional slain model to it.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Endless Sea-Storm': {
+    effects: [
+      {
+        name: `Endless Sea-Storm - Once Per Battle`,
+        desc: `Effect: If this unit is a Wizard, add 1 to its power level for the rest of the turn. If this unit is not a Wizard, it gains Wizard (1) for the rest of the turn. 
+        In addition, add 2 to the next casting roll or banishment roll for this unit this turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /* 'Endless Sea Storm': {
     effects: [
       {
         name: `Endless Sea Storm`,

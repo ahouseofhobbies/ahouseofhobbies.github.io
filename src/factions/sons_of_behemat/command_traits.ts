@@ -42,6 +42,33 @@ const CommandTraits = {
       },
     ],
   },
+  Grabby: {
+    effects: [
+      {
+        name: `Grabby - Passive`,
+        desc: `Effect: Add 1 to hit rolls for this units combat attacks that target an enemy unit contesting an objective you do not control.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Terrifying Hulk': {
+    effects: [
+      {
+        name: `Terrifying Hulk - Once Per Turn - Reaction: Your opponent declared a Charge ability for a visible non-Monster enemy unit within 12" of this unit`,
+        desc: `Effect: If this unit is not in combat, roll a dice. On a 3+, you can change one of the dice in that charge roll to a 1.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'Mega-Grump': {
+    effects: [
+      {
+        name: `Mega-Grump - Passive`,
+        desc: `Effect: This unit has Ward (5+) while it has 25 or more damage points.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   // Taker Tribe
   /* 'Extremely Intimidating (Taker Tribe)': {
     effects: [

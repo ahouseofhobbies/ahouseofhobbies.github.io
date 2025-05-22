@@ -160,6 +160,21 @@ const Units = {
       },
     ],
   },
+  'Akhelian Thrallmaster (SoG)': {
+    effects: [
+      {
+        name: `Way of the Vortex - Passive`,
+        desc: `Effect: Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit and friendly Namarti units while they are wholly within 12" of this unit.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+      {
+        name: `Raider Captain - Once Per Battle`,
+        desc: `Declare: Pick this unit and up to 3 friendly Namarti Thralls units wholly within 12" of this unit to be the targets. 
+        Effect: Each target can use the Normal Move ability as if it were your movement phase.`,
+        when: [DURING_SETUP],
+      },
+    ],
+  },
   'Akhelian King': {
     effects: [
       // DeepmareHornEffect,
@@ -313,6 +328,16 @@ const Units = {
       {
         name: `Sweeping Blows - Passive`,
         desc: `Effect: Add 1 to the Damage characteristic of this units Lanmari for attacks that target enemy Monsters.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Namarti Thralls (SoG)': {
+    effects: [
+      {
+        name: `Hit-And-Run Tactics`,
+        desc: `Declare: If this unit is in combat or charged this turn, this unit can make a pile-in move. Then, if this unit is in combat, you must pick 1 or more enemy units to be the target(s) of this units attacks. 
+        Effect: Resolve combat attacks against the target unit(s). Then, if this unit is in combat, roll a dice. On a 3+, this unit can move a distance up to its Move characteristic. It can pass through the combat ranges of enemy units but can only end that move in combat with units it was in combat with at the start of that move. It does not have to end the move in combat.`,
         when: [COMBAT_PHASE],
       },
     ],

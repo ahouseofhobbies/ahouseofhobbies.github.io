@@ -25,6 +25,28 @@ const Prayers = {
       },
     ],
   },
+  'Vulkyn Gifts': {
+    effects: [
+      {
+        name: `Ichor of the Ur-Salamander: Chant value of 3 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Fyreslayers Priest to chant this prayer, pick a visible friendly Fyreslayers Monster wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, if any damage points were inflicted on an enemy unit by the targets Volcanic Blood ability, after the damage sequence has been resolved, inflict 3 mortal damage on that enemy unit. If the chanting roll was 6+, inflict D3+3 mortal damage instead.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Fury of Vulcatrix: Chant value of 4`,
+        desc: `Declare: Pick a friendly Fyreslayers Priest to chant this prayer, pick a visible friendly Fyreslayers unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Add 1 to hit rolls for the targets combat attacks, including those made with Companion weapons, until the start of your next turn. In addition, if the chanting roll was 8+, add 2 to the Attacks characteristic of the targets Companion weapons until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Blazing Impetus: Chant value of 5`,
+        desc: `Declare: Pick a friendly Fyreslayers Priest to chant this prayer, pick a visible friendly Fyreslayers unit wholly within 12" of them and that was not set up this turn to be the target, then make a chanting roll of D6. 
+        Effect: The target can use the Normal Move ability as if it were your movement phase. If the chanting roll was 10+, you can pick another eligible unit to be a second target.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
   /*'Ember Storm': {
     effects: [
       {

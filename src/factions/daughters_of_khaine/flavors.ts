@@ -58,6 +58,24 @@ const Flavors = {
       },
     ],
   },
+  'Coven Zealots': {
+    effects: [
+      {
+        name: `Higher Purpose - Once Per Turn`,
+        desc: `Effect: Return D3 slain models to each friendly Daughters of Khaine Aelf Infantry unit.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Arena Veterans': {
+    effects: [
+      {
+        name: `Graceful Elusion`,
+        desc: `Effect: For the rest of the phase, friendly Daughters of Khaine Aelf Infantry units have Ward (5+) until they have used a Fight ability.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   /*'Zainthar Kai': {
     effects: [
       {

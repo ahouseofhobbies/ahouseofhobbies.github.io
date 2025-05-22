@@ -39,22 +39,23 @@ import { IItemDescription, TItemDescriptions } from 'factions/factionTypes'
 const subFactions = {
   [FYRESLAYERS]: {
     //  ...baseSubfaction,
-      effects: pickEffects(BattleTraits, [FYRESLAYERS]),
-  
-      available: {
-        artifacts: [Artifacts],
-       // battalions: [Battalions],
-        battle_tactics: [BattleTactics],
-        command_abilities: [CommandAbilities],
-        command_traits: [CommandTraits],
-        endless_spells: [EndlessSpells],
-        flavors: [Flavors],
-        grand_strategies: [GrandStrategies],
-        prayers: [Prayers],
-        //spells: [Spells],
-        units: [Units],
-      },
-    }, 
+    effects: pickEffects(BattleTraits, [FYRESLAYERS]),
+
+    available: {
+      artifacts: [Artifacts],
+      // battalions: [Battalions],
+      battle_tactics: [BattleTactics],
+      command_abilities: [CommandAbilities],
+      command_traits: [CommandTraits],
+      endless_spells: [EndlessSpells],
+      mount_traits: [MountTraits],
+      flavors: [Flavors],
+      grand_strategies: [GrandStrategies],
+      prayers: [Prayers],
+      //spells: [Spells],
+      units: [Units],
+    },
+  },
 } satisfies TItemDescriptions
 
 export default subFactions

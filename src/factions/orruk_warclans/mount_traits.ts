@@ -10,7 +10,7 @@ import {
 } from 'types/phases'
 
 const OrrukWarclanMountTraits = {
-  "Tough 'Un": {
+  "Tough 'Un (Kruleboyz)": {
     effects: [
       {
         name: `Tough 'Un - Passive`,
@@ -19,7 +19,7 @@ const OrrukWarclanMountTraits = {
       },
     ],
   },
-  "Sneaky 'Un": {
+  "Sneaky 'Un (Kruleboyz)": {
     effects: [
       {
         name: `Sneaky 'Un - Once Per Battle - Enemy Hero Phase`,
@@ -28,12 +28,40 @@ const OrrukWarclanMountTraits = {
       },
     ],
   },
-  "Mean 'Un": {
+  "Mean 'Un (Kruleboyz)": {
     effects: [
       {
         name: `Mean 'Un - Passive`,
         desc: `Effect: Add 1 to hit rolls for attacks made with this units Companion weapons.`,
         when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  "Big 'Un (Ironjawz)": {
+    effects: [
+      {
+        name: `Big 'Un - Passive`,
+        desc: `Effect: Add 1 to the Rend characteristic of this units Companion weapons.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+    ],
+  },
+  "Mad 'Un (Ironjawz)": {
+    effects: [
+      {
+        name: `Mad 'Un - Once Per Turn`,
+        desc: `Declare: If this unit charged this turn, pick an enemy unit in combat with it to be the target. 
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If any models are slain by this ability, after those models are removed from the battlefield, if this unit is still in combat, this unit can immediately use this ability again.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  "Fast 'Un (Ironjawz)": {
+    effects: [
+      {
+        name: `Fast 'Un - Once Per Battle`,
+        desc: `Effect: If this unit was not set up this turn, it can use the Normal Move ability as if it were your movement phase.`,
+        when: [HERO_PHASE],
       },
     ],
   },

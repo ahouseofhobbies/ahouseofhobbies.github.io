@@ -3,6 +3,7 @@ import { tagAs } from 'factions/metatagger'
 import {
   COMBAT_PHASE,
   DURING_GAME,
+  DURING_SETUP,
   HERO_PHASE,
   SAVES_PHASE,
   SHOOTING_PHASE,
@@ -12,7 +13,7 @@ import {
 
 const Artifacts = {
   // Fated Artefacts - Arcanites Only
- /* Changeblade: {
+  /* Changeblade: {
     effects: [
       {
         name: `Changeblade`,
@@ -119,6 +120,37 @@ const Artifacts = {
         desc: `Declare: Pick an enemy Wizard in combat with this unit to be the target. 
         Effect: Inflict D3 mortal damage on the target. In addition, subtract 1 from casting rolls for the target for the rest of the battle.`,
         when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Mutating Blade': {
+    effects: [
+      {
+        name: `Mutating Blade`,
+        desc: `Effect: Pick 1 of this units melee weapons. That weapons Attacks characteristic is 2D6 for the rest of the battle.`,
+        when: [DURING_SETUP],
+      },
+    ],
+  },
+  'Arcane Siphon': {
+    effects: [
+      {
+        name: `Arcane Siphon - Once Per Turn`,
+        desc: `Declare: Pick a visible Manifestation (friendly or enemy) that was not set up this turn and is within 12" of this unit to be the target. 
+        Effect: Roll a dice. On a 3+: 
+        The target is banished. 
+        Heal (X) this unit, where X is the targets Health characteristic.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Spell-Catcher Amulet': {
+    effects: [
+      {
+        name: `Spell-Catcher Amulet - Once Per Turn`,
+        desc: `Declare: This unit can use this ability if any enemy Manifestations were banished this phase. 
+        Effect: This unit can use a Summon ability from the manifestation lore you picked during army composition. That Summon ability does not count towards the total number of Spell or Banish abilities this unit can use this phase.`,
+        when: [HERO_PHASE],
       },
     ],
   },

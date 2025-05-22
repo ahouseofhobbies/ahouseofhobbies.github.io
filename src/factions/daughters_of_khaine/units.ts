@@ -430,6 +430,22 @@ const Units = {
       },
     ],
   },
+  'Bloodwrack Shrine (SoG)': {
+    effects: [
+      {
+        name: `Reflected Agony: Casting value of 5`,
+        desc: `Declare: Make a casting roll of 2D6. 
+        Effect: Until the start of your next turn, enemy units and enemy Manifestations cannot be set up within 12" of this unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Wracking Gaze - Once Per Turn`,
+        desc: `Declare: Pick a visible enemy unit within 15" of this unit to be the target. 
+        Effect: Roll a dice. If the roll is equal to or less than that enemy units Health characteristic, for the rest of the phase, you can reroll failed hit rolls for attacks made by this unit that target that enemy unit.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
   'Blood Sisters': {
     effects: [
       {
@@ -623,6 +639,31 @@ const Units = {
         desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target, then make a chanting roll of D6. 
         Effect: Roll a D3. If the chanting roll was 8+, roll a D6 instead. Inflict an amount of mortal damage on the target equal to the roll. In addition, if the roll exceeds the targets Health characteristic, subtract 1 from hit rolls for the targets attacks until the start of your next turn.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Krethusa The Croneseer (SoG)': {
+    effects: [
+      {
+        name: `The Cronseer - Enemy Hero Phase`,
+        desc: `Effect: Give this unit D3 ritual points.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Blood Ritual: Chant value of 3`,
+        desc: `Declare: Pick a visible friendly Daughters of Khaine Aelf Infantry or Cavalry unit wholly within 12" of this unit to be the target. 
+        Effect: Pick 1 of the following effects to apply until the start of your next turn: 
+        Prophecy of Tyranny: Enemy units cannot use commands while they are in combat with the target. 
+        Prophecy of Shelter: Other than the Companion ability, weapon abilities used by enemy units while they are in combat with the target have no effect. 
+        Prophecy of Retribution: Subtract 1 from ward rolls made for damage points inflicted by the targets combat attacks. 
+        If the chanting roll was 9+, all of the above effects apply.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Command Ability: Gift of Foresight - Once Per Battle`,
+        desc: `Declare: Pick a friendly Daughters of Khaine Aelf Infantry or Cavalry unit that has been destroyed to be the target. 
+        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 9" of a battlefield edge and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },

@@ -498,6 +498,23 @@ const Units = {
       // GenericEffects.WizardOneSpellEffect,
     ],
   },
+  'Ogroid Thaumaturge (SoG)': {
+    effects: [
+      {
+        name: `Soul-Deep Devotion - Passive`,
+        desc: `Effect: While this unit is within a friendly non-Hero Arcanite units combat range: 
+        This unit has Ward (4+). 
+        Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly non-Hero Arcanite unit within this units combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Wrath of the Thaumaturge - Once Per Turn`,
+        desc: `Declare: If this unit is not in combat, pick a friendly Arcanite unit in combat to be the target. 
+        Effect: Remove this unit from the battlefield and set it up again within 1" of the target and in combat. This unit has charged.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
   'Kairic Acolytes': {
     /*  mandatory: {
       spells: [keyPicker(Spells, ['Gestalt Sorcery'])],
@@ -513,6 +530,21 @@ const Units = {
         name: `Gestalt Sorcery`,
         desc: `Effect: If this unit includes any models carrying a Scroll of Dark Arts, roll a dice. Add 1 to the roll for each other friendly Kairic Acolytes unit within this units combat range. On a 5+, add 1 to the Rend characteristic of this units Sorcerous Bolts for the rest of the turn.`,
         when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'Kairic Acolytes (SoG)': {
+    effects: [
+      {
+        name: `Vulcharc - Once Per Turn`,
+        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target. 
+        Effect: For the rest of the turn, add 1 to the Rend characteristic of melee weapons used by friendly Kairic Acolytes units for attacks that target that enemy unit.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Empowered by Magic - Passive`,
+        desc: `Effect: Add 1 to the Damage characteristic of this units melee weapons while this unit is wholly within 12" of any Manifestations (friendly or enemy).`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

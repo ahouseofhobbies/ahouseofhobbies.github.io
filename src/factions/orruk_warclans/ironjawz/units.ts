@@ -266,6 +266,15 @@ const IronjawzUnits = {
       },
     ],
   },
+  'Orruk Gore-Gruntas (SoG)': {
+    effects: [
+      {
+        name: `Barge Through - Passive`,
+        desc: `Effect: When this unit moves, it can pass through models in enemy Infantry units and can pass through the combat ranges of enemy Infantry units, but it cannot end the move in combat unless specified in the ability used.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
   /* "Ironskull's Boyz": {
     effects: [
       {
@@ -394,6 +403,16 @@ const IronjawzUnits = {
         name: `Berserkers - Passive`,
         desc: `Effect: This unit can use a Run ability and still use Charge abilities later in the turn.`,
         when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Weirdbrute Wrekkaz (SoG)': {
+    effects: [
+      {
+        name: `Propa Wonky - Once Per Turn`,
+        desc: `Declare: If this unit is in combat, pick a friendly Ironjawz unit wholly within 12" of this unit to be the target. 
+        Effect: Add 1 to hit rolls for the targets combat attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

@@ -262,6 +262,37 @@ const Units = {
       },
     ],
   },
+  'Kraken-Eater (SoG)': {
+    effects: [
+      {
+        name: `Emerge from the Deep`,
+        desc: `Declare: Pick this unit if it is beneath the waves. 
+        Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units and wholly within 9" of a battlefield edge.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Lurking Beneath the Waves - Once Per Battle`,
+        desc: `Declare: Pick this unit if it has not been deployed. 
+        Effect: Set up this unit in reserve beneath the waves. It has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Son of Behemat - Passive`,
+        desc: `Effect: If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Longshanks - Passive`,
+        desc: `Effect: This unit can pass through models in non-Monster units and parts of terrain features that are less than 4" tall.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 15 or more damage points, the Attacks characteristic of its Shipwrecka Warclub is 3 and this unit has a Control characteristic of 10.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   Warstomper: {
     effects: [
       //  ...BaseMegaGargantEffects,

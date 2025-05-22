@@ -7,6 +7,7 @@ import BattleTraits from './battle_traits'
 import CommandAbilities from './command_abilities'
 import CommandTraits from './command_traits'
 import Flavors from './flavors'
+import MountTraits from './mount_traits'
 import GrandStrategies from './grand_strategies'
 import MonstrousRampages from './monstrous_rampages'
 import Scenery from './scenery'
@@ -33,33 +34,25 @@ const baseSubFaction = {
 const subFactions = {
   [SERAPHON]: {
     //  ...baseSubfaction,
-      effects: pickEffects(BattleTraits, [SERAPHON]),
-  
-      available: {
-        artifacts: [Artifacts],
-        battalions: [Battalions],
-        battle_tactics: [BattleTactics],
-        command_abilities: [CommandAbilities],
-        command_traits: [CommandTraits],
-        //endless_spells: [EndlessSpells],
-        flavors: [Flavors],
-        grand_strategies: [GrandStrategies],
-        //prayers: [Prayers],
-        spells: [Spells],
-        units: [Units],
-      },
-    }, 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- /* Coalesced: {
+    effects: pickEffects(BattleTraits, [SERAPHON]),
+
+    available: {
+      artifacts: [Artifacts],
+      battalions: [Battalions],
+      battle_tactics: [BattleTactics],
+      command_abilities: [CommandAbilities],
+      command_traits: [CommandTraits],
+      mount_traits: [MountTraits],
+      //endless_spells: [EndlessSpells],
+      flavors: [Flavors],
+      grand_strategies: [GrandStrategies],
+      //prayers: [Prayers],
+      spells: [Spells],
+      units: [Units],
+    },
+  },
+
+  /* Coalesced: {
     effects: pickEffects(BattleTraits, ['COALESCED']),
 
     available: {
