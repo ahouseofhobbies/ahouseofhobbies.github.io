@@ -733,6 +733,22 @@ const Units = {
       // LocusOfUndeathEffect,
     ],
   },
+  'Corpse Cart (SoG)': {
+    effects: [
+      {
+        name: `Unholy Lodestone`,
+        desc: `Declare: Pick a friendly Deadwalker Zombies unit within this units combat range to be the target. 
+        Effect: Until the start of your next turn, while the target is wholly within 12" of this unit, its Mindless Ferocity ability inflicts mortal damage on rolls of 5+ instead of 6+.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Necromantic Goad - Once Per Turn`,
+        desc: `Declare: Pick a friendly Deadwalker Zombies unit that is wholly within 12" of this unit and not in combat to be the target. 
+        Effect: The target can move up to 3". It can move into combat.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
 
   'Revenant Draconith': {
     effects: [
@@ -1094,6 +1110,26 @@ const Units = {
         name: `Death's Construction: Casting value of 7`,
         desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target, then make a casting roll of 2D6. 
         Effect: Until the start of your next turn, this unit, and any friendly Soulblight Gravelords units while they are wholly within 6" of this unit, cannot be picked to be the target of abilities used by the target other than Fight abilities.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Sekhar, Fang of Nulahmia (SoG)': {
+    effects: [
+      {
+        name: `Allow Me To Remind You - Once Per Turn - Reaction: Opponent declared a command for a visible enemy unit within 18" of this unit`,
+        desc: `Effect: Roll a dice. On a 5+, that command has no effect, it still counts as having been used and the command points spent to use it are still lost.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Lest You Forget - Once Per Battle Round - Reaction: Opponent declared a Spell or Charge ability for a visible enemy unit within 18" of this unit`,
+        desc: `Effect: Pick 1 dice from the charge roll or casting roll for that ability. Your opponent must reroll that dice.`,
+        when: [HERO_PHASE, CHARGE_PHASE],
+      },
+      {
+        name: `Irresistible Demand: Casting value of 6`,
+        desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target. Then, make a casting roll of 2D6. 
+        Effect: Inflict D3 mortal damage on each other enemy unit within 3" of the target.`,
         when: [HERO_PHASE],
       },
     ],

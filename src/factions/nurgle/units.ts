@@ -97,6 +97,41 @@ const Units = {
       },
     ],
   },
+  'Rotigus (SoG)': {
+    /*  mandatory: {
+      spells: [keyPicker(Spells, ['Plague Wind'])],
+      monstrous_rampages: [keyPicker(monstrous_rampages, ['Mountain of Loathsome Flesh'])],
+    }, */
+    effects: [
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Gnarlrod is 3.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Befouled Rainfall - Passive`,
+        desc: `Effect: Subtract 1 from save rolls for enemy units while they are within 6" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Virulent Downpour: Casting value of 7`,
+        desc: `Effect: Add 3" to the range of this units Befouled Rainfall ability for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative. 
+        Then, inflict 1 mortal damage on each enemy unit within range of that ability.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Bringer of Plenty - Passive`,
+        desc: `Effect: Add 1 to casting rolls for this unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Tentacular Grip - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. If the roll exceeds the targets Save characteristic, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   'Great Unclean One': {
     /*  mandatory: {
       spells: [keyPicker(Spells, ['Plague Wind'])],

@@ -40,7 +40,34 @@ const Artifacts = {
       },
     ],
   },
-/*  'Acorn of the Ages': {
+  Glamourweave: {
+    effects: [
+      {
+        name: `Glamourweave - Passive`,
+        desc: `Effect: Each phase, you can reroll 1 hit roll, 1 wound roll and 1 save roll for this unit.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Acorn of the Ages': {
+    effects: [
+      {
+        name: `Acorn of the Ages - Once Per Battle`,
+        desc: `Effect: If there are fewer than 3 friendly Awakened Wyldwoods on the battlefield, set up an Awakened Wyldwood wholly within 12" of this unit, more than 3" from all objectives and more than 1" from all enemy units and other terrain features.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Ranus Lamentiri': {
+    effects: [
+      {
+        name: `Ranu's Lamentiri - Once Per Turn - Reaction: Opponent declared a Spell ability for a unit within 30" of this unit`,
+        desc: `Effect: Make an unbinding roll of 2D6. If the roll exceeds the casting roll for the spell, the spell is unbound and its effect is not resolved. Then, inflict an amount of mortal damage on the caster equal to the difference between the casting roll and the unbinding roll, to a maximum of 6.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /*  'Acorn of the Ages': {
     effects: [
       {
         name: `Acorn of the Ages`,

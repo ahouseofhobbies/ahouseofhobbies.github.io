@@ -5,6 +5,7 @@ import {
   COMBAT_PHASE,
   DURING_GAME,
   END_OF_TURN,
+  HERO_PHASE,
   MOVEMENT_PHASE,
   SAVES_PHASE,
   SHOOTING_PHASE,
@@ -15,7 +16,7 @@ import {
 } from 'types/phases'
 
 const CommandTraits = {
- /* "Grandfather's Blessing": {
+  /* "Grandfather's Blessing": {
     effects: [
       {
         name: `Grandfather's Blessing`,
@@ -87,7 +88,36 @@ const CommandTraits = {
       },
     ],
   },
-/*  'Pestilent Breath': {
+  'Living Plague': {
+    effects: [
+      {
+        name: `Living Plague - Once Per Battle`,
+        desc: `Declare: If this unit charged this turn, pick an enemy unit in combat with it to be the target. 
+        Effect: The target has the Diseased keyword.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Unctuous Preacher': {
+    effects: [
+      {
+        name: `Unctuous Preacher - Passive`,
+        desc: `Effect: If this unit is not a Priest, it has Priest (1). If this unit is already a Priest, add 1 to chanting rolls for this unit.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Corpulent Avalanche': {
+    effects: [
+      {
+        name: `Corpulent Avalanche`,
+        desc: `Declare: If this unit charged this turn, pick a visible enemy unit within 1" of it to be the target. 
+        Effect: Roll a number of dice equal to this units Move characteristic. For each 3+, inflict 1 mortal damage on the target. If any damage points were allocated to the target by this ability, this unit can move 2D3". It can move through the combat ranges of enemy units but must end that move in combat with the units it was already in combat with at the start of the move.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  /*  'Pestilent Breath': {
     effects: [
       {
         name: `Pestilent Breath`,

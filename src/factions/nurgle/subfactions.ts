@@ -11,6 +11,7 @@ import MonstrousRampages from './monstrous_rampages'
 import GrandStrategies from './grand_strategies'
 import Scenery from './scenery'
 import Spells from './spells'
+import Prayers from './prayers'
 import Units from './units'
 import SkavenUnits from '../skaven/units'
 import { IItemDescription, TItemDescriptions } from 'factions/factionTypes'
@@ -26,11 +27,12 @@ const baseSubfaction = {
     flavors: [Flavors],
     grand_strategies: [GrandStrategies],
     monstrous_rampages: [MonstrousRampages],
+    prayers: [Prayers],
     scenery: [Scenery],
     spells: [Spells],
     units: [
       Units,
-     /* keyPicker(SkavenUnits, [
+      /* keyPicker(SkavenUnits, [
         'Plague Priest on Plague Furnace',
         'Verminlord Corruptor',
         'Plague Priest',

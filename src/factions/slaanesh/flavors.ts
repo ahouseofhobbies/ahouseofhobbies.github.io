@@ -12,7 +12,7 @@ import {
 } from 'types/phases'
 
 const Flavors = {
-  "Depraved Carnival": {
+  'Depraved Carnival': {
     effects: [
       {
         name: `The Ecstatic Throngs - Passive`,
@@ -32,7 +32,7 @@ const Flavors = {
     ],
   },
 
-  "Epicurean Revellers": {
+  'Epicurean Revellers': {
     effects: [
       {
         name: `Exquistite Palate - Passive`,
@@ -48,6 +48,26 @@ const Flavors = {
         name: `Godly Ambitions - Passive`,
         desc: `Effect: Add 3 to the control scores of friendly non-Hero Hedonites of Slaanesh units while they are within the combat ranges of any friendly Hedonites of Slaanesh Heroes.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  Pretenders: {
+    effects: [
+      {
+        name: `Prodigy of Excess - Once Per Battle`,
+        desc: `Declare: Pick a friendly Hedonites of Slaanesh Hero that has an artefact of power to be the target. 
+        Effect: Give the target a heroic trait from the Figureheads of the Dark Prince or Hedonistic Obsessions tables.`,
+        when: [DURING_SETUP],
+      },
+    ],
+  },
+
+  Invaders: {
+    effects: [
+      {
+        name: `Ecstatic Revellers - Passive`,
+        desc: `Effect: Add 1 to the Rend characteristic of melee weapons used by friendly Sybarite Infantry units while they are wholly outside friendly territory.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

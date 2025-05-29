@@ -55,6 +55,25 @@ const Flavors = {
       },
     ],
   },
+  'Chaos Horde': {
+    effects: [
+      {
+        name: `Devotees of Ruin - Once Per Turn`,
+        desc: `Declare: Pick a friendly Warriors of Chaos unit. Then, pick up to 2 visible friendly Darkoath units that do not have a Pledge to Chaos keyword and are wholly within 12" of that Warriors of Chaos unit to be the targets. 
+        Effect: Until the start of your next turn, the targets have the same Pledge to Chaos keyword as that Warriors of Chaos unit.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Champions of Chaos': {
+    effects: [
+      {
+        name: `Paragons of Darkness - Passive`,
+        desc: `Effect: Add 2 to the Attacks characteristic of melee weapons used by friendly non-Monster Slaves to Darkness Heroes.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   /* Khorne: {
     effects: [
       {

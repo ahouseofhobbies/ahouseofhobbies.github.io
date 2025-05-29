@@ -192,6 +192,26 @@ const Units = {
       },
     ],
   },
+  "Syll'Esske, the Vengeful Allegiance (SoG)": {
+    effects: [
+      {
+        name: `Champions of the Gilded Throne - Passive`,
+        desc: `Effect: When players are alternating picking units to use a Fight ability, when it is your turn to pick a unit, instead of picking 1 unit, you can pick a friendly non-Hero Hedonites of Slaanesh Daemon unit wholly within 18" of this unit and a friendly non-Hero Sybarite unit wholly within 18" of this unit. Resolve the second Fight ability immediately after the first.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Violent Offerings`,
+        desc: `Effect: If any damage points were allocated to an enemy Wizard or Priest by this units combat attacks this turn and that enemy unit has been destroyed, add 1 to this units power level for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Wandering Minds: Casting value of 6`,
+        desc: `Declare: Pick up to 1 visible friendly non-Hero Sybarite Infantry unit and up to 1 visible friendly non-Hero Hedonites of Slaanesh Daemon Infantry unit to be the targets, then make a casting roll of 2D6. 
+        Effect: If you picked a Sybarite target, subtract 1 from ward rolls for damage points inflicted by its combat attacks until the start of your next turn. If you picked a Daemon target, it has Ward (5+) until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
   'Shalaxi Helbane': {
     /* mandatory: {
       spells: [keyPicker(Spells, ['Refine Senses'])],
@@ -654,6 +674,27 @@ const Units = {
         name: `Slaughter At Any Cost - Enemy Shooting Phase`,
         desc: `Effect: If any damage points were allocated to this unit this turn, this unit can use the Normal Move ability as if it were your movement phase.`,
         when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'Slaangor Fiendbloods (SoG)': {
+    effects: [
+      {
+        name: `Veiled Threat`,
+        desc: `Declare: Pick this unit if it has not been deployed. 
+        Effect: Set up this unit in reserve waiting in ambush. It has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Bestial Onslaught`,
+        desc: `Declare: Pick this unit if it is waiting in ambush. 
+        Effect: Set up this unit on the battlefield wholly within 9" of a battlefield edge and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Instinctive Advance - Once Per Phase - Reaction: Opponent declared a command for a unit within 12" of this unit`,
+        desc: `Effect: Immediately after that command or the ability it was a reaction to has been resolved, this unit can move 3". It can move through the combat ranges of enemy units and can end that move in combat.`,
+        when: [DURING_GAME],
       },
     ],
   },

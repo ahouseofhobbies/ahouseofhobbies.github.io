@@ -42,6 +42,34 @@ const CommandTraits = {
       },
     ],
   },
+  'Flawless Commander': {
+    effects: [
+      {
+        name: `Flawless Commander - Passive`,
+        desc: `Effect: Add 2" to the Move characteristic of friendly Lumineth Realm-lords Infantry units while they are wholly within 12" of this unit.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Aetherquartz Requisitioner': {
+    effects: [
+      {
+        name: `Aetherquartz Requisitioner - Once Per Battle - Reaction: You declared a Spell ability for a Lumineth Realm-Lords Wizard within this unit's combat range`,
+        desc: `Effect: Add 3 to the casting roll for that spell.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Martial Perfectionist': {
+    effects: [
+      {
+        name: `Martial Perfectionist`,
+        desc: `Declare: Pick a visible enemy unit within 12" of this unit that is damaged or that had any models slain this turn to be the target. 
+        Effect: Roll a dice. On a 3+, add 1 to wound rolls for combat attacks made by friendly Lumineth Realm-lords Infantry units that target that enemy unit for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   //Scinari
   /* Spellmaster: {
     effects: [

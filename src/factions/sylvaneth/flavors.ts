@@ -33,7 +33,7 @@ const Flavors = {
       },
     ],
   },
-  'Outcasts': {
+  Outcasts: {
     effects: [
       {
         name: `The Terror in the Eaves - Passive`,
@@ -52,12 +52,30 @@ const Flavors = {
       },
     ],
   },
-  
-  
-  
-  
+  'Wargrove of the Burgeoning': {
+    effects: [
+      {
+        name: `Stirring Life - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Hero Sylvaneth unit within 3" of a terrain feature to be the target. 
+        Effect: If the target has a Health characteristic of 1, return up to 3 slain models to the target. If the target has a Health characteristic of 2 or more, roll a dice, then pick 1 of the following: 
+        Heal (X) the target, where X is equal to the roll. 
+        Return a number of slain models to the target with a combined Health characteristic that is equal to or less than the roll.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Wargrove of Everdusk': {
+    effects: [
+      {
+        name: `Duskwalk - Passive`,
+        desc: `Effect: Friendly Sylvaneth Heroes can use the Walk the Hidden Paths ability even if it has been used by another friendly unit in the same phase.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+
   // Glades
- /* Oakenbrow: {
+  /* Oakenbrow: {
     effects: [
       {
         name: `Our Roots Run Deep`,
@@ -84,7 +102,7 @@ const Flavors = {
       },
     ],
   }, */
- /* Ironbark: {
+  /* Ironbark: {
     /*mandatory: {
       command_abilities: [keyPicker(CommandAbilities, ['Stand Firm'])],
     }, 

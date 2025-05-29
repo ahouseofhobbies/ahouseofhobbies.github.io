@@ -1,6 +1,7 @@
 import { tagAs } from 'factions/metatagger'
 import {
   COMBAT_PHASE,
+  DURING_GAME,
   END_OF_TURN,
   HERO_PHASE,
   START_OF_BATTLESHOCK_PHASE,
@@ -39,6 +40,36 @@ const Artifacts = {
         name: `The Conqueror's Crown - Passive`,
         desc: `Effect: Subtract 5 from the control scores of enemy Infantry units while they are in combat with this unit.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Amulet of Chaos': {
+    effects: [
+      {
+        name: `Amulet of Chaos`,
+        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the enemy target. Then, you can pick a friendly Darkoath Infantry unit in combat with that enemy unit to be the friendly target. 
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the enemy target equal to the roll. 
+        If there is a friendly target, return a number of slain models to it equal to the roll.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'The Varanite Shackle': {
+    effects: [
+      {
+        name: `The Varanite Shackle - Passive`,
+        desc: `Effect: Friendly non-Warriors of Chaos Slaves to Darkness units have Ward (6+) while they are wholly within 12" of this unit.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Head of the Unworthy': {
+    effects: [
+      {
+        name: `Head of the Unworthy - Passive`,
+        desc: `Effect: If a friendly Slaves to Darkness Hero with any Dark Apotheosis points is destroyed, give this unit 8 Dark Apotheosis points.`,
+        when: [DURING_GAME],
       },
     ],
   },

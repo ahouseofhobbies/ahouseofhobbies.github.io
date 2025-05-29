@@ -4,6 +4,7 @@ import meta_rule_sources from 'meta/rule_sources'
 import {
   CHARGE_PHASE,
   COMBAT_PHASE,
+  DURING_GAME,
   END_OF_COMBAT_PHASE,
   MOVEMENT_PHASE,
   SHOOTING_PHASE,
@@ -42,7 +43,40 @@ const Artifacts = {
       },
     ],
   },
-/*  'Flask of Stonehorn Blood': {
+  'Gutslugger (Big Name)': {
+    effects: [
+      {
+        name: `Gutslugger - Passive`,
+        desc: `Effect: Add 1 to hit rolls for this units combat attacks if it did not charge in the same turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Mage-Swallower (Big Name)': {
+    effects: [
+      {
+        name: `Mage-Swallower - Passive`,
+        desc: `Effect: Subtract 1 from ward rolls for enemy units while they are within 6" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Megagobbler (Big Name)': {
+    effects: [
+      {
+        name: `Megagobbler - Once Per Battle`,
+        desc: `Effect: Pick 1 of the following keywords: 
+        Infantry  
+        Cavalry  
+        Monster  
+        War Machine  
+        Beast 
+        For the rest of the battle, each time any damage points are allocated to an enemy unit with that keyword by this units combat attacks and that enemy unit is destroyed in the same turn, add 1 to the Attacks characteristic of this units melee weapons. This effect is cumulative.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  /*  'Flask of Stonehorn Blood': {
     effects: [
       {
         name: `Flask of Stonehorn Blood`,

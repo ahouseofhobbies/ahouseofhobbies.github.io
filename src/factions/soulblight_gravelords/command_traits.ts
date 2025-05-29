@@ -3,6 +3,7 @@ import { tagAs } from 'factions/metatagger'
 import {
   CHARGE_PHASE,
   COMBAT_PHASE,
+  DURING_GAME,
   DURING_SETUP,
   END_OF_COMBAT_PHASE,
   END_OF_MOVEMENT_PHASE,
@@ -10,6 +11,7 @@ import {
   END_OF_SETUP,
   END_OF_SHOOTING_PHASE,
   HERO_PHASE,
+  MOVEMENT_PHASE,
   SAVES_PHASE,
   START_OF_COMBAT_PHASE,
   START_OF_HERO_PHASE,
@@ -43,6 +45,35 @@ const CommandTraits = {
         name: `Unhinged Rampager - Passive`,
         desc: `Effect: You can reroll charge rolls for this unit in your charge phase.`,
         when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'Frightening Vitality': {
+    effects: [
+      {
+        name: `Frightening Vitality - Passive`,
+        desc: `Effect: Each time an ability that heals at least 1 of this units damage points is resolved, if the total number of damage points healed by that ability was less than 3, Heal (X) this unit where X is 3 minus that number.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Immortal Ego': {
+    effects: [
+      {
+        name: `Immortal Ego - Passive`,
+        desc: `Effect: Each phase, you can reroll 1 hit roll, 1 wound roll and 1 save roll for this unit.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'A Wastrel and a Vagabond': {
+    effects: [
+      {
+        name: `A Wastrel and a Vagabond - Passive`,
+        desc: `Effect: While a friendly Deadwalker Zombies or Deathrattle Skeletons unit is wholly within 12" of this unit: 
+        Add 2 to run rolls for that unit. 
+        Add 3" to the distance that unit can move when it piles in.`,
+        when: [MOVEMENT_PHASE, COMBAT_PHASE],
       },
     ],
   },

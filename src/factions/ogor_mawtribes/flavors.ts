@@ -1,5 +1,5 @@
 import { TItemDescriptions } from 'factions/factionTypes'
-import { CHARGE_PHASE, DURING_GAME, HERO_PHASE, SHOOTING_PHASE } from 'types/phases'
+import { CHARGE_PHASE, DURING_GAME, END_OF_TURN, HERO_PHASE, SHOOTING_PHASE } from 'types/phases'
 
 const Flavors = {
   'Prophets of the Gulping God': {
@@ -38,7 +38,27 @@ const Flavors = {
       },
     ],
   },
- /* 'Thunderbellies (Mawtribe)': {
+  'Mawpath Menaces': {
+    effects: [
+      {
+        name: `Fixated on Feeding - Once Per Turn`,
+        desc: `Declare: Pick a friendly Ogor Infantry unit that is not in combat to be the target. 
+        Effect: Roll a dice. On a 3+, the target can move a number of inches equal to the roll. It can move through the combat ranges of enemy units and can end that move in combat. If it does so, the target has charged.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'Greedy Eaters': {
+    effects: [
+      {
+        name: `Postprandial Warfare - Once Per Turn`,
+        desc: `Declare: Pick up to D3 friendly Ogor Infantry units that were in combat with an enemy unit when it was destroyed this turn to be the targets. 
+        Effect: Return 1 slain model to each target unit.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  /* 'Thunderbellies (Mawtribe)': {
     effects: [
       {
         name: `Swift Outflank`,

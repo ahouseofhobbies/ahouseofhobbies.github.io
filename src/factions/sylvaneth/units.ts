@@ -147,6 +147,29 @@ const Units = {
       //  GenericEffects.WizardOneSpellEffect,
     ],
   },
+  'Drycha Hamadreth (SoG)': {
+    effects: [
+      {
+        name: `Strength from Spite - Passive`,
+        desc: `Effect: Ward rolls cannot be made for damage points inflicted by this units attacks.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Twisted Spirit-Song: Casting value of 6`,
+        desc: `Declare: Pick a visible friendly Sylvaneth unit wholly within 12" of this unit to be the target. Then, make a casting roll of 2D6. 
+        Effect: Until the start of your next turn, add 1 to wound rolls for the targets combat attacks, including those made with Companion weapons. 
+        In addition, if the target is non-Kurnothi, add 1 to the Attacks characteristics of the targets melee weapons.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Vicious Spiteswarms - Reaction: Opponent declared a Charge ability for a unit within 18" of this unit`,
+        desc: `Effect: Your opponent must pick 1 of the following: 
+        Avoid the Swarm: Subtract D3 from the charge roll. In addition, if your opponent rerolls that charge roll, subtract D3 from that roll. 
+        Charge Through the Swarm: Subtract 1 from hit rolls for that units attacks for the rest of the turn, and add 1 to hit rolls for attacks that target that unit for the rest of the turn.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
   'Spirit of Durthu': {
     /*  mandatory: {
       monstrous_rampages: [keyPicker(monstrous_rampages, ['Groundshaker'])],
@@ -474,6 +497,21 @@ const Units = {
         name: `Thrumming with Life`,
         desc: `Effect: Heal (3) this unit.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Revenant Seekers (SoG)': {
+    effects: [
+      {
+        name: `Forest Fighters - Passive`,
+        desc: `Effect: This unit has a coherency range of 2".`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Lamentiri Life Energies - Once Per Turn`,
+        desc: `Declare: Pick a visible friendly Sylvaneth unit wholly within 12" of this unit to be the target. 
+        Effect: Roll a dice. On a 3+, the target has Ward (5+) for the rest of the turn.`,
+        when: [HERO_PHASE],
       },
     ],
   },

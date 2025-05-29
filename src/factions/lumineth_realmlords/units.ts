@@ -195,6 +195,20 @@ const Units = {
       },
     ],
   },
+  'The Light of Eltharion (SoG)': {
+    effects: [
+      {
+        name: `Eternal Light - Once Per Battle - Reaction: You declared a Summon ability for a Lumineth Realm-Lords unit and this unit has been destroyed`,
+        desc: `Effect: That Summon ability has no effect. Instead, if that spell is cast, you can set up a replacement unit for this unit more than 9" from all enemy units and wholly within 12" of the unit that used that Summon ability.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Supreme Swordmaster - Passive`,
+        desc: `Effect: Ignore negative modifiers to hit rolls and wound rolls for this units attacks and to the characteristics of this unit's melee weapons.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+    ],
+  },
   'Lyrior Uthralle, Warden of Ymetrica': {
     /* mandatory: {
       spells: [keyPicker(spells, ['Greater Power of Hysh'])],
@@ -244,6 +258,15 @@ const Units = {
         name: `World Banner - Passive`,
         desc: `Effect: Add 3 to the control scores of other friendly Lumineth Realm-lords units while they are wholly within 18" of this unit.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Vanari Bannerblade (SoG)': {
+    effects: [
+      {
+        name: `Defend the Banner - Passive`,
+        desc: `Effect: Add 1 to save rolls for friendly Vanari Infantry units while they are contesting the same objective as this unit.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
     ],
   },

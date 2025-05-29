@@ -846,6 +846,38 @@ const Units = {
       },
     ],
   },
+  'Abraxia (SoG)': {
+    effects: [
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Thanatorg's Claws and Fangs is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Unstoppable Invasion - Once Per Turn`,
+        desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
+        Effect: Inflict D3 mortal damage on the target. Then, roll 2D6. This unit can move a distance up to the value of the roll. It can pass through models in the target unit but must end that move in combat.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Champion of the Undivided`,
+        desc: `Declare: Pick a friendly non-Unique Slaves to Darkness unit wholly within 12" of this unit and that does not have a Pledge to Chaos keyword to be the target. 
+        Effect: For the rest of the turn, add 1 to the Rend characteristic of melee weapons used by the target while they are contesting an objective you do not control.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Unending Will to Conquer`,
+        desc: `Effect: If this unit is contesting an objective you do not control. Heal (D6) this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Mutative Spear`,
+        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by this units combat attacks to be the target. 
+        Effect: The target has a maximum control score of 1 for the rest of the turn.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
   'Gunnar Brand': {
     effects: [
       //  ChaosMarkAll,

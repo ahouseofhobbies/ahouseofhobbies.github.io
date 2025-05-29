@@ -379,6 +379,16 @@ const Units = {
       },
     ],
   },
+  'Gnoblar Scraplauncher (SoG)': {
+    effects: [
+      {
+        name: `Scrap Away! - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this phase by this units shooting attacks to be the target. 
+        Effect: Roll a dice. If the roll equals or exceeds the targets Save characteristic, halve the targets Move characteristic until the start of your next turn. In addition, on a 5+, until the start of your next turn, subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
   Gnoblars: {
     effects: [
       // ChampionEffect,
@@ -467,6 +477,15 @@ const Units = {
         when: [SHOOTING_PHASE],
       },
       //   RhinoxChargeEffect,
+    ],
+  },
+  'Ironblaster (SoG)': {
+    effects: [
+      {
+        name: `Shrapnel Blast - Once Per Turn`,
+        desc: `Effect: For the rest of the phase: Add 1 to the Attacks characteristic of this units ranged weapons. This units ranged weapons have Crit (2 Hits).`,
+        when: [SHOOTING_PHASE],
+      },
     ],
   },
   Leadbelchers: {

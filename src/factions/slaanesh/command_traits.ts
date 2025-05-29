@@ -5,6 +5,8 @@ import {
   COMBAT_PHASE,
   DURING_GAME,
   END_OF_COMBAT_PHASE,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
   SHOOTING_PHASE,
   START_OF_COMBAT_PHASE,
 } from 'types/phases'
@@ -38,8 +40,37 @@ const CommandTraits = {
       },
     ],
   },
+  'Celebrity Warlord': {
+    effects: [
+      {
+        name: `Command Ability: Celebrity Warlord - Once Per Battle`,
+        desc: `Declare: Pick a friendly non-Hero Sybarite unit that has been destroyed to be the target. 
+        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Master of Tempatation': {
+    effects: [
+      {
+        name: `Master of Temptation - Enemy Hero Phase`,
+        desc: `Declare: You can only use this ability if your opponent has any temptation dice. Pick a visible enemy unit within 18" of this unit to be the target. 
+        Effect: For the rest of the turn, while your opponent has not used any of their temptation dice to replace a roll for the target this turn, the target can only use Core abilities.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The Need for Perfection': {
+    effects: [
+      {
+        name: `The Need for Perfection - Passive`,
+        desc: `Effect: The first time each turn that an unmodified charge roll, casting roll, unbinding roll or banishment roll for a friendly non-Euphoric unit wholly within 12" of this unit is 5 or less, that unit has the Euphoric keyword for the rest of the turn.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   // Pretenders Host - Aspects of the Perfect Liege
- /* 'Strength of Godhood': {
+  /* 'Strength of Godhood': {
     effects: [
       {
         name: `Strength of Godhood`,

@@ -54,6 +54,27 @@ const Flavors = {
       },
     ],
   },
+  Cryptmasters: {
+    effects: [
+      {
+        name: `Unhallowed Site - Once Per Turn`,
+        desc: `Declare: Pick a friendly Cursed Sepulchre to be the target. 
+        Effect: The target has Ward (4+) until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+
+  Skinshifters: {
+    effects: [
+      {
+        name: `The Speed of Death - Once Per Turn`,
+        desc: `Declare: Pick a friendly Infantry Vampire Hero to be the target. 
+        Effect: The target can move up to 12" and has Fly when it does so. It cannot end that move in combat.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default Flavors
