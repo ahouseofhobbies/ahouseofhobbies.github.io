@@ -83,11 +83,12 @@ const CoreRules: TEntry[] = [
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
-        name: `Activate Place of Power`,
-        desc: `Declare: Pick a friendly Hero within 3" of any Places of Power to use this ability. 
-        Effect: Roll a dice. On a 1, inflict D3 mortal damage on that Hero. On a 2+: 
-         If that Hero is a Wizard or Priest, add 1 to casting rolls or chanting rolls for that Hero this turn. 
-         If that Hero is not a Wizard or Priest, they can use the 'Unbind' or 'Banish Manifestation' ability this turn as if they had Wizard (1). `,
+        name: `Activate Place of Power - Once Per Turn`,
+        desc: `Declare: Pick a friendly Hero within 3" of any Places of Power to use this ability, then pick that Place of Power to be the target. 
+        Effect: Pick 1 of the following effects: 
+         Cauterising Pollen: Roll a dice. On a 1, inflict 1 mortal damage on each unit (friendly and enemy) within 6" of any Place of Power. On a 3+, Heal (2) each unit (friendly and enemy) wholly within 6" of the target.
+         Rapid Sprouting: Pick a Ghyranite objective or visible terrain feature within 12" of that Hero and roll a dice. On a 3+, that objective or terrain feature has the Obscuring ability (see 1.2) for the rest of the battle.
+         Tap the Ley Lines: For the rest of the turn, If that Hero is not a Wizard or Priest, they can use the Unbind or Banish Manifestation ability as if they had Wizard (1).`,
         when: [START_OF_TURN],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
@@ -108,9 +109,15 @@ const CoreRules: TEntry[] = [
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
+        name: `Sacred Rites - Prayer (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Priest to use this ability, then make a chanting roll of D6. On an unmodified chanting roll of 1, remove 1 ritual point from that Priest instead of D3.
+        Effect: Give a number of ritual points to the Priest equal to the chanting roll.`,
+        when: [HERO_PHASE],
+      },
+      {
         name: `Banish Manifestation`,
-        desc: `Declare: Pick a friendly Wizard or Priest to use this ability, pick a manifestation within 30" of them to be the target, then make a banishment roll of 2D6. Add 1 to the banishment roll for each additional enemy manifestation on the battlefield after the first.
-        Effect: If the banishment roll equals or exceeds the banishment value listed on the manifestation's warscroll, it is banished and removed from play. You cannot pick the same manifestation as the target of this ability more than once per turn. `,
+        desc: `Declare: Pick a friendly Wizard or Priest to use this ability, pick a manifestation within 30" of them that was not summoned this turn to be the target, then make a banishment roll of 2D6. Add 1 to the banishment roll for each additional enemy manifestation on the battlefield after the first.
+        Effect: If the banishment roll equals or exceeds the banishment value listed on the manifestation's warscroll, it is banished and removed from play.`,
         when: [HERO_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
@@ -233,14 +240,14 @@ const CoreRules: TEntry[] = [
       {
         name: `Command Ability - All Out Attack - Reaction: You declared an Attack ability`,
         desc: `Used By: The unit using that Attack ability. 
-        Effect: Add 1 to hit rolls for attacks made as part of that Attack ability. This also affects weapons that have the Companion weapon ability.`,
+        Effect: Add 1 to hit rolls for attacks made as part of that Attack ability. This also affects weapons that have the Companion weapon ability. For the rest of the turn, subtract 1 from save rolls for the unit using this ability.`,
         when: [SHOOTING_PHASE, COMBAT_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
         name: `Command Ability - All Out Defense - Reaction: Opponent declared an Attack ability`,
         desc: `Used By: A unit targeted by that Attack ability. 
-        Effect: Add 1 to save rolls for that unit in this phase. `,
+        Effect: Add 1 to save rolls for that unit until that Attack ability has been resolved. `,
         when: [SHOOTING_PHASE, COMBAT_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
@@ -252,7 +259,9 @@ const CoreRules: TEntry[] = [
       },
       {
         name: `Guarded Hero - Passive`,
-        desc: `Effect: If this Hero is within the combat range of a friendly unit that is not a Hero: Subtract 1 from hit rolls for shooting attacks that target this Hero. If this Hero is Infantry, they cannot be picked as the target of shooting attacks made by models more than 12" from them.`,
+        desc: `Effect: If this Hero is within the combat range of a friendly unit that is not a Hero: 
+        Subtract 1 from hit rolls for shooting attacks that target this Hero. 
+        If this Hero is Infantry, they cannot be picked as the target of shooting attacks made by models more than 12" from them.`,
         when: [SHOOTING_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },

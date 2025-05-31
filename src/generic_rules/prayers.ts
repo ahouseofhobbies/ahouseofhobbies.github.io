@@ -5,18 +5,18 @@ import { HERO_PHASE } from 'types/phases'
 
 const GenericPrayers: TEntry[] = [
   // Core Prayers
-  /*{
-    name: `Bless`,
+  /* {
+    name: `Sacred Rites`,
     effects: [
       {
-        name: `Bless`,
-        desc: `Answer value of 4 and range of 12". If answered, pick 1 friendly unit wholly within range and visible to the chanter. Until the start of your next hero phase, that unit has a ward of 6+.`,
+        name: `Sacred Rites - Prayer (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Priest to use this ability, then make a chanting roll of D6. On an unmodified chanting roll of 1, remove 1 ritual point from that Priest instead of D3.
+        Effect: Give a number of ritual points to the Priest equal to the chanting roll.`,
         when: [HERO_PHASE],
-        rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
     ],
   },
-  {
+ {
     name: `Smite`,
     effects: [
       {
@@ -63,6 +63,6 @@ const GenericPrayers: TEntry[] = [
       },
     ],
   }, */
-] 
+]
 
 export default GenericPrayers

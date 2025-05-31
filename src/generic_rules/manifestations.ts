@@ -33,7 +33,7 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Shards of Valagharr - Ensnaring Soul-Drain - Passive`,
-        desc: `Effect: Each time an enemy unit uses a Move ability while it is within 6" of any parts of this Manifestation, the effects of the Fly ability do not apply to that unit. Enemy units cannot be set up within 6" of either part of this Manifestation.`,
+        desc: `Effect: Each time an enemy unit uses a Move ability while it is within 9" of any parts of this Manifestation, the effects of the Fly ability do not apply to that unit. Enemy units cannot be set up within 9" of either part of this Manifestation.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -258,7 +258,11 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Malevolent Maelstrom - Necrotic Vortex - Passive`,
-        desc: `Effect: Give this Manifestation 1 maelstrom point: Each time this Manifestation is set up. Each time a unit successfully casts a spell while it is within 12" of this Manifestation. Each time a model is slain within 12" of this Manifestation. This Manifestation can have a maximum of 6 maelstrom points at once.`,
+        desc: `Effect: Give this Manifestation 1 maelstrom point: 
+        Each time this Manifestation is set up. 
+        Each time a unit successfully casts a spell while it is within 12" of this Manifestation. 
+        Each time a model is slain within 12" of this Manifestation. 
+        This Manifestation can have a maximum of 6 maelstrom points at once.`,
         when: [DURING_GAME],
       },
       {
