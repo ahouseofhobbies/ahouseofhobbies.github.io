@@ -75,13 +75,13 @@ const CoreRules: TEntry[] = [
   {
     name: 'Core Rules 4.0',
     effects: [
-      {
+      /* {
         name: `Tactical Gambit - Once Per Battle Round`,
         desc: `You cannot use this ability if you went second in the previous battle round and chose to go first in the current battle round. 
         Effect: Pick 1 battle tactic that you have not yet attempted. You can attempt to complete that battle tactic this turn. `,
         when: [START_OF_TURN],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
-      },
+      }, */
       {
         name: `Activate Place of Power - Once Per Turn`,
         desc: `Declare: Pick a friendly Hero within 3" of any Places of Power to use this ability, then pick that Place of Power to be the target. 

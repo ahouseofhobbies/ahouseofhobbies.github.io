@@ -5,6 +5,7 @@ import {
   COMBAT_PHASE,
   DURING_GAME,
   END_OF_BATTLESHOCK_PHASE,
+  END_OF_TURN,
   HERO_PHASE,
   MOVEMENT_PHASE,
   SAVES_PHASE,
@@ -41,6 +42,15 @@ const Artifacts = {
         name: `Amulet of Graves - Once Per Battle`,
         desc: `Effect: If there are fewer than 3 friendly Cursed Sepulchres on the battlefield, set up a Cursed Sepulchre on the battlefield more than 9" from all enemy units, more than 1" from all friendly units and more than 3" from all objectives and other terrain features.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Chalice of the Blood Dragon (AoR)': {
+    effects: [
+      {
+        name: `Chalice of the Blood Dragon (AoR) - Once Per Battle`,
+        desc: `Effect: Heal (3D3) this unit.`,
+        when: [END_OF_TURN],
       },
     ],
   },

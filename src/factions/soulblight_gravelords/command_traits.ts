@@ -77,6 +77,19 @@ const CommandTraits = {
       },
     ],
   },
+  'Immortal Dedication (AoR)': {
+    effects: [
+      {
+        name: `Immortal Dedication (AoR)`,
+        desc: `Effect: This unit receives D3 martial prowess tokens. Each martial proewess token can be spent to do 1 of the following:
+        Reroll a hit roll for this unit.
+        Reroll a wound roll for this unit.
+        Reroll a save roll for this unit.
+        At the start of the next turn, remove all this unit's martial prowess tokens.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
 
   /* 'Above Suspicion': {
     effects: [

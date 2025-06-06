@@ -1,7 +1,7 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
 import meta_rule_sources from 'meta/rule_sources'
-import { HERO_PHASE } from 'types/phases'
+import { COMBAT_PHASE, HERO_PHASE } from 'types/phases'
 
 const Spells = {
   'Lore of Undeath': {
@@ -23,6 +23,42 @@ const Spells = {
         desc: `Declare: Pick a friendly Soulblight Gravelords Wizard to cast this spell, pick a visible enemy unit within 12" of them to be the target, then make a casting roll of 2D6. 
         Effect: For the rest of the turn, subtract 1 from the Damage characteristic of the targets melee weapons.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Lore of Knights of the Crimson Keep (AoR)': {
+    effects: [
+      {
+        name: `Siphon Strength (AoR): Casting value of 7 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Crimson Keep Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
+        Effect: Inflict D3 mortal damage on the target. For the rest of the turn, add 1 to hit rolls for attacks made by the caster.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Awakened Fury (AoR): Casting value of 7`,
+        desc: `Declare: Pick a friendly Crimson Keep Wizard to cast this spell, pick a visible friendly Crimson Keep unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
+        Effect: Add 1 to the Damage characteristic of the target's Companion melee weapons until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Deathly Gale (AoR): Casting value of 7`,
+        desc: `Declare: Pick a friendly Crimson Keep Wizard to cast this spell, pick a visible friendly Crimson Keep unit wholly within 12" of them to be the target, then make a casting roll of 2D6.
+        Effect: For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for the target to a maximum of 3.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Unholy Reliquary: Casting value of 6`,
+        desc: `Declare: If there is not a friendly Unholy Reliquary on the battlefield, pick a friendly Soulblight Gravelords Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up an Unholy Reliquary wholly within 18" of the caster.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Unholy Reliquary - Draw on Power`,
+        desc: `Declare: Pick a friendly Soulblight Gravelords Hero wholly within 12" of this Manifestation to be the target.
+        Effect: Pick one of the following:
+        Heal D3 the target.
+        Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn and banish this Manifestation.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
