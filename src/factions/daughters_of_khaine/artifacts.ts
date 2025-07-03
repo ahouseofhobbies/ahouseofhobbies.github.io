@@ -19,7 +19,7 @@ const Artifacts = {
       },
     ],
   },
- /* 'Crone Blade': {
+  /* 'Crone Blade': {
     effects: [
       {
         name: `Crone Blade`,
@@ -55,7 +55,7 @@ const Artifacts = {
       },
     ],
   },
-/*  'Crystal Heart': {
+  /*  'Crystal Heart': {
     effects: [
       {
         name: `Crystal Heart`,
@@ -89,6 +89,18 @@ const Artifacts = {
         desc: `Declare: Pick a friendly Daughters of Khaine Priest wholly within 12" of this unit. 
         Effect: Give that unit D6 ritual points.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The Croneseers Pariahs (AoR)': {
+    effects: [
+      {
+        name: `Blade of Prophetic Doom (AoR) - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll a dice. On a 2+: 
+        If the target is not damaged, inflict 1 mortal damage on it. 
+        If the target is damaged, inflict an amount of mortal damage on it equal to the roll.`,
+        when: [END_OF_TURN],
       },
     ],
   },

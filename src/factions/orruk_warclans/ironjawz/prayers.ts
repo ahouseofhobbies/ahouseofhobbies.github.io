@@ -25,6 +25,27 @@ const IronjawzPrayers = {
       },
     ],
   },
+  'Big Waaagh! (AoR)': {
+    effects: [
+      {
+        name: `Unstoppable Waaagh!-beats: Chanting value of 4 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Big Waaagh! Priest to chant this prayer, pick a visible friendly non-Hero Big Waaagh! Infantry unit that is in combat and wholly within 12" of them to be the target, then make a chanting roll of D6.
+          Effect: The target can use 2 Fight abilities this turn. After the first, however, the target has Fight-Last for the rest of the turn. If the chanting roll was 10+, you can pick another eligible unit to be a second target.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Zoggrokz Ironmongerz (AoR)': {
+    effects: [
+      {
+        name: `Get 'Em, Gork!: Chanting value of 5 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Zoggrok's Ironmongerz Priest to chant this prayer, then make a chanting roll of D6.
+          Effect: If the chanting roll was 5-9, pick a visible terrain feature wholly within 12" of the chanter. If the chanting roll was 10+, pick a visible terrain feature wholly within 18" of the chanter instead. That terrain feature is trampled by Gork for the rest of the battle.
+          Roll a D3 each time an enemy unit starts or ends a move within 6" of a terrain feature that is trampled by Gork. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(IronjawzPrayers, 'prayer')

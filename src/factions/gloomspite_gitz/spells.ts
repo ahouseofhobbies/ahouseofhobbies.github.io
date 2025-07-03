@@ -1,6 +1,6 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
-import { COMBAT_PHASE, HERO_PHASE, MOVEMENT_PHASE, SHOOTING_PHASE } from 'types/phases'
+import { COMBAT_PHASE, DURING_GAME, HERO_PHASE, MOVEMENT_PHASE, SHOOTING_PHASE } from 'types/phases'
 
 const Spells = {
   'Lore of the Clammy Dank': {
@@ -46,6 +46,53 @@ const Spells = {
         The target cannot use Run abilities. 
         Halve the Range characteristic of the targets ranged weapons.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Da Kings Gitz (AoR)': {
+    effects: [
+      {
+        name: `Da Loonking's Command: Casting value of 5 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly King's Gitz Wizard to cast this spell, pick a visible friendly unit wholly within 18" of them to be the target, then make a casting roll of 2D6. 
+          Effect: Until the start of you next turn:
+          Add 1 to the Attacks characteristic of melee weapons used by champions in the target unit.
+          If the target uses the Rally command, you can make 1 additional rally roll of D6.
+          Add 1 to the target's control score.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Right Gitz in Da Right Place: Casting value of 5`,
+        desc: `Declare: Pick a friendly King's Gitz Wizard to cast this spell, pick a visible friendly unit wholly within 18" of them to be the target, then make a casting roll of 2D6. 
+          Effect: The target's weapons have Anti-Hero(+1 Rend) until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Malevolent Moon: Casting value of 7`,
+        desc: `Declare: If there is not a friendly Malevolent Moon on the battlefield, pick a friendly Gloomspite Gitz Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up a Malevolent Moon wholly within 12" of the caster, visible to them and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Droggz Gitmob (AoR)': {
+    effects: [
+      {
+        name: `Frazzleblast: Casting value of 5 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Wizard to cast this spell, pick a friendly Droggz's Gitmob unit wholly within 12" of them to be the target, then make a casting roll of 2D6.
+          Effect: Until the start of your next turn, the target's melee weapoons have Crit (2 Hits).`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Mork's Mighty Mushroom: Casting value of 6`,
+        desc: `Declare: If there is not a friendly Morks Mighty Mushroom on the battlefield, pick a friendly Gloomspite Gitz Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up a Morks Mighty Mushroom wholly within 12" of the caster and visible to them.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Mork's Mighty Mushroom - Mutating Spores`,
+        desc: `Declare: Pick up to 3 enemy units within 6" of this Manifestation to be the targets. 
+        Effect: For each target, roll a number of dice equal to the number of models in that unit that are within 6" of this Manifestation. For each 5+, inflict 1 mortal damage on the target.`,
+        when: [SHOOTING_PHASE],
       },
     ],
   },

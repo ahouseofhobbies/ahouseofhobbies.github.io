@@ -25,7 +25,17 @@ const Prayers = {
       },
     ],
   },
- /* 'Filth-filth!': {
+  'The Great-Grand Gnawhorde (AoR)': {
+    effects: [
+      {
+        name: `Reverberating Ritual: Chant value of 7 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Gnawhorde Priest to chant this prayer, pick a visible friendly Gnawhorde Infantry unit wholly within 13" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, the target can move an extra 3" when it makes a pile-in move. In addition, if the chanting roll was 8+, add 1 to the target's control score until the start of your next turn. `,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /* 'Filth-filth!': {
     effects: [
       {
         name: `Filth-filth!`,

@@ -36,6 +36,15 @@ const CommandTraits = {
       },
     ],
   },
+  'Lofnir Drothkeepers (AoR)': {
+    effects: [
+      {
+        name: `Raised Around Beasts (AoR) - Passive`,
+        desc: `Effect: The melee weapons of friendly non-Monster units have Anti-Monster (+1 Rend) while they are wholly within 9" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   /*'Blood of the Berzerker': {
     effects: [
       {

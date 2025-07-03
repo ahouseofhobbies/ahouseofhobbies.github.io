@@ -70,6 +70,15 @@ const Artifacts = {
       },
     ],
   },
+  'Grundstok Expeditionary Force (AoR)': {
+    effects: [
+      {
+        name: `Aetheric Nullifier (AoR) - Reaction: Opponent declared a Shoot or Fight ability for a Manifestation within 9" of the bearer`,
+        desc: `Effect: Roll 2D6. If the roll equals or exceeds the banishment value listed on the Manifestations warscroll, it is banished and removed from play. You cannot pick the same Manifestation to be the target of this ability more than once per phase.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+    ],
+  },
   /* 'Spell in a Bottle': {
     effects: [
       {

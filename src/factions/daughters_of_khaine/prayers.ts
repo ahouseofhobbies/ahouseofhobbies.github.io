@@ -160,6 +160,30 @@ const Prayers = {
       },
     ],
   },
+  'The Croneseers Pariahs (AoR)': {
+    effects: [
+      {
+        name: `Wings of the Crone Goddess: Chant value of 3 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Croneseers Pariahs Priest to chant this prayer, pick a visible friendly Croneseers Pariahs unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn: 
+        The target has Fly. 
+        Add 2" to the targets Move characteristic. If the chanting roll was 8+, add 6" to the targets Move characteristic instead.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Augury of Battle: Chant value of 5`,
+        desc: `Declare: Pick a friendly Croneseers Pariahs Priest to chant this prayer, pick a visible friendly Croneseers Pariahs unit wholly within 18" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, the target has Ward (5+). If the chanting roll was 10+, you can pick up to 2 friendly Croneseers Pariahs units wholly within 18" of the caster instead of 1.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Auspicious Strike: Chant value of 4`,
+        desc: `Declare: Pick a friendly Croneseers Pariahs Priest to chant this prayer, pick a visible friendly Croneseers Pariahs unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, each time the unmodified hit roll for an attack made against the target is 1, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved. If the chanting roll was 10+, inflict 1 mortal damage for each unmodified hit roll of 1-2 instead.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Prayers, 'prayer')

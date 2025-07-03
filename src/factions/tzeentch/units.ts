@@ -157,10 +157,9 @@ const Units = {
         when: [HERO_PHASE],
       },
       {
-        name: `Oracle of Eternity - Once Per Battle - Reaction: You declared the "Tactical Gambit" ability`,
-        desc: `Effect: Pick 1 of the following effects: 
-        Read the Past: You can pick 1 battle tactic that you have already attempted. 
-        Read the Future: You can pick 2 battle tactics that you have not yet attempted, but you can only complete 1 of them (even if you meet the conditions to complete both). The other does not count as having been attempted. If you do not complete either battle tactic, you can pick which does not count as having been attempted.`,
+        name: `Oracle of Eternity - Once Per Battle`,
+        desc: `Effect: Pick 1 battle tactics card that is on your roster and discard it. Then, for the rest of the battle, replace it with a battle tactics card that is not on your roster. 
+        If that new battle tactics card requires either player to pick something, they must do so immediately when the new battle tactics card is picked. The combined total of victory points earned by both the discarded battle tactics card and the new battle tactics card is 15. Any additional victory points beyond 15 that are earned by completing the battle tactics on both of those battle tactics cards are lost`,
         when: [START_OF_TURN],
       },
     ],

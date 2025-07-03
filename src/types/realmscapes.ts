@@ -1,7 +1,7 @@
 export enum RealmscapesEnum {
   // GALLET = 'Gallet',
   // GHUR = 'Ghur',
-  ANDTOR = 'Season 24’',
+  ANDTOR = 'Season 25’',
 }
 
 export const SUPPORTED_REALMSCAPES: RealmscapesEnum[] = [

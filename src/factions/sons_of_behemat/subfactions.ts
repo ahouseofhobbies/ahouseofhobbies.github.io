@@ -10,6 +10,7 @@ import { pickEffects } from 'factions/metatagger'
 import battle_traits from './battle_traits'
 import MonstrousRampages from './monstrous_rampages'
 import { IItemDescription, TItemDescriptions } from 'factions/factionTypes'
+import prayers from './prayers'
 
 const baseSubFaction = {
   effects: [],
@@ -21,6 +22,7 @@ const baseSubFaction = {
     command_traits: [CommandTraits],
     grand_strategies: [GrandStrategies],
     flavors: [Flavors],
+    prayers: [prayers],
     monstrous_rampages: [MonstrousRampages],
     units: [Units],
   },
@@ -32,7 +34,7 @@ const subFactions = {
     effects: pickEffects(battle_traits, [SONS_OF_BEHEMAT]),
   },
 
- /* "King Brodd's Stomp": {
+  /* "King Brodd's Stomp": {
     ...baseSubFaction,
     effects: pickEffects(battle_traits, ["King Brodd's Stomp"]),
   }, */

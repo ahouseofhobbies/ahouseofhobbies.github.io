@@ -1,10 +1,17 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
-import { HERO_PHASE, WOUND_ALLOCATION_PHASE } from 'types/phases'
+import {
+  CHARGE_PHASE,
+  DURING_GAME,
+  END_OF_TURN,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
+  WOUND_ALLOCATION_PHASE,
+} from 'types/phases'
 
 const Spells = {
   // Lore of Ruin
- /* Scorch: {
+  /* Scorch: {
     effects: [
       {
         name: `Scorch`,
@@ -166,6 +173,67 @@ const Spells = {
         desc: `Declare: Pick a friendly Skaven Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
         Effect: The target has Strike-last for the rest of the turn.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Thanquols Mutated Menagerie (AoR)': {
+    effects: [
+      {
+        name: `Untapped Mutation: Casting value of 5 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Mutated Menagerie Wizard to cast this spell, pick up to 3 visible friendly Mutated Menagerie units wholly within 13" of them that are affected by the More-More Mutation! ability to be the targets, then make a casting roll of 2D6. 
+        Effect: For each damage point allocated to the target at the end of this turn by the More-More Mutation! ability, add 1 to the target's control score until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Warpgale: Casting value of 6`,
+        desc: `Declare: Pick a friendly Skaven Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
+        Effect: The target has Strike-last for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Warp Lightning Vortex: Casting value of 7`,
+        desc: `Declare: If there is not a friendly Warp Lightning Vortex on the battlefield, pick a friendly Skaven Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up the first part of the Warp Lightning Vortex within 18" of the caster and visible to them, then set up the second and third parts exactly 7" from the first part and exactly 7" from each other so that they form a triangle.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Warp Lightning Vortex - Multiple Parts - Passive`,
+        desc: `Effect: When a number of damage points equal to this Manifestations Health characteristic are allocated to it, this Manifestation is destroyed and all its parts are removed from play.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Warp Lightning Vortex - Warp Lightning Bolts`,
+        desc: `Declare: If this Manifestation was not set up this turn, pick each enemy unit within 6" of this Manifestation to be the targets. 
+        Effect: Roll a dice for each target. On a 4+, inflict D3 mortal damage on the target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Warp Lightning Vortex - Warp Vortex - Passive`,
+        desc: `Effect: Subtract 2 from run rolls and charge rolls for enemy units while they are within 6" of this Manifestation. In addition, if an enemy unit passes across this Manifestation and/or the round-cornered traingle formed by drawing a line around all of the bases of the Manifestation's parts, inflict D3 mortal damage on that enemy unit after the Move ability has been resolved.`,
+        when: [MOVEMENT_PHASE, CHARGE_PHASE],
+      },
+    ],
+  },
+  'The Great-Grand Gnawhorde (AoR)': {
+    effects: [
+      {
+        name: `Deafening Frenzy: Casting value of 8 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Gnawhorde Wizard to cast this spell, pick a visible friendly Gnawhorde Infantry unit wholly within 13" of them to be the targets, then make a casting roll of 2D6. 
+        Effect: Until the start of your next turn:
+        The target has Strike-First.
+        The target cannot use commands.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Vermintide: Casting value of 7`,
+        desc: `Declare: If there is not a friendly Vermintide on the battlefield, pick a friendly Skaven Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up a Vermintide wholly within 13" of the caster, visible to them and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Vermintide - More-More Rats`,
+        desc: `Effect: Heal (D6) this Manifestation.`,
+        when: [END_OF_TURN],
       },
     ],
   },

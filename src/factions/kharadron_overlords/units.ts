@@ -408,7 +408,7 @@ const Units = {
       {
         name: `Assault Boat`,
         desc: `Declare: This unit cannot use this ability if it is in combat or has used a Run or Retreat ability this turn. Pick a number of units up to its Transport Capacity that are wholly within 6" of it and that have not charged this turn to be the targets. Then, make a charge roll of 2D6. 
-        Effect: Remove the targets from the battlefield. Then, this unit can move a distance up to the value of the charge roll and must end the move within 1/2" of a visible enemy unit. Then, set up the targets wholly within this units combat range. The targets can be set up in combat and have Strike-first for the rest of the turn. This unit and the targets have charged.`,
+        Effect: Effect: This unit can move a distance up to the value of the charge roll and must end the move within 12" of a visible enemy unit. If it does so, remove the targets from the battlefield and set them up again wholly within this units combat range. The targets can be set up in combat and have Strike-first for the rest of the turn. This unit and the targets have charged, and the targets cannot use another Core ability this phase.`,
         when: [CHARGE_PHASE],
       },
       {

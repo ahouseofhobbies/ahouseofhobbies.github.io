@@ -4,7 +4,7 @@ import rule_sources from './rule_sources'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const CommandTraits = {
- /* 'Gnarled Warrior': {
+  /* 'Gnarled Warrior': {
     effects: [
       {
         name: `Gnarled Warrior`,
@@ -32,7 +32,7 @@ const CommandTraits = {
       },
     ],
   },
- /* 'Nurtured by Magic': {
+  /* 'Nurtured by Magic': {
     effects: [
       {
         name: `Nurtured by Magic`,
@@ -63,8 +63,17 @@ const CommandTraits = {
       },
     ],
   },
+  'The Evergreen Hunt (AoR)': {
+    effects: [
+      {
+        name: `Heartwood Hunting Horn (AoR) - Once Per Battle`,
+        desc: `Effect: You gain 1 chord.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
   // Evergreen Hunt
-/*  'Sapwood Leader': {
+  /*  'Sapwood Leader': {
     effects: [
       {
         name: `Sapwood Leader`,

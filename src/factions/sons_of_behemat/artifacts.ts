@@ -49,7 +49,7 @@ const Artifacts = {
       },
     ],
   },
-  "Kingslaughter Cowl": {
+  'Kingslaughter Cowl': {
     effects: [
       {
         name: `Kingslaughter Cowl - Passive`,
@@ -67,8 +67,17 @@ const Artifacts = {
       },
     ],
   },
+  'King Brodds Stomp (AoR)': {
+    effects: [
+      {
+        name: `Lucky Shiny Hat (AoR) - Passive`,
+        desc: `Effect: This unit has Ward (4+) against damage points inflicted by Spell and Prayer abilities and by abilities used by Manifestations.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   // Stomper Tribe
-/*  'Club of the First Oak (Stomper Tribe)': {
+  /*  'Club of the First Oak (Stomper Tribe)': {
     effects: [
       {
         name: `Club of the First Oak (Stomper Tribe)`,

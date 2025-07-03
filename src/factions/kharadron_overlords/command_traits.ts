@@ -18,7 +18,7 @@ import {
 } from 'types/phases'
 
 const AllegianceCommandTraits = {
- /* 'ARTYCLE: Honour is Everything': {
+  /* 'ARTYCLE: Honour is Everything': {
     effects: [
       {
         name: `ARTYCLE: Honour is Everything`,
@@ -102,7 +102,7 @@ const AllegianceCommandTraits = {
 } satisfies TItemDescriptions
 
 const CommandTraits = {
- /* Grudgebearer: {
+  /* Grudgebearer: {
     effects: [
       {
         name: `Grudgebearer`,
@@ -120,7 +120,7 @@ const CommandTraits = {
       },
     ],
   },
-  'Endrinmaestro': {
+  Endrinmaestro: {
     effects: [
       {
         name: `Endrinmaestro - Passive`,
@@ -129,7 +129,7 @@ const CommandTraits = {
       },
     ],
   },
-  'Grudgebearer': {
+  Grudgebearer: {
     effects: [
       {
         name: `Grudgebearer`,
@@ -139,7 +139,16 @@ const CommandTraits = {
       },
     ],
   },
- /* 'Ex-Grundstok': {
+  'Grundstok Expeditionary Force (AoR)': {
+    effects: [
+      {
+        name: `Entrenchment Expert (AoR) - Reaction: You declared the All Out Defense command for a friendly unit wholly within 12" of this Hero`,
+        desc: `Effect: That friendly unit has Ward (5+) for the rest of the turn.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+    ],
+  },
+  /* 'Ex-Grundstok': {
     effects: [
       {
         name: `Ex-Grundstok`,
@@ -159,7 +168,7 @@ const CommandTraits = {
   }, */
 
   // Grundstok Expeditionary Force
- /* 'Back On Your Feet!': {
+  /* 'Back On Your Feet!': {
     effects: [
       {
         name: `Back On Your Feet!`,

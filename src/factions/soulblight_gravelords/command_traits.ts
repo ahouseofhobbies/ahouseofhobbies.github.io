@@ -10,6 +10,7 @@ import {
   END_OF_ROUND,
   END_OF_SETUP,
   END_OF_SHOOTING_PHASE,
+  END_OF_TURN,
   HERO_PHASE,
   MOVEMENT_PHASE,
   SAVES_PHASE,
@@ -77,7 +78,7 @@ const CommandTraits = {
       },
     ],
   },
-  'Immortal Dedication (AoR)': {
+  'Knights of the Crimson Keep (AoR)': {
     effects: [
       {
         name: `Immortal Dedication (AoR)`,
@@ -90,7 +91,49 @@ const CommandTraits = {
       },
     ],
   },
-
+  'Barrow Legion (AoR) - Lord of the Arcane Aegis': {
+    effects: [
+      {
+        name: `Lord of the Arcane Aegis (AoR)`,
+        desc: `Effect: Pick 1 of the following keywords:
+        Infantry
+        Cavalry
+        Monster
+        Beast
+        For the rest of the battle, each time an attack targets this unit, if the attacking unit has the keyword you picked, an unmodified save roll of 4+, for that attack is always successful.`,
+        when: [DURING_SETUP],
+      },
+    ],
+  },
+  'Barrow Legion (AoR) - Restless Tyrant': {
+    effects: [
+      {
+        name: `Restless Tyrant (AoR)`,
+        desc: `Declare; Pick a friendly Barrow Legion unit wholly within 12" of this unit to be the target.
+        Effect: Add 2" to the target's Move characteristic for the rest of the turn.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Barrow Legion (AoR) - Spirit-Eater': {
+    effects: [
+      {
+        name: `Spirit-Eater (AoR)`,
+        desc: `Effect: If any models were slain by your general this turn, Heal (D6) your general.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Scions of Nulahmia (AoR)': {
+    effects: [
+      {
+        name: `Keeper of the Royal Menagerie (AoR)`,
+        desc: `Declare: Pick a friendly Dire Wolves or Fell Bats unit that has been destroyed to be the target. 
+        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
   /* 'Above Suspicion': {
     effects: [
       {

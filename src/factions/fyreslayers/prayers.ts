@@ -1,6 +1,6 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
-import { HERO_PHASE } from 'types/phases'
+import { END_OF_TURN, HERO_PHASE } from 'types/phases'
 
 const Prayers = {
   'Zharrgrim Blessings': {
@@ -44,6 +44,28 @@ const Prayers = {
         desc: `Declare: Pick a friendly Fyreslayers Priest to chant this prayer, pick a visible friendly Fyreslayers unit wholly within 12" of them and that was not set up this turn to be the target, then make a chanting roll of D6. 
         Effect: The target can use the Normal Move ability as if it were your movement phase. If the chanting roll was 10+, you can pick another eligible unit to be a second target.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Lofnir Drothkeepers (AoR)': {
+    effects: [
+      {
+        name: `Breath of Vulcatrix: Chant value of 4 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Drothkeepers Priest to chant this prayer, pick a visible friendly Drothkeepers Magmadroth wholly within 12" of them to be a target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, the Damage characteristic of the targets Roaring Fyrestream is 3 instead of D3.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Molten Infernoth: Chant value of 6`,
+        desc: `Declare: If there is not a friendly Molten Infernoth on the battlefield, pick a friendly Drothkeepers Priest to chant this prayer, then make a chanting roll of D6. 
+        Effect: Set up a Molten Infernoth wholly within 12" of the chanter, visible to them and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Molten Infernoth - Flamescarred`,
+        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by this Manifestations attacks to be the target. 
+        Effect: Subtract 1 from wound rolls for the targets combat attacks until the end of your next turn.`,
+        when: [END_OF_TURN],
       },
     ],
   },

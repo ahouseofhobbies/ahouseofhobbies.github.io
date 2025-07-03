@@ -69,6 +69,15 @@ const CommandTraits = {
       },
     ],
   },
+  'King Brodds Stomp (AoR)': {
+    effects: [
+      {
+        name: `I Can Do That Better (AoR) - Once Per Battle - Reaction: You declared the Wrath of Brodd ability for a friendly unit`,
+        desc: `Effect: This unit can use the Wrath of Brodd ability immediately after the Wrath of Brodd ability used by the other friendly unit has been resolved. This unit can do so even if it has used another Rampage ability in this turn this turn.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
   // Taker Tribe
   /* 'Extremely Intimidating (Taker Tribe)': {
     effects: [

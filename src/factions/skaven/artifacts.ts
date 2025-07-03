@@ -16,7 +16,7 @@ import {
 } from 'types/phases'
 
 const Artifacts = {
-  'Foulhide': {
+  Foulhide: {
     effects: [
       {
         name: `Foulhide`,
@@ -44,7 +44,7 @@ const Artifacts = {
       },
     ],
   },
-  'Skavenbrew': {
+  Skavenbrew: {
     effects: [
       {
         name: `Skavenbrew - Once Per Battle`,
@@ -54,7 +54,26 @@ const Artifacts = {
       },
     ],
   },
- /* 'Esoteric Warp Resonator': {
+  'Thanquols Mutated Menagerie (AoR)': {
+    effects: [
+      {
+        name: `Warpstone Innards (AoR) - Once Per Battle`,
+        desc: `Declare: Pick a friendly non-Hero Mutated Menagerie Monster unit wholly within 13" of this unit to be the target.
+          Effect: Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the battle. Howerver, at the end of each turn, allocate D3 damage points to the target.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The Great-Grand Gnawhorde (AoR)': {
+    effects: [
+      {
+        name: `Icon of Great-Total Supremacy (AoR) - Once Per Battle`,
+        desc: `Effect: You can return up to D3 slain models to each friendly Gnawhorde Infantry unit with a Health characteristic of up to 3.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /* 'Esoteric Warp Resonator': {
     effects: [
       {
         name: `Esoteric Warp Resonator`,

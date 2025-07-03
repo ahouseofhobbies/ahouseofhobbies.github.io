@@ -251,7 +251,7 @@ const Units = {
         desc: `Effect: Pick 1 of the following effects: 
         Filth-spewer: Pick an enemy unit within 6" of this unit and roll a number of dice equal to the number of models in that unit, to a maximum of 7. For each 3+, inflict 1 mortal damage on that unit. 
         Skull-gorger: Pick an enemy unit in combat with this unit and roll a dice. If the roll exceeds that units Health characteristic, 1 model in that unit is slain and you can Heal (X) this unit, where X is that units Health characteristic. 
-        Spell-eater: Pick a Manifestation within 12" of this unit and roll a dice. On a 2+, it is banished and inflict D3 mortal damage on the unit that summoned it.`,
+        Spell-eater: Pick a Manifestation within 12" of this unit and roll a dice. On a 2+, it is banished and removed from play. In addition, inflict D3 mortal damage on the unit that summoned it.`,
         when: [COMBAT_PHASE],
       },
       {

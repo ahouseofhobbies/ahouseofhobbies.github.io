@@ -27,7 +27,23 @@ const Spells = {
       },
     ],
   },
-/*  'Blubbergrub Stench': {
+  'The Roving Maw (AoR)': {
+    effects: [
+      {
+        name: `Mawmeat: Casting value of 6 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Roving Maw Wizard to cast this spell, pick a visible terrain feature within 18" of them to be the target, then make a casting roll of 2D6. 
+        Effect: For the rest of the battle, units on or within 1" of the target are vulnerable to Mawpits. This ability has no effect on Roving Maw units or units that have Fly.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Retcher: Casting value of 7`,
+        desc: `Declare: Pick a friendly Roving Maw Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Add 2 to the Rend characteristic of the casters melee weapons until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /*  'Blubbergrub Stench': {
     effects: [
       {
         name: `Blubbergrub Stench`,

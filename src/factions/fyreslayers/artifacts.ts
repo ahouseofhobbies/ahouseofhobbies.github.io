@@ -4,6 +4,7 @@ import {
   CHARGE_PHASE,
   COMBAT_PHASE,
   DURING_GAME,
+  END_OF_TURN,
   HERO_PHASE,
   SHOOTING_PHASE,
   START_OF_ANY_PHASE,
@@ -81,6 +82,15 @@ const Artifacts = {
         name: `Droth-helm - Passive`,
         desc: `Effect: Add 1 to hit rolls for Companion weapons used by friendly Fyreslayers units while they are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Lofnir Drothkeepers (AoR)': {
+    effects: [
+      {
+        name: `Mastery Over Monsters (AoR) - Passive`,
+        desc: `Effect: While this unit is contesting an objective, enemy Monsters contesting that objective each have a maximum control score of 2.`,
+        when: [END_OF_TURN],
       },
     ],
   },

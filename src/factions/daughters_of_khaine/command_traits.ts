@@ -2,6 +2,8 @@ import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
 import {
   COMBAT_PHASE,
+  DURING_ANY_PHASE,
+  DURING_GAME,
   END_OF_COMBAT_PHASE,
   END_OF_TURN,
   HERO_PHASE,
@@ -47,6 +49,15 @@ const CommandTraits = {
         The target cannot be healed. 
         Slain models cannot be returned to the target unit.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'The Croneseers Pariahs (AoR)': {
+    effects: [
+      {
+        name: `Proselyte of Morai-Hag (AoR) - Passive`,
+        desc: `Effect: Enemy units cannot use commands while they are in combat with this unit.`,
+        when: [DURING_GAME],
       },
     ],
   },

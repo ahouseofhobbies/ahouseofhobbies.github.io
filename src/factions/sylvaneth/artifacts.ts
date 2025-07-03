@@ -67,6 +67,15 @@ const Artifacts = {
       },
     ],
   },
+  'The Evergreen Hunt (AoR)': {
+    effects: [
+      {
+        name: `Sapwood Leader (AoR) - Passive`,
+        desc: `Effect: If you pick this unit to be a target of the Abundant Growth ability, Heal (3) this unit instead of Heal (1).`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
   /*  'Acorn of the Ages': {
     effects: [
       {

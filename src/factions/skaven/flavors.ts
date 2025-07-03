@@ -84,6 +84,77 @@ const Flavors = {
       },
     ],
   },
+  'Thanquols Mutated Menagerie (AoR)': {
+    effects: [
+      {
+        name: `Monstrous Entourage - Passive`,
+        desc: `Effect: The Companion weapon ability has no effect on Mutated Menagerie units. While a friendly Thanquol is within the combat range of another friendly Mutated Menagerie unit:
+          That Thanquol has Ward (4+).
+          Each time you make a successful ward roll for that Thanquol, allocate 1 damage point to a friendly Mutated Menagerie unit within its combat range after the damage sequence has been resolved.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `More-More Mutation! - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Hero Mutated Menagerie unit to be the target. You cannot pick the same unit to be the target of this abiltiy more than once per battle.
+          Effect: For the rest of the battle:
+          Add 2 to the target's Health characteristic.
+          Add 2 to the target's Move characteristic.
+          Add 1 to the Attacks characteristic of the target's melee weapons.
+          The target has a Ward (5+).
+          At the end of each turn, allocate D3+2 damage points to the target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Rampaging Demise - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Hero Mutated Menagerie Monster unit that has not used any Rampage abilities this turn to use this ability.
+          Effect: This unit has Strike-First for the rest of the turn. However, at the end of the turn, this unit is destroyed. When this unit would be destroyed, before it is removed from play, roll a dice for each enemy unit within 6" of this unit. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.
+          After this ability has been resolved, this unit cannot use any other Rampage abilities for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Spiteful Swarms - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Hero Mutated Menagerie Monster unit that has not used any Rampage abilities this turn to use this ability.
+          Effect: This unit has Strike-First for the rest of the turn. However, at the end of the turn, this unit is destroyed. When this unit would be destroyed, before it is removed from play, roll a D3 for each enemy unit within 6" of this unit. On a 3+, subtract 1 from the Attacks characteristic of that enemy unit's melee weapons for the rest of the battle.
+          After this ability has been resolved, this unit cannot use any other Rampage abilities for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'The Great-Grand Gnawhorde (AoR)': {
+    effects: [
+      {
+        name: `Disciples of Vizzik - Passive`,
+        desc: `Effect: While a friendly Vizzik Skour is within the combat range of another friendly Gnawhorde unit:
+          That Vizzik Skour has Ward (4+).
+          Each time you make a successful ward roll for that Vizzik Skour, allocate 1 damage point to a friendly Gnawhorde unit within its combat range after the damage sequence has been resolved.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Frenzied Momentum - Once Per Turn`,
+        desc: `Declare: You can only use this ability if you have not used any Warpshatter Throes abilities this turn. Pick up to 3 friendly Gnawhorde units to be the targets.
+          Effect: For the rest of the turn:
+          Add 2 to run rolls and charge rolls for the targets.
+          Subtract 1 from the targets' control scores.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Reckless Abandon - Once Per Turn`,
+        desc: `Declare: You can only use this ability if you have not used any Warpshatter Throes abilities this turn. Pick up to 3 friendly Gnawhorde units to be the targets.
+          Effect: For the rest of the turn:
+          Add 1 to the Attacks characteristic of the targets' melee weapons.
+          Add 1 to hit rolls for combat attacks that target those friendly units.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Unstoppable Warp-Volley - Once Per Turn`,
+        desc: `Declare: You can only use this ability if you have not used any Warpshatter Throes abilities this turn. Pick up to 3 friendly Gnawhorde units to be the targets.
+          Effect: For the rest of the turn:
+          Add 3" to the Range characteristic of the targets' ranged weapons.
+          The targets cannot use commands.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
   /* Masterclan: {
     effects: [
       {

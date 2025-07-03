@@ -9,6 +9,8 @@ import {
   END_OF_TURN,
   HERO_PHASE,
   MOVEMENT_PHASE,
+  SHOOTING_PHASE,
+  START_OF_ROUND,
   WARDS_PHASE,
 } from 'types/phases'
 import command_abilities from './command_abilities'
@@ -71,6 +73,140 @@ const Flavors = {
         name: `Paragons of Darkness - Passive`,
         desc: `Effect: Add 2 to the Attacks characteristic of melee weapons used by friendly non-Monster Slaves to Darkness Heroes.`,
         when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Legion of the First Prince (AoR)': {
+    effects: [
+      {
+        name: `Bestow Favour - Once Per Turn`,
+        desc: `Declare: If a friendly Be'lakor is on the battlefield, pick a non-Hero Legion of the First Prince unit to be the target.
+            Effect: Until the start of your next turn:
+            Add 5 to the target's control score.
+            If the target is a Daemon unit, add 1 to save rolls for the target.
+            If the target is a non-Daemon unit, it has Ward (6+).`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Command Ability: Daemonic Reinforcements - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Hero Legion of the First Prince Daemon Infantry or Cavalry unit that has been destroyed to be the target.
+            Effect: Set up a replacement unit with half the number of models from the target unit (rounded up) wholly within 12" of a friendly Be'lakor and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `First-Damned Prince - Passive`,
+        desc: `Effect: While a friendly Be'lakor is within the combat range of any friendly non-Hero Legion of the First Prince Daemon unit:
+          That friendly Be'lakor has Ward (4+).
+          In addition, each time you make a successful ward roll for that friendly Be'lakor, allocate 1 damage point to a friendly non-Hero Legion of the First Prince Daemon unit within Be'lakor's combat range after the damage sequence has been resolved (ward rolls cannot be made for those damage points).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Storm of Blackened Blades - Once Per Battle`,
+        desc: `Declare: Pick a friendly Eternus that is in combat and up to 2 friendly non-Hero non-Daemon Legion of the First Prince units wholly within 12" of that Eternus to be the targets.
+            Effect: Add 1 to the Attacks characteristic of the targets' melee weapons for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'The Swords of Chaos (AoR)': {
+    effects: [
+      {
+        name: `Demands of the Dark Gods - Once Per Turn`,
+        desc: `Effect: Pick 1 of the following effects: 
+            Demand of Khorne: For the rest of the battle round, add 1 to the Rend characteristic of melee weapons used by friendly Swords of Chaos units. 
+            Demand of Tzeentch: Pick 1 visible enemy unit within 9" of a friendly Swords of Chaos unit that is not in combat and roll a D6. On a 3+, inflict an amount of mortal damage on that enemy unit equal to the roll. 
+            Demand of Nurgle: Heal (D3) each friendly Swords of Chaos unit. Then pick a friendly Swords of Chaos unit that healed any damage points this turn. Until the start of the next battle round, that unit has Ward (6+). 
+            Demand of Slaanesh: Add 2" to the Move characteristic of friendly Swords of Chaos units until the start of the next battle round.`,
+        when: [START_OF_ROUND],
+      },
+      {
+        name: `Knights of the First Circle`,
+        desc: `Declare: If there are more friendly Swords of Chaos units on the battlefield than there are set up in reserve, pick a friendly Swords of Chaos unit that has not been deployed. 
+            Effect: Set up that unit in reserve in the Ruinous Skies. It has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Descent from Ruinous Skies`,
+        desc: `Declare: Pick a friendly Swords of Chaos unit that is in the Ruinous Skies. 
+            Effect: Set up that unit anywhere on the battlefield more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `The Grimroot Order (First Circle Title) - Passive`,
+        desc: `Effect: Add 1 to this units Health characteristic.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Tamers of Haradh's Torment (First Circle Title) - Passive`,
+        desc: `Effect: Add 1 to the Damage characteristic of this units Companion weapons.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `The Hounds Apocalyptus (First Circle Title) - Passive`,
+        desc: `Effect: While this unit is wholly within enemy territory, add 1 to the Attacks characteristic of this units melee weapons.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `The Blackstorm Apostates (First Circle Title) - Passive`,
+        desc: `Effect: Add 3" to this units Move characteristic.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Betrayers of the Anvilking (First Circle Title) - Passive`,
+        desc: `Effect: This unit has Ward (6+).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Tribes of the Snow Peaks (AoR)': {
+    effects: [
+      {
+        name: `Pledges to the Dark Gods - Passive`,
+        desc: `Effect: Each time a friendly Snow Peaks unit uses 1 of the following abilities and the effect of that ability is resolved, gain 1 oath point. 
+            Oath of Bloodshed  
+            Oath of Murder  
+            Oath of Supremacy  
+            Oath of the Marauder  
+            Oath of the Raider  
+            Oath of Conquest  
+            Oath of Dark Sacrifice`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Daemonfire Weapons - Once Per Phase`,
+        desc: `Declare: If you have 1 or more oath points, pick a friendly Snow Peaks unit that has not used an Oath ability this turn to be the target. 
+            Effect: Spend 1 oath point. For the rest of the turn, add 1 to the Rend characteristic of the targets melee weapons.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Speed of the Blood Crow - Once Per Phase`,
+        desc: `Declare: If you have 1 or more oath points, pick a friendly Snow Peaks unit that has not used an Oath ability this turn to be the target. 
+            Effect: Spend 1 oath point. For the rest of the turn, the target can use Charge abilities even if it used a Run ability in the same turn.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Hunger of Shesh'shan - Once Per Phase`,
+        desc: `Declare: If you have 1 or more oath points, pick a friendly Snow Peaks unit that has not used an Oath ability this turn to be the target. 
+            Effect: Spend 1 oath point. For the rest of the turn, add 1 to the Attacks characteristic of the targets melee weapons.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Messengers of the Gods`,
+        desc: `Declare: If you have 1 or more oath points, pick a friendly Snow Peaks Darkoath Marauders or Fellriders unit that has been destroyed and has not used an Oath ability this turn to be the target. 
+            Effect: Spend 2 oath points. Set up a replacement unit with half the number of models from the target unit (rounding up) on the battlefield, wholly within 6" of a battlefield edge and more than 3" from all enemy units.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Rage of Arkhar - Once Per Phase`,
+        desc: `Declare: If you have 1 or more oath points, pick a friendly Snow Peaks unit that has not used an Oath ability this turn to be the target. 
+            Effect: Spend 2 oath points. The target can use 2 Fight abilities this phase. After the first is used, however, the target has Strike-last for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Shroud of the Pale Elk - Once Per Phase - Reaction: Opponent declared an Attack ability`,
+        desc: `Used By: A friendly Snow Peaks unit targeted by that Attack ability, if you have 1 or more oath points. 
+            Effect: If that friendly Snow Peaks unit has not used an Oath ability this turn, spend 1 oath point. For the rest of the turn, that friendly unit has Ward (4+).`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
     ],
   },

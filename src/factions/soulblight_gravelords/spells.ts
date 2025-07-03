@@ -26,22 +26,22 @@ const Spells = {
       },
     ],
   },
-  'Lore of Knights of the Crimson Keep (AoR)': {
+  'Knights of the Crimson Keep (AoR)': {
     effects: [
       {
-        name: `Siphon Strength (AoR): Casting value of 7 (UNLIMITED)`,
+        name: `Siphon Strength: Casting value of 7 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Crimson Keep Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
         Effect: Inflict D3 mortal damage on the target. For the rest of the turn, add 1 to hit rolls for attacks made by the caster.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Awakened Fury (AoR): Casting value of 7`,
+        name: `Awakened Fury: Casting value of 7`,
         desc: `Declare: Pick a friendly Crimson Keep Wizard to cast this spell, pick a visible friendly Crimson Keep unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
         Effect: Add 1 to the Damage characteristic of the target's Companion melee weapons until the start of your next turn.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Deathly Gale (AoR): Casting value of 7`,
+        name: `Deathly Gale: Casting value of 7`,
         desc: `Declare: Pick a friendly Crimson Keep Wizard to cast this spell, pick a visible friendly Crimson Keep unit wholly within 12" of them to be the target, then make a casting roll of 2D6.
         Effect: For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for the target to a maximum of 3.`,
         when: [HERO_PHASE],
@@ -59,6 +59,28 @@ const Spells = {
         Heal D3 the target.
         Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn and banish this Manifestation.`,
         when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Scions of Nulahmiia (AoR)': {
+    effects: [
+      {
+        name: `Invocation of Nulahmia: Casting value of 6 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Scions of Nulahmia Wizard to cast this spell, pick a visible friendly Dire Wolves or Fell Bats unit wholly within 18" of them to be the target, then make a casting roll of 2D6. 
+        Effect: You can return 1 slain model to that unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Thrall Drain: Casting value of 7`,
+        desc: `Declare: Pick a friendly Scions of Nulahmia Wizard to cast this spell, pick a friendly unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
+        Effect: D3 models in the target are slain. Then, remove all damage points from the caster.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Scarlet Thrist: Casting value of 7`,
+        desc: `Declare: Pick a friendly Scions of Nulahmia Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: For the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly Scions of Nulahmia Vampire units while they are wholly within 12" of the caster.`,
+        when: [HERO_PHASE],
       },
     ],
   },

@@ -4,6 +4,7 @@ import meta_rule_sources from 'meta/rule_sources'
 import {
   COMBAT_PHASE,
   DURING_GAME,
+  DURING_SETUP,
   END_OF_CHARGE_PHASE,
   END_OF_COMBAT_PHASE,
   END_OF_TURN,
@@ -41,12 +42,59 @@ const Artifacts = {
     effects: [
       {
         name: `Leering Gitshield - Passive`,
-        desc: `Efect: Each time an unmodified hit roll for an attack that targets this unit is 1, inflict 1 mortal damage on the attacking unit after the Attack ability has been resolved.`,
+        desc: `Effect: Each time an unmodified hit roll for an attack that targets this unit is 1, inflict 1 mortal damage on the attacking unit after the Attack ability has been resolved.`,
         when: [COMBAT_PHASE],
       },
     ],
   },
- /* 'Loonstone Teefcaps': {
+  'Da Kings Gitz (AoR) - Loonstone Medallion': {
+    effects: [
+      {
+        name: `Loonstone Medallion (AoR) - Passive`,
+        desc: `Effect: This unit has Ward(6+). While this unit is contesting an objective that is not being contested by any other friendly units, it has Ward(5+).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Da Kings Gitz (AoR) - Moonhoned Shiv': {
+    effects: [
+      {
+        name: `Moonhoned Shiv (AoR)`,
+        desc: `Effect: Pick 1 of this unit's non-Companion melee weapons. Add 1 to the Attacks characteristic of that weapon for the rest of the battle. In addition, each time this unit uses a Retreat ability, add 1 to the Attacks characteristic of that weapon for the rest of the battle. This unit can be affected by this ability mulitple times and the effects are cumulative.`,
+        when: [DURING_SETUP],
+      },
+    ],
+  },
+  'Da Kings Gitz (AoR) - Wotnot of Prestige': {
+    effects: [
+      {
+        name: `Wotnot of Prestige (AoR)`,
+        desc: `Declare: Pick a point on the battlefield within 9" of this unit. Each visible enemy unit within 3" of that point is a target.
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Droggz Gitmob (AoR) - Glarefaces Grin': {
+    effects: [
+      {
+        name: `Glareface's Grin (AoR) - Once Per Battle`,
+        desc: `Declare: Pick a point on the battlefield within 9" of this unit. Each visible enemy unit within 3" of that point is a target.
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'Truggs Troggherd (AoR) - Crunchy Shinies': {
+    effects: [
+      {
+        name: `Crunchy Shinies (AoR) - Once Per Battle`,
+        desc: `Effect: For the rest of the turn, add 3 to run rolls and charge rolls for this unit.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  /* 'Loonstone Teefcaps': {
     effects: [
       {
         name: `Loonstone Teefcaps`,

@@ -35,6 +35,33 @@ const Spells = {
       },
     ],
   },
+  'Legion of the First Prince (AoR)': {
+    effects: [
+      {
+        name: `Dark Cantrip: Casting value of 6 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Legion of the First Prince Wizard to cast this spell, pick up to 3 visible enemy units within 18" of them to be the target, then make a casting roll of 2D6.
+        Effect: Inflict 1 mortal damage on each target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Shroud of Darkness: Casting value of 7`,
+        desc: `Declare: Pick a friendly Legion of the First Prince Wizard to cast this spell, pick a visible friendly Legion of the First Prince unit that is not in combat and is wholly within 12" of them to be the target, then make a casting roll of 2D6. 
+        Effect: The target can move D6". It cannot end that move in combat. In addition, until the start of your next turn, the target is not visible to enemy units while they are move than 12" away.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Eightfold Doom-Sigil: Casting value of 7`,
+        desc: `Declare: If there is not a friendly Eightfold Doom-Sigil on the battlefield, pick a friendly Legion of the First Prince Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up an Eightfold Doom-Sigil wholly within 12" of the caster and visible to them.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Eightfold Doom-Sigil - Empowered by Atrocity - Passive`,
+        desc: `Effect: If 2 or more units (friendly or enemy) were destroyed this turn, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly Slaves to Darkness units while they are wholly within 12" of this Manifestation.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
   /* 'Spite-tongue Curse': {
     effects: [
       {

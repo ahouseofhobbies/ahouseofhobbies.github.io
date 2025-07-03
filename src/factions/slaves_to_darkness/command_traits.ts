@@ -1,6 +1,7 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
 import {
+  CHARGE_PHASE,
   COMBAT_PHASE,
   DURING_GAME,
   DURING_SETUP,
@@ -38,6 +39,25 @@ const CommandTraits = {
         desc: `Declare: Pick each damaged friendly unit wholly within 12" of this unit to be the targets. 
         Effect: Roll a dice for each target. On a 3+, Heal (1) the target. Heal (3) the target instead if it is a Monster.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Legion of the First Prince (AoR)': {
+    effects: [
+      {
+        name: `Dread Marshal`,
+        desc: `Declare: Pick up to 3 friendly units wholly within 12" of this unit to be targets.
+        Effect: Add 1 to charge rolls for the targets for the rest of the turn.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'Tribes of the Snow Peaks (AoR)': {
+    effects: [
+      {
+        name: `Oath of Kinship (AoR) - Passive`,
+        desc: `Effect: While this unit is within the combat range of another friendly Snow Peaks unit, add 1 to hit rolls for this units attacks.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

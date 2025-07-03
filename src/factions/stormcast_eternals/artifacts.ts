@@ -72,6 +72,34 @@ const Artifacts = {
       },
     ],
   },
+  'Draconith Skywing (AoR)': {
+    effects: [
+      {
+        name: `Celestium Ensign (AoR) - Once Per Battle`,
+        desc: `Effect: Heal (3) each friendly Draconith Skywing unit wholly within 12" of this unit.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Heroes of the First-Forged (AoR)': {
+    effects: [
+      {
+        name: `Shield of Skjordamar (AoR)`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Roll a dice. On a 4+, ward rolls cannot be made for the target for the rest of the battle.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Ruination Brotherhood (AoR)': {
+    effects: [
+      {
+        name: `Hallowed Scrolls (AoR) - Passive`,
+        desc: `Effect: If this unit is Infantry, it has Ward (5+). Otherwise, it has Ward (6+).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   /*  'Hammer of Might': {
     effects: [
       {

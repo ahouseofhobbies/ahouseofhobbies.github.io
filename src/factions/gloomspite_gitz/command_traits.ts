@@ -7,6 +7,7 @@ import {
   DURING_SETUP,
   END_OF_TURN,
   HERO_PHASE,
+  MOVEMENT_PHASE,
   START_OF_HERO_PHASE,
   START_OF_SETUP,
   TURN_ONE_END_OF_MOVEMENT_PHASE,
@@ -32,12 +33,59 @@ const CommandTraits = {
       },
     ],
   },
-  'Loontouched': {
+  Loontouched: {
     effects: [
       {
         name: `Loontouched - Passive`,
         desc: `Effect: If this unit is not a Wizard, it has Wizard (1). Otherwise, add 1 to casting rolls for this unit.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Da Kings Gitz (AoR) - Da Kings Adjutant': {
+    effects: [
+      {
+        name: `Da Kings Adjutant - Once Per Battle`,
+        desc: `Declare: You cannot use this ability and the Bad Moon Loonshrine's Moonclan Lairs ability in the same turn. If this unit is within 12" of a friendly Bad Moon Loonshrine, pick a friendly non-reinforced, non-Hero, non-Monster King's Gitz unit that has been destroyed to the target.
+        Effect: Set up a replacement unit wholly within 12" of a friendly Bad Moon Loonshrine and more than 3" from all enemy units.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Da Kings Gitz (AoR) - Glarejester': {
+    effects: [
+      {
+        name: `Glarejester (AoR)`,
+        desc: `Declare: Pick a friendly Infantry unit within 3" of this unit and that is not in combat to be the target.
+        Effect: Roll a D3. Add the roll to the distance the target can move when using Move abilities this phase. If the target ends a move in this phase within 3" of this Hero, inflict an amount of mortal damage on this Hero equal to the roll.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Droggz Gitmob (AoR) - Plucky Git': {
+    effects: [
+      {
+        name: `Plucky Git (AoR) - Passive`,
+        desc: `Effect: While this unit has no damage points, friendly Droggz's Gitmob units have Ward(6+) while they are wholly within 9" of this unit.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Droggz Gitmob (AoR) - Stick Em and Run': {
+    effects: [
+      {
+        name: `Stick 'Em and Run (AoR) - Passive`,
+        desc: `Effect: Each time this unit uses a Retreat ability or the Frazzlegit's Flame Stream ability, before moving this unit, pick an enemy unit in combat with it and roll a D3. Inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Troggs Truggherd (AoR) - Loonstone Teef': {
+    effects: [
+      {
+        name: `Loonstone Teef (AoR) - Once Per Battle`,
+        desc: `Effect: This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

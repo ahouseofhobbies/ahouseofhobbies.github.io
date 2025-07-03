@@ -1,5 +1,12 @@
 import { TItemDescriptions } from 'factions/factionTypes'
-import { COMBAT_PHASE, DURING_SETUP, END_OF_TURN, HERO_PHASE, MOVEMENT_PHASE } from 'types/phases'
+import {
+  COMBAT_PHASE,
+  DURING_GAME,
+  DURING_SETUP,
+  END_OF_TURN,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
+} from 'types/phases'
 
 const Flavors = {
   Squigalanche: {
@@ -60,6 +67,90 @@ const Flavors = {
         desc: `Declare: Pick a friendly non-Squig Moonclan unit that is contesting an objective to be the target. 
         Effect: Add 1 to the control score of the target unit for each model in that unit that is not contesting any objectives.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+
+  'Da Kings Gitz (AoR)': {
+    effects: [
+      {
+        name: `Da King's Guards - Passive`,
+        desc: `Effect: While a friendly Troggoth unit is within the combat range of a friendly Hero:
+        That Hero has Ward(4+).
+        Each time you make a successful ward roll for that Hero, allocate 1 damage point to a friendly Troggoth unit within that Hero's combat range after the damage sequence for that Hero has been resolved (ward rolls cannot be made for those damage points).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Da Loonking's Court - Once Per Battle`,
+        desc: `Declare: Pick up to D3 friendly non-Unique King's Gitz Heroes that do not have an enhancement.
+        Effect: Give each Hero 1 enhancement from the Da King's Gitz Army of Renown rules.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `The Moon and the Loon - Passive`,
+        desc: `Effect: While a friendly unit is wholly within 9" of a friendly Skragrott, a friendly Malevolent Moon or a friendly Bad Moon Loonshrine:
+        Add 5 to the control scores of friendly non-Squig Moonclan units.
+        Instead of rolling the dice to determine the move characteristic of a frienldy Squig unit, you can use a value of 4.`,
+        when: [MOVEMENT_PHASE, END_OF_TURN],
+      },
+    ],
+  },
+  'Droggz Gitmob (AoR)': {
+    effects: [
+      {
+        name: `Dis Fight's Not Fer Me - Once Per Turn - Enemy Combat Phase`,
+        desc: `Declare: Pick a friendly Droggz's Gitmob unit that is in combat with any enemy units that charged this turn and is not in combat with any enemy units that did not charge this turn to be the target.
+        Effect: Roll a dice. On a 4+, the target can immediately use the Retreat ability as if it were your movement phase.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Get Around 'Em`,
+        desc: `Declare: Pick a friendly Droggz's Gitmob unit that has not been deployed.
+        Effect: Set up that unit in reserve Outflanking the Enemy. It has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Glowering Light - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with a friendly Droggz's Gitmob unit tha thas charged this turn to be the target.
+        Effect: Roll a dice. On a 3+, for the rest of the turn, the target cannot make a pile-in move when it is picked to use a Fight ability.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Surprise, Ya Gitz!`,
+        desc: `Declare: Pick a friendly Droggz's Gitmob unit that is Outflanking the Enemy.
+        Effect: Set up that unit on the battlefield wholly within 6" of a battlefield edge and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Truggs Troggherd (AoR)': {
+    effects: [
+      {
+        name: `Herd Healing - Passive`,
+        desc: `Effect: Each time a friendly Troggoth unit uses a Fight ability, after that ability has been resolved, Heal (D3) that unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Aura of Haywire Magic - Passive`,
+        desc: `Effect: The effects of a friendly Truggs Malfunctioning Leystone ability affect friendly Truggs Troggherd units anywhere on the battlefield instead of only those wholly within 12" of that friendly Trugg.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Moon-Toughened Hide - Passive`,
+        desc: `Effect: In battle rounds 2 and 3, subtract 1 from the Rend characteristic of melee weapons used for attacks that target friendly Truggs Troggherd units.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Living Landmark - Once Per Battle`,
+        desc: `Declare: Pick a friendly Truggs Troggherd unit that has not been deployed. 
+        Effect: Set up that unit in reserve as a living landmark. It has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Broken Slumber`,
+        desc: `Declare: Pick a friendly Truggs Troggherd unit that is a living landmark. 
+        Effect: Set up that unit anywhere on the battlefield wholly within 3" of a terrain feature and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },

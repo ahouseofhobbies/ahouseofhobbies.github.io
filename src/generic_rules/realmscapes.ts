@@ -246,7 +246,7 @@ const Realmscapes: TEntry[] = [
   {
     name: RealmscapesEnum.ANDTOR,
     effects: [
-      {
+      /*{
         name: `Honour Guard - Special Assignment`,
         desc: `Declare: Pick a friendly unit in, but not leading, a regiment to be that regiments honour guard. You can pick a unit in reserve.
         Effect: Pick 1 of the following weapon abilities:
@@ -289,10 +289,10 @@ const Realmscapes: TEntry[] = [
         desc: `If the player who went second in the previous battle round wins the priority roll and chooses to go first, their opponent is the underdog until their opponent does the same. 
         If a player is behind by 6 or more victory points, they do not suffer any penalty from taking two turns in a row; their opponent is not the underdog for the rest of the battle, and they can use the Tactical Gambit ability to pick a battle tactic.`,
         when: [DURING_GAME],
-      },
+      }, */
       {
         name: `Regimented Forces`,
-        desc: `If a player has more regiments than their opponent, they can use a second, different Honour Guard ability, but they must pick a unit that is in a different regiment that is not led by the general to be the honour guard for that ability. You cannot pick units in a Regiment of Renown to be an honour guard. If you chose not to pick an honour guard unit in your general's regiment, you can still pick an honour guard unit for a different regiment as described above.`,
+        desc: `If a player has more regiments than their opponent at the start of the battle, then once per battle, that player can reroll their priority roll after seeing the result of both players rolls but before determining priority for that battle round.`,
         when: [DURING_SETUP],
       },
 

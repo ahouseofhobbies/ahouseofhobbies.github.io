@@ -38,6 +38,27 @@ const KruleboyzArtifacts = {
       },
     ],
   },
+  'Big Waaagh! (AoR)': {
+    effects: [
+      {
+        name: `Da Sneaky Stab-stab (AoR) - Passive`,
+        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Murkvast Menagerie (AoR)': {
+    effects: [
+      {
+        name: `Skinwriggla Larvae (AoR) - Once Per Battle`,
+        desc: `Declare: Pick an objective within 6" of this unit to be infested with bugs for the rest of the battle.
+          Effect: While an enemy unit is contesting an objective that is infested with bugs:
+          Subtract 3 from that unit's control score.
+          Ignore positive modifiers to that unit's control score.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(KruleboyzArtifacts, 'artifact')

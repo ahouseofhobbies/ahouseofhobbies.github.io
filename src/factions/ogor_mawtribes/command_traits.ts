@@ -9,6 +9,7 @@ import {
   HERO_PHASE,
   SHOOTING_PHASE,
   START_OF_HERO_PHASE,
+  START_OF_ROUND,
   START_OF_SETUP,
 } from 'types/phases'
 
@@ -56,6 +57,15 @@ const CommandTraits = {
         name: `Touched by the Everwinter - Passive`,
         desc: `Effect: If this unit is not a Priest, it has Priest (1). If this unit is already a Priest, you can reroll chanting rolls of 1 for it instead. If this unit is a Wizard, it cannot use Spell abilities and Prayer abilities in the same phase.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The Roving Maw (AoR)': {
+    effects: [
+      {
+        name: `Prime Gutserver (AoR) - Once Per Battle Round`,
+        desc: `Effect: If this unit is a Head Butcher, gain 1 tasty morsel.`,
+        when: [START_OF_ROUND],
       },
     ],
   },

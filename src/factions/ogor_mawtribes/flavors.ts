@@ -1,5 +1,12 @@
 import { TItemDescriptions } from 'factions/factionTypes'
-import { CHARGE_PHASE, DURING_GAME, END_OF_TURN, HERO_PHASE, SHOOTING_PHASE } from 'types/phases'
+import {
+  CHARGE_PHASE,
+  DURING_GAME,
+  END_OF_TURN,
+  HERO_PHASE,
+  SHOOTING_PHASE,
+  START_OF_ROUND,
+} from 'types/phases'
 
 const Flavors = {
   'Prophets of the Gulping God': {
@@ -55,6 +62,41 @@ const Flavors = {
         desc: `Declare: Pick up to D3 friendly Ogor Infantry units that were in combat with an enemy unit when it was destroyed this turn to be the targets. 
         Effect: Return 1 slain model to each target unit.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'The Roving Maw (AoR)': {
+    effects: [
+      {
+        name: `Tasty Morsels - Passive`,
+        desc: `Effect: Each time a model is slain by a friendly Mawpits Throat of Ghur ability, you gain 1 tasty morsel.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Driven by Starvation - Passive`,
+        desc: `Effect: Friendly Gorger Mawpack units can use Charge abilities even if they used a Run ability in the same turn unless they are wholly within 3" of a terrain feature.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Trampling Charge`,
+        desc: `Declare: Pick a friendly Roving Maw unit that charged this turn to use this ability, then pick a visible enemy unit within 1" of it to be the target. 
+          Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `The Realm Hungers - Passive`,
+        desc: `Effect: Units and Manifestations are vulnerable to Mawpits while they are on the battlefield unless they are wholly within 1" of a terrain feature that is not a Mawpit. This ability has no effect on Roving Maw units or units that have Fly.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Mawpits of Ghur - Once Per Battle Round`,
+        desc: `Effect: Roll 2D6 and add the number of tasty morsels you have to the roll. Apply the corresponding effect below for the rest of the battle round. Then, reset your tasty morsels to 0. 
+          2-3  Subdued: No effect. 
+          4-5  Peckish: Subtract 3 from the control scores of units that are vulnerable to Mawpits. 
+          6-8  Rumbling: Roll a dice for each unit that is vulnerable to Mawpits. On a 3+, inflict 1 mortal damage on that unit. 
+          9-11  Famished: Units that are vulnerable to Mawpits cannot use commands. 
+          12+  Ravenous: Roll a D3 for each unit that is vulnerable to Mawpits. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.`,
+        when: [START_OF_ROUND],
       },
     ],
   },

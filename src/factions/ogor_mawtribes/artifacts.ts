@@ -76,6 +76,15 @@ const Artifacts = {
       },
     ],
   },
+  'The Roving Maw (AoR)': {
+    effects: [
+      {
+        name: `Flasks of Congealed Maw-Juices (AoR) - Passive`,
+        desc: `Effect: Friendly Mawpits within this units combat range have Ward (5+).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   /*  'Flask of Stonehorn Blood': {
     effects: [
       {

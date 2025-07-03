@@ -7,6 +7,7 @@ import {
   END_OF_TURN,
   HERO_PHASE,
   SHOOTING_PHASE,
+  START_OF_TURN,
   WOUND_ALLOCATION_PHASE,
 } from 'types/phases'
 import rule_sources from './rule_sources'
@@ -69,6 +70,33 @@ const CommandTraits = {
         desc: `Declare: Pick a visible enemy Priest or Wizard within 18" of this unit to be the target. 
         Effect: Roll a dice. On a 3+, subtract 1 from casting rolls and chanting rolls for the target until the start of your next turn.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Draconith Skywing (AoR)': {
+    effects: [
+      {
+        name: `Fearless Fliers (AoR)`,
+        desc: `Effect: If this unit is not in combat, it can immediately make a D6" move and can end that move in combat.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Heroes of the First-Forged (AoR)': {
+    effects: [
+      {
+        name: `Thegn of Bellicos (AoR) - Passive`,
+        desc: `Effect: Add 1 to the Attacks characteristic of this unit's melee weapons while it is wholly within 6" of a friendly Bastian Carthalos.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Ruination Brotherhood (AoR)': {
+    effects: [
+      {
+        name: `Corven Lord (AoR) - Once Per Battle`,
+        desc: `Effect: If this unit has the Ruination Chamber ability, it can use that ability once per turn regardless of whether another friendly unit has used it during the same turn.`,
+        when: [START_OF_TURN],
       },
     ],
   },

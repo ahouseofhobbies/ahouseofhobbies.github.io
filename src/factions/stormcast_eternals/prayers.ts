@@ -5,7 +5,7 @@ import meta_rule_sources from 'meta/rule_sources'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const Prayers = {
- 'Prayers of the Stormhosts': {
+  'Prayers of the Stormhosts': {
     effects: [
       {
         name: `Healing Storm: Chant value of 4 (UNLIMITED)`,
@@ -27,8 +27,55 @@ const Prayers = {
       },
     ],
   },
-  
-/*   Translocation: {
+  'Draconith Skywing (AoR)': {
+    effects: [
+      {
+        name: `Sigmar's Grace: Chant value of 4 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Draconith Skywing Priest to chant this prayer, pick a friendly Draconith Skywing unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Heal (D3) the target. If the chanting roll was 8+, Heal (2D3) the target instead.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Sanctification: Chant value of 4`,
+        desc: `Declare: Pick a friendly Draconith Skywing Priest to chant this prayer, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, subtract 1 from casting rolls for enemy Wizards while they are within 30" of the chanter. If the chanting roll was 12+, subtract 1 from casting rolls for enemy Wizards for the rest of the battle and friendly Priests cannot use this ability again for the rest of the battle.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Heroes of the First-Forged (AoR)': {
+    effects: [
+      {
+        name: `Speed of the Righteous: Chant value of 4 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly First-Forged Priest to chant this prayer, pick a friendly Stormcast Eternals unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Add 2" to the Move characteristic of the target for the rest of the turn. If the chanting roll was 6+, you can pick another eligible unit to be a second target.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Ruination Brotherhood (AoR)': {
+    effects: [
+      {
+        name: `Morrda's Embrace: Chant value of 5 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Ruination Brotherhood Priest to chant this prayer, pick a visbile enemy unit within 18" of them to be the target, then make a chanting roll of D6. 
+        Effect: Roll a dice. If the dice exceeds the target's Health characteristic, 1 model in the target unit is slain. If the chanting roll was 10+, roll 2D6 instead.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Murderous Flock: Chant value of 4`,
+        desc: `Declare: Pick a friendly Ruination Brotherhood Priest to chant this prayer, pick a visbile enemy unit within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Roll a dice for each modle in the target unit. For each 5+, inflict 1 mortal damage on the target unit. If the chanting roll was 10+, inflict 1 mortal damage on the target unit for each 4+ instead.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Raven's Flight: Chant value of 4`,
+        desc: `Declare: Pick a friendly Ruination Brotherhood Priest to chant this prayer, pick a visbile friendly unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Add 2" to the target's Move characteristic for the rest of the turn. If the chanting roll was 8+, in addition, for the rest of the turn, the target can use Charge abilities even if they have used a Run ability in the same turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /*   Translocation: {
     effects: [
       {
         name: `Translocation`,

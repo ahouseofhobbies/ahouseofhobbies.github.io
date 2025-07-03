@@ -1,6 +1,13 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
-import { CHARGE_PHASE, HERO_PHASE, MOVEMENT_PHASE } from 'types/phases'
+import {
+  CHARGE_PHASE,
+  COMBAT_PHASE,
+  DURING_ANY_PHASE,
+  DURING_GAME,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
+} from 'types/phases'
 
 const IronjawzCommandTraits = {
   'Hulking Brute': {
@@ -34,7 +41,65 @@ const IronjawzCommandTraits = {
     ],
   },
 
- /* 'Touched by the Waaagh!': {
+  'Big Waaagh! (AoR) - A Proper Sneak': {
+    effects: [
+      {
+        name: `A Proper Sneak (AoR) - Once Per Battle`,
+        desc: `Declare: You can use this ability if this unit has the Power of the Waaagh! keyword and a friendly unit has not used a Brutal Kunnin' ability this turn.
+          Effect: For the rest of the battle round, friendly Big Waaagh! units have Ward(5+) while they are wholly within 12" of this unit.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Big Waaagh! (AoR) - Da Old One-Two': {
+    effects: [
+      {
+        name: `Da Old One-Two (AoR) - Once Per Battle`,
+        desc: `Declare: You can use this ability if this unit has the Power of the Waaagh! keyword and a friendly unit has not used a Brutal Kunnin' ability this turn.
+            Effect: For the rest of the battle round, friendly Big Waaagh! units' melee weapons have Crit(2 Hits) while they are wholly within 12" of this unit.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Big Waaagh! (AoR) - Get Krumpin!': {
+    effects: [
+      {
+        name: `Get Krumpin'! (AoR) - Once Per Battle`,
+        desc: `Declare: You can use this ability if this unit has the Power of the Waaagh! keyword and a friendly unit has not used a Brutal Kunnin' ability this turn.
+            Effect: For the rest of the battle round, add 1 to wound rolls for combat attacks made by friendly Big Waaagh! units while they are wholly within 12" of this unit.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Big Waaagh! (AoR) - Takin Names': {
+    effects: [
+      {
+        name: `Takin' Names (AoR) - Passive`,
+        desc: `Effect: If an enemy Hero is destroyed by this unit, this unit has the Power of the Waaagh! keyword for the rest of the battle.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Krazoggs Grunta Stampede (AoR)': {
+    effects: [
+      {
+        name: `Trophy Hunta (AoR) - Passive`,
+        desc: `Effect: This units Pig-hakka has Anti-Monster (+1 Rend) and Anti-War Machine (+1 Rend).`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Zoggroks Ironmongerz (AoR)': {
+    effects: [
+      {
+        name: `Oi! Back to it (AoR) - Passive`,
+        desc: `Effect: If a friendly Zoggrok's Ironmongerz Ardboyz or Brutes unit wholly within 12" of this unit uses the Rally command, you can make 3 additional rally rolls of D6.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+
+  /* 'Touched by the Waaagh!': {
     effects: [
       {
         name: `Touched by the Waaagh!`,

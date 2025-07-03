@@ -2,8 +2,11 @@ import { keyPicker } from 'factions/metatagger'
 import {
   CHARGE_PHASE,
   COMBAT_PHASE,
+  DURING_GAME,
   END_OF_TURN,
+  HERO_PHASE,
   MOVEMENT_PHASE,
+  SHOOTING_PHASE,
   START_OF_ROUND,
   WOUND_ALLOCATION_PHASE,
 } from 'types/phases'
@@ -73,6 +76,41 @@ const Flavors = {
         name: `Graceful Elusion`,
         desc: `Effect: For the rest of the phase, friendly Daughters of Khaine Aelf Infantry units have Ward (5+) until they have used a Fight ability.`,
         when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'The Croneseers Pariahs (AoR)': {
+    effects: [
+      {
+        name: `Guided by Morai-Hag - Passive`,
+        desc: `Effect: Add 1 to the Rend characteristic of combat attacks made by friendly non-Hero Infantry units while they are wholly within 9" of a friendly Krethusa.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Plumes of Auspicious Smoke - Passive`,
+        desc: `Effect: Friendly Cauldron of Blood units are either empty or full. They start the battle empty. 
+        While a friendly Cauldron of Blood unit is full: 
+        That Cauldron of Blood has Ward (4+) against damage points inflicted by shooting attacks. 
+        Subtract 1 from hit rolls for shooting attacks that target friendly Croneseers Pariahs units while they are wholly within 9" of that Cauldron of Blood.`,
+        when: [DURING_GAME, SHOOTING_PHASE],
+      },
+      {
+        name: `Laden with Prophecy`,
+        desc: `Declare: Pick a friendly empty Cauldron of Blood. 
+        Effect: If any enemy models were slain this turn by that Cauldron of Bloods combat attacks, it becomes full.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Skilled Skirmishers - Once Per Turn`,
+        desc: `Declare: Pick a friendly Croneseers Pariahs Cavalry unit that has not charged this turn and is in combat with an enemy unit that charged this turn to be the target. 
+        Effect: Roll a dice. On 3+, the target can immediately use a Retreat ability as if it were your movement phase. In addition, no mortal damage is inflicted on the target by that Retreat ability.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `The Blood Reveals All - Once Per Battle`,
+        desc: `Declare: Pick a friendly Croneseers Pariahs Hero within the combat range of a friendly empty Cauldron of Blood. Then, pick another unit within the combat range of that Hero to be the target. 
+        Effect: Roll a dice. Allocate a number of damage points to the target equal to the roll (ward rolls cannot be made for those damage points). Then, that Cauldron of Blood becomes full.`,
+        when: [HERO_PHASE],
       },
     ],
   },

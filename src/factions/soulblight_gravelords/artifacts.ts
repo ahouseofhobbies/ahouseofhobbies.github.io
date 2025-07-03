@@ -45,7 +45,7 @@ const Artifacts = {
       },
     ],
   },
-  'Chalice of the Blood Dragon (AoR)': {
+  'Knights of the Crimson Keep (AoR)': {
     effects: [
       {
         name: `Chalice of the Blood Dragon (AoR) - Once Per Battle`,
@@ -54,7 +54,67 @@ const Artifacts = {
       },
     ],
   },
-
+  'Barrow Legion (AoR) - Amulet of Nightmares': {
+    effects: [
+      {
+        name: `Amulet of Nightmares (AoR) - Once Per Battle`,
+        desc: `Declare: Pick an enemy unit within 9" of this unit to be the target.
+        Effect: Roll a dice. On a 2+, the target has Strike-Last this phase.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Barrow Legion (AoR) - Crowns of Cold Command': {
+    effects: [
+      {
+        name: `Crowns of Cold Command (AoR) - Once Per Turn`,
+        desc: `Declare: Pick a friendly Barrow Legion unit wholly within 12" of this unit to be the target.
+        Effect: Roll a dice. On a 3+:
+        If the target is damaged, Heal (3) the target.
+        If the target is not damaged, return a number of slain models to it with a combined Health characteristic of up to 3.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Barrow Legion (AoR) - Crpyt Dagger': {
+    effects: [
+      {
+        name: `Crypt Dagger (AoR) - Once Per Battle`,
+        desc: `Declare: Pick an enemy Hero in combat with this unit to be the target.
+        Effect: Inflict D6 mortal damage on the target.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Barrow Legion (AoR) - Grave-Sand Pendant': {
+    effects: [
+      {
+        name: `Grave-Sand Pendant (AoR) - Passive`,
+        desc: `Effect: If this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, Heal (1) this unit. This unit cannot use this ability again for the rest of the battle.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Barrow Legion (AoR) - Ring of Stricken Souls': {
+    effects: [
+      {
+        name: `Ring of Stricken Souls (AoR) - Passive`,
+        desc: `Effect: This unit has Ward (5+).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Scions of Nulahmia (AoR)': {
+    effects: [
+      {
+        name: `Amulet of Leeches (AoR) - Passive`,
+        desc: `Effect: While this unit is within the combat range of a friendly Dire Wolves or Fell Bats unit: 
+        This unit has Ward (5+). 
+        Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly Dire Wolves or Fell Bats unit within this units combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   /* 'Shard of Night': {
     effects: [
       {

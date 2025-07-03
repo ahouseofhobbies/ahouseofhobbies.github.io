@@ -1,5 +1,15 @@
 import { TItemDescriptions } from 'factions/factionTypes'
-import { COMBAT_PHASE, DURING_GAME, DURING_SETUP, HERO_PHASE, MOVEMENT_PHASE, SHOOTING_PHASE, START_OF_HERO_PHASE, START_OF_SETUP } from 'types/phases'
+import {
+  COMBAT_PHASE,
+  DURING_GAME,
+  DURING_SETUP,
+  END_OF_TURN,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
+  SHOOTING_PHASE,
+  START_OF_HERO_PHASE,
+  START_OF_SETUP,
+} from 'types/phases'
 
 const Flavors = {
   'Iron Sky Attack Squadron': {
@@ -39,7 +49,35 @@ const Flavors = {
       },
     ],
   },
- /* 'Barak-Thryng, City of the Ancestors (Skyport)': {
+  'Grundstok Expeditionary Force (AoR)': {
+    effects: [
+      {
+        name: `Transport Skyfarers - Reaction: You declared a non-Charge Move ability for a friendly Skyvessel`,
+        desc: `Used By: The Skyvessel using that Move ability. 
+        Effect: Pick a number of units up to that Skyvessels Transport Capacity (see its warscroll) that are wholly within 6" of it to be the targets. Units that have been transported this turn cannot be targets. 
+        Remove the targets from the battlefield. After the Skyvessel ends its move, you must set up each target unit on the battlefield, wholly within 6" of that Skyvessel and not in combat. Those units have been transported. A unit cannot use Charge abilities if it was transported in the same turn.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Gun Butt Low Blow - Passive`,
+        desc: `Effect: While a friendly Expeditionary Force Infantry unit is contesting an objective that you control, its melee weapons have Crit (Mortal).`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `No Safe Haven`,
+        desc: `Declare: Pick an enemy unit to be the target. 
+        Effect: Subtract 1 from the control score of that unit for each damage point allocated to it this turn by a shooting attack made by a friendly Expeditionary Force unit, to a maximum of 10 damage points.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Grudgefire Rounds - Once Per Turn`,
+        desc: `Declare: Pick a friendly Expeditionary Force Infantry unit to be the target. 
+        Effect: Roll a dice. On a 3+, pick 1 of the targets ranged weapons. Add 1 to the Attacks characteristic of that weapon for the rest of the phase.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  /* 'Barak-Thryng, City of the Ancestors (Skyport)': {
     effects: [
       {
         name: `Honour the Gods, Just in Case`,

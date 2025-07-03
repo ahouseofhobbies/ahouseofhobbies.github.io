@@ -27,7 +27,67 @@ const Spells = {
       },
     ],
   },
- /* 'Lightning Blast': {
+  'Draconith Skywing (AoR)': {
+    effects: [
+      {
+        name: `Regal Authority: Casting value of 7 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Draconith Skywing Wizard to cast this spell, pick a visible friendly Draconith Skywing unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
+        Effect: Add 5 to the targets control score for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Everblaze Comet: Casting value of 8`,
+        desc: `Declare: If there is not a friendly Everblaze Comet on the battlefield, pick a friendly Draconith Skywing Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up an Everblaze Comet wholly within 18" of the caster.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Everblaze Comet - Burning Vengeance`,
+        desc: `Declare: If this Manifestation was summoned this phase, pick any number of enemy units within 6" of it to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Everblaze Comet - Arcane Disruption - Passive`,
+        desc: `Effect: Subtract 1 from casting rolls for enemy Wizards while they are within 12" of this Manifestation.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Heroes of the First-Forged (AoR)': {
+    effects: [
+      {
+        name: `Wreathed in the Storm: Casting value of 7 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly First-Forged Wizard to cast this spell, pick a visible friendly Stormcast Eternals unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
+        Effect: For the rest of the turn, each time you make an unmodified save roll of 6 for a combat attack that targets the target unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Storm's Wrath: Casting value of 6`,
+        desc: `Pick a friendly First-Forged Wizard to cast this spell, pick up to 3 visible enemy units within 9" of them to be the targets, then make a casting roll of 2D6. 
+        Effect: Inflict D3 mortal damage on each target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Everblaze Comet: Casting value of 8`,
+        desc: `Declare: If there is not a friendly Everblaze Comet on the battlefield, pick a friendly First-Forged Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up an Everblaze Comet wholly within 18" of the caster.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Everblaze Comet - Burning Vengeance`,
+        desc: `Declare: If this Manifestation was summoned this phase, pick any number of enemy units within 6" of it to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Everblaze Comet - Arcane Disruption - Passive`,
+        desc: `Effect: Subtract 1 from casting rolls for enemy Wizards while they are within 12" of this Manifestation.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /* 'Lightning Blast': {
     effects: [
       {
         name: `Lightning Blast`,

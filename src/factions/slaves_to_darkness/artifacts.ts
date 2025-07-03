@@ -4,6 +4,7 @@ import {
   DURING_GAME,
   END_OF_TURN,
   HERO_PHASE,
+  MOVEMENT_PHASE,
   START_OF_BATTLESHOCK_PHASE,
   START_OF_HERO_PHASE,
   START_OF_TURN,
@@ -70,6 +71,25 @@ const Artifacts = {
         name: `Head of the Unworthy - Passive`,
         desc: `Effect: If a friendly Slaves to Darkness Hero with any Dark Apotheosis points is destroyed, give this unit 8 Dark Apotheosis points.`,
         when: [DURING_GAME],
+      },
+    ],
+  },
+  'Legion of the First Prince (AoR)': {
+    effects: [
+      {
+        name: `Black Ritual Dagger (AoR) - Once Per Turn - Reaction: You declared a Spell ability for a friendly unit wholly within 12" of this unit`,
+        desc: `Effect: Allocate 1 damage point to this unit. Then, you can reroll the casting roll.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Tribes of the Snow Peaks (AoR)': {
+    effects: [
+      {
+        name: `Grand Offering (AoR) - Once Per Battle`,
+        desc: `Declare: Pick a friendly Snow Peaks Wilderfiend within 9" of this unit to be the target. 
+        Effect: Give the target D6 sacrifice points.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },

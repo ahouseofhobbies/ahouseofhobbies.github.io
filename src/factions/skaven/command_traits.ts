@@ -13,6 +13,7 @@ import {
   SHOOTING_PHASE,
   START_OF_HERO_PHASE,
   START_OF_SHOOTING_PHASE,
+  START_OF_TURN,
   WOUND_ALLOCATION_PHASE,
 } from 'types/phases'
 
@@ -74,6 +75,25 @@ const CommandTraits = {
         name: `Pit Tinkerer - Passive`,
         desc: `Effect: You can reroll the random characteristic rolls for the Move characteristic of friendly Skryre War Machines while they are wholly within 13" of this unit. In addition, each time a friendly Skryre War Machine wholly within 18" of this unit uses the Rolling Doom or Whirling Doom ability, add 1 to the amount of mortal damage inflicted, if any.`,
         when: [MOVEMENT_PHASE, CHARGE_PHASE],
+      },
+    ],
+  },
+  'Thanquols Mutated Menagerie (AoR)': {
+    effects: [
+      {
+        name: `Pack Tactics (AoR) - Once Per Battle`,
+        desc: `Declare: Pick up to 2 friendly non-Hero Mutated Menagerie Monster units wholly within 13" of this unit to be the targets.
+        Effect: The targets can each use the All-out Attack or All-out Defense command this phase even if that command has been used by a friendly unit this phase.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'The Great-Grand Gnawhorde (AoR)': {
+    effects: [
+      {
+        name: `Harbinger of the Great Ascendancy (AoR) - Once Per Battle`,
+        desc: `Effect: If this unit is not in combat, you can use 2 different Warpshatter Throes abilities this turn instead of 1.`,
+        when: [START_OF_TURN],
       },
     ],
   },
