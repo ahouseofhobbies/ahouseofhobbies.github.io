@@ -1,2 +1,0 @@
-(this["webpackJsonpaos-reminders"]=this["webpackJsonpaos-reminders"]||[]).push([[34],{471:function(s,e,r){"use strict";r.r(e);var t=r(92),c=(r(5),r(332)),l=r(9);e.default=s=>{let{setAllyClick:e}=s;return Object(l.jsxs)(t.a,{onClick:e,children:[Object(l.jsx)(c.p,{className:"mr-2"})," Add Ally"]})}}}]);
-//# sourceMappingURL=34.61c3fd8d.chunk.js.map

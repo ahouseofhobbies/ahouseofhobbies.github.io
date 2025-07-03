@@ -1,0 +1,2 @@
+(this["webpackJsonpaos-reminders"]=this["webpackJsonpaos-reminders"]||[]).push([[35],{472:function(e,s,t){"use strict";t.r(s);var r=t(92),c=t(154),a=t(27),n=(t(4),t(332)),l=t(56),o=t(22),b=t(9);const{resetAllySelections:i,resetSelections:m}=a.e,{resetRealmscapeStore:d}=a.d;s.default=()=>{const e=Object(l.b)(),{setLoadedArmy:s}=Object(c.b)();return Object(b.jsxs)(r.a,{onClick:t=>{t.preventDefault(),e(i()),e(d()),e(m()),Object(o.b)("ClearArmy"),s(null)},children:[Object(b.jsx)(n.w,{className:"mr-2"})," Clear Army"]})}}}]);
+//# sourceMappingURL=35.7ab9efb8.chunk.js.map

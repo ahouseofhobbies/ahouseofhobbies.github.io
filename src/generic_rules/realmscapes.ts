@@ -327,7 +327,7 @@ const Realmscapes: TEntry[] = [
       },*/
 
       // Battle tactics
-      {
+      /* {
         name: `Battle Tactic: Do Not Waver`,
         desc: `You complete this battle tactic at the end of your turn if 2 or more friendly units fought this turn and no friendly units were destroyed this turn.`,
         when: [START_OF_TURN],
@@ -410,7 +410,7 @@ const Realmscapes: TEntry[] = [
         desc: `Pick an enemy unit that is in combat and pick a friendly unit that is not in combat. You complete this battle tactic at the end of your turn if that friendly unit was in combat with that enemy unit this turn and that enemy unit was destroyed this turn.`,
         when: [START_OF_TURN],
         rule_sources: [meta_rule_sources.BATTLESCROLL_NULLSTONE_CACHE],
-      },
+      },*/
 
       /* Nullstone Adornments
       {
