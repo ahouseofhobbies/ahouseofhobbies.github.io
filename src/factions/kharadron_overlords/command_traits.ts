@@ -15,6 +15,7 @@ import {
   COMBAT_PHASE,
   END_OF_HERO_PHASE,
   DURING_SETUP,
+  END_OF_TURN,
 } from 'types/phases'
 
 const AllegianceCommandTraits = {
@@ -111,16 +112,35 @@ const CommandTraits = {
       },
     ],
   }, */
-  'Cunning Fleetmaster': {
+  'Shrewd Opportunist': {
     effects: [
       {
-        name: `Cunning Fleetmaster - Passive`,
-        desc: `Effect: Each time a friendly Skyvessel wholly within 12" of this unit uses the Redeploy command, roll 2 dice and use the highest result when determining the distance that unit can move.`,
-        when: [MOVEMENT_PHASE],
+        name: `Shrewd Opportunist`,
+        desc: `Declare: Pick this unit and up to 2 other friendly Kharadron Overlords non-Hero Infantry units to be the targets.
+        Effect: Each target can immediately use the 'Normal Move' ability as if it were your movement phase.`,
+        when: [DURING_SETUP],
       },
     ],
   },
-  Endrinmaestro: {
+  'Bold as Brass': {
+    effects: [
+      {
+        name: `Bold as Brass - Passive`,
+        desc: `Effect: Add 5 to this unit's control score.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Combat Grafter': {
+    effects: [
+      {
+        name: `Combat Grafter - Once Per Battle`,
+        desc: `Effect: This unit can use 2 FIGHT abilities this phase. After the first is used, however, this unit has Strike-Last for the rest of the phase.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  /*Endrinmaestro: {
     effects: [
       {
         name: `Endrinmaestro - Passive`,
@@ -137,14 +157,32 @@ const CommandTraits = {
         Effect: Double the Damage characteristic of this units weapons for attacks that target that enemy unit for the rest of the battle.`,
         when: [DURING_SETUP],
       },
-    ],
-  },
+    ], 
+  }, */
   'Grundstok Expeditionary Force (AoR)': {
     effects: [
       {
         name: `Entrenchment Expert (AoR) - Reaction: You declared the All Out Defense command for a friendly unit wholly within 12" of this Hero`,
         desc: `Effect: That friendly unit has Ward (5+) for the rest of the turn.`,
         when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+    ],
+  },
+  'The Magnates Crew (AoR) - Master of Discipline': {
+    effects: [
+      {
+        name: `Master of Discipline (AoR) - Passive`,
+        desc: `Effect: Each time a friendly Magnate's Crew Infantry unit wholly within 12" of this unit uses the 'Redeploy' command, you can reroll the dice.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'The Magnates Crew (AoR) - Flanking Fire': {
+    effects: [
+      {
+        name: `Flanking Fire (AoR) - Passive`,
+        desc: `Effect: Add 1 to hit rolls for shooting attacks made by friendly Magnate's Crew Skyvessels that target an enemy unit in combat with this unit.`,
+        when: [SHOOTING_PHASE],
       },
     ],
   },

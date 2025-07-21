@@ -139,11 +139,11 @@ const Units = {
     effects: [
       {
         name: `Advisory Role - Once Per Turn`,
-        desc: `Declare: Pick up to 3 visible friendly Kharadron Overlords units to be the targets. 
+        desc: `Declare: Pick up to 3 visible friendly Skyfarers units to be the targets. 
         Effect: Roll a dice for each target. On a 3+, pick 1 of the following effects to apply to that target for the rest of the turn: 
-        Seek New Prospects: Add 2 to the targets control score. 
+        Seek New Prospects: Add 5 to the targets control score. 
         Dont Argue With the Wind: Add 1 to run rolls and charge rolls for the target. 
-        Theres No Trading With Some People: No mortal damage is inflicted on the target by Retreat abilities.`,
+        Theres No Trading With Some People: The target can use a Retreat ability and still use Shoot abilities later in the turn. In addition, no mortal damage is inflicted on the target by Retreat abilities.`,
         when: [HERO_PHASE],
       },
     ],
@@ -168,13 +168,14 @@ const Units = {
   'Endrinmaster with Dirigible Suit': {
     effects: [
       {
-        name: `By Grungi, I Have My Eye On You! - Passive`,
-        desc: `Effect: Add 1 to field repairs rolls for friendly Endrinriggers units while they are wholly within 12" of this unit.`,
-        when: [END_OF_TURN],
+        name: `Combat Engineers - Once Per Turn`,
+        desc: `Declare: Pick this unit and up to 1 friendly Endrinriggers unit wholly within 12" of this unit to be the targets.
+        Effect: For the rest of the turn, combat attacks made by the targets against enemy units that charged this turn have Crit (2 Hits).`,
+        when: [COMBAT_PHASE],
       },
       {
-        name: `Endrinmaster`,
-        desc: `Declare: Pick a friendly Skyvessel within this units combat range to be the target. 
+        name: `Mobile Repairs`,
+        desc: `Declare: Pick a friendly Skyvessel or Zontari Endrin Dock within this unit's combat range to be the target.
         Effect: Roll a dice. On a 2+, Heal (3) the target.`,
         when: [HERO_PHASE],
       },
@@ -186,14 +187,14 @@ const Units = {
       {
         name: `'Aye Aye, Captain! - Once Per Turn`,
         desc: `Declare: Pick a friendly Skyvessel within this units combat range to be the target. 
-        Effect: Roll a dice. On a 2+, for the rest of the turn: 
+        Effect: For the rest of the turn: 
         The target can use a Retreat or Run ability and still use Shoot abilities later in the turn. 
         No mortal damage is inflicted on the target by Retreat abilities.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Endrinmaster`,
-        desc: `Declare: Pick a friendly Skyvessel within this units combat range to be the target. 
+        name: `Mobile Repairs`,
+        desc: `Declare: Pick a friendly Skyvessel or Zontari Endrin Dock within this unit's combat range to be the target.
         Effect: Roll a dice. On a 2+, Heal (3) the target.`,
         when: [HERO_PHASE],
       },
@@ -205,15 +206,14 @@ const Units = {
       //...AetherKhemistEffects],
       {
         name: `Aetheric Augmentation - Once Per Turn`,
-        desc: `Declare: Pick a friendly Kharadron Overlords Infantry unit wholly within 12" of this unit to be the target. 
-        Effect: Roll a dice. On a 3+, add 1 to the Rend characteristic of the targets ranged weapons for the rest of the turn.`,
+        desc: `Declare: Pick a friendly Arkanaut Company unit wholly within 12" of this unit to be the target. 
+        Effect: Roll a dice. On a 3+, add 1 to the Rend characteristic of the target's ranged weapons for the rest of the turn.`,
         when: [SHOOTING_PHASE],
       },
       {
-        name: `Atmospheric Isolation`,
-        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a dice. On a 3+, subtract 1 from hit rolls for the targets combat attacks for the rest of the turn.`,
-        when: [COMBAT_PHASE],
+        name: `Atmospheric Isolation - Passive`,
+        desc: `Effect: Subtract 1 from charge rolls for enemy units within 9" of this unit.`,
+        when: [CHARGE_PHASE],
       },
     ],
   },
@@ -254,10 +254,9 @@ const Units = {
       },
       {
         name: `Read the Winds - Once Per Turn`,
-        desc: `Declare: Roll 6 dice. For each 1, pick a visible enemy unit within 18" of this unit to be an enemy target. For each 6, pick a visible friendly Skyvessel within 18" of this unit to be a friendly target. 
-        Effect: Inflict D3 mortal damage on each enemy target. If any damage points are allocated to an enemy target by this ability, halve its Move characteristic until the start of your next turn. 
-        Add 3" to the Move characteristic of each friendly target until the start of your next turn.`,
-        when: [HERO_PHASE],
+        desc: `Declare: Pick a friendly Skyvessel or Auto-Endrin within this unit's combat range and that is not in combat to be the target.
+        Effect: Remove the target from the battlefield and set it up again on the battlefield more than 9" from all enemy units. Then, if the target is a Skyvessel, you can remove this unit from the battlefield and set it up again on the battlefield wholly within 6" of the target and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },
@@ -267,21 +266,15 @@ const Units = {
     }, */
     effects: [
       {
-        name: `The Admiral's Flagship - Once Per Battle`,
+        name: `The Admiral's Flagship - Once Per Turn`,
         desc: `Declare: This unit can use this ability even if it is in reserve. Pick an Arkanaut Ironclad or Arkanaut Frigate in this units regiment to be the target You can pick a unit that is in reserve. 
         Effect: For the rest of the battle, each time the target uses the All-out Attack command while this unit is wholly within 12" of it, no command points are spent.`,
-        when: [DURING_SETUP, SHOOTING_PHASE, COMBAT_PHASE],
+        when: [SHOOTING_PHASE],
       },
       {
-        name: `Always Take What You Are Owed`,
-        desc: `Declare: Pick a friendly Arkanaut Company unit wholly within 12" of this unit to be the target. 
-        Effect: Add D6 to the targets control score until the start of your next turn.`,
-        when: [HERO_PHASE],
-      },
-      {
-        name: `Bring Every Gun to Bear! - Once Per Battle`,
-        desc: `Declare: Pick a friendly Skyvessel wholly within 24" of this unit that is not in combat to be the target. 
-        Effect: Add 1 to the Attacks characteristic of the targets ranged weapons for the rest of the turn.`,
+        name: `Bring Every Gun to Bear! - Once Per Turn`,
+        desc: `Declare: Pick a friendly Skyvessel wholly within 24" of this unit to be the target. 
+        Effect: For the rest of the turn, add 1 to the Attacks characteristic of the target's ranged weapons.`,
         when: [SHOOTING_PHASE],
       },
     ],
@@ -289,8 +282,11 @@ const Units = {
   'Grundstok Thunderers': {
     effects: [
       {
-        name: `Hold This Position!`,
-        desc: `Effect: If this unit has not used a Move ability this turn and was not set up this turn, this units ranged weapons have Shoot in Combat for the rest of the turn.`,
+        name: `Specialist Grundstok Ammunition - Once Per Turn - Reaction: You declared a Shoot ability for this unit`,
+        desc: `Declare: Pick Shieldbreaker ammunition or Thunderdrakk ammunition.
+        Effect: If all of the attacks made for that Shoot ability target the same enemy unit, after that Shoot ability has been resolved, roll a dice and add the number of damage points allocated to the target by that Shoot ability. If the roll is higher than the target's Control characteristic, apply the following effect to the target based on the ammunition type picked:
+        Shieldbreaker: Ward rolls cannot be made for the target until the start of your next turn.
+        Thunderdrakk: That target has a maximum control score of 1 until the start of your next turn.`,
         when: [SHOOTING_PHASE],
       },
     ],
@@ -325,7 +321,8 @@ const Units = {
       {
         name: `Timed Charges`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+: Inflict an amount of mortal damage on the target equal to the roll. 
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. 
         This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
         when: [END_OF_TURN],
       },
@@ -337,7 +334,7 @@ const Units = {
     effects: [
       {
         name: `Emergency Field Repairs`,
-        desc: `Declare: Pick a friendly Skyvessel within this units combat range to be the target. 
+        desc: `Declare: Pick a friendly Skyvessel or Zontari Endrin Dock within this unit's combat range to be the target.
         Effect: Make a field repairs roll of D6 for each model in this unit. For each 4-5, Heal (1) the target. For each 6, Heal (2) the target.`,
         when: [END_OF_TURN],
       },
@@ -349,8 +346,11 @@ const Units = {
   'Arkanaut Company': {
     effects: [
       {
-        name: `Glory-seekers - Passive`,
-        desc: `Effect: Add 1 to hit rolls for this units attacks that target an enemy unit contesting an objective.`,
+        name: `Grizzled Buccaneers - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target.
+        Effect: Roll a dice. On a 3+:
+        This unit can immediately use a Shoot ability as if it were your shooting phase but all of its attacks must target the target enemy unit.
+        For the rest of the phase, this unit's Privateer Heavy Weapons have Shoot in Combat.`,
         when: [COMBAT_PHASE],
       },
       // SkyhookEffect,
@@ -364,15 +364,21 @@ const Units = {
         when: [MOVEMENT_PHASE],
       },
       {
-        name: `Escort Vessel - Passive`,
-        desc: `Effect: While any friendly Arkanaut Ironclads or Arkanaut Frigates are within this units combat range, both this unit and those friendly units have Ward (6+).`,
-        when: [DURING_GAME],
+        name: `Long-Line Slings - Passive`,
+        desc: `Effect: When you use the 'Transport Skyfarers' ability for this unit, you can pick units in combat to be targets.`,
+        when: [MOVEMENT_PHASE],
       },
       {
         name: `Light Bomb Racks`,
         desc: `Declare: Pick an enemy unit that does not have Fly and that this unit passed across this phase to be the target. 
         Effect: Roll 4 dice. For each 4+, inflict 1 mortal damage on the target.`,
         when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Aethershot Overwatch - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target.
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [COMBAT_PHASE],
       },
       /* BombRacksEffect,
       EmbarkedEffect,
@@ -407,8 +413,8 @@ const Units = {
     effects: [
       {
         name: `Assault Boat`,
-        desc: `Declare: This unit cannot use this ability if it is in combat or has used a Run or Retreat ability this turn. Pick a number of units up to its Transport Capacity that are wholly within 6" of it and that have not charged this turn to be the targets. Then, make a charge roll of 2D6. 
-        Effect: Effect: This unit can move a distance up to the value of the charge roll and must end the move within 12" of a visible enemy unit. If it does so, remove the targets from the battlefield and set them up again wholly within this units combat range. The targets can be set up in combat and have Strike-first for the rest of the turn. This unit and the targets have charged, and the targets cannot use another Core ability this phase.`,
+        desc: `Declare: This unit cannot use this ability if it is in combat or has used a RUN or Retreat ability this turn. Pick a number of units up to its Transport Capacity that are wholly within 6" of it, that are not in combat and that have not charged this turn to be the targets. Then, make a charge roll of 2D6. 
+        Effect: Remove the targets from the battlefield. Then, this unit must move a distance up to the value of the charge roll and must end the move within 1/2" of a visible enemy unit. Then, set up the targets wholly within this unit's combat range. If this unit is in combat, the targets can be set up in combat and have Strike-First for the rest of the turn. This unit and the targets have charged.`,
         when: [CHARGE_PHASE],
       },
       {
@@ -418,8 +424,14 @@ const Units = {
       },
       {
         name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Aethershot Carbines is 2.`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Heavy Sky Ordnance is 3.`,
         when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Incoming! - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target. 
+        Effect: Roll a dice. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [COMBAT_PHASE],
       },
       {
         name: `Medium Bomb Racks`,
@@ -443,7 +455,7 @@ const Units = {
     effects: [
       {
         name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Aethershot Carbines is 4.`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Great Sky Ordnance is 4.`,
         when: [SHOOTING_PHASE],
       },
       {
@@ -458,12 +470,10 @@ const Units = {
         when: [MOVEMENT_PHASE],
       },
       {
-        name: `Great Endrinworks`,
-        desc: `Effect: Pick 1 of the following effects to apply to this unit for the rest of the battle. This unit can use this ability even if it is in reserve: 
-        Magnicent Omniscope: Add 2" to this units Move characteristic. 
-        Collapsible Compartments: Add 1 to the total number of units and 10 to the total number of models this unit can transport. 
-        Aetheric Repulsion Field: This unit can use the Unbind ability as if it had Wizard (1).`,
-        when: [DURING_SETUP],
+        name: `Incoming! - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target. 
+        Effect: Roll a dice. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [COMBAT_PHASE],
       },
       /* BulwarksOfIron,
       BombRacksEffect,
@@ -481,21 +491,58 @@ const Units = {
     effects: [
       {
         name: `Captain of the Aelsling`,
-        desc: `Declare: This unit can use this ability even if it is in reserve. Pick a friendly Arkanaut Frigate in this units regiment to be the target. You can pick a unit that is in reserve.
-        Effect: The target has the Aelsling keyword. Add 1 to the Damage characteristic of the targets melee weapons for the rest of the battle.`,
+        desc: `Declare: Pick an Arkanaut Frigate in this unit's regiment to be the target. This unit can use this ability while in reserve, and the target can also be in reserve.
+        Effect: The target has the Aelsling keyword. Add 1 to the Damage characteristic of the target's Boarding Weapons for the rest of the battle.`,
         when: [DURING_SETUP],
       },
       {
         name: `She Can Handle It! - Passive`,
-        desc: `Effect: You can reroll run rolls and charge rolls for the Aelsling while this unit is within its combat range.`,
+        desc: `Effect: You can reroll run rolls and charge rolls for the Aelsling while it is wholly within 12" of this unit.`,
         when: [MOVEMENT_PHASE, CHARGE_PHASE],
       },
 
       {
         name: `Auxiliary Skyhook`,
         desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        Effect: Roll a D3. On a 2+: 
+        inflict an amount of mortal damage on the target equal to the roll.
+        Subtract 1 from wound rolls made for the target's attacks for the rest of the turn.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Null-Khemist': {
+    effects: [
+      {
+        name: `Protection of the Void - Passive`,
+        desc: `Effect: While they are wholly within 12" of this unit, friendly Skyfarer units have Ward (5+) against mortal damage inflicted by Spell abilities, Prayer abilities and abilities used by Manifestations.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Nullsuit - Passive`,
+        desc: `Effect: Double the Damage characteristic of this unit's attacks that target a Priest, Wizard or Manifestation.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Vongrim Harpoon Crew': {
+    effects: [
+      {
+        name: `Light Endrinpacks`,
+        desc: `Effect: If this unit is in combat, it can move 2D6" but must end that move in combat.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Vongrim Salvagers': {
+    effects: [
+      {
+        name: `Spotter's Flaregun`,
+        desc: `Declare: Pick an objective within 9" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, apply the following effects for the rest of the turn:
+        Add 1 to hit rolls for combat attacks made by friendly Skyfarer units that target a unit that is contesting the target objective.
+        Add 1 to the Rend characteristic of melee weapons used by friendly Vongrim Salvagers and Vongrim Harpoon Crew units that target a unit that is contesting the target objective.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
@@ -951,6 +998,64 @@ const Units = {
         desc: `Declare: Pick this unit to use this ability if it charged this turn and has not used a Rampage ability this turn. Then, pick an enemy unit within 9" of this unit to be the target. 
         Effect: Roll 2D6. This unit can move a number of inches equal to the roll. It can pass through enemy models and must end that move in combat with the target.`,
         when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'ROR: Bloodthirsty Shiver': {
+    effects: [
+      {
+        name: `Hunt of the Bloodthirsty Shiver`,
+        desc: `Effect: If both units in this Regiment of Renown are within each other's combat range, pick 1 of the following effects to apply until the start of your next turn:
+        Evasive Approach: While both units in this Regiment of Renown are within each other's combat range, subtract 1 from hit rolls for attacks that target them.
+        Ferocious Attack: While both units in this Regiment of Renown are within each other's combat range, their Allopex's Ferocious Bites have Crit (2 Hits).`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Akhelian Allopex: Bloodthirsty Predators - Passive`,
+        desc: `Effect: Add 1 to the Attacks characteristic of this units Allopexs Ferocious Bite while it is within 6" of any damaged enemy units or while it is within 6" of any enemy units that had any models slain in the same turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Akhelian Allopex: Ensnared`,
+        desc: `Declare: Pick an enemy Monster or Cavalry unit that had any damage points allocated to it this turn by this units shooting attacks to be the target. 
+        Effect: Roll a dice. On a 3+, until the start of your next turn, subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'ROR: Namarti Shore Raid': {
+    effects: [
+      {
+        name: `In the Shadow of the Ethersea`,
+        desc: `Declare: This ability must be used to deploy this Regiment of Renown.
+        Effect: Set up the units in this Regiment of Renown in reserve in the ethersea. They have now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Launch the Attack`,
+        desc: `Declare: Pick each unit in this Regiment of Renown that is in the ethersea.
+        Effect: Set up each unit on the battlefield wholly within 7" of a battlefield edge, more than 9" from all enemy units and within the combat range of another unit in this Regiment of Renown. Then, each unit can immediately move D3". The units cannot move into combat during any part of that move.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Akhelian Thrallmaster: Akhelian Insights - Passive`,
+        desc: `Effect: Melee weapons used by friendly Namarti units have Crit (2 Hits) while they are wholly within 12" of this unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Akhelian Thrallmaster: Thrallmaster - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly Namarti Thralls unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Namarti Reavers: Strike on the Move - Passive`,
+        desc: `Effect: This unit can use Shoot abilities even if it used a Run or Retreat ability in the same turn.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Namarti Thralls: Sweeping Blows - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: If any damage points inflicted by attacks made as part of that Fight ability are allocated to any enemy units, subtract 1 from wound rolls for attacks made by those enemy units for the rest of the turn.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

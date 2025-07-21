@@ -185,12 +185,6 @@ const Spells = {
         when: [HERO_PHASE],
       },
       {
-        name: `Warpgale: Casting value of 6`,
-        desc: `Declare: Pick a friendly Skaven Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
-        Effect: The target has Strike-last for the rest of the turn.`,
-        when: [HERO_PHASE],
-      },
-      {
         name: `Summon Warp Lightning Vortex: Casting value of 7`,
         desc: `Declare: If there is not a friendly Warp Lightning Vortex on the battlefield, pick a friendly Skaven Wizard to cast this spell, then make a casting roll of 2D6. 
         Effect: Set up the first part of the Warp Lightning Vortex within 18" of the caster and visible to them, then set up the second and third parts exactly 7" from the first part and exactly 7" from each other so that they form a triangle.`,

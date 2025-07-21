@@ -5,12 +5,14 @@ import {
   COMBAT_PHASE,
   DURING_GAME,
   END_OF_COMBAT_PHASE,
+  END_OF_TURN,
   HERO_PHASE,
+  SHOOTING_PHASE,
   WARDS_PHASE,
 } from 'types/phases'
 
 const Artifacts = {
- /* Gorecleaver: {
+  /* Gorecleaver: {
     effects: [
       {
         name: `Gorecleaver`,
@@ -54,13 +56,12 @@ const Artifacts = {
         when: [WARDS_PHASE],
       },
     ],
-  }, */  
+  }, */
   "Ar'gath, the King of Blades": {
     effects: [
       {
-        name: `Ar'gath, the King of Blades`,
-        desc: `Declare: Pick an enemy Hero in combat with this unit to be the target. 
-        Effect: Ward rolls cannot be made for the target for the rest of the turn.`,
+        name: `Ar'gath, the King of Blades - Passive`,
+        desc: `Effect: Ward rolls cannot be made for enemy Heroes while they are in combat with this unit.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -74,12 +75,51 @@ const Artifacts = {
       },
     ],
   },
-  'Halo of Blood': {
+  'Butchers Blade': {
     effects: [
       {
-        name: `Halo of Blood - Passive`,
-        desc: `Effect: Ignore negative modifiers to this units control score and to hit rolls and wound rolls for this units attacks.`,
-        when: [DURING_GAME],
+        name: `Butcher's Blade`,
+        desc: `Declare: Pick each enemy unit that had any damage points allocated to it this turn by this unit's combat attacks to be the targets.
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Gorechosen Champions (AoR) - Warmongers Icon': {
+    effects: [
+      {
+        name: `Warmonger's Icon (AoR) - Once Per Battle`,
+        desc: `Declare: Pick this unit and up to D3 friendly Gorechosen Champions units within this unit's combat range to be the targets.
+        Effect: The targets have Strike-First for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Gorechosen Champions (AoR) - The Scarring Blade': {
+    effects: [
+      {
+        name: `The Scarring Blade (AoR)`,
+        desc: `Effect: Inflict D3 mortal damage on this unit. For the rest of the turn, add X to the Attacks characteristic of melee weapons used by friendly Gorechosen Champions units, where X is equal to the amount of moral damage inflicted on this unit by this ability.
+        For the rest of the battle, this unit cannot uste the Hate-Fuelled Killers ability and cannot be healed.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Gorechosen Champions (AoR) - Bloodmist Skull': {
+    effects: [
+      {
+        name: `Bloodmist Skull (AoR) - Passive`,
+        desc: `Effect: This unit has Ward (3+) against damage inflicted by shooting attacks.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'The Baleful Lords (AoR)': {
+    effects: [
+      {
+        name: `Crown of the Slaughterborn (AoR) - Passive`,
+        desc: `Effect: Enemy units within 12" of this unit cannot be healed and cannot have slain models returned to them.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

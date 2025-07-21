@@ -3,6 +3,7 @@ import meta_rule_sources from 'meta/rule_sources'
 import {
   CHARGE_PHASE,
   COMBAT_PHASE,
+  DURING_GAME,
   DURING_SETUP,
   END_OF_TURN,
   HERO_PHASE,
@@ -45,20 +46,18 @@ const Flavors = {
   'Isharann Council': {
     effects: [
       {
-        name: `Wisdome of the Deep - Passive`,
+        name: `Wisdom of the Deep - Passive`,
         desc: `Effect: Add 1 to casting rolls, Isharann ritual rolls and lurelight rolls for friendly Isharann units while they are within the combat ranges of any other friendly Isharann units.`,
         when: [HERO_PHASE],
       },
     ],
   },
-  'Deep-Sea Stalkers': {
+  'Soul-Raid Ambushers': {
     effects: [
       {
-        name: `Outflank the Enemy - Passive`,
-        desc: `Effect: While a friendly Idoneth Deepkin unit is wholly within 9" of a battlefield edge: 
-        Subtract 1 from hit rolls for attacks that target that unit if it has not charged this turn. 
-        Add 2" to the Move characteristic of that unit.`,
-        when: [MOVEMENT_PHASE, SHOOTING_PHASE, COMBAT_PHASE],
+        name: `Fade Like Mist - Passive`,
+        desc: `Effect: When using the 'Unpredictable Tide' ability, you can pick up to 2 eligible targets instead of 1.`,
+        when: [HERO_PHASE],
       },
     ],
   },
@@ -69,6 +68,85 @@ const Flavors = {
         desc: `Declare: If any friendly or enemy units were destroyed this turn, pick a friendly Akhelian Allopex unit that has been destroyed to be the target. 
         Effect: Set up a replacement unit identical to the target wholly within 9" of a battlefield edge and more than 9" from all enemy units.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'The First Phalanx of Ionrach (AoR)': {
+    effects: [
+      {
+        name: `The Last Living Cythai - Passive`,
+        desc: `Effect: The friendly Volturnos has Strike-First.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Teachings of the Asydrazor - Once Per Turn`,
+        desc: `Effect: You gain D3 asydrazor points.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `The Shield of Ulchiss`,
+        desc: `Declare: You must spend 1 asydrazor point each time a friendly First Phalanx unit uses this ability. Pick a friendly unit in combat to use this ability.
+          Effect: For the rest of the turn:
+          That unit can use a Retreat ability and still use Shoot and/or Charge abilities later in the turn.
+          No mortal damage is inflicted on that unit by Retreat abilities.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `The Spear of Asphoren`,
+        desc: `Declare: You must spend 1 asydrazor point each time a friendly First Phalanx unit uses this ability. Pick a friendly unit that is not in combat to use this ability.
+          Effect: Add 1 to charge rolls for that unit for the rest of the turn.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `The Sword of Gwynnar`,
+        desc: `Declare: You must spend 1 asydrazor point each time a friendly First Phalanx unit uses this ability. Pick a friendly unit that is in combat to use this ability.
+          Effect: That unit has Strike-First for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Voidchill Darkness (Bond-Beast Trait) - Passive`,
+        desc: `Effect: Subtract 1 from hit rolls for attacks that target this unit if this unit charged this turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Deep Connection (Bond-Beast Trait) - Passive`,
+        desc: `Effect: Ignore the effect of the Companion weapon ability on this unit's weapons.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Swift-Finned Skirmisher (Bond-Beast Trait) - Reaction: You declared the Redeploy command for this unit`,
+        desc: `Effect: If you roll a 1-3 when determining the distance that this unit can move, you can use a value of 4 instead.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Wardens of the Chorrileum (AoR)': {
+    effects: [
+      {
+        name: `The Ocean Conceals - Once Per Battle`,
+        desc: `Declare: This ability must be used to deploy the friendly Chorrileum Eidolon.
+          Effect: Set up the friendly Chorrileum Eidolon in reserve awaiting a summons. It has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Spirits of the Chorrileum - Passive`,
+        desc: `Effect: Each turn, you can gain up to 1 chorrileum spirit point. You gain 1 chorrileum spirit point the first time 1 of the following occurs in a turn:
+          You make an unmodified casting roll of 8 or more for a friendly Isharann Wizard.
+          An enemy unit is destroyed while it is within 12" of any friendly Isharann units.
+          A friendly unit is destroyed while it is wholly within 12" of any friendly Isharann units or while it is contesting an objective you control.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Call Forth the Tsunami - Once Per Battle`,
+        desc: `Declare: You can only use this ability if you have 3 or more chorrileum spirit points. Pick a friendly unit awaiting a summons to be the target.
+          Effect: Set up the target anywhere on the battlefield. Then, inflict D3 mortal damage on each enemy unit in combat with it.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Wrath of Mathlann - Once Per Turn`,
+        desc: `Declare: Pick a friendly Chorrileum Eidolon unit that has not used any Rampage abilities this turn to use this ability.
+          Effect: That unit can use 2 Fight abilities this phase. After the first is used, however, that unit has Strike-Last for the rest of the turn. The unit using this ability cannot use any other Rampage abilities for the rest of the turn..`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
@@ -85,17 +163,6 @@ const Flavors = {
       },
     ],
   }, */
-
-  'Soul-Raid Ambushers': {
-    effects: [
-      {
-        name: `Fade Like Mist - Once Per Turn`,
-        desc: `Declare: Pick a friendly Idoneth Deepkin Infantry or Cavalry unit wholly within 3" of a terrain feature. 
-        Effect: Remove that unit from the battlefield and set it up in reserve travelling the ethersea (see the Raiders from the Deep ability).`,
-        when: [END_OF_TURN],
-      },
-    ],
-  },
 
   /* Nautilar: {
     mandatory: {

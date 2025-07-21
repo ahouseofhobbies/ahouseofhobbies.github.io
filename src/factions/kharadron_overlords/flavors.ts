@@ -8,25 +8,36 @@ import {
   MOVEMENT_PHASE,
   SHOOTING_PHASE,
   START_OF_HERO_PHASE,
+  START_OF_ROUND,
   START_OF_SETUP,
 } from 'types/phases'
 
 const Flavors = {
-  'Iron Sky Attack Squadron': {
+  'Pioneers and Scavengers': {
     effects: [
       {
-        name: `Meticulously Maintained - Passive`,
-        desc: `Effect: Ignore the first damage point that would be allocated to each friendly Skyvessel in each phase.`,
+        name: `Gritty Fortune-Hunters - Passive`,
+        desc: `Effect: Friendly Vongrim Harpoon Crew and Vongrim Salvagers units have Ward (6+) while they are contesting an objective.`,
         when: [DURING_GAME],
       },
     ],
   },
-  'Aether-Runners': {
+  'Rapid Redeployment Squadron': {
     effects: [
       {
-        name: `Fastest Vessels in the Fleet - Passive`,
-        desc: `Effect: Add 2" to the Move characteristic of all friendly Skyvessels.`,
-        when: [MOVEMENT_PHASE],
+        name: `Extra Rappel Anchors - Passive`,
+        desc: `Effect: Friendly Grundstok Gunhaulers can transport up to 2 friendly Kharadron Overlords Infantry units instead of 1 and with a model count of up to 6 instead of 5 (see Battle Traits).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Veteran Ground Troops': {
+    effects: [
+      {
+        name: `Entrenched Crews - Once Per Turn`,
+        desc: `Declare: Pick up to 3 friendly Arkanaut Company units to be the targets.
+        Effect: For the rest of the battle round, if the target has not been set up this battle round and while it has not moved this turn, subtract 1 from the Rend characteristic of attacks that target that unit.`,
+        when: [START_OF_ROUND],
       },
     ],
   },
@@ -34,18 +45,9 @@ const Flavors = {
     effects: [
       {
         name: `Special Procurement - Once Per Battle`,
-        desc: `Declare: Pick a friendly non-Unique Kharadron Overlords Hero that does not have an artefact of power. 
-        Effect: Give that Hero 1 artefact of power from the Inventions of the Sky-ports.`,
+        desc: `Declare: Pick a friendly non-Unique Kharadron Overlords Hero that does not have an artefact of power. The target can be in reserve.
+        Effect: Give that Hero 1 artefact of power from the 'Inventions of the Sky-ports'.`,
         when: [DURING_SETUP],
-      },
-    ],
-  },
-  'Grundcorps Wing': {
-    effects: [
-      {
-        name: `Grudgesettler Protocols - Once Per Battle`,
-        desc: `Effect: Add 3" to the Range characteristic of ranged weapons used by friendly Grundstok Thunderers and Grundstok Gunhaulers units for the rest of the turn.`,
-        when: [SHOOTING_PHASE],
       },
     ],
   },
@@ -73,6 +75,73 @@ const Flavors = {
         name: `Grudgefire Rounds - Once Per Turn`,
         desc: `Declare: Pick a friendly Expeditionary Force Infantry unit to be the target. 
         Effect: Roll a dice. On a 3+, pick 1 of the targets ranged weapons. Add 1 to the Attacks characteristic of that weapon for the rest of the phase.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'Pioneer Outpost (AoR)': {
+    effects: [
+      {
+        name: `Initial Investment - Once Per Turn`,
+        desc: `Effect: Each friendly Auto-Endrin can move 2D6" but cannot finish that move in combat.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Settling Accounts - Once Per Turn`,
+        desc: `Declare: You can only use this ability if you have not used any Code abilities this turn and if a friendly Auto-Endrin was destroyed this turn by an enemy unit.
+        Effect: For the rest of the battle, each time a friendly Auto-Endrin is removed from the battlefield, before removing it, inflict D3 mortal damage on each enemy unit within 3" of that Auto-Endrin.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Aggressive Acquisitions - Once Per Turn`,
+        desc: `Declare: You can only use this ability if you have not used any Code abilities this turn and if there is a friendly Pioneer unit in each large quarter of the battlefield. Each of those units must be more than 6" from all other large quarters of the battlefield and not in combat.
+        Effect: For the rest of the battle, enemy units cannot be set up within your territory or within 9" of an objective that you control.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Secure Investments - Once Per Turn`,
+        desc: `Declare: You can only use this ability if you have not used any Code abilities this turn and if any enemy units that were within 3" of your Zontari Endrin Dock this turn were destroyed this turn.
+        Effect: For the rest of the battle, ignore the Rend characteristic of combat attacks that target friendly non-Infantry Pioneer units or friendly faction terrain features.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'The Magnates Crew (AoR)': {
+    effects: [
+      {
+        name: `Loyalty to the Magnate - Passive`,
+        desc: `Effect: While a friendly Brokk Grungsson is wholly within the combat range of another friendly Magnate's Crew Infantry unit, both those units have Ward (5+).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Pay Your Debts - Once Per Battle`,
+        desc: `Declare: Pick an enemy unit on the battlefield or in reserve to be indebted.
+        Effect: Add 1 to wound rolls for combat attacks made by friendly Magnate's Crew units that target the indebted unit.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Bold Moves - Once Per Battle`,
+        desc: `Declare: Pick any number of friendly Magnate's Crew Infantry units that are in combat to be the targets. Make an emergency launch roll of 3D6 for each target.
+        Effect: Each target can move a distance up to the value of its emergency launch roll. It can move through the combat ranges of any enemy units but cannot end that move in combat with an enemy unit that it was not in combat with at the start of the phase.
+        The target(s) cannot use Charge abilities for the rest of the turn.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Cutting-Edge Endrinpacks - Once Per Turn`,
+        desc: `Declare: Pick up to D3 friendly Magnate's Crew Infantry units that are wholly within 9" of a friendly Magnate's Crew Skyvessel to be the targets.
+        Effect: Double the targets' Move characteristic for the rest of the turn.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Invictunite-Lined Hull - Once Per Battle - Enemy Hero Phase`,
+        desc: `Declare: Pick a friendly Magnate's Crew Skyvessel to be the target.
+        Effect: Roll a D3. For the rest of the turn, subtract X from the Rend characteristic of attacks that target that Skyvessel, where X is equal to the roll.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Constant Barrage - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this phase by a friendly Magnate's Crew unit's attacks to be the target.
+        Effect: Until the start of your next turn, each time the target ends a move within 10" of any friendly Magnate's Crew units, roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [SHOOTING_PHASE],
       },
     ],

@@ -2,6 +2,7 @@ import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
 import {
   COMBAT_PHASE,
+  DURING_GAME,
   HERO_PHASE,
   MOVEMENT_PHASE,
   SHOOTING_PHASE,
@@ -12,7 +13,7 @@ import {
 
 const Artifacts = {
   // Faction artifacts
- /* 'Disharmony Stones': {
+  /* 'Disharmony Stones': {
     effects: [
       {
         name: `Disharmony Stones`,
@@ -63,12 +64,12 @@ const Artifacts = {
     effects: [
       {
         name: `Armour of the Cythai - Passive`,
-        desc: `Effect: Other than the Companion weapon ability, weapon abilities for attacks that target this unit have no effect.`,
+        desc: `Effect: If this unit has not charged this turn, subtract 1 from hit rolls for combat attacks made by enemy units while they are in combat with this unit.`,
         when: [COMBAT_PHASE, SHOOTING_PHASE],
       },
     ],
   },
- /* 'Bio-shock Shell': {
+  /* 'Bio-shock Shell': {
     effects: [
       {
         name: `Bio-shock Shell`,
@@ -109,22 +110,41 @@ const Artifacts = {
     effects: [
       {
         name: `Dritchleech - Passive`,
-        desc: `Effect: Subtract 1 from casting rolls for enemy Wizards while they are within 18" of this unit.`,
+        desc: `Effect: Subtract 1 from casting rolls for enemy WizardS while they are within 18" of this unit. In addition, each time an enemy spell fails, after that ability has been resolved, Heal (1) this unit.`,
         when: [HERO_PHASE],
       },
     ],
   },
-  'Delicious Morsels': {
+  'Lifekelp Pod': {
     effects: [
       {
-        name: `Delicious Morsels - Once Per Turn`,
-        desc: `Effect: Heal (D3) each friendly Idoneth Deepkin Cavalry unit within this units combat range.`,
+        name: `Lifekelp Pod`,
+        desc: `Effect: Heal (D3) each friendly Idoneth Deepkin Cavalry unit within this unit's combat range.`,
         when: [MOVEMENT_PHASE],
       },
     ],
   },
+  'The First Phalanx of Ionrach (AoR)': {
+    effects: [
+      {
+        name: `Crest of the Ionrach (AoR) - Passive`,
+        desc: `Effect: This unit has Ward (6+).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Wardens of the Chorrileum (AoR)': {
+    effects: [
+      {
+        name: `Ammonite Carnyx (AoR) - Once Per Battle`,
+        desc: `Declare: Pick a friendly Chorrileum Namarti unit that has been destroyed to be the target.
+          Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
 
-/*  'Kraken Tooth': {
+  /*  'Kraken Tooth': {
     effects: [
       {
         name: `Kraken Tooth`,

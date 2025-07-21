@@ -1294,6 +1294,126 @@ const Units = {
       },
     ],
   },
+  'ROR: Drekkis Privateers': {
+    effects: [
+      {
+        name: `Cruising Into Position`,
+        desc: `Declare: Pick all units in this Regiment of Renown that have not been deployed.
+        Effect: Set up all of those units in reserve plying the winds. They have now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `You Call it Yours; I call it Mine - Passive`,
+        desc: `Effect: Add 1 to hit rolls and wound rolls for shooting attacks made by units in this Regiment of Renown that target an enemy unit that is within 6" of an enemy unit that has an enhancement.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Daredevil Deployment`,
+        desc: `Declare: Pick the Arkanaut Frigate in this Regiment of Renown to use this ability if it is plying the winds.
+        Effect: Set up the Arkanaut Frigate anywhere on the battlefield more than 9" from all enemy units. Then, set up all other units in this Regiment of Renown wholly within 6" of the Arkanaut Frigate and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `The Good Ship Aesling - Passive`,
+        desc: `Effect: The AELSLING has a Health characteristic of 17 instead of 15.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Drekki Flynt: Captain of the Aelsling`,
+        desc: `Declare: Pick an Arkanaut Frigate in this unit's regiment to be the target. This unit can use this ability while in reserve, and the target can also be in reserve.
+        Effect: The target has the Aelsling keyword. Add 1 to the Damage characteristic of the target's Boarding Weapons for the rest of the battle.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Drekki Flynt: She Can Handle It! - Passive`,
+        desc: `Effect: You can reroll run rolls and charge rolls for the Aelsling while it is wholly within 12" of this unit.`,
+        when: [MOVEMENT_PHASE, CHARGE_PHASE],
+      },
+      {
+        name: `Drekki Flynt: Auxiliary Skyhook`,
+        desc: `Declare: Pick an enemy Monster in combat with this unit to be the target. 
+        Effect: Roll a D3. On a 2+: 
+        inflict an amount of mortal damage on the target equal to the roll.
+        Subtract 1 from wound rolls made for the target's attacks for the rest of the turn.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Arkanaut Frigate: Assault Boat`,
+        desc: `Declare: This unit cannot use this ability if it is in combat or has used a RUN or Retreat ability this turn. Pick a number of units up to its Transport Capacity that are wholly within 6" of it, that are not in combat and that have not charged this turn to be the targets. Then, make a charge roll of 2D6. 
+        Effect: Remove the targets from the battlefield. Then, this unit must move a distance up to the value of the charge roll and must end the move within 1/2" of a visible enemy unit. Then, set up the targets wholly within this unit's combat range. If this unit is in combat, the targets can be set up in combat and have Strike-First for the rest of the turn. This unit and the targets have charged.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Arkanaut Frigate: Transport Capacity - Passive`,
+        desc: `Effect: This unit can transport up to 2 friendly Kharadron Overlords Infantry units with a combined model count of up to 12 (see Battle Traits).`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Arkanaut Frigate: Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Heavy Sky Ordnance is 3.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Arkanaut Frigate: Incoming! - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target. 
+        Effect: Roll a dice. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Arkanaut Frigate: Medium Bomb Racks`,
+        desc: `Declare: Pick an enemy unit that does not have Fly and that this unit passed across this phase to be the target. 
+        Effect: Roll 6 dice. For each 4+, inflict 1 mortal damage on the target.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Arkanaut Company: Grizzled Buccaneers - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target.
+        Effect: Roll a dice. On a 3+:
+        This unit can immediately use a Shoot ability as if it were your shooting phase but all of its attacks must target the target enemy unit.
+        For the rest of the phase, this unit's Privateer Heavy Weapons have Shoot in Combat.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'ROR: Sky-Port Profiteers': {
+    effects: [
+      {
+        name: `Command Ability: Supplies Don't Come Cheap`,
+        desc: `Declare: Pick a visible terrain feature within 18" of the Codewright in this Regiment of Renown. Each friendly unit wholly within 3" of that terrain feature is a target.
+        Effect: Roll a D3 for each target. On a 2+, Heal (X) the target, where X is an amount equal to the roll.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Command Ability: No One Rides for Free`,
+        desc: `Declare: Pick a friendly Infantry unit with up to 10 models that is wholly within 9" of the Codewright in this Regiment of Renown and not in combat to be the target.
+        Effect: Remove the target from the battlefield, then set it up again on the battlefield more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Command Ability: Long-Range Support`,
+        desc: `Declare: Pick an objective within 15" of the Codewright in this Regiment of Renown and that no friendly units are contesting. Each unit contesting that objective is a target.
+        Effect: Roll a dice for each target. If the roll exceeds the target's Health characteristic, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Codewright: Advisory Role - Once Per Turn`,
+        desc: `Declare: Pick up to 3 visible friendly Skyfarers units to be the targets. 
+        Effect: Roll a dice for each target. On a 3+, pick 1 of the following effects to apply to that target for the rest of the turn: 
+        Seek New Prospects: Add 5 to the targets control score. 
+        Dont Argue With the Wind: Add 1 to run rolls and charge rolls for the target. 
+        Theres No Trading With Some People: The target can use a Retreat ability and still use Shoot abilities later in the turn. In addition, no mortal damage is inflicted on the target by Retreat abilities.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Specialist Grundstok Ammunition - Once Per Turn - Reaction: You declared a Shoot ability for this unit`,
+        desc: `Declare: Pick Shieldbreaker ammunition or Thunderdrakk ammunition.
+        Effect: If all of the attacks made for that Shoot ability target the same enemy unit, after that Shoot ability has been resolved, roll a dice and add the number of damage points allocated to the target by that Shoot ability. If the roll is higher than the target's Control characteristic, apply the following effect to the target based on the ammunition type picked:
+        Shieldbreaker: Ward rolls cannot be made for the target until the start of your next turn.
+        Thunderdrakk: That target has a maximum control score of 1 until the start of your next turn.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

@@ -30,7 +30,7 @@ const baseSubfaction = {
     scenery: [Scenery],
     units: [
       Units,
-     /* keyOmitter(SlavesToDarknessUnits, [
+      /* keyOmitter(SlavesToDarknessUnits, [
         'Gaunt Summoner on Disc of Tzeentch',
         'Chaos Sorcerer Lord on Manticore',
         'Chaos Sorcerer Lord',
@@ -65,14 +65,14 @@ const baseSubfaction = {
         'Gors',
         'Tuskgor Chariots',
       ]), */
-    ], 
+    ],
   },
 } satisfies IItemDescription
 
 const subFactions = {
   [KHORNE]: {
     ...baseSubfaction,
-    effects: pickEffects(BattleTraits, [KHORNE, 'The Blood Tithe']),
+    effects: pickEffects(BattleTraits, [KHORNE]),
   },
 } satisfies TItemDescriptions
 

@@ -10,6 +10,8 @@ import {
   COMBAT_PHASE,
   DURING_GAME,
   MOVEMENT_PHASE,
+  CHARGE_PHASE,
+  END_OF_TURN,
 } from 'types/phases'
 
 const Artifacts = {
@@ -25,20 +27,19 @@ const Artifacts = {
   'Celestium Burst-grenade': {
     effects: [
       {
-        name: `Celestium Burst-grenade - Once Per Battle`,
+        name: `Celestium Burst-grenade - Once Per Turn`,
         desc: `Declare: Pick an enemy unit within 12" of this unit to be the target. 
         Effect: Ward rolls cannot be made for the target for the rest of the turn.`,
         when: [SHOOTING_PHASE],
       },
     ],
   },
-  "Blazebeard and Sons 'Drakk-hobbler' Mag-bolas": {
+  'Blazebeard and Sons Bamboozling Flakgun': {
     effects: [
       {
-        name: `Blazebeard and Sons 'Drakk-hobbler' Mag-bolas - Once Per Battle`,
-        desc: `Declare: Pick an enemy Monster within 12" of this unit to be the target. 
-        Effect: Until the start of your next turn, subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1.`,
-        when: [SHOOTING_PHASE, COMBAT_PHASE],
+        name: `Blazebeard and Sons Bamboozling Flakgun - Once Per Turn - Reaction: Opponent declared a Charge ability for a unit within 12" of this unit`,
+        desc: `Effect: Pick 1 dice in that charge roll. Then, make a bamboozling flak roll of D6. If the roll equals or exceeds the value on the dice, remove that dice from the charge roll.`,
+        when: [CHARGE_PHASE],
       },
     ],
   },
@@ -70,15 +71,7 @@ const Artifacts = {
       },
     ],
   },
-  'Grundstok Expeditionary Force (AoR)': {
-    effects: [
-      {
-        name: `Aetheric Nullifier (AoR) - Reaction: Opponent declared a Shoot or Fight ability for a Manifestation within 9" of the bearer`,
-        desc: `Effect: Roll 2D6. If the roll equals or exceeds the banishment value listed on the Manifestations warscroll, it is banished and removed from play. You cannot pick the same Manifestation to be the target of this ability more than once per phase.`,
-        when: [SHOOTING_PHASE, COMBAT_PHASE],
-      },
-    ],
-  },
+
   /* 'Spell in a Bottle': {
     effects: [
       {
@@ -108,6 +101,34 @@ const Artifacts = {
         name: `Voidstone Orb - Once Per Battle - Reaction: Opponent declared a Spell ability for a Wizard within 30" of this unit`,
         desc: `Effect: That spell is unbound.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Grundstok Expeditionary Force (AoR)': {
+    effects: [
+      {
+        name: `Aetheric Nullifier (AoR) - Reaction: Opponent declared a Shoot or Fight ability for a Manifestation within 9" of the bearer`,
+        desc: `Effect: Roll 2D6. If the roll equals or exceeds the banishment value listed on the Manifestations warscroll, it is banished and removed from play. You cannot pick the same Manifestation to be the target of this ability more than once per phase.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+    ],
+  },
+  'The Magnates Crew (AoR) - Aerodynamism': {
+    effects: [
+      {
+        name: `Aerodynamism (AoR) - Passive`,
+        desc: `Effect: If this unit moved this turn, subtract 1 from hit rolls for attacks that target this unit for the rest of the turn.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'The Magnates Crew (AoR) - Guns for all Occasions': {
+    effects: [
+      {
+        name: `Guns for all Occasions (AoR)`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Inflict D3 mortal damage on the target.`,
+        when: [END_OF_TURN],
       },
     ],
   },

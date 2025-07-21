@@ -3,6 +3,7 @@ import {
   BATTLESHOCK_PHASE,
   COMBAT_PHASE,
   DURING_GAME,
+  DURING_SETUP,
   END_OF_BATTLESHOCK_PHASE,
   END_OF_CHARGE_PHASE,
   END_OF_TURN,
@@ -27,8 +28,11 @@ const CommandTraits = {
     effects: [
       {
         name: `Hunter of Souls - Passive`,
-        desc: `Effect: This units melee weapons have Anti-Hero (+1 Rend).`,
-        when: [COMBAT_PHASE],
+        desc: `Effect: Pick 1 of the following weapon abilities for this unit's melee weapons to have this battle:
+        Anti-Cavalry (+1 Rend)
+        Anti-Infantry (+1 Rend)
+        Anti-Monster (+1 Rend)`,
+        when: [DURING_SETUP],
       },
     ],
   },
@@ -69,21 +73,20 @@ const CommandTraits = {
       },
     ],
   }, */
-  'Ancient Pride': {
+  'Form of the Fangmora': {
     effects: [
       {
-        name: `Ancient Pride - Passive`,
-        desc: `Effect: If the unmodified hit roll for a combat attack that targets this unit is 1-3, the attack fails and the attack sequence ends.`,
-        when: [COMBAT_PHASE],
+        name: `Form of the Fangmora - Passive`,
+        desc: `Effect: If the unmodified hit roll for an attack that targets this unit is 1-3, the attack fails and the attack sequence ends.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
     ],
   },
   'Nightmare Legacy': {
     effects: [
       {
-        name: `Nightmare Legacy`,
-        desc: `Declare: Pick a visible enemy unit that had any damage points allocated to it this turn by an ability used by this unit to be the target. 
-        Effect: Subtract D6 from the targets control score for the rest of the turn.`,
+        name: `Nightmare Legacy - Passive`,
+        desc: `Effect: Subtract 3 from the control scores of enemy units while they are within 6" of this unit.`,
         when: [END_OF_TURN],
       },
     ],
@@ -113,6 +116,24 @@ const CommandTraits = {
         desc: `Effect: If this unit is a Wizard, add 1 to its power level for the rest of the turn. If this unit is not a Wizard, it gains Wizard (1) for the rest of the turn. 
         In addition, add 2 to the next casting roll or banishment roll for this unit this turn.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The First Phalanx of Ionrach (AoR)': {
+    effects: [
+      {
+        name: `Prodigy of the Asydrazor (AoR) - Once Per Battle - Reaction: You declared an Asydrazor ability for a friendly First Phalanx unit wholly within 12" of this unit`,
+        desc: `Effect: No asydrazor points are spent to use that ability.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Wardens of the Chorrileum (AoR)': {
+    effects: [
+      {
+        name: `Serve the Enclave (AoR) - Passive`,
+        desc: `Effect: While this unit and a friendly Chorrileum Namarti unit are contesting the same objective, this unit has a control score of 10 that cannot be modified.`,
+        when: [END_OF_TURN],
       },
     ],
   },

@@ -1208,6 +1208,66 @@ const Units = {
       },
     ],
   },
+  'ROR: The Exiled One': {
+    effects: [
+      {
+        name: `Hatred for All`,
+        desc: `Declare: You must use this ability if this unit is not in combat and there are any other visible friendly units within this unit's combat range. You must pick 1 of those friendly units to be the target.
+        Effect: Resolve combat attacks for this unit against the target.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Skarbrand: Roar of Total Rage - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        Effect: Roll either 3 dice or a number of dice equal to the number of damage points this unit has. For each 4+, inflict 1 mortal damage on the target.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Skarbrand: Inescapable Wrath`,
+        desc: `Effect: Add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'ROR: The Red Revelation': {
+    effects: [
+      {
+        name: `Frenzied Violence: Chant value of 4`,
+        desc: `Declare: Pick a friendly Slaughterpriest in this Regiment of Renown to chant this prayer, pick a visible unit in this Regiment of Renown wholly within 12" of them to be the target, then make a chanting roll of D6. 
+        Effect: Until the start of your next turn, the target unit has Ward (5+) while every model in that unit is wholly within the combat range of an enemy unit. If the chanting roll was 10+, you can pick another eligible unit to be a second target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Glimpse the God - Once Per Turn`,
+        desc: `Declare: Pick each unit in this Regiment of Renown that used a Fight ability this turn to be a target.
+        Effect: If any damage points were allocated to an enemy unit by the target's combat attacks this turn, that enemy unit was deteoyed this turn, and no damage points were allocated to that enemy unit this turn by combat attacks made by a friendly unit that is not in this Regiment of Renown, for the rest of the battle, add 2 to the Attacks characteristic of the target's Blood-hungry weapons.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Slaughterpriest: Blood Sacrifice - Once Per Turn`,
+        desc: `Declare: Pick a unit (friendly or enemy) within this unit's combat range to be the target.
+        Effect: Roll a D3. On a 2+: 
+        Inflict an amount of mortal damage on the target equal to the roll. 
+        This unit gains 1 ritual point.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Slaughterpriest: Scorn of Sorcery - Passive`,
+        desc: `Effect: This unit can use Unbind abilities as if it had Wizard (1).`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Bloodreavers: Blood for the Blood God! - Passive`,
+        desc: `Effect: Add 1 to the Rend characteristic of this units melee weapons for the rest of the turn if this unit charged in the same turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Skullreapers: Trial of Skulls - Passive`,
+        desc: `Effect: Add 8 to this unit's control score while it is in combat.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

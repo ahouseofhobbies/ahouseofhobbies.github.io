@@ -5,6 +5,7 @@ import {
   COMBAT_PHASE,
   DURING_SETUP,
   END_OF_COMBAT_PHASE,
+  END_OF_TURN,
   HERO_PHASE,
   MOVEMENT_PHASE,
   SHOOTING_PHASE,
@@ -13,16 +14,17 @@ import {
 } from 'types/phases'
 
 const CommandTraits = {
-  'Relentless Hunter': {
+  'Magical Scorn': {
     effects: [
       {
-        name: `Relentless Hunger - Passive`,
-        desc: `Effect: If this unit is picked to be the target of the Murderlust ability, it can move 6" instead of 3".`,
-        when: [MOVEMENT_PHASE],
+        name: `Magical Scorn - Passive`,
+        desc: `Effect: Subtract 1 from casting rolls for Wizards while they are within 12" of this unit.
+        Subtract 1 from chanting rolls for enemy Priests while they are within 12" of this unit.`,
+        when: [HERO_PHASE],
       },
     ],
   },
-  Firebrand: {
+  /* Firebrand: {
     effects: [
       {
         name: `Firebrand - Passive`,
@@ -30,13 +32,42 @@ const CommandTraits = {
         when: [HERO_PHASE],
       },
     ],
-  },
-  'Favoured of Khorne': {
+  }, */
+  'Frenzied Taskmaster': {
     effects: [
       {
-        name: `Favoured of Khorne - Passive`,
-        desc: `Effect: You begin the battle with 1 blood tithe point.`,
-        when: [DURING_SETUP],
+        name: `Frenzied Taskmaster`,
+        desc: `Declare: Pick a friendly Blades of Khorne Infantry or Cavalry unit within this unit's combat range that is not in combat to be the target.
+        Effect: The target can move D6" but cannot end that move in combat. If the target ends that move within this unit's combat range, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Skull Collector': {
+    effects: [
+      {
+        name: `Skull Collector`,
+        desc: `Effect: If any damage points were allocated to an enemy Hero by this unit's combat attacks this turn and that enemy Hero has been destroyed, add 1 to the Attacks characteristic of this unit's melee weapons for the rest of the battle.
+        This unit can be affected by this ability multiple times and the effects are cumulative.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Gorechosen Champions (AoR)': {
+    effects: [
+      {
+        name: `Crowned in Butchery (AoR) - Passive`,
+        desc: `Effect: Add 20 to this unit's control score while it is in combat.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'The Baleful Lords (AoR)': {
+    effects: [
+      {
+        name: `Unrivalled Battlelust (AoR) - Once Per Battle`,
+        desc: `Effect: For the rest of the turn, add 1 to the Attacks characteristic of friendly Baleful Lords units while they are wholly within 12" of this unit.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

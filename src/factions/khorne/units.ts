@@ -127,7 +127,7 @@ const Units = {
       },
       {
         name: `Skarbrand's Rage - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, or if it did not use a Fight ability last turn, or if it is the rst turn of the battle, the Attacks characteristic of its Slaughter is 6.`,
+        desc: `Effect: While this unit has 10 or more damage points, or if it did not use a Fight ability last turn, the effects of the 'Blood-drenched' ability apply to this unit.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -141,9 +141,9 @@ const Units = {
     effects: [
       {
         name: `Beckon the Hunt`,
-        desc: `Declare: Pick a friendly non-Unique Blades of Khorne Daemon unit to be the target. 
+        desc: `Declare: Pick a friendly non-Unique Blades of Khorne Daemon unit to be the target.
         Effect: For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for the target, to a maximum of 3.`,
-        when: [CHARGE_PHASE],
+        when: [MOVEMENT_PHASE],
       },
       {
         name: `Battle Damaged - Passive`,
@@ -164,7 +164,7 @@ const Units = {
     effects: [
       {
         name: `Outrageous Carnage - Passive`,
-        desc: `Effect: Each time an attack made by this unit scores a critical hit, inflict D3 mortal damage on each enemy unit within 8" of it after the Fight ability has been resolved.`,
+        desc: `Effect: Each time an attack made by this unit scores a critical hit, inflict D3 mortal damage on each enemy unit within 8" of it (and continue the attack sequence).`,
         when: [COMBAT_PHASE],
       },
       {
@@ -184,8 +184,13 @@ const Units = {
     effects: [
       {
         name: `Commander of Tyrants - Once Per Turn`,
-        desc: `Declare: Pick up to 3 other visible friendly non-Unique Bloodthirster units to be the targets. 
+        desc: `Declare: Pick another visible friendly non-Unique Bloodthirster units to be the targets. 
         Effect: Add 1 to the Attacks characteristic of each targets melee weapons for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Wrathful Dominance - Passive`,
+        desc: `Effect: Add 1 to hit rolls for this unit's attacks that target an enemy Hero.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -210,9 +215,15 @@ const Units = {
         when: [COMBAT_PHASE],
       },
       {
-        name: `Skulls for the Skull Throne! - Passive`,
-        desc: `Effect: Each time an enemy Hero is slain by this unit, you receive 1 additional blood tithe point.`,
-        when: [COMBAT_PHASE],
+        name: `The Eternal Duel`,
+        desc: `Effect: If an enemy Hero had any damage points allocated to it by this unit's combat attacks this turn and that Hero was destroyed this turn, Heal (X) this unit, where X is the number of damage points this unit has.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Drawn in Blood - Once Per Battle - End of Enemy Turn`,
+        desc: `Declare: Pick an enemy Hero unit that used a Fight ability this turn to be the target.
+        Effect: Remove this unit from the battlefield and set it up again on the battlefield in combat with the target and not in combat with any other enemy units.`,
+        when: [END_OF_TURN],
       },
     ],
   },
@@ -225,13 +236,14 @@ const Units = {
       },
       //  UnflaggingHunterEffect,
       {
-        name: `Stalk the Prey - Enemy Movement Phase`,
-        desc: `Effect: If this units quarry moved this phase, this unit can move up to 8". It cannot move into combat during any part of that move and must end that move closer to its quarry.`,
+        name: `Stalk the Prey`,
+        desc: `Declare: Pick this unit and a friendly Flesh Hounds unit to be the targets.
+        Effect: Remove the targets from the battlefield and set them up again on the battlefield more than 6" from this unit's quarry and more than 9" from all other enemy units. The unit of Flesh Hounds must also be set up wholly within 12" of this unit.`,
         when: [MOVEMENT_PHASE],
       },
       {
         name: `Prey of the Blood God`,
-        desc: `Effect: Pick an enemy Hero to be this units quarry (see Stalk the Prey). You can pick a Hero in reserve.`,
+        desc: `Effect: Pick an enemy Hero to be this units quarry. You can pick a Hero in reserve.`,
         when: [DURING_SETUP],
       },
     ],
@@ -244,9 +256,10 @@ const Units = {
         when: [END_OF_TURN],
       },
       {
-        name: `Unflagging Hunters - Passive`,
-        desc: `Effect: Add 2 to charge rolls for this unit.`,
-        when: [CHARGE_PHASE],
+        name: `Hunters of Mystics - Passive`,
+        desc: `Effect: If the casting roll for an enemy Wizard within 12" of this unit contains 2 or more results of 1 or 2, the spell is miscast.
+        If the chanting roll for an enemy Priest within 12" of this unit is an unmodified 2, the prayer fails and its effect is not resolved.`,
+        when: [HERO_PHASE],
       },
     ],
   },
@@ -274,7 +287,7 @@ const Units = {
     effects: [
       {
         name: `The Blood Must Flow - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly Bloodletters unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, subtract 1 from ward rolls for damage points inflicted by each of those Fight abilities.`,
+        desc: `Effect: Pick a friendly Bloodletters unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, for the rest of the turn, add 1 to hit rolls for combat attacks made by this unit and that friendly Bloodletters unit.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -282,9 +295,9 @@ const Units = {
   Bloodletters: {
     effects: [
       {
-        name: `The Thinning Veil`,
-        desc: `Effect: If this unit is in combat, you can return D3 slain models to this unit.`,
-        when: [END_OF_TURN],
+        name: `Ceaseless Violence`,
+        desc: `Effect: If this unit is in combat, it can move 3". It can pass through the combat ranges of enemy units and must end that move in combat.`,
+        when: [COMBAT_PHASE],
       },
       // ChargeMusicianEffect,
     ],
@@ -292,9 +305,10 @@ const Units = {
   Bloodcrushers: {
     effects: [
       {
-        name: `Slaughterous Charge`,
-        desc: `Declare: If this unit charged this turn, pick an enemy unit within 1" of it to be the target. 
-        Effect: Make a crushing charge roll of D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        name: `Crushing Onslaught - Passive`,
+        desc: `Effect: If the unmodified charge roll for this unit is 8+: 
+        For the rest of the phase, this unit can pass through models in enemy units.
+        Enemy CAVALRY units passed through by this unit in this phase cannot make pile-in moves for the rest of the turn.`,
         when: [CHARGE_PHASE],
       },
       // MurderousChargeEffect,
@@ -320,10 +334,15 @@ const Units = {
     }, */
     effects: [
       {
-        name: `Blood Call - Once Per Turn`,
-        desc: `Declare: Pick a friendly Blades of Khorne Daemon unit that started the battle with 3 or more models and that has been destroyed to be the target. 
-        Effect: Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
-        when: [MOVEMENT_PHASE],
+        name: `Offering of Blood - Once Per Turn`,
+        desc: `Declare: Pick a friendly unit within 3" of this unit to be the target. 
+        Effect: Allocate 3 damage points to the target (ward rolls cannot be made for those damage points). For the rest of the turn, add 1 to this unit's power level, to a maximum of 2.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Blood Marked - Passive`,
+        desc: `Effect: This unit has Ward (4+) against damage inflicted by Spell abilities and abilities used by Manifestations.`,
+        when: [DURING_GAME],
       },
     ],
   },
@@ -446,12 +465,12 @@ const Units = {
     effects: [
       {
         name: `Lord of the Bloodbound - Passive`,
-        desc: `Effect: Add 1 to charge rolls for friendly Bloodbound Infantry units while they are wholly within 12" of this unit.`,
-        when: [CHARGE_PHASE],
+        desc: `Effect: Add 1 to wound rolls for friendly Bloodbound Infantry units while they are wholly within 12" of this unit.`,
+        when: [COMBAT_PHASE],
       },
       {
         name: `Bring Me Their Skull! - Once Per Turn`,
-        desc: `Declare: Pick a friendly Gorechosen unit wholly within 12" of this unit to be the target. 
+        desc: `Declare: Pick a friendly Bloodbound Infantry Hero wholly within 12" of this unit to be the target. 
         Effect: The target has Strike-first for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -484,7 +503,7 @@ const Units = {
         when: [COMBAT_PHASE],
       },
       {
-        name: `Icon of the Blood God`,
+        name: `Icon of the Blood God - Passive`,
         desc: `Effect: If a friendly Bloodbound unit wholly within 12" of this unit uses the Rally command, you can make 3 additional rally rolls of D6.`,
         when: [HERO_PHASE],
       },
@@ -517,10 +536,10 @@ const Units = {
       //ScornOfSorceryEffect
       {
         name: `Blood Sacrifice - Once Per Turn`,
-        desc: `Declare: Pick a friendly unit within this units combat range to be the target. 
+        desc: `Declare: Pick a unit (friendly or enemy) within this unit's combat range to be the target.
         Effect: Roll a D3. On a 2+: 
         Inflict an amount of mortal damage on the target equal to the roll. 
-        Gain 1 blood tithe point.`,
+        This unit gains 1 ritual point.`,
         when: [HERO_PHASE],
       },
       {
@@ -533,8 +552,9 @@ const Units = {
   Skullgrinder: {
     effects: [
       {
-        name: `Bone-Crushing Strikes - Passive`,
-        desc: `Effect: If this unit uses a Fight ability, all of the attacks target the same enemy Monster, and any of the attacks score a critical hit, that Monster has Strike-last for the rest of the turn.`,
+        name: `Bone-Crushing Strikes - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Roll a dice. If the roll is equal to or less than the target's control score, the target has Strike-Last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -542,6 +562,21 @@ const Units = {
         desc: `Declare: Pick another friendly Bloodbound Hero within 8" of this unit to be the target. 
         Effect: Pick 1 of the targets melee weapons. Add 1 to the Rend characteristic of that weapon for the rest of the battle.`,
         when: [DURING_SETUP],
+      },
+    ],
+  },
+  Deathbringer: {
+    effects: [
+      {
+        name: `Trophies of Glorious Deaths - Reaction: Opponent declared a command for a unit within 8" of this unit`,
+        desc: `Effect: Roll a dice. On an 5+, that command has no effect, it still counts as having been used and the command points spent to use it are still lost.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Killer of Kings - Once Per Turn`,
+        desc: `Declare: Pick each enemy unit and Manifestation in combat with this unit to be a target.
+        Effect: Roll 2D6 for each target. If the roll exceeds the target's Health characteristic, 1 model from that unit is slain or, if the target is a Manifestation, it is automatically destroyed.`,
+        when: [END_OF_TURN],
       },
     ],
   },
@@ -584,8 +619,8 @@ const Units = {
       // BraveryStandardBearerEffect,
       {
         name: `No Respite - Passive`,
-        desc: `Effect: Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll 2 dice. For each 5+, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE],
+        desc: `Effect: While this unit is contesting an objective you do not control, it has WARD (5+).`,
+        when: [DURING_GAME],
       },
     ],
   },
@@ -637,8 +672,10 @@ const Units = {
       },
       {
         name: `Bloodfury - Passive`,
-        desc: `Effect: Each time an unmodified hit roll for a combat attack that targets this unit is 1, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
-        when: [COMBAT_PHASE],
+        desc: `Declare: Pick a visible enemy model within 3" of this unit to be the target.
+        Effect: Both players roll off. If you win the roll-off, pick a melee weapon that the target is armed with. Your opponent must pick a visible unit in their army within 3" of the target (they can pick the target's own unit, and even if it is a single-model unit).
+        Your opponent must resolve combat attacks for the target using the melee weapon you picked against the unit they picked.`,
+        when: [END_OF_TURN],
       },
     ],
   },
@@ -647,7 +684,7 @@ const Units = {
       {
         name: `Slaughterous Charge`,
         desc: `Declare: If this unit charged this turn, pick an enemy unit within 1" of it to be the target. 
-        Effect: Make a crushing charge roll of D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        Effect: Roll of D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [CHARGE_PHASE],
       },
       //  BrassCladShieldEffect,
@@ -658,7 +695,7 @@ const Units = {
     effects: [
       {
         name: `Trial of Skulls - Passive`,
-        desc: `Effect: If this unit destroyed an enemy unit this turn, add 8 to this units control score. If this unit did not destroy an enemy unit this turn, it has a control score of 1 that cannot be modified.`,
+        desc: `Effect: Add 8 to this unit's control score while it is in combat.`,
         when: [END_OF_TURN],
       },
     ],
@@ -686,8 +723,8 @@ const Units = {
         when: [COMBAT_PHASE],
       },
       {
-        name: `Taker of Heads`,
-        desc: `Effect: If this unit is in combat, Heal (3) this unit.`,
+        name: `Feast Upon Their Bones`,
+        desc: `Effect: Subtract 3 from the control scores of enemy non-Monster units while they are in combat with this unit.`,
         when: [END_OF_TURN],
       },
     ],
@@ -807,7 +844,7 @@ const Units = {
       },
       {
         name: `Pack Hunters - Passive`,
-        desc: `Effect: While this unit is wholly within 12" of a friendly Flesh Hounds unit, this units combat attacks score critical hits on unmodified hit rolls of 5+.`,
+        desc: `Effect: While this unit is wholly within 12" of a friendly Flesh Hounds unit or a friendly Karanak, this units combat attacks score critical hits on unmodified hit rolls of 5+.`,
         when: [COMBAT_PHASE],
       },
     ],

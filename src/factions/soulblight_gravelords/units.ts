@@ -1662,6 +1662,45 @@ const Units = {
       },
     ],
   },
+  'ROR: Sky-Port Profiteers': {
+    effects: [
+      {
+        name: `Command Ability: Supplies Don't Come Cheap`,
+        desc: `Declare: Pick a visible terrain feature within 18" of the Codewright in this Regiment of Renown. Each friendly unit wholly within 3" of that terrain feature is a target.
+        Effect: Roll a D3 for each target. On a 2+, Heal (X) the target, where X is an amount equal to the roll.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Command Ability: No One Rides for Free`,
+        desc: `Declare: Pick a friendly Infantry unit with up to 10 models that is wholly within 9" of the Codewright in this Regiment of Renown and not in combat to be the target.
+        Effect: Remove the target from the battlefield, then set it up again on the battlefield more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Command Ability: Long-Range Support`,
+        desc: `Declare: Pick an objective within 15" of the Codewright in this Regiment of Renown and that no friendly units are contesting. Each unit contesting that objective is a target.
+        Effect: Roll a dice for each target. If the roll exceeds the target's Health characteristic, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Codewright: Advisory Role - Once Per Turn`,
+        desc: `Declare: Pick up to 3 visible friendly Skyfarers units to be the targets. 
+        Effect: Roll a dice for each target. On a 3+, pick 1 of the following effects to apply to that target for the rest of the turn: 
+        Seek New Prospects: Add 5 to the targets control score. 
+        Dont Argue With the Wind: Add 1 to run rolls and charge rolls for the target. 
+        Theres No Trading With Some People: The target can use a Retreat ability and still use Shoot abilities later in the turn. In addition, no mortal damage is inflicted on the target by Retreat abilities.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Specialist Grundstok Ammunition - Once Per Turn - Reaction: You declared a Shoot ability for this unit`,
+        desc: `Declare: Pick Shieldbreaker ammunition or Thunderdrakk ammunition.
+        Effect: If all of the attacks made for that Shoot ability target the same enemy unit, after that Shoot ability has been resolved, roll a dice and add the number of damage points allocated to the target by that Shoot ability. If the roll is higher than the target's Control characteristic, apply the following effect to the target based on the ammunition type picked:
+        Shieldbreaker: Ward rolls cannot be made for the target until the start of your next turn.
+        Thunderdrakk: That target has a maximum control score of 1 until the start of your next turn.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

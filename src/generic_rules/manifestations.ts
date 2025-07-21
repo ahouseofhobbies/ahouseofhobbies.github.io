@@ -398,6 +398,45 @@ const GenericManifestations: TEntry[] = [
     ],
   },
   {
+    name: `Idoneth Deepkin`,
+    effects: [
+      {
+        name: `Summon Incarnate of the Deep: Casting value of 8`,
+        desc: `If there is not a friendly Incarnate of the Deep on the battlefield, pick a friendly Idoneth Deepkin Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up an Incarnate of the Deep wholly within 12" of the caster, visible to them and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Incarnate of the Deep - Surrender to the Sea - Passive`,
+        desc: `Effect: When this Manifestation is removed from play, each friendly Abyssal Tendril on the battlefield is automatically removed from play.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Incarnate of the Deep - Wild Form - Passive`,
+        desc: `Effect: Each time this Manifestation is targeted by the Banish Manifestation ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Incarnate of the Deep - Grasping Tendrils`,
+        desc: `Effect: Roll a dice. Add 1 to the roll if it is your turn. On a 4+:
+        You can remove 1 friendly Abyssal Tendril from the battlefield.
+        If there are fewer than 2 friendly Abyssal Tendrils on the battlefield, you can set up an Abyssal Tendril wholly within 9" of this Manifestation.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Abyssal Tendril - Watery Clutch - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this Manifestation to be the target.
+        Effect: Roll a dice. If the roll exceeds the target's Health characteristic, the target is ensnared for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Abyssal Tendril - Crushing Coil - Passive`,
+        desc: `Effect: Add 1 to hit rolls for this Manifestation's attacks that target an ensnared enemy wholly within 3" of it.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  {
     name: `Lumineth Realmlords`,
     effects: [
       {
@@ -598,13 +637,14 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Bleeding Icon: Chant value of 4`,
         desc: `Declare: If there is not a friendly Bleeding Icon on the battlefield, pick a friendly Blades of Khorne Priest to chant this prayer, then make a chanting roll of D6. 
-        Effect: Set up a Bleeding Icon wholly within 12" of the chanter and visible to them.`,
+        Effect: Set up a Bleeding Icon wholly within 18" of the chanter and visible to them.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Bleeding Icon - Sigil of Doom - Reaction: Opponent declared a command for a unit within 8" of this Manifestation`,
-        desc: `Effect: Roll 2D6. On an 8+, that command has no effect, it still counts as having been used and the command points spent to use it are still lost.`,
-        when: [DURING_GAME],
+        name: `Bleeding Icon - Sigil of Doom - Once Per Turn`,
+        desc: `Declare: Pick a visible friendly Blades of Khorne unit wholly within 8" of this Manifestation to be the target. Then, pick a Blood Tithe ability that you have not unlocked this battle.
+        Effect: Roll a dice. If the roll equals or exceeds the the blood tithe points cost of the chosen ability, until the start of your next turn, the target can use the chosen ability as if it had been unlocked.`,
+        when: [HERO_PHASE],
       },
       {
         name: `Summon Wrath-Axe: Chant value of 4`,
@@ -614,9 +654,9 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Wrath-Axe - Hatred's Edge`,
-        desc: `Declare: Pick up to 3 enemy units that this Manifestation passed across this turn to be the targets. 
-        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
-        when: [CHARGE_PHASE],
+        desc: `Declare: If this Manifestation charged this turn, pick an enemy unit with a starting size greater than 1 that is in combat with this Manifestation to be the target. 
+        Effect: Roll 2D6. On an 8+, 1 model in the target unit is slain.`,
+        when: [COMBAT_PHASE],
       },
       {
         name: `Summon Hexgorger Skulls: Chant value of 4`,
@@ -634,7 +674,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Hexgorger Skulls - Hexgorgers - Passive`,
         desc: `Effect: For each part of this Manifestation that is within 8" of a Wizard (friendly or enemy), subtract 1 from casting rolls for that Wizard.`,
-        when: [DURING_GAME],
+        when: [HERO_PHASE],
       },
     ],
   },
