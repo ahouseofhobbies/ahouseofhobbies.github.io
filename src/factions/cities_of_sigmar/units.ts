@@ -628,7 +628,7 @@ const Units = {
     effects: [
       {
         name: `Hidden Murderer - Passive`,
-        desc: `Effect: While this unit is within the combat range of a friendly Infantry unit that has 5 or more models and this unit is not in combat, this unit is not visible to enemy units.`,
+        desc: `Effect: While this unit is within the combat range of a friendly Infantry unit that has 5 or more models and there are no enemy units within this units combat range, this unit is not visible to enemy units.`,
         when: [DURING_GAME],
       },
       {
@@ -897,8 +897,8 @@ const Units = {
         name: `Sigmar's Will: Chant value of 4`,
         desc: `Declare: Make a chanting roll of D6. If the roll is an unmodified 1, you can reroll the dice. 
         Effect: Pick 1 of the following effects to apply until the start of your next turn. Pick up to 2 different effects instead if the chanting roll was 10+. 
-        Hallowed Ground: Enemy units using the Normal Move ability cannot end that move within 5" of a friendly Cities of Sigmar Human unit that is wholly within 12" of this unit. 
-        Fervent Prayers: Each time a friendly Cities of Sigmar Human model that is wholly within 12" of this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. On a 6, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved. 
+        Hallowed Ground: Enemy units using the Normal Move ability cannot end that move within 5" of a friendly Cities of Sigmar Human unit while it is wholly within 12" of this unit. 
+        Fervent Prayers: Each time a friendly Cities of Sigmar Human model is slain by a combat attack while it is wholly within 12" of this unit, roll a dice. On a 6, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved. 
         Salvation: Pick up to 3 friendly Cities of Sigmar Human units to be the targets. Remove those units from the battlefield and set them up again wholly within 12" of this unit and not in combat. Those units cannot use Charge abilities for the rest of the turn.`,
         when: [HERO_PHASE],
       },

@@ -50,7 +50,7 @@ const Flavors = {
       {
         name: `Fixated on Feeding - Once Per Turn`,
         desc: `Declare: Pick a friendly Ogor Infantry unit that is not in combat to be the target. 
-        Effect: Roll a dice. On a 3+, the target can move a number of inches equal to the roll. It can move through the combat ranges of enemy units and can end that move in combat. If it does so, the target has charged.`,
+        Effect: Roll a dice. On a 3+, the target can move a number of inches equal to the roll. It can move through the combat ranges of enemy units and can end that move in combat. If it ended that move in combat, the target has charged.`,
         when: [CHARGE_PHASE],
       },
     ],
@@ -59,7 +59,7 @@ const Flavors = {
     effects: [
       {
         name: `Postprandial Warfare - Once Per Turn`,
-        desc: `Declare: Pick up to D3 friendly Ogor Infantry units that were in combat with an enemy unit when it was destroyed this turn to be the targets. 
+        desc: `Declare: Pick up to D3 friendly Ogor Infantry units that were in combat this turn with an enemy unit that was destroyed this turn to be the targets.
         Effect: Return 1 slain model to each target unit.`,
         when: [END_OF_TURN],
       },

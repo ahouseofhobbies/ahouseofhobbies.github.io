@@ -94,7 +94,7 @@ const CommandTraits = {
   'Ruination Brotherhood (AoR)': {
     effects: [
       {
-        name: `Corven Lord (AoR) - Once Per Battle`,
+        name: `Corven Lord (AoR) - Passive`,
         desc: `Effect: If this unit has the Ruination Chamber ability, it can use that ability once per turn regardless of whether another friendly unit has used it during the same turn.`,
         when: [START_OF_TURN],
       },

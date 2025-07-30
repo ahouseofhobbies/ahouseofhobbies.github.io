@@ -352,7 +352,7 @@ const KruleboyzUnits = {
       {
         name: `Rigged Odds - Passive`,
         desc: `Effect: The first time you fail a dirty trick roll each turn, give this unit 1 betting chip. 
-        Each time you make a dirty trick roll for an ability that targets a unit wholly within 12" of this unit, you can spend any number of betting chips. For each betting chip you spend, add 1 to that dirty trick roll.`,
+        Each time you make a dirty trick roll for an ability that targets a unit wholly within 12" of this unit, you can spend any number of betting chips after seeing the result of the roll. For each betting chip you spend, add 1 to that dirty trick roll.`,
         when: [DURING_GAME],
       },
       {

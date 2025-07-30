@@ -661,7 +661,7 @@ const Units = {
       },
       {
         name: `Command Ability: Gift of Foresight - Once Per Battle`,
-        desc: `Declare: Pick a friendly Daughters of Khaine Aelf Infantry or Cavalry unit that has been destroyed to be the target. 
+        desc: `Declare: Pick a friendly non-Unique Daughters of Khaine Aelf Infantry or Cavalry unit that has been destroyed to be the target. 
         Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 9" of a battlefield edge and more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },

@@ -758,7 +758,7 @@ const Units = {
       {
         name: `Lend A Claw - Once Per Turn`,
         desc: `Declare: Pick up to 4 other friendly non-Skryre Moulder units wholly within 12" of this unit to be the targets. 
-        Effect: Subtract 1 from the Attacks characteristic of this units Loosely Attached Bladed Limbs for the rest of the phase for each target picked. Add 1 to hit rolls for the targets attacks for the rest of the phase.`,
+        Effect: Subtract 1 from the Attacks characteristic of this units Loosely Attached Bladed Limbs for the rest of the phase for each target picked. Add 1 to hit rolls for the targets attacks for the rest of the phase, including those made with Companion weapons.`,
         when: [COMBAT_PHASE],
       },
     ],

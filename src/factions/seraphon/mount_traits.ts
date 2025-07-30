@@ -14,7 +14,7 @@ const MountTraits = {
     effects: [
       {
         name: `Titan of the Land - Passive`,
-        desc: `Effect: This unit counts as a terrain piece for the purpose of picking targets for the Realmshaper Engines Power Unleashed ability. Do not inflict any mortal damage on this unit as part of that ability.`,
+        desc: `Effect: This unit counts as a terrain piece for the purpose of picking targets for the friendly Realmshaper Engines Power Unleashed ability. Do not inflict any mortal damage on this unit as part of that ability.`,
         when: [HERO_PHASE],
       },
     ],

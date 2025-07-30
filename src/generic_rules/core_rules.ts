@@ -87,7 +87,7 @@ const CoreRules: TEntry[] = [
         desc: `Declare: Pick a friendly Hero within 3" of any Places of Power to use this ability, then pick that Place of Power to be the target. 
         Effect: Pick 1 of the following effects: 
          Cauterising Pollen: Roll a dice. On a 1, inflict 1 mortal damage on each unit (friendly and enemy) within 6" of any Place of Power. On a 3+, Heal (2) each unit (friendly and enemy) wholly within 6" of the target.
-         Rapid Sprouting: Pick a Ghyranite objective or visible terrain feature within 12" of that Hero and roll a dice. On a 3+, that objective or terrain feature has the Obscuring ability (see 1.2) for the rest of the battle.
+         Rapid Sprouting: Pick a Ghyranite objective or visible Non-Faction Terrain terrain feature within 12" of that Hero and roll a dice. On a 3+, that objective or terrain feature has the Obscuring ability (see 1.2) for the rest of the battle.
          Tap the Ley Lines: For the rest of the turn, If that Hero is not a Wizard or Priest, they can use the Unbind or Banish Manifestation ability as if they had Wizard (1).`,
         when: [START_OF_TURN],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
@@ -184,7 +184,7 @@ const CoreRules: TEntry[] = [
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
-        name: `Command Ability - Covering Fire`,
+        name: `Command Ability - Covering Fire - Enemy Shooting Phase`,
         desc: `Declare: Pick a friendly unit that did not use a Run ability this turn and that is not in combat to use this ability, then pick the closest enemy unit (to that unit) that can be picked as the target of shooting attacks to be the target. You cannot pick Manifestations or faction terrain features as the target of this ability.
         Effect: Resolve shooting attacks for the unit using this ability against the target. You must subtract 1 from the hit rolls for those attacks.`,
         when: [SHOOTING_PHASE],

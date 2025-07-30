@@ -87,7 +87,7 @@ const Flavors = {
       {
         name: `From a Quarter Unseen - Once Per Battle`,
         desc: `Declare: You cannot use this ability in the first battle round. Pick each friendly unit that is in the Crimson Keep to be the targets.
-        Effect: Set up each target wholly within 9" of the battlefield edge and more than 9" from all enemy units. If you used this ability in the third or a subsequent battle round, do not spend any command points when using the Carve a Bloody Path command this turn.`,
+        Effect: Set up each target wholly within 9" of the battlefield edge and more than 9" from all enemy units. If you set up any units using this ability in the third or a subsequent battle round, do not spend any command points when using the Carve a Bloody Path command this turn.`,
         when: [MOVEMENT_PHASE],
       },
       {

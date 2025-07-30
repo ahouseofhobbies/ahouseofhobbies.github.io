@@ -62,7 +62,7 @@ const BattleTraits = {
       },
       {
         name: `Nexus of Grief (Faction Terrain) -  Hungry Crypts - Once Per Turn`,
-        desc: `Effect: Remove this terrain feature from the battlefield and set it up again on the battlefield within 3" of a friendly Nighthaunt unit, more than 3" from all objectives and enemy units, and more than 12" from all other friendly Nexuses of Grief.`,
+        desc: `Effect: Remove this terrain feature from the battlefield and set it up again on the battlefield within 3" of a friendly Nighthaunt unit, more than 3" from all objectives and enemy units, more than 1" from all terrain features and more than 12" from all other friendly Nexuses of Grief.`,
         when: [MOVEMENT_PHASE],
       },
       {

@@ -198,8 +198,8 @@ const Units = {
   'The Light of Eltharion (SoG)': {
     effects: [
       {
-        name: `Eternal Light - Once Per Battle - Reaction: You declared a Summon ability for a Lumineth Realm-Lords unit and this unit has been destroyed`,
-        desc: `Effect: That Summon ability has no effect. Instead, if that spell is cast, you can set up a replacement unit for this unit more than 9" from all enemy units and wholly within 12" of the unit that used that Summon ability.`,
+        name: `Eternal Light - Passive`,
+        desc: `Effect: If this unit is destroyed and if a friendly Lumineth Realmlords Wizard successfully casts a Summon spell, instead of resolving the effect of that Summon spell, you can set up a replacement unit for this unit more than 9" from all enemy units and wholly within 12" of the unit that used that Summon spell. This ability is still in effect even if this unit is not on the battlefield.`,
         when: [HERO_PHASE],
       },
       {

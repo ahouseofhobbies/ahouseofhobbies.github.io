@@ -389,7 +389,7 @@ const Units = {
       {
         name: `Whirling Destruction - Once Per Turn`,
         desc: `Declare: Pick this unit if it is lost in the horde. 
-        Effect: Set up this unit anywhere on the battlefield wholly within 3" of a friendly Moonclan Stabbas or Moonclan Shootas unit. Then, this unit can move 2D6". It can pass through enemy models and their combat ranges and can end that move in combat. Then, roll a dice for each enemy unit in combat with this unit or that this unit passed across as part of that move. Inflict an amount of mortal damage on that unit equal to the roll.`,
+        Effect: Set up this unit anywhere on the battlefield wholly within 3" of a friendly Moonclan Stabbas or Moonclan Shootas unit. Then, this unit can move 2D6". It can pass through enemy models and their combat ranges and can end that move in combat. Then, roll a dice for each enemy unit in combat with this unit or that this unit passed across as part of that move. Inflict an amount of mortal damage on that unit equal to the roll. If this unit ended that move in combat, it has charged.`,
         when: [CHARGE_PHASE],
       },
       //  WhirlingDeathEffect,

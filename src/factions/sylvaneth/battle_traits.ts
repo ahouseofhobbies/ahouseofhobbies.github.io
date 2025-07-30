@@ -57,7 +57,7 @@ const BattleTraits = {
       },
       {
         name: `Awakened Wyldwood (Faction Terrain) - Overgrown Wilderness - Passive`,
-        desc: `Effect: Enemy units can be targeted by shooting attacks made by friendly Sylvaneth units even if they are behind or wholly on this terrain feature (this is an exception to Terrain, 1.2).`,
+        desc: `Effect: Enemy units can be targeted by shooting attacks made by friendly Sylvaneth units even if every model in that enemy unit is within 1" of this terrain feature. In addition, the Range characteristic of friendly Sylvaneth units ranged weapons is not halved while every model in that friendly unit is within 1" of this terrain feature.`,
         when: [SHOOTING_PHASE],
       },
       {

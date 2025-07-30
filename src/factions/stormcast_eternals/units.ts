@@ -852,7 +852,7 @@ const Units = {
     effects: [
       {
         name: `The Banner of the Reforged`,
-        desc: `Declare: Pick D3 friendly Stormcast Eternals units wholly within 12" of this unit to be the targets. 
+        desc: `Declare: Pick up to D3 friendly Stormcast Eternals units wholly within 12" of this unit to be the targets. 
         Effect: Add 3 to each targets control score for the rest of the turn. In addition, Heal (D3) each target.`,
         when: [HERO_PHASE],
       },

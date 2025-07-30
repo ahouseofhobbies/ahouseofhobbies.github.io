@@ -28,7 +28,7 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Shards of Valagharr - Phantasmal Translocation`,
-        desc: `Effect: Pick a part of this Manifestation, remove it from the battlefield and set it up again on the battlefield wholly within 9" of the other part.`,
+        desc: `Effect: Pick a part of this Manifestation, remove it from the battlefield and set it up again on the battlefield wholly within 9" of the other part and more than 3" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -192,7 +192,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Geminids of Uhl-Gysh: Casting value of 7`,
         desc: `Declare: If there is not a friendly Geminids of UhlGysh endless spell on the battlefield, pick a friendly Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Geminids of Uhl-Gysh endless spell wholly within 12" of the caster, visible to them and more than 9" from all enemy units.`,
+        Effect: Set up a Geminids of Uhl-Gysh endless spell wholly within 12" of the caster, visible to them and    more than 9" from all enemy units. A Geminids of Uhl-Gysh endless spell has 2 parts that must be set up within 9" of each other.`,
         when: [HERO_PHASE],
       },
       {
@@ -442,7 +442,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Sanctum of Amyntok: Casting value of 4`,
         desc: `Declare: If there is not a friendly Sanctum of Amyntok on the battlefield, pick a friendly Lumineth Realm-lords Wizard to cast this spell, pick a visible friendly Lumineth Realm-lords Infantry Hero wholly within 12" of them and more than 3" from all other units and terrain features to be the target, then make a casting roll of 2D6. 
-        Effect: Set up a Sanctum of Amyntok within the targets combat range, visible to the caster and not in combat. A Sanctum of Amyntok has 3 parts that must be set up touching each other so that they form a ring with the target inside`,
+        Effect: Set up a Sanctum of Amyntok within the targets combat range, visible to the caster and more than 3" from all enemy units. A Sanctum of Amyntok has 3 parts that must be set up touching each other so that they form a ring with the target inside`,
         when: [HERO_PHASE],
       },
       {
@@ -463,7 +463,7 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Hyshian Twinstones - Reservoir of Power - Passive`,
-        desc: `Effect: Add 1 to casting rolls for friendly Lumineth Realm-lords units while they are wholly within 6" of this Manifestation.`,
+        desc: `Effect: Add 1 to casting rolls for friendly Lumineth Realm-lords units while they are wholly within 6" of this Manifestation or are garrisoning a faction terrain feature within 3" of this Manifestation.`,
         when: [HERO_PHASE],
       },
       {
@@ -717,7 +717,7 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Daemonic Simulacrum - Manifested Jaws - Passive`,
-        desc: `Effect: While this Manifestations attacks target a Wizard, add a number equal to that Wizards power level to the Damage characteristic of this units Snapping Jaws.`,
+        desc: `Effect: While this Manifestations attacks target a Wizard, add a number equal to that Wizards casting power level to the Damage characteristic of this units Snapping Jaws.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -1093,7 +1093,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Sanguine Swarm: Casting value of 6`,
         desc: `Declare: If there is not a friendly Sanguine Swarm on the battlefield, pick a friendly Soulblight Gravelords Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Sanguine Swarm wholly within 18" of the caster and more than 9" from all enemy units.`,
+        Effect: Set up a Sanguine Swarm wholly within 18" of the caster and more than 9" from all enemy units. A Sanguine Swarm endless spell has 2 parts that must be set up within 9" of each other.`,
         when: [HERO_PHASE],
       },
       {

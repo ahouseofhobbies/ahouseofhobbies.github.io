@@ -70,7 +70,7 @@ const Flavors = {
         name: `Will of the Horned Rat - Passive`,
         desc: `Effect: While a friendly Skaven Daemon is within the combat range of a friendly non-Hero Skaven Infantry unit: 
         That Skaven Daemon has Ward (4+). 
-        Each time you make a successful ward roll for that Skaven Daemon, inflict 1 mortal damage on a friendly non-Hero Skaven Infantry unit within that units combat range after the damage sequence for that unit has been resolved.`,
+        Each time you make a successful ward roll for that Skaven Daemon, allocate 1 mortal damage on a friendly non-Hero Skaven Infantry unit within that units combat range after the damage sequence for that unit has been resolved (ward rolls cannot be made for these damage points).`,
         when: [DURING_GAME],
       },
     ],

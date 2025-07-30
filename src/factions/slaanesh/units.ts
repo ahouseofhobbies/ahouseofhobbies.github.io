@@ -693,7 +693,7 @@ const Units = {
       },
       {
         name: `Instinctive Advance - Once Per Phase - Reaction: Opponent declared a command for a unit within 12" of this unit`,
-        desc: `Effect: Immediately after that command or the ability it was a reaction to has been resolved, this unit can move 3". It can move through the combat ranges of enemy units and can end that move in combat.`,
+        desc: `Effect: This unit can move up to 3" immediately after that command has been resolved, unless that command is a reaction, in which case this unit can move after the ability that it was reacting to has been resolved. That move can pass through the combat ranges of enemy units, and can end in combat.`,
         when: [DURING_GAME],
       },
     ],

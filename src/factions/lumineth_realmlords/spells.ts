@@ -38,7 +38,7 @@ const Spells = {
     effects: [
       {
         name: `Beam of Hysh: Casting value of 6 (UNLIMITED)`,
-        desc: `Declare: Pick a friendly Lumineth Realm-lords Wizard to cast this spell, pick a visible enemy unit within 18" of them that has not been picked to be the target of this ability this battle round to be the target, then make a casting roll of 2D6. Add 1 to the casting value of this spell for each time it has been cast by a friendly Wizard this turn. 
+        desc: `Declare: Pick a friendly Lumineth Realm-lords Wizard to cast this spell, pick a visible enemy unit within 18" of them that has not been picked to be the target of this ability this battle round to be the target, then make a casting roll of 2D6. Add 1 to the casting value of this spell for each time it has been successfully cast by a friendly Wizard this turn. 
         Effect: Inflict D3+X mortal damage on the target, where X is the number of times, to a maximum of 3, that this spell has previously been cast by a friendly Wizard this turn.`,
         when: [HERO_PHASE],
       },
@@ -51,7 +51,7 @@ const Spells = {
       {
         name: `Beacons of Protection: Casting value of 6 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Lumineth Realm-lords Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Until the start of your next turn, ignore the first damage point allocated to friendly non-Monster Lumineth Realm-lords units each phase while they are wholly within 9" of a friendly Lumineth Realm-lords Wizard. Add 3" to the range for each additional time this spell has been cast by a friendly Wizard this battle round.`,
+        Effect: Until the start of your next turn, ignore the first damage point allocated to friendly non-Monster Lumineth Realm-lords units each phase while they are wholly within 9" of a friendly Lumineth Realm-lords Wizard. Add 3" to the range for each additional time this spell has been successfully cast by a friendly Wizard this battle round.`,
         when: [HERO_PHASE],
       },
     ],

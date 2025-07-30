@@ -238,7 +238,7 @@ const Units = {
       },
       {
         name: `Trail of Crimson - Once Per Turn`,
-        desc: `Declare: This unit can make a pile-in move. Then, pick an enemy unit in combat with it to be the target. 
+        desc: `Declare: This unit can make a pile-in move (even if it is not in combat). Then, if this unit is in combat, pick an enemy unit in combat with it to be the target.
         Effect: Roll a dice. On a 4+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [COMBAT_PHASE],
       },
@@ -865,7 +865,7 @@ const Units = {
         when: [DURING_GAME],
       },
       {
-        name: `Cursed to Rise Once More`,
+        name: `Cursed to Rise Once More - Once Per Turn`,
         desc: `Effect: You can return 1 slain model to this unit.`,
         when: [END_OF_TURN],
       },

@@ -115,7 +115,8 @@ const Units = {
       },
       {
         name: `Virulent Downpour: Casting value of 7`,
-        desc: `Effect: Add 3" to the range of this units Befouled Rainfall ability for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative. 
+        desc: `Declare: Make a casting roll of 2D6.
+        Effect: Add 3" to the range of this units Befouled Rainfall ability for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative. 
         Then, inflict 1 mortal damage on each enemy unit within range of that ability.`,
         when: [HERO_PHASE],
       },
