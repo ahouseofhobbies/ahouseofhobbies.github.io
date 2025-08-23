@@ -7,6 +7,7 @@ import {
   HERO_PHASE,
   MOVEMENT_PHASE,
   START_OF_HERO_PHASE,
+  START_OF_TURN,
   TURN_ONE_START_OF_ROUND,
   WARDS_PHASE,
   WOUND_ALLOCATION_PHASE,
@@ -17,41 +18,49 @@ const BattleTraits = {
   [FLESH_EATER_COURTS]: {
     effects: [
       {
-        name: `Muster Guard`,
-        desc: `Declare: Pick a friendly Courtier Hero that has 1 or more noble deeds points to use this ability, then pick a friendly unit wholly within 12" of it to be the target. 
-        Effect: Spend any of that Heros noble deeds points. If the target is a Serfs unit, for each noble deeds point spent, return 1 slain model to it. If the target is a Knights unit, for every 2 noble deeds points spent, return 1 slain model to it.`,
-        when: [MOVEMENT_PHASE],
+        name: `A Kingdom Deluded - Once Per Turn`,
+        desc: `Declare: You must use this ability at the start of each turn. If it is the first turn of the battle, pick a Delusion from these battle traits or, unless otherwise specified, from the warscroll of a friendly unit on the battlefield. If it is not the first turn, make a delusion roll of D6.
+        Effect: On a delusion roll of 1-2, you must pick a different Delusion to the one you picked last turn. On a 3-4, you must pick the same Delusion as the one you picked last turn, even if it is on the warscroll of a unit that has been destroyed. On a 5-6, you must pick a Delusion like you did in the first turn. For the rest of the turn, you believe the Delusion you picked.`,
+        when: [START_OF_TURN],
       },
       {
-        name: `Address Loyal Subtects - Once Per Turn`,
-        desc: `Declare: Pick a friendly Flesh-eater Courts Hero to use this ability. 
-        Effect: Roll a dice for each other friendly Flesh-eater Courts unit wholly within 12" of that Hero. For each 5+, give 1 noble deeds point to that Hero.`,
-        when: [HERO_PHASE],
+        name: `A Splendid Pageant (Delusion) - Passive`,
+        desc: `Effect: While you believe this Delusion:
+        Each time a friendly Flesh-Eater Courts unit wholly within 12" of a friendly Flesh-Eater Courts Hero uses a Run ability, if you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.
+        While a friendly Flesh-Eater Courts Infantry Hero is within the combat range of a friendly Flesh-Eater Courts Infantry unit that has 5 or more models, that Hero is not visible to enemy units more than 6" away.`,
+        when: [START_OF_TURN, MOVEMENT_PHASE, DURING_GAME],
       },
       {
-        name: `Feeding Frenzy - Passive`,
-        desc: `Effect: Add 1 to the Attacks characteristic of melee weapons, including Companion weapons, used by friendly Flesh-eater Courts units while they are wholly within 12" of any friendly Heroes that have 6 noble deeds points.`,
-        when: [COMBAT_PHASE],
-      },
-      {
-        name: `Noble Deeds - Passive`,
-        desc: `Effect: Each friendly Flesh-eater Courts Hero starts the battle with 0 noble deeds points and can have a maximum of 6 noble deeds points at once. 
-        Each time a friendly Flesh-eater Courts Hero uses a Fight ability, after that ability has been resolved, give that Hero a number of noble deeds points equal to the number of damage points inflicted by that ability. Do not count attacks made with Companion weapons. 
-        Each time a friendly Flesh-eater Courts Priest Hero uses a Prayer ability and the prayer is answered, after that ability has been resolved, give that Hero 1 noble deeds point. 
-        Each time a friendly Flesh-eater Courts Wizard Hero uses a Spell ability and the spell is successfully cast, after that ability has been resolved, give that Hero 1 noble deeds point.`,
-        when: [DURING_GAME],
-      },
-      {
-        name: `Summon Loyal Subjects`,
-        desc: `Declare: Pick a friendly Abhorrant Hero that has 6 noble deeds points to use this ability, then pick a friendly Serfs or Knights unit that has been destroyed to be the target. 
-        Effect: Spend all of that Heros noble deeds points. Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6" of a battlefield edge and more than 9" from all enemy units.`,
-        when: [MOVEMENT_PHASE],
+        name: `A Glorious Banquet (Delusion) - Passive`,
+        desc: `Effect: While you believe this Delusion, add 1 to hit rolls for combat attacks made by friendly Flesh-Eater Courts units that charged in the same turn while they are wholly within 12" of any friendly Flesh-Eater Courts Heroes.`,
+        when: [START_OF_TURN, COMBAT_PHASE],
       },
       {
         name: `Royal Blood - Once Per Turn`,
-        desc: `Declare: Pick any number of friendly Abhorrants to be the targets. 
+        desc: `Declare: Pick any number of friendly Abhorrants to be the targets.
         Effect: Heal (D3) each target.`,
         when: [HERO_PHASE],
+      },
+      {
+        name: `Muster Guard - Once Per Turn`,
+        desc: `Declare: Pick any number of friendly Nobles to be the targets.
+        Effect: For each target, pick 1 of the following:
+        Return up to 3 slain models to a friendly Serfs unit wholly within 12" of it.
+        Return 1 slain model to a friendly Knights unit wholly within 12" of it.
+        The same unit cannot have models returned to it by this ability more than once per turn.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Feeding Frenzy - Once Per Battle`,
+        desc: `Declare: Pick a friendly Flesh-Eater Courts Hero in combat to be the target.
+        Effect: For the rest of the turn, add 1 to the Attacks characteristic of melee weapons, including Companion weapons, used by friendly Flesh-Eater Courts units while they are wholly within 12" of the target.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Summon Loyal Subjects - Once Per Turn`,
+        desc: `Declare: Pick a friendly Abhorrant to use this ability, then pick a friendly Serfs or Knights unit that has been destroyed to be the target. 
+        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6" of a battlefield edge and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
       },
       {
         name: `Charnel Throne (Faction Terrain) - Steward of the Realm - Passive`,
@@ -75,8 +84,9 @@ const BattleTraits = {
       },
       {
         name: `Charnel Throne (Faction Terrian) - Ruler of All They Survey`,
-        desc: `Effect: Give D3 noble deeds points to this terrain features Steward.`,
-        when: [HERO_PHASE],
+        desc: `Declare: If this terrain feature has a Steward, pick a visible friendly non-Hero Flesh-Eater Courts unit to be the target.
+        Effect: The target can move D3". If the target was set up this turn, it can move D6" instead. It cannot move into combat during that move.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },

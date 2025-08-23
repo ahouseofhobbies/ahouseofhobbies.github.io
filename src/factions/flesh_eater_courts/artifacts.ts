@@ -3,9 +3,11 @@ import {
   BATTLESHOCK_PHASE,
   CHARGE_PHASE,
   COMBAT_PHASE,
+  DURING_GAME,
   DURING_ROUND,
   END_OF_TURN,
   HERO_PHASE,
+  MOVEMENT_PHASE,
   START_OF_COMBAT_PHASE,
 } from 'types/phases'
 import { TItemDescriptions } from 'factions/factionTypes'
@@ -20,25 +22,51 @@ const Artifacts = {
       },
     ],
   },
-  'The Grim Garland': {
+  'The Splintered Femur': {
     effects: [
       {
-        name: `The Grim Garland - Passive`,
-        desc: `Effect: Subtract 2 from the control scores of enemy units while they are within 12" of this unit.`,
+        name: `The Splintered Femur`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Roll a D3. On a 2+, pick 1 of the following:
+        Inflict an amount of mortal damage on the target equal to the roll.
+        Subtract 1 from the target's power level, to a minimum of 0, until the start of your next turn.
+        If the target is a Manifestation, it is banished.`,
         when: [END_OF_TURN],
       },
     ],
   },
-  'Heart of the Gargant': {
+  'The Grisly Pennant': {
     effects: [
       {
-        name: `Heart of the Gargant - Once Per Battle`,
-        desc: `Effect: If this unit is in combat, add 1 to the Attacks characteristic of its melee weapons for the rest of the turn. This ability also affects Companion weapons.`,
+        name: `The Grisly Pennant`,
+        desc: `Declare: If this unit charged this turn, pick an enemy unit in combat with it to be the target.
+        Effect: Roll a dice. If the roll is greater than the target's Control characteristic or is a 6, the following effects apply for the rest of the turn:
+        Subtract 1 from hit rolls for the target's combat attacks.
+        Add 1 to hit rolls for combat attacks made by friendly units that target that enemy unit.`,
         when: [COMBAT_PHASE],
       },
     ],
   },
- /* 'The Grim Garland': {
+  'The Knights of New Summercourt (AoR)': {
+    effects: [
+      {
+        name: `Feted Coronet (AoR) - Passive`,
+        desc: `Effect: This unit has Ward (4+) until a friendly New Summercourt unit is destroyed.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'The Equinox Feast (AoR)': {
+    effects: [
+      {
+        name: `Broken Sceptre of the Solstice (AoR) - Once Per Battle`,
+        desc: `Declare: Pick a friendly Equinox Feast unit that has been destroyed to be the target. This unit can use this ability if it has been destroyed, but if it does, this unit must be the target.
+        Effect: Set up a replacement unit identical to the target wholly within 6" of a friendly Equinox Feast unit and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  /* 'The Grim Garland': {
     effects: [
       {
         name: `The Grim Garland`,

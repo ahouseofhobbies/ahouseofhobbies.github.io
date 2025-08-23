@@ -91,21 +91,24 @@ const Artifacts = {
       },
     ],
   },
-  'Covetous Familiar': {
+  'Brazier of Nagashizzar': {
     effects: [
       {
-        name: `Covetous Familiar - Reaction: Opponent declared a Fight ability for a unit in combat with this unit`,
-        desc: `Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
+        name: `Brazier of Nagashizzar - Reaction: You declared the Redeploy command for a friendly Nighthaunt Infantry unit wholly within 12" of this unit`,
+        desc: `Effect: If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.`,
         when: [COMBAT_PHASE],
       },
     ],
   },
-  'Soulfire Ring': {
+  'Mirror of Echoing Failures': {
     effects: [
       {
-        name: `Soulfire Ring`,
-        desc: `Effect: If any enemy models were slain by this units combat attacks this turn, Heal (D6) this unit.`,
-        when: [END_OF_TURN],
+        name: `Mirror of Echoing Failures - Reaction: Opponent declared a Spell or Prayer ability for a Wizard or Priest within 12" of this unit`,
+        desc: `Declare: Pick each enemy Wizard and Priest within 12" of this unit to be the targets.
+        Effect: Roll a D3. On a 2+, for the rest of the phase:
+        Subtract 1 from casting rolls and chanting rolls for the targets.
+        Each time any of the targets fails to cast a spell or chant a prayer, inflict 1 mortal damage on that target.`,
+        when: [HERO_PHASE],
       },
     ],
   },
@@ -133,6 +136,24 @@ const Artifacts = {
         name: `Amulet of Waking Nightmares`,
         desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target. 
         Effect: Roll a dice. On a 3+, for the rest of the turn, the target cannot be affected by the Guarded Hero ability or the Obscuring terrain ability.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The Clattering Procession (AoR)': {
+    effects: [
+      {
+        name: `Tailsman of the Nadir (AoR) - Reaction: Opponent declared a Spell ability`,
+        desc: `Effect: If a friendly Clattering Procession unit wholly within 12" of this unit was picked to be the target of that spell, this unit can use the 'Unbind' ability as if it had Wizard (1). Add 1 to the unbinding roll for that ability.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The Eternal Nightmare (AoR)': {
+    effects: [
+      {
+        name: `The Seal of Nagash (AoR) - Once Per Battle`,
+        desc: `Effect: Allocate 3 damage points to this unit (ward rolls cannot be made for those damage points). Then, Heal (3) the friendly Nagash.`,
         when: [HERO_PHASE],
       },
     ],

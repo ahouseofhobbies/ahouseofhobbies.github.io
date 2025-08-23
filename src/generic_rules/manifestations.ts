@@ -80,7 +80,7 @@ const GenericManifestations: TEntry[] = [
     ],
   },
   {
-    name: `Aetherwrought Mercinaries`,
+    name: `Aetherwrought Machineries`,
     effects: [
       {
         name: `Summon Chronomantic Cogs: Casting value of 6`,
@@ -822,19 +822,16 @@ const GenericManifestations: TEntry[] = [
         when: [HERO_PHASE],
       },
       {
-        name: `Chalice of Ushoran - Fill the Chalice - Passive`,
-        desc: `Effect: Each time a model (friendly or enemy) is slain within 12" of this Manifestation, give this Manifestation a blood point, to a maximum of 6.`,
-        when: [DURING_GAME],
+        name: `Chalice of Ushoran - Draughts of Delusion`,
+        desc: `Declare: Pick an enemy unit within 6" of this Manifestation to be the target.
+        Effect: Roll a dice. On a 3+, your opponent must pick 1 of the following to apply for the rest of the turn:
+        Drink Deep from the Chalice: Other than the Companion weapon ability, weapon abilities for attacks made by the target have no effect.
+        Turn Aside and Suffer the Consequences: Combat attacks that target that enemy unit score critical hits on unmodified hit rolls of 5+.`,
+        when: [COMBAT_PHASE],
       },
       {
-        name: `Chalice of Ushoran - Overflowing Gore`,
-        desc: `Declare: Pick a friendly Flesh-eater Courts unit wholly within 18" of this Manifestation to be the target. 
-        Effect: Add the number of blood points this Manifestation has to the targets control score for the rest of the turn. Then, reset this Manifestations blood points to 0.`,
-        when: [END_OF_TURN],
-      },
-      {
-        name: `Summon Cadaverous Barricade: Casting value of 5`,
-        desc: `Declare: If there is not a friendly Cadaverous Barricade on the battlefield, pick a friendly Flesh-eater Courts Wizard to cast this spell, then make a casting roll of 2D6. 
+        name: `Summon Cadaverous Barricade: Casting value of 6`,
+        desc: `Declare: If there is not a friendly Cadaverous Barricade on the battlefield, pick a friendly Flesh-Eater Courts Wizard to cast this spell, then make a casting roll of 2D6.
         Effect: Set up a Cadaverous Barricade wholly within 18" of the caster and visible to them.`,
         when: [HERO_PHASE],
       },
@@ -845,16 +842,19 @@ const GenericManifestations: TEntry[] = [
         when: [MOVEMENT_PHASE],
       },
       {
-        name: `Summon Corpsemare Stampede: Casting value of 7`,
+        name: `Summon Corpsemare Stampede: Casting value of 6`,
         desc: `Declare: If there is not a friendly Corpsemare Stampede on the battlefield, pick a friendly Flesh-eater Courts Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Corpsemare Stampede wholly within 9" of the caster, visible to them and more than 9" from all enemy units.`,
+        Effect: Set up a Corpsemare Stampede wholly within 12" of the caster, visible to them and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
         name: `Corpsemare Stampede - Trampled Underfoot`,
-        desc: `Effect: This Manifestation can move a distance up to its Move characteristic. This Manifestation can pass through models and the combat ranges of enemy units, but it cannot end that move in combat. 
-        Then, pick up to 3 enemy units that this Manifestation passed across during that move to be the targets. Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
-        when: [MOVEMENT_PHASE],
+        desc: `Declare: This Manifestation can use this ability even if it is in combat.
+        Pick a point on a battlefield edge to be the target. Then, make a stampede roll of 2D6. Add 1D6 to the roll for each battle round that this Manifestation has been on the battlefield and has not been banished. For example, the stampede roll would be 2D6 in the turn in which it was summoned, 3D6 in your next turn, and so on.
+        Effect: This Manifestation can move a distance up to the value of the stampede roll in a straight line directly towards the target. It can move through the combat ranges of enemy units. It cannot end that move in combat unless it ends that move within 1/2" of a visible enemy unit. If it does so, this Manifestation has charged.
+        Roll a D3 for each enemy unit that this Manifestation passed across during that move. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.
+        In addition, if this Manifestation charged this turn, add the value of the stampede roll to the Attacks characteristic of this Manifestation's Corpsemare Trample for the rest of the turn.`,
+        when: [CHARGE_PHASE],
       },
     ],
   },
@@ -864,7 +864,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Mortalis Terminexus: Casting value of 6`,
         desc: `Declare: If there is not a friendly Mortalis Terminexus on the battlefield, pick a friendly Nighthaunt Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Mortalis Terminexus wholly within 12" of the caster and visible to them.`,
+        Effect: Set up a Mortalis Terminexus wholly within 18" of the caster and visible to them.`,
         when: [HERO_PHASE],
       },
       {
@@ -889,7 +889,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Vault of Souls: Casting value of 6`,
         desc: `Declare: If there is not a friendly Vault of Souls on the battlefield, pick a friendly Nighthaunt Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Vault of Souls wholly within 12" of the caster and visible to them.`,
+        Effect: Set up a Vault of Souls wholly within 18" of the caster and visible to them.`,
         when: [HERO_PHASE],
       },
       {
@@ -899,8 +899,8 @@ const GenericManifestations: TEntry[] = [
       },
       {
         name: `Vault of Souls - Soul Eruption`,
-        desc: `Declare: If this Manifestation has 6 soul points, pick any number of enemy units within 6" of this unit to be the targets. 
-        Effect: Roll a dice for each target. On a 3+, inflict an amount of mortal damage on the target equal to the roll. Then, reset this Manifestations soul points to 0.`,
+        desc: `Declare: If this Manifestation has 6 soul points, pick any number of enemy units within 6" of this Manifestation to be the targets. 
+        Effect: Roll 6 dice for each target. On a 4+, inflict 1 mortal damage on the target. Then, reset this Manifestations soul points to 0.`,
         when: [END_OF_TURN],
       },
     ],

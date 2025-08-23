@@ -114,7 +114,8 @@ const Units = {
         name: `Invocation of Nagash: Casting value of 7`,
         desc: `Declare: This unit can cast this spell more than once per phase. Pick a visible unit wholly within 18" of this unit that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6. 
       Effect: If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly Death unit, pick 1 of the following effects: 
-      Return a number of slain models to the target unit with a combined Health characteristic of up to 3. The target has Ward (5+) until the start of your next turn.`,
+      Return a number of slain models to the target unit with a combined Health characteristic of up to 3. 
+      If the target was not set up this turn and is not in combat, it can move up to 3". It cannot move into combat.`,
         when: [HERO_PHASE],
       },
     ],
@@ -125,10 +126,15 @@ const Units = {
     }, */
     effects: [
       {
-        name: `Passage Through the Underworlds - Once Per Turn`,
+        name: `Passage Through the Underworlds - Once Per Battle`,
         desc: `Declare: If this unit is not in combat, pick a friendly non-Hero Nighthaunt unit that is not in combat and is wholly within 12" of this unit to be the target. 
         Effect: Remove this unit and the target from the battlefield, then set them up again on the battlefield wholly within 6" of each other and more than 7" from all enemy units.`,
         when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Drifting on Spectral Tides`,
+        desc: `Effect: Roll a dice. On a 3+, this unit can immediately use the 'Normal Move' or the 'Retreat' ability as if it were your movement phase.`,
+        when: [END_OF_TURN],
       },
     ],
   },
@@ -141,13 +147,13 @@ const Units = {
       {
         name: `Grief-Stricken: Casting value of 6`,
         desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target, then make a casting roll of 2D6. 
-        Effect: Ignore positive modifiers to hit rolls, wound rolls and save rolls for the target for the rest of the turn.`,
+        Effect: Ignore positive modifiers to the target's control score and to hit rolls, wound rolls and save rolls for the target for the rest of the turn.`,
         when: [HERO_PHASE],
       },
       {
         name: `Mortarch of Grief - Passive`,
-        desc: `Effect: Subtract 3 from the control scores of enemy units while they are within 12" of this unit.`,
-        when: [END_OF_TURN],
+        desc: `Effect: If the unmodified hit roll or unmodified wound roll for an attack that targets this unit is 1-4, the attack fails and the attack sequence ends.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
       {
         name: `No Rest For the Wicked - Once Per Battle`,
@@ -164,6 +170,12 @@ const Units = {
         name: `If I Cannot Rule, None Shall Rule! - Once Per Turn - Reaction: Opponent declared a command for a unit within 12" of this unit`,
         desc: `Effect: Roll a dice. On a 3+, unless your opponent spends 1 additional command point to use that command, the command has no effect, it still counts as having been used and the command points spent to use the command are still lost.`,
         when: [DURING_GAME],
+      },
+      {
+        name: `Hail Kurdoss! King of Nothing!`,
+        desc: `Declare: If this unit charged this phase, pick a friendly Craventhrone Guard unit that is not in combat to be the target.
+        Effect: The target can immediately use a Shoot ability as if it were your shooting phase, but all of its attacks must target an enemy unit in combat with this unit. The target cannot use Charge abilities for the rest of the turn.`,
+        when: [CHARGE_PHASE],
       },
     ],
   },
@@ -194,11 +206,10 @@ const Units = {
       {
         name: `Corpse Candles`,
         desc: `Declare: Pick either this unit or a visible enemy unit within 12" of this unit to be the target. 
-        Effect: Allocate 1 damage point to the target. 
-        If you picked an enemy unit, add 1 to casting rolls for this unit for the rest of the turn. 
-        If you picked this unit, for the rest of the turn: 
-        Add 1 to casting rolls for this unit. 
-        Add 1 to this units power level.`,
+        Effect: If you picked this unit, allocate 1 damage point to this unit and add 1 to casting rolls for this unit for the rest of the turn (ward rolls cannot be made for that damage point).
+        If you picked an enemy unit, roll a dice. On a 3+, inflict 1 mortal damage on that enemy unit and for the rest of the turn:
+        Add 1 to casting rolls for this unit.
+        Add 1 to this unit's power level.`,
         when: [HERO_PHASE],
       },
       {
@@ -217,15 +228,31 @@ const Units = {
   'Scriptor Mortis': {
     effects: [
       {
-        name: `Judge, Jury, and Executioner - Once Per Turn`,
-        desc: `Effect: Roll a dice for each Sentenced enemy unit on the battlefield. On a 4+, inflict an amount of mortal damage equal to the current battle round number on that Sentenced unit.`,
-        when: [END_OF_TURN],
+        name: `Judge, Jury, and Executioner - Passive`,
+        desc: `Effect: Each time a friendly Nighthaunt Infantry unit uses a Fight ability, if all of its attacks target the same Sentenced enemy unit, that friendly unit's melee weapons have Crit (Mortal) for that Fight ability.`,
+        when: [COMBAT_PHASE],
       },
       {
         name: `Sentenced to Eternal Torment - Once Per Turn`,
-        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target. 
-        Effect: Roll a dice. On a 3+, the target has the Sentenced keyword for the rest of the battle.`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, inflict 1 mortal damage on the target and the target has the Sentenced keyword until the start of your next turn.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Lord Vitriolic': {
+    effects: [
+      {
+        name: `Spectral Alchemy - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit within 10" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, pick 1 of the following effects or roll two dice and apply both corresponding effects in an order of your choosing, including duplicate effects:
+        1. Phantasmal Solvent: If the target has a Move characteristic of '-', inflict 6 mortal damage on the target.
+        2. Acidic Fug: Inflict D3 mortal damage on the target.
+        3. Fling Concoctions: Add 1 to the Attacks characteristic of this unit's Hurled Vial this phase but all attacks made by this unit this phase must target that enemy unit.
+        4. Choking Vapours: If the target is a Wizard, subtract 1 from its power level until the start of your next turn.
+        5. Fear-laced Hallucinogen: If the target is a Priest, remove D3 ritual points from it.
+        6. Unholy Prescription: Ward rolls cannot be made for the target for the rest of the turn.`,
+        when: [SHOOTING_PHASE],
       },
     ],
   },
@@ -239,8 +266,8 @@ const Units = {
       },
       {
         name: `Infantry Overseer - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly non-Hero Nighthaunt Infantry unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
-        when: [COMBAT_PHASE],
+        desc: `Effect: Pick a friendly non-Hero Nighthaunt Infantry unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target's attacks for the rest of the turn.`,
+        when: [HERO_PHASE],
       },
     ],
   },
@@ -254,7 +281,7 @@ const Units = {
       },
       {
         name: `Cavalry Overseer - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly non-Hero Nighthaunt Cavalry or War Machine unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
+        desc: `Effect: Pick a friendly non-Hero Nighthaunt Cavalry or War Machine unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be inspired to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -262,21 +289,19 @@ const Units = {
   'Craventhrone Guard': {
     effects: [
       {
-        name: `Spectral Bolts - Passive`,
-        desc: `Effect: This unit can pick enemy units to be the targets of shooting attacks even if they are not visible to this unit. In addition, ignore negative modifiers to hit rolls for this units shooting attacks.`,
-        when: [SHOOTING_PHASE],
+        name: `Black-Hearted Lackeys - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Roll a D3. On a 2+, this unit immediately uses the Retreat ability without any mortal damage being inflicted on it. Then, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },
   'Guardian of Souls': {
-    /* mandatory: {
-      spells: [keyPicker(spells, ['Spectral Lure'])],
-    }, */
     effects: [
-      //  GenericEffects.WizardOneSpellEffect,
       {
-        name: `Nightmare Lantern - Passive`,
-        desc: `Effect: While this unit is in combat, add 1 to wound rolls for combat attacks made by friendly Nighthaunt units while they are wholly within 12" of this unit.`,
+        name: `Nightmare Lantern - Once Per Turn`,
+        desc: `Declare: Pick a visible friendly Nighthaunt unit wholly within 12" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, add 1 to wound rolls for the target's attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -322,6 +347,12 @@ const Units = {
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
         Effect: Roll a dice. On a 2+, subtract 1 from the Attacks characteristic of the targets melee weapons for the rest of the turn. In addition, if the target is a Hero, subtract 5 from the targets control score for the rest of the turn.`,
         when: [COMBAT_PHASE],
+      },
+      {
+        name: `Ghastly Descent`,
+        desc: `Declare: Pick an enemy Infantry or Cavalry Hero that had any damage points allocated to it this turn by this unit's attacks to be the target.
+        Effect: Roll a dice. Add 1 to the roll if the target is a Sentenced unit. On a 5+, the target is automatically destroyed.`,
+        when: [END_OF_TURN],
       },
     ],
   },
@@ -369,7 +400,8 @@ const Units = {
     effects: [
       {
         name: `Reaped Like Corn - Passive`,
-        desc: `Effect: This units combat attacks score critical hits on unmodified hit rolls of 5+ while the target unit has 5 or more models.`,
+        desc: `Declare: Pick an enemy unit that is within the combat ranges of 5 or more models in this unit to be the target.
+        Effect: Roll a number of dice equal to the number of models in the target unit. For each 6, inflict 1 mortal damage on the target. If the target unit has 20 or more models, inflict 1 mortal damage on the target for each 5+ instead.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -377,9 +409,10 @@ const Units = {
   Chainrasps: {
     effects: [
       {
-        name: `Chilling Horde - Passive`,
-        desc: `Effect: Add 1 to wound rolls for this units combat attacks if it charged in the same turn.`,
-        when: [COMBAT_PHASE],
+        name: `Chilling Horde - Once Per Battle`,
+        desc: `Declare: Pick up to 3 friendly Chainrasps units to be the targets.
+        Effect: Each target can move 6" but cannot end that move in combat.`,
+        when: [DURING_SETUP],
       },
       // ChillingHordeEffect,
     ],
@@ -389,8 +422,8 @@ const Units = {
       //  GenericEffects.Elite,
       {
         name: `Thrashing Desperation - Passive`,
-        desc: `Effect: If this unit charged this turn, add 1 to the Attacks characteristic of this units melee weapons for the rest of the turn.`,
-        when: [COMBAT_PHASE],
+        desc: `Effect: While this unit contests an objective you control, enemy units cannot finish a charge move within 1/2" of a model in this unit unless the unmodified charge roll was 7 or more.`,
+        when: [CHARGE_PHASE],
       },
     ],
   },
@@ -408,13 +441,8 @@ const Units = {
     effects: [
       {
         name: `Harrowing Shriek - Passive`,
-        desc: `Effect: If this unit charged in the same turn, subtract 1 from wound rolls for attacks made by enemy units while they are in combat with this unit.`,
-        when: [CHARGE_PHASE],
-      },
-      {
-        name: `Murderous Bloodlust - Passive`,
-        desc: `Effect: Add 1 to hit rolls and wound rolls for this units combat attacks while it is in combat with any damaged enemy units or while it is in combat with any enemy units that had any models slain in the same turn.`,
-        when: [COMBAT_PHASE],
+        desc: `Effect: Enemy units cannot be healed or have slain models returned to them while they are in combat with this unit.`,
+        when: [DURING_GAME],
       },
     ],
   },
@@ -442,13 +470,13 @@ const Units = {
   'Black Coach': {
     effects: [
       {
-        name: `Nimbus of Power`,
+        name: `Nimbus of Power - Once Per Turn`,
         desc: `Effect: If this unit is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
       {
         name: `Evocation of Death`,
-        desc: `Declare: If this unit destroyed any enemy units this turn, pick a friendly non-Unique Nighthaunt Hero that has been destroyed. .
+        desc: `Declare: If any damage points were allocated to an enemy unit by this unit's combat attacks this turn and that enemy unit was destroyed this turn, pick a friendly non-Unique Nighthaunt Hero that has been destroyed.
         Effect: Set up a replacement unit wholly within 12" of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit.`,
         when: [END_OF_TURN],
       },
@@ -1074,6 +1102,79 @@ const Units = {
         name: `The Hunger - Once Per Turn`,
         desc: `Effect: If this unit used a Fight ability this turn, Heal (D3) this unit. Heal (2D3) this unit instead if it destroyed an enemy unit this turn using a Fight ability.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'ROR: The Horror of Hallows Watch': {
+    effects: [
+      {
+        name: `Dark Hunt - Passive`,
+        desc: `Effect: In your charge phase, if this unit is not in combat and has not used a Run or Retreat ability in the same turn, it must use the 'Charge' ability, and if the charge roll would allow it to end the move within 1/2" of a visible enemy unit, it must do so.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Ravenous Shrieks - Passive`,
+        desc: `Effect: Each time an enemy unit is destroyed by this unit's shooting attacks, add 1 to the Attacks characteristic of this unit's Death Shriek for the rest of the battle (this effect is cumulative).`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Royal Terrorgheist: Necromantic Limits - Passive`,
+        desc: `Effect: This unit's Terrorgheist's Skeletal Talons have a maximum Attacks characteristic of 10.
+        While this unit has 10 or more damage points, the Attacks characteristic of its Terrorgheist's Skeletal Talons is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Royal Terrorgheist: Wicked Predator - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: For each champion, standard bearer and musician in the target unit, add 1 to the Attacks characteristic of this unit's Terrorgheist's Skeletal Talons, to a maximum of 10, for the rest of the phase. Those additional attacks must target that enemy unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Royal Terrorgheist: Shriek of Terror - Once Per Turn`,
+        desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target.
+        Effect: Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target by this ability, subtract 1 from hit rolls for the target's attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'ROR: The Scarlet Jury': {
+    effects: [
+      {
+        name: `Punishment Fits the Crime - Passive`,
+        desc: `Effect: You believe the 'Accusations of Regicide' Delusion (see Grand Justice Gormayne's warscroll).`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Grand Justice Gormayne: Arrest Those Miscreants`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, until the start of your next turn, the target has Strike-Last while it is in combat with any friendly Flesh-Eater Courts Heroes and any friendly Serfs or Knights units.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Grand Justice Gormayne: Accusations of Regicide (Delusion) - Passive`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: While you believe this Delusion, add 1 to the Damage characteristic of melee weapons used by friendly Serfs and Knights units while they are wholly within 12" of any friendly Flesh-Eater Courts Heroes that had any damage points allocated to them in the same turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Royal Decapitator: Executioner's Entourage - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly Serfs unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, the target's melee weapons have Crit (2 Hits) for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Royal Decapitator: Off with their Head! - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Immediately after that Fight ability has been resolved, pick an enemy Infantry Hero in combat with this unit to be the target. Roll 2D6. If the roll exceeds the target's Health characteristic, it is automatically destroyed.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Cryptguard: Elite Guardians - Once Per Turn`,
+        desc: `Effect: If this unit is in combat with any enemy units that charged this turn, roll a dice. On a 3+, for the rest of the turn, this unit has Strike-First but ward rolls cannot be made for it.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Cryptguard: Royal Bodyguard - Passive`,
+        desc: `Effect: While any friendly non-Monster Flesh-Eater Courts Heroes are wholly within this unit's combat range, both this unit and those Heroes have Ward (5+).`,
+        when: [DURING_GAME],
       },
     ],
   },

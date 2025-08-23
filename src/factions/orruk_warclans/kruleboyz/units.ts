@@ -1036,6 +1036,47 @@ const KruleboyzUnits = {
       },
     ],
   },
+  'ROR: The Scarlet Jury': {
+    effects: [
+      {
+        name: `Punishment Fits the Crime - Passive`,
+        desc: `Effect: You believe the 'Accusations of Regicide' Delusion (see Grand Justice Gormayne's warscroll).`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Grand Justice Gormayne: Arrest Those Miscreants`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, until the start of your next turn, the target has Strike-Last while it is in combat with any friendly Flesh-Eater Courts Heroes and any friendly Serfs or Knights units.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Grand Justice Gormayne: Accusations of Regicide (Delusion) - Passive`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: While you believe this Delusion, add 1 to the Damage characteristic of melee weapons used by friendly Serfs and Knights units while they are wholly within 12" of any friendly Flesh-Eater Courts Heroes that had any damage points allocated to them in the same turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Royal Decapitator: Executioner's Entourage - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly Serfs unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, the target's melee weapons have Crit (2 Hits) for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Royal Decapitator: Off with their Head! - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Immediately after that Fight ability has been resolved, pick an enemy Infantry Hero in combat with this unit to be the target. Roll 2D6. If the roll exceeds the target's Health characteristic, it is automatically destroyed.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Cryptguard: Elite Guardians - Once Per Turn`,
+        desc: `Effect: If this unit is in combat with any enemy units that charged this turn, roll a dice. On a 3+, for the rest of the turn, this unit has Strike-First but ward rolls cannot be made for it.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Cryptguard: Royal Bodyguard - Passive`,
+        desc: `Effect: While any friendly non-Monster Flesh-Eater Courts Heroes are wholly within this unit's combat range, both this unit and those Heroes have Ward (5+).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   // ...keyPicker(DestructionUnits, ['Rogue Idol']),
 } satisfies TItemDescriptions
 

@@ -1701,6 +1701,126 @@ const Units = {
       },
     ],
   },
+  'ROR: The Horror of Hallows Watch': {
+    effects: [
+      {
+        name: `Dark Hunt - Passive`,
+        desc: `Effect: In your charge phase, if this unit is not in combat and has not used a Run or Retreat ability in the same turn, it must use the 'Charge' ability, and if the charge roll would allow it to end the move within 1/2" of a visible enemy unit, it must do so.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Ravenous Shrieks - Passive`,
+        desc: `Effect: Each time an enemy unit is destroyed by this unit's shooting attacks, add 1 to the Attacks characteristic of this unit's Death Shriek for the rest of the battle (this effect is cumulative).`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Royal Terrorgheist: Necromantic Limits - Passive`,
+        desc: `Effect: This unit's Terrorgheist's Skeletal Talons have a maximum Attacks characteristic of 10.
+        While this unit has 10 or more damage points, the Attacks characteristic of its Terrorgheist's Skeletal Talons is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Royal Terrorgheist: Wicked Predator - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: For each champion, standard bearer and musician in the target unit, add 1 to the Attacks characteristic of this unit's Terrorgheist's Skeletal Talons, to a maximum of 10, for the rest of the phase. Those additional attacks must target that enemy unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Royal Terrorgheist: Shriek of Terror - Once Per Turn`,
+        desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target.
+        Effect: Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target by this ability, subtract 1 from hit rolls for the target's attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'ROR: The Scarlet Jury': {
+    effects: [
+      {
+        name: `Punishment Fits the Crime - Passive`,
+        desc: `Effect: You believe the 'Accusations of Regicide' Delusion (see Grand Justice Gormayne's warscroll).`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Grand Justice Gormayne: Arrest Those Miscreants`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, until the start of your next turn, the target has Strike-Last while it is in combat with any friendly Flesh-Eater Courts Heroes and any friendly Serfs or Knights units.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Grand Justice Gormayne: Accusations of Regicide (Delusion) - Passive`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: While you believe this Delusion, add 1 to the Damage characteristic of melee weapons used by friendly Serfs and Knights units while they are wholly within 12" of any friendly Flesh-Eater Courts Heroes that had any damage points allocated to them in the same turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Royal Decapitator: Executioner's Entourage - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Pick a friendly Serfs unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, the target's melee weapons have Crit (2 Hits) for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Royal Decapitator: Off with their Head! - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Immediately after that Fight ability has been resolved, pick an enemy Infantry Hero in combat with this unit to be the target. Roll 2D6. If the roll exceeds the target's Health characteristic, it is automatically destroyed.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Cryptguard: Elite Guardians - Once Per Turn`,
+        desc: `Effect: If this unit is in combat with any enemy units that charged this turn, roll a dice. On a 3+, for the rest of the turn, this unit has Strike-First but ward rolls cannot be made for it.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Cryptguard: Royal Bodyguard - Passive`,
+        desc: `Effect: While any friendly non-Monster Flesh-Eater Courts Heroes are wholly within this unit's combat range, both this unit and those Heroes have Ward (5+).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'ROR: The Eternal Nightmare': {
+    effects: [
+      {
+        name: `Enemy of the Throne - Passive`,
+        desc: `Effect: Add 1 to hit rolls and wound rolls for units in thie Regiment of Renown for attacks that target a Sentenced unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Scriptor Mortis: Judge, Jury, and Executioner - Passive`,
+        desc: `Effect: Each time a friendly Nighthaunt Infantry unit uses a Fight ability, if all of its attacks target the same Sentenced enemy unit, that friendly unit's melee weapons have Crit (Mortal) for that Fight ability.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Scriptor Mortis: Sentenced to Eternal Torment - Once Per Turn`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, inflict 1 mortal damage on the target and the target has the Sentenced keyword until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Craventhrone Guard: Black-Hearted Lackeys - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Roll a D3. On a 2+, this unit immediately uses the Retreat ability without any mortal damage being inflicted on it. Then, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'ROR: Casket of Resurrections': {
+    effects: [
+      {
+        name: `Dark Resurrection`,
+        desc: `Declare: If any damage points were allocated to an enemy unit by this unit's combat attacks this turn and that enemy unit was destroyed this turn, pick a friendly non-Unique Death Infantry Hero that has been destroyed to be the target.
+        Effect: Set up a replacement unit identical to the target wholly within 12" of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Black Coach: Nimbus of Power - Once Per Turn`,
+        desc: `Effect: If this unit is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Black Coach: Runaway Coach`,
+        desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage equal on the target equal to the roll.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

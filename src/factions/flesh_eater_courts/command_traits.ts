@@ -1,5 +1,6 @@
 import { tagAs } from 'factions/metatagger'
 import {
+  CHARGE_PHASE,
   COMBAT_PHASE,
   DURING_GAME,
   END_OF_MOVEMENT_PHASE,
@@ -13,9 +14,10 @@ const CommandTraits = {
   'Cruel Taskmaster': {
     effects: [
       {
-        name: `Cruel Taskmaster - Passive`,
-        desc: `Effect: Each time a friendly unit wholly within 12" of this unit uses the Rally command, you can make 3 additional rally rolls of D6.`,
-        when: [HERO_PHASE],
+        name: `Cruel Taskmaster`,
+        desc: `Declare: Pick a friendly non-Hero Flesh-Eater Courts unit wholly within 12" of this unit to be the target.
+        Effect: For the rest of the turn, you can reroll charge rolls for the target.`,
+        when: [CHARGE_PHASE],
       },
     ],
   },
@@ -23,7 +25,7 @@ const CommandTraits = {
     effects: [
       {
         name: `Savage Beyond Reason - Passive`,
-        desc: `Effect: While this unit has fewer than 6 noble deeds points, its melee weapons have Crit (2 Hits). While it has 6 noble deeds points, its melee weapons have Crit (Mortal).`,
+        desc: `Effect: Add 1 to the Attacks characteristic of this unit's melee weapons, including Companion weapons, if it did not use a Fight ability in the previous turn. Add 2 to the Attacks characteristic of those weapons instead while this unit has not used a Fight ability this battle.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -32,12 +34,30 @@ const CommandTraits = {
     effects: [
       {
         name: `Stronger in Madness - Passive`,
-        desc: `Effect: Add 2 to this units Health characteristic. In addition, while this unit has 6 noble deeds points, it has Ward (5+).`,
+        desc: `Effect: Ignore the first damage point that would be allocated to this unit each phase. In addition, other than the Companion weapon ability, weapon abilities for combat attacks that target this unit have no effect.`,
         when: [DURING_GAME],
       },
     ],
   },
- /* 'Feverish Scholar': {
+  'The Knights of New Summercourt (AoR)': {
+    effects: [
+      {
+        name: `Tip of the King's Lance (AoR)`,
+        desc: `Effect: If this unit charged this turn, it can move 2D6". It can pass through models in enemy units, but it must end that move in combat.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'The Equinox Feast (AoR)': {
+    effects: [
+      {
+        name: `Lord of Revelries (AoR) - Passive`,
+        desc: `Effect: Ignore the first damage point that would be allocated to this unit in each phase.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  /* 'Feverish Scholar': {
     effects: [
       {
         name: `Feverish Scholar`,

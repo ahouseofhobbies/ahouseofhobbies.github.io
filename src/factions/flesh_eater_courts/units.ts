@@ -14,6 +14,7 @@ import {
   MOVEMENT_PHASE,
   SHOOTING_PHASE,
   START_OF_COMBAT_PHASE,
+  START_OF_TURN,
   WARDS_PHASE,
   WOUND_ALLOCATION_PHASE,
 } from 'types/phases'
@@ -49,6 +50,11 @@ const Units = {
         when: [HERO_PHASE],
       },
       {
+        name: `Utter Contempt - Passive`,
+        desc: `Effect: This unit ignores the effects of Delusion abilities.`,
+        when: [DURING_GAME],
+      },
+      {
         name: `The Staff of Power - Passive`,
         desc: `Effect: Add 2 to casting rolls for this unit while it has not miscast any spells this turn. If this unit miscasts a spell, ignore the restriction that would stop this unit from casting any more spells this turn.`,
         when: [HERO_PHASE],
@@ -82,22 +88,21 @@ const Units = {
       // GenericEffects.WizardTwoSpellsEffect,
       {
         name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Monstrous Talons is 6.`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Monstrous Talons is 4.`,
         when: [COMBAT_PHASE],
       },
       {
-        name: `Epicentre of Delusion`,
-        desc: `Effect: Pick 1 of the following effects to apply until the start of your next turn: 
-        The Royal Hunt: Add 1 to wound rolls for attacks made by friendly Flesh-eater Courts units that target a Monster. 
-        Crusading Army: Add 1 to run rolls and charge rolls for friendly Flesh-eater Courts units. 
-        Defenders of the Realm: Add 1 to save rolls for friendly Flesh-eater Courts units while they are contesting an objective you control. 
-        The Grand Tournament: Add 1 to hit rolls for attacks made by other friendly Flesh-eater Courts Heroes if they charged in the same turn.`,
-        when: [HERO_PHASE],
+        name: `The One True King (Delusion) - Passive`,
+        desc: `Effect: While you believe this Delusion:
+        Add 1 to run rolls and charge rolls for friendly Flesh-Eater Courts units.
+        Subtract 1 from run rolls and charge rolls for enemy units.
+        The melee weapons used by friendly Serfs units have Anti-charge (+1 Rend) while they are wholly within friendly territory and did not charge in the same turn.`,
+        when: [START_OF_TURN, MOVEMENT_PHASE, COMBAT_PHASE],
       },
       {
-        name: `The Carrion King - Passive`,
-        desc: `Effect: While this unit has 6 noble deeds points, the effect of the Feeding Frenzy ability applies to friendly Flesh-eater Courts units while they are wholly within 24" of this unit instead of 12".`,
-        when: [COMBAT_PHASE],
+        name: `Epicentre of Delusion - Passive`,
+        desc: `Effect: Each time you make a delusion roll, you can add 1 to or subtract 1 from the roll.`,
+        when: [START_OF_TURN],
       },
       {
         name: `Shroudcage Fragment - Once Per Turn`,
@@ -107,29 +112,23 @@ const Units = {
       },
       {
         name: `Glimpse of Delusion: Casting value of 7`,
-        desc: `Declare: Pick a visible enemy model within 18" of this unit to be the target, pick another enemy unit within the targets combat range to be the victim, then make a casting roll of 2D6. 
-        Effect: Pick 1 of the targets melee weapons. Immediately resolve combat attacks made with that weapon against the victim.`,
+        desc: `Declare: Pick a visible enemy model within 18" of this unit to be the target, pick an enemy unit that is visible to the target and within the target's combat range to be the victim, then make a casting roll of 2D6. You can only pick the target's unit to be the victim if that unit has 2 or more models.
+        Effect: Pick 1 of the target's melee weapons. Immediately resolve combat attacks for the target made with that weapon against the victim.`,
         when: [HERO_PHASE],
       },
     ],
   },
   'Abhorrant Ghoul King': {
-    /*mandatory: {
-      spells: [keyPicker(spells, ['Unnatural Speed'])],
-    }, */
     effects: [
-      // GenericEffects.WizardOneSpellEffect,
-      // RoyalBloodEffect,
       {
-        name: `Code of Honour`,
-        desc: `Declare: Pick an enemy Hero in combat with this unit to be the target. 
-        Effect: For the rest of the turn, add 1 to the Damage characteristic of this units melee weapons, but all of this units attacks must target that Hero.`,
-        when: [COMBAT_PHASE],
+        name: `Code of Honour (Delusion) - Passive`,
+        desc: `Effect: While you believe this Delusion, add 1 to the Damage characteristic of melee weapons used by friendly non-Unique Flesh-Eater Courts Heroes for attacks that target an enemy Hero.`,
+        when: [START_OF_TURN, COMBAT_PHASE],
       },
       {
-        name: `Unnatural Speed`,
-        desc: `Effect: If this unit charged this phase, it has Strike-first for the rest of the turn.`,
-        when: [CHARGE_PHASE],
+        name: `Vassals, To Arms! - Once Per Turn - Reaction: You declared a Fight ability with this unit`,
+        desc: `Effect: Pick a friendly Serfs unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to wound rolls for the target's attacks for the rest of the turn.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
@@ -158,19 +157,25 @@ const Units = {
     }, */
     effects: [
       {
-        name: `Gaping Maw - Passive`,
-        desc: `Effect: Each time an attack made with this units Terrorgheists Fanged Maw scores a critical hit, that attack inflicts 6 mortal damage on the target unit and the attack sequence ends.`,
+        name: `A Majestic Menagerie (Delusion) - Passive`,
+        desc: `Effect: While you believe this Delusion, add 1 to the Attacks characteristic of Companion melee weapons used by friendly Flesh-Eater Courts units while they are wholly within 12" of any friendly Flesh-Eater Courts Heroes.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Ferocious Hunger - Once Per Turn`,
-        desc: `Declare: Pick an enemy Hero in combat with this unit to be the target. 
-        Effect: Roll a dice. On a 3+, attacks made with this units Terrorgheists Fanged Maw that target that enemy unit score critical hits on unmodified hit rolls of 5+ for the rest of the turn.`,
-        when: [CHARGE_PHASE],
+        desc: `Effect: Roll a dice. On a 3+, add 1 to hit rolls for attacks made with this unit's Companion melee weapons for the rest of the turn.`,
+        when: [COMBAT_PHASE],
       },
       {
-        name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Terrorgheists Skeletal Talons is 4.`,
+        name: `Necromantic Limits - Passive`,
+        desc: `Effect: This unit's Terrorgheist's Skeletal Talons have a maximum Attacks characteristic of 10.
+        While this unit has 10 or more damage points, the Attacks characteristic of its Terrorgheist's Skeletal Talons is 4.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Wicked Predator - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: For each champion, standard bearer and musician in the target unit, add 1 to the Attacks characteristic of this unit's Terrorgheist's Skeletal Talons, to a maximum of 10, for the rest of the phase. Those additional attacks must target that enemy unit.`,
         when: [COMBAT_PHASE],
       },
       //  GenericEffects.WizardOneSpellEffect, ...GenericEffects.Terrorgheist, RoyalBloodEffect
@@ -184,6 +189,12 @@ const Units = {
       // GenericEffects.WizardOneSpellEffect,
       // RoyalBloodEffect,
       {
+        name: `For the Kingdom! (Delusion) - Passive`,
+        desc: `Effect: While you believe this Delusion, add 2 to charge rolls for friendly Knights units and friendly Flesh-Eater Courts Monsters while they are wholly within 12" of this unit.
+        Add 1 to charge rolls for friendly Knights units and friendly Flesh-Eater Courts Monsters instead while they are wholly within 12" of any other friendly Flesh-Eater Courts Heroes.`,
+        when: [START_OF_TURN, CHARGE_PHASE],
+      },
+      {
         name: `Draconic Terror - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
         Effect: Roll a dice. If the roll exceeds the targets Control characteristic, the target cannot use commands for the rest of the turn.`,
@@ -195,8 +206,9 @@ const Units = {
         when: [CHARGE_PHASE],
       },
       {
-        name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Draconic Claws is 5.`,
+        name: `Necromantic Limits - Passive`,
+        desc: `Effect: This unit's Draconic Claws have a maximum Attacks characteristic of 10.
+        While this unit has 10 or more damage points, the Attacks characteristic of its Draconic Claws is 5.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -205,14 +217,36 @@ const Units = {
     effects: [
       // RoyalBloodEffect,
       {
-        name: `Delusion of Justice Served - Once Per Turn`,
-        desc: `Declare: Pick a visible enemy unit to be the target. 
-        Effect: Roll a dice. On a 3+, this unit gains 1 noble deeds point. Then, pick 1 of the following effects to apply to the target until the start of your next turn: 
-        Petty Transgression: Add 1 to wound rolls for combat attacks that target that unit. 
-        Dishonourable Conduct in Battle: Friendly non-Monster Flesh-eater Courts units can use Charge abilities even if they used a Run ability in the same turn, but if they do so, they must end the charge move within 1/2" of the target. 
-        Grievous Insult to the Court: While the target is in combat with a friendly Abhorrant, add 1 to hit rolls for attacks made by friendly Flesh-eater Courts units that target that unit. 
-        Regicide: If the target destroyed a friendly Abhorrant this battle, add 1 to the Damage characteristic of melee weapons used by friendly Flesh-eater Courts units that target that unit.`,
+        name: `Arrest Those Miscreants`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, until the start of your next turn, the target has Strike-Last while it is in combat with any friendly Flesh-Eater Courts Heroes and any friendly Serfs or Knights units.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Accusations of Regicide (Delusion) - Passive`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: While you believe this Delusion, add 1 to the Damage characteristic of melee weapons used by friendly Serfs and Knights units while they are wholly within 12" of any friendly Flesh-Eater Courts Heroes that had any damage points allocated to them in the same turn.`,
+        when: [START_OF_TURN, COMBAT_PHASE],
+      },
+    ],
+  },
+  'High Falconer Felgryn': {
+    effects: [
+      {
+        name: `Be Mine Eyes`,
+        desc: `Declare: This unit's Grype is a token. If this unit's Grype is not on the battlefield, pick an enemy unit within 18" of this unit and not in combat to be the target.
+        Effect: Place this unit's Grype next to the target. If the target is destroyed while this unit's Grype is next to it, remove this unit's Grype from the battlefield.`,
         when: [HERO_PHASE],
+      },
+      {
+        name: `Winged Reconnoitrer - Passive`,
+        desc: `Effect: While this unit's Grype is next to an enemy unit, ward rolls cannot be made for damage points inflicted on that enemy unit by combat attacks made by this unit and friendly Serfs units.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Sir Felgryn is Abroad! (Delusion) - Passive`,
+        desc: `Effect: While you believe this Delusion, subtract 10 from the control scores of enemy units while they are in combat with any friendly Serfs units or any friendly non-Hero Flesh-Eater Courts Monster or Beast units.`,
+        when: [START_OF_TURN, END_OF_TURN],
       },
     ],
   },
@@ -230,11 +264,11 @@ const Units = {
       // NobleBloodEffect,
       {
         name: `Knightly Exemplar - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly Crypt Horrors unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
+        desc: `Effect: Pick a friendly Crypt Horrors unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target's attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {
-        name: `Noble Blood`,
+        name: `Blessed Blood`,
         desc: `Effect: Heal (D3) this unit.`,
         when: [HERO_PHASE],
       },
@@ -243,37 +277,40 @@ const Units = {
   'Crypt Infernal Courtier': {
     effects: [
       {
-        name: `Mind-Shattering Cacophony - Passive`,
-        desc: `Effect: If any enemy models were slain by this units Piercing Death Screech this turn, for the rest of the turn, add 1 to the Damage characteristic of ranged weapons used by friendly Crypt Flayers units while they are wholly within 12" of this unit.`,
+        name: `Mind-Shattering Cacophony - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this unit's Piercing Death Screech to be the target.
+        Effect: For the rest of the turn, add 1 to the Damage characteristic of ranged weapons used by friendly Crypt Flayers units for attacks that target that enemy unit.`,
         when: [SHOOTING_PHASE],
+      },
+      {
+        name: `On Winged Steeds - Once Per Turn`,
+        desc: `Declare: Pick a friendly Crypt Flayers unit that used the 'To Our Liege!' ability this turn and is wholly within 9" of this unit to be the target.
+        Effect: The target can immediately move D3" but cannot end that move in combat.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },
   'Varghulf Courtier': {
     effects: [
       {
-        name: `Bounding Strides - Passive`,
-        desc: `Effect: This unit can pass across terrain features as if it had Fly.`,
-        when: [MOVEMENT_PHASE],
+        name: `Beast - Passive`,
+        desc: `Effect: This unit has a maximum control score of 1.`,
+        when: [END_OF_TURN],
       },
       {
         name: `Victory Feast`,
         desc: `Effect: If any models were slain by this unit this turn: 
         Heal (D6) this unit. 
-        This unit can immediately use the Retreat ability as if it were your movement phase without any mortal damage being inflicted on it.`,
+        If this unit is in combat, this unit can immediately move 10". It can move through the combat ranges of enemy units but must end that move in combat with the units it was already in combat with at the start of the move.
+        If this unit is not in combat, this unit can immediately move 10" but cannot end that move in combat.`,
         when: [END_OF_TURN],
       },
     ],
   },
   'Abhorrant Archregent': {
-    /* mandatory: {
-      spells: [keyPicker(spells, ['Carrion Call'])],
-    }, */
     effects: [
-      // GenericEffects.WizardTwoSpellsEffect,
-      //RoyalBloodEffect,
       {
-        name: `Countless Servants`,
+        name: `Countless Servants - Once Per Turn`,
         desc: `Declare: Pick a friendly Serfs or Knights unit wholly within 12" of this unit to be the target. 
         Effect: Roll a dice. On a 3+: 
         If the target is a Serfs unit, you can return up to 3 slain models to that unit. 
@@ -281,10 +318,9 @@ const Units = {
         when: [HERO_PHASE],
       },
       {
-        name: `Carrion Call: Casting value of 6`,
-        desc: `Declare: Make a casting roll of 2D6. 
-        Effect: The first friendly Flesh-eater Courts unit to be set up in the following movement phase can immediately move D6". That unit cannot move into combat during any part of that move.`,
-        when: [HERO_PHASE],
+        name: `Musicians, Play! (Delusion) - Passive`,
+        desc: `Effect: While you believe this Delusion, subtract 1 from hit rolls for shooting attacks that target friendly Flesh-Eater Courts units while they are wholly within 12" of a friendly Flesh-Eater Courts Hero.`,
+        when: [START_OF_TURN, SHOOTING_PHASE],
       },
     ],
   },
@@ -294,26 +330,39 @@ const Units = {
     }, */
     effects: [
       {
-        name: `Rousing Oration`,
-        desc: `Declare: Pick a friendly Flesh-eater Courts Hero wholly within 12" of this unit to be the target. 
-        Effect: Roll a D3. On a 2+, give the target a number of noble deeds points equal to the roll.`,
+        name: `Banishing Liturgy (Delusion) - Passive`,
+        desc: `Effect: While you believe this Delusion: 
+        Add 2 to banishment rolls for friendly Flesh-Eater Courts units.
+        Friendly Flesh-Eater Courts units have Ward (4+) against damage points inflicted by Spell abilities, Prayer abilities and abilities used by Manifestations.`,
+        when: [START_OF_TURN, HERO_PHASE],
+      },
+      {
+        name: `Insular Contemplations - Passive`,
+        desc: `Effect: While this unit is more than 6" from all enemy units, add 1 to chanting rolls for this unit.`,
         when: [HERO_PHASE],
       },
       //  RoyalBloodEffect
     ],
   },
   'Abhorrant Gorewarden': {
-    /* mandatory: {
-      spells: [keyPicker(spells, ['Winds of Shyish'])],
-    }, */
     effects: [
-      //  GenericEffects.WizardOneSpellEffect,
-      // RoyalBloodEffect,
       {
-        name: `Royal Hunting Party`,
-        desc: `Declare: If this unit is not in combat, you can pick up to 2 friendly Crypt Flayers or Morbheg Knights units that are not in combat and are wholly within 12" of this unit to be the targets. 
-        Effect: Remove this unit and the targets (if any) from the battlefield. Set up this unit again on the battlefield more than 9" from all enemy units. Then, set up each target wholly within 12" of this unit and more than 9" from all enemy units.`,
+        name: `Lord of the Marches`,
+        desc: `Declare: Pick this unit and up to 2 friendly Flesh-Eater Courts units in this unit's regiment that have not been deployed to be the targets.
+        Effect: Set up the target units in reserve patrolling the borders. They have now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Trespassers!`,
+        desc: `Declare: Pick this unit if it is patrolling the borders, then pick an enemy unit to be the target.
+        Effect: Set up this unit more than 6" from the target and more than 9" from all other enemy units. Then, set up the units that were patrolling the borders with this unit wholly within 12" of this unit and more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Defenders of the Kingtdom (Delusion) - Passive`,
+        desc: `Effect: While you believe this Delusion and this unit is on the battlefield, add 1 to charge rolls for friendly Flesh-Eater Courts units while they are wholly within 12" of a friendly Flesh-Eater Courts Hero. Add 2 to charge rolls instead if they were also set up in the same turn.
+        When using the 'A Kingdom Deluded' ability, you can pick this Delusion even if this unit is patrolling the borders.`,
+        when: [START_OF_TURN, CHARGE_PHASE],
       },
     ],
   },
@@ -343,7 +392,7 @@ const Units = {
     effects: [
       {
         name: `Royal Approval - Passive`,
-        desc: `Effect: Add 1 to the Rend characteristic of this units melee weapons while it is wholly within 12" of any friendly Courtiers or Abhorrants.`,
+        desc: `Effect: Add 1 to the Rend characteristic of this units melee weapons while it is wholly within 12" of any friendly Nobles or Abhorrants.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -351,25 +400,18 @@ const Units = {
   'Crypt Horrors': {
     effects: [
       {
-        name: `Royal Approval - Passive`,
-        desc: `Effect: Add 1 to the Rend characteristic of this units melee weapons while it is wholly within 12" of any friendly Courtiers or Abhorrants.`,
+        name: `Holy Blades of Bone - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Roll 2 dice for each model in this unit. Add 2 to each roll if the target is Cavalry. For each 5+, inflict 1 mortal damage on the target.`,
         when: [COMBAT_PHASE],
-      },
-      //  NobleBloodEffect,
-      //  ChosenOfTheKingEffect,
-      {
-        name: `Noble Blood`,
-        desc: `Effect: Heal (D3) this unit.`,
-        when: [HERO_PHASE],
       },
     ],
   },
   'Crypt Flayers': {
     effects: [
       {
-        name: `Escort Courtier - Once Per Turn`,
-        desc: `Declare: If this unit is not in combat, pick a friendly Flesh-eater Courts Infantry Hero that does not have Fly and is within this units combat range to be the target. 
-        Effect: Remove the target from the battlefield. Then, this unit can move a distance up to its Move characteristic. It cannot end that move in combat. Then, set up the target within this units combat range and more than 3" from all enemy units.`,
+        name: `To Our Liege! - Once Per Turn`,
+        desc: `Effect: If this unit is not in combat, remove it from the battlefield and set it up again wholly within 12" of a friendly Flesh-Eater Courts Hero and more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
     ],
@@ -406,19 +448,21 @@ const Units = {
     effects: [
       //  ...GenericEffects.Terrorgheist
       {
-        name: `Gaping Maw - Passive`,
-        desc: `Effect: Each time an attack made with this units Terrorgheists Fanged Maw scores a critical hit, that attack inflicts 6 mortal damage on the target unit and the attack sequence ends.`,
+        name: `Necromantic Limits - Passive`,
+        desc: `Effect: This unit's Terrorgheist's Skeletal Talons have a maximum Attacks characteristic of 10.
+        While this unit has 10 or more damage points, the Attacks characteristic of its Terrorgheist's Skeletal Talons is 4.`,
         when: [COMBAT_PHASE],
       },
       {
-        name: `Death Shriek - Once Per Turn`,
-        desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target. 
-      Effect: Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target by this ability, subtract 1 from hit rolls for the targets attacks for the rest of the turn.`,
-        when: [CHARGE_PHASE],
+        name: `Wicked Predator - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: For each champion, standard bearer and musician in the target unit, add 1 to the Attacks characteristic of this unit's Terrorgheist's Skeletal Talons, to a maximum of 10, for the rest of the phase. Those additional attacks must target that enemy unit.`,
+        when: [COMBAT_PHASE],
       },
       {
-        name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Terrorgheists Skeletal Talons is 4.`,
+        name: `Shriek of Terror - Once Per Turn`,
+        desc: `Declare: Pick an enemy Infantry unit in combat with this unit to be the target.
+        Effect: Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target. If 3 or more damage points are allocated to the target by this ability, subtract 1 from hit rolls for the target's attacks for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -432,20 +476,14 @@ const Units = {
         when: [COMBAT_PHASE],
       },
       {
-        name: `Vantage Point`,
-        desc: `Declare: Pick this unit if it has not been deployed. 
-      Effect: Set up this unit in reserve high above the battlefield. It has now been deployed.`,
-        when: [DURING_SETUP],
-      },
-      {
-        name: `Loathsome Descent`,
-        desc: `Declare: Pick this unit if it is high above the battlefield. 
-      Effect: Set up this unit anywhere on the battlefield more than 9" from all enemy units.`,
+        name: `On Rotten Wings - Once Per Turn`,
+        desc: `Effect: Remove this unit from the battlefield and set up it again on the battlefield more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
       {
-        name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of its Draconic Claws is 5.`,
+        name: `Necromantic Limits - Passive`,
+        desc: `Effect: This unit's Draconic Claws have a maximum Attacks characteristic of 10.
+        While this unit has 10 or more damage points, the Attacks characteristic of its Draconic Claws is 5.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -453,18 +491,18 @@ const Units = {
   'Marrowscroll Herald': {
     effects: [
       {
-        name: `The King's Entreaty - Once Per Turn`,
-        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a dice. On a 3+, pick 1 of the following effects: 
-        Attack the Apostate!: Friendly Flesh-eater Courts units in combat with the target have Strike-first for the rest of the turn. 
-        Welcome the Disciple!: The target has the Infected keyword for the rest of the battle. Each time your opponent declares a command, Spell ability or Prayer ability for an Infected unit, roll a dice as a reaction. On a 5+: 
-        If they declared a command, that command has no effect. The command still counts as having been used and the command points spent to use the command are still lost. 
-        If they declared a Spell or Prayer ability, that spell or prayer fails.`,
+        name: `The King's Entreaty - Once Per Turn - Enemy Charge Phase`,
+        desc: `Declare: Pick a visible enemy unit within 6" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, your opponent must decide whether the target will accept or reject the entreaty offered by this unit.
+        Accept: The target has the Infected keyword for the rest of the battle.
+        Reject: The target has Strike-Last for the rest of the turn.`,
         when: [CHARGE_PHASE],
       },
       {
-        name: `Don't Shoot the Messenger - Passive`,
-        desc: `Effect: While this unit is not in combat and is wholly within the combat ranges of 3 or more other friendly Flesh-eater Courts Infantry models, it is not visible to enemy units.`,
+        name: `Infected - Reaction: Opponent declared a Command, Spell, ability or Prayer ability for an Infected unit`,
+        desc: `Effect: Roll a dice. On a 5+:
+        If they declared a command, that command has no effect, it still counts as having been used and the command points spent to use the command are still lost.
+        If they declared a Spell or Prayer ability, that spell or prayer fails.`,
         when: [DURING_GAME],
       },
     ],
@@ -473,27 +511,26 @@ const Units = {
     effects: [
       {
         name: `Executioner's Entourage - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly Serfs unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved.`,
+        desc: `Effect: Pick a friendly Serfs unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, the target's melee weapons have Crit (2 Hits) for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {
-        name: `Off with their Head!`,
-        desc: `Declare: Pick an enemy Infantry Hero that had any damage points allocated to it this turn by this units attacks to be the target. 
-        Effect: Roll a dice. On a 5+, the target is automatically destroyed.`,
-        when: [END_OF_TURN],
+        name: `Off with their Head! - Reaction: You declared a Fight ability for this unit`,
+        desc: `Effect: Immediately after that Fight ability has been resolved, pick an enemy Infantry Hero in combat with this unit to be the target. Roll 2D6. If the roll exceeds the target's Health characteristic, it is automatically destroyed.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
   Cryptguard: {
     effects: [
       {
-        name: `Armoury of Madness - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: If any damage points inflicted by attacks made as part of that Fight ability are allocated to any enemy units, those enemy units cannot use commands until the start of your next turn.`,
+        name: `Elite Guardians - Once Per Turn`,
+        desc: `Effect: If this unit is in combat with any enemy units that charged this turn, roll a dice. On a 3+, for the rest of the turn, this unit has Strike-First but ward rolls cannot be made for it.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Royal Bodyguard - Passive`,
-        desc: `Effect: While any friendly Flesh-eater Courts Heroes are wholly within this units combat range, both this unit and those Heroes have Ward (5+).`,
+        desc: `Effect: While any friendly non-Monster Flesh-Eater Courts Heroes are wholly within this unit's combat range, both this unit and those Heroes have Ward (5+).`,
         when: [DURING_GAME],
       },
     ],
@@ -501,26 +538,15 @@ const Units = {
   'Morbheg Knights': {
     effects: [
       {
-        name: `Shrieking Charge`,
-        desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of this unit to be the target. 
-        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
-        when: [CHARGE_PHASE],
-      },
-      {
-        name: `Predator's Pounce - Passive`,
-        desc: `Effect: This unit can use Charge abilities even if it used a Retreat ability in the same turn. In addition, no mortal damage is inflicted on this unit by Retreat abilities.`,
-        when: [MOVEMENT_PHASE],
+        name: `Predator Knights - Once Per Turn - End of Enemy Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Inflict D3 mortal damage on the target. Then, this unit can use a Retreat ability as if it were your movement phase. No mortal damage is inflicted on this unit by that Retreat ability.`,
+        when: [END_OF_TURN],
       },
     ],
   },
   'Royal Beastflayers': {
     effects: [
-      {
-        name: `Royal Flaymaster`,
-        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
-        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Add 1 to the amount of mortal damage inflicted, if any, if the target is a Monster or Beast unit.`,
-        when: [COMBAT_PHASE],
-      },
       {
         name: `Hunter's Instincts - Passive`,
         desc: `Effect: Enemy Monsters cannot use Rampage abilities while they are in combat with this unit. In addition, subtract 1 from the Damage characteristic of melee weapons used by enemy Monsters and Beast units while they are in combat with this unit.`,
@@ -1067,6 +1093,53 @@ const Units = {
         name: `The Hunger - Once Per Turn`,
         desc: `Effect: If this unit used a Fight ability this turn, Heal (D3) this unit. Heal (2D3) this unit instead if it destroyed an enemy unit this turn using a Fight ability.`,
         when: [END_OF_TURN],
+      },
+    ],
+  },
+  'ROR: The Eternal Nightmare': {
+    effects: [
+      {
+        name: `Enemy of the Throne - Passive`,
+        desc: `Effect: Add 1 to hit rolls and wound rolls for units in thie Regiment of Renown for attacks that target a Sentenced unit.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Scriptor Mortis: Judge, Jury, and Executioner - Passive`,
+        desc: `Effect: Each time a friendly Nighthaunt Infantry unit uses a Fight ability, if all of its attacks target the same Sentenced enemy unit, that friendly unit's melee weapons have Crit (Mortal) for that Fight ability.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Scriptor Mortis: Sentenced to Eternal Torment - Once Per Turn`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, inflict 1 mortal damage on the target and the target has the Sentenced keyword until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Craventhrone Guard: Black-Hearted Lackeys - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Roll a D3. On a 2+, this unit immediately uses the Retreat ability without any mortal damage being inflicted on it. Then, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'ROR: Casket of Resurrections': {
+    effects: [
+      {
+        name: `Dark Resurrection`,
+        desc: `Declare: If any damage points were allocated to an enemy unit by this unit's combat attacks this turn and that enemy unit was destroyed this turn, pick a friendly non-Unique Death Infantry Hero that has been destroyed to be the target.
+        Effect: Set up a replacement unit identical to the target wholly within 12" of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Black Coach: Nimbus of Power - Once Per Turn`,
+        desc: `Effect: If this unit is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Black Coach: Runaway Coach`,
+        desc: `Declare: If this unit charged this phase, pick an enemy unit within 1" of it to be the target. 
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage equal on the target equal to the roll.`,
+        when: [CHARGE_PHASE],
       },
     ],
   },

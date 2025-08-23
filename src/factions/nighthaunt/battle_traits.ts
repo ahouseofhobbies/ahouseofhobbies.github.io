@@ -23,37 +23,19 @@ const BattleTraits = {
     effects: [
       {
         name: `Ethereal - Passive`,
-        desc: `Effect: Ignore all modiers to save rolls (positive and negative) for friendly Nighthaunt units, excluding Nagash.`,
+        desc: `Effect: Ignore negative modifiers to save rolls for friendly Nighthaunt units, excluding Nagash.`,
         when: [DURING_GAME],
       },
       {
-        name: `Command Ability: Discorporate`,
-        desc: `Declare: Pick a friendly Nighthaunt unit to use this ability. 
-        Effect: That unit has Ward (5+) for the rest of the turn.`,
-        when: [HERO_PHASE],
+        name: `Command Ability: Ethereal Translocation - Once Per Turn`,
+        desc: `Declare: Pick a friendly Nighthaunt unit that is not in combat to use this ability.
+        Effect: Remove that unit from the battlefield and set it up again on the battlefield more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
       },
       {
-        name: `Shriek - Once Per Turn`,
-        desc: `Declare: Pick a friendly Nighthaunt unit that has not used an Aura of Dread ability this turn and that charged this turn to use this ability, then pick an enemy unit within 1" of it to be the target. The number of models in the friendly Nighthaunt unit must be greater than the number of models in the target unit. 
-        Effect: Subtract 1 from hit rolls for the targets attacks for the rest of the turn`,
-        when: [CHARGE_PHASE],
-      },
-      {
-        name: `Stun - Once Per Turn`,
-        desc: `Declare: Pick a friendly Nighthaunt War Machine or Cavalry unit that has not used an Aura of Dread ability this turn and that charged this turn to use this ability, then pick an enemy unit within 1" of it to be the target. 
-        Effect: Subtract 1 from save rolls for the target for the rest of the turn.`,
-        when: [CHARGE_PHASE],
-      },
-      {
-        name: `Petrify - Once Per Turn`,
-        desc: `Declare: Pick a friendly Nighthaunt Hero that has not used an Aura of Dread ability this turn and that charged this turn to use this ability, then pick an enemy unit within 1" of it to be the target. 
-        Effect: The target has Strike-last for the rest of the turn.`,
-        when: [CHARGE_PHASE],
-      },
-      {
-        name: `Wave of Terror - Once Per Turn`,
-        desc: `Effect: Friendly Nighthaunt units that are in combat can use Charge abilities this phase. However, if a unit that is in combat uses a Charge ability and the charge roll is 3 or less, that unit does not count as having charged that turn.`,
-        when: [CHARGE_PHASE],
+        name: `Mounting Dread - Passive`,
+        desc: `Effect: Subtract the current battle round number from the control scores of enemy units while they are in combat with any friendly Nighthaunt units.`,
+        when: [END_OF_TURN],
       },
       {
         name: `Sepulchral Apparations - Once Per Battle`,
@@ -62,7 +44,7 @@ const BattleTraits = {
       },
       {
         name: `Nexus of Grief (Faction Terrain) -  Hungry Crypts - Once Per Turn`,
-        desc: `Effect: Remove this terrain feature from the battlefield and set it up again on the battlefield within 3" of a friendly Nighthaunt unit, more than 3" from all objectives and enemy units, more than 1" from all terrain features and more than 12" from all other friendly Nexuses of Grief.`,
+        desc: `Effect: Remove this terrain feature from the battlefield and set it up again on the battlefield within 3" of a friendly Nighthaunt unit, more than 3" from all objectives and enemy units, and more than 12" from all other friendly Nexuses of Grief.`,
         when: [MOVEMENT_PHASE],
       },
       {

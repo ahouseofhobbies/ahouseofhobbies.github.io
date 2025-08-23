@@ -6,6 +6,7 @@ import {
   DURING_GAME,
   END_OF_COMBAT_PHASE,
   END_OF_MOVEMENT_PHASE,
+  HERO_PHASE,
   MOVEMENT_PHASE,
   SHOOTING_PHASE,
   WARDS_PHASE,
@@ -16,32 +17,54 @@ const CommandTraits = {
   'Ruler of the Spectral Hosts': {
     effects: [
       {
-        name: `Command Ability: Ruler of the Spectral Hosts - Once Per Battle`,
-        desc: `Declare: Pick a friendly Nighthaunt unit that started the battle with 3 or more models and that has been destroyed to be the target. 
-        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
+        name: `Ruler of the Spectral Hosts - Once Per Turn`,
+        desc: `Declare: Pick up to 3 friendly non-Hero Nighthaunt units wholly within 12" of this unit to be the targets. 
+        Effect: Roll a D3 for each target. On a 2+:
+        If the target is damaged, Heal (X) the target, where X is an amount equal to the roll.
+        If the target is not damaged, return a number of slain models to it with a combined Health characteristic of up to X, where X is an amount equal to the roll.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Deathly Possessor': {
+    effects: [
+      {
+        name: `Deathly Possessor`,
+        desc: `Declare: Pick an enemy Hero in combat with this unit to be the target, then pick another enemy unit within the target's combat range to be the victim.
+        Effect: Roll a dice. On a 3+, pick 1 of the target's melee weapons. Immediately resolve combat attacks for the target with that weapon against the victim.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Shadowy Aura': {
+    effects: [
+      {
+        name: `Shadowy Aura - Reaction: You declared the Redeploy command for a friendly Nighthaunt unit wholly within 12" of this unit`,
+        desc: `Effect: For the rest of the turn, subtract 1 from hit rolls for attacks that target this unit.`,
         when: [MOVEMENT_PHASE],
       },
     ],
   },
-  'Cloaked in Shadow': {
+  'The Clattering Procession (AoR)': {
     effects: [
       {
-        name: `Cloaked in Shadow - Passive`,
-        desc: `Effect: If the unmodified hit roll for an attack that targets this unit is 1-3, the attack fails and the attack sequence ends.`,
-        when: [SHOOTING_PHASE, COMBAT_PHASE],
-      },
-    ],
-  },
-  'Terrifying Entity': {
-    effects: [
-      {
-        name: `Terrifying Entity - Passive`,
-        desc: `Effect: This unit can use any of the Aura of Dread abilities, even if it doesn't have the required keywords for that ability.`,
+        name: `Silent Overseer (AoR)`,
+        desc: `Declare: Pick up to 3 friendly Clattering Procession units wholly within 12" of this unit to be the targets.
+        Effect: For the rest of the turn, the targets can use Charge abilities even if they used a Retreat ability in the same turn.`,
         when: [CHARGE_PHASE],
       },
     ],
   },
-/*  'Cloaked in Shadow': {
+  'The Eternal Nightmare (AoR)': {
+    effects: [
+      {
+        name: `Damned Vessel (AoR) - Reaction: You declared a Spell ability for a friendly Nagash within 18" of this unit`,
+        desc: `Effect: Measure the range and visibility of that Spell ability from this unit instead of that Nagash.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  /*  'Cloaked in Shadow': {
     effects: [
       {
         name: `Cloaked in Shadow`,

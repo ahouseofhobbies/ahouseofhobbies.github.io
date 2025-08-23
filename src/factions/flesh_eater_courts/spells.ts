@@ -1,5 +1,5 @@
 import { tagAs } from 'factions/metatagger'
-import { COMBAT_PHASE, HERO_PHASE } from 'types/phases'
+import { CHARGE_PHASE, COMBAT_PHASE, HERO_PHASE } from 'types/phases'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const Spells = {
@@ -7,24 +7,80 @@ const Spells = {
     effects: [
       {
         name: `Deranged Transformation: Casting value of 6 (UNLIMITED)`,
-        desc: `Declare: Pick a friendly Flesh-eater Courts Wizard to cast this spell, pick a visible friendly Flesh-eater Courts Infantry or Cavalry unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
-        Effect: Until the start of your next turn: Add 2" to the targets Move characteristic. Add 1 to wound rolls for the targets combat attacks.`,
+        desc: `Declare: Pick a friendly Flesh-Eater Courts Wizard to cast this spell, pick a visible friendly Flesh-Eater Courts Infantry or Cavalry unit wholly within 12" of them to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn: 
+        Add 2" to the targets Move characteristic. 
+        Add 1 to wound rolls for the targets combat attacks.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Miasma of Madness: Casting value of 5`,
-        desc: `Declare: Pick a friendly Flesh-eater Courts Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
-        Effect: Roll 7 dice and apply the corresponding effect: 
-        Ravaged Mind: If 2 or more dice have the same value, inflict 1 mortal damage on the target. 
-        Gory Visions: If 3 or more dice have the same value, in addition to the effect of Ravaged Mind, subtract 1 from hit rolls for the targets attacks until the start of your next turn. 
-        Drooling Stupor: If 4 or more dice have the same value, in addition to the effects of Ravaged Mind and Gory Visions, subtract 1 from wound rolls for the targets attacks until the start of your next turn.`,
+        name: `Miasma of Madness: Casting value of 7`,
+        desc: `Declare: Pick a friendly Flesh-Eater Courts Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn, for each unmodified hit roll of 1 for a combat attack made by the target, inflict 1 mortal damage on the target after the Fight ability has been resolved.`,
         when: [HERO_PHASE],
       },
       {
         name: `Charnel Feast: Casting value of 6`,
-        desc: `Declare: Pick a friendly Flesh-eater Courts Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
-        Effect: Inflict D3 mortal damage on the target. Then, you can pick a friendly Flesh-eater Courts Infantry unit within 6" of the target. For each damage point allocated to the target by this ability, you can return 1 slain model to that friendly unit.`,
+        desc: `Declare: Pick a friendly Flesh-Eater Courts Wizard to cast this spell and pick a visible enemy unit within 18" of them to be the target. You can also pick a friendly Serfs unit within 6" of the target to be the raised ranks. Then, make a casting roll of 2D6.
+        Effect: Inflict D3 mortal damage on the target. For each damage point allocated to the target by this ability, you can return 1 slain model to the raised ranks.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The Knights of New Summercourt (AoR)': {
+    effects: [
+      {
+        name: `Deranged Transformation: Casting value of 6 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly New Summercourt Wizard to cast this spell, pick a visible friendly New Summercourt Infantry or Cavalry unit wholly within 12" of them to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn:
+        Add 2" to the target's Move characteristic.
+        Add 1 to wound rolls for the target's combat attacks.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Miasma oF Madness: Casting value of 7`,
+        desc: `Declare: Pick a friendly New Summercourt Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn, for each unmodified hit roll of 1 for a combat attack made by the target, inflict 1 mortal damage on the target after the Fight ability has been resolved.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Corpsemare Stampede: Casting value of 6`,
+        desc: `Declare: If there is not a friendly Corpsemare Stampede on the battlefield, pick a friendly New Summercourt Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up a Corpsemare Stampede wholly within 12" of the caster, visible to them and more than 9" from all enemy units.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Corpsemare Stampede - Trampled Underfoot`,
+        desc: `Declare: This Manifestation can use this ability even if it is in combat.
+        Pick a point on a battlefield edge to be the target. Then, make a stampede roll of 2D6. Add 1D6 to the roll for each battle round that this Manifestation has been on the battlefield and has not been banished. For example, the stampede roll would be 2D6 in the turn in which it was summoned, 3D6 in your next turn, and so on.
+        Effect: This Manifestation can move a distance up to the value of the stampede roll in a straight line directly towards the target. It can move through the combat ranges of enemy units. It cannot end that move in combat unless it ends that move within 1/2" of a visible enemy unit. If it does so, this Manifestation has charged.
+        Roll a D3 for each enemy unit that this Manifestation passed across during that move. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.
+        In addition, if this Manifestation charged this turn, add the value of the stampede roll to the Attacks characteristic of this Manifestation's Corpsemare Trample for the rest of the turn.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'The Equinox Feast (AoR)': {
+    effects: [
+      {
+        name: `Solarite Flares: Casting value of 6 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Equinox Feast Wizard to cast this spell, pick a point on the battlefield that is visible to them, then pick each unit (friendly and enemy) within 3" of that point to be the targets. Then, make a casting roll of 2D6.
+        Effect: Roll a dice for each target. On a 3+, subtract 1 from hit rolls for the target's attacks until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Summon Chalice of Ushoran: Casting value of 6`,
+        desc: `Declare: If there is not a friendly Chalice of Ushoran on the battlefield, pick a friendly Equinox Feast Wizard to cast this spell, then make a casting roll of 2D6. 
+        Effect: Set up a Chalice of Ushoran wholly within 12" of the caster and visible to them.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Chalice of Ushoran - Draughts of Delusion`,
+        desc: `Declare: Pick an enemy unit within 6" of this Manifestation to be the target.
+        Effect: Roll a dice. On a 3+, your opponent must pick 1 of the following to apply for the rest of the turn:
+        Drink Deep from the Chalice: Other than the Companion weapon ability, weapon abilities for attacks made by the target have no effect.
+        Turn Aside and Suffer the Consequences: Combat attacks that target that enemy unit score critical hits on unmodified hit rolls of 5+.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
