@@ -99,7 +99,7 @@ const Artifacts = {
     effects: [
       {
         name: `The Scarring Blade (AoR)`,
-        desc: `Effect: Inflict D3 mortal damage on this unit. For the rest of the turn, add X to the Attacks characteristic of melee weapons used by friendly Gorechosen Champions units, where X is equal to the amount of moral damage inflicted on this unit by this ability.
+        desc: `Effect: Allocate D3 mortal damage on this unit (ward rolls cannot be made for those damage points). For the rest of the turn, add X to the Attacks characteristic of melee weapons used by friendly Gorechosen Champions units for the rest of the turn, where X is equal to the number of damage points allocated to this unit by this ability.
         For the rest of the battle, this unit cannot uste the Hate-Fuelled Killers ability and cannot be healed.`,
         when: [COMBAT_PHASE],
       },

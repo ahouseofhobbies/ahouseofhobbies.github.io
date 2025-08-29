@@ -164,7 +164,7 @@ const Units = {
     effects: [
       {
         name: `Outrageous Carnage - Passive`,
-        desc: `Effect: Each time an attack made by this unit scores a critical hit, inflict D3 mortal damage on each enemy unit within 8" of it (and continue the attack sequence).`,
+        desc: `Effect: Each time an attack made by this unit scores a critical hit, inflict D3 mortal damage on each enemy unit within 8" of it after the Fight ability has been resolved (and continue the attack sequence).`,
         when: [COMBAT_PHASE],
       },
       {
@@ -554,7 +554,7 @@ const Units = {
       {
         name: `Bone-Crushing Strikes - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
-        Effect: Roll a dice. If the roll is equal to or less than the target's control score, the target has Strike-Last for the rest of the turn.`,
+        Effect: Roll a dice. If the roll is equal to or less than the target's Control characteristic, the target has Strike-Last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -569,7 +569,7 @@ const Units = {
     effects: [
       {
         name: `Trophies of Glorious Deaths - Reaction: Opponent declared a command for a unit within 8" of this unit`,
-        desc: `Effect: Roll a dice. On an 5+, that command has no effect, it still counts as having been used and the command points spent to use it are still lost.`,
+        desc: `Effect: Roll a dice. On an 5+, that command has no effect, it still counts as having been used and the command points spent to use it are still lost. This reaction cannot be used more than once per command.`,
         when: [DURING_GAME],
       },
       {

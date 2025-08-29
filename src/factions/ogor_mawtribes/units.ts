@@ -1315,7 +1315,7 @@ const Units = {
       },
       {
         name: `The Good Ship Aesling - Passive`,
-        desc: `Effect: The AELSLING has a Health characteristic of 17 instead of 15.`,
+        desc: `Effect: The AELSLING has a Health characteristic of 17 instead of 14.`,
         when: [DURING_GAME],
       },
       {

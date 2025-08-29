@@ -53,13 +53,13 @@ const BattleTraits = {
         when: [START_OF_TURN],
       },
       {
-        name: `Punish the Pacifist (1)`,
+        name: `Punish the Pacifist (1) - Once Per Turn`,
         desc: `Declare: Each unit (friendly and enemy) and enemy Manifestation that is not in combat is a target.
         Effect: Roll a dice. On a 1-2, inflict 1 mortal damage on each target. On a 3+, inflict 1 mortal damage on each enemy target.`,
         when: [COMBAT_PHASE],
       },
       {
-        name: `Murder the Mystic (2)`,
+        name: `Murder the Mystic (2) - Once Per Turn`,
         desc: `You can only unlock this ability if you have unlocked 'Divine Scorn'.
         Declare: Pick up to 4 enemy Manifestations to be the target(s).
         Effect: Make a banishment roll of 2D6 for each target. If the banishment roll equals or exceeds the banishment value listed on that Manifestation's warscroll, inflict D3 mortal damage on each enemy unit within 3" of it and then it is banished and removed from play.`,

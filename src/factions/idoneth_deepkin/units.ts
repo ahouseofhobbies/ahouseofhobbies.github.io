@@ -165,7 +165,7 @@ const Units = {
       {
         name: `Whirlpool's Fury - Passive`,
         desc: `Effect: Enemy units cannot use Retreat abilities while they are in combat with this unit.
-        Friendly units that use a Retreat ability while they are wholly within 12" of this unit can still use Shoot and/or Charge abilities later in the turn.`,
+        Friendly units that use a Retreat ability while they are wholly within 12" of this unit can still use Shoot and/or Charge abilities later in the turn. No mortal damage is inflicted on friendly Idoneth Deepkin units by Retreat abilities while they are wholly within 12" of this unit.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -184,7 +184,7 @@ const Units = {
       },
       {
         name: `The Surging Sea - Once Per Turn`,
-        desc: `Declare: Pick this unit and up to 1 friendly unit within this unit's combat range to be the targets.
+        desc: `Declare: Pick this unit and up to 1 friendly Idoneth Deepkin unit within this unit's combat range to be the targets.
         Effect: For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for the targets, to a maximum of 3.`,
         when: [CHARGE_PHASE],
       },
@@ -895,7 +895,7 @@ const Units = {
       },
       {
         name: `The Good Ship Aesling - Passive`,
-        desc: `Effect: The AELSLING has a Health characteristic of 17 instead of 15.`,
+        desc: `Effect: The AELSLING has a Health characteristic of 17 instead of 14.`,
         when: [DURING_GAME],
       },
       {

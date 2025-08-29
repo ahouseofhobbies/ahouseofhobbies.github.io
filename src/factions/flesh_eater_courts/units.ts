@@ -159,7 +159,7 @@ const Units = {
       {
         name: `A Majestic Menagerie (Delusion) - Passive`,
         desc: `Effect: While you believe this Delusion, add 1 to the Attacks characteristic of Companion melee weapons used by friendly Flesh-Eater Courts units while they are wholly within 12" of any friendly Flesh-Eater Courts Heroes.`,
-        when: [COMBAT_PHASE],
+        when: [START_OF_TURN, COMBAT_PHASE],
       },
       {
         name: `Ferocious Hunger - Once Per Turn`,

@@ -51,7 +51,7 @@ const CommandTraits = {
     effects: [
       {
         name: `Devious Underling`,
-        desc: `Declare: Pick a friendly Skaven Hero on the battlefield with a Health characteristic that equals or exceeds this units Health characteristic to be the target. 
+        desc: `Declare: Pick another friendly Skaven Hero on the battlefield with a Health characteristic that equals or exceeds this units Health characteristic to be the target. 
         Effect: For the rest of the battle: 
         While the target has not been slain, friendly Skaven Infantry units have Ward (6+) while they are wholly within 13" of this unit. 
         Once the target has been slain, add 2 to charge rolls for friendly Skaven Infantry units while they are wholly within 13" of this unit.`,

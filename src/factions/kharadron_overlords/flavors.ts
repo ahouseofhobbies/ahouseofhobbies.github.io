@@ -26,7 +26,7 @@ const Flavors = {
     effects: [
       {
         name: `Extra Rappel Anchors - Passive`,
-        desc: `Effect: Friendly Grundstok Gunhaulers can transport up to 2 friendly Kharadron Overlords Infantry units instead of 1 and with a model count of up to 6 instead of 5 (see Battle Traits).`,
+        desc: `Effect: Friendly Grundstok Gunhaulers can transport up to 2 friendly Kharadron Overlords Infantry units instead of 1 and with a combined model count of up to 6 instead of 5 (see Battle Traits).`,
         when: [DURING_GAME],
       },
     ],
@@ -46,7 +46,7 @@ const Flavors = {
       {
         name: `Special Procurement - Once Per Battle`,
         desc: `Declare: Pick a friendly non-Unique Kharadron Overlords Hero that does not have an artefact of power. The target can be in reserve.
-        Effect: Give that Hero 1 artefact of power from the 'Inventions of the Sky-ports'.`,
+        Effect: Give that Hero 1 artefact of power from the 'Inventions of the Sky-ports' or the 'Ingenious Innovations'.`,
         when: [DURING_SETUP],
       },
     ],
@@ -135,7 +135,7 @@ const Flavors = {
       {
         name: `Invictunite-Lined Hull - Once Per Battle - Enemy Hero Phase`,
         desc: `Declare: Pick a friendly Magnate's Crew Skyvessel to be the target.
-        Effect: Roll a D3. For the rest of the turn, subtract X from the Rend characteristic of attacks that target that Skyvessel, where X is equal to the roll.`,
+        Effect: Roll a D3. For the rest of the turn, subtract X from the Rend characteristic of weapons used for attacks that target that Skyvessel, where X is equal to the roll.`,
         when: [HERO_PHASE],
       },
       {

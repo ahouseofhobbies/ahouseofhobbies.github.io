@@ -38,7 +38,7 @@ const Spells = {
       {
         name: `Slipstream: Casting value of 6`,
         desc: `Declare: Pick a friendly Chorrileum Wizard to cast this spell, pick a visible friendly Chorrileum unit that is not in combat and is wholly within 12" of them to be the target, then make a casting roll of 2D6. 
-          Effect: Each model in the target unit can move up to D6". That move cannot pass through or end within the combat range of an enemy unit.`,
+          Effect: The target can move up to D6". That move cannot pass through or end within the combat range of an enemy unit.`,
         when: [HERO_PHASE],
       },
       {

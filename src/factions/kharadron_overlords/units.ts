@@ -414,7 +414,7 @@ const Units = {
       {
         name: `Assault Boat`,
         desc: `Declare: This unit cannot use this ability if it is in combat or has used a RUN or Retreat ability this turn. Pick a number of units up to its Transport Capacity that are wholly within 6" of it, that are not in combat and that have not charged this turn to be the targets. Then, make a charge roll of 2D6. 
-        Effect: Remove the targets from the battlefield. Then, this unit must move a distance up to the value of the charge roll and must end the move within 1/2" of a visible enemy unit. Then, set up the targets wholly within this unit's combat range. If this unit is in combat, the targets can be set up in combat and have Strike-First for the rest of the turn. This unit and the targets have charged.`,
+        Effect: Remove the targets from the battlefield. Then, this unit must move a distance up to the value of the charge roll and must end the move within 1/2" of a visible enemy unit. Then, set up the targets wholly within this unit's combat range. If this unit is in combat, the targets can be set up in combat and have Strike-First for the rest of the turn. This unit and the targets have charged, and the targets cannot use any more Core abilities for the rest of the phase.`,
         when: [CHARGE_PHASE],
       },
       {
@@ -520,7 +520,7 @@ const Units = {
       },
       {
         name: `Nullsuit - Passive`,
-        desc: `Effect: Double the Damage characteristic of this unit's attacks that target a Priest, Wizard or Manifestation.`,
+        desc: `Effect: Double the Damage characteristic of this unit's weapons for attacks that target a Priest, Wizard or Manifestation.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -541,7 +541,7 @@ const Units = {
         desc: `Declare: Pick an objective within 9" of this unit to be the target.
         Effect: Roll a dice. On a 3+, apply the following effects for the rest of the turn:
         Add 1 to hit rolls for combat attacks made by friendly Skyfarer units that target a unit that is contesting the target objective.
-        Add 1 to the Rend characteristic of melee weapons used by friendly Vongrim Salvagers and Vongrim Harpoon Crew units that target a unit that is contesting the target objective.`,
+        Add 1 to the Rend characteristic of melee weapons used by friendly Vongrim Salvagers and Vongrim Harpoon Crew units for attacks that target a unit that is contesting the target objective.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -1027,7 +1027,7 @@ const Units = {
     effects: [
       {
         name: `In the Shadow of the Ethersea`,
-        desc: `Declare: This ability must be used to deploy this Regiment of Renown.
+        desc: `Declare: This ability must be useded to deploy this Regiment of Renown instead of the Deploy Unit ability or the Deploy Regiment ability.
         Effect: Set up the units in this Regiment of Renown in reserve in the ethersea. They have now been deployed.`,
         when: [DURING_SETUP],
       },

@@ -2092,7 +2092,7 @@ const Units = {
     effects: [
       {
         name: `In the Shadow of the Ethersea`,
-        desc: `Declare: This ability must be used to deploy this Regiment of Renown.
+        desc: `Declare: This ability must be useded to deploy this Regiment of Renown instead of the Deploy Unit ability or the Deploy Regiment ability.
         Effect: Set up the units in this Regiment of Renown in reserve in the ethersea. They have now been deployed.`,
         when: [DURING_SETUP],
       },
@@ -2145,7 +2145,7 @@ const Units = {
       },
       {
         name: `The Good Ship Aesling - Passive`,
-        desc: `Effect: The AELSLING has a Health characteristic of 17 instead of 15.`,
+        desc: `Effect: The AELSLING has a Health characteristic of 17 instead of 14.`,
         when: [DURING_GAME],
       },
       {

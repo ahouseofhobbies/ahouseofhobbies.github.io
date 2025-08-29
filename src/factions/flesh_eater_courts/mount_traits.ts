@@ -43,7 +43,7 @@ const MountTraits = {
   'Revered Monstrosity': {
     effects: [
       {
-        name: `Revered Monstrosity = Passive`,
+        name: `Revered Monstrosity - Passive`,
         desc: `Effect: Add 1 to hit rolls for combat attacks made with Companion weapons by other friendly non-Unique Flesh-eater Courts Monsters while they are wholly within 12" of this unit.`,
         when: [COMBAT_PHASE],
       },

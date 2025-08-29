@@ -112,12 +112,12 @@ const Flavors = {
       },
       {
         name: `The Red God's Eye - Passive`,
-        desc: `Effect: Friendly Gorechosen Champions units have WARD (4+).`,
+        desc: `Effect: Friendly Gorechosen Champions units have Ward (6+).`,
         when: [DURING_GAME],
       },
       {
         name: `Hate-Fuelled Killers - Passive`,
-        desc: `Effect: If a friendly Gorechosen Champions unit would be destroyed, before removing it from play, roll a dice. On a 5+, that unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, Heal (1) that unit.`,
+        desc: `Effect: The first time each friendly Gorechosen Champions unit would be destroyed, before removing it from play, roll a dice. On a 5+, that unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, Heal (1) that unit.`,
         when: [DURING_GAME],
       },
     ],
@@ -148,7 +148,7 @@ const Flavors = {
         when: [END_OF_TURN],
       },
       {
-        name: `Drawn by Blood`,
+        name: `Drawn by Blood - Once Per Turn`,
         desc: `Declare: Pick a friendly Baleful Lords unit that has not used a Rampage ability this turn to use this ability.
           Effect: That unit can move D6". It can end that move in combat but only with units it was in combat with at the start of the phase.
           If that unit destroyed any enemy units this turn, then instead:

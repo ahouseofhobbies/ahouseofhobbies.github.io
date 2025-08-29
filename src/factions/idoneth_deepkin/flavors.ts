@@ -124,7 +124,7 @@ const Flavors = {
     effects: [
       {
         name: `The Ocean Conceals - Once Per Battle`,
-        desc: `Declare: This ability must be used to deploy the friendly Chorrileum Eidolon.
+        desc: `Declare: This ability must be used to deploy the friendly Chorrileum Eidolon instead of the Deploy Unit ability or the Deploy Regiment ability.
           Effect: Set up the friendly Chorrileum Eidolon in reserve awaiting a summons. It has now been deployed.`,
         when: [DURING_SETUP],
       },
