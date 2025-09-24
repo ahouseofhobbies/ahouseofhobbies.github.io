@@ -24,7 +24,7 @@ const Flavors = {
     effects: [
       {
         name: `Raise the Banners - Passive`,
-        desc: `Effect: Each time an ability returns at least 1 slain model to a friendly unit that is not in combat, after that ability has benn resolved, if that unit is a Serfs unit, you can return 1 additional slain model to it, and if it is a Knights unit, roll a dice. On a 4+, you can return 1 additional slain model to it.`,
+        desc: `Effect: Each time another ability returns at least 1 slain model to a friendly unit that is not in combat, after that ability has benn resolved, if that unit is a Serfs unit, you can return 1 additional slain model to it, and if it is a Knights unit, roll a dice. On a 4+, you can return 1 additional slain model to it.`,
         when: [DURING_GAME],
       },
     ],

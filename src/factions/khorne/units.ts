@@ -237,8 +237,8 @@ const Units = {
       //  UnflaggingHunterEffect,
       {
         name: `Stalk the Prey`,
-        desc: `Declare: Pick this unit and a friendly Flesh Hounds unit to be the targets.
-        Effect: Remove the targets from the battlefield and set them up again on the battlefield more than 6" from this unit's quarry and more than 9" from all other enemy units. The unit of Flesh Hounds must also be set up wholly within 12" of this unit.`,
+        desc: `Declare: Pick this unit and up to 1 friendly Flesh Hounds unit to be the targets.
+        Effect: Remove the targets from the battlefield and set them up again on the battlefield more than 6" from this unit's quarry and more than 9" from all other enemy units. If picked to be a target, the unit of Flesh Hounds must also be set up wholly within 12" of this unit.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -1186,7 +1186,7 @@ const Units = {
       },
       {
         name: `Projectile Vomit - Once Per Turn`,
-        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick all other units (friendly and enemy) within 3" of that point to be the targets. 
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick each enemy unit within 3" of that point to be the targets. 
         Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.`,
         when: [SHOOTING_PHASE],
       },

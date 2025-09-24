@@ -27,8 +27,8 @@ const Artifacts = {
   'Celestium Burst-grenade': {
     effects: [
       {
-        name: `Celestium Burst-grenade - Once Per Turn`,
-        desc: `Declare: Pick an enemy unit within 12" of this unit to be the target. 
+        name: `Celestium Burst-grenade - Once Per Battle`,
+        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target. 
         Effect: Ward rolls cannot be made for the target for the rest of the turn.`,
         when: [SHOOTING_PHASE],
       },

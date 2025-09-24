@@ -897,15 +897,15 @@ const Units = {
         name: `Sigmar's Will: Chant value of 4`,
         desc: `Declare: Make a chanting roll of D6. If the roll is an unmodified 1, you can reroll the dice. 
         Effect: Pick 1 of the following effects to apply until the start of your next turn. Pick up to 2 different effects instead if the chanting roll was 10+. 
-        Hallowed Ground: Enemy units using the Normal Move ability cannot end that move within 5" of a friendly Cities of Sigmar Human unit while it is wholly within 12" of this unit. 
-        Fervent Prayers: Each time a friendly Cities of Sigmar Human model is slain by a combat attack while it is wholly within 12" of this unit, roll a dice. On a 6, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved. 
-        Salvation: Pick up to 3 friendly Cities of Sigmar Human units to be the targets. Remove those units from the battlefield and set them up again wholly within 12" of this unit and not in combat. Those units cannot use Charge abilities for the rest of the turn.`,
+        Hallowed Ground: Until the start of your next turn, enemy units using the Normal Move ability cannot end that move within 5" of a friendly Cities of Sigmar Human unit while it is wholly within 12" of this unit. 
+        Fervent Prayers: Until the start of your next turn, each time a friendly Cities of Sigmar Human model is slain by a combat attack while it is wholly within 12" of this unit and that model was in combat with the attacking unit, roll a dice. On a 6, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved. 
+        Salvation: If you are the active player, pick up to 3 friendly Cities of Sigmar Human units that are more than 12" from this unit and not in combat to be the targets. Remove those units from the battlefield and set them up again wholly within 12" of this unit and more than 9" from all enemy units. Those units cannot use Charge abilities for the rest of the turn`,
         when: [HERO_PHASE],
       },
       {
         name: `Word of the God-King`,
-        desc: `Declare: Pick an enemy Wizard, Priest or Manifestation within 18" of this unit to be the target. 
-        Effect: Roll a dice. On a 3+, if the target is a Manifestation, it is banished. Otherwise, inflict an amount of mortal damage on the target equal to the roll.`,
+        desc: `Declare: Pick a visible enemy Wizard, Priest or Manifestation within 18" of this unit to be the target. 
+        Effect: Roll a dice. On a 3+: If the target is a Manifestation, it is banished and removed from the battlefield. If the target is a Wizard or Priest, inflict an amount of mortal damage on it equal to the roll.`,
         when: [HERO_PHASE],
       },
     ],
@@ -1306,7 +1306,7 @@ const Units = {
       },
       {
         name: `Projectile Vomit - Once Per Turn`,
-        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick all other units (friendly and enemy) within 3" of that point to be the targets. 
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick each enemy unit within 3" of that point to be the targets. 
         Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.`,
         when: [SHOOTING_PHASE],
       },

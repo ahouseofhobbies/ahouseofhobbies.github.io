@@ -20,7 +20,7 @@ const BattleTraits = {
       {
         name: `A Kingdom Deluded - Once Per Turn`,
         desc: `Declare: You must use this ability at the start of each turn. If it is the first turn of the battle, pick a Delusion from these battle traits or, unless otherwise specified, from the warscroll of a friendly unit on the battlefield. If it is not the first turn, make a delusion roll of D6.
-        Effect: On a delusion roll of 1-2, you must pick a different Delusion to the one you picked last turn. On a 3-4, you must pick the same Delusion as the one you picked last turn, even if it is on the warscroll of a unit that has been destroyed. On a 5-6, you must pick a Delusion like you did in the first turn. For the rest of the turn, you believe the Delusion you picked.`,
+        Effect: On a delusion roll of 1-2, you must pick a different Delusion to the one you picked last turn. On a 3-4, you must pick the same Delusion as the one you picked last turn, even if it is on the warscroll of a unit that has been destroyed. In such cases, the effect of that Delusion applies as if the unit had not been destroyed. On a 5-6, you must pick a Delusion like you did in the first turn. For the rest of the turn, you believe the Delusion you picked.`,
         when: [START_OF_TURN],
       },
       {

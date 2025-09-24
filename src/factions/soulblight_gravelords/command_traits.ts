@@ -53,7 +53,7 @@ const CommandTraits = {
     effects: [
       {
         name: `Frightening Vitality - Passive`,
-        desc: `Effect: Each time an ability that heals at least 1 of this units damage points is resolved, if the total number of damage points healed by that ability was less than 3, Heal (X) this unit where X is 3 minus that number.`,
+        desc: `Effect: Each time an ability would heal exactly 1 or 2 of this unit's damage points, heal 3 damage points instead.`,
         when: [DURING_GAME],
       },
     ],

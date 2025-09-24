@@ -36,7 +36,7 @@ const BattleTraits = {
         when: [DURING_GAME],
       },
       {
-        name: `Skulls for the Skull Throne - Once Per Battle Round`,
+        name: `Skulls for the Skull Throne - Once Per Turn`,
         desc: `Effect: Pick a Blood Tithe ability that you have not unlocked and spend the number of blood tithe points required to unlock that ability (shown in the top-right corner of the ability). That Blood Tithe ability is now unlocked for the rest of the battle.`,
         when: [START_OF_TURN],
       },

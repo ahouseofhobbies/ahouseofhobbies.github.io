@@ -30,7 +30,7 @@ const Artifacts = {
         Effect: Roll a D3. On a 2+, pick 1 of the following:
         Inflict an amount of mortal damage on the target equal to the roll.
         Subtract 1 from the target's power level, to a minimum of 0, until the start of your next turn.
-        If the target is a Manifestation, it is banished.`,
+        If the target is a Manifestation, it is banished and removed from play.`,
         when: [END_OF_TURN],
       },
     ],

@@ -190,8 +190,8 @@ const Units = {
       // RoyalBloodEffect,
       {
         name: `For the Kingdom! (Delusion) - Passive`,
-        desc: `Effect: While you believe this Delusion, add 2 to charge rolls for friendly Knights units and friendly Flesh-Eater Courts Monsters while they are wholly within 12" of this unit.
-        Add 1 to charge rolls for friendly Knights units and friendly Flesh-Eater Courts Monsters instead while they are wholly within 12" of any other friendly Flesh-Eater Courts Heroes.`,
+        desc: `Effect: While you believe this Delusion, add 1 to charge rolls for friendly Knights units and friendly Flesh-Eater Courts Monsters while they are wholly within 12" of any friendly Flesh-Eater Courts Heroes.
+        Add 2 to charge rolls for friendly Knights units and friendly Flesh-Eater Courts Monsters instead while they are wholly within 12" of any friendly Abhorrant Ghoul Kings on Royal Zombie Dragons.`,
         when: [START_OF_TURN, CHARGE_PHASE],
       },
       {
@@ -234,7 +234,7 @@ const Units = {
     effects: [
       {
         name: `Be Mine Eyes`,
-        desc: `Declare: This unit's Grype is a token. If this unit's Grype is not on the battlefield, pick an enemy unit within 18" of this unit and not in combat to be the target.
+        desc: `Declare: This unit's Grype is a token. If this unit's Grype is not next to an enemy unit, pick an enemy unit within 18" of this unit and not in combat to be the target.
         Effect: Place this unit's Grype next to the target. If the target is destroyed while this unit's Grype is next to it, remove this unit's Grype from the battlefield.`,
         when: [HERO_PHASE],
       },
@@ -694,7 +694,7 @@ const Units = {
       },
       {
         name: `Insubstantial - Passive`,
-        desc: `Effect: Ignore modifiers to save rolls (positive and negative) for units in the Regiment of Renown.`,
+        desc: `Effect: Ignore negative modifiers to save rolls for units in the Regiment of Renown.`,
         when: [DURING_GAME],
       },
       {
@@ -1012,7 +1012,7 @@ const Units = {
       },
       {
         name: `Projectile Vomit - Once Per Turn`,
-        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick all other units (friendly and enemy) within 3" of that point to be the targets. 
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick each enemy unit within 3" of that point to be the targets. 
         Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.`,
         when: [SHOOTING_PHASE],
       },

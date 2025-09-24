@@ -72,7 +72,7 @@ const Spells = {
       },
       {
         name: `Abyssal Tendril - Crushing Coil - Passive`,
-        desc: `Effect: Add 1 to hit rolls for this Manifestation's attacks that target an ensnared enemy wholly within 3" of it.`,
+        desc: `Effect: Add 1 to hit rolls for attacks made by friendly Idoneth Deepkin Manifestations that target an ensnared enemy unit.`,
         when: [COMBAT_PHASE],
       },
     ],

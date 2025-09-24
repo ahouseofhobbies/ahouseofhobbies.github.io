@@ -20,7 +20,7 @@ const Prayers = {
       {
         name: `Wrath of Vulcatrix: Chant value of 4`,
         desc: `Declare: Pick a friendly Fyreslayers Priest to chant this prayer, pick a visible friendly Magmadroth unit wholly within 12" of them to be the target, then make a chanting roll of D6. 
-        Effect: For the rest of the turn, the Battle Damaged ability has no effect on the target and add 1 to the Attacks characteristic of the targets Companion weapons. If the chanting roll was 8+, add 1 to the Attacks characteristic of the targets Companion weapons for every 4 damage points the target has.`,
+        Effect: For the rest of the turn, the Battle Damaged ability has no effect on the target and add 1 to the Attacks characteristic of the targets Companion weapons. If the chanting roll was 8+, for the rest of the turn, add 1 to the Attacks characteristic of the targets Companion weapons for every 4 damage points the target has instead.`,
         when: [HERO_PHASE],
       },
     ],

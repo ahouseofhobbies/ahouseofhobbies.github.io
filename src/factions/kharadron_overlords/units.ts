@@ -414,7 +414,10 @@ const Units = {
       {
         name: `Assault Boat`,
         desc: `Declare: This unit cannot use this ability if it is in combat or has used a RUN or Retreat ability this turn. Pick a number of units up to its Transport Capacity that are wholly within 6" of it, that are not in combat and that have not charged this turn to be the targets. Then, make a charge roll of 2D6. 
-        Effect: Remove the targets from the battlefield. Then, this unit must move a distance up to the value of the charge roll and must end the move within 1/2" of a visible enemy unit. Then, set up the targets wholly within this unit's combat range. If this unit is in combat, the targets can be set up in combat and have Strike-First for the rest of the turn. This unit and the targets have charged, and the targets cannot use any more Core abilities for the rest of the phase.`,
+        Effect: This unit can move a distance up to the value of the charge roll and must end the move within 1/2" of a visible enemy unit. If it does so: 
+        Remove the targets from the battlefield and set them up again wholly within this units combat range. The targets can be set up in combat. 
+        This unit and the targets have charged, and the targets cannot use another Core ability this phase. 
+        Pick up to 1 of the targets to have Strike-first for the rest of the turn.`,
         when: [CHARGE_PHASE],
       },
       {
@@ -983,7 +986,7 @@ const Units = {
       },
       {
         name: `Projectile Vomit - Once Per Turn`,
-        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick all other units (friendly and enemy) within 3" of that point to be the targets. 
+        desc: `Declare: Pick this unit to use this ability if it has not used a Rampage ability this turn. Then, pick a point on the battlefield within 6" of this unit and pick each enemy unit within 3" of that point to be the targets. 
         Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.`,
         when: [SHOOTING_PHASE],
       },
