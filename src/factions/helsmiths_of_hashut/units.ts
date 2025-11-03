@@ -65,7 +65,7 @@ const DaemonicStrengthEffect = {
 const Units = {
   'Urak Taar': {
     mandatory: {
-      spells: [keyPicker(Spells, ['The Curse of Stone'])],
+      spells: [keyPicker(Spells, ['Lore of Shadows'])],
     },
     effects: [
       {
