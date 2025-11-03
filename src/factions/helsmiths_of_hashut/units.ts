@@ -150,9 +150,6 @@ const Units = {
     ],
   },
   'Ashen Elder': {
-    mandatory: {
-      prayers: [keyPicker(Prayers, ['Extract Power'])],
-    },
     effects: [
       {
         name: `Extract Power - End of Your Turn`,
