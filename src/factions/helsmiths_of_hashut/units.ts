@@ -4,7 +4,6 @@ import {
   COMBAT_PHASE,
   DURING_GAME,
   DURING_SETUP,
-  END_OF_ANY_TURN,
   END_OF_TURN,
   HERO_PHASE,
   MOVEMENT_PHASE,
@@ -99,7 +98,7 @@ const Units = {
         name: `Immolating Presence - Rampage - Once Per Turn (Army), End of Any Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
         Effect: Roll a dice. If the roll exceeds the target's Health characteristic, 1 model in the target unit is slain.`,
-        when: [END_OF_ANY_TURN],
+        when: [END_OF_TURN],
       },
       {
         name: `Unholy Stampede - Passive`,
@@ -129,7 +128,7 @@ const Units = {
         name: `Immolating Presence - Rampage - Once Per Turn (Army), End of Any Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
         Effect: Roll a dice. If the roll exceeds the target's Health characteristic, 1 model in the target unit is slain.`,
-        when: [END_OF_ANY_TURN],
+        when: [END_OF_TURN],
       },
     ],
   },
