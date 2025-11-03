@@ -12,7 +12,7 @@ const BattleTactics = {
         desc: `You complete this tactic if 3 or more friendly units make a charge move this turn.`,
         when: [START_OF_HERO_PHASE],
         rule_sources: [
-          rule_sources.BATTLETOME_DAUGHTERS_OF_KHAINE,
+          rule_sources.BATTLETOME_HELSMITHS_OF_HASHUT,
           rule_sources.ERRATA_DECEMBER_2022,
           meta_rule_sources.BATTLESCROLL_ANDTOR_SEPTEMBER_2023,
         ],

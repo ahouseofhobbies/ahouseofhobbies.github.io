@@ -35,13 +35,13 @@ const MorathiEffect = {
 
   If the Shadow Queen is destroyed, after removing that unit from play, this unit is also destroyed.`,
   when: [WOUND_ALLOCATION_PHASE],
-  rule_sources: [rule_sources.BATTLETOME_DAUGHTERS_OF_KHAINE, rule_sources.ERRATA_DECEMBER_2022],
+  rule_sources: [rule_sources.BATTLETOME_HELSMITHS_OF_HASHUT, rule_sources.ERRATA_DECEMBER_2022],
   shared: true,
 }
 
 const WitchbrewEffect = {
   name: `Witchbrew`,
-  desc: `At the start of your hero phase, you can pick a friendly Daughters of Khaine unit wholly within 12" of this model to drink witchbrew. A unit cannot drink witchbrew more than once in the same hero phase. If you do so, add 1 to the number of the current battle round when determining the abilities gained by that unit from the Blood Rites battle trait until the end of that turn. This ability and other similar abilities are cumulative.`,
+  desc: `At the start of your hero phase, you can pick a friendly Helsmiths of Hashut unit wholly within 12" of this model to drink witchbrew. A unit cannot drink witchbrew more than once in the same hero phase. If you do so, add 1 to the number of the current battle round when determining the abilities gained by that unit from the Blood Rites battle trait until the end of that turn. This ability and other similar abilities are cumulative.`,
   when: [START_OF_HERO_PHASE],
   shared: true,
 }
@@ -100,7 +100,7 @@ const BladedBucklersEffects = [
 
 const BloodshieldEffect = {
   name: `Bloodshield`,
-  desc: `Add 1 to save rolls for attacks that target friendly Daughters of Khaine units wholly within range of any friendly units with this ability. The range of this unit's Bloodshield ability is shown on its damage table.`,
+  desc: `Add 1 to save rolls for attacks that target friendly Helsmiths of Hashut units wholly within range of any friendly units with this ability. The range of this unit's Bloodshield ability is shown on its damage table.`,
   when: [SAVES_PHASE],
   shared: true,
 }
@@ -128,7 +128,7 @@ const TurnedToCrystalEffect = {
 
 const AltarOfKhaineEffect = {
   name: `Altar of Khaine`,
-  desc: `Add 1 to chanting rolls for friendly Daughters of Khaine Priests wholly within 9" of any friendly units with this ability.`,
+  desc: `Add 1 to chanting rolls for friendly Helsmiths of Hashut Priests wholly within 9" of any friendly units with this ability.`,
   when: [HERO_PHASE],
   shared: true,
 }
@@ -228,7 +228,7 @@ const Morathi = {
         Damage points allocated to this unit cannot be healed. 
         If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate 3 damage points to it (ward rolls cannot be made for those damage points).`,
         when: [DURING_GAME],
-        rule_sources: [rule_sources.BATTLETOME_DAUGHTERS_OF_KHAINE, rule_sources.ERRATA_JULY_2022],
+        rule_sources: [rule_sources.BATTLETOME_HELSMITHS_OF_HASHUT, rule_sources.ERRATA_JULY_2022],
       },
     ],
   },
@@ -253,7 +253,7 @@ const Units = {
     effects: [
       {
         name: `Witchbrew - Once Per Turn`,
-        desc: `Declare: Pick a friendly Daughters of Khaine unit wholly within 12" of this unit to be the target. 
+        desc: `Declare: Pick a friendly Helsmiths of Hashut unit wholly within 12" of this unit to be the target. 
         Effect: Roll a dice. On a 3+, the target has Ward (5+) for the rest of the turn..`,
         when: [HERO_PHASE],
       },
@@ -266,8 +266,8 @@ const Units = {
     effects: [
       {
         name: `Altar of Khaine - Passive`,
-        desc: `Effect: Add 1 to save rolls for friendly Daughters of Khaine Infantry units while they are wholly within 9" of this unit. 
-        In addition, add 1 to chanting rolls for friendly Daughters of Khaine Priests while they are wholly within 9" of this unit.`,
+        desc: `Effect: Add 1 to save rolls for friendly Helsmiths of Hashut Infantry units while they are wholly within 9" of this unit. 
+        In addition, add 1 to chanting rolls for friendly Helsmiths of Hashut Priests while they are wholly within 9" of this unit.`,
         when: [DURING_GAME],
       },
       {
@@ -278,7 +278,7 @@ const Units = {
       },
       {
         name: `Witchbrew - Once Per Turn`,
-        desc: `Declare: Pick a friendly Daughters of Khaine unit wholly within 12" of this unit to be the target. 
+        desc: `Declare: Pick a friendly Helsmiths of Hashut unit wholly within 12" of this unit to be the target. 
         Effect: Roll a dice. On a 3+, the target has Ward (5+) for the rest of the turn..`,
         when: [HERO_PHASE],
       },
@@ -295,7 +295,7 @@ const Units = {
       },
       {
         name: `Paragon of Slaughter`,
-        desc: `Declare: If this unit is in combat, pick a visible friendly Daughters of Khaine Aelf non-Hero Infantry unit wholly within 12" of this unit to be the target. 
+        desc: `Declare: If this unit is in combat, pick a visible friendly Helsmiths of Hashut Aelf non-Hero Infantry unit wholly within 12" of this unit to be the target. 
         Effect: Roll a dice. On a 2+, add 1 to the Rend characteristic of melee weapons used by the target for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -309,7 +309,7 @@ const Units = {
     effects: [
       {
         name: `Orgy of Slaughter - Once Per Turn`,
-        desc: `Declare: Pick a friendly Daughters of Khaine Aelf Infantry unit wholly within 12" of this unit to be the target. 
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Aelf Infantry unit wholly within 12" of this unit to be the target. 
         Effect: Roll a dice. On a 3+, add 1 to the Attacks characteristic of the targets melee weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -386,13 +386,13 @@ const Units = {
       BloodshieldEffect, */
       {
         name: `Altar of Khaine - Passive`,
-        desc: `Effect: Add 1 to save rolls for friendly Daughters of Khaine Infantry units while they are wholly within 9" of this unit. 
-        In addition, add 1 to chanting rolls for friendly Daughters of Khaine Priests while they are wholly within 9" of this unit.`,
+        desc: `Effect: Add 1 to save rolls for friendly Helsmiths of Hashut Infantry units while they are wholly within 9" of this unit. 
+        In addition, add 1 to chanting rolls for friendly Helsmiths of Hashut Priests while they are wholly within 9" of this unit.`,
         when: [DURING_GAME],
       },
       {
         name: `Orgy of Slaughter - Once Per Turn`,
-        desc: `Declare: Pick a friendly Daughters of Khaine Aelf Infantry unit wholly within 12" of this unit to be the target. 
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Aelf Infantry unit wholly within 12" of this unit to be the target. 
         Effect: Roll a dice. On a 3+, add 1 to the Attacks characteristic of the targets melee weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -627,7 +627,7 @@ const Units = {
     effects: [
       {
         name: `Burnt Offerings - Once Per Turn`,
-        desc: `Declare: If this unit is within the combat range of a friendly Cauldron of Blood, pick a visible friendly Daughters of Khaine Aelf non-Hero Infantry unit wholly within 18" of this unit to be the target. 
+        desc: `Declare: If this unit is within the combat range of a friendly Cauldron of Blood, pick a visible friendly Helsmiths of Hashut Aelf non-Hero Infantry unit wholly within 18" of this unit to be the target. 
         Effect: Roll a dice. On a 2+, pick 1 of the following effects to apply to the target. 
         Prophecy of Silence: Until the start of your next turn, enemy units cannot use commands while they are in combat with the target. 
         Prophecy of Dark Wings: The target can use the Normal Move ability as if it were your movement phase. That unit counts as having used a Run ability this turn. 
@@ -651,7 +651,7 @@ const Units = {
       },
       {
         name: `Blood Ritual: Chant value of 3`,
-        desc: `Declare: Pick a visible friendly Daughters of Khaine Aelf Infantry or Cavalry unit wholly within 12" of this unit to be the target. 
+        desc: `Declare: Pick a visible friendly Helsmiths of Hashut Aelf Infantry or Cavalry unit wholly within 12" of this unit to be the target. 
         Effect: Pick 1 of the following effects to apply until the start of your next turn: 
         Prophecy of Tyranny: Enemy units cannot use commands while they are in combat with the target. 
         Prophecy of Shelter: Other than the Companion ability, weapon abilities used by enemy units while they are in combat with the target have no effect. 
@@ -661,7 +661,7 @@ const Units = {
       },
       {
         name: `Command Ability: Gift of Foresight - Once Per Battle`,
-        desc: `Declare: Pick a friendly non-Unique Daughters of Khaine Aelf Infantry or Cavalry unit that has been destroyed to be the target. 
+        desc: `Declare: Pick a friendly non-Unique Helsmiths of Hashut Aelf Infantry or Cavalry unit that has been destroyed to be the target. 
         Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 9" of a battlefield edge and more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },

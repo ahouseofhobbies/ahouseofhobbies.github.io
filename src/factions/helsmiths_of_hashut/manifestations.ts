@@ -82,7 +82,7 @@ const Manifestations = {
     effects: [
       {
         name: `Khainite Pendant - Once Per Battle`,
-        desc: `Declare: Pick a friendly Daughters of Khaine Priest wholly within 12" of this unit. 
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Priest wholly within 12" of this unit. 
         Effect: Give that unit D6 ritual points.`,
         when: [HERO_PHASE],
       },

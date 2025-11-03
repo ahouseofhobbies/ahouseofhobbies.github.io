@@ -29,7 +29,7 @@ const Spells = {
         name: `Mirror Dance`,
         desc: `Casting value of 6 and a range of 18". Pick 2 friendly DAUGHTERS OF KHAINE HEROES that are wholly within range, visible to the caster and each more than 3" from all enemy units. Remove those HEROES from the battlefield. Then, set each model up again within 1" of the location that had been occupied by the other model before it was removed from the battlefield and more than 3" from all enemy units. If it is not possible to set up either of the picked HEROES on the battlefield, return both HEROES to their original positions.`,
         when: [HERO_PHASE],
-        rule_sources: [rule_sources.BATTLETOME_DAUGHTERS_OF_KHAINE, rule_sources.ERRATA_JULY_2022],
+        rule_sources: [rule_sources.BATTLETOME_HELSMITHS_OF_HASHUT, rule_sources.ERRATA_JULY_2022],
       },
     ],
   },
@@ -97,19 +97,19 @@ const Spells = {
     effects: [
       {
         name: `Steed of Shadows: Casting value of 5 (UNLIMITED)`,
-        desc: `Declare: Pick a friendly Daughters of Khaine Wizard to cast this spell, pick a visible friendly Daughters of Khaine unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Wizard to cast this spell, pick a visible friendly Helsmiths of Hashut unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
         Effect: The target can use Charge abilities this turn even if it used a Run ability in the same turn.`,
         when: [HERO_PHASE],
       },
       {
         name: `Doomfire: Casting value of 7`,
-        desc: `Declare: Pick a friendly Daughters of Khaine Wizard to cast this spell, pick a visible enemy unit within 12" of them to be the target, then make a casting roll of 2D6. 
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Wizard to cast this spell, pick a visible enemy unit within 12" of them to be the target, then make a casting roll of 2D6. 
         Effect: If the target unit has fewer than 10 models, inflict D3 mortal damage on the target. If the target unit has 10-19 models, inflict D6 mortal damage on the target. If the target unit has 20 or more models, inflict 6 mortal damage on the target.`,
         when: [HERO_PHASE],
       },
       {
         name: `Mindrazor: Casting value of 8`,
-        desc: `Declare: Pick a friendly Daughters of Khaine Wizard to cast this spell, pick a visible friendly Daughters of Khaine unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Wizard to cast this spell, pick a visible friendly Helsmiths of Hashut unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
         Effect: Add 1 to the Rend characteristic of the targets melee weapons until the start of your next turn. In addition, if the target charged this turn, add 1 to the Damage characteristic of its melee weapons until the start of your next turn.`,
         when: [HERO_PHASE],
       },

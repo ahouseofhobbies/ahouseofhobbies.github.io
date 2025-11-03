@@ -16,7 +16,7 @@ const EndlessSpells = {
       GenericEffects.Predatory.Twelve_Inches,
       {
         name: `Summoning`,
-        desc: `Casting value of 6 and a range of 9". If successfully cast, set up this endless spell wholly within range of the caster. Only Daughters of Khaine Wizards can attempt to summon this endless spell.`,
+        desc: `Casting value of 6 and a range of 9". If successfully cast, set up this endless spell wholly within range of the caster. Only Helsmiths of Hashut Wizards can attempt to summon this endless spell.`,
         when: [HERO_PHASE],
       },
       {
@@ -36,7 +36,7 @@ const EndlessSpells = {
       GenericEffects.Predatory.Nine_Inches,
       {
         name: `Summoning`,
-        desc: `Casting value of 7 and a range of 9". If successfully cast, set up this endless spell wholly within range of the caster. Only Daughters of Khaine Wizards can attempt to summon this endless spell.`,
+        desc: `Casting value of 7 and a range of 9". If successfully cast, set up this endless spell wholly within range of the caster. Only Helsmiths of Hashut Wizards can attempt to summon this endless spell.`,
         when: [HERO_PHASE],
       },
       {
@@ -55,16 +55,16 @@ const EndlessSpells = {
     effects: [
       {
         name: `Summoning`,
-        desc: `This invocation is summoned with a prayer that has an answer value of 3 and a range of 12". If answered, set up this invocation wholly within range and visible to the chanter. Only Daughters of Khaine Priests can attempt to summon this invocation.`,
+        desc: `This invocation is summoned with a prayer that has an answer value of 3 and a range of 12". If answered, set up this invocation wholly within range and visible to the chanter. Only Helsmiths of Hashut Priests can attempt to summon this invocation.`,
         when: [HERO_PHASE],
       },
       {
         name: `Locus of the Murder God`,
         desc: `At the start of the combat phase, if this invocation is on the battlefield, the commanding player must roll a dice.
 
-        On a 1-5, until the end of that phase, subtract 1 from the damage inflicted (to a minimum of 1) by each successful attack that targets a Daughters of Khaine unit in the commanding player's army wholly within 12" of this invocation.
+        On a 1-5, until the end of that phase, subtract 1 from the damage inflicted (to a minimum of 1) by each successful attack that targets a Helsmiths of Hashut unit in the commanding player's army wholly within 12" of this invocation.
 
-        On a 6, until the end of that phase, subtract 1 from the damage inflicted (to a minimum of 1) by each successful attack that targets a Daughters of Khaine unit in the commanding player's army wholly within 12" of this invocation and add 1 to the Attacks characteristic of melee weapons used by Daughters of Khaine units in the commanding player's army wholly within 12" of this invocation.
+        On a 6, until the end of that phase, subtract 1 from the damage inflicted (to a minimum of 1) by each successful attack that targets a Helsmiths of Hashut unit in the commanding player's army wholly within 12" of this invocation and add 1 to the Attacks characteristic of melee weapons used by Helsmiths of Hashut units in the commanding player's army wholly within 12" of this invocation.
 
         In addition, if the roll was a 6, this invocation is removed from play at the end of that phase.`,
         when: [START_OF_COMBAT_PHASE],

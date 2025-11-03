@@ -28,7 +28,7 @@ const Flavors = {
     effects: [
       {
         name: `Shadowpaths - Once Per Turn`,
-        desc: `Declare: Pick a friendly Daughters of Khaine Infantry unit that is not in combat to use this ability. 
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Infantry unit that is not in combat to use this ability. 
         Effect: Roll a dice. On a 3+, remove that unit from the battlefield and set it up again on the battlefield more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
@@ -38,7 +38,7 @@ const Flavors = {
     effects: [
       {
         name: `Frenzied Devotees - Once Per Turn`,
-        desc: `Declare: Pick up to 3 friendly Daughters of Khaine Infantry or War Machine units that are in combat to be the targets. 
+        desc: `Declare: Pick up to 3 friendly Helsmiths of Hashut Infantry or War Machine units that are in combat to be the targets. 
         Effect: For each target: 
         Make a pile-in move. 
         Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
@@ -55,7 +55,7 @@ const Flavors = {
   'Slaughter Troupe': {
     effects: [
       {
-        name: `Gladiatorial Acrobatics - Once Per Turn - Reaction: You declared a Charge ability for a friendly Daughters of Khaine Aelf unit`,
+        name: `Gladiatorial Acrobatics - Once Per Turn - Reaction: You declared a Charge ability for a friendly Helsmiths of Hashut Aelf unit`,
         desc: `Effect: Change one of the dice in the charge roll to a 4.`,
         when: [CHARGE_PHASE],
       },
@@ -65,7 +65,7 @@ const Flavors = {
     effects: [
       {
         name: `Higher Purpose - Once Per Turn`,
-        desc: `Effect: Return D3 slain models to each friendly Daughters of Khaine Aelf Infantry unit.`,
+        desc: `Effect: Return D3 slain models to each friendly Helsmiths of Hashut Aelf Infantry unit.`,
         when: [END_OF_TURN],
       },
     ],
@@ -74,7 +74,7 @@ const Flavors = {
     effects: [
       {
         name: `Graceful Elusion`,
-        desc: `Effect: For the rest of the phase, friendly Daughters of Khaine Aelf Infantry units have Ward (5+) until they have used a Fight ability.`,
+        desc: `Effect: For the rest of the phase, friendly Helsmiths of Hashut Aelf Infantry units have Ward (5+) until they have used a Fight ability.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -120,7 +120,7 @@ const Flavors = {
         name: `Khaine's Essence`,
         desc: `Each time a model in a friendly ZAINTHAR KAI MELUSAI unit is slain by an attack made with a melee weapon, that model can fight before it is removed from play.`,
         when: [WOUND_ALLOCATION_PHASE],
-        rule_sources: [rule_sources.BATTLETOME_DAUGHTERS_OF_KHAINE, rule_sources.ERRATA_JULY_2022],
+        rule_sources: [rule_sources.BATTLETOME_HELSMITHS_OF_HASHUT, rule_sources.ERRATA_JULY_2022],
       },
     ],
   }, */

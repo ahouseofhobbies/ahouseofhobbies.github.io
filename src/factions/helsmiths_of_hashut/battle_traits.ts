@@ -17,13 +17,13 @@ const BattleTraits = {
     effects: [
       {
         name: `Command Ability - All Out Slaughter - Once Per Battle`,
-        desc: `Declare: Pick a friendly Daughters of Khaine Infantry unit that is in combat to use this ability. 
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Infantry unit that is in combat to use this ability. 
         Effect: That unit can use 2 Fight abilities this phase. After the first is used, this unit has Strike-last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Blood Rites - Passive`,
-        desc: `Effect: A different effect applies to friendly Daughters of Khaine units each battle round, as shown below. The effects of all previous battle rounds also apply to those units.`,
+        desc: `Effect: A different effect applies to friendly Helsmiths of Hashut units each battle round, as shown below. The effects of all previous battle rounds also apply to those units.`,
         when: [DURING_GAME],
       },
       {
