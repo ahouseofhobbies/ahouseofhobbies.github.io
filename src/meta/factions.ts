@@ -12,6 +12,7 @@ type TFleshEaterCourts = 'FLESH_EATER_COURTS'
 type TFyreslayers = 'FYRESLAYERS'
 type TGloomspiteGitz = 'GLOOMSPITE_GITZ'
 type TGreenskinz = 'GREENSKINZ'
+type THelsmithsOfHashut = 'HELSMITHS_OF_HASHUT'
 type TIdonethDeepkin = 'IDONETH_DEEPKIN'
 type TKharadronOverlords = 'KHARADRON_OVERLORDS'
 type TKhorne = 'KHORNE'
@@ -53,6 +54,7 @@ export const FLESH_EATER_COURTS: TFleshEaterCourts = 'FLESH_EATER_COURTS'
 export const FYRESLAYERS: TFyreslayers = 'FYRESLAYERS'
 export const GLOOMSPITE_GITZ: TGloomspiteGitz = 'GLOOMSPITE_GITZ'
 export const GREENSKINZ: TGreenskinz = 'GREENSKINZ'
+export const HELSMITHS_OF_HASHUT: THelsmithsOfHashut = 'HELSMITHS_OF_HASHUT'
 export const IDONETH_DEEPKIN: TIdonethDeepkin = 'IDONETH_DEEPKIN'
 export const KHARADRON_OVERLORDS: TKharadronOverlords = 'KHARADRON_OVERLORDS'
 export const KHORNE: TKhorne = 'KHORNE'
@@ -99,6 +101,7 @@ export type TPrimaryFactions =
   | TFyreslayers
   | TGloomspiteGitz
   | TGreenskinz
+  | THelsmithsOfHashut
   | TIdonethDeepkin
   | TKharadronOverlords
   | TKhorne
@@ -142,6 +145,7 @@ export const PRIMARY_FACTIONS: TPrimaryFactions[] = [
   FYRESLAYERS,
   GLOOMSPITE_GITZ,
   GREENSKINZ,
+  HELSMITHS_OF_HASHUT,
   IDONETH_DEEPKIN,
   KHARADRON_OVERLORDS,
   KHORNE,

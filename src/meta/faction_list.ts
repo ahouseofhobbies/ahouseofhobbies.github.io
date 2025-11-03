@@ -7,6 +7,7 @@ import { FyreslayersFaction } from 'factions/fyreslayers'
 import { GloomspiteGitzFaction } from 'factions/gloomspite_gitz'
 import { ChaosFaction, DeathFaction, DestructionFaction, OrderFaction } from 'factions/grand_alliances'
 import { GreenskinzFaction } from 'factions/greenskinz'
+import { HelsmithsOfHashutFaction } from 'factions/helsmiths_of_hashut'
 import { IdonethDeepkinFaction } from 'factions/idoneth_deepkin'
 import { KharadronOverlordsFaction } from 'factions/kharadron_overlords'
 import { KhorneFaction } from 'factions/khorne'
@@ -46,6 +47,7 @@ import {
   FYRESLAYERS,
   GLOOMSPITE_GITZ,
   GREENSKINZ,
+  HELSMITHS_OF_HASHUT,
   IDONETH_DEEPKIN,
   KHARADRON_OVERLORDS,
   KHORNE,
@@ -91,6 +93,7 @@ const FactionList = {
   [FYRESLAYERS]: { ...FyreslayersFaction },
   [GLOOMSPITE_GITZ]: { ...GloomspiteGitzFaction },
   [GREENSKINZ]: { ...GreenskinzFaction },
+  [HELSMITHS_OF_HASHUT]: { ...HelsmithsOfHashutFaction },
   [IDONETH_DEEPKIN]: { ...IdonethDeepkinFaction },
   [KHARADRON_OVERLORDS]: { ...KharadronOverlordsFaction },
   [KHORNE]: { ...KhorneFaction },
