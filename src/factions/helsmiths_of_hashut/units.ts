@@ -64,10 +64,13 @@ const DaemonicStrengthEffect = {
 
 const Units = {
   'Urak Taar': {
-    mandatory: {
-      spells: [keyPicker(Spells, ['Lore of Shadows'])],
-    },
     effects: [
+      {
+        name: `The Curse of Stone - Your Hero Phase`,
+        desc: `Declare: Pick a point on the battlefield within 9" of this unit, then pick a second point on the battlefield within 9" of the first point. Draw a line between the first point and the second point. Each enemy unit the lines pass across is a target. Then, make a casting roll of 2D6.
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [HERO_PHASE],
+      },
       {
         name: `Battle Damaged - Passive`,
         desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Ghorrakos's Horns and Hooves is 4.`,
