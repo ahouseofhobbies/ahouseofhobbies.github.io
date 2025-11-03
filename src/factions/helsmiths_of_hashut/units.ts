@@ -2,7 +2,6 @@ import { keyPicker, tagAs } from 'factions/metatagger'
 import {
   CHARGE_PHASE,
   COMBAT_PHASE,
-  DEPLOYMENT_PHASE,
   DURING_GAME,
   DURING_SETUP,
   END_OF_ANY_TURN,
@@ -192,7 +191,7 @@ const Units = {
       {
         name: `Disposable Lackeys - Deployment Phase`,
         desc: `Effect: This unit can immediately use the 'Normal Move' ability as if it were your movement phase.`,
-        when: [DEPLOYMENT_PHASE],
+        when: [DURING_SETUP],
       },
     ],
   },
