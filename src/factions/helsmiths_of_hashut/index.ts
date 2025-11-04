@@ -8,6 +8,6 @@ export const HelsmithsOfHashutFaction = new Faction(
   HELSMITHS_OF_HASHUT,
   CHAOS,
   SubFactions,
-  'Battle Formations',
-  rule_sources.BATTLETOME_HELSMITHS_OF_HASHUT
+  'Battle Formations'
+  /*rule_sources.BATTLETOME_HELSMITHS_OF_HASHUT*/
 )

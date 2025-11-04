@@ -11,7 +11,7 @@ import {
 
 // Endless spells.
 const EndlessSpells = {
-  Bladewind: {
+  /*Bladewind: {
     effects: [
       GenericEffects.Predatory.Twelve_Inches,
       {
@@ -70,7 +70,7 @@ const EndlessSpells = {
         when: [START_OF_COMBAT_PHASE],
       },
     ],
-  },
+  }, */
 } satisfies TItemDescriptions
 
 export default tagAs(EndlessSpells, 'endless_spell')

@@ -1,21 +1,19 @@
 // Manifestations go here
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
-import { CHARGE_PHASE, COMBAT_PHASE, DURING_GAME, END_OF_TURN, HERO_PHASE, MOVEMENT_PHASE, SHOOTING_PHASE } from 'types/phases'
+import {
+  CHARGE_PHASE,
+  COMBAT_PHASE,
+  DURING_GAME,
+  END_OF_TURN,
+  HERO_PHASE,
+  MOVEMENT_PHASE,
+  SHOOTING_PHASE,
+} from 'types/phases'
 
 const Manifestations = {
   // Faction Manifestations
-  
-  'DOK': {
-    effects: [
-      {
-        name: `Crown of Woe - Passive`,
-        desc: `Effect: Subtract 2 from the control scores of enemy units while they are within 9" of this unit.`,
-        when: [END_OF_TURN],
-      },
-    ],
-  },
- /* 'Crone Blade': {
+  /* 'Crone Blade': {
     effects: [
       {
         name: `Crone Blade`,

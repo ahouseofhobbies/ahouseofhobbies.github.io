@@ -351,7 +351,7 @@ const Units = {
         Effect: Roll a dice. On a 3+:
         This unit can immediately use a Shoot ability as if it were your shooting phase but all of its attacks must target the target enemy unit.
         For the rest of the phase, this unit's Privateer Heavy Weapons have Shoot in Combat.`,
-        when: [COMBAT_PHASE],
+        when: [CHARGE_PHASE],
       },
       // SkyhookEffect,
     ],

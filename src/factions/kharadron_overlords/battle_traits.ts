@@ -72,19 +72,19 @@ const BattleTraits = {
       },
       {
         name: `Nullifier Auto-Endrin - Once Per Turn`,
-        desc: `Declare: If this unit is a Nullifier Auto-Endrin, each enemy Manifestation in combat with it is a target.
+        desc: `Declare: If this unit is a Nullifier Auto-Endrin and is in combat with any enemy Manifestations, pick each enemy Manifestation in combat with it to be the targets.
         Effect: Make a banishment roll of 3D6 for each target. If the banishment roll equals or exceeds the banishment value on the Manifestation's warscroll, it is banished and removed from play. Then, remove this unit from the battlefield.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Stuncloud Auto-Endrin - Once Per Turn`,
-        desc: `Declare: If this unit is a Stuncloud Auto-Endrin, each enemy unit in combat with it is a target.
+        desc: `Declare: If this unit is a Stuncloud Auto-Endrin and is in combat, pick each enemy unit in combat with it to be the targets.
         Effect: Roll a dice for each target. If the roll is equal to or lower than that target's Health characteristic, subtract 10 from the control score of that target for the rest of the turn. Then, remove this unit from the battlefield.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Grudgeblast Auto-Endrin - Once Per Turn`,
-        desc: `Declare: If this unit is a Grudgeblast Auto-Endrin, each enemy unit in combat with it is a target.
+        desc: `Declare: If this unit is a Grudgeblast Auto-Endrin and is in combat, pick each enemy unit in combat with it to be the targets.
         Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Then, remove this unit from the battlefield.`,
         when: [COMBAT_PHASE],
       },

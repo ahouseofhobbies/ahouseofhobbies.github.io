@@ -1,9 +1,11 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
 import {
+  CHARGE_PHASE,
   COMBAT_PHASE,
   DURING_ANY_PHASE,
   DURING_GAME,
+  DURING_SETUP,
   END_OF_COMBAT_PHASE,
   END_OF_TURN,
   HERO_PHASE,
@@ -13,81 +15,56 @@ import {
 } from 'types/phases'
 
 const CommandTraits = {
-  'Bathed in Blood': {
+  'Servile Automaton': {
     effects: [
       {
-        name: `Bathed in Blood`,
-        desc: `Effect: Heal (3) this unit if it is in combat.`,
-        when: [END_OF_TURN],
+        name: `Servile Automaton`,
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Automaton unit within this unit's combat range to be the target.
+        Effect: For the rest of the battle, the target is this unit's bodyguard and the following effects apply:
+        While this unit is in combat and its bodyguard is within its combat range, its bodyguard has Strike-First.
+        If this unit is Infantry, it has Ward (5+) while its bodyguard is within its combat range.`,
+        when: [DURING_SETUP],
       },
     ],
   },
-  'Zealous Orator': {
+  'Fire You Worms!': {
     effects: [
       {
-        name: `Zealous Orator - Passive`,
-        desc: `Effect: If a friendly unit wholly within 12" of this unit uses the Rally command, you can make 3 additional rally rolls of D6.`,
+        name: `Fire, You Worms! - Enemy Charge Phase`,
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Infantry unit that is not in combat and is wholly within 12" of this unit to be the target.
+        Effect: The target can immediately use the 'Shoot' ability as if it were your shooting phase. All attacks must target the same enemy unit, and the enemy unit picked to be the target of the attack must have charged this phase. If the unmodified hit roll for any of those attacks is 1-5, the attack fails and the attack sequence ends.`,
+        when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'An Eye for Weakness': {
+    effects: [
+      {
+        name: `An Eye for Weakness`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target.
+        Effect: Until the start of your next turn, add 1 to wound rolls for combat attacks made by friendly Helsmiths of Hashut units that target that enemy unit.`,
         when: [HERO_PHASE],
       },
     ],
   },
-  /* 'Sacrificial Overseer': {
+  'Taars Grand Forgehost (AoR)': {
     effects: [
       {
-        name: `Sacrificial Overseer`,
-        desc: `After this general has fought for the first time in the combat phase, if any enemy models were slain by wounds caused by this general's attacks in that phase, this general is said to be revelling in murder until the end of the phase. If this general is revelling in murder, they can fight for a second time in that phase. The strike-last effect applies to this general when they fight for that second time.`,
+        name: `Ruthless Overseer (AoR) - Passive`,
+        desc: `Effect: Each time a friendly Grand Forgehost unit wholly within 12" of this unit uses the 'Rally' command, you can make 3 additional rally rolls of D6.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Ziggurat Stampede (AoR)': {
+    effects: [
+      {
+        name: `Raging Animus (AoR) - Passive`,
+        desc: `Effect: Each time you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict D3 mortal damage on the attacking unit after the Fight ability has been resolved.`,
         when: [COMBAT_PHASE],
       },
     ],
-  }, */
-  'Master of Poisons': {
-    effects: [
-      {
-        name: `Master of Poisons`,
-        desc: `Declare: Pick an enemy unit that had any damage points allocated to it this turn by this units combat attacks to be the target. 
-        Effect: For the rest of the battle: 
-        The target cannot be healed. 
-        Slain models cannot be returned to the target unit.`,
-        when: [END_OF_TURN],
-      },
-    ],
   },
-  'The Croneseers Pariahs (AoR)': {
-    effects: [
-      {
-        name: `Proselyte of Morai-Hag (AoR) - Passive`,
-        desc: `Effect: Enemy units cannot use commands while they are in combat with this unit.`,
-        when: [DURING_GAME],
-      },
-    ],
-  },
-  /* 'True Believer': {
-    effects: [
-      {
-        name: `True Believer`,
-        desc: `Add 1 to the number of the current battle round when determining the abilities gained by this general from the Blood Rites battle trait (pg 66). This ability and other similar abilities are cumulative.`,
-        when: [START_OF_ROUND],
-      },
-    ],
-  },
-  'Arcane Mastery': {
-    effects: [
-      {
-        name: `Arcane Mastery`,
-        desc: `WIZARD only. This general knows all of the spells from the Lore of Shadows (pg 70) in addition to the other spells it knows.`,
-        when: [HERO_PHASE],
-      },
-    ],
-  },
-  'Fuelled by Revenge': {
-    effects: [
-      {
-        name: `Fuelled by Revenge`,
-        desc: `MELUSAI IRONSCALE only. Once per battle, at the start of the combat phase, you can say that this general will wreak Khaine's vengeance. If you do so, until the end of that phase, add 1 to the Attacks characteristic of melee weapons used by friendly MELUSAI units wholly within 12" of this general.`,
-        when: [START_OF_COMBAT_PHASE],
-      },
-    ],
-  }, */
 } satisfies TItemDescriptions
 
 export default tagAs(CommandTraits, 'command_trait')

@@ -15,115 +15,88 @@ import rule_sources from './rule_sources'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const Flavors = {
-  Scathcoven: {
+  'Hashutite Host': {
     effects: [
       {
-        name: `Speed of the Scathborn - Passive`,
-        desc: `Effect: If the unmodified charge roll for a friendly Melusai or Khinerai unit is 8+, that unit has Strike-first for the rest of the turn.`,
-        when: [COMBAT_PHASE],
-      },
-    ],
-  },
-  'Shadow Patrol': {
-    effects: [
-      {
-        name: `Shadowpaths - Once Per Turn`,
-        desc: `Declare: Pick a friendly Helsmiths of Hashut Infantry unit that is not in combat to use this ability. 
-        Effect: Roll a dice. On a 3+, remove that unit from the battlefield and set it up again on the battlefield more than 9" from all enemy units.`,
-        when: [MOVEMENT_PHASE],
-      },
-    ],
-  },
-  'Cauldron Guard': {
-    effects: [
-      {
-        name: `Frenzied Devotees - Once Per Turn`,
-        desc: `Declare: Pick up to 3 friendly Helsmiths of Hashut Infantry or War Machine units that are in combat to be the targets. 
-        Effect: For each target: 
-        Make a pile-in move. 
-        Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
-        when: [END_OF_TURN],
-      },
-    ],
-  },
-  /* Khailebron: {
-    mandatory: {
-      command_abilities: [keyPicker(CommandAbilities, ['Masters of the Shadowpaths'])],
-    }, 
-    effects: [],
-  }, */
-  'Slaughter Troupe': {
-    effects: [
-      {
-        name: `Gladiatorial Acrobatics - Once Per Turn - Reaction: You declared a Charge ability for a friendly Helsmiths of Hashut Aelf unit`,
-        desc: `Effect: Change one of the dice in the charge roll to a 4.`,
-        when: [CHARGE_PHASE],
-      },
-    ],
-  },
-  'Coven Zealots': {
-    effects: [
-      {
-        name: `Higher Purpose - Once Per Turn`,
-        desc: `Effect: Return D3 slain models to each friendly Helsmiths of Hashut Aelf Infantry unit.`,
-        when: [END_OF_TURN],
-      },
-    ],
-  },
-  'Arena Veterans': {
-    effects: [
-      {
-        name: `Graceful Elusion`,
-        desc: `Effect: For the rest of the phase, friendly Helsmiths of Hashut Aelf Infantry units have Ward (5+) until they have used a Fight ability.`,
-        when: [COMBAT_PHASE],
-      },
-    ],
-  },
-  'The Croneseers Pariahs (AoR)': {
-    effects: [
-      {
-        name: `Guided by Morai-Hag - Passive`,
-        desc: `Effect: Add 1 to the Rend characteristic of combat attacks made by friendly non-Hero Infantry units while they are wholly within 9" of a friendly Krethusa.`,
-        when: [COMBAT_PHASE],
-      },
-      {
-        name: `Plumes of Auspicious Smoke - Passive`,
-        desc: `Effect: Friendly Cauldron of Blood units are either empty or full. They start the battle empty. 
-        While a friendly Cauldron of Blood unit is full: 
-        That Cauldron of Blood has Ward (4+) against damage points inflicted by shooting attacks. 
-        Subtract 1 from hit rolls for shooting attacks that target friendly Croneseers Pariahs units while they are wholly within 9" of that Cauldron of Blood.`,
-        when: [DURING_GAME, SHOOTING_PHASE],
-      },
-      {
-        name: `Laden with Prophecy`,
-        desc: `Declare: Pick a friendly empty Cauldron of Blood. 
-        Effect: If any enemy models were slain this turn by that Cauldron of Bloods combat attacks, it becomes full.`,
-        when: [END_OF_TURN],
-      },
-      {
-        name: `Skilled Skirmishers - Once Per Turn`,
-        desc: `Declare: Pick a friendly Croneseers Pariahs Cavalry unit that has not charged this turn and is in combat with an enemy unit that charged this turn to be the target. 
-        Effect: Roll a dice. On 3+, the target can immediately use a Retreat ability as if it were your movement phase. In addition, no mortal damage is inflicted on the target by that Retreat ability.`,
-        when: [CHARGE_PHASE],
-      },
-      {
-        name: `The Blood Reveals All - Once Per Battle`,
-        desc: `Declare: Pick a friendly Croneseers Pariahs Hero within the combat range of a friendly empty Cauldron of Blood. Then, pick another unit within the combat range of that Hero to be the target. 
-        Effect: Roll a dice. Allocate a number of damage points to the target equal to the roll (ward rolls cannot be made for those damage points). Then, that Cauldron of Blood becomes full.`,
+        name: `Amassed Legions - Passive`,
+        desc: `Effect: Each time a friendly Helsmiths of Hashut Infantry unit with 3 daemonic power points uses the 'Rally' command, you can make 3 additional rally rolls of D6.`,
         when: [HERO_PHASE],
       },
     ],
   },
-  /*'Zainthar Kai': {
+  'Castigation Battery': {
     effects: [
       {
-        name: `Khaine's Essence`,
-        desc: `Each time a model in a friendly ZAINTHAR KAI MELUSAI unit is slain by an attack made with a melee weapon, that model can fight before it is removed from play.`,
-        when: [WOUND_ALLOCATION_PHASE],
-        rule_sources: [rule_sources.BATTLETOME_HELSMITHS_OF_HASHUT, rule_sources.ERRATA_JULY_2022],
+        name: `Experimental Munitions - Passive`,
+        desc: `Effect: Add 1 to the Attacks characteristic of ranged weapons used by friendly Helsmiths of Hashut War Machines while they have 3 daemonic power points.`,
+        when: [SHOOTING_PHASE],
       },
     ],
-  }, */
+  },
+  'The Bullfathers Horns': {
+    effects: [
+      {
+        name: `Bulls of the Ziggurat - Passive`,
+        desc: `Effect: Add 2" to the Move characteristic of friendly Helsmiths of Hashut Cavalry and Monster units while they have 3 daemonic power points.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Daemonsmith Cabal': {
+    effects: [
+      {
+        name: `Arcane Dominance - Passive`,
+        desc: `Effect: Add 1 to casting rolls, unbinding rolls, banishment rolls and chanting rolls for friendly Helsmiths of Hashut Wizards and Priests while they have 3 daemonic power points.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Taars Grand Forgehost (AoR)': {
+    effects: [
+      {
+        name: `Rising FIre - Passive`,
+        desc: `Effect: The following cumulative effects apply to friendly Grand Forgehost units in each battle round after the first:
+        Battle Round 2: Daemonic Weaponry: Those units' weapons have Crit (2 Hits).
+        Battle Round 3: Harnessed Sorcery: Add 1 to casting rolls and chanting rolls for those units.
+        Battle Round 4: Channelled Power: Attacks made by those units score critical hits on unmodified hit rolls of 5+.
+        Battle Round 5: Arcane Dominance: Add 1 to the power level of those units if they are a Wizard or Priest.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Masterful Daemonworks - Passive`,
+        desc: `Effect: Friendly Grand Forgehost War Machines have Ward (6+).`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Command Ability: Dread Ranks Unbroken - Once Per Turn`,
+        desc: `Declare: Pick a friendly non-Hero Grand Forgehost Infantry unit that has been destroyed to be the target.
+        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up), wholly within 6" of the battlefield edge and more than 9" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
+  'Ziggurat Stampede (AoR)': {
+    effects: [
+      {
+        name: `Rising FIre - Passive`,
+        desc: `Effect: Add X to charge rolls for friendly Ziggurat Stampede units, where X is the number of friendly Ziggurat Stampede units that have already charged this phase.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Break Them, One and All - Passive`,
+        desc: `Effect: Any number of friendly Ziggurat Stampede units can use the 'Power Through' command in the same turn.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Command Ability: Run Roughshod`,
+        desc: `Declare: Pick a friendly Ziggurat Stampede unit in combat to be the target.
+        Effect: For the rest of the turn:
+        The target can use Shoot and/or Fight abilities even if it used a Retreat ability in the same turn.
+        No mortal damage is inflicted on the target by Retreat abilities.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default Flavors

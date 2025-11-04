@@ -29,7 +29,7 @@ const Spells = {
       {
         name: `Protection of Hysh: Casting value of 8`,
         desc: `Declare: Pick a friendly Lumineth Realm-lords Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Until the start of your next turn, friendly units have Ward (5+) while they are wholly within 12" of the caster.`,
+        Effect: Until the start of your next turn, friendly Lumineth Realm-lords units have Ward (5+) while they are wholly within 12" of the caster.`,
         when: [HERO_PHASE],
       },
     ],

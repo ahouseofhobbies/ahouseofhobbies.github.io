@@ -707,7 +707,7 @@ const Units = {
       {
         name: `Command Ability: Vanhel's Danse Macabre - Once Per Turn`,
         desc: `Declare: Pick a friendly Deathrattle or Deadwalkers unit wholly within 12" of this unit to be the target. 
-        Effect: Roll a dice. On a 3+, the target can use 2 Fight abilities this phase. After the first is used, however, the target has Strike-last for the rest of the turn.`,
+        Effect: The target can use 2 Fight abilities this phase. After the first is used, however, the target has Strike-last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],

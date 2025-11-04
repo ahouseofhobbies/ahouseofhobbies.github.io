@@ -116,7 +116,7 @@ const CoreRules: TEntry[] = [
       },
       {
         name: `Banish Manifestation`,
-        desc: `Declare: Pick a friendly Wizard or Priest to use this ability, pick a manifestation within 30" of them that was not summoned this turn to be the target, then make a banishment roll of 2D6. Add 1 to the banishment roll for each additional enemy manifestation on the battlefield after the first.
+        desc: `Declare: Pick a friendly Wizard or Priest to use this ability, pick a manifestation within 30" of them that was not summoned this turn to be the target, then make a banishment roll of 2D6. Add 1 to the banishment roll for each additional enemy manifestation on the battlefield after the first. You cannot pick the same manifestation to be the target of this ability more than once per turn.
         Effect: If the banishment roll equals or exceeds the banishment value listed on the manifestation's warscroll, it is banished and removed from play.`,
         when: [HERO_PHASE],
         rule_sources: [meta_rule_sources.CORE_RULES_2021],

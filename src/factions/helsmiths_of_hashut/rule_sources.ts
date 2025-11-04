@@ -1,7 +1,7 @@
 import { TRuleSources } from 'meta/rule_sources'
 
 const rule_sources = {
-  BATTLETOME_HELSMITHS_OF_HASHUT: {
+  /* BATTLETOME_HELSMITHS_OF_HASHUT: {
     name: 'Battletome: Helsmiths of Hashut',
     type: 'battletome',
   },
@@ -14,7 +14,7 @@ const rule_sources = {
     name: 'Errata (December 2022)',
     type: 'errata',
     url: 'https://www.warhammer-community.com/wp-content/uploads/2019/10/4IQvpkhYMBDojDZ6.pdf',
-  },
+  }, */
 } satisfies TRuleSources
 
 export default rule_sources

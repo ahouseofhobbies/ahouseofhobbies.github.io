@@ -323,7 +323,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Bladewind: Casting value of 6`,
         desc: `Declare: If there is not a friendly Bladewind on the battlefield, pick a friendly Daughters of Khaine Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Bladewind wholly within 9" of the caster, visible to them and more than 9" from all enemy units.`,
+        Effect: Set up a Bladewind wholly within 12" of the caster, visible to them and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
@@ -335,7 +335,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Bloodwrack Viper: Casting value of 6`,
         desc: `Declare: If there is not a friendly Bloodwrack Viper on the battlefield, pick a friendly Daughters of Khaine Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Bloodwrack Viper wholly within 9" of the caster, visible to them and more than 9" from all enemy units.`,
+        Effect: Set up a Bloodwrack Viper wholly within 12" of the caster, visible to them and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
@@ -347,7 +347,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Heart of Fury: Chant value of 5`,
         desc: `Declare: If there is not a friendly Heart of Fury on the battlefield, pick a friendly Daughters of Khaine Priest to chant this prayer, then make a chanting roll of D6. 
-        Effect: Set up a Heart of Fury wholly within 9" of the chanter and visible to them.`,
+        Effect: Set up a Heart of Fury wholly within 18" of the chanter and visible to them.`,
         when: [HERO_PHASE],
       },
       {

@@ -1382,6 +1382,91 @@ const Units = {
       },
     ],
   },
+  'ROR: The Curse-Steel Battery': {
+    effects: [
+      {
+        name: `Daemonsmith: Molten Mending - Once Per Turn`,
+        desc: `Declare: Pick a friendly Helsmiths of Hashut War Machine unit wholly within 6" of this unit to be the target. Add 6" to the range of this ability for each daemonic power point this unit has.
+        Effect: Heal (D3+X) the target, where X is the number of daemonic power points this unit has.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Tormentor Bombard: Ruinous Bombardment - Once Per Turn`,
+        desc: `Declare: If this unit used a Shoot ability this turn and all of its attacks targeted the same enemy unit, that enemy unit is the target.
+        Then, you can pick a number of enemy units within 6" of the target equal to the number of daemonic power points this unit has to be additional targets.
+        Effect: Roll a dice for each target. On a 3+, that unit cannot use commands until the start of your next turn.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Tormentor Bombard: Calculated Trajectory - Passive`,
+        desc: `Effect: Add 1 to hit rolls for this unit's shooting attacks that target an enemy unit with 5 or more models that is more than 12" from this unit.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Deathshrieker Rocket Battery: Bungering Flames - Once Per Turn`,
+        desc: `Effect: For the rest of the turn, the Damage characteristic of this unit's Hashu-Zharr Rockets is 5 if the target is a Monster or a War Machine.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Deathshrieker Rocket Battery: Watch Them Burn - Reaction: You declared a Shoot ability for this unit and all of its attacks targeted the same enemy unit`,
+        desc: `Effect: Roll a number of dice equal to the number of daemonic power points this unit has for each other enemy unit within the combat range of the target of this unit's shooting attacks. For each 3+, inflict 1 mortal damage on the enemy unit being rolled for.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Reinforce Daemonsteel: Casting value of 7`,
+        desc: `Declare: Pick the Daemonsmith in this Regiment of Renown to cast this spell, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn, ignore the first damage point allocated to each friendly Helsmiths of Hashut unit in each phase while they are wholly within 12" of the caster.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Command Ability: Display of Total Power - Once Per Turn`,
+        desc: `Declare: If neither War Machine unit in this Regiment of Renown used any Shoot abilities this turn, pick an enemy unit to be the target.
+        Effect: For the rest of the turn:
+        While that enemy unit is on the battlefield, the War Machine units in this Regiment of Renown can only pick that enemy unit to be the target of their shooting attacks.
+        Each of those War Machine units counts as if it had 3 daemonic power points.
+        The first time you use this ability, you can use it without any command points being spent.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'ROR: Seeker of the Dread Dirge': {
+    effects: [
+      {
+        name: `Ashen Elder: Extract Power`,
+        desc: `Effect: If this unit is contesting an objective, a Place of Power, or a terrain feature and that objective, Place of Power or terrain feature has a friendly desolation token, give this unit 1 ritual point.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Ashen Elder: Stoked Fanaticism - Passive`,
+        desc: `Effect: Ignore the first damage point allocated to each friendly non-Hobgrot Helsmiths of Hashut unit each phase while it is wholly within 6" of this unit. Add 6" to the range of this ability for each daemonic power point this unit has.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Dominator Engine with Bane Maces: Engines of Domination - Once Per Turn`,
+        desc: `Effect: If this unit is in combat with any enemy Heroes, it can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the phase and can only be picked to use a second Fight ability if it is still in combat with any enemy Heroes.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Dominator Engine with Bane Maces: Daemonic Strength - Passive`,
+        desc: `Effect: For each daemonic power point this unit has:
+        Add 1" to its Move characteristic.
+        Add 1 to the Attacks characteristic of its weapons.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Dirge of Desolation: Chant value of 6`,
+        desc: `Declare: Pick the Ashen Elder in this Regiment of Renown to chant this prayer, pick a terrain feature on the battlefield to be the target, then make a chanting roll of D6.
+        Effect: Roll a D3 for each enemy unit contesting the target. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll. If the chanting roll was 12+, you can pick another terrain feature to be a second target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `All-Consuming Search`,
+        desc: `Declare: Pick the Ashen Elder in this Regiment of Renown to use this ability. Then, pick an objective or Place of Power that they are contesting, if that objective or Place of Power has a friendly desolation token and has not been picked to be the target of this ability this battle to be the target.
+        Effect: Roll 6 dice. For each 5+, give this unit 1 ritual point.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')
