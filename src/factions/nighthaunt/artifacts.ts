@@ -134,7 +134,7 @@ const Artifacts = {
     effects: [
       {
         name: `Amulet of Waking Nightmares`,
-        desc: `Declare: Pick a visible enemy Hero within 18" of this unit to be the target. 
+        desc: `Declare: Pick an enemy Hero within 18" of this unit to be the target. 
         Effect: Roll a dice. On a 3+, for the rest of the turn, the target cannot be affected by the Guarded Hero ability or the Obscuring terrain ability.`,
         when: [HERO_PHASE],
       },

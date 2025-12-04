@@ -843,7 +843,7 @@ const Units = {
     effects: [
       {
         name: `Ancient Barrow Curse - Passive`,
-        desc: `Effect: If an attack made with this unit's King's Relic Weapon scores a critical hit, the target unit becomes cursed for the rest of the battle. Subtract 1 from save rolls for cursed units.`,
+        desc: `Effect: If an attack made with this unit's King's Relic Weapon scores a critical hit, the target unit becomes cursed for the rest of the battle. Subtract 1 from save rolls for cursed units even if this unit has been destroyed.`,
         when: [COMBAT_PHASE],
       },
       {

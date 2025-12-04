@@ -51,6 +51,24 @@ const Flavors = {
       },
     ],
   },
+  'Domination Force': {
+    effects: [
+      {
+        name: `Dominion Hexes - Passive`,
+        desc: `Effect: Double the Health characteristic of friendly non-Hobgrot Helsmiths of Hashut units for the purposes of the Power Through command.`,
+        when: [END_OF_TURN],
+      },
+    ],
+  },
+  'Industrial Polluters': {
+    effects: [
+      {
+        name: `Smog and Smoke - Passive`,
+        desc: `Effect: Subtract 1 from hit rolls for shooting attacks that target friendly Helsmiths of Hashut Infantry or Cavalry units while they are wholly within 9" of a friendly Helsmiths of Hashut War Machine.`,
+        when: [SHOOTING_PHASE],
+      },
+    ],
+  },
   'Taars Grand Forgehost (AoR)': {
     effects: [
       {

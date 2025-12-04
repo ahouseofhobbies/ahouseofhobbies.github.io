@@ -237,8 +237,8 @@ const Units = {
       //  UnflaggingHunterEffect,
       {
         name: `Stalk the Prey`,
-        desc: `Declare: Pick this unit and up to 1 friendly Flesh Hounds unit to be the targets.
-        Effect: Remove the targets from the battlefield and set them up again on the battlefield more than 6" from this unit's quarry and more than 9" from all other enemy units. If picked to be a target, the unit of Flesh Hounds must also be set up wholly within 12" of this unit.`,
+        desc: `Declare: If this units quarry is on the battlefield, pick this unit and up to 1 friendly Flesh Hounds unit to be the targets. 
+        Effect: Remove the targets from the battlefield and set them up again on the battlefield more than 6" from this units quarry and more than 9" from all other enemy units. If picked to be a target, the unit of Flesh Hounds must also be set up wholly within 12" of this unit.`,
         when: [MOVEMENT_PHASE],
       },
       {

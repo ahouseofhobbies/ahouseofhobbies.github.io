@@ -106,6 +106,26 @@ const Units = {
       },
     ],
   },
+  'War Despot (SoG)': {
+    effects: [
+      {
+        name: `Daemonfire Pistol - Once Per Turn`,
+        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the enemy target. Then, you can pick a friendly Helsmiths of Hashut Infantry unit in combat with the enemy target to be the friendly target. 
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the enemy target equal to the roll. 
+        If there is a friendly target, for the rest of the turn: 
+        It can use a Retreat ability and still use Shoot and/or Charge abilities later in the turn. 
+        Add 2" to the distance it can move when using Retreat abilities. 
+        No mortal damage is inflicted on it by Retreat abilities.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Triumph or Perish, You Vermin! - Passive`,
+        desc: `Effect: While this unit has any daemonic power points, friendly nonHobgrot Helsmiths of Hashut units, excluding War Despots, with 0 daemonic power points count as having 1 daemonic power point while they are wholly within 9" of and visible to this unit. 
+        Add 3" to the range of this ability while this unit has 2 daemonic power points. Add 6" to the range of this ability instead while this unit has 3 daemonic power points.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
   'Ashen Elder': {
     effects: [
       {
@@ -193,6 +213,31 @@ const Units = {
       {
         name: `Sacred Gongs - Passive`,
         desc: `Effect: This unit's Gong Carriers are tokens. There is 1 Gong Carrier for every Musician in this unit. If this unit uses the 'Rally' command, as a reaction, you can remove a Gong Carrier to make an additional rally roll of D6.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Daemonic Resilience - Passive`,
+        desc: `Effect: Apply the effect below that corresponds with the number of daemonic power points (DPP) this unit has:
+        DPP Effect:
+        1: This unit has Ward (6+). 
+        2: This unit has Ward (5+).
+        3: This unit has Ward (4+) against damage inflicted by Spells, Prayers and abilities used by Manifestations. Otherwise, it has Ward (5+).`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  'Infernal Cohort with Hashutite Blades (SoG)': {
+    effects: [
+      {
+        name: `Take Up Their Arms - Once Per Turn`,
+        desc: `Declare: Pick another visible friendly non-Hobgrot Helsmiths of Hashut Infantry unit, Deathshrieker Rocket Battery or Tormentor Bombard within 12" of this unit to be the target. 
+        Effect: Remove up to 3 models from this unit. Then, if the target is an Infantry unit, return a number of slain models to the target equal to the number of models you removed from this unit. If the target is a War Machine, heal a number of damage points allocated to the target equal to the number of models you removed from this unit. 
+        Models removed from this unit by this ability cannot be returned to this unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Sanctified Gongs - Passive`,
+        desc: `Effect: This units Gong Carriers are tokens. There is 1 Gong Carrier for every musician in this unit. If this unit uses the Rally command, make 2 additional rally rolls of D6 for each Gong Carrier in this unit, but for each unmodified rally roll of 1, you must remove a Gong Carrier from this unit after the command has been resolved.`,
         when: [HERO_PHASE],
       },
       {

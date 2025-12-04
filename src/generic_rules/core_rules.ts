@@ -109,9 +109,9 @@ const CoreRules: TEntry[] = [
         rule_sources: [meta_rule_sources.CORE_RULES_2021],
       },
       {
-        name: `Sacred Rites - Prayer (UNLIMITED)`,
+        name: `Sacred Rites: Chant value of 2 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Priest to use this ability, then make a chanting roll of D6. On an unmodified chanting roll of 1, remove 1 ritual point from that Priest instead of D3.
-        Effect: Give a number of ritual points to the Priest equal to the chanting roll.`,
+        Effect: Give a number to ritual points to the Priest equal to the unmodified chanting roll and do not reset the Priests ritual points to 0.`,
         when: [HERO_PHASE],
       },
       {
