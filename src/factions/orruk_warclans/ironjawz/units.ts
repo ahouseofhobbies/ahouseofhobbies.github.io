@@ -374,7 +374,7 @@ const IronjawzUnits = {
       },
       {
         name: `Ward-Smashing Choppa - Passive`,
-        desc: `Effect: If an attack made with this units Ward-Smashing Choppa scores a hit, the target has the Ward-Smashed keyword for the rest of the battle. Ward rolls cannot be made for a Ward-Smashed unit.`,
+        desc: `Effect: If an attack made with this units Ward-Smashing Choppa scores a hit, the target has the Ward-Smashed keyword for the rest of the battle. Ward rolls cannot be made for a Ward-Smashed unit even if this unit has been destroyed.`,
         when: [COMBAT_PHASE],
       },
     ],

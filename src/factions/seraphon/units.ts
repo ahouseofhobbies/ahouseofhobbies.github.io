@@ -242,9 +242,9 @@ const Units = {
         when: [HERO_PHASE],
       },
       {
-        name: `Celestial Reinforcements - Once Per Turn`,
+        name: `Command Ability - Celestial Reinforcements - Once Per Turn`,
         desc: `Declare: Pick a friendly Seraphon unit that started the battle with 3 or more models and that has been destroyed to be the target. 
-        Effect: Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
+        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
     ],
@@ -973,6 +973,26 @@ const Units = {
         desc: `Effect: Each time this unit uses a Shoot ability, you must pick either its Glob of Flame Acid or its Stream of Fire ranged weapon. 
         In addition, after resolving shooting attacks made with this units Glob of Flame Acid, if any damage points were allocated to an enemy unit by those attacks, subtract 1 from save rolls for that enemy unit for the rest of the turn.`,
         when: [SHOOTING_PHASE],
+      },
+    ],
+  },
+  'Sunblood Pack': {
+    effects: [
+      {
+        name: `Scaled Protectors - Passive`,
+        desc: `Effect: Ignore negative and positive modifers to save rolls for this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Starspawned - Passive`,
+        desc: `Effect: Ignore the first damage point that would be allocated to friendly Saurus and Kroxigor units each phase while they are wholly within 12" of this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Venomite Swarm - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: If this unit's Venmoites token is on the battlefield, roll a D3. On a 1, remove this unit's Venomites token from the battlefield. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

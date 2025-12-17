@@ -14,7 +14,7 @@ const Spells = {
       },
       {
         name: `Ashen Smog: Casting value of 7`,
-        desc: `Declare: Pick a friendly Helsmiths of Hashut Wizard to cast this spell, pick a terrain feature within 18" of them that has a desolation token to be the target, then make a casting roll of 2D6.
+        desc: `Declare: Pick a friendly Helsmiths of Hashut Wizard to cast this spell, pick a visbile terrain feature within 18" of them that has a friendly desolation token to be the target, then make a casting roll of 2D6.
         Effect: That terrain feature has the 'Obscuring' ability (Terrain, 1.2) until the start of your next turn. Then, roll a D3 for each enemy unit contesting the target terrain feature. On a 2+, inflict an amount of damage equal to the roll on that unit.`,
         when: [HERO_PHASE],
       },
@@ -61,7 +61,7 @@ const Spells = {
         desc: `Declare: Pick a friendly Ziggurat Stampede Wizard to cast this spell, pick a terrain feature within 18" of them to be the target, then make a casting roll of 2D6.
         Effect: If the target has a Health characteristic, inflict 2D3 mortal damage on it. Then, if the target was not destroyed or does not have a Health characteristic:
         The target gains the 'Obscuring' terrain ability for the rest of the battle (Terrain, 1.2).
-        Give the target a desolation token.`,
+        If the target is Faction Terrain, until the start of your next turn, abilities on that terrain features warscroll have no effect.`,
         when: [HERO_PHASE],
       },
     ],

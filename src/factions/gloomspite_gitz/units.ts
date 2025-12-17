@@ -418,7 +418,7 @@ const Units = {
       },
       {
         name: `Spinning Loons - Once Per Turn`,
-        desc: `Effect: This unit can move 2D6". It can move through the combat ranges of enemy units and can finish that move in combat.`,
+        desc: `Effect: If this unit was not set up this phase, this unit can move 2D6". It can move through the combat ranges of enemy units and can finish that move in combat.`,
         when: [END_OF_TURN],
       },
     ],
@@ -1045,7 +1045,7 @@ const Units = {
     effects: [
       {
         name: `Careening Destruction - Once Per Turn`,
-        desc: `Effect: This unit can move a distance up to its Move characteristic. It can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat. Then, pick up to 1 enemy Infantry or Cavalry unit that this unit passed across during that move to be the target. Inflict D3 mortal damage on the target. Add 1 to the amount of mortal damage inflicted for each model in this unit.`,
+        desc: `Effect: If this unit is in combat, it can move a distance up to its Move characteristic. It can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat. Then, pick up to 1 enemy Infantry or Cavalry unit that this unit passed across during that move to be the target. Inflict D3 mortal damage on the target. Add 1 to the amount of mortal damage inflicted for each model in this unit.`,
         when: [MOVEMENT_PHASE],
       },
     ],

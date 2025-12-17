@@ -42,7 +42,7 @@ const Prayers = {
       {
         name: `Lava Storm: Chant value of 5`,
         desc: `Declare: Pick a friendly Grand Forgehost Priest to chant this prayer. Pick an enemy unit to be the target, roll 6 dice. For each 6, pick an additional enemy unit to be a target. Then make a chanting roll of D6.
-        Effect: Inflict D3 mortal damage on each target. The same target cannot be picked more than once in the same phase. If the chanting roll was 7+, instead of rolling 6 dice, roll an amount of dice equal to the chanting roll.`,
+        Effect: If the chanting roll was 7+, pick an additional enemy unit to be a target. Inflict D3 mortal damage on each target.`,
         when: [HERO_PHASE],
       },
     ],

@@ -396,7 +396,7 @@ const Units = {
   'Lord of Afflictions': {
     effects: [
       {
-        name: `Vectors of Foulest Contagion`,
+        name: `Vectors of Foulest Contagion - Once Per Turn`,
         desc: `Declare: Pick up to 3 enemy units in combat with this unit to be the targets. 
         Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [COMBAT_PHASE],
@@ -1130,7 +1130,7 @@ const Units = {
       },
       {
         name: `All-Consuming Search`,
-        desc: `Declare: Pick the Ashen Elder in this Regiment of Renown to use this ability. Then, pick an objective or Place of Power that they are contesting, if that objective or Place of Power has a friendly desolation token and has not been picked to be the target of this ability this battle to be the target.
+        desc: `Declare: Pick the Ashen Elder in this Regiment of Renown to use this ability. Then, pick an objective or Place of Power that they are contesting and that has not been picked to be the target of this ability this battle to be the target, if that objective or Place of Power has a friendly desolation token and has not been picked to be the target of this ability this battle to be the target.
         Effect: Roll 6 dice. For each 5+, give this unit 1 ritual point.`,
         when: [END_OF_TURN],
       },

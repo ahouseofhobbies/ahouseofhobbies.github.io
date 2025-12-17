@@ -896,10 +896,10 @@ const Units = {
       {
         name: `Sigmar's Will: Chant value of 4`,
         desc: `Declare: Make a chanting roll of D6. If the roll is an unmodified 1, you can reroll the dice. 
-        Effect: Pick 1 of the following effects to apply until the start of your next turn. Pick up to 2 different effects instead if the chanting roll was 10+. 
+        Effect: Pick 1 of the following effects. Pick up to 2 different effects instead if the chanting roll was 10+. 
         Hallowed Ground: Until the start of your next turn, enemy units using the Normal Move ability cannot end that move within 5" of a friendly Cities of Sigmar Human unit while it is wholly within 12" of this unit. 
         Fervent Prayers: Until the start of your next turn, each time a friendly Cities of Sigmar Human model is slain by a combat attack while it is wholly within 12" of this unit and that model was in combat with the attacking unit, roll a dice. On a 6, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved. 
-        Salvation: If you are the active player, pick up to 3 friendly Cities of Sigmar Human units that are more than 12" from this unit and not in combat to be the targets. Remove those units from the battlefield and set them up again wholly within 12" of this unit and more than 9" from all enemy units. Those units cannot use Charge abilities for the rest of the turn`,
+        Salvation: Pick 1 friendly Cities of Sigmar Human unit that is more than 12" from this unit and not in combat to be the target. Remove the target from the battlefield and set it up again wholly within 12" of this unit and more than 9" from all enemy units. That unit cannot use Charge abilities for the rest of the turn.`,
         when: [HERO_PHASE],
       },
       {

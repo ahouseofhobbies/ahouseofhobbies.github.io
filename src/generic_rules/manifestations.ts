@@ -442,7 +442,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Sanctum of Amyntok: Casting value of 4`,
         desc: `Declare: If there is not a friendly Sanctum of Amyntok on the battlefield, pick a friendly Lumineth Realm-lords Wizard to cast this spell, pick a visible friendly Lumineth Realm-lords Infantry Hero wholly within 12" of them and more than 3" from all other units and terrain features to be the target, then make a casting roll of 2D6. 
-        Effect: Set up a Sanctum of Amyntok within the targets combat range, visible to the caster and more than 3" from all enemy units. A Sanctum of Amyntok has 3 parts that must be set up touching each other so that they form a ring with the target inside`,
+        Effect: Set up a Sanctum of Amyntok within the targets combat range, visible to the caster and more than 3" from all enemy units. A Sanctum of Amyntok has 3 parts that must be set up with the tip of each part touching the tip of another part so that the three parts form a ring with the target inside.`,
         when: [HERO_PHASE],
       },
       {
@@ -486,7 +486,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Mesmerising Mirror: Casting value of 6`,
         desc: `Declare: If there is not a friendly Mesmerising Mirror on the battlefield, pick a friendly Hedonites of Slaanesh Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Mesmerising Mirror wholly within 12" of the caster and visible to them.`,
+        Effect: Set up a Mesmerising Mirror wholly within 18" of the caster and visible to them and more than 3" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
@@ -584,7 +584,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Spiteswarm Hive: Casting value of 7`,
         desc: `Declare: If there is not a friendly Spiteswarm Hive on the battlefield, pick a friendly Sylvaneth Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Spiteswarm Hive wholly within 9" of the caster, visible to them and more than 3" from all enemy units.`,
+        Effect: Set up a Spiteswarm Hive wholly within 18" of and visible to the caster, and more than 3" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
@@ -598,7 +598,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Gladewyrm: Casting value of 7`,
         desc: `Declare: If there is not a friendly Gladewyrm on the battlefield, pick a friendly Sylvaneth Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Gladewyrm wholly within 9" of the caster, visible to them and more than 9" from all enemy units.`,
+        Effect: Set up a Gladewyrm wholly within 12" of and visible to the caster, and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
@@ -615,7 +615,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Vengeful Skullroot: Casting value of 7`,
         desc: `Declare: If there is not a friendly Vengeful Skullroot on the battlefield, pick a friendly Sylvaneth Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Vengeful Skullroot wholly within 9" of the caster, visible to them and more than 9" from all enemy units.`,
+        Effect: Set up a Vengeful Skullroot wholly within 12" of and visible to the caster, and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
@@ -878,7 +878,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Shyish Reaper: Casting value of 6`,
         desc: `Declare: If there is not a friendly Shyish Reaper on the battlefield, pick a friendly Nighthaunt Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Shyish Reaper wholly within 9" of the caster, visible to them and more than 9" from all enemy units.`,
+        Effect: Set up a Shyish Reaper wholly within 12" of and visible to the caster, and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
@@ -1059,7 +1059,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Hand of Nagash: Casting value of 7`,
         desc: `Declare: If there is not a friendly Hand of Nagash on the battlefield, pick a friendly Soulblight Gravelords Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Hand of Nagash wholly within 18" of the caster, visible to them and more than 9" from all enemy units.`,
+        Effect: Set up a Hand of Nagash wholly within 12" of and visible to the caster and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
@@ -1079,7 +1079,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Unholy Reliquary: Casting value of 6`,
         desc: `Declare: If there is not a friendly Unholy Reliquary on the battlefield, pick a friendly Soulblight Gravelords Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up an Unholy Reliquary wholly within 18" of the caster.`,
+        Effect: Set up an Unholy Reliquary wholly within 18" of the caster, visible to them and more than 3" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
@@ -1093,7 +1093,7 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Sanguine Swarm: Casting value of 6`,
         desc: `Declare: If there is not a friendly Sanguine Swarm on the battlefield, pick a friendly Soulblight Gravelords Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Sanguine Swarm wholly within 18" of the caster and more than 9" from all enemy units. A Sanguine Swarm endless spell has 2 parts that must be set up within 9" of each other.`,
+        Effect: Set up a Sanguine Swarm wholly within 12" of and visible to the caster and more than 9" from all enemy units. A Sanguine Swarm endless spell has 2 parts that must be set up within 9" of each other.`,
         when: [HERO_PHASE],
       },
       {

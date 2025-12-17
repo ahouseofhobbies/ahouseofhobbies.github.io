@@ -109,7 +109,7 @@ const Flavors = {
         name: `Command Ability: Run Roughshod`,
         desc: `Declare: Pick a friendly Ziggurat Stampede unit in combat to be the target.
         Effect: For the rest of the turn:
-        The target can use Shoot and/or Fight abilities even if it used a Retreat ability in the same turn.
+        The target can use Shoot and/or Charge abilities even if it used a Retreat ability in the same turn.
         No mortal damage is inflicted on the target by Retreat abilities.`,
         when: [MOVEMENT_PHASE],
       },

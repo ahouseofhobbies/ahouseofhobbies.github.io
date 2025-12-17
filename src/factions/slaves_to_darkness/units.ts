@@ -642,7 +642,7 @@ const Units = {
       {
         name: `Ruin-Blessed Conqueror - Once Per Turn`,
         desc: `Declare: Pick an objective that this unit is contesting. 
-        Effect: Roll a dice. On a 3+, for the rest of the turn, other friendly Darkoath units have Ward (5+) while they are contesting that objective.`,
+        Effect: Roll a dice. On a 3+, for the rest of the turn, friendly Darkoath units have Ward (5+) while they are contesting that objective.`,
         when: [HERO_PHASE],
       },
       {
@@ -1909,7 +1909,7 @@ const Units = {
       },
       {
         name: `All-Consuming Search`,
-        desc: `Declare: Pick the Ashen Elder in this Regiment of Renown to use this ability. Then, pick an objective or Place of Power that they are contesting, if that objective or Place of Power has a friendly desolation token and has not been picked to be the target of this ability this battle to be the target.
+        desc: `Declare: Pick the Ashen Elder in this Regiment of Renown to use this ability. Then, pick an objective or Place of Power that they are contesting and that has not been picked to be the target of this ability this battle to be the target, if that objective or Place of Power has a friendly desolation token and has not been picked to be the target of this ability this battle to be the target.
         Effect: Roll 6 dice. For each 5+, give this unit 1 ritual point.`,
         when: [END_OF_TURN],
       },

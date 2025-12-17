@@ -146,7 +146,7 @@ const Units = {
       },
       {
         name: `Long Live the King - Passive`,
-        desc: `Effect: If this unit would be destroyed, before removing it from play, friendly non-Unique Flesh-eater Courts units wholly within 12" of this unit become enraged until the start of your next turn. Melee weapons used by friendly enraged units have Crit (Auto-wound) and score critical hits on unmodified hit rolls of 5+.`,
+        desc: `Effect: If this unit would be destroyed, before removing it from play, friendly non-Unique Flesh-eater Courts units wholly within 12" of this unit become enraged until the start of your next turn. Melee weapons used by friendly enraged units have Crit (Auto-wound) and score critical hits on unmodified hit rolls of 5+, even if this unit has been destroyed.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -1125,7 +1125,7 @@ const Units = {
   'ROR: Casket of Resurrections': {
     effects: [
       {
-        name: `Dark Resurrection`,
+        name: `Dark Resurrection - Once Per Turn`,
         desc: `Declare: If any damage points were allocated to an enemy unit by this unit's combat attacks this turn and that enemy unit was destroyed this turn, pick a friendly non-Unique Death Infantry Hero that has been destroyed to be the target.
         Effect: Set up a replacement unit identical to the target wholly within 12" of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit.`,
         when: [END_OF_TURN],

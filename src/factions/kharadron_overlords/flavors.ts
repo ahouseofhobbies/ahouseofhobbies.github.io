@@ -128,8 +128,8 @@ const Flavors = {
       },
       {
         name: `Cutting-Edge Endrinpacks - Once Per Turn`,
-        desc: `Declare: Pick up to D3 friendly Magnate's Crew Infantry units that are wholly within 9" of a friendly Magnate's Crew Skyvessel to be the targets.
-        Effect: Double the targets' Move characteristic for the rest of the turn.`,
+        desc: `Declare: Pick up to 2 friendly Magnate's Crew Infantry units that are wholly within 9" of a friendly Magnate's Crew Skyvessel to be the targets.
+        Effect: For the rest of the turn, each target can use Charge abilities even if it used a Run abilty in the same turn.`,
         when: [MOVEMENT_PHASE],
       },
       {

@@ -330,7 +330,8 @@ const Units = {
     effects: [
       {
         name: `All Must Burn - Passive`,
-        desc: `Effect: When picking targets for this unit's shooting attacks, if you pick more than 1 unit to be the target of those attacks, add 2 to the Attacks characteristic of this unit's Immolation Cannons for each target picked. However, those additional attacks must be split evenly between the targets picked.`,
+        desc: `Declare: Pick any number of visible enemy units within 8" of this unit to be the targets. 
+        Effect: For the rest of the turn, add 2 to the Attacks characteristic of this units Immolation Cannons for each unit picked to be the target of this ability, but each time this unit uses a Shoot ability, it must target each of those units with at least 3 of its attacks.`,
         when: [SHOOTING_PHASE],
       },
       {

@@ -547,7 +547,7 @@ const Units = {
   Pyregheists: {
     effects: [
       {
-        name: `Light a Pyre`,
+        name: `Light a Pyre - Once Per Turn`,
         desc: `Declare: If this unit is contesting an objective, pick a visible enemy unit within 6" of this unit to be the target. 
         Effect: Roll a D3. On a 2+: 
         Inflict an amount of mortal damage on the target equal to the roll. 

@@ -127,7 +127,7 @@ const Flavors = {
       {
         name: `Born of Butchery - Once Per Turn`,
         desc: `Declare: Pick a friendly Baleful Lords unit that has been destroyed to be the target.
-          Effect: Roll a number of dice equal to the number of units (friendly and enemy) that have been destroyed this battle. If the roll contains 8 or more results of 4+, set up a replacement unit identical to the target anywhere on the battlefield more than 9" from all enemy units.`,
+          Effect: Roll a number of dice equal to the current battle round number plus the number of units (friendly and enemy) that have been destroyed this battle. If the roll contains 8 or more results of 3+, set up a replacement unit identical to the target on the battlefield, more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
       {

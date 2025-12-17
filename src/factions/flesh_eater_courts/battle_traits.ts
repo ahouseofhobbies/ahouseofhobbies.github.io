@@ -84,7 +84,7 @@ const BattleTraits = {
       },
       {
         name: `Charnel Throne (Faction Terrian) - Ruler of All They Survey`,
-        desc: `Declare: If this terrain feature has a Steward, pick a visible friendly non-Hero Flesh-Eater Courts unit to be the target.
+        desc: `Declare: If this terrain feature has a Steward, pick a visible friendly non-Hero Flesh-Eater Courts unit that is not in combat to be the target.
         Effect: The target can move D3". If the target was set up this turn, it can move D6" instead. It cannot move into combat during that move.`,
         when: [MOVEMENT_PHASE],
       },

@@ -41,7 +41,7 @@ const IronjawzPrayers = {
         name: `Get 'Em, Gork!: Chanting value of 5 (UNLIMITED)`,
         desc: `Declare: Pick a friendly Zoggrok's Ironmongerz Priest to chant this prayer, then make a chanting roll of D6.
           Effect: If the chanting roll was 5-9, pick a visible terrain feature wholly within 12" of the chanter. If the chanting roll was 10+, pick a visible terrain feature wholly within 18" of the chanter instead. That terrain feature is trampled by Gork for the rest of the battle.
-          Roll a D3 each time an enemy unit starts or ends a move within 6" of a terrain feature that is trampled by Gork. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
+          Roll a D3 each time an enemy unit ends a move within 6" of a terrain feature that is trampled by Gork. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.`,
         when: [HERO_PHASE],
       },
     ],

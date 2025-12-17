@@ -21,14 +21,13 @@ const BattleTraits = {
   [KHORNE]: {
     effects: [
       {
-        name: `Blood-Drenched - Once Per Battle`,
-        desc: `Declare: You can use this ability if at least half the number of units on both players' army rosters combined (rounding up) have been destroyed. For example, if your roster had 9 units and your opponent's roster had 4 units, then 7 units would need to have been destroyed.
-        Effect: The following effects apply for the rest of the battle:
-        Wild-eyed Brutality: Ignore positive modifiers to save rolls for friendly Blades of Khorne units.
-        Blood Haze: Blood-hungry weapons used by friendly Bloodbound units have Crit (Mortal).
-        Weapons of Murder: Add 1 to the Rend characteristic of Blood-hungry weapons used by friendly Blades of Khorne non-Monster Daemon units, including Blood-hungry Companion weapons.
-        Bloodlords Supreme: Add 1 to the Damage characteristic of Blood-hungry weapons used by friendly Blades of Khorne Monster units.`,
-        when: [HERO_PHASE],
+        name: `Blood-Drenched - Reaction: You declared the Skulls for the Skull Throne ability`,
+        desc: `Effect: After that ability has been resolved, if you unlocked a Blood Tithe ability this turn, pick a friendly Blades of Khorne unit to be the target. The following effects apply to the target for the rest of the battle: 
+        Wild-eyed Brutality: Ignore positive modifiers to save rolls for the target. 
+        Blood Haze: If the target is Bloodbound, its Blood-hungry weapons have Crit (Mortal). 
+        Weapons of Murder: If the target is a non-Monster Daemon unit, add 1 to the Rend characteristic of its Bloodhungry weapons, including Blood-hungry Companion weapons. 
+        Bloodlords Supreme: If the target is a Monster, add 1 to the Damage characteristic of its Blood-hungry weapons.`,
+        when: [START_OF_TURN],
       },
       {
         name: `Blood for the Blood God - Passive`,

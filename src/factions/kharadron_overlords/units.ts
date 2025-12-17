@@ -319,7 +319,7 @@ const Units = {
   Skywardens: {
     effects: [
       {
-        name: `Timed Charges`,
+        name: `Timed Charges - Once Per Turn`,
         desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
         Effect: Roll a D3. On a 2+: 
         Inflict an amount of mortal damage on the target equal to the roll. 
@@ -531,7 +531,7 @@ const Units = {
   'Vongrim Harpoon Crew': {
     effects: [
       {
-        name: `Light Endrinpacks`,
+        name: `Light Endrinpacks - Once Per Turn`,
         desc: `Effect: If this unit is in combat, it can move 2D6" but must end that move in combat.`,
         when: [COMBAT_PHASE],
       },
@@ -540,7 +540,7 @@ const Units = {
   'Vongrim Salvagers': {
     effects: [
       {
-        name: `Spotter's Flaregun`,
+        name: `Spotter's Flaregun - Once Per Turn`,
         desc: `Declare: Pick an objective within 9" of this unit to be the target.
         Effect: Roll a dice. On a 3+, apply the following effects for the rest of the turn:
         Add 1 to hit rolls for combat attacks made by friendly Skyfarer units that target a unit that is contesting the target objective.

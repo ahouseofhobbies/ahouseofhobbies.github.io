@@ -142,9 +142,9 @@ const Units = {
         when: [COMBAT_PHASE],
       },
       {
-        name: `Locus of Slaanesh`,
+        name: `Command Ability - Locus of Slaanesh`,
         desc: `Declare: Pick a friendly Hedonites of Slaanesh Daemon unit that started the battle with 3 or more models and has been destroyed to be the target. 
-        Effect: Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
+        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
         when: [HERO_PHASE],
       },
       {
@@ -1347,7 +1347,7 @@ const Units = {
       },
       {
         name: `All-Consuming Search`,
-        desc: `Declare: Pick the Ashen Elder in this Regiment of Renown to use this ability. Then, pick an objective or Place of Power that they are contesting, if that objective or Place of Power has a friendly desolation token and has not been picked to be the target of this ability this battle to be the target.
+        desc: `Declare: Pick the Ashen Elder in this Regiment of Renown to use this ability. Then, pick an objective or Place of Power that they are contesting and that has not been picked to be the target of this ability this battle to be the target, if that objective or Place of Power has a friendly desolation token and has not been picked to be the target of this ability this battle to be the target.
         Effect: Roll 6 dice. For each 5+, give this unit 1 ritual point.`,
         when: [END_OF_TURN],
       },

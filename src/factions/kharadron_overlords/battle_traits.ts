@@ -41,7 +41,7 @@ const BattleTraits = {
       {
         name: `The Flagship - Once Per Battle`,
         desc: `Declare: Pick a friendly Skyvessel to be the target. The target can be in reserve.
-        Effect: The target has the Flagship keyword for the rest of the battle. Give the target 1 Great Endrinwork.`,
+        Effect: The target has the Flagship keyword for the rest of the battle. If the target does not have a Great Endrinwork, give the target 1 Great Endrinwork.`,
         when: [DURING_SETUP],
       },
       {

@@ -287,7 +287,7 @@ const Units = {
     effects: [
       {
         name: `The Blood Must Flow - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly Bloodletters unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, for the rest of the turn, add 1 to hit rolls for combat attacks made by this unit and that friendly Bloodletters unit.`,
+        desc: `Effect: Pick a friendly Bloodletters unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. For the rest of the turn, add 1 to hit rolls for combat attacks made by this unit and that friendly Bloodletters unit.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -1315,7 +1315,7 @@ const Units = {
       },
       {
         name: `All-Consuming Search`,
-        desc: `Declare: Pick the Ashen Elder in this Regiment of Renown to use this ability. Then, pick an objective or Place of Power that they are contesting, if that objective or Place of Power has a friendly desolation token and has not been picked to be the target of this ability this battle to be the target.
+        desc: `Declare: Pick the Ashen Elder in this Regiment of Renown to use this ability. Then, pick an objective or Place of Power that they are contesting and that has not been picked to be the target of this ability this battle to be the target, if that objective or Place of Power has a friendly desolation token and has not been picked to be the target of this ability this battle to be the target.
         Effect: Roll 6 dice. For each 5+, give this unit 1 ritual point.`,
         when: [END_OF_TURN],
       },

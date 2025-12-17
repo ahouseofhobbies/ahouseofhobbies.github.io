@@ -20,7 +20,8 @@ const Artifacts = {
         Effect: For the rest of the turn:
         The target has Ward (2+).
         The target cannot use non-passive abilities or be picked to be the target of friendly abilities.
-        Enemy units can ignore the target for the purposes of movement, charging or setting up on the battlefield.`,
+        Enemy units can ignore the target's combat range for the purposes of movement and charging.
+        Enemy units can ignore the target for the purposes of setting up on the battlefield but cannot be set up on the target.`,
         when: [HERO_PHASE],
       },
     ],

@@ -1803,7 +1803,7 @@ const Units = {
   'ROR: Casket of Resurrections': {
     effects: [
       {
-        name: `Dark Resurrection`,
+        name: `Dark Resurrection - Once Per Turn`,
         desc: `Declare: If any damage points were allocated to an enemy unit by this unit's combat attacks this turn and that enemy unit was destroyed this turn, pick a friendly non-Unique Death Infantry Hero that has been destroyed to be the target.
         Effect: Set up a replacement unit identical to the target wholly within 12" of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit.`,
         when: [END_OF_TURN],
