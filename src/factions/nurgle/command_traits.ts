@@ -64,18 +64,22 @@ const CommandTraits = {
   'Overpowering Stench': {
     effects: [
       {
-        name: `Overpowering Stench - Reaction: Opponent declared a Command for a unit in combat with this unit`,
-        desc: `Effect: Roll a dice. On a 5+, that command has no effect. The command still counts as having been used and the command points spent to use the command are still lost.`,
-        when: [DURING_GAME],
+        name: `Overpowering Stench`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: You and your opponent must roll off. If your roll is higher, pick 1 of the following effects to apply for the rest of the turn:
+        Ignore positive modifiers to save rolls for the target.
+        Subtract 1 from ward rolls for the target.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
   'Gift of Febrile Frenzy': {
     effects: [
       {
-        name: `Gift of Febrile Frenzy - Passive`,
-        desc: `Effect: Add 1" to the Move characteristic of friendly Maggotkin of Nurgle units that do not have Fly if they are wholly within 12" of this unit at the start of the move.`,
-        when: [MOVEMENT_PHASE],
+        name: `Gift of Febrile Frenzy`,
+        desc: `Declare: Pick a visible friendly non-Hero Maggotkin of Nurgle unit that is wholly within 12" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
@@ -83,7 +87,7 @@ const CommandTraits = {
     effects: [
       {
         name: `Grandfathers Blessing`,
-        desc: `Effect: If this unit is in combat with a Diseased enemy unit, Heal (D6) this unit.`,
+        desc: `Effect: If this unit is in combat with a Diseased enemy unit, Heal (D3) this unit.`,
         when: [END_OF_TURN],
       },
     ],
@@ -114,6 +118,24 @@ const CommandTraits = {
         desc: `Declare: If this unit charged this turn, pick a visible enemy unit within 1" of it to be the target. 
         Effect: Roll a number of dice equal to this units Move characteristic. For each 3+, inflict 1 mortal damage on the target. If any damage points were allocated to the target by this ability, this unit can move 2D3". It can move through the combat ranges of enemy units but must end that move in combat with the units it was already in combat with at the start of the move.`,
         when: [CHARGE_PHASE],
+      },
+    ],
+  },
+  'Cycle of Corruption (AoR)': {
+    effects: [
+      {
+        name: `Utterly Disgusting (AoR) - Passive`,
+        desc: `Effect: Subtract 1 from hit rolls for attacks that target this unit.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+    ],
+  },
+  'The Gardeners of Nurgle (AoR)': {
+    effects: [
+      {
+        name: `Foetid Orchardist (AoR) - Passive`,
+        desc: `Effect: Add 1 to hit rolls for this unit's combat attacks while it is wholly within 7" of any friendly Feculent Gnarlmaws.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },

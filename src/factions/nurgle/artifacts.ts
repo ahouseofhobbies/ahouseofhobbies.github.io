@@ -5,6 +5,7 @@ import {
   END_OF_COMBAT_PHASE,
   END_OF_MOVEMENT_PHASE,
   HERO_PHASE,
+  MOVEMENT_PHASE,
   SAVES_PHASE,
   START_OF_BATTLESHOCK_PHASE,
   START_OF_COMBAT_PHASE,
@@ -15,7 +16,7 @@ import spells from './spells'
 import { TItemDescriptions } from 'factions/factionTypes'
 
 const Artifacts = {
- /* 'The Splithorn Helm': {
+  /* 'The Splithorn Helm': {
     effects: [
       {
         name: `The Splithorn Helm`,
@@ -126,18 +127,18 @@ const Artifacts = {
     effects: [
       {
         name: `The Witherstave`,
-        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target. 
-        Effect: Roll a dice. On a 4+, the target has Strike-last for the rest of the turn.`,
+        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target.
+        Effect: Roll a dice. On a 3+, subtract 1 from the Damage characteristic of the target's melee weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],
   },
-  'Rustfang': {
+  Rustfang: {
     effects: [
       {
-        name: `Rustfang - Once Per Battle`,
-        desc: `Declare: Pick an enemy Hero in combat with this unit to be the target. 
-        Effect: Subtract 1 from save rolls for the target for the rest of the battle.`,
+        name: `Rustfang`,
+        desc: `Declare: Pick an enemy Hero or Monster in combat with this unit to be the target.
+        Effect: Subtract 1 from save rolls for the target for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -146,8 +147,27 @@ const Artifacts = {
     effects: [
       {
         name: `The Carrion Dirge - Once Per Battle`,
-        desc: `You can reroll save rolls for attacks that target the bearer if the save roll is equal to or less than the number of wounds allocated to the bearer.`,
+        desc: `Declare: Pick up to 3 enemy units within 18" of this unit to be the targets.
+        Effect: Subtract 5 from the targets' control scores until the start of your next turn.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Cycle of Corruption (AoR)': {
+    effects: [
+      {
+        name: `Cankerous Nail (AoR) - Passive`,
+        desc: `Effect: Subtract 1 from hit rolls for attacks that target this unit.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'The Gardeners of Nurgle (AoR)': {
+    effects: [
+      {
+        name: `Stinking Sporeseed (AoR) - Once Per Battle`,
+        desc: `Effect: Set up a Feculent Gnarlmaw within 3" of this unit and more than 3" from all enemy units, objectives and other terrain features.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },

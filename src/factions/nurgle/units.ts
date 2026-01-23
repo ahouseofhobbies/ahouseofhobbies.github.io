@@ -78,10 +78,9 @@ const Units = {
       },
       {
         name: `Deluge of Nurgle: Casting value of 8`,
-        desc: `Declare: Pick each Diseased enemy unit on the battlefield and each friendly Maggotkin of Nurgle unit in combat with any Diseased enemy units to be the targets. Then, make a casting roll of 2D6. 
-        Effect: Roll a D3 for each target. On a 2+: 
-        If the target is an enemy unit, inflict an amount of mortal damage on the target equal to the roll.
-        If the target is a friendly unit, Heal (X) the target, where X is an amount equal to the roll.`,
+        desc: `Declare: Pick each enemy unit within 18" of this unit to be the enemy targets, then pick each friendly Maggotkin of Nurgle unit within 18" of this unit to be the friendly targets. Then, make a casting roll of 2D6.
+        Effect: Inflict 1 mortal damage on each enemy target and Heal (1) each friendly target.
+        Then, until the start of your next turn, while they are within 18" of this unit, enemy units cannot use or be picked to be the target of any abilities that heal or return slain models to a unit.`,
         when: [HERO_PHASE],
       },
       {
@@ -92,7 +91,7 @@ const Units = {
       },
       {
         name: `Bringer of Plenty - Passive`,
-        desc: `Effect: Add 1 to casting rolls for this unit.`,
+        desc: `Effect: Add 1 to casting rolls for friendly Maggotkin of Nurgle units while they are wholly within 12" of this unit.`,
         when: [HERO_PHASE],
       },
     ],
@@ -142,9 +141,9 @@ const Units = {
       //  GenericEffects.WizardTwoSpellsEffect,
       //  BloatedWithCorruptionEffect,
       {
-        name: `Locus of Nurgle - Once Per Turn`,
-        desc: `Declare: Pick a friendly Maggotkin of Nurgle Daemon unit that started the battle with 3 or more models and that has been destroyed to be the target. 
-        Effect: Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12" of this unit and more than 9" from all enemy units.`,
+        name: `Command Ability: Locus of Nurgle - Once Per Turn`,
+        desc: `Declare: Pick a friendly Maggotkin of Nurgle Daemon unit that started the battle with 3 or more models and that has been destroyed to be the target.
+        Effect: Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6" of this unit or a friendly Feculent Gnarlmaw and more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
       {
@@ -160,7 +159,7 @@ const Units = {
       },
       {
         name: `Plague Wind: Casting value of 7`,
-        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target, then make a casting roll of 2D6. 
+        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target. You cannot pick a Manifestationor terrain feature. Then, make a casting roll of 2D6.
         Effect: The target has the Diseased keyword.`,
         when: [HERO_PHASE],
       },
@@ -174,7 +173,7 @@ const Units = {
       // GenericEffects.WizardOneSpellEffect,
       {
         name: `Captain of the Plague Legions - Reaction: You declared a Fight ability for this unit`,
-        desc: `Effect: Pick a friendly Plaguebearers unit that has not used a Fight ability this turn and is within this units combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the targets attacks for the rest of the turn.`,
+        desc: `Effect: Pick a friendly Plaguebearers unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -202,11 +201,17 @@ const Units = {
     effects: [
       {
         name: `Keep Counting, I'm Watching You - Once Per Turn`,
-        desc: `Declare: Pick a friendly Plaguebearers unit wholly within 12" of this unit to be the target. 
-        Effect: Roll a D6. On a 2+, pick 1 of the following effects to apply until the start of your next turn: 
-        Tally of Blows: Add 1 to the Attacks characteristic of the targets melee weapons. 
-        Recorded Stamina: Add 1 to save rolls for the target.`,
+        desc: `Declare: Pick a friendly Plaguebearers unit wholly within 12" of this unit to be the target.
+        Effect: Roll a dice. On a 2+, pick 1 of the following effects to apply until the start of your next turn: 
+        Tally of Blows: Add 1 to wound rolls for the target's combat attacks.
+        Recorded Stamina: Add 5 to the target's control score.`,
         when: [HERO_PHASE],
+      },
+      {
+        name: `Stupefying Sneezes - Once Per Turn`,
+        desc: `Declare: Pick an enemy Monster that had any damage points allocated to it this phase by this unit's shooting attacks to be the target.
+        Effect: The target cannot use Rampage abilities until the start of your next turn.`,
+        when: [SHOOTING_PHASE],
       },
     ],
   },
@@ -214,26 +219,32 @@ const Units = {
     effects: [
       {
         name: `Jolly Gutpipes - Once Per Turn`,
-        desc: `Declare: Pick a visible friendly Maggotkin of Nurgle Daemon unit wholly within 12" of this unit to be the target. 
-        Effect: Roll a dice. On a 2+, pick 1 of the following effects to apply for the rest of the turn: 
-        A-Stabbing We Will Go!: Add 1 to wound rolls for the targets attacks. 
-        Early One Evening My Pustule Was Seeping: Ward rolls cannot be made for damage points inicted by the targets combat attacks. 
-        My Love Is Like a Ripe, Ripe Fart: Subtract 1 from hit rolls for attacks made by enemy units that target the target unit.`,
-        when: [COMBAT_PHASE],
+        desc: `Declare: Pick a visible friendly Maggotkin of Nurgle Daemon unit wholly within 12" of this unit or a visible enemy unit within 12" of this unit to be the target.
+        Effect: If you picked a friendly unit to be the target, roll a dice. If the roll equals or exceeds the target's Control characteristic, add 2 to run rolls and charge rolls for the target until the start of your next turn.
+        If you picked an enemy unit to be the target, roll a dice. If the roll equals or exceeds the target's Control characteristic, until the start of your next turn, while this unit is on the battlefield, inflict D3 mortal damage on the target:
+        Each time the target ends a move further from this unit than it was at the start of the move, after the ability used by the target has been resolved.
+        Each time the target is removed from the battlefield and set up again on the battlefield further from this unit than it was before it was removed, after the ability used by the target has been resolved.`,
+        when: [HERO_PHASE],
       },
     ],
   },
   'Horticulous Slimux': {
     effects: [
       {
-        name: `Beast Handler - Once Per Turn`,
-        desc: `Declare: Pick a friendly Beasts of Nurgle unit that has been destroyed. 
+        name: `Beast Handler`,
+        desc: `Declare: Pick a friendly Beast of Nurgle unit that has been destroyed.
         Effect: Roll a dice. On a 3+, set up a replacement unit wholly within 12" of this unit and more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
       {
+        name: `Gnarlmaw Whisperer`,
+        desc: `Declare: Pick a friendly Feculent Gnarlmaw to be the target.
+        Effect: Remove the target from the battlefield and set it up again wholly within 12" of this unit and more than 3" from all enemy units, objectives and other terrain features.`,
+        when: [END_OF_TURN],
+      },
+      {
         name: `Cultivating the Garden of Nurgle`,
-        desc: `Effect: If there are fewer than 3 friendly Feculent Gnarlmaws on the battlefield, you can set up a Feculent Gnarlmaw wholly within 12" of this unit, more than 3" from all enemy units, objectives and other terrain features.`,
+        desc: `Effect: If there is no more than 1 friendly Feculent Gnarlmaw on the battlefield, you can set up a Feculent Gnarlmaw wholly within 12" of this unit and more than 3" from all enemy units, objectives and other terrain features.`,
         when: [MOVEMENT_PHASE],
         rule_sources: [rule_sources.BATTLETOME_NURGLE, rule_sources.ERRATA_JANUARY_2022],
       },
@@ -243,8 +254,8 @@ const Units = {
     effects: [
       {
         name: `Cloud of Flies - Passive`,
-        desc: `Effect: Subtract 1 from hit rolls for shooting attacks that target this unit.`,
-        when: [SHOOTING_PHASE],
+        desc: `Effect: Subtract 1 from hit rolls for attacks that target this unit while it is contesting an objective you control.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
       },
     ],
   },
@@ -265,9 +276,9 @@ const Units = {
   'Beasts of Nurgle': {
     effects: [
       {
-        name: `Attention Seekers`,
-        desc: `Declare: If this unit is not in combat, pick the closest enemy unit to it to be the target. If 2 or more enemy units are tied to be the closest, you can pick which is the target. Then, make a charge roll of 2D6. 
-        Effect: This unit can move a distance up to the value of the charge roll. During that move, this unit can move into combat and can pass through models in the target unit, but it must end that move within 1" of the target. Then, inflict D3 mortal damage on the target. If it does so, this unit has charged.`,
+        name: `Attention Seekers - Once Per Turn`,
+        desc: `Declare: If this unit is not in combat, pick the closest enemy unit to it to be the target. If 2 or more enemy units are tied to be the closest, you can pick which is the target. Then, make a charge roll of 2D6.
+        Effect: This unit can move a distance equal to the value of the charge roll. It can move through the combat ranges of enemy units and must end that move within 1/2" of the target. Then, inflict D3 mortal damage on the target. This unit has charged.`,
         when: [CHARGE_PHASE],
       },
       {
@@ -280,8 +291,14 @@ const Units = {
   Nurglings: {
     effects: [
       {
-        name: `Endless Swarm - Passive`,
-        desc: `Effect: Heal (3) this unit.`,
+        name: `Endless Swarm - Once Per Turn`,
+        desc: `Declare: This unit can only use this ability if it has been destroyed.
+        Effect: Set up a replacement unit wholly within 6" of a friendly Feculent Gnarlmaw and more than 9" from all enemy units.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Beast - Passive`,
+        desc: `Effect: This unit has a maximum control score of 1.`,
         when: [END_OF_TURN],
       },
     ],
@@ -297,24 +314,32 @@ const Units = {
       // GenericEffects.WizardTwoSpellsEffect,
       {
         name: `Horrific Opponent - Passive`,
-        desc: `Effect: Subtract 3 from the control scores of enemy units while they are in combat with this unit.`,
+        desc: `Effect: Subtract 5 from the control scores of enemy units while they are in combat with this unit.`,
         when: [END_OF_TURN],
       },
       {
         name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points,the Attacks characteristic of Ghurks Tentacle is 2.`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Ghurk's Tentacle is 3.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Blighted Stampede - Once Per Turn - Reaction: You declared a Counter-Charge command for this unit`,
-        desc: `Effect: Pick up to 2 friendly Maggotkin of Nurgle units wholly within 12" of this unit to be the targets. After the Counter-charge command for this unit has been resolved, if this unit charged, each of the targets can immediately use the Counter-charge command in an order of your choosing without any command points being spent.`,
+        desc: `Effect: Pick up to 2 friendly Maggotkin of Nurgle units wholly within 12" of this unit to be the targets. After the 'Counter-charge' command for this unit has been resolved, if this unit charged, each target can immediately use the 'Counter-charge' command in an order of your choosing without any command points being spent.`,
         when: [CHARGE_PHASE],
       },
       {
         name: `Overgrowth of Flesh: Casting value of 6`,
-        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target, then make a casting roll of 2D6. 
-        Effect: Roll a number of dice equal to the targets Health characteristic. For each 5+, inflict 1 mortal damage on the target, to a maximum of 7 mortal damage.`,
+        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target, then make a casting roll of 2D6.
+        Effect: Roll a number of dice equal to the target's Health characteristic. For each 5+, inflict 1 mortal damage on the target, to a maximum of 7 mortal damage. If any mortal damage was inflicted on the target, and the target was not a Manifestationor terrain feature, it has the Diseased keyword.`,
         when: [HERO_PHASE],
+      },
+      {
+        name: `Tentacle Trap`,
+        desc: `Declare: Pick an enemy Hero or Monster in combat with this unit to be the target.
+        Effect: Roll a dice. On a 4+, for the rest of the turn:
+        The target cannot move and cannot be removed from the battlefield by an ability that would allow it to be set up elsewhere on the battlefield.
+        Add 1 to hit rolls for combat attacks that target that enemy unit.`,
+        when: [COMBAT_PHASE],
       },
     ],
   },
@@ -323,17 +348,17 @@ const Units = {
       // WarmasterEffect,
       {
         name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Whippermaws Claws and Maws is 3.`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Whippermaw's Claws is 3.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Acid Ichor - Passive`,
-        desc: `Effect: Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.`,
+        desc: `Effect: Each time you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the FIGHT ability has been resolved.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Grasping Tongue - Once Per Turn`,
-        desc: `Declare: Pick an enemy unit in combat with this unit to be the target. 
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
         Effect: Roll a dice. On a 3+, add 1 to wound rolls for combat attacks made by friendly Maggotkin of Nurgle units that target that enemy unit for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
@@ -347,21 +372,19 @@ const Units = {
       // GenericEffects.WizardOneSpellEffect,
       {
         name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Bilespurters Claws and Maw is 3.`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Bilespurter's Claws is 3.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Daemon Flies - Once Per Turn`,
-        desc: `Declare: Pick each enemy unit within 7" of this unit to be the targets. 
-        Effect: Roll a dice for each target. On a 4+: 
-        Inflict 1 mortal damage on the target. 
-        Subtract 1 from hit rolls for the targets combat attacks for the rest of the turn.`,
+        desc: `Declare: Pick an enemy Monster in combat with this unit to be the target.
+        Effect: Roll a dice. On a 3+, subtract 1 from the Attacks characteristic of the target's melee weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Miasma of Pestilence: Casting value of 6`,
-        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target, then make a casting roll of 2D6. 
-        Effect: Until the start of your next turn, each time a friendly ability is used that resulted in any damage points being allocated ot the target, roll a dice. On a 4+, allocate 1 additional damage point to the target (ward rolls cannot be made for that damage point).`,
+        desc: `Declare: Pick a visible friendly unit wholly within 12" of this unit to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn, other than the Companion weapon ability, weapon abilities for attacks that target that friendly unit have no effect.`,
         when: [HERO_PHASE],
       },
     ],
@@ -370,7 +393,7 @@ const Units = {
     effects: [
       {
         name: `Battle Damaged - Passive`,
-        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Tripletongues Claws and Maw is 3.`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Tripletongue's Claws is 3.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -380,16 +403,48 @@ const Units = {
       },
       {
         name: `Lord of Nurglings - Passive`,
-        desc: `Effect: While any friendly Nurglings units are wholly within 12" of this unit: 
-        Ignore the first damage point that would be allocated to each of those units each phase. 
-        Add 3 to those units control scores.`,
+        desc: `Effect: While a friendly Nurglings unit is wholly within 12" of this unit:
+        Ignore the first damage point that would be allocated to that Nurglings unit each phase.
+        That Nurglings unit can ignore the effect of the 'Beast' ability.`,
         when: [DURING_GAME, END_OF_TURN],
       },
       {
         name: `Tide of Nurglings - Once Per Turn`,
-        desc: `Declare: Pick a friendly Nurglings unit within this units combat range to be the target. 
-        Effect: Roll a dice. On a 2+, the targets melee weapons have Crit (Mortal) for the rest of the turn.`,
+        desc: `Declare: Pick up to 2 friendly Nurglings units wholly within 12" of this unit to be the targets.
+        Effect: Roll a dice for each target. On a 2+:
+        If the target is not in combat, it can move a number of inches equal to the roll but cannot end that move in combat.
+        If the target is in combat, it can make a pile-in move.`,
         when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Gelgus Pust': {
+    effects: [
+      {
+        name: `Master Contaminator - Once Per Battle`,
+        desc: `Declare: Pick a terrain feature within 6" of this unit to be the target.
+        Effect: The target has the Polluted keyword for the rest of the battle.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Polluting Aura - Passive`,
+        desc: `Effect: While a friendly Maggotkin of Nurgle unit is wholly within 6" of a Polluted terrain feature, each time that unit uses or is the target of an ability that would heal 1 or more damage points, add 1 to the number of damage points healed.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Grin of the Grandfather`,
+        desc: `Declare: Pick each enemy unit in combat with this unit to be the targets.
+        Effect: Roll a dice for each target. If the roll equals or exceeds the target's Control characteristic, pick 1 of the following to apply for the rest of the turn:
+        Subtract 1 from hit rolls for the target's combat attacks.
+        Subtract 1 from wound rolls for the target's combat attacks.
+        Subtract 1 from the target's Control characteristic.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Parasitic Infestation`,
+        desc: `Declare: Pick each enemy unit that charged this turn and is in combat with this unit to be the targets.
+        Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        when: [CHARGE_PHASE],
       },
     ],
   },
@@ -397,43 +452,58 @@ const Units = {
     effects: [
       {
         name: `Vectors of Foulest Contagion - Once Per Turn`,
-        desc: `Declare: Pick up to 3 enemy units in combat with this unit to be the targets. 
+        desc: `Declare: Pick up to 3 enemy units in combat with this unit to be the targets.
         Effect: Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [COMBAT_PHASE],
       },
       {
         name: `Master of Rot Flies`,
-        desc: `Declare: If this unit charged this turn, pick this unit and up to 2 friendly Pusgoyle Blightlords units wholly within 12" of this unit to be the targets. 
-        Effect: Add 1 to the Rend characteristic of the targets Companion melee weapons for the rest of the turn.`,
+        desc: `Declare: If this unit charged this turn, pick this unit and up to 2 friendly Pusgoyle Blightlords units wholly within 12" of this unit to be the targets.
+        Effect: Add 1 to the Rend characteristic of the targets' Rot Fly's Mouthparts and Sting for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
     ],
   },
-  /* 'Festus the Leechlord': {
-    mandatory: {
-      spells: [keyPicker(Spells, ["The Leechlord's Curse"])],
-    },
+  'Festus the Leechlord': {
     effects: [
-      GenericEffects.WizardOneSpellEffect,
       {
-        name: `Delightful Brews, Splendid Restoratives`,
-        desc: `At the start of your hero phase, you can pick 1 unit within 1" of this unit. If you pick a friendly unit, roll a dice. On a 2+, you can heal up to D3 wounds allocated to that unit. If you pick an enemy unit, roll a dice. On a 2+, that unit suffers D3 mortal wounds.`,
-        when: [START_OF_HERO_PHASE],
+        name: `The Leechlords Curse: Casting value of 6`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target, then make a casting roll of 2D6.
+        Effect: This unit gains 1 leech point. Until the start of your next turn, each time the target uses a Core ability or command, after that ability has been resolved, roll a dice. On a 3+, inflict 1 mortal damage on the target. Then, if any damage points were allocated to the target by this ability, Heal (1) this unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Battle Damaged - Passive`,
+        desc: `Effect: While this unit has 10 or more damage points, the Attacks characteristic of Gathoblyt's Fanged Maw is 3.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Vile Poisons and Debilitating Toxins - Once Per Turn`,
+        desc: `Declare: If this unit did not charge this turn, pick an enemy unit in combat with it to be the target. You cannot pick a Manifestationor terrain feature.
+        Effect: You and your opponent must roll off. Add this unit's Control characteristic to your roll and the target's Control characteristic to your opponent's roll. If your roll is higher, apply the corresponding effect:
+        If the target is a Hero or Monster, inflict an amount of mortal damage on the target equal to the difference between your roll and your opponent's roll.
+        If the target is a non-Hero non-Monster unit, 1 model in the target unit is slain.`,
+        when: [COMBAT_PHASE],
+      },
+      {
+        name: `Annelid Engorgement`,
+        desc: `Effect: For each enemy unit that was in combat with this unit this turn and was destroyed this turn, this unit gains D3 leech points for the rest of the battle. Add 1 to this unit's Control characteristic for each leech point it has.`,
+        when: [END_OF_TURN],
       },
     ],
-  }, */
+  },
   'Harbinger of Decay': {
     effects: [
       {
-        name: `Knell of Doom - Once Per Battle - Enemy Hero Phase`,
-        desc: `Declare: Pick up to 3 enemy units within 24" of this unit to be the targets. 
-        Effect: Until the start of your next turn, subtract 1" from the Move characteristic of each target and subtract 1 from run rolls and charge rolls for each target.`,
+        name: `Knell of Doom - Once Per Turn - Enemy Hero Phase`,
+        desc: `Declare: Pick an enemy unit within 18" of this unit to be the target. 
+        Effect: Roll a D3. If the target is within 6" of a friendly Sloven Knights unit, you can roll a D6 instead. If the roll equals or exceeds the target's Control characteristic, subtract 1 from wound rolls for the target's attacks until the start of your next turn.`,
         when: [HERO_PHASE],
       },
       {
         name: `Omens of Decay: Chant value of 4`,
-        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target, then make a chanting roll of D6. 
-        Effect: Subtract twice the current battle round number from the targets control score for the rest of the turn. If the chanting roll was 10+, this ability aects all enemy units within 12" of this unit.`,
+        desc: `Declare: Pick a visible enemy unit within 12" of this unit to be the target, then make a chanting roll of D6.
+        Effect: Subtract twice the current battle round number from the target's control score for the rest of the turn. If the chanting roll was 10+, this ability affects all enemy units within 12" of this unit.`,
         when: [HERO_PHASE],
       },
     ],
@@ -446,7 +516,7 @@ const Units = {
       //GenericEffects.WizardOneSpellEffect, TaintedEndlessSpellEffect
       {
         name: `Tainted Sorceries`,
-        desc: `Declare: Pick an enemy unit that was picked to be the target of a spell that was successfully cast by this unit this phase to be the target. 
+        desc: `Declare: Pick an enemy unit that was picked to be the target of a spell that was successfully cast by this unit this phase to be the target.
         Effect: Roll a dice. On a 2+, subtract 1 from ward rolls for the target for the rest of the turn.`,
         when: [HERO_PHASE],
       },
@@ -455,14 +525,15 @@ const Units = {
   'Lord of Blights': {
     effects: [
       {
-        name: `Thrice-Ripened Death's Heads`,
-        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target. 
-        Effect: Roll D3. On 2+, inflict an amount of mortal damage on the target equal to the roll.`,
+        name: `Thrice-Ripened Death's Heads - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit or with a friendly Plague Drones unit wholly within 12" of this unit to be the target.
+        Effect: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.`,
         when: [COMBAT_PHASE],
       },
       {
-        name: `Festering Bulwark - Passive`,
-        desc: `Effect: The Blighted Weapons used by friendly Putrid Blightkings units have Anti-charge (+1 Rend) while those units are wholly within 12" of this unit.`,
+        name: `Kring Bulwark - Once Per Turn`,
+        desc: `Declare: Pick this unit and a friendly Putrid Blightkings unit within 3" of this unit to be the targets.
+        Effect: Roll a dice. On a 3+, ignore negative modifiers to save rolls for the targets for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       //  LordOfTheBlightkingsEffect,
@@ -472,8 +543,8 @@ const Units = {
     effects: [
       {
         name: `Flailing Tentacles`,
-        desc: `Declare: Pick an enemy Infantry Hero in combat with this unit to be the target. 
-        Effect: Roll a dice. On a 3+, the target has Strike-last for the rest of the turn.`,
+        desc: `Declare: Pick an enemy Infantry Hero in combat with this unit to be the target.
+        Effect: Roll a dice. On a 3+, the target has Strike-Last for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -483,9 +554,9 @@ const Units = {
         when: [DURING_SETUP],
       },
       {
-        name: `Pestilential Beachhead`,
-        desc: `Declare: Pick this unit if it is aboard the Slime Fleet. 
-        Effect: Set up this unit on the battlefield, wholly within 7" of a battlefield edge and more than 9" from all enemy units. Then set up every other friendly unit that is aboard the Slime Fleet on the battlefield wholly within 7" of a battlefield edge, wholly within 7" of this unit and more than 9" from all enemy units.`,
+        name: `Essential Beachhead`,
+        desc: `Declare: Pick this unit if it is aboard the Slime Fleet.
+        Effect: Set up this unit on the battlefield, wholly within 7" of a battlefield edge and more than 9" from all enemy units. Then, set up each other friendly unit aboard the Slime Fleet on the battlefield, wholly within 7" of this unit, wholly within 7" of a battlefield edge and more than 9" from all enemy units.`,
         when: [MOVEMENT_PHASE],
       },
     ],
@@ -493,34 +564,86 @@ const Units = {
   'Lord of Plagues': {
     effects: [
       {
-        name: `Lord of the Blightkings - Passive`,
-        desc: `Effect: Add 1 to charge rolls for friendly Putrid Blightkings units while they are wholly within 12" of this unit.`,
-        when: [CHARGE_PHASE],
+        name: `Lord of the Infected Legions - Passive`,
+        desc: `Effect: Add 1 to wound rolls for combat attacks made by friendly Rotswords units that did not charge this turn while they are wholly within 12" of this unit.`,
+        when: [COMBAT_PHASE],
       },
       {
         name: `Sevenfold Slaughter`,
-        desc: `Declare: Pick a friendly Putrid Blightkings unit that charged this turn and is wholly within 12" of this unit to be the target. 
-        Effect: Roll a dice. On a 2+, add 1 to the Attacks characteristic of the targets Blighted Weapons for the rest of the turn.`,
+        desc: `Declare: Pick a friendly Rotswords unit that did not charge this turn and is wholly within 12" of this unit to be the target.
+        Effect: Roll a dice. On a 2+, add 1 to the Attacks characteristic of the target's Ruined Master-crafted Weapons for the rest of the turn.`,
         when: [COMBAT_PHASE],
       },
-      // LordOfTheBlightkingsEffect,
+    ],
+  },
+  'Belga the Cystwitch': {
+    effects: [
+      {
+        name: `Ruptured Cysts: Chant value of 4`,
+        desc: `Declare: Pick a visible Diseased enemy unit within 18" of this unit to be the target, then make a chanting roll of D6.
+        Effect: Inflict D3 mortal damage on the target. Then, inflict 1 mortal damage on each other Diseased enemy unit within 3" of the target. If the chanting roll was 9+, you can also pick a friendly Plaguebearers unit within 12" of the target. For each enemy Infantry model slain by this ability this turn, you can return 1 slain model to that friendly unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Scry the Filth`,
+        desc: `Effect: Pick 1 of the following effects to apply for the rest of the turn:
+        Add 1 to casting rolls for friendly Maggotkin of Nurgle WizardS while they are within 3" of this unit.
+        Add 1 to chanting rolls for friendly Maggotkin of Nurgle PriestS while they are within 3" of this unit.`,
+        when: [HERO_PHASE],
+      },
     ],
   },
   'Putrid Blightkings': {
     effects: [
       {
-        name: `Bloated Bulk - Passive`,
-        desc: `Effect: Add 3 to this units control score while each model in this unit is contesting an objective you control.`,
+        name: `Discomfiting Stench - Once Per Turn`,
+        desc: `Declare: Pick a visible enemy Wizard or Priest within 12" of this unit to be the target.
+        Effect: Roll a dice.
+        If the target is a Wizard and the roll exceeds the target's power level, until the start of your next turn, each time a casting roll for the target includes 2 or more rolls of 1, 2 or more rolls of 2 or 2 or more rolls of 3, the spell is miscast.
+        If the target is a Priest and the roll exceeds the target's power level, until the start of your next turn, each time your opponent makes an unmodified chanting roll of 1 or 2 for the target, the prayer fails, its effect is not resolved and your opponent must remove D3 ritual points from the target.`,
         when: [END_OF_TURN],
       },
       // RelentlessAttackersEffect,
+    ],
+  },
+  Cankerborn: {
+    effects: [
+      {
+        name: `Utter Defilement`,
+        desc: `Declare: This unit's Pestilent Pollutants are tokens. This unit has 2 Pestilent Pollutants. Pick an objective or terrain feature within 12" of this unit to be the target.
+        Effect: Place 1 of this unit's Pestilent Pollutants next to the target. If both of this unit's Pestilent Pollutants are already on the battlefield, pick one, remove it from the battlefield and place it next to the target.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `From Tainted Earth`,
+        desc: `Effect: Remove this unit from the battlefield and set it up again more than 9" from all enemy units and wholly within 3" of:
+        An objective or terrain feature that has a friendly Pestilent Pollutant, or
+        A Polluted terrain feature (see Gelgus Pust's warscroll), or
+        An objective you control.`,
+        when: [MOVEMENT_PHASE],
+      },
+      {
+        name: `Entropy Endures - Passive`,
+        desc: `Effect: If this unit has 2 models and would be automatically destroyed, it is not automatically destroyed. Instead, 1 model in this unit is slain.`,
+        when: [DURING_GAME],
+      },
+    ],
+  },
+  Rotswords: {
+    effects: [
+      {
+        name: `Sweat-Soaked and Reeking`,
+        desc: `Declare: Pick an enemy unit that charged this turn and is in combat with this unit to be the target.
+        Effect: Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
     ],
   },
   'Pusgoyle Blightlords': {
     effects: [
       {
         name: `Relentless Attackers - Passive`,
-        desc: `Effect: Add 1 to the Rend characteristic of this units Flyriders Arsenal for attacks that target units contesting an objective you do not control.`,
+        desc: `Effect: Add 1 to the Rend characteristic of this unit's Flyrider's Arsenal for attacks that target enemy units contesting an objective.`,
         when: [COMBAT_PHASE],
       },
       {
@@ -528,7 +651,56 @@ const Units = {
         desc: `Effect: This unit has a coherency range of 2".`,
         when: [DURING_GAME],
       },
-      // RelentlessAttackersEffect,
+    ],
+  },
+  'Sloven Knights': {
+    effects: [
+      {
+        name: `Pall of Exhaustion - Once Per Turn`,
+        desc: `Declare: Pick an enemy unit in combat with this unit to be the target.
+        Effect: Roll a dice. Add 1 to the roll if the target is in combat with any other friendly Rotbringers units. On a 3+, the target has Strike-Last for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  Pestigors: {
+    effects: [
+      {
+        name: `Bestial Desecration - Passive`,
+        desc: `Effect: Add 1 to the Rend characteristic of this unit's melee weapons while it is not within enemy territory.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Shaman Foulhoof': {
+    effects: [
+      {
+        name: `Purulent Profusion: Casting value of 7`,
+        desc: `Declare: Pick a visible enemy unit within 18" of this unit to be the target, then make a casting roll of 2D6.
+        Effect: Subtract 1 from the Rend characteristic of the target's melee weapons until the start of your next turn.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Rampant Defilement`,
+        desc: `Declare: Pick a friendly Pestigors unit wholly within 12" of this unit to be the target.
+        Effect: Roll a dice. On a 3+, add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn.`,
+        when: [COMBAT_PHASE],
+      },
+    ],
+  },
+  'Pox-Wretches': {
+    effects: [
+      {
+        name: `Mire Kelpies - Passive`,
+        desc: `Effect: This unit's Mire Kelpies are tokens. There are 6 Mire Kelpies for every 14 models in this unit.`,
+        when: [DURING_GAME],
+      },
+      {
+        name: `Contagious Catarrh - Once Per Turn`,
+        desc: `Declare: If this unit has any Mire Kelpies, pick an enemy unit in combat with this unit to be the target. You cannot pick a Manifestation or terrain feature.
+        Effect: Pick any number of this unit's Mire Kelpies and remove them from the battlefield. Then, roll a dice, adding 1 to the roll for each Mire Kelpie you removed this phase. On an unmodified roll of 1, this ability has no effect. On a 6+, the target has the Diseased keyword.`,
+        when: [END_OF_TURN],
+      },
     ],
   },
   /* 'Fecula Flyblown': {
@@ -572,7 +744,7 @@ const Units = {
     effects: [
       {
         name: `Virulent Concoctions - Passive`,
-        desc: `Effect: When using the Blessed by the Plaguefather ability, if you choose to infect an enemy unit, you can pick an enemy unit that had any damage points allocated to it by this units shooting attacks this turn to be the target even if that unit is not in combat with a friendly Maggotkin of Nurgle unit.`,
+        desc: `Effect: When picking an enemy unit to be the target of the 'Infect' effect of the 'Blessed by the Plaguefather' ability, you can pick an enemy unit that had any damage points allocated to it by this unit's attacks this turn to be the target, even if that unit is not within 7" of any friendly Maggotkin of Nurgle units. You cannot pick a Manifestation or terrain feature.`,
         when: [END_OF_TURN],
       },
     ],

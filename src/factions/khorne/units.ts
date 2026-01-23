@@ -1321,6 +1321,79 @@ const Units = {
       },
     ],
   },
+  'ROR: Diseased Revellers': {
+    effects: [
+      {
+        name: `The Piper's Infectious Melodies - Passive`,
+        desc: `Effect: While a Beast of Nurgle in this Regiment of Renown is within 3" of this Regiment of Renown's Sloppity Bilepiper, it can use the 'Attention Seekers' ability even if the other Beast of Nurgle in this Regiment of Renown has already used it this turn.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Beasts of Nurgle: Attention Seekers - Once Per Turn`,
+        desc: `Declare: If this unit is not in combat, pick the closest enemy unit to it to be the target. If 2 or more enemy units are tied to be the closest, you can pick which is the target. Then, make a charge roll of 2D6.
+        Effect: This unit can move a distance equal to the value of the charge roll. It can move through the combat ranges of enemy units and must end that move within 1/2" of the target. Then, inflict D3 mortal damage on the target. This unit has charged.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Beasts of Nurgle: Beast - Passive`,
+        desc: `Effect: This unit has a maximum control score of 1.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Sloppity Bilepiper: Jolly Gutpipes - Once Per Turn`,
+        desc: `Declare: Pick a visible friendly Maggotkin of Nurgle Daemon unit wholly within 12" of this unit or a visible enemy unit within 12" of this unit to be the target.
+        Effect: If you picked a friendly unit to be the target, roll a dice. If the roll equals or exceeds the target's Control characteristic, add 2 to run rolls and charge rolls for the target until the start of your next turn.
+        If you picked an enemy unit to be the target, roll a dice. If the roll equals or exceeds the target's Control characteristic, until the start of your next turn, while this unit is on the battlefield, inflict D3 mortal damage on the target:
+        Each time the target ends a move further from this unit than it was at the start of the move, after the ability used by the target has been resolved.
+        Each time the target is removed from the battlefield and set up again on the battlefield further from this unit than it was before it was removed, after the ability used by the target has been resolved.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'ROR: The Pustules': {
+    effects: [
+      {
+        name: `Blighted Growth`,
+        desc: `Effect: Set up this Regiment of Renown's Feculent Gnarlmaw wholly within friendly territory and more than 3" from all objectives and other terrain features. After you have done so, it has been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Multitudinous Diseases - Once Per Turn`,
+        desc: `Declare: If this Regiment of Renown's Plaguebearers unit is wholly within 12" of this Regiment of Renown's Feculent Gnarlmaw, pick that Plaguebearers unit to be the target.
+        Effect: Heal (1) the target. If the target is contesting an objective, you can also return 1 slain model to the target unit.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Spoilpox Scrivener: Keep Counting, I'm Watching You - Once Per Turn`,
+        desc: `Declare: Pick a friendly Plaguebearers unit wholly within 12" of this unit to be the target.
+        Effect: Roll a dice. On a 2+, pick 1 of the following effects to apply until the start of your next turn: 
+        Tally of Blows: Add 1 to wound rolls for the target's combat attacks.
+        Recorded Stamina: Add 5 to the target's control score.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Spoilpox Scrivener: Stupefying Sneezes - Once Per Turn`,
+        desc: `Declare: Pick an enemy Monster that had any damage points allocated to it this phase by this unit's shooting attacks to be the target.
+        Effect: The target cannot use Rampage abilities until the start of your next turn.`,
+        when: [SHOOTING_PHASE],
+      },
+      {
+        name: `Plaguebearers: Cloud of Flies - Passive`,
+        desc: `Effect: Subtract 1 from hit rolls for attacks that target this unit while it is contesting an objective you control.`,
+        when: [SHOOTING_PHASE, COMBAT_PHASE],
+      },
+      {
+        name: `Feculent Gnarlmaw (Faction Terrain) -  Riddled with Disease - Passive`,
+        desc: `Effect: Each time a friendly Maggotkin of Nurgle Daemon unit wholly within 12" of this terrain feature uses the 'Rally' command, you can make 1 additional rally roll of D6. If that unit is a non-Hero unit, you can make 3 additional rally rolls of D6 instead.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Feculent Gnarlmaw (Faction Terrain) - Tendrils of Corruption`,
+        desc: `Effect: For the rest of the phase, this terrain feature has a Move characteristic of 3" and can immediately move 3". It cannot move through or end that move within the combat ranges of enemy units and it cannot end that move on an objective or another terrain feature.`,
+        when: [MOVEMENT_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

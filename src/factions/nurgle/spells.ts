@@ -119,22 +119,68 @@ const Spells = {
     effects: [
       {
         name: `Cloying Quagmire: Casting value of 7`,
-        desc: `Declare: Pick a friendly Maggotkin of Nurgle Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6. 
-        Effect: Halve the targets Move characteristic until the start of your next turn. If the targets Save characteristic is 3+ or better, subtract 1 from run rolls and charge rolls for that unit until the start of your next turn.`,
+        desc: `Declare: Pick a friendly Maggotkin of Nurgle Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn:
+        Halve the target's Move characteristic.
+        If the target's Save characteristic is 3+ or better, subtract 1 from run rolls and charge rolls for the target.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Fleshy Abundance: Casting value of 7 (UNLIMITED)`,
-        desc: `Declare: Pick a friendly Maggotkin of Nurgle Wizard to cast this spell, pick a visible friendly Maggotkin of Nurgle unit wholly within 12" of them to be the target, then make a casting roll of 2D6. 
-        Effect: Pick 1 of the following effects: 
-        Heal (D3) the target. 
-        Subtract 1 from wound rolls for attacks that target that unit until the start of your next turn.`,
+        name: `Fleshy Abundance: Casting value of 6 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Maggotkin of Nurgle unit wholly within 12" of them to be the target, then make a casting roll of 2D6.
+        Pick 1 of the following effects: 
+        Heal (D3) the target.
+        Subtract 1 from wound rolls for attacks that target that friendly unit until the start of your next turn`,
         when: [HERO_PHASE],
       },
       {
-        name: `Magnificent Buboes: Casting value of 7`,
-        desc: `Declare: Pick a friendly Maggotkin of Nurgle Wizard to cast this spell, pick a visible enemy Hero within 18" of them to be the target, then make a casting roll of 2D6. 
-        Effect: Until the start of your next turn, subtract 1 from hit rolls for the targets attacks and subtract 1 from casting rolls, chanting rolls, banishment rolls and unbinding rolls for the target.`,
+        name: `Crippling Despair: Casting value of 6`,
+        desc: `Declare: Pick a friendly Maggotkin of Nurgle Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6.
+        Effect: The target cannot use commands for the rest of the turn.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Cycle of Corruption (AoR)': {
+    effects: [
+      {
+        name: `Epidermal Crustitis: Casting value of 7 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Cycle of Corruption Wizard to cast this spell, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn, subtract 1 from the Damage characteristic of melee weapons used for attacks that target the caster.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Rank and Vile: Casting value of 6`,
+        desc: `Declare: Pick a friendly Cycle of Corruption Wizard to cast this spell, pick a visible enemy Infantry unit within 18" of them to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn, each time a model in the target unit is slain, after removing it from the battlefield, roll a dice. On a 4+, return 1 slain model to a friendly non-Hero Cycle of Corruption Infantry unit within 6" of the target.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Spittledrain: Casting value of 6`,
+        desc: `Declare: Pick a friendly Cycle of Corruption Wizard to cast this spell, pick a visible enemy unit within 12" of them to be the target, then make a casting roll of 2D6.
+        Effect: Subtract 1 from the target's Move characteristic until the start of your next turn. Then, roll a number of dice equal to the number of models in the target unit. For each 6, inflict 1 mortal damage on the target, to a maximum of 7.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The Gardeners of Nurgle (AoR)': {
+    effects: [
+      {
+        name: `Munificent Blights: Casting value of 7 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Gardeners of Nurgle Wizard to cast this spell, pick a visible enemy unit within 18" of them to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn, add 1 to the amount of mortal damage inflicted on the target by the 'Putrescent Sap' ability.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Scumfall: Casting value of 7`,
+        desc: `Declare: Pick a friendly Gardeners of Nurgle Wizard to cast this spell, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn, friendly Gardeners of Nurgle units that are wholly within 12" of a friendly Feculent Gnarlmaw are not visible to units more than 9" away.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Canopy of Virulence: Casting value of 7`,
+        desc: `Declare: Pick a friendly Gardeners of Nurgle Wizard to cast this spell, pick a visible friendly Gardeners of Nurgle unit wholly within 12" of them to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn, while the target is wholly within 12" of any friendly Feculent Gnarlmaws, ward rolls cannot be made for enemy units in combat with the target.`,
         when: [HERO_PHASE],
       },
     ],
