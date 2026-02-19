@@ -1,12 +1,7 @@
 import { TItemDescriptions } from 'factions/factionTypes'
 import { tagAs } from 'factions/metatagger'
 import { LUMINETH_REALMLORDS } from 'meta/factions'
-import {
-  DURING_GAME,
-  HERO_PHASE,
-  MOVEMENT_PHASE,
-  START_OF_ROUND,
-} from 'types/phases'
+import { DURING_GAME, HERO_PHASE, MOVEMENT_PHASE, START_OF_ROUND } from 'types/phases'
 
 const BattleTraits = {
   [LUMINETH_REALMLORDS]: {
@@ -73,7 +68,7 @@ const BattleTraits = {
       },
       {
         name: `Shrine Luminor (Faction Terrain) - Cleansing Rituals - Once Per Turn - Reaction: You declared a Spell ability for a Lumineth Realm-lords unit wholly within 12" of this terrain feature`,
-        desc: `Effect: While this terrain feature has a Shrine Guardian, you can re-roll the casting roll for that spell.`,
+        desc: `Effect: While this terrain feature has a Shrine Guardian, you can reroll the casting roll for that spell.`,
         when: [HERO_PHASE],
       },
     ],
