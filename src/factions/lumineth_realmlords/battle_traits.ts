@@ -22,7 +22,7 @@ const BattleTraits = {
       {
         name: `Depict Rune - Alathin, Rune of the Mountain`,
         desc: `Pick up to 2 friendly Lumineth Realm-lords units for each instance of this rune depicted on your battle scripture to be the targets. Each target has Ward (5+). In addition, the following enhanced effects apply:
-        - While Varinor, Rune of Strength is depicted on your battle scripture, the targets' melee weapons have Crit (Auto-wound).
+        - While Varinor, Rune of Strength is depicted on your battle scripture, the targets' melee weapons have Anti-Charge (+1 Rend).
         - While Ydrellfi, Rune of the River is depicted on your battle scripture, subtract 1 from wound rolls for attacks made while they are in combat with any of the targets.`,
         when: [START_OF_ROUND],
       },
