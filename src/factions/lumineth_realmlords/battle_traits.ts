@@ -8,15 +8,14 @@ const BattleTraits = {
     effects: [
       {
         name: `Depict Rune - Once Per Battle Round (Army), Start of Battle Round`,
-        desc: `The Lumineth magically inscribe runes of power into the lands themselves to enhance their armies and heal the realms of Chaos corruption.
-        Effect: Pick 1 of the following runes to depict on your battle scripture. The effect and conditional enhanced effects of that rune last for the rest of the battle round. Each rune remains on your battle scripture for the rest of the battle or until it is removed or replaced by another ability.`,
+        desc: `Effect: Pick 1 of the following runes to depict on your battle scripture. The effect and conditional enhanced effects of that rune last for the rest of the battle round. Each rune remains on your battle scripture for the rest of the battle or until it is removed or replaced by another ability.`,
         when: [START_OF_ROUND],
       },
       {
         name: `Depict Rune - Varinor, Rune of Strength`,
         desc: `Pick up to 2 friendly Lumineth Realm-lords units for each instance of this rune depicted on your battle scripture to be the targets. Add 1 to run rolls and charge rolls for each target. In addition, the following enhanced effects apply:
         - While Ydrellfi, Rune of the River is depicted on your battle scripture, add 1 to wound rolls for each target's combat attacks.
-        - While Oreali, Rune of the Wind is depicted on your battle scripture, each target can use a Retreat ability in the same turn.`,
+        - While Oreali, Rune of the Wind is depicted on your battle scripture, each target can use Shoot and/or Charge abilities even if it used a Retreat ability in the same turn.`,
         when: [START_OF_ROUND],
       },
       {
