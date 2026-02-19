@@ -21,7 +21,7 @@ const BattleTraits = {
   [KHORNE]: {
     effects: [
       {
-        name: `Blood-Drenched - Reaction: You declared the Skulls for the Skull Throne ability`,
+        name: `Blood-Drenched - Once Per Turn - Reaction: You declared the Skulls for the Skull Throne ability`,
         desc: `Effect: After that ability has been resolved, if you unlocked a Blood Tithe ability this turn, pick a friendly Blades of Khorne unit to be the target. The following effects apply to the target for the rest of the battle: 
         Wild-eyed Brutality: Ignore positive modifiers to save rolls for the target. 
         Blood Haze: If the target is Bloodbound, its Blood-hungry weapons have Crit (Mortal). 

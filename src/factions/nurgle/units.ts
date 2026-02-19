@@ -600,7 +600,7 @@ const Units = {
         desc: `Declare: Pick a visible enemy Wizard or Priest within 12" of this unit to be the target.
         Effect: Roll a dice.
         If the target is a Wizard and the roll exceeds the target's power level, until the start of your next turn, each time a casting roll for the target includes 2 or more rolls of 1, 2 or more rolls of 2 or 2 or more rolls of 3, the spell is miscast.
-        If the target is a Priest and the roll exceeds the target's power level, until the start of your next turn, each time your opponent makes an unmodified chanting roll of 1 or 2 for the target, the prayer fails, its effect is not resolved and your opponent must remove D3 ritual points from the target.`,
+        If the target is a Priest and the roll exceeds the target's power level, until the start of your next turn, each time your opponent makes an unmodified chanting roll of 1 or 2 for the target, the prayer fails, its effect is not resolved and your opponent must remove D3 ritual points from the target. In addition, your opponent cannot give that Priest any ritual points for the rest of the phase.`,
         when: [END_OF_TURN],
       },
       // RelentlessAttackersEffect,

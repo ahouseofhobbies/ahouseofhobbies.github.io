@@ -1186,8 +1186,13 @@ const Units = {
       },
     ],
   },
-  'ROR: The Eternal Nightmare': {
+  'ROR: Craventhrone Executioners': {
     effects: [
+      {
+        name: `Ethereal - Passive`,
+        desc: `Effect: Ignore negative modifiers to save rolls for units in this Regiment of Renown.`,
+        when: [DURING_GAME],
+      },
       {
         name: `Enemy of the Throne - Passive`,
         desc: `Effect: Add 1 to hit rolls and wound rolls for units in thie Regiment of Renown for attacks that target a Sentenced unit.`,
@@ -1214,6 +1219,11 @@ const Units = {
   },
   'ROR: Casket of Resurrections': {
     effects: [
+      {
+        name: `Ethereal - Passive`,
+        desc: `Effect: Ignore negative modifiers to save rolls for units in this Regiment of Renown.`,
+        when: [DURING_GAME],
+      },
       {
         name: `Dark Resurrection - Once Per Turn`,
         desc: `Declare: If any damage points were allocated to an enemy unit by this unit's combat attacks this turn and that enemy unit was destroyed this turn, pick a friendly non-Unique Death Infantry Hero that has been destroyed to be the target.

@@ -329,8 +329,8 @@ const Units = {
   'Dominator Engine with Immolation Cannons': {
     effects: [
       {
-        name: `All Must Burn - Passive`,
-        desc: `Declare: Pick any number of visible enemy units within 8" of this unit to be the targets. 
+        name: `All Must Burn - Once Per Turn`,
+        desc: `Declare: Pick 2 or more visible enemy units within 8" of this unit to be the targets.
         Effect: For the rest of the turn, add 2 to the Attacks characteristic of this units Immolation Cannons for each unit picked to be the target of this ability, but each time this unit uses a Shoot ability, it must target each of those units with at least 3 of its attacks.`,
         when: [SHOOTING_PHASE],
       },
