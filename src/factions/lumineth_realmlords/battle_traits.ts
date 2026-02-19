@@ -14,21 +14,21 @@ const BattleTraits = {
       {
         name: `Depict Rune - Varinor, Rune of Strength`,
         desc: `Pick up to 2 friendly Lumineth Realm-lords units for each instance of this rune depicted on your battle scripture to be the targets. Add 1 to run rolls and charge rolls for each target. In addition, the following enhanced effects apply:
-        - While Ydrellfi, Rune of the River is depicted on your battle scripture, add 1 to wound rolls for each target's combat attacks.
+        - While Ydriliqi, Rune of the River is depicted on your battle scripture, add 1 to wound rolls for each target's combat attacks.
         - While Oreali, Rune of the Wind is depicted on your battle scripture, each target can use Shoot and/or Charge abilities even if it used a Retreat ability in the same turn.`,
         when: [START_OF_ROUND],
       },
       {
-        name: `Depict Rune - Alathin, Rune of the Mountain`,
+        name: `Depict Rune - Alaithi, Rune of the Mountain`,
         desc: `Pick up to 2 friendly Lumineth Realm-lords units for each instance of this rune depicted on your battle scripture to be the targets. Each target has Ward (5+). In addition, the following enhanced effects apply:
         - While Varinor, Rune of Strength is depicted on your battle scripture, the targets' melee weapons have Anti-Charge (+1 Rend).
-        - While Ydrellfi, Rune of the River is depicted on your battle scripture, subtract 1 from wound rolls for attacks made while they are in combat with any of the targets.`,
+        - While Ydriliqi, Rune of the River is depicted on your battle scripture, subtract 1 from wound rolls for attacks made by enemy units while they are in combat with any of the targets.`,
         when: [START_OF_ROUND],
       },
       {
-        name: `Depict Rune - Ydrellfi, Rune of the River`,
+        name: `Depict Rune - Ydriliqi, Rune of the River`,
         desc: `Pick up to 2 friendly Lumineth Realm-lords units for each instance of this rune depicted on your battle scripture to be the targets. Subtract 2 from charge rolls for enemy units while they are within 12" of any of the targets. In addition, the following enhanced effects apply:
-        - While Alathin, Rune of the Mountain is depicted on your battle scripture, ignore negative modifiers to hit rolls and wound rolls for attacks made by the targets.
+        - While Alaithi, Rune of the Mountain is depicted on your battle scripture, ignore negative modifiers to hit rolls and wound rolls for attacks made by the targets.
         - If Oreali, Rune of the Wind is depicted on your battle scripture, each target can immediately move up to 3". They can pass through the combat ranges of enemy units and can end that move in combat.`,
         when: [START_OF_ROUND],
       },
@@ -36,7 +36,7 @@ const BattleTraits = {
         name: `Depict Rune - Oreali, Rune of the Wind`,
         desc: `Pick up to 2 friendly Lumineth Realm-lords units for each instance of this rune depicted on your battle scripture to be the targets. Subtract 1 from hit rolls for attacks made by enemy units while they are in combat with any of the targets. In addition, the following enhanced effects apply:
         - While Varinor, Rune of Strength is depicted on your battle scripture, add 4" to each target's Move characteristic.
-        - While Alathin, Rune of the Mountain is depicted on your battle scripture, add 5 to each target's control score.`,
+        - While Alaithi, Rune of the Mountain is depicted on your battle scripture, add 5 to each target's control score.`,
         when: [START_OF_ROUND],
       },
       {
