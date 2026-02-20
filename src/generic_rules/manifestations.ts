@@ -684,18 +684,19 @@ const GenericManifestations: TEntry[] = [
       {
         name: `Summon Tome of Eyes: Casting value of 5`,
         desc: `Declare: If there is not a friendly Tome of Eyes on the battlefield, pick a friendly Disciples of Tzeentch Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Tome of Eyes wholly within 12" of the caster and visible to them.`,
+        Effect: Set up a Tome of Eyes wholly within 18" of the caster and visible to them.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Tome of Eyes - Transfixed by Countless Eyes - Reaction: You declared a Spell ability for a Wizard within this Manifestations combat range`,
-        desc: `Effect: You can add 1 or 2 to the casting roll for that spell. Roll a number of dice equal to the amount added. For each 1-2, allocate 1 damage point to the caster. If the caster is destroyed by this ability, the spell has no effect.`,
+        name: `Tome of Eyes - Compendium of Dark Knowledge`,
+        desc: `Declare: Pick a visible friendly Diciples of Tzeentch Wizard within 3" of the Manifestation to be the target.
+        Effect; The target can immediately use a Spell ability from the Lore of Change or the Lore of Fate.`,
         when: [HERO_PHASE],
       },
       {
-        name: `Summon Burning Sigil of Tzeentch: Casting value of 5`,
+        name: `Summon Burning Sigil of Tzeentch: Casting value of 6`,
         desc: `Declare: If there is not a friendly Burning Sigil of Tzeentch on the battlefield, pick a friendly Disciples of Tzeentch Wizard to cast this spell, then make a casting roll of 2D6. 
-        Effect: Set up a Burning Sigil of Tzeentch wholly within 12" of the caster and visible to them.`,
+        Effect: Set up a Burning Sigil of Tzeentch wholly within 18" of the caster and visible to them.`,
         when: [HERO_PHASE],
       },
       {
@@ -703,10 +704,10 @@ const GenericManifestations: TEntry[] = [
         desc: `Declare: This Manifestation must use this ability in each hero phase. Pick each unit (friendly and enemy) within 9" of this Manifestation to be the targets. 
         Effect: Roll 2 dice, pick either result, then apply the corresponding effect for the rest of the turn. 
         1 No effect. 
-        2-3 Add 2" to the move chareacteristic of friendly Disciples of Tzeentch targets and subtract 2" from the  Move characteristic of enemy targets. 
-        4 Add 1 to hit rolls for friendly Disciples of Tzeentch targets and subtract 1 from hit rolls for enemy targets. 
-        5 Add 1 to wound rolls for friendly Disciples of Tzeentch targets and subtract 1 from wound rolls for enemy targets. 
-        6 Add 1 to the Attacks characteristic of melee weapons used by friendly Disciples of Tzeentch targets and inflict D3 mortal damage on each enemy target.`,
+        2-3 Heal (D3) each friendly Diciples of Tzeentch target. Inflict D3 mortal damage on each enemy target. 
+        4 Friendly Diciples of Tzeentch targets can use Charge abilities even if they used a Run ability in the same turn. Enemy targets cannot use Run abilities. 
+        5 Add 1 to hit rolls for attacks made by friendly Disciples of Tzeentch targets. Subtract 1 from hit rolls for attacks made by enemy targets. 
+        6 Add 1 to wound rolls for attacks made by friendly Disciples of Tzeentch targets. Subtract 1 from wound rolls for attacks made by enemy targets. `,
         when: [HERO_PHASE],
       },
       {
@@ -716,8 +717,8 @@ const GenericManifestations: TEntry[] = [
         when: [HERO_PHASE],
       },
       {
-        name: `Daemonic Simulacrum - Manifested Jaws - Passive`,
-        desc: `Effect: While this Manifestations attacks target a Wizard, add a number equal to that Wizards casting power level to the Damage characteristic of this units Snapping Jaws.`,
+        name: `Daemonic Simulacrum - Jaws of Fate - Passive`,
+        desc: `Effect: Add 2 to the Attacks characteristic of this unit's Snapping Jaws for each fate point you have.`,
         when: [COMBAT_PHASE],
       },
     ],

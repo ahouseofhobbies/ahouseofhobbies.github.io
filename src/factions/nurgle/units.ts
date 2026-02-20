@@ -1308,6 +1308,76 @@ const Units = {
       },
     ],
   },
+  'ROR: Seekers of Silver': {
+    effects: [
+      {
+        name: `Splinters of Sorcery: Casting value of 6 (UNLIMITED)`,
+        desc: `Declare: Pick a friendly Wizard in this Regiment of Renown to cast this spell, pick a visible terrain feature within 12" of them that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.
+        Effect: If the target does not have the 'Place of Power' terrain ability, it gains that ability for the rest of the battle. If the target has the 'Place of Power' terrain ability, pick an enemy unit within 12" of it and roll 9 dice. For each 5+, inflict 1 mortal damage on that enemy unit.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Bubbles of Unreality - Once Per Turn`,
+        desc: `Declare: Pick a terrain feature with the 'Place of Power' terrain ability to be the target.
+        Effect: The next time a friendly Wizard in this Regiment of Renown uses a Summon Spell ability this phase, you can measure the range and visibility of that Spell ability from the target instead of from the caster.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Gaunt Summoner on Disc: All Belongs to Tzeentch - Once Per Battle`,
+        desc: `Declare: Pick an objective you do not control and that you controlled earlier in the battle to be the target. 
+        Effect: You control the target objective.`,
+        when: [START_OF_TURN],
+      },
+      {
+        name: `Gaunt Summoner on Disc: Arcane Imprisonment: Casting value of 7`,
+        desc: `Declare: Pick an enemy Hero in combat with this unit to be the target, then make a casting roll of 2D6.
+        Effect: If the unmodified casting roll exceeds the target's Health characteristic, it is automatically destroyed and cannot be replaced for the rest of the battle.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Screamers: Drawn to Magic - Once Per Turn`,
+        desc: `Declare: If this unit is not in combat, pick an enemy Manifestation to be the target. Then, make a charge roll of 3D6.
+        Effect: This unit can move a distance up to the value of the charge roll. It can move through the combat ranges of enemy units and must end that move within 1/2" of the target. If it does so, this unit has charged. Then, if this unit charged this turn, inflict D3 mortal damage on each enemy Manifestation in combat with this unit.`,
+        when: [CHARGE_PHASE],
+      },
+      {
+        name: `Screamers: Beast - Passive`,
+        desc: `Effect: This unit has a maximum control score of 1.`,
+        when: [END_OF_TURN],
+      },
+      {
+        name: `Magister on Disc: Spellmaster - Once Per Turn - Reaction: You declared a Spell ability for a Wizard within 30" of this unit`,
+        desc: `Effect: Make an unbinding roll of 2D6. If the roll exceeds the casting roll for the spell, the spell is unbound and its effect is not resolved.
+        If the spell is unbound, add 1 to casting rolls for this unit for the rest of the phase.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'ROR: Mask of the Deceiver': {
+    effects: [
+      {
+        name: `Masked in Plain Sight`,
+        desc: `Declare: This unit must be deployed using this ability.
+        Effect: Set up this unit in reserve incognito. It has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Bait and Switch`,
+        desc: `Declare: This unit can use this ability if it is incognito. Pick this unit and a friendly Infantry Hero to be the targets. One target must be incognito and the other must be on the battlefield.
+        Effect: Set up the incognito target wholly within 6" of the other target and not in combat. Then, remove the other target from the battlefield and set it up in reserve incognito.
+        If this unit is destroyed, before removing it from play, set up the friendly incognito unit wholly within 6" of a battlefield edge and not in combat.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Forceful Command: Casting value of 6`,
+        desc: `Declare: Pick a visible friendly unit wholly within 12" of this unit to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn:
+        The target cannot use Move abilities.
+        The target's melee weapons have Anti-charge (+1 Rend).`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')

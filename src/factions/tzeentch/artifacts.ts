@@ -4,7 +4,9 @@ import {
   COMBAT_PHASE,
   DURING_GAME,
   DURING_SETUP,
+  END_OF_TURN,
   HERO_PHASE,
+  MOVEMENT_PHASE,
   SAVES_PHASE,
   SHOOTING_PHASE,
   START_OF_COMBAT_PHASE,
@@ -95,30 +97,29 @@ const Artifacts = {
       },
     ],
   }, */
-  'Wyrdflame Blade': {
+  'Fate Slicer': {
     effects: [
       {
-        name: `Wyrdflame Blade - Passive`,
-        desc: `Effect: If any damage points are allocated to an enemy unit by this units combat attacks, that enemy unit has the Burning keyword.`,
-        when: [COMBAT_PHASE],
+        name: `Fate Slicer`,
+        desc: `Effect: Gain 1 fate point if any models were slain by this unit this turn.`,
+        when: [END_OF_TURN],
       },
     ],
   },
-  'Nine-Eyed Tome': {
+  'Cloaked in Wyrdflame': {
     effects: [
       {
-        name: `Nine-Eyed Tome - Passive`,
-        desc: `Effct: Add 1 to casting rolls and banishment rolls for this unit.`,
+        name: `Cloaked in Wyrdflame - Passive`,
+        desc: `Effect: Subtract 1 from wound rolls for attacks that target this unit.`,
         when: [HERO_PHASE],
       },
     ],
   },
-  'Ambitions End': {
+  'Kairic Tome': {
     effects: [
       {
-        name: `Ambitions End - Once Per Battle`,
-        desc: `Declare: Pick an enemy Wizard in combat with this unit to be the target. 
-        Effect: Inflict D3 mortal damage on the target. In addition, subtract 1 from casting rolls for the target for the rest of the battle.`,
+        name: `Kairic Tome - Reaction: You declared a spell ability for a Disciples of Tzeentch unit wholly within 6" of this unit`,
+        desc: `Effect: Add 1 to or subtract 1 from the casting roll for that spell. This unit can use this ability more than once per phase but only once per spell ability.`,
         when: [COMBAT_PHASE],
       },
     ],
@@ -151,6 +152,24 @@ const Artifacts = {
         desc: `Declare: This unit can use this ability if any enemy Manifestations were banished this phase. 
         Effect: This unit can use a Summon ability from the manifestation lore you picked during army composition. That Summon ability does not count towards the total number of Spell or Banish abilities this unit can use this phase.`,
         when: [HERO_PHASE],
+      },
+    ],
+  },
+  'Change-Cult Uprising (AoR)': {
+    effects: [
+      {
+        name: `Spell-Eater Pendant`,
+        desc: `Effect: Each time this unit unbinds a spell or banishes an enemy Manifestation, gain 1 fate point.`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
+  'The Oracles of Fate (AoR)': {
+    effects: [
+      {
+        name: `Corrupted Leystone`,
+        desc: `Effect: If this unit is contesting an objective, remove it from the battlefield and set it up again contesting an objective and more than 7" from all enemy units.`,
+        when: [MOVEMENT_PHASE],
       },
     ],
   },

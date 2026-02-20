@@ -1629,6 +1629,31 @@ const Units = {
       },
     ],
   },
+  'ROR: Mask of the Deceiver': {
+    effects: [
+      {
+        name: `Masked in Plain Sight`,
+        desc: `Declare: This unit must be deployed using this ability.
+        Effect: Set up this unit in reserve incognito. It has now been deployed.`,
+        when: [DURING_SETUP],
+      },
+      {
+        name: `Bait and Switch`,
+        desc: `Declare: This unit can use this ability if it is incognito. Pick this unit and a friendly Infantry Hero to be the targets. One target must be incognito and the other must be on the battlefield.
+        Effect: Set up the incognito target wholly within 6" of the other target and not in combat. Then, remove the other target from the battlefield and set it up in reserve incognito.
+        If this unit is destroyed, before removing it from play, set up the friendly incognito unit wholly within 6" of a battlefield edge and not in combat.`,
+        when: [HERO_PHASE],
+      },
+      {
+        name: `Forceful Command: Casting value of 6`,
+        desc: `Declare: Pick a visible friendly unit wholly within 12" of this unit to be the target, then make a casting roll of 2D6.
+        Effect: Until the start of your next turn:
+        The target cannot use Move abilities.
+        The target's melee weapons have Anti-charge (+1 Rend).`,
+        when: [HERO_PHASE],
+      },
+    ],
+  },
 } satisfies TItemDescriptions
 
 export default tagAs(Units, 'unit')
